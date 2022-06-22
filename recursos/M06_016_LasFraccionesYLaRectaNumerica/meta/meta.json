@@ -1,0 +1,31 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "fracciones", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Fracción", 
+    "recta numérica", 
+    "punto", 
+    "equivalentes", 
+    "fracciones equivalentes", 
+    "ubicación puntos en la recta numérica"
+  ], 
+  "descripcion": "En esta unidad aprenderás a localizar las fracciones en la recta numérica cuando la única información que tienes es la localización de dos fracciones o números naturales.",
+  "resena": "Posición de fracciones en la recta numérica dada la posición de otros dos números, fraccionarios o decimales.",
+  "titulo": "Las fracciones y la recta numérica", 
+  "id": "PA6_OA_MA_3UNAM_016"
+}

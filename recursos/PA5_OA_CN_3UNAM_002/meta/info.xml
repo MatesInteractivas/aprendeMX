@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_002"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Imanes por corrientes
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad reconocerás que las corrientes eléctricas producen efectos magnéticos al manipular una aguja imantada alrededor de un alambre que conduce corriente eléctrica, y notarás cómo se orienta. Observarás que una pila conectada a un cable enredado como resorte (bobina) puede funcionar como un imán y relacionarás du potencia con el número de vueltas del cable.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, electricidad y magnetismo, funcionamiento de un circuito eléctrico y sus componentes, aplicaciones del circuito eléctrico, transformaciones de la electricidad en la vida cotidiana.
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Electricidad y magnetismo, campo magnético, espira, bobina, solenoide, imán, brújula, norte, sur, polo, positivo, negativo, electroimán, electroimanes, Ampère, Maxwell, motor, motores, foco, interruptor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Calor, radiación, electromagnético, electromagnética, vacío, calor del Sol, calor de una lámpara, calor en el espacio, transferencia de calor">
+
+<head>
+	<title>¿Cómo nos llega el calor del Sol?</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='ER' y='45' alto='510' dibujar-si='(nv==2)|(nv==3)' fijo='sí' O.y='175' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='RE' x='892' y='320' ancho='123' alto='196' fijo='sí' escala='48' O.y='-38' despl_imagen='arr-izq' fondo='bdc3c7' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(E1._w/8-100,E1._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nnv=max(nv-1,0)\naux=(nv==0)?initP():&squot;&squot;\naux=(nv==1)?nuevasParticulas(N):&squot;&squot;\naux=(nv>1)?initMol():&squot;&squot;\nanimando=0\npausado=0\n' dibujar-si='(nv>3)' activo-si='nv>3'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(7*E1._w/8-100,E1._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nnv=min(nv+1,nV-1)\naux=(nv==1)?nuevasParticulas(N):&squot;&squot;\nanimando=0\npausado=0\n' dibujar-si='(nv+1<nV)&((nv==1)|!animando)' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='conductor' tipo='numérico' interfaz='menú' región='interior' espacio='ER' expresión='(30,125,180,36)' valor='2' fijo='sí' visible='no' opciones='buen aislante,aislante,conductor,buen conductor' acción='calcular' parámetro='setConductor()' dibujar-si='0'">
+   <param name="C_04" value="id='emisor' tipo='numérico' interfaz='menú' región='interior' espacio='ER' expresión='(145,91,140,38)' valor='1' fijo='sí' visible='no' opciones='reflejante[0],opaca[1]' acción='calcular' parámetro='setEmisor()'">
+   <param name="C_05" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='ER' nombre='          Reiniciar' expresión='(3*ER._w/8-100,ER._h-46,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nnewMol()\nprendida=0\nanimando=0\nt=0\nsw_on=0' dibujar-si='(nv>2)' pos_mensajes='centro'">
+   <param name="C_06" value="id='go' tipo='numérico' interfaz='botón' región='interior' espacio='ER' nombre='          Encender' expresión='(5*ER._w/8-100,ER._h-46,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nanimando=1\nprendida=1\nt=0\nsw_on=1' dibujar-si='!prendida' pos_mensajes='centro'">
+   <param name="C_07" value="id='pause' tipo='numérico' interfaz='botón' región='interior' espacio='ER' nombre='          Apagar' expresión='(5*ER._w/8-100,ER._h-46,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pause|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nprendida=0\nsw_on=1' dibujar-si='prendida' pos_mensajes='centro'">
+   <param name="C_08" value="id='Luz' tipo='gráfico' espacio='ER' color='f1c40f' color-int='f1c40f' tamaño='32' expresión='(-3,0)' constricción='y=Luz.y0' fijo='sí' dibujar-si='0'">
+   <param name="C_09" value="id='sw_init' tipo='numérico' interfaz='botón' región='interior' espacio='RE' expresión='(11,RE._h-57,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='t=0' pos_mensajes='centro'">
+   <param name="C_10" value="id='sw_go' tipo='numérico' interfaz='botón' región='interior' espacio='RE' expresión='(66,RE._h-57,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='sw_on=1' dibujar-si='!sw_on' pos_mensajes='centro'">
+   <param name="C_11" value="id='sw_stop' tipo='numérico' interfaz='botón' región='interior' espacio='RE' expresión='(66,RE._h-57,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pause|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='sw_on=0' dibujar-si='sw_on' pos_mensajes='centro'">
+   <param name="A_01" value="id='Signo(x)' expresión='(x>=0)?1:-1'">
+   <param name="A_02" value="id='T' vector='sí' evaluar='una-sola-vez' tamaño='8'">
+   <param name="A_03" value="id='Mol' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='15' expresión='nMol=64;color=1;_c=1;radio=2;x=3;y=4;vx=6;vy=7;x0=8;y0=9;dx=10;dy=11;E=12;Eav=13;hot=14;'">
+   <param name="A_04" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_05" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_06" value="id='setConductor()' algoritmo='sí' algoritmo='sí' hacer='k1=1.5;k2=0.1;k2=(conductor==0)?0.05:k2;k2=(conductor==1)?0.1:k2;k2=(conductor==2)?0.2:k2;k2=(conductor==3)?0.4:k2;'">
+   <param name="A_07" value="id='setEmisor()' algoritmo='sí' algoritmo='sí' hacer='b_r=(emisor==0)?0.8:b_r;b_v=(emisor==0)?0.8:b_v;b_a=(emisor==0)?0.8:b_a;;b_r=(emisor==1)?0.2:b_r;b_v=(emisor==1)?0.2:b_v;b_a=(emisor==1)?0.2:b_a;;radiacion=(1+2*emisor)/3;;'">
+   <param name="A_08" value="id='newMol()' algoritmo='sí' algoritmo='sí' Local='n,rho,alfa' inicio='n=0;dr=16/nMol;nvib=0;ik1=k0*nMol/8;ik2=(k0+1)*nMol/8' hacer='alfa=2*pi*rnd;rho=((nv==3)|(n<ik1)|(n>ik2))?0:rnd*dr/(3+conductor);rho=(nv==2)?0:rho;Mol[n,x0]=-8+n*dr;Mol[n,y0]=0;Mol[n,dx]=rho*cos(alfa);Mol[n,dy]=rho*sen(alfa);Mol[n,x]=Mol[n,x0]+0*Mol[n,dx];Mol[n,y]=Mol[n,y0]+0*Mol[n,dy];Mol[n,vx]= Mol[n,dy];Mol[n,vy]=-Mol[n,dx];Mol[n,vx]=0;Mol[n,vy]=0;Mol[n,E]=En(n);n=n+1;' mientras='n<=nMol'">
+   <param name="A_09" value="id='En(n)' algoritmo='sí' expresión='6000*(Mol[n,vx]^2+Mol[n,vy]^2)' algoritmo='sí' hacer=';'">
+   <param name="A_10" value="id='calcTemp()' algoritmo='sí' algoritmo='sí' Local='n' inicio='T[0]=0;T[1]=0;T[2]=0;T[3]=0;T[4]=0;T[5]=0;T[6]=0;T[7]=0;n=1' hacer='T[0]=T[0]+Mol[n+0*ent(nMol/8),E];T[1]=T[1]+Mol[n+1*ent(nMol/8),E];T[2]=T[2]+Mol[n+2*ent(nMol/8),E];T[3]=T[3]+Mol[n+3*ent(nMol/8),E];T[4]=T[4]+Mol[n+4*ent(nMol/8),E];T[5]=T[5]+Mol[n+5*ent(nMol/8),E];T[6]=T[6]+Mol[n+6*ent(nMol/8),E];T[7]=T[7]+Mol[n+7*ent(nMol/8),E];n=n+1' mientras='n<nMol/8'">
+   <param name="A_11" value="id='ctrlTemp()' algoritmo='sí' algoritmo='sí' hacer='T[0]=(2*T[0]+T[1])/3;T[1]=(T[0]+2*T[1]+T[2])/4;T[2]=(T[1]+2*T[2]+T[3])/4;T[3]=(T[2]+2*T[3]+T[4])/4;T[4]=(T[3]+2*T[4]+T[5])/4;T[5]=(T[4]+2*T[5]+T[6])/4;T[6]=(T[5]+2*T[6]+T[7])/4;T[7]=(T[6]+2*T[7])/3;'">
+   <param name="A_12" value="id='doVel()' algoritmo='sí' algoritmo='sí' Local='i,fctr,Ly2,inZone,xi' inicio='damp=(emisor==1)?0.99:0.9995;Ly2=Luz.y0^2;i=1' hacer='Mol[i,vx]=damp*Mol[i,vx];Mol[i,vy]=damp*Mol[i,vy];Mol[i,vx]=Mol[i,vx]-k1*Mol[i,dx]-k2*(2*Mol[i,x]-Mol[i-1,x]-Mol[i+1,x]);Mol[i,vy]=Mol[i,vy]-k1*Mol[i,dy]-k2*(2*Mol[i,y]-Mol[i-1,y]-Mol[i+1,y]);xi=-8+i*16/nMol;inZone=prendida&(xi-1<=Luz.x)&(Luz.x<=xi+1);fctr=(inZone)?radiacion*0.05/(Ly2+(Mol[i,x]-Luz.x)^2):0;Mol[i,vx]=(inZone)?Mol[i,vx]+fctr*(rnd-0.5)*Signo(Mol[i,vx]):Mol[i,vx];Mol[i,vy]=(inZone)?Mol[i,vy]+fctr*(rnd-0.5)*Signo(Mol[i,vy]):Mol[i,vy];i=i+1' mientras='i<nMol'">
+   <param name="A_13" value="id='doPos()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=1' hacer='Mol[i,x]=Mol[i,x]+Mol[i,vx];Mol[i,y]=Mol[i,y]+Mol[i,vy];Mol[i,dx]=Mol[i,x]-Mol[i,x0];Mol[i,dy]=Mol[i,y]-Mol[i,y0];Mol[i,E]=(nvib==nvibmax)?((nvibmax-1)*Mol[i,E]+En(i))/max(nvibmax,1):(nvib*Mol[i,E]+En(i))/(nvib+1);Mol[i,Eav]=(i>0)?(Mol[i-1,E]+Mol[i,E]+Mol[i+1,E])/3:(Mol[i,E]+Mol[i+1,E])/2;Mol[1,Eav]=Mol[2,Eav];Mol[i,hot]=3*Mol[i,Eav];i=i+1' mientras='i<nMol'">
+   <param name="A_14" value="id='Vibra()' algoritmo='sí' algoritmo='sí' Local='k' inicio='nvibmax=1000;k=0' hacer='doVel();doPos();nvib=min(nvib+1,nvibmax);k=k+1;;' mientras='k<10'">
+   <param name="A_15" value="id='TimeStr(t)' algoritmo='sí' expresión='timestr' algoritmo='sí' Local='timestr,ms,ss,cs' hacer='ms=(ent(t/60)<10)?&squot; &squot;+ent(t/60):&squot;&squot;+ent(t/60);ss=(ent(t%60)<10)?&squot;0&squot;+ent(t%60):&squot;&squot;+ent(t%60);cs=ent((t%60-ent(t%60))*100);cs=(cs<10)?&squot;0&squot;+cs:&squot;&squot;+cs;timestr=&squot;&squot;+ms+&squot;:&squot;+ss+&squot;.&squot;+cs'">
+   <param name="A_16" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='epsilon=0.000001' hacer='nV=4;nva=-1;nv=3;bh=0.7;bsz=7.75;setConductor();setEmisor();apagado=0;Luz.y0=3.5;k0=7;ik1=k0*nMol/8;ik2=(k0+1)*nMol/8;newMol();r=0.85;;;;;;'">
+   <param name="A_17" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora la absorción y la emisión de radiación en materiales opacos y reflejantes&squot;' hacer='Inicio();;;;;'">
+   <param name="A_18" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='Lux.y=Luz.y0' hacer='Luz.x=max(-7.0,Luz.x);Luz.x=min( 7.0,Luz.x);'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='ER' tipo='texto' fondo='sí' color='34495e' expresión='[30,15]' texto='En esta escena se muestra una barra que se \nilumina con una lámpara. La barra puede \nestar hecha con material opaco o reflejante.' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_03" value="espacio='ER' tipo='texto' fondo='sí' color='34495e' expresión='[30,100]' texto='Si la barra es' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_04" value="espacio='ER' tipo='texto' fondo='sí' color='34495e' expresión='[290,100]' texto='entonces' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_05" value="espacio='ER' tipo='texto' color='34495e' dibujar-si='emisor==0' expresión='[30,130]' texto='absorbe y emite mal la radiación.' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_06" value="espacio='ER' tipo='texto' color='34495e' dibujar-si='emisor==1' expresión='[30,130]' texto='absorbe y emite bien la radiación.' fuente='SansSerif,PLAIN,19' fijo='sí'">
+   <param name="G_07" value="espacio='ER' tipo='texto' fondo='sí' color='34495e' expresión='[400,15]' texto='Cuando la lámpara está encendida la barra absorbe radiación y se calienta, pero también empieza a emitir radiación y esto le impide alcanzar temperaturas muy altas. Estudia qué tan rápido se calientan y se enfrían los materiales opacos y los reflejantes. ' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='530'">
+   <param name="G_08" value="espacio='ER' tipo='texto' fondo='sí' color='1abc9c' expresión='[400,110]' texto='Para “Encender” y “Apagar” la lámpara pulsa el botón que está abajo a la derecha. \nPuedes arrastrar la lámpara de un lado al otro para irradiar diferentes zonas.\nEl cronómetro arranca al encender la lámpara. \nPonerlo en pausa detiene todo temporalmente.\n' fuente='SansSerif,ITALIC,18' fijo='sí'">
+   <param name="G_09" value="espacio='ER' tipo='texto' color='e67e22' dibujar-si='animando' expresión='[20,315]' texto='Las flechitas \nilustran la \nradiación \ninfrarroja \nde la barra.' fuente='SansSerif,ITALIC,18' fijo='sí'">
+   <param name="G_10" value="espacio='ER' tipo='segmento' color='f1c40f' dibujar-si='prendida' expresión='(Luz.x+2.0*cos(s),Luz.y+0.2+3.0*sen(s))(Luz.x+0.8*cos(s),Luz.y+0.2+0.8*sen(s))' familia='s' s.intervalo='[3*pi/2-pi/3.5,3*pi/2+pi/3.5]' s.pasos='12' fijo='sí' tamaño='0' ancho='2' info='La luz'">
+   <param name="G_11" value="espacio='ER' tipo='imagen' expresión='(Luz.x,Luz.y,1,1)' archivo='images/light_off.png' info='la pantalla de la lamparita apagada'">
+   <param name="G_12" value="espacio='ER' tipo='imagen' dibujar-si='prendida' expresión='(Luz.x,Luz.y,1,1)' archivo='images/light_on.png' info='la pantalla de la lamparita prendida'">
+   <param name="G_13" value="espacio='ER' tipo='flecha' color='(ff,00,00,1-Mol[ent(64*(8+s)/16),E]*radiacion)' dibujar-si='animando' expresión='(s,1.3)(s,1.3+0.8)' familia='s' s.intervalo='[-7.5,7.5]' s.pasos='40' fijo='sí' tamaño='1' ancho='1' punta='2' flecha='(ff,00,00,1-Mol[ent(64*(8+s)/16),E]*radiacion)'">
+   <param name="G_14" value="espacio='ER' tipo='flecha' color='(ff,00,00,1-Mol[ent(64*(8+s)/16),E]*radiacion)' dibujar-si='animando' expresión='(s,1.3)(s,1.3-0.8)' familia='s' s.intervalo='[-7.5,7.5]' s.pasos='40' fijo='sí' tamaño='1' ancho='1' punta='2' flecha='(ff,00,00,1-Mol[ent(64*(8+s)/16),E]*radiacion)'">
+   <param name="G_15" value="espacio='ER' tipo='polígono' color='cc000000' expresión='(-bsz,0+bh)(bsz,0+bh)(bsz,1.18+bh)(-bsz,1.18+bh)(-bsz,0+bh)' relleno='(b_r,b_v,b_a,0.0)' info='la barra'">
+   <param name="G_16" value="espacio='ER' tipo='punto' color='(Mol[s,hot],0.2+Mol[s,hot]/8,1-Mol[s,hot],0)' expresión='(Mol[s,x0]+Mol[s,dx],1.65+Mol[s,y0])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4' info='línea de puntos de hasta arriba'">
+   <param name="G_17" value="espacio='ER' tipo='punto' color='(Mol[s,hot],0.2+Mol[s,hot]/8,1-Mol[s,hot],0)' expresión='(Mol[s,x0]-Mol[s,dy],1.4-Mol[s,dx])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4' info='línea de puentos de arriba'">
+   <param name="G_18" value="espacio='ER' tipo='punto' color='(Mol[s,hot],0.2+Mol[s,hot]/8,1-Mol[s,hot],0)' expresión='(Mol[s,x0]-Mol[s,dx],1.15+Mol[s,y])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4' info='línea de puentos de abajo'">
+   <param name="G_19" value="espacio='ER' tipo='punto' color='(Mol[s,hot],0.2+Mol[s,hot]/8,1-Mol[s,hot],0)' expresión='(Mol[s,x0]-Mol[s,dx],0.90+Mol[s,y0])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4' info='línea de puentos de hasta abajo'">
+   <param name="G_20" value="espacio='ER' tipo='texto' color='34495e' expresión='[175+s*90,415]' familia='s' s.intervalo='[0,7]' s.pasos='7' texto='[16+20*T[s]]°C' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí' info='las temperaturas'">
+   <param name="G_21" value="espacio='RE' tipo='arco' fondo='sí' color='34495e' radio='1.05' fin='360' fijo='sí' relleno='blanco' ancho='0'">
+   <param name="G_22" value="espacio='RE' tipo='segmento' fondo='sí' color='34495e' expresión='((0.8-0.1*(s%3==0))*sen(2*pi*s/12),(0.8-0.1*(s%3==0))*cos(2*pi*s/12))(0.9*sen(2*pi*s/12),0.9*cos(2*pi*s/12))' familia='s' s.intervalo='[0,11]' s.pasos='11' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_23" value="espacio='RE' tipo='flecha' color='34495e' dibujar-si='0' expresión='(0,0)(r*sen(T),r*cos(T))' fijo='sí' ancho='2' ancho='2' punta='3' flecha='e74c3c'">
+   <param name="G_24" value="espacio='RE' tipo='segmento' color='2c3e50' expresión='(0,0)(r*sen(T),r*cos(T))' fijo='sí' tamaño='0'">
+   <param name="G_25" value="espacio='RE' tipo='punto' color='2c3e50' expresión='(0,0)' fijo='sí' tamaño='3'">
+   <param name="G_26" value="espacio='RE' tipo='texto' color='34495e' expresión='[(RE._w-_AnchoDeCadena_(timestr,&squot;SansSerif&squot;,&squot;PLAIN&squot;,18))/2,114]' texto='[timestr]' fuente='SansSerif,PLAIN,18' fijo='no'">
+   <param name="Animación" value="pausa='40' controles='no' auto='sí' inicio='dt=40/1000' hacer='aux=(sw_on)?Vibra():&squot;&squot;;aux=(sw_on)?calcTemp():&squot;&squot;;t=(sw_on)?t+2*dt:t;T=(t/30)*pi;timestr=TimeStr(t);;;' mientras='1'">
+</ajs>
+
+</body>
+
+</html>

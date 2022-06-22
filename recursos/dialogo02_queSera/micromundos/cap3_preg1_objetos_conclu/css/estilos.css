@@ -1,0 +1,107 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+#indicaciones{
+    width: 90%;
+    margin-left: 10%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.oracionIni{
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+p, li, a{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+ul {
+    list-style-position: inside;
+    text-indent: 5px;
+    text-align: left;
+}
+
+li{
+    font-size: 25px;
+}
+
+.caracteristicas{
+    margin-top: 0px;
+    margin-left: 40px;
+    text-indent: 5px;
+}
+
+#objetos{
+    width: 620px;
+    height: auto;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.bt{
+    width: 132px;
+    height: 47px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+#bt_mas{
+    top: 10px;
+    background-image: url('img/agregar.png');
+}
+#bt_mas:hover,#bt_mas:active{
+    background-image: url('img/agregar_over.png');
+}
+#bt_menos{
+    top: 67px;
+    background-image: url('img/quitar.png');
+}
+#bt_menos:hover,#bt_menos:active,#bt_menos:focus{
+    background-image: url('img/quitar_over.png');
+}
+
+
+.bt_seguir{
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    bottom: 0px;
+    right: 0px;
+    background: url('../img/bt_seguir_up.png') no-repeat;
+}
+
+.bt_seguir:hover,.bt_seguir:active,.bt_seguir:focus{
+    background: url('../img/bt_seguir_over.png') no-repeat;
+}
+
+.oculto{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.apagado{
+    opacity: 0.3;
+    cursor: default;
+}

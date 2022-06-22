@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracción, recta numérica, punto, equivalentes, fracciones equivalentes, ubicación puntos en la recta numérica">
+
+<head>
+
+	<title>Las fracciones y la recta numérica</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.355, 2016-04-30">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='otra' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otra fracción' expresión='(E2._w/3-220/2,E2._h-66,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Inicio()'">
+   <param name="C_02" value="id='vrf' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Verificar' expresión='(E2._w*2/3-220/2,E2._h-66,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='verified=1' activo-si='!verified' pos_mensajes='centro'">
+   <param name="C_03" value="id='menu' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(350,110,620,40)' decimales='0' fijo='sí' visible='no' opciones='Localizar una fracción dados el 0 y el 1,Localizar el cero dados el 1 y una fracción,Localizar el 1 dados el cero y una fracción,Localizar una fracción dadas otras dos fracciones.' acción='calcular' parámetro='Inicio()' pos_mensajes='centro'">
+   <param name="C_04" value="id='pizqR' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(xCtrl-46,yCtrl+0*dyCtrl,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro izquierda|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='EC.escala=max(EC.escala/2,12.5)\nclearAll()\n' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='pderR' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(xCtrl+68,yCtrl+0*dyCtrl,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='EC.escala=min(EC.escala*2,100)\nclearAll()\n' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='pizqN' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(xCtrl-46,yCtrl+1*dyCtrl,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro izquierda|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='N=max(N/2,4)\nclearAll()\n' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='pderN' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(xCtrl+68,yCtrl+1*dyCtrl,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='N=min(N*2,32)\nclearAll()\n' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='bot1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_botLI]' expresión='(xCtrl,yCtrl+2*dyCtrl,68,46)' fijo='sí' visible='sí' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=1\nteclado.S=&squot;&squot;+u_botLI\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xCtrl+&squot;,&squot;+(yCtrl+2*dyCtrl)+&squot;,&squot;+68+&squot;,&squot;+46)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_09" value="id='bot2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_botPI]' expresión='(xCtrl,yCtrl+3*dyCtrl,68,46)' fijo='sí' visible='sí' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=2\nteclado.S=&squot;&squot;+u_botPI\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xCtrl+&squot;,&squot;+(yCtrl+3*dyCtrl)+&squot;,&squot;+68+&squot;,&squot;+46)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_10" value="id='bot3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_botLE]' expresión='(xCtrl,yCtrl+4*dyCtrl,68,46)' fijo='sí' visible='sí' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=3\nteclado.S=&squot;&squot;+u_botLE\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xCtrl+&squot;,&squot;+(yCtrl+4*dyCtrl)+&squot;,&squot;+68+&squot;,&squot;+46)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_11" value="id='bot4' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_botPE]' expresión='(xCtrl,yCtrl+5*dyCtrl,68,46)' fijo='sí' visible='sí' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=4\nteclado.S=&squot;&squot;+u_botPE\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xCtrl+&squot;,&squot;+(yCtrl+5*dyCtrl)+&squot;,&squot;+68+&squot;,&squot;+46)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_12" value="id='F' tipo='gráfico' espacio='E2' tamaño='24' expresión='(0,-2)' fijo='sí' dibujar-si='0' activo-si='!verified'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='5' expresión='_bermellon=0;col[0,0]=&squot;bermellon-alizarion e74c3c&squot;;col[0,1]=(14*16+ 7)/255;col[0,2]=( 4*16+12)/255;col[0,3]=( 3*16+12)/255;col[0,4]=1 ;_naranja=1;col[1,0]=&squot;naranja-carrot e67e22&squot;;col[1,1]=(14*16+ 6)/255;col[1,2]=( 7*16+14)/255;col[1,3]=( 2*16+ 2)/255;col[1,4]=1;_amarillo=2;col[2,0]=&squot;amarillo-sunflower f1c40f&squot;;col[2,1]=(15*16+ 1)/255;col[2,2]=(12*16+ 4)/255;col[2,3]=( 0*16+15)/255;col[2,4]=1;_verdeclaro=3;col[3,0]=&squot;verde claro-emerald 2ecc71&squot;;col[3,1]=( 2*16+14)/255;col[3,2]=(12*16+12)/255;col[3,3]=( 7*16+ 1)/255;col[3,4]=1;_verdeagua=4;col[4,0]=&squot;verde agua-turquoise 1abc9c&squot;;col[4,1]=( 1*16+10)/255;col[4,2]=(11*16+12)/255;col[4,3]=( 9*16+12)/255;col[4,4]=1;_azul=5;col[5,0]=&squot;azul-Peter_river 3498db&squot;;col[5,1]=( 3*16+ 4)/255;col[5,2]=( 9*16+ 8)/255;col[5,3]=(13*16+11)/255;col[5,4]=1.00;_lavanda=6;col[6,0]=&squot;lavanda-amethyst 9b59b6&squot;;col[6,1]=( 9*16+11)/255;col[6,2]=( 5*16+ 9)/255;col[6,3]=(11*16+ 6)/255;col[6,4]=1;_azuloscuro=7;col[7,0]=&squot;azul oscuro-wet_asphalt 34495e&squot;;col[7,1]=( 3*16+ 4)/255;col[7,2]=( 4*16+ 9)/255;col[7,3]=( 5*16+14)/255;col[7,4]=1;_concreto=8;col[8,0]=&squot;cian-concrete 95a5a6&squot;;col[8,1]=( 9*16+ 5)/255;col[8,2]=(10*16+ 5)/255;col[8,3]=(10*16+ 6)/255;col[8,4]=1;_nubes=9;col[9,0]=&squot;blanco-clouds ecf0f1&squot;;col[9,1]=(14*16+12)/255;col[9,2]=(15*16+ 0)/255;col[9,3]=(15*16+ 1)/255;col[9,4]=1'">
+   <param name="A_02" value="id='R(c)' expresión='col[c,1]'">
+   <param name="A_03" value="id='V(c)' expresión='col[c,2]'">
+   <param name="A_04" value="id='A(c)' expresión='col[c,3]'">
+   <param name="A_05" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_06" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_07" value="id='_Cx_(str,w,type,sz)' expresión='(w-7.5-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz))/2'">
+   <param name="A_08" value="id='_Rx_(str,w,type,sz)' expresión='w-15-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz)'">
+   <param name="A_09" value="id='_Nx_(val,d,w,sz)' expresión='_Cx_(_NumToStr_(val,d),w,&squot;PLAIN&squot;,sz)'">
+   <param name="A_10" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_11" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_12" value="id='M' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' filas='23' expresión='M[0,0]=7.65;M[0,1]=8.25;M[1,0]=7.65;M[1,1]=8.25;M[2,0]=7.82;M[2,1]=7.95;M[3,0]=7.85;M[3,1]=7.88;'">
+   <param name="A_13" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' Local='k,mcm,ab' inicio='ab=a*b;mcm=ab;k=2' hacer='dividir=(k*ent(a/k)==a)&(k*ent(b/k)==b);a=(dividir)?a/k:a;b=(dividir)?b/k:b;mcm=(dividir)?mcm/k:mcm;k=(dividir)?k:k+1;' mientras='k<=min(a,b)'">
+   <param name="A_14" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' Local='valor' hacer='valor=(Teclado.S!=&squot;&squot;)?_Num_(_NumACadena_(_Eval_(Teclado.S),2)):&squot;&squot;;u_botLI=(btn==1)?valor:u_botLI;u_botPI=(btn==2)?valor:u_botPI;u_botLE=(btn==3)?valor:u_botLE;u_botPE=(btn==4)?valor:u_botPE;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0;hideShadeCover();'">
+   <param name="A_15" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_16" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_17" value="id='clearAll()' algoritmo='sí' algoritmo='sí' hacer='verified=0;u_botLI=&squot;&squot;;u_botPI=&squot;&squot;;u_botLE=&squot;&squot;;u_botPE=&squot;&squot;'">
+   <param name="A_18" value="id='specialize0()' algoritmo='sí' algoritmo='sí' hacer='showFrac0=0;showFrac1=denhint'">
+   <param name="A_19" value="id='specialize1()' algoritmo='sí' algoritmo='sí' hacer='showFrac1=denhint;showFrac0=1+ent(rnd*(showFrac1-1));num=0;'">
+   <param name="A_20" value="id='specialize2()' algoritmo='sí' algoritmo='sí' hacer='showFrac0=0;num=den'">
+   <param name="A_21" value="id='specialize3()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_22" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='clearAll();denhinta=denhint;dena=den' hacer='den=2+ent(rnd*9);num=1+ent(rnd*1.5*den);denhint=2+ent(rnd*5);showFrac1=denhint-2+ent(rnd*5);showFrac0=ent(rnd*showFrac1);aux=(menu==0)?specialize0():&squot;&squot;;aux=(menu==1)?specialize1():&squot;&squot;;aux=(menu==2)?specialize2():&squot;&squot;;aux=(menu==3)?specialize3():&squot;&squot;;Orig=-9+rnd*3;Uno=Orig+6+rnd*6;Unidad=Uno-Orig;F.x=0;F.y=-2;;' mientras='(Uno>5)|(showFrac1<=showFrac0)|(Orig+Unidad*(num/den)>10)|(Orig+Unidad*(showFrac1/denhint)>10)|((McM(num,den)<num*den)&(num!=den))|(McM(den,denhint)!=max(den,denhint))|(num*denhint==den*showFrac0)|(num*denhint==den*showFrac1)|(denhinta==denhint)|(dena==den)'">
+   <param name="A_23" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='F.y=max(min(-1,F.y),-3);F.y=(F.y>-1.25)?-1:F.y;F.x=max(min(9.5,F.x),-9.5);Rslt=Orig+Unidad*num/den;retro=&squot;Fallaste por mucho.&squot;;retro=(abs(F.x-Rslt)<2)?&squot;Estimación muy pobre.&squot;:retro;retro=(abs(F.x-Rslt)<1)?&squot;Estimación pobre.&squot;:retro;retro=(abs(F.x-Rslt)<0.5)?&squot;Estimación aceptable.&squot;:retro;retro=(abs(F.x-Rslt)<0.25)?&squot;Buena estimación.&squot;:retro;retro=(abs(F.x-Rslt)<0.1)?&squot;Muy buena estimación.&squot;:retro;retro=(abs(F.x-Rslt)<0.05)?&squot;¡Excelente estimación!&squot;:retro;retro=(verified)?retro:&squot;&squot;;;LupeyJuanFelicitan=verified&(abs(F.x-Rslt)<0.1);'">
+   <param name="A_24" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora la localización de fracciones en la recta.&squot;' hacer='Inicio();'">
+   <param name="A_25" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();;'">
+   <param name="G_01" value="espacio='E2' tipo='imagen' fondo='sí' expresión='(0,0,1,1)' archivo='images/linea.png'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='negro' dibujar-si='0' expresión='[0,0]' texto='denhint=[denhint] showFrac0=[showFrac0] showFrac1=[showFrac1]   XXXX=      [Orig+Unidad*(showFrac1/denhint)]' fuente='SansSerif,BOLD,16' decimales='6' fijo='sí' ancho='900' info='Debug'">
+   <param name="G_03" value="espacio='E2' tipo='texto' fondo='sí' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='El título'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='16a085' expresión='[30,55]' texto='Arrastra el número o fracción que aparece en la parte inferior y colócalo en el lugar que le corresponde \nsobre la recta. Puedes guiarte por los valores enteros o fraccionarios que aparecen señalados en la recta.' fuente='SansSerif,ITALIC,20' fijo='sí' info='Instrucciones'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[340-_AnchoDeCadena_(&squot;Elige el tipo de problema:&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,20),119]' texto='Elige el tipo de problema:' fuente='SansSerif,PLAIN,20' fijo='sí' info='Instrucciones'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[E2._w/2,E2._h-122,1,1]' texto='[retro]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='400' info='Retroalmentación.'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' dibujar-si='0&(u_botPI!=&squot;&squot;)&(u_botPE!=&squot;&squot;)' expresión='[EC._w-5,yCtrl+6*dyCtrl]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Times New Roman;}\f1\fs40\i        Y con esto deducen que\par \fs42{\*\mjaformula{\fraction{\num{\expr u_botPI\decimals 2\fixed1}}{\den{\expr D\decimals 0\fixed1}}}\f1\fs40\i ={\expr u_botPI\decimals 2\fixed1}\fs44\u247 {\expr D\decimals 0\fixed1}={\expr u_botPI/D\decimals 2\fixed1} }\fs40 < \f4\fs52\u960 \f1\fs40  < \fs42{\*\mjaformula{\expr u_botPE/D\decimals 2\fixed1}=\f1\fs40\i{\expr u_botPE\decimals 2\fixed1}\fs44\u247 {\expr D\decimals 0\fixed1}={\fraction{\num{\expr u_botPE\decimals 2\fixed1}}{\den{\expr D\decimals 0\fixed1}}}}\fs40}' fuente='SansSerif,ITALIC,20' fijo='sí' info='Instrucciones'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' dibujar-si='0&(u_botPI!=&squot;&squot;)&(u_botPE!=&squot;&squot;)&(retro=&squot;&squot;)' expresión='[EC._w,yCtrl+6*dyCtrl]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Times New Roman;}\f1\fs40\i Y con esto deducen que\par \par \fs42               {\*\mjaformula{\expr u_botPI\decimals 2\fixed1}\f3\fs44\i\u247 {\expr D\decimals 0\fixed1}={\expr u_botPI/D\decimals 2\fixed1} }\fs40 < \f4\fs52\u960 \f1\fs40  < \fs42{\*\mjaformula{\expr u_botPE/D\decimals 2\fixed1}=\f1\fs40\i{\expr u_botPE\decimals 2\fixed1}\fs44\u247 {\expr D\decimals 0\fixed1}\fs42}\fs40}' fuente='SansSerif,ITALIC,20' fijo='sí' info='Cotas'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' dibujar-si='(u_botPI!=&squot;&squot;)&(u_botPE!=&squot;&squot;)&(retro=&squot;&squot;)' expresión='[EC._w,yCtrl+6*dyCtrl]' texto='Y de esto se deduce que:' fuente='SansSerif,ITALIC,20' fijo='sí' info='Cotas'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(u_botPI!=&squot;&squot;)&(u_botPE!=&squot;&squot;)&(retro=&squot;&squot;)' expresión='[EC._w+(E2._w-EC._w)/2,yCtrl+7*dyCtrl,1,1]' texto='[u_botPI] ÷ [D] = [u_botPI/D] < π < [u_botPE/D] = [u_botPE] ÷ [D]' fuente='SansSerif,ITALIC,20' fijo='no' info='Cotas'">
+   <param name="G_11" value="espacio='E2' tipo='segmento' color='34495e' dibujar-si='0' expresión='(-10,0)(10,0)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_12" value="espacio='E2' tipo='imagen' dibujar-si='(showFrac0==0)|verified' expresión='(Orig+0.015,1.04,1,1)' archivo='images/cero_fijo.png'">
+   <param name="G_13" value="espacio='E2' tipo='punto' color='34495e' dibujar-si='(showFrac0==0)|verified' expresión='(Orig-0.11,0.93)' texto='0' fuente='SansSerif,PLAIN,24' fijo='sí' tamaño='0' info='El cero'">
+   <param name="G_14" value="espacio='E2' tipo='imagen' dibujar-si='(showFrac0==denhint)|(showFrac1==denhint)|verified' expresión='(Uno+0.015,1.04,1,1)' archivo='images/entero_fijo.png'">
+   <param name="G_15" value="espacio='E2' tipo='punto' color='34495e' dibujar-si='(showFrac0==denhint)|(showFrac1==denhint)|verified' expresión='(Uno-0.11,0.93)' texto='1' fuente='SansSerif,PLAIN,24' fijo='sí' tamaño='0' info='El uno'">
+   <param name="G_16" value="espacio='E2' tipo='segmento' color='34495e' dibujar-si='verified|((s==showFrac0)|(s==showFrac1))' expresión='(Orig+Unidad*s/denhint,-0.1)(Orig+Unidad*s/denhint,0.1)' familia='s' s.intervalo='[0,2*denhint]' s.pasos='2*denhint' decimales='0' fijo='sí' tamaño='0' ancho='2' info='La partición de ayuda'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' dibujar-si='(s!=0)&(((s==showFrac0)&(showFrac0!=denhint))|((s==showFrac1)&(showFrac1!=denhint)))' expresión='(Orig+Unidad*s/denhint,1.05,1,1)' familia='s' s.intervalo='[0,2*denhint]' s.pasos='2*denhint' archivo='images/fraccion_fijo.png'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='34495e' dibujar-si='(s!=0)&(((s==showFrac0)&(showFrac0!=denhint))|((s==showFrac1)&(showFrac1!=denhint)))' expresión='(Orig+Unidad*s/denhint-0.4,0.95)' familia='s' s.intervalo='[0,2*denhint]' s.pasos='2*denhint' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs44{\*\mjaformula{\fraction{\num{\expr s\decimals 0\fixed1}}{\den{\expr denhint\decimals 0\fixed1}}}}\fs48}' fuente='SansSerif,PLAIN,22' fijo='sí' tamaño='0' info='Las fracciones de muestra'">
+   <param name="G_19" value="espacio='E2' tipo='segmento' dibujar-si='0&verified' expresión='(Orig+s*Unidad,-0.1)(Orig+s*Unidad,0.1)' familia='s' s.intervalo='[0,2]' s.pasos='2*den' fijo='sí' tamaño='0' info='La partición útil'">
+   <param name="G_20" value="espacio='E2' tipo='imagen' expresión='(F.x,F.y,1,1)' archivo='images/fraccion_circulo.png'">
+   <param name="G_21" value="espacio='E2' tipo='punto' dibujar-si='(num!=0)&(num!=den)' expresión='(F.x-(21+5*((num>9)|(den>9)))/E2.escala,F.y-8/E2.escala)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48{\*\mjaformula{\fraction{\num{\expr num\decimals 0\fixed0}}{\den{\expr den\decimals 0\fixed0}}}}\f2\fs30}' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' tamaño='0' info='La fracción en el círculo'">
+   <param name="G_22" value="espacio='E2' tipo='punto' dibujar-si='(num==0)|(num==den)' expresión='(F.x-6/E2.escala,F.y-9/E2.escala)' texto='[(num==den)?&squot;1&squot;:&squot;0&squot;]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' tamaño='0' info='La fracción en el círculo'">
+   <param name="G_23" value="espacio='E2' tipo='imagen' dibujar-si='verified&(num!=0)&(num!=den)' expresión='(Orig+(Unidad*num/den),1.0,1,1)' archivo='images/correcto.png'">
+   <param name="G_24" value="espacio='E2' tipo='punto' dibujar-si='verified&(num!=0)&(num!=den)' expresión='(Orig+(Unidad*num/den)-(21+5*((num>9)|(den>9)))/E2.escala,1.0-8/E2.escala)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs48{\*\mjaformula{\fraction{\num{\expr num\decimals 0\fixed0}}{\den{\expr den\decimals 0\fixed0}}}}\f2\fs30}' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' tamaño='0' info='La fracción en el círculo verde'">
+   <param name="G_25" value="espacio='E2' tipo='punto' dibujar-si='verified&((num==0)&(num==den))' expresión='(Orig+(Unidad*num/den)-6/E2.escala,1.0-9/E2.escala)' texto='[(num==den)?&squot;1&squot;:&squot;0&squot;]' fuente='SansSerif,PLAIN,24' decimales='0' fijo='sí' tamaño='0' info='La fracción en el círculo'">
+   <param name="G_26" value="espacio='E2' tipo='imagen' dibujar-si='LupeyJuanFelicitan' coord_abs='sí' expresión='(E2._w/3-110/2,388)' archivo='images/Excelente_boy.png'">
+   <param name="G_27" value="espacio='E2' tipo='imagen' dibujar-si='LupeyJuanFelicitan' coord_abs='sí' expresión='(E2._w*2/3-110/2,394)' archivo='images/Excelente_girl.png'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+tipo_de_macro=R2
+Idioma=espa&ntilde;ol
+id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='IZQ=0;DER=1;ARR=2;ABA=3;X=100;Y=100;W=100;H=40;A=0;R=1;G=0;B=0;TamPunta=20;DirPunta=ABA;'
+tipo='pol&iacute;gono' coord_abs='s&iacute;' expresi&oacute;n='(X,Y)(X+W,Y)(X+W,Y+H)(X,Y+H)(X,Y)' relleno='(R,G,B,A)' ancho='0' 
+tipo='pol&iacute;gono' dibujar-si='DirPunta==IZQ' coord_abs='s&iacute;' expresi&oacute;n='(X-TamPunta,Y+H/2)(X,Y+H/2-TamPunta/2)(X,Y+H/2+TamPunta/2)(X-TamPunta,Y+H/2)' relleno='(R,G,B,A)' ancho='0' 
+tipo='pol&iacute;gono' dibujar-si='DirPunta==DER' coord_abs='s&iacute;' expresi&oacute;n='(X+W+TamPunta,Y+H/2)(X+W,Y+H/2-TamPunta/2)(X+W,Y+H/2+TamPunta/2)(X+W+TamPunta,Y+H/2)' relleno='(R,G,B,A)' ancho='0' 
+tipo='pol&iacute;gono' dibujar-si='DirPunta==ARR' coord_abs='s&iacute;' expresi&oacute;n='(X+W/2,Y-TamPunta)(X+W/2-TamPunta/2,Y)(X+W/2+TamPunta/2,Y)(X+W/2,Y-TamPunta)' relleno='(R,G,B,A)' ancho='0' 
+tipo='pol&iacute;gono' dibujar-si='DirPunta==ABA' coord_abs='s&iacute;' expresi&oacute;n='(X+W/2,Y+H+TamPunta)(X+W/2-TamPunta/2,Y+H)(X+W/2+TamPunta/2,Y+H)(X+W/2,Y+H+TamPunta)' relleno='(R,G,B,A)' ancho='0' 

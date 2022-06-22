@@ -1,0 +1,34 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Ubicación espacial"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Plano cartesiano", 
+    "coordenadas", 
+    "abscisas", 
+    "ordenadas", 
+    "ejes de coordenadas", 
+    "ejes coordenados", 
+    "cuadrantes", 
+    "sistema de coordenadas", 
+    "pares ordenados", 
+    "puntos en el plano"
+  ], 
+  "descripcion": "Explorarás cómo funciona un plano cartesiano y aprenderás a ubicar puntos en él, además de saber cómo se escriben las coordenadas para indicarlos.",
+  "resena": "Funcionamiento del plano cartesiano para la lectura y ubicación de puntos en el mismo.",
+  "titulo": "El plano cartesiano", 
+  "id": "PA6_OA_MA_3UNAM_007"
+}

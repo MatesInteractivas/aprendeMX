@@ -1,0 +1,38 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "proporcionalidad", 
+    "Manejo de la información", 
+    "Proporcionalidad y funciones"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "proporcionalidad", 
+    "razón", 
+    "razones", 
+    "equivalencia", 
+    "proporción", 
+    "razón de proporcionalidad", 
+    "tantos de tantos", 
+    "problema", 
+    "fracción", 
+    "a razón de", 
+    "tantos por tantos", 
+    "tanto para cada", 
+    "regla de tres"
+  ], 
+  "descripcion": "¿Cuántos litros de agua fresca debes preparar para una fiesta a la que van a ir 27 invitados, si quieres que cada uno pueda beber dos vasos grandes de un tercio de litro cada uno? En esta unidad aprenderás a resolver este tipo de problemas, que aparecen con mucha frecuencia en la vida diaria.",
+  "resena": "Uso de fracciones para resolver problemas cotidianos como saber cuánta comida comprar para una fiesta.",
+  "titulo": "Problemas de proporcionalidad", 
+  "id": "PA5_OA_MA_3UNAM_030"
+}

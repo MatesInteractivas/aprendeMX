@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+	<link rel="stylesheet" type="text/css" href="js/contribute/modal/css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/opcion-mutiple-base.css">
+	<link rel="stylesheet" type="text/css" href="css/opcion-multiple-custom.css">
+	
+	<script type="text/javascript" src="js/contribute/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/contribute/modal/js/jquery.simplemodal.js"></script>
+	
+	<script type="text/javascript" src="js/opcion_multiple.js"></script>
+	<script type="text/javascript" src="js/opcion_multiple_dialogAdapter.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			var messageW = 400;
+			var messageH = 300;
+			var OM = new lite.OpcionMultiple(
+					'OpcionMultiple-container', //ID element
+					messageW, //Los tamaños de la ventana de mensajes
+					messageH);
+			
+			var cfgAdapter = {
+				micromundoId		: 'cap2_preg3_opcMult', //ID del icromundo
+				nextQuestion		: 'cap2_preg4_estructura', //El ID de la pregunta a mandar cuando se acabe la interacción correctamente
+			}
+			var adapter = new lite.OpcionMultiple.DialogAdapter(OM,cfgAdapter);
+		});
+	</script>
+
+	
+	<title>Adivinanzas</title>
+	
+</head>
+<body>
+
+
+<div id='OpcionMultiple-container' class='grid colums-2'>
+	<div class='om-answered-register'>
+		<div  class="answer static-answer">
+			<span class="gap-filled">Una sombrilla </span> es <span class='grupo'>un objeto</span> <span class='carac'>que sirve para protegerse del sol</span>.
+		</div>
+	</div>
+	<div class='om-retros'>
+		<div class='om-mal'>		RETRO - <b>MAL</b> </div>
+		<div class='om-bien'>		RETRO BIEN <b>BIEN</b> </div>
+		<div class='om-bien-all'>	MICROMUNDO TERMINADO  - <b>BIEN TODO</b> </div>
+	</div>
+	
+	<!-- *************** INICIA PREGUNTA *************  -SEPARAMOS PARA COMENTAR->
+	<div  id = 'coche' class='om-quest grid columns-2'>
+		
+		<div class='om-quest-text'>
+			Es un objeto que sirve para protegerse del sol.
+		</div>
+		
+		<div class='om-quest-answered-text'>
+			<span class='gap-filled'>Una sombrilla</span> es un objeto que sirve para protegerse del sol.
+		</div>
+		
+		<div class='om-options'>
+			<div class='om-option'>
+				<div class='om-retro'> ¡Facilísima!, ¿no crees? Tengo una duda nada más.</div>
+				Sombrilla
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'> ¿SIN RETROALIMENTACION PARA AGUJA ?</div>
+				Aguja 
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					Yo había pensado en la sombrilla.  Los árboles sí te protegen contra el 
+					sol, pero...
+				</div>
+				Árbol 
+			</div>
+		</div>
+	</div> 
+	<!-- *************** TERMINA PREGUNTA *************-->
+	
+	<!-- *************** INICIA PREGUNTA *************-->
+	<div  id = 'coche' class='om-quest grid columns-2'>
+		<div class='om-quest-text'>
+			<span class='gap'></span> es un objeto que vuela a grandes velocidades.
+		</div>
+		
+		<div class='om-quest-answered-text'>
+			<span class='gap-filled'>Un avión</span> es <span class='grupo'>un objeto</span> <span class='carac'>que vuela a grandes velocidades</span>.
+		</div>
+		
+		<div class='om-options'>
+		
+			<div class='om-option'>
+				<div class='om-retro'> ¡Sí que sí!</div>
+				Un avión
+			</div>
+			
+			<div class='om-option'>
+				<div class='om-retro'> De que vuela, vuela, pero no es un objeto.</div>
+				Un águila
+			</div>
+			
+			<div class='om-option'>
+				<div class='om-retro'> ¿Un tenedor volador? Con mucha imaginación.</div>
+				Un tenedor 
+			</div>
+		</div>
+	</div> 
+	<!-- *************** TERMINA PREGUNTA *************-->
+	
+	<!-- *************** INICIA PREGUNTA *************-->
+	<div  id = 'coche' class='om-quest grid columns-3'>
+		
+		<div class='om-quest-text'>
+			Un águila es <span class='gap'></span> que vuela a grandes velocidades.
+		</div>
+		
+		<div class='om-quest-answered-text'>
+			Un águila es <span class='gap-filled grupo'>un animal</span> <span class='carac'>que vuela a grandes velocidades</span>.
+		</div>
+		
+		<div class='om-options'>
+			<div class='om-option'>
+				<div class='om-retro'> ¡Obvio!</div>
+				un animal
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					¿Te parece que un águila es un objeto? La última vez que revisé era
+					un animal, con vida y movimiento.
+				</div>
+				un objeto
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					¿Un águila es una planta?, ¿con ramas, hojas y quizá flores? 
+					Hasta donde yo sé, es un ave. 
+				</div>
+				una planta
+			</div>
+		</div>
+	</div> 
+	<!-- *************** TERMINA PREGUNTA *************-->
+	
+	
+	
+	<!-- *************** INICIA PREGUNTA *************-->
+	<div  id = 'coche' class='om-quest grid columns-3'>
+		
+		<div class='om-quest-text'>
+			Un gallo es un animal <span class='gap'></span>.
+		</div>
+		
+		<div class='om-quest-answered-text'>
+			Un gallo es <span class='grupo'>un animal</span> <span class='gap-filled carac'>que te despierta por las mañanas</span>.
+		</div>
+		
+		<div class='om-options'>
+			<div class='om-option'>
+				<div class='om-retro'> Digo, tal vez no siempre, pero alguna que otra vez, seguro sí.</div>
+				que te despierta por las mañanas
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					¿Te cae? Los gallos apenas si pueden volar y dar brincos.
+				</div>
+				que puede recorrer enormes distancias
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					¡Todos los animales tienen color! Las vacas, las medusas, los gusanos,
+					las gallinas… ¡Todos!
+				</div>
+				que tiene color en todo su cuerpo
+			</div>
+		</div>
+	</div> 
+	<!-- *************** TERMINA PREGUNTA *************-->
+	
+	
+	
+	
+	
+	<!-- *************** INICIA PREGUNTA *************-->
+	<div  id = 'coche' class='om-quest grid columns-3'>
+		
+		<div class='om-quest-text'>
+			Un despertador es <span class='gap'></span> que te despierta por las mañanas.
+		</div>
+		
+		<div class='om-quest-answered-text'>
+			Un despertador es <span class='gap-filled grupo'>un aparato</span> <span class='carac'>que te despierta por las mañanas</span>.
+		</div>
+		
+		<div class='om-options'>
+			<div class='om-option'>
+				<div class='om-retro'>
+					Claro.
+				</div>
+				un aparato
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					¿A poco con un despertador puedes ir de un lugar a otro?
+				</div>
+				un transporte
+			</div>
+			<div class='om-option'>
+				<div class='om-retro'>
+					El despertador suena, pero generalmente no se usa para hacer música.
+				</div>
+				un instrumento musical
+			</div>
+		</div>
+	</div> 
+	<!-- *************** TERMINA PREGUNTA *************-->
+	
+</div>
+
+</body>
+</html>

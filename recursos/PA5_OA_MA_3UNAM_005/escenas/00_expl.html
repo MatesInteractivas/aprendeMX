@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Área, rectángulo, paralelogramo, rombo, romboide, figuras planas, base, altura, paralela, perpendicular, corte, traslación, superficie, igualdad de áreas, fórmula">
+
+
+
+
+
+
+
+<head>
+
+
+
+	<title>SEB aprende.mx Descartes index</title>
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='doPlay(0)\ntryPlay(0)\n\n' dibujar-si='0&!animando' activo-si='!cfg'">
+   <param name="C_02" value="id='marcar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Marcar' expresión='((E2._w-240)/2,E2._h-61,240,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nmarcado=1\ncortado=0\nunido=0\nvuelta=0\nlimpiar=1\n' dibujar-si='!marcado' activo-si='!cfg' pos_mensajes='centro'">
+   <param name="C_03" value="id='trasladar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Trasladar' expresión='((E2._w-240)/2,E2._h-61,240,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nmarcado=1\ncortado=1\nunido=0\nvuelta=0\nanimar=1\nlimpiar=1\n' dibujar-si='(marcado)&(!cortado)' activo-si='!cfg' pos_mensajes='centro'">
+   <param name="C_04" value="id='Unificar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Unir' expresión='((E2._w-240)/2,E2._h-61,240,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nunido=1\nlimpiar=1\n' dibujar-si='cortado&(!animando)&(!unido)' activo-si='!cfg' pos_mensajes='centro'">
+   <param name="C_05" value="id='Regresar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Regresar' expresión='((E2._w-240)/2,E2._h-61,240,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nvuelta=1\ncortado=1\nunido=0\nanimar=1\nlimpiar=1\n' dibujar-si='unido' activo-si='!cfg' pos_mensajes='centro'">
+   <param name="C_06" value="id='A' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='24' expresión='(400,150)' fijo='sí' dibujar-si='(!marcado)' activo-si='(!marcado)'">
+   <param name="C_07" value="id='C' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='24' expresión='(700,350)' fijo='sí' dibujar-si='(!marcado)' activo-si='(!marcado)'">
+   <param name="C_08" value="id='P' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='24' expresión='(A.x+150,C.y)' fijo='sí' dibujar-si='(marcado)&(!cortado)' activo-si='marcado&(!cortado)'">
+   <param name="A_01" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_02" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_03" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_04" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_05" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_06" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='TxtX=320;TxtY=15;TxtW=660'">
+   <param name="A_07" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='slow=64;marcado=0;cortado=0;unido=0;'">
+   <param name="A_08" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_09" value="id='Limpiar()' algoritmo='sí' algoritmo='sí' hacer='limpiar=1'">
+   <param name="A_10" value="id='Acomodar()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_11" value="id='Girar(teta)' algoritmo='sí' algoritmo='sí' Local='x1,y1,xg,yg,ct,st' hacer='ct=cos(teta);st=sen(teta);;x1=A.x-x0;y1=A.y-y0;xg=ct*x1-st*y1;yg=st*x1+ct*y1;A.x=x0+xg;A.y=y0+yg;;x1=B.x-x0;y1=B.y-y0;xg=ct*x1-st*y1;yg=st*x1+ct*y1;B.x=x0+xg;B.y=y0+yg;;x1=C.x-x0;y1=C.y-y0;xg=ct*x1-st*y1;yg=st*x1+ct*y1;C.x=x0+xg;C.y=y0+yg;'">
+   <param name="A_12" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='minx=300;maxx=800;miny=110;maxy=440;A.x=min(max(A.x,minx),maxx);A.y=min(max(A.y,miny),maxy);C.x=min(max(C.x,minx),maxx);C.y=min(max(C.y,miny),maxy);B.x=C.x;B.y=A.y;D.x=A.x;D.y=C.y;P.y=C.y;minp=min(A.x,C.x);maxp=max(A.x,C.x);P.x=min(max(P.x,minp),maxp);P.x=(!marcado)?(minp+maxp)/2:P.x;AB=dist(A.x,A.y,B.x,B.y);AP=dist(A.x,A.y,P.x,P.y);AP=(abs(AP-AB)<5)?AB:AP;h=C.y-A.y;P.x=(AP==AB)?A.x+sqrt(AB^2-h^2)*(B.x-A.x)/AB:P.x'">
+   <param name="A_13" value="id='processMD(m_x,m_y)'">
+   <param name="A_14" value="id='Trasladar(t)' algoritmo='sí' algoritmo='sí' hacer='x0=A.x+t*(B.x-A.x);y0=A.y+t*(B.y-A.y);x1=P.x+t*(B.x-A.x);y1=P.y+t*(B.y-A.y);x2=D.x+t*(B.x-A.x);y2=D.y+t*(B.y-A.y);;'">
+   <param name="A_15" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Observa a Juan recortar un rectángulo y transformarlo en un romboide o en un rombo.&squot;)' hacer='initDisplay();Inicio();;;'">
+   <param name="A_16" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+
+   <param name="A_18" value="id='Limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_19" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_20" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='limpiar=0\nanimar=0\nplayAudio=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,0,E2._w,t),botY(0,0,E2._h+1,t))' t.intervalo='[0,8]' relleno='cc000000'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='(!marcado)' expresión='[TxtX,TxtY]' texto='Mueve los puntos indicados para formar el rectángulo que quieras. Pulsa el botón Marcar para definir un corte.' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='TxtW' color_borde_texto='173320'">
+   <param name="G_03" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='marcado&(!cortado)' expresión='[TxtX,TxtY]' texto='Moviendo el punto indicado define el corte que deseas hacer al rectángulo. Luego pulsa el botón Trasladar.' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='TxtW' color_borde_texto='173320'">
+   <param name="G_04" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='cortado&(!unido)&(!vuelta)&(!animando)' expresión='[TxtX,TxtY]' texto='Pulsa el botón Unir para formar un [(AB==AP)?&squot;rombo&squot;:&squot;romboide&squot;].' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='TxtW' color_borde_texto='173320'">
+   <param name="G_05" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='unido' expresión='[TxtX,TxtY]' texto='Este paralelogramo tiene la misma base y la misma altura que el rectángulo inicial, y también la misma área.\n[(AP==AB)?&squot;Es un rombo porque todos sus lados son iguales.&squot;:&squot;Es es un romboide porque no todos sus lados son iguales.&squot;]' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='TxtW' color_borde_texto='173320'">
+   <param name="G_06" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='!cortado' expresión='(A.x,A.y)(B.x,B.y)(C.x,C.y)(D.x,D.y)(A.x,A.y)' relleno='eeee22' ancho='6' info='rectángulo relleno'">
+   <param name="G_07" value="espacio='E2' tipo='segmento' color='(s,s,s,0.0)' dibujar-si='marcado&!cortado' expresión='(A.x,A.y)(P.x,P.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='6-2*s' info='Segmento que corta'">
+   <param name="G_08" value="espacio='E2' tipo='arco' color='80557766' dibujar-si='marcado&(!cortado)&(AB==AP)' centro='(A.x,A.y)' radio='AP' fin='360' fijo='sí' info='círculo con centro en A y radio AP'">
+   <param name="G_09" value="espacio='E2' tipo='polígono' color='blanco' dibujar-si='!cortado' expresión='(A.x,A.y)(B.x,B.y)(C.x,C.y)(D.x,D.y)(A.x,A.y)' ancho='4' info='orilla del rectángulo'">
+   <param name="G_10" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='cortado&(!unido)' expresión='(A.x,A.y)(B.x,B.y)(C.x,C.y)(P.x,P.y)(A.x,A.y)' relleno='eeee22' ancho='6' info='polígono cortado relleno relleno'">
+   <param name="G_11" value="espacio='E2' tipo='polígono' color='blanco' dibujar-si='cortado&(!unido)' expresión='(A.x,A.y)(B.x,B.y)(C.x,C.y)(P.x,P.y)(A.x,A.y)' ancho='4' info='orilla del polígono recortado'">
+   <param name="G_12" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='cortado&(!unido)' expresión='(x0,y0)(x1,y1)(x2,y2)(x0,y0)' relleno='eeee22' ancho='6' info='Triángulo relleno relleno'">
+   <param name="G_13" value="espacio='E2' tipo='polígono' color='blanco' dibujar-si='cortado&(!unido)' expresión='(x0,y0)(x1,y1)(x2,y2)(x0,y0)' ancho='4' info='orilla del triángulo'">
+   <param name="G_14" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='unido' expresión='(A.x,A.y)(B.x,B.y)(x1,y1)(P.x,P.y)(A.x,A.y)' relleno='eeee22' ancho='6' info='rectángulo relleno'">
+   <param name="G_15" value="espacio='E2' tipo='polígono' color='blanco' dibujar-si='unido' expresión='(A.x,A.y)(B.x,B.y)(x1,y1)(P.x,P.y)(A.x,A.y)' ancho='4' info='orilla del rectángulo'">
+   <param name="G_16" value="espacio='E2' tipo='segmento' color='grisClaro' expresión='(A.x,miny-20)(C.x,miny-20)' fijo='sí' tamaño='5' ancho='2'">
+   <param name="G_17" value="espacio='E2' tipo='segmento' color='grisClaro' expresión='(minx-20,A.y)(minx-20,C.y)' fijo='sí' tamaño='5' ancho='2'">
+   <param name="G_18" value="espacio='E2' tipo='imagen' expresión='(150,256,1,1)' archivo='images/personajes/boy_04_mirror.png'">
+   <param name="G_19" value="espacio='E2' tipo='texto' color='blanco' expresión='[(A.x+C.x)/2-25,512-(miny-20)-10]' texto='base' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='blanco' expresión='[minx-55,512-(A.y+C.y)/2-10]' texto='altura' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="Animación" value="pausa='slow' controles='no' auto='no' inicio='T=2;t=(vuelta)?T:0;dt=(vuelta)?-1/8:1/8;Trasladar(t);animando=1' hacer='t=t+dt;t=min(max(0,t),T);Trasladar(t/T);animando=(0<t)&(t<T);cortado=(vuelta&!animando)?0:cortado;marcado=(vuelta&!animando)?0:marcado;vuelta=(vuelta&!animando)?0:vuelta;limpiar=!animando;;' mientras='animando'">
+</ajs>
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

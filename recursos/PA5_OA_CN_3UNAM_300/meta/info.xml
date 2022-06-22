@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_300"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		¿Flotará o no?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad explorarás la flotabilidad de diversos cuerpos en líquidos distintos, y descubrirás por qué flotan si son más pesados que el agua. Además, construirás un vaso con capas multicolores de diversos líquidos explicando qué propiedad es la fundamental para que una capa de líquido flote sobre otra.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, flotabilidad, fluidos, experimentación con sólidos, líquidos y gases para construir representaciones de las propiedades medibles de masa y volumen, medición de la masa y del volumen de diferentes objetos, relación de masa y volumen con objetos de diferentes materiales
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Materia, densidad, masa, flotabilidad, principio de Arquímedes, fuerza de empuje
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		.control {
+			display: inline-block;
+		}
+		
+		
+		
+		
+	</style>
+	
+	<script type="text/javascript" src="js/contribute/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var $winAdivina = $('#adivina');
+		var iframeW = $winAdivina[0].contentWindow;
+		
+		
+		var btn = $('button#propBtn');
+		
+		var $propN = $('#propertyName');
+		var $propV = $('#propertyValue');
+		
+		var $correctOpt = $('#correcto')
+		var btn2 = $('button#optBtn');
+		
+		var btnReinit = $('button#reinit');
+		
+		
+		
+		btn.on('click',function(){
+			var domain ='*';
+			var param = {};
+			var pN = $propN.val();
+			var pV = $propV.val();
+			
+			pN = (pN.length<=0)?'*':pN;
+			param[pN] = pV;
+			iframeW.postMessage({operation : "addFilterValues", param:param }, domain);
+		});
+		
+		
+		btn2.on('click',function(){
+			var optionID = $correctOpt.val();
+			console.log("Vamos a poner el indice correcto ",optionID);
+			iframeW.postMessage({operation : "setCorrectOption", param:optionID }, '*');
+		});
+
+		btnReinit.on('click',function(){
+			iframeW.postMessage({operation : "reinit", param:0 }, '*');
+		});
+		
+		
+		
+		
+		
+		var reciverL = function(event){
+			console.log("Nos regresaron : ",event);
+			var res = event.data;	
+			switch(res.operation){
+				case 'allDone' : 
+					alert('Terminamos');
+					break;
+				case 'allFlipped' : 
+					alert('Termino de voltear las correspondientes');
+					break;
+			}
+		} 
+		
+	
+		
+		
+		if (window.addEventListener){
+			addEventListener("message", reciverL, false);
+		} else {
+			attachEvent("onmessage", reciverL, false);
+		}
+		
+	});
+	</script>
+	
+	<title>Pagina de Prueba</title>
+</head>
+<body>
+
+	<iframe id='adivina' src="index.html" width="100%">
+	</iframe>
+
+	<div class='controls'>
+		<div class='control'>
+			<label for="propertyName">Propiedad</label>
+			<input id='propertyName'>
+		</div>
+		<div class='control'>
+			<label for="propertyValue">Valor</label>
+			<input id='propertyValue'>
+		</div>
+		<button id = 'propBtn'> Enviar </button>
+	</div>
+	<div class='controls'>
+		<div class='control'>
+			<label for="correcto">Índice del correcto</label>
+			<input id='correcto'>
+		</div>
+		<button id='optBtn'> Poner Correcto </button>
+	</div>
+	
+	<button id='reinit'> ReIniciar </button>
+	
+	<div>
+		<h2>Ejemplos de parametros</h2>
+		<pre>
+			*				: si, no , cafe, rubio, blanco, etc.
+			sombrero		: si,
+			lentes			: si,
+			hombre			: si,
+			color_cabello		: cafe, rubio
+			color_piel		: moreno claro,blanco
+			cabello_largo		: si,
+		</pre>
+		<h2>IDs </h2>
+		personajes__0_1 , personajes__0_0,personajes__0_6
+	</div>
+</body>
+</html>

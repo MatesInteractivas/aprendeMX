@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_004"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Corrientes por imanes
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad reconocerás las condiciones bajo las cuales un imán en movimiento puede generar una corriente eléctrica, e identificarás el sentido de la corriente inducida por el imán mediante simulaciones de corrientes eléctricas en un circuito inducidas por un cambio del campo magnético. Experimentalmente, observarás que si un imán se mueve de cierta forma dentro de un conductor circular o cilíndrico existe una corriente eléctrica que permite que encienda un foquito conectado al circuito, mientras que si el imán está en reposo esto no sucede.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, electricidad y magnetismo, funcionamiento de un circuito eléctrico y sus componentes, aplicaciones del circuito eléctrico, transformaciones de la electricidad en la vida cotidiana.
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Electricidad y magnetismo, campo magnético, espira, bobina, solenoide, imán, brújula, norte, sur, polo, positivo, negativo, electroimán, electroimanes, Faraday, Maxwell, inducción electromagnética, generador, generadores, presa hidroeléctrica, interruptor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

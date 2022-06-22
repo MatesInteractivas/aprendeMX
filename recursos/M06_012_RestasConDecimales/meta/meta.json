@@ -1,0 +1,32 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "decimales", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Problemas aditivos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "sustracción", 
+    "resta", 
+    "problemas", 
+    "decimales", 
+    "enteros", 
+    "punto decimal", 
+    "resolución de problemas"
+  ], 
+  "descripcion": "Esta unidad te ayudará a practicar el algoritmo de la resta para poderlo aplicar en la resolución de problemas que involucren números enteros y decimales.",
+  "resena": "Algoritmo de la resta para enteros y decimales con aplicación a problemas.",
+  "titulo": "Restas con decimales", 
+  "id": "PA6_OA_MA_3UNAM_012"
+}

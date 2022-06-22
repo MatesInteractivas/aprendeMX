@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_000"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Circuitos y resistencia
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad identificarás los componentes más comunes de un circuito eléctrico, como la fuente de voltaje (pila), los conductores (cables) y elementos resistentes, como un foco, además de interruptores, y conocerás la simbología usual para representarlos. Reconocerás a la corriente eléctrica como aquello que fluye en un circuito eléctrico y notarás que no lo hace con igual facilidad en cualquier objeto o material, y clasificarás diversos materiales como buenos o malos conductores de la electricidad. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, electricidad y magnetismo, funcionamiento de un circuito eléctrico y sus componentes, materiales conductores y aislantes de la corriente eléctrica, aplicaciones del circuito eléctrico.
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Electricidad, circuito, circuitos, voltaje, batería, pila, baterías, pilas, fuente de voltaje, resistencia, resistividad, conductividad, corriente eléctrica, foco, alambre, diagrama eléctrico, diagramas eléctricos, polo, positivo, negativo, corriente eléctrica, foco, interruptor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

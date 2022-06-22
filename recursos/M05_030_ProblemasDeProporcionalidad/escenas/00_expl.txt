@@ -1,0 +1,420 @@
+﻿fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Cuántos tacos\nvamos a hacer?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=pensando
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Cuántas galletas\nvamos a hornear?'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y cuánta agua\nde jamaica\nvamos a preparar?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Primero tenemos que\ndecidir las cantidades\nde cada alimento que\nvamos a ofrecer por\ninvitado'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='De acuerdo.'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+str='(tacos:=2)+(dtacos:=1)'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Propongo que le\ndemos dos tacos\na cada uno.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Es muy poco!\nSe van a quedar\ncon hambre.\nMejor tres.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=senyalando
+str='tacos:=3'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Bueno.\nMás vale que sobre\na que falte.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+str='(galletas:=2)+(dgalletas:=1)'
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Te parecen bien\nrepartir las galletas\na razón de dos por\npersona?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Dos galletas por\npersona es muy poco,\npero está bien, para\nque no engorden.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+
+fixData(N)
+str='(numlpp:=1)+(denlpp:=1)'
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Un litro de agua de\njamaica por persona?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str='denlpp:=4'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡No! Es demasiado.\nUn litro alcanza para\ncuatro personas.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='(numlpp:=interrogante)+(denlpp:=interrogante)'
+makeFig(N,0,str)
+DIALOGO[N,juan]='No creo, un litro\nsólo alcanza para\ntres vasos grandes.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str='denlpp:=interrogante'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Tienes razón.\nY como hace calor\nhay que darle dos vasos\ngrandes a cada quien.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, porque vamos\na bailar y a jugar\nencantados y el\nejercicio provoca\nsed.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=senyalando
+str='(numlpp:=2)+(denlpp:=3)'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='De acuerdo.\nEntonces hay que\nhacer 2 litros para\ncada 3 personas.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Por qué dices eso?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Quedamos en que un\nlitro da 3 vasos, así\nque 2 litros dan 6\nvasos, y eso alcanza\npara 3 invitados.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, claro. ¿Pero\ncómo aprendiste a\nhacer ese cálculo?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=senyalando
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Gracias a la\nproporcionalidad!'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Proporcionali-qué?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Proporcionalidad.\nCalculas la razón de\nproporcionalidad, que \nen este caso es 2 litros\npara cada 3 personas.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='A ver, repíteme\ncómo lo hiciste.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Un litro da 3 vasos.\n2 litros dan 6 vasos.\nCon 2 litros alcanza\npara 3 invitados. 2 : 3.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y esos dos puntos\nentre el 2 y el 3\nqué significan?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Así se escribe que algo\nestá en razón de 2 a 3.\nRepartiremos el agua a\nrazón de dos litros por\ncada tres personas.'
+DIALOGO[N,ludT]=10
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y si los vasos\nfueran chicos, digamos\nque salen 4 vasos\npor litro?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Y le quisiéramos\ndar 3 vasos chicos\na cada invitado?'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí. ¿A ver, cómo\nhaces el cálculo?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Con 1 litro llenamos\n4 vasos y con 3 litros\nllenamos 12, lo cual\nalcanza para 4 personas.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Ah! Entonces\nla razón sería  3 : 4,\no sea 3 litros para\ncada 4 personas.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Precisamente!\n¿Ves?\nNo es tan difícil.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Volviendo a la fiesta,\nquedamos en dar 3\ntacos y 2 galletas\na cada invitado.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Si, y dos litros de\nagua de jamaica por\ncada tres invitados.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='showsol:=1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿A cuántas personas\nvamos a invitar?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str='Npersonas:=24'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Ayer hicimos la cuenta,\neran 24 contándonos\na nosotros dos.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='Ntacos:=72'
+makeFig(N,0,str)
+DIALOGO[N,juan]='Entonces tenemos que\npreparar 72 tacos,\nya que 24 × 3 = 72.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+str='Ngalletas:=48'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Si, y tenemos que\nhornear 48 galletas\nporque 24 × 2 = 48.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Ahora hay que calcular\nlos litros de agua de\njamaica que hacen falta\npara 24 personas.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=senyalando
+str='Nlitros:=16'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Si para 3 personas\nnecesitamos 2 litros,\npara 24 personas\nnecesitamos 16 litros.'
+DIALOGO[N,ludT]=9
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='A ver, explícamelo\nmás despacio.\n¿Cómo lo hiciste?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='2 litros para 3 invitados.\nEntonces\n16 = 2×8 litros para\n24 = 3×8 invitados.'
+DIALOGO[N,ludT]=9
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Ah, caray! ¿Y de\ndónde sacaste el 8?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Dividiendo 24 por 3.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y por qué dividiste\n24 por 3?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Para saber por cuánto\nhay que multiplicar 3\npara obtener 24, que es\nel número de invitados.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Es lo mismo por lo\nque hay que multiplicar\n2 para obtener el\nnúmero de litros!'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Exacto!\n3×8=24  invitados y\n2×8=16  litros.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Qué significan los\ncuatro puntitos que\nestás poniendo \nentre dos razones?'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Indican que las razones\nson equivalentes.\n2 : 3  : :  16 : 24  se lee:\n2 es a 3 como 16 es a 24.'
+DIALOGO[N,ludT]=9
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y hay alguna manera\nfácil de recordar lo\nque hay que hacer?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Claro, hay una regla\nmuy sencilla.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿De veras?\n¿Cuál es?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Si la razón es  2 : 3\nel número de litros\npara 24 personas es\n24 entre 3 por 2.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿De veras?'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sólo hay que dividir\nel número de personas\npor 3 y multiplicar por 2,\n24/3 × 2= 8 × 2 = 16.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Tan fácil?'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí, cuando la razón es\n2:3 se divide por 3\ny se multiplica por 2.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Y si la razón fuera  3 : 4\ndivides las personas por\n4 y multiplicas por 3!'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí. En ese caso necesitaríamos\n(24/4) × 3 = 6 × 3 = 18\nlitros.'
+DIALOGO[N,ludT]=10
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='showcalc:=1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y esa regla nos sirve\npara calcular todo?'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí. Tacos, galletas\ny litros de agua de\njamaica, todo sale\ncon la misma regla.'
+DIALOGO[N,ludT]=12
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Bueno, lo importante\nes que ya sabemos lo\nque hay que preparar.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí, 72 tacos,\n48 galletas y\n16 litros de agua\nde jamaica.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pero lo mejor es que...'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Ya sabemos cómo\nutilizar la\nproporcionalidad.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pero lo mejor es que...'
+DIALOGO[N,judT]=0
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Ya sabemos cómo\nutilizar la\nproporcionalidad.'
+DIALOGO[N,ludT]=0
+DIALOGO[N,lact]=parada
+N=N+1

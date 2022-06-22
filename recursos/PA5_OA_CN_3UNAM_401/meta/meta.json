@@ -1,0 +1,39 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "mecánica", 
+    "¿cómo uso la fuerza?", 
+    "efecto de la fuerza en el funcionamiento de las máquinas simples: palanca", 
+    "aprovechamiento de las máquinas simples en la vida cotidiana"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Movimiento", 
+    "experimento", 
+    "simulación", 
+    "palanca", 
+    "polea", 
+    "polea simple", 
+    "poleas compuestas", 
+    "plano inclinado", 
+    "masa", 
+    "peso", 
+    "tornillo", 
+    "taladro de bombeo", 
+    "fulcro", 
+    "eje"
+  ], 
+  "descripcion": "En esta unidad te enfocarás a las palancas, una de las máquinas simples más comunes, y reconocerás que facilitan muchas tareas cotidianas. La usarás para levantar y equilibrar objetos y explorarás algunas características y propiedades de ellas, como el brazo de palanca y el punto de apoyo o fulcro.",
+  "resena": "Palancas como ejemplo de máquinas simples. Papel del fulcro y brazo de palanca. Aplicaciones prácticas.",
+  "titulo": "Denme un punto de apoyo y moveré al mundo.", 
+  "id": "PA5_OA_CN_3UNAM_401"
+}

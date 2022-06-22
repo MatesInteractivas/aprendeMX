@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, media, promediar, valor promedio, población, conjunto de valores, conjunto de medidas.">
+
+<head>
+
+	<title>La media o valor promedio como dato representativo</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='otroEjercicio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro ejercicio' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualEjercicio=(cualEjercicio+1)%numEj\n_Eval_(&squot;ejercicio&squot;+cualEjercicio+&squot;()&squot;)\ndoPlay(0)'">
+   <param name="C_02" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Verificar' expresión='((E2._w-200)/2,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda verificar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='verificar()\ndoPlay(0)' activo-si='!bien' pos_mensajes='centro'">
+   <param name="C_03" value="id='_SEPARADOR_' tipo='numérico' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='sumando0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando0.val]' expresión='(sumando0.x,sumando0.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando0.val&squot;,sumando0.x,sumando0.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>0' activo-si='!bienSum0' pos_mensajes='centro'">
+   <param name="C_05" value="id='sumando1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando1.val]' expresión='(sumando1.x,sumando1.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando1.val&squot;,sumando1.x,sumando1.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>1' activo-si='!bienSum1' pos_mensajes='centro'">
+   <param name="C_06" value="id='sumando2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando2.val]' expresión='(sumando2.x,sumando2.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando2.val&squot;,sumando2.x,sumando2.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>2' activo-si='!bienSum2' pos_mensajes='centro'">
+   <param name="C_07" value="id='sumando3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando3.val]' expresión='(sumando3.x,sumando3.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando3.val&squot;,sumando3.x,sumando3.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>3' activo-si='!bienSum3' pos_mensajes='centro'">
+   <param name="C_08" value="id='sumando4' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando4.val]' expresión='(sumando4.x,sumando4.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando4.val&squot;,sumando4.x,sumando4.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>4' activo-si='!bienSum4' pos_mensajes='centro'">
+   <param name="C_09" value="id='sumando5' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando5.val]' expresión='(sumando5.x,sumando5.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando5.val&squot;,sumando5.x,sumando5.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>5' activo-si='!bienSum5' pos_mensajes='centro'">
+   <param name="C_10" value="id='sumando6' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando6.val]' expresión='(sumando6.x,sumando6.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando6.val&squot;,sumando6.x,sumando6.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>6' activo-si='!bienSum6' pos_mensajes='centro'">
+   <param name="C_11" value="id='sumando7' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando7.val]' expresión='(sumando7.x,sumando7.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando7.val&squot;,sumando7.x,sumando7.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>7' activo-si='!bienSum7' pos_mensajes='centro'">
+   <param name="C_12" value="id='sumando8' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando8.val]' expresión='(sumando8.x,sumando8.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando8.val&squot;,sumando8.x,sumando8.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>8' activo-si='!bienSum8' pos_mensajes='centro'">
+   <param name="C_13" value="id='sumando9' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[sumando9.val]' expresión='(sumando9.x,sumando9.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;sumando9.val&squot;,sumando9.x,sumando9.y,ctr.w,ctr.h)\ndoPlay(0)' dibujar-si='numValues>9' activo-si='!bienSum9' pos_mensajes='centro'">
+   <param name="C_14" value="id='divisor0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[divisor0.val]' expresión='(divisor0.x,divisor0.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;divisor0.val&squot;,divisor0.x,divisor0.y,ctr.w,ctr.h)\ndoPlay(0)' activo-si='!bienDiv0' pos_mensajes='centro'">
+   <param name="C_15" value="id='parcial' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[parcial.val]' expresión='(parcial.x,parcial.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;parcial.val&squot;,parcial.x,parcial.y,ctr.w,ctr.h)\ndoPlay(0)' activo-si='!bienParc' pos_mensajes='centro'">
+   <param name="C_16" value="id='divisor1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[divisor1.val]' expresión='(divisor1.x,divisor1.y,ctr.w,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;divisor1.val&squot;,divisor1.x,divisor1.y,ctr.w,ctr.h)\ndoPlay(0)' activo-si='!bienDiv1' pos_mensajes='centro'">
+   <param name="C_17" value="id='total' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[total.val]' expresión='(total.x,total.y,ctr.w+15,ctr.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;total.val&squot;,total.x,total.y,ctr.w+15,ctr.h)\ndoPlay(0)' activo-si='!bienTotal' pos_mensajes='centro'">
+   <param name="A_01" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_02" value="id='init()' expresión='0'">
+   <param name="A_03" value="id='initBtns()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='ctr.w=50;ctr.h=46;;posBtns.x=60;posBtns.y=260;sepBtns=30;sepDivisor=20;;sumando0.val=&squot;&squot;;sumando1.val=&squot;&squot;;sumando2.val=&squot;&squot;;sumando3.val=&squot;&squot;;sumando4.val=&squot;&squot;;sumando5.val=&squot;&squot;;sumando6.val=&squot;&squot;;sumando7.val=&squot;&squot;;sumando8.val=&squot;&squot;;sumando9.val=&squot;&squot;;divisor0.val=&squot;&squot;;parcial.val=&squot;&squot;;divisor1.val=&squot;&squot;;total.val=&squot;&squot;;;'">
+   <param name="A_04" value="id='colocaBtns()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='posBtns.x=(E2._w-(numValues+2)*ctr.w-(numValues+1)*sepBtns)/2 -7;posBtns.y=(withTable)?350:260;;sumando0.x=posBtns.x;sumando0.y=posBtns.y;sumando1.x=posBtns.x+ctr.w+sepBtns;sumando1.y=posBtns.y;sumando2.x=posBtns.x+2*(ctr.w+sepBtns);sumando2.y=posBtns.y;sumando3.x=posBtns.x+3*(ctr.w+sepBtns);sumando3.y=posBtns.y;sumando4.x=posBtns.x+4*(ctr.w+sepBtns);sumando4.y=posBtns.y;sumando5.x=posBtns.x+5*(ctr.w+sepBtns);sumando5.y=posBtns.y;sumando6.x=posBtns.x+6*(ctr.w+sepBtns);sumando6.y=posBtns.y;sumando7.x=posBtns.x+7*(ctr.w+sepBtns);sumando7.y=posBtns.y;sumando8.x=posBtns.x+8*(ctr.w+sepBtns);sumando8.y=posBtns.y;sumando9.x=posBtns.x+9*(ctr.w+sepBtns);sumando9.y=posBtns.y;;divisor0.x=posBtns.x+((numValues-1)*(ctr.w+sepBtns))/2;divisor0.y=posBtns.y+ctr.h+sepDivisor;;parcial.x=posBtns.x+numValues*(ctr.w+sepBtns);parcial.y=posBtns.y;;divisor1.x=posBtns.x+numValues*(ctr.w+sepBtns);divisor1.y=posBtns.y+ctr.h+sepDivisor;;total.x=posBtns.x+(numValues+1)*(ctr.w+sepBtns);total.y=posBtns.y+(ctr.h+sepDivisor)/2;;'">
+   <param name="A_05" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_06" value="id='showKeyboard(val,x,y,w,h)' algoritmo='sí' expresión='x' algoritmo='sí' inicio='showShadeCover()' hacer='varOpenKeyboard=val;teclado.S=_Eval_(val);;TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,x+&squot;,&squot;+y+&squot;,&squot;+w+&squot;,&squot;+h);TCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;);TCL.update();;;'">
+   <param name="A_07" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' Local='tmpStr' inicio='hideShadeCover()' hacer='tmpStr=varOpenKeyboard+&squot;:=&squot;+Teclado.S;_Eval_(tmpStr);tmpStr=varOpenKeyboard+&squot;:=&squot;+&squot;_Num_(_NumToStr_(&squot;+varOpenKeyboard+&squot;,4))&squot;;_Eval_(tmpStr);;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0'">
+   <param name="A_08" value="id='hideShadeCover()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_09" value="id='showShadeCover()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_10" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_11" value="id='VALUES' vector='sí' evaluar='una-sola-vez' tamaño='10'">
+   <param name="A_12" value="id='DIAS' vector='sí' evaluar='una-sola-vez' tamaño='7' expresión='DIAS[0]=&squot;Lunes&squot;;DIAS[1]=&squot;Martes&squot;;DIAS[2]=&squot;Miércoles&squot;;DIAS[3]=&squot;Jueves&squot;;DIAS[4]=&squot;Viernes&squot;;DIAS[5]=&squot;Sábado&squot;;DIAS[6]=&squot;Domingo&squot;;'">
+   <param name="A_13" value="id='NOMBRES' vector='sí' evaluar='una-sola-vez' tamaño='13' expresión='NOMBRES[0]=&squot;Antonio&squot;;NOMBRES[1]=&squot;Magda&squot;;NOMBRES[2]=&squot;Luis&squot;;NOMBRES[3]=&squot;Rosario&squot;;NOMBRES[4]=&squot;Vanessa&squot;;NOMBRES[5]=&squot;Natalia&squot;;NOMBRES[6]=&squot;Carlos&squot;;NOMBRES[7]=&squot;María&squot;;NOMBRES[8]=&squot;Juan&squot;;NOMBRES[9]=&squot;Lupe&squot;;NOMBRES[10]=&squot;Chayo&squot;;NOMBRES[11]=&squot;Elena&squot;;NOMBRES[12]=&squot;Sofia&squot;;'">
+   <param name="A_14" value="id='esIgual(a,b)' expresión='abs(a-b)<0.005'">
+   <param name="A_15" value="id='initVars()' algoritmo='sí' expresión='0' algoritmo='sí' inicio='verificado=0' hacer='initBtns();bien=0;bienSum0=0;bienSum1=0;bienSum2=0;bienSum3=0;bienSum4=0;bienSum5=0;bienSum6=0;bienSum7=0;bienSum8=0;bienSum9=0;bienDiv0=0;bienParc=0;bienDiv1=0;bienTotal=0'">
+   <param name="A_16" value="id='createValues(nVal,minVal,maxVal)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i' inicio='i=0;initVars();numValues=nVal;colocaBtns();parcialSum=0' hacer='VALUES[i]=(i<nVal)?minVal+ent(rnd*(maxVal-minVal)):0;parcialSum=parcialSum+VALUES[i];i=i+1' mientras='i<VALUES.long'">
+   <param name="A_17" value="id='ejercicio0()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=0;createValues(4,7,23);enunciado=&squot;Rosario tardó en leer un libro &squot;+VALUES[0]+&squot; días, leyó otro en &squot;+VALUES[1]+&squot; días, el tercer libro lo leyó en &squot;+VALUES[2]+&squot; días y el cuarto libro que leyó tardó &squot;+VALUES[3]+&squot; días. ¿En promedio cuántos días tarda Rosario en leer un libro?&squot;;'">
+   <param name="A_18" value="id='ejercicio1()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(10,10,24);enunciado=&squot;La tabla representa las temperaturas registradas en la localidad donde vive Magda durante el día de ayer. ¿Cuál fue la temperatura promedio del día?&squot;;'">
+   <param name="A_19" value="id='ejercicio2()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(7,13,20);enunciado=&squot;Juan anotó las temperaturas de la semana pasada en una tabla como la siguiente.\n\n\n\n\n\n\n\n¿Cuál fue la temperatura media de la semana pasada?&squot;;'">
+   <param name="A_20" value="id='ejercicio3()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(7,18,24);enunciado=&squot;Pablo es meteorólogo y anotó la temperatura máxima que se registró cada día de una semana. Después, calculó sus medias.\n\n\n\n\n\n\n¿Cuál fue la media de las temperaturas máximas?&squot;;'">
+   <param name="A_21" value="id='ejercicio4()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(7,10,17);enunciado=&squot;Pablo es meteorólogo y anotó la temperatura mínima que se registró cada día de una semana. Después, calculó sus medias.\n\n\n\n\n\n\n¿Cuál fue la media de las temperaturas mínimas?&squot;;'">
+   <param name="A_22" value="id='ejercicio5()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(6+ent(rnd*3),11,17);enunciado=&squot;Calcula el promedio de edad de un grupo de ocho amigos cuyas edades son:&squot;;'">
+   <param name="A_23" value="id='ejercicio6()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(6,120,150);enunciado=&squot;Estas son las alturas de un equipo escolar de baloncesto:\n\n\n\n\n\n\n\n¿Calcula la altura media del equipo?&squot;;'">
+   <param name="A_24" value="id='ejercicio7()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=1;createValues(7,190,210);enunciado=&squot;Elena ha leído un artículo sobre su equipo de baloncesto preferido. Ha visto que las alturas de sus jugadores en centímetros son las siguientes:\n\n\n\n\n\n\n¿Cuál es la altura media de los siete jugadores??&squot;;'">
+   <param name="A_25" value="id='ejercicio8()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=0;createValues(10,25,33);enunciado=&squot;Los pesos en kilos de 10 amigos son: &squot;+VALUES[0]+&squot;, &squot;+VALUES[1]+&squot;, &squot;+VALUES[2]+&squot;, &squot;+VALUES[3]+&squot;, &squot;+VALUES[4]+&squot;, &squot;+VALUES[5]+&squot;, &squot;+VALUES[6]+&squot;, &squot;+VALUES[7]+&squot;, &squot;+VALUES[8]+&squot;, &squot;+VALUES[9]+&squot;. ¿Cuál es el peso medio de estos amigos?&squot;;'">
+   <param name="A_26" value="id='ejercicio9()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='withTable=0;createValues(8,1500,3000);enunciado=&squot;En una tienda venden 8 bicicletas. Sus precios son: $&squot;+VALUES[0]+&squot;, $&squot;+VALUES[1]+&squot;, $&squot;+VALUES[2]+&squot;, $&squot;+VALUES[3]+&squot;, $&squot;+VALUES[4]+&squot;, $&squot;+VALUES[5]+&squot;, $&squot;+VALUES[6]+&squot;, $&squot;+VALUES[7]+&squot;. ¿Cuál es el precio medio de una bicicleta?&squot;;'">
+   <param name="A_27" value="id='verificar()' algoritmo='sí' expresión='0' algoritmo='sí' inicio='verificado=1' hacer='bienSum0=(VALUES[0]==sumando0.val);bienSum1=(VALUES[1]==sumando1.val);bienSum2=(VALUES[2]==sumando2.val);bienSum3=(VALUES[3]==sumando3.val);bienSum4=(VALUES[4]==sumando4.val);bienSum5=(VALUES[5]==sumando5.val);bienSum6=(VALUES[6]==sumando6.val);bienSum7=(VALUES[7]==sumando7.val);bienSum8=(VALUES[8]==sumando8.val);bienSum9=(VALUES[9]==sumando9.val);;bienDiv0=(numValues==divisor0.val);;bienParc=(parcialSum==parcial.val);;bienDiv1=(numValues==divisor1.val);;bienTotal=(esIgual((parcialSum/numValues),total.val));;bien=(numValues>0)?bienSum0:bien;bien=(numValues>1)?bien&&bienSum1:bien;bien=(numValues>2)?bien&&bienSum2:bien;bien=(numValues>3)?bien&&bienSum3:bien;bien=(numValues>4)?bien&&bienSum4:bien;bien=(numValues>5)?bien&&bienSum5:bien;bien=(numValues>6)?bien&&bienSum6:bien;bien=(numValues>7)?bien&&bienSum7:bien;bien=(numValues>8)?bien&&bienSum8:bien;bien=(numValues>9)?bien&&bienSum9:bien;;bien=(bien)&&(bienDiv0)&&(bienParc)&&(bienDiv1)&&(bienTotal);'">
+   <param name="A_28" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Aprende a obtener el promedio en diferentes situaciones.&squot;' hacer='initBtns();init();;bPanel.x=20;bPanel.y=56;bPanel.w=983;bPanel.h=433;;numEj=10;cualEjercicio=0;ejercicio0();;imgOK=&squot;images/icon_ok.png&squot;;imgBAD=&squot;images/icon_wrong.png&squot;;'">
+   <param name="A_29" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='aux=(TCL.ready)?TCL.set(&squot;mustClear&squot;,1):0;aux=(TCL.ready)?TCL.update():0;'">
+   <param name="G_01" value="espacio='E2' tipo='texto' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_02" value="espacio='E2' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='bPanel'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='34495e' expresión='[34,64]' texto='[enunciado]' fuente='SansSerif,PLAIN,21' fijo='no' ancho='E2._w-68'">
+   <param name="G_04" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[0,0]' texto='[bien] | [bienSum0] [bienSum1] [bienSum2] [bienSum3] [bienSum4] [bienSum5] [bienSum6] [bienSum7] [bienSum8] [bienSum9] | [bienDiv0] [bienDiv1] | [bienParc] [bienTotal]' fijo='sí'">
+   <param name="G_05" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_06" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_07" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(posBtns.x-2,posBtns.y+ctr.h+sepDivisor/2)(posBtns.x+numValues*(ctr.w+sepBtns)-sepBtns+2,posBtns.y+ctr.h+sepDivisor/2)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_08" value="espacio='E2' tipo='texto' expresión='[posBtns.x+ctr.w+s*(ctr.w+sepBtns)+sepBtns/2,posBtns.y+ctr.h/2+2,1,1]' familia='s' s.intervalo='[0,numValues-2]' s.pasos='numValues-2' texto='+' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_09" value="espacio='E2' tipo='texto' expresión='[posBtns.x+numValues*(ctr.w+sepBtns)-sepBtns/2,posBtns.y+ctr.h+sepDivisor/2+2,1,1]' texto='=' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_10" value="espacio='E2' tipo='segmento' coord_abs='sí' expresión='(posBtns.x+(numValues)*(ctr.w+sepBtns),posBtns.y+ctr.h+sepDivisor/2)(posBtns.x+(numValues+1)*(ctr.w+sepBtns)-sepBtns,posBtns.y+ctr.h+sepDivisor/2)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_11" value="espacio='E2' tipo='texto' expresión='[posBtns.x+(numValues+1)*(ctr.w+sepBtns)-sepBtns/2,posBtns.y+ctr.h+sepDivisor/2+2,1,1]' texto='=' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='imagen' dibujar-si='verificado' coord_abs='sí' expresión='[total.x+ctr.w+40,total.y+ctr.h/2,1,1]' archivo='[(bien)?imgOK:imgBAD]'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==1' expresión='[100+s*80,160,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Hora&squot;:((s-1)*2)+&squot; h&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==1' expresión='[100+s*80,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Temp ºC&squot;:VALUES[s-1]+&squot;º&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(cualEjercicio==2)||(cualEjercicio==3)||(cualEjercicio==4)' expresión='[100+s*100,160,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Día&squot;:DIAS[s-1]]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==2' expresión='[100+s*100,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Temp ºC&squot;:VALUES[s-1]+&squot;º&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==3' expresión='[100+s*100,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Máxima&squot;:VALUES[s-1]+&squot;º&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==4' expresión='[100+s*100,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Mínima&squot;:VALUES[s-1]+&squot;º&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_19" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualEjercicio==5' expresión='[100+s*100,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Edades&squot;:VALUES[s-1]+&squot; años&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(cualEjercicio==6)' expresión='[100+s*100,160,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Nombre&squot;:NOMBRES[s-1]]' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_21" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(cualEjercicio==6)||(cualEjercicio==7)' expresión='[100+s*100,190,1,1]' familia='s' s.intervalo='[0,numValues]' s.pasos='numValues' texto='[(s==0)?&squot;Altura&squot;:VALUES[s-1]+&squot; cm&squot;]' fuente='SansSerif,PLAIN,21' fijo='no'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

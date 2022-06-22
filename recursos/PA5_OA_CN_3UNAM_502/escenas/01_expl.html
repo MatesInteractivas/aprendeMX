@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Calor, conducción, contacto, transmisión del calor, vibración, vibración atómica, átomos, partículas, moléculas, transferencia de calor, sólidos">
+
+<head>
+	<title>Transmisión del calor por conducción</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='ED' y='45' alto='450' fijo='sí' O.y='210' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(E1._w/8-100,E1._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nnv=max(nv-1,0)\naux=(nv==0)?initP():&squot;&squot;\naux=(nv==1)?nuevasParticulas(N):&squot;&squot;\naux=(nv>1)?initMol():&squot;&squot;\nanimando=0\npausado=0\n' dibujar-si='(nv>2)' activo-si='nv>2'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(7*E1._w/8-100,E1._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nnv=min(nv+1,nV-1)\naux=(nv==1)?nuevasParticulas(N):&squot;&squot;\nanimando=0\npausado=0\n' dibujar-si='(nv+1<nV)&((nv==1)|!animando)' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='conductor1' tipo='numérico' interfaz='menú' región='interior' espacio='ED' expresión='(360,40,150,40)' valor='2' decimales='0' fijo='sí' visible='no' opciones='madera,acero,aluminio,plata' acción='calcular' parámetro='doPlay(0)\nanimando=0\npausado=0\ninitMol()\n' pos_mensajes='centro'">
+   <param name="C_04" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w/2,E1._h-75,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nanimando=0\npausado=0\ninitMol()\n' pos_mensajes='centro'">
+   <param name="C_05" value="id='go' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w/2+56,E1._h-75,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nanimar=1\nanimando=1\npausado=0' dibujar-si='!animando' pos_mensajes='centro'">
+   <param name="C_06" value="id='pause' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(E1._w/2+56,E1._h-75,+46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pause|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nanimando=0\napagado=1\npausado=1' dibujar-si='animando' pos_mensajes='centro'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='12' filas='4' expresión='col[0,0]=0;col[0,1]=0.4;col[0,2]=0.4;col[0,3]=0.3;;col[1,0]=0;col[1,1]=0.6;col[1,2]=0.5;col[1,3]=0.5;;col[2,0]=0;col[2,1]=0.6;col[2,2]=0.6;col[2,3]=0.7;;col[3,0]=0;col[3,1]=0.7;col[3,2]=0.7;col[3,3]=0.8;'">
+   <param name="A_02" value="id='T' vector='sí' evaluar='una-sola-vez' tamaño='8'">
+   <param name="A_03" value="id='Mol' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='15' expresión='nMol=64;_color=1;_c=1;_radio=2;_x=3;_y=4;_vx=6;_vy=7;_x0=8;_y0=9;_dx=10;_dy=11;_E=12;_Eav=13;_hot=14;'">
+   <param name="A_04" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_05" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_06" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_07" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_08" value="id='En(n)' algoritmo='sí' expresión='1000*(Mol[n,_vx]^2+Mol[n,_vy]^2)' algoritmo='sí' hacer=';'">
+   <param name="A_09" value="id='setConductor()' algoritmo='sí' algoritmo='sí' hacer='k1=2;k21=0.1;k21=(conductor1==0)?0.1:k21;k21=(conductor1==1)?0.2:k21;k21=(conductor1==2)?0.3:k21;k21=(conductor1==3)?0.4:k21;ci=0.05;ci=(conductor1==0)?0.50:ci;ci=(conductor1==1)?0.07:ci;ci=(conductor1==2)?0.03:ci;ci=(conductor1==3)?0.01:ci;cd=ci;'">
+   <param name="A_10" value="id='calcTemp()' algoritmo='sí' algoritmo='sí' Local='n' inicio='T[0]=0;T[1]=0;T[2]=0;T[3]=0;T[4]=0;T[5]=0;T[6]=0;T[7]=0;n=1' hacer='T[0]=T[0]+Mol[n+0*ent(nMol/8),_E]*TempFact;T[1]=T[1]+Mol[n+1*ent(nMol/8),_E]*TempFact;T[2]=T[2]+Mol[n+2*ent(nMol/8),_E]*TempFact;T[3]=T[3]+Mol[n+3*ent(nMol/8),_E]*TempFact;T[4]=T[4]+Mol[n+4*ent(nMol/8),_E]*TempFact;T[5]=T[5]+Mol[n+5*ent(nMol/8),_E]*TempFact;T[6]=T[6]+Mol[n+6*ent(nMol/8),_E]*TempFact;T[7]=T[7]+Mol[n+7*ent(nMol/8),_E]*TempFact;n=n+1' mientras='n<nMol/8'">
+   <param name="A_11" value="id='Temperature(t)' expresión='15+15*t'">
+   <param name="A_12" value="id='Tm(x)' algoritmo='sí' expresión='15+Tx' algoritmo='sí' Local='Ti,T0,Te,Td,isR,isL,Tx,x0' inicio='x0=Estufa.x;isR=(x0>=0);isL=!isR' hacer='Te=Temperature(T[ent((x0+8)/2)])-15;T0=(isR)?Te*exp(-cd*x0):Te*exp(ci*x0);Tx=(isL&(x<=x0))?Te*exp(ci*(x-x0)):Tx;Tx=(isL&(x<=x0))?Te*exp(ci*(x-x0)):Tx;Tx=(isL&(x>x0)&(x<=0))?T0*exp(-ci*x):Tx;Tx=(isL&(x>=0))?T0*exp(-cd*x):Tx;Tx=(isR&(x<=0))?T0*exp(ci*x):Tx;Tx=(isR&(x>=0)&(x<=x0))?Te*exp(cd*(x-x0)):Tx;Tx=(isR&(x>x0))?Te*exp(cd*(x0-x)):Tx;'">
+   <param name="A_13" value="id='Ts' expresión='((Tm((s-32)*8/32)-20)/50)^2'">
+   <param name="A_14" value="id='MaxTm()' algoritmo='sí' expresión='mtm' algoritmo='sí' Local='mtm,n' inicio='mtm=0;n=0' hacer='mtm=max(mtm,Tm(1.925*n-6.6));n=n+1' mientras='n<8'">
+   <param name="A_15" value="id='newMol()' algoritmo='sí' algoritmo='sí' Local='n,rho,alfa' inicio='n=0;dr=16/nMol;nvib=0' hacer='Mol[n,_x0]=-8+n*dr;Mol[n,_y0]=0;alfa=2*pi*rnd;rho=0.0001*(10-(conductor1+conductor2)/2);rho=0;Mol[n,_dx]=rho*cos(alfa);Mol[n,_dy]=rho*sen(alfa);Mol[n,_x]=Mol[n,_x0]+0*Mol[n,_dx];Mol[n,_y]=Mol[n,_y0]+0*Mol[n,_dy];Mol[n,_vx]= Mol[n,_dy];Mol[n,_vy]=-Mol[n,_dx];Mol[n,_E]=En(n);n=n+1;' mientras='n<=nMol'">
+   <param name="A_16" value="id='initMol()' algoritmo='sí' algoritmo='sí' inicio='k0=7' hacer='animando=0;apagado=0;_tiempo=0;setConductor();ik1=k0*nMol/8;ik2=(k0+1)*nMol/8;newMol();doPos();iniciado=1;veces=3;calcTemp();;;'">
+   <param name="A_17" value="id='doVel()' algoritmo='sí' algoritmo='sí' Local='i,inZone,inx,k2' inicio='ik1=ent((k0-0.5)*nMol/8);ik2=ent((k0+0.5)*nMol/8);i=0' hacer='k2=k21;Mol[i,_vx]=Mol[i,_vx]-k1*Mol[i,_dx];Mol[i,_vy]=Mol[i,_vy]-k1*Mol[i,_dy];Mol[i,_vx]=(i>0)?Mol[i,_vx]-k2*(Mol[i,_x]-Mol[i-1,_x]):Mol[i,_vx];Mol[i,_vy]=(i>0)?Mol[i,_vy]-k2*(Mol[i,_y]-Mol[i-1,_y]):Mol[i,_vy];Mol[i,_vx]=(i<nMol)?Mol[i,_vx]-k2*(Mol[i,_x]-Mol[i+1,_x]):Mol[i,_vx];Mol[i,_vy]=(i<nMol)?Mol[i,_vy]-k2*(Mol[i,_y]-Mol[i+1,_y]):Mol[i,_vy];inZone=iniciado&animando&((ik1<=i)&(i<=ik2));inx=(rnd<0.5);Mol[i,_vx]=(inZone&inx)?Mol[i,_vx]+push*sgn(Mol[i,_vx]):Mol[i,_vx];Mol[i,_vy]=(inZone&!inx)?Mol[i,_vy]+push*sgn(Mol[i,_vy]):Mol[i,_vy];Mol[i,_vx]=damp*Mol[i,_vx];Mol[i,_vy]=damp*Mol[i,_vy];i=i+1' mientras='i<=nMol'">
+   <param name="A_18" value="id='doPos()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=0' hacer='Mol[i,_x]=Mol[i,_x]+Mol[i,_vx];Mol[i,_y]=Mol[i,_y]+Mol[i,_vy];Mol[i,_dx]=Mol[i,_x]-Mol[i,_x0];Mol[i,_dy]=Mol[i,_y]-Mol[i,_y0];Mol[i,_E]=(nvib==nvibmax)?((nvibmax-1)*Mol[i,_E]+En(i))/max(nvibmax,1):(nvib*Mol[i,_E]+En(i))/(nvib+1);Mol[i,_Eav]=(i>0)?(Mol[i-1,_E]+Mol[i,_E]+Mol[i+1,_E])/3:(Mol[i,_E]+Mol[i+1,_E])/2;Mol[1,_Eav]=Mol[2,_Eav];Mol[i,_hot]=3*Mol[i,_Eav]*TempFact;i=i+1' mientras='i<=nMol'">
+   <param name="A_19" value="id='Vibra()' algoritmo='sí' algoritmo='sí' Local='k' inicio='nvibmax=10000;k=0' hacer='nvib=min(nvib+1,max(nvibmax,1));doVel();doPos();k=k+1;;' mientras='(k<10)'">
+   <param name="A_20" value="id='Inicio()' algoritmo='sí' expresión='tm' algoritmo='sí' Local='tm' inicio='epsilon=0.000001' hacer='bsz=7.7;animar=0;animando=0;dspl=0.2;TempFact=0.25;push=0.0005;damp=1;initMol();;'">
+   <param name="A_21" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora la conducción del calor en distintos materiales.&squot;' hacer='Inicio();;;;'">
+   <param name="A_22" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='bh=0.2' hacer='Estufa.x=7;'">
+   <param name="A_23" value="id='anim' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_24" value="id='fin' evento='sí' condición='animar' acción='calcular' parámetro='animar=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='curva' fondo='sí' color='bdc3c7' coord_abs='sí' expresión='(botX(0,E1._w/2-10,122,t),botY(0,E1._h-85,66,t))' t.intervalo='[0,8]' relleno='bdc3c7'">
+   <param name="G_03" value="espacio='ED' tipo='polígono' fondo='sí' color='e74c3c' coord_abs='sí' expresión='(20,210)(20+240,210)(20+240,210+85)(20,210+85)' relleno='e74c3c'">
+   <param name="G_04" value="espacio='ED' tipo='texto' fondo='sí' color='ecf0f1' expresión='[30,220]' texto='¿Tocarías una cuchara de metal que tiene el mango sobre una llama?' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='240'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' dibujar-si='conductor1==0' expresión='(0,-3.32,1,1.0)' archivo='images/spoon_wood.png'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='conductor1==1' expresión='(0,-3.32,1,1)' archivo='images/spoon_steel.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='conductor1==2' expresión='(0,-3.32,1,1)' archivo='images/spoon_aluminum.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='conductor1==3' expresión='(0,-3.32,1,0.9)' archivo='images/spoon_silver.png'">
+   <param name="G_09" value="espacio='ED' tipo='imagen' coord_abs='sí' expresión='(140,115,0.8,0.8)' archivo='images/conduccion.png'">
+   <param name="G_10" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[280,15]' texto='Abajo se simula una cuchara de' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='330'">
+   <param name="G_11" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[280,85]' texto='El extremo derecho, o mango de la cuchara, se calienta con una parrilla. ' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='330'">
+   <param name="G_12" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[280,150]' texto='Los puntitos móviles dentro de la cuchara representan (simbólicamente) sus moléculas. \n' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='330'">
+   <param name="G_13" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[280,240]' texto='Los números marcan las temperaturas de cada zona de la cuchara.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='330'">
+   <param name="G_14" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[625,15]' texto='Las moléculas, al calentarse, se mueven más rápido. Para identificar la temperatura de las zonas, cambiarán de color. Cuando están frías son azules, calientes rojas y muy calientes amarillas.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='379'">
+   <param name="G_15" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[625,138]' texto='Inicia la simulación para ver cómo las moléculas se excitan con el calor y se va transmitiendo la energía de unas a otras.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='370'">
+   <param name="G_16" value="espacio='ED' tipo='texto' fondo='sí' color='34495e' expresión='[625,215]' texto='Para cada cuchara anota la temperatura de\nla punta cuando el  mango llega a 120°C.\n¿Qué concluyes de estas observaciones?' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='370'">
+   <param name="G_17" value="espacio='ED' tipo='polígono' fondo='sí' color='34495e' dibujar-si='0' expresión='(-bsz,0+bh)(bsz,0+bh)(bsz,1.18+bh)(-bsz,1.18+bh)(-bsz,0+bh)' relleno='34495e'">
+   <param name="G_18" value="espacio='ED' tipo='punto' color='(Ts,0.2+Ts/8,1-Ts,0)' expresión='(Mol[s,_x0]+dspl*Mol[s,_dx],1.15+Mol[s,_y0])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4'">
+   <param name="G_19" value="espacio='ED' tipo='punto' color='(Ts,0.2+Ts/8,1-Ts,0)' expresión='(Mol[s,_x0]-dspl*Mol[s,_dy],0.9-dspl*Mol[s,_dx])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4'">
+   <param name="G_20" value="espacio='ED' tipo='punto' color='(Ts,0.2+Ts/8,1-Ts,0)' expresión='(Mol[s,_x0]-dspl*Mol[s,_dx],0.65+dspl*Mol[s,_y])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4'">
+   <param name="G_21" value="espacio='ED' tipo='punto' color='(Ts,0.2+Ts/8,1-Ts,0)' expresión='(Mol[s,_x0]-dspl*Mol[s,_dx],0.40+Mol[s,_y0])' familia='s' s.intervalo='[2,nMol-2]' s.pasos='nMol-4' fijo='sí' tamaño='4'">
+   <param name="G_22" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(920-90,E1._h-50-9*(nv==2),1,1)' archivo='images/base.png'">
+   <param name="G_23" value="espacio='E1' tipo='imagen' dibujar-si='animando&(flama1)' coord_abs='sí' expresión='(920-90,E1._h-77-9*(nv==2),1,1)' archivo='images/flama01.png'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='animando&(!flama1)' coord_abs='sí' expresión='(920-90,E1._h-77-9*(nv==2),1,1)' archivo='images/flama02.png'">
+   <param name="G_25" value="espacio='ED' tipo='texto' color='34495e' expresión='[175+s*90,331]' familia='s' s.intervalo='[0,7]' s.pasos='7' texto='[Tm(1.925*s-6.6)]°C' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí'">
+   <param name="Animación" value="pausa='25' controles='no' auto='no' inicio='dt=25/1000;_tiempo=0' hacer='_tiempo=_tiempo+dt;flama1=1-flama1;Estufa.y=-0.6;Estufa.x=min(7,max(-7,Estufa.x));k0=(Estufa.x+8)/2;ik1=k0*nMol/8;ik2=(k0+1)*nMol/8;Vibra();calcTemp();animando=(MaxTm()<120)&animando;;;;' mientras='animando'">
+</ajs>
+
+</body>
+
+</html>

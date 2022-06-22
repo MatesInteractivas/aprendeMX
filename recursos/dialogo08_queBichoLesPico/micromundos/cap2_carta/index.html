@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<!-- mediaelement-->
+		<script src="mediaelement/jquery.js"></script>	
+		<!--<script src="mediaelement/mediaelement-and-player.min.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.min.css" />-->
+		<script src="mediaelement/mediaelement-and-player.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.css" />
+		<link rel="stylesheet" href="mediaelement/mejs-skins.css" />
+			
+		<title>La carta</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			<audio id="player" class="mejs-wmp" src="audio/carta.mp3" type="audio/mp3" controls="controls">	
+			</audio>
+			<div class='carta e-oculto'>
+				<div class="seccion e-oculto" data-id="lugarFecha">
+					<div class="texto">
+						Villahermosa, 4 de abril de 2016
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion" data-id="encabezado">
+					<div class="texto">
+						Hola amigo:
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion" data-id="saludo">
+					<div class="texto">
+						¿Cómo estás? ¿Cómo te va con esos diálogos que me contaste que tienes con estudiantes? Espero que bien. ¡Has de <span class="expr coloq" data-id="gorro">andar a gorro</span>! Pero imagino que estás contento, así sean pocos diálogos. Dice mi abuelo: “<span class="expr refr" data-id="pelos">pocos pelos, pero bien peinados</span>”.
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion" data-id="desarrollo">
+					<div class="texto">
+						Te cuento que estoy enferma desde hace una semana… Parece que me picó un <span class="expr coloq tres" data-id="bicho">bicho</span>. Dicen que tengo chikunguña, tal vez has visto algo en las noticias. Estoy sin fuerzas… Me siento <span class="expr coloq" data-id="patada">de la patada</span>. Nadie me visita, por miedo a contagiarse… ¡<span class="expr coloq" data-id="lata">qué lata, caray</span>! Mi <span class="expr coloq tres" data-id="jefe">jefe</span>, pues ya sabes, en su trabajo de guardia, todas las noches, lo <span class="expr coloq" data-id="padre">padrísimo</span> es que me cuida de día y me <span class="expr coloq" data-id="chiplea">chiplea</span> <span class="expr coloq" data-id="chorro">un chorro</span>: ¡Eso es <span class="expr coloq tres" data-id="chido">chido</span>! <br>
+						Me prometió llevarme a Ciudad de México cuando mejore… “<span class="expr refr" data-id="nube">Nomás deja que agarre agua la nube</span>”, me dijo, así que podré visitarte. <span class="expr coloq" data-id="yupi">¡Yupi!</span> Además, <span class="expr coloq" data-id="mero">ya mero</span> tendrás vacaciones, ¿no?
+
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion" data-id="despedida">
+					<div class="texto">
+						¡Oye! Cuídate del <span class="expr coloq" data-id="bicho">bicho</span> ese, ¿eh? Ahí me saludas a toda <span class="expr coloq" data-id="raza">la raza</span>. ¡Hasta pronto, amigo!
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion" data-id="firma">
+					<div class="texto">
+						Alicia.
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="seccion e-oculto" data-id="posdata">
+					<div class="texto">
+						p.d.: Saludos a tus papás.
+					</div>
+					<div class="info"></div>
+				</div>
+			</div>
+			
+			<img class='estructura e-oculto' src="img/estructura.png" />
+		</div>
+		
+		<script>
+
+			var inicio = true;
+			var mwId = "cap2_carta";
+			var trgt = "coloq";
+			var nFound = 0;
+			var nTot = 5;
+			
+			var retros = {
+				
+				coloq: {
+					gorro: "“Andar a gorro” es una expresión que significa andar de prisa, a toda velocidad. ¡Bien detectado!",
+					pelos: "Esta expresión es un refrán, ahorita platicaremos un poco sobre ella. Por ahora, selecciona las palabras o frases coloquiales que <em>no</em> sean refranes.",
+					patada: "Alicia usa esta expresión para decirme que se siente realmente muy mal. La identificaste bien.",
+					lata: "Esta es toda una expresión completa, formada por dos frases: “qué lata” y “caray”. Qué lata expresa molestia, y “caray” es como queja. Muy bien.",
+					chiplea: "Muy bien. <em>Chiplear</em> significa consentir, tratar con cariño y ternura, o “apapachar”.",
+					chorro: "¡Bien pensado! <em>Un chorro</em> refiere a “mucho”, se usa cuando nos referimos a una gran cantidad. Por ejemplo, “tengo un chorro de tarea por hacer”.",
+					yupi: "Esta exclamación la usamos cuando algo nos alegra mucho o nos da mucho gusto. La encontraste, ¡yupi!",
+					nube: "Esta expresión es un refrán, ahorita platicaremos un poco sobre ella. Por ahora, selecciona las palabras o frases coloquiales que <em>no</em> sean refranes.",
+					mero: "¡Excelente! El “ya mero” es una expresión muy usada en México. Es una expresión que tiene que ver con el tiempo. Significa que ya casi o muy pronto sucede o se hace algo.",
+					raza: "¡Estupendo! La <em>raza</em> es la pertenencia a un grupo según el color de la piel. Pero en este caso, la expresión de Alicia se refiere al grupo de amigos: “la raza” o “la banda”."
+				},
+				refr: {}
+				
+			}
+		
+			var player = new MediaElementPlayer('#player',{
+				audioWidth: 147,
+				// height of audio player
+				audioHeight: 30,
+				// initial volume when the player starts
+				startVolume: 0.8,
+				// useful for <audio> player loops
+				loop: false,
+				// enables Flash and Silverlight to resize to content size
+				enableAutosize: false,
+				// the order of controls you want on the control bar (and other plugins below)
+				features: ['playpause','progress','current','duration'],
+				//features: ['playpause','progress','current','duration','volume'],
+				// force iPad's native controls
+				iPadUseNativeControls: false,
+				// force iPhone's native controls
+				iPhoneUseNativeControls: false, 
+				// force Android's native controls
+				AndroidUseNativeControls: false,
+				// forces the hour marker (##:00:00)
+				alwaysShowHours: false,
+				// show framecount in timecode (##:00:00:00)
+				showTimecodeFrameCount: false,
+				// used when showTimecodeFrameCount is set to true
+				framesPerSecond: 25,
+				// turns keyboard support on and off for this instance
+				enableKeyboard: true,
+				// when this player starts, it will pause other players
+				pauseOtherPlayers: true,
+				// array of keyboard commands
+				keyActions: []
+			});
+			
+			$('#player').bind('ended',function(){
+				if(inicio){
+					inicio = false;
+					gotoNextQuestion(1000);
+					addMwSettings('audioEnded','true');
+				}
+			});
+			
+			function showCarta(){
+				$('div.carta').removeClass('e-oculto');
+			}
+			
+			function showPlayer(){
+				$('.mejs-wmp').removeClass('e-oculto');
+				//disableChat();
+			}
+			
+			function hidePlayer(){
+				$('.mejs-wmp').addClass('e-oculto');
+				//disableChat();
+			}
+			
+			function showInfo(){
+				
+			}
+			
+			function resaltar(id){
+				$('div.e-resaltado').removeClass('e-resaltado');
+				$('div.seccion[data-id="'+id+'"]').addClass('e-resaltado');
+				
+				if(id=="despedida"){
+					$('div.seccion[data-id="firma"]').addClass('e-resaltado');
+					return;
+				}
+				
+				if(id=="lugarFecha" || id=="posdata"){
+					$('div.carta').addClass('demasElems');
+					$('div.seccion[data-id="'+id+'"]').removeClass('e-oculto');
+				}
+			}
+			
+			function showEstructura(){
+				$('div.seccion.e-resaltado').removeClass('e-resaltado');
+				$('div.seccion').addClass('e-oculto');
+				$('img.estructura').removeClass('e-oculto');
+			}
+			function hideEstructura(){
+				$('div.seccion').removeClass('e-oculto');
+				$('img.estructura').addClass('e-oculto');
+			}
+			
+			function mostrar(dataValue){
+				var arr = dataValue.split("_");
+				var vlr = arr[1];
+				if(arr[0]=="clase"){
+					$('span.expr.'+vlr).addClass('e-resaltado');
+				} else
+				if(arr[0]=="id"){
+					$('span.expr').removeClass('e-morado');
+					$('span.expr[data-id="'+vlr+'"]').addClass('e-resaltado e-morado');
+				}
+			}
+			
+			function activar(slctr){
+				trgt = slctr;
+				if(trgt=="refr"){
+					nFound = 0;
+					nTot = 2;
+				}
+				$('span.expr.e-morado').removeClass('e-morado');
+				$('div.texto').addClass('e-activo');
+				$('span.expr:not(.e-resaltado)').on('click',function(){
+					var id = $(this).data('id');
+					$(this).off();
+					if(trgt=="coloq"){
+						if($(this).hasClass(slctr)){
+							$(this).addClass('e-resaltado e-verde');
+							showTutorIntervention(retros[trgt][id],'guinyo',500);
+							nFound++;
+							checkNumber();
+						} else {
+							$(this).addClass('e-amarillo');
+							showTutorIntervention(retros[trgt][id],'catedratico',500);
+						}
+					} else {
+						if($(this).hasClass(trgt)){
+							setAnswer($(this).text(),500);
+							$(this).addClass('e-resaltado e-verde');
+							nFound++;
+							checkNumber();
+						} else {
+							$(this).addClass('e-rojo');
+							showTutorIntervention('Esta expresión no es un refrán. Sigue buscando.','catedratico',500);
+						}
+					}
+				});
+			}
+			
+			
+			function checkNumber(){
+				
+				if(nFound==nTot){
+					
+					$('div.texto').removeClass('e-activo');
+					$('span.expr').off();
+					
+					if(trgt=="coloq"){
+						setTimeout(function(){
+							$('span.expr.e-amarillo').removeClass('e-amarillo');
+							$('span.expr.e-verde').removeClass('e-verde');	
+						},10000);
+						gotoNextQuestion(10000);
+					} else {
+						$('span.expr.e-rojo').removeClass('e-rojo');
+					}
+					
+				}
+			}
+			
+			/**** chat *****/
+			
+			function gotoNextQuestion(delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function setAnswer(str,delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "setAnswer", params: { id:mwId , value: str } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function disableChat(){
+				var mensajeTipoSet = {
+					command: "disableChat", 
+					params: { 
+						id: mwId
+					}
+				};
+				var padre = window.parent;
+				padre.postMessage(mensajeTipoSet, "*");
+			}
+		
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function showTutorIntervention(text, emotion, delay){
+				var _this = this;
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "showTutorIntervention", params: {id: mwId , text: text, emotion: emotion } };
+					padre.postMessage(mensajeTipoSet, "*");	
+				},delay);
+			}
+
+			window.addEventListener("message", receiveMessage, false);
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="show"){
+						if(evt.data.value=="player"){
+							showPlayer();
+						} else
+						if(evt.data.value=="carta"){
+							showCarta();
+						} else
+						if(evt.data.value=="info"){
+							showInfo();
+						} else
+						if(evt.data.value=="estructura"){
+							showEstructura();
+						}
+					} else 
+					if(evt.data.name=="hide"){
+						if(evt.data.value=="player"){
+							hidePlayer();
+						} else
+						if(evt.data.value=="estructura"){
+							hideEstructura();
+						}
+					} else 
+					if(evt.data.name=="resaltar"){
+						resaltar(evt.data.value);
+					} else 
+					if(evt.data.name=="mostrar"){
+						mostrar(evt.data.value);
+					} else 
+					if(evt.data.name=="activar"){
+						activar(evt.data.value);
+					} else 
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							inicio = false;
+							showLetra();
+						} else {
+							//lo que se tenga que hacer con base en historial
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='audioEnded' && pair[1]=='true'){
+									inicio = false;
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+
+
+			$(document).ready(function(){
+				
+				$('.mejs-wmp').addClass('e-oculto');
+				
+				//showPlayer();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+
+		</script>
+					
+        </body>
+</html>

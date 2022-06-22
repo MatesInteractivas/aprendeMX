@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_ES_3UNAM_002_caracteristicasDistintivas"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		¿Qué será?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Identificar características distintivas para elaborar una descripción: El alumno o la alumna reconocerá la estructura formal de pequeñas oraciones descriptivas del tipo 'Un [sust] es un [sust] que [verbo]…'. Identificará las características distintivas de personas, objetos o animales para emplearlas en la elaboración de una descripción precisa. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto descriptivo
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Español, descripción, definición, característica, característica distintiva, comparación de características, adivinanza, adivina quién, transporte, oración, caricatura
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

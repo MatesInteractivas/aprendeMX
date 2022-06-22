@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, comparación, razón, fracción, oferta, caro, barato, precio, valor unitario, mejor, peor">
+
+<head>
+
+	<title>Comparación de razones y fracciones</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=912 height=512 code="Descartes">
+   <param name="tamaño" value="912x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='TXT' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='TXT' nombre='          anterior' expresión='(20,TXT._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx bermellon regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=max(nv-1,0)\nplayVideo(nv)' dibujar-si='nv>0' activo-si='nv>0'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='TXT' nombre='          siguiente' expresión='(692,TXT._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=min(nv+1,nV-1)\nplayVideo(nv)' dibujar-si='nv+1<nV' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='b1' tipo='numérico' interfaz='botón' región='interior' espacio='TXT' nombre='          Otro ejemplo' expresión='((TXT._w-220)/2,TXT._h-56,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='otroEjemplo()' pos_mensajes='centro'">
+   <param name="A_01" value="id='Mul(n,m)' expresión='(m*ent(n/m+0.000001)==n)'">
+   <param name="A_02" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' Local='k,mcm,minab,mustDivide' inicio='minab=min(a,b);mcm=a*b;k=2' hacer='mustDivide=Mul(a,k)&Mul(b,k);mcm=(mustDivide)?ent(mcm/k+0.000001):mcm;a=(mustDivide)?ent(a/k+0.000001):a;b=(mustDivide)?ent(b/k+0.000001):b;k=(mustDivide)?k:k+1;' mientras='k<=minab'">
+   <param name="A_03" value="id='McD(a,b)' algoritmo='sí' expresión='ent((a*b)/McM(a,b)+0.000001)' algoritmo='sí' hacer=';'">
+   <param name="A_04" value="id='otroEjemplo()' algoritmo='sí' algoritmo='sí' hacer='pn1=2+ent(rnd*7);pd1=2+ent(rnd*7);pn2=2+ent(rnd*7);pd2=2+ent(rnd*7);;;' mientras='(pn1>=pd1)|(pn2>=pd2)|(pn1==pn2)|(pd1==pd2)|(McD(pn1,pd1)>1)|(McD(pn2,pd2)>1)|(abs(pn1/pd1-pn2/pd2)>0.1)|(pn1*pd2==pn2*pd1)'">
+   <param name="A_05" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='pn1=5;pd1=7;pn2=3;pd2=4;;'">
+   <param name="A_06" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="G_01" value="espacio='TXT' tipo='texto' fondo='sí' color='2ecc71' expresión='[30,20]' texto='¡Ponte a prueba! Compara razones y fracciones.' fuente='SansSerif,BOLD,32' fijo='sí'">
+   <param name="G_02" value="espacio='TXT' tipo='texto' color='34495e' expresión='[90,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs40{\*\mjaformula{\expr pn1\decimals 0\fixed1} : {\expr pd1\decimals 0\fixed1}}{\*\mjaformula{\expr (pn1*pd2&lt;pn2*pd1)?&squot;es menor que&squot;:&squot;es mayor que&squot;\decimals 2\fixed1} }{\*\mjaformula{\expr pn2\decimals 0\fixed1} : {\expr pd2\decimals 0\fixed1}}  \par   y        \fs44{\*\mjaformula{\fraction{\num{\expr pn1\decimals 0\fixed1}}{\den{\expr pd1\decimals 0\fixed1}}}}\fs40{\*\mjaformula{\expr (pn1*pd2&lt;pn2*pd1)?&squot;&lt;&squot;:&squot;&gt;&squot;\decimals 2\fixed1}}\fs44{\*\mjaformula{\fraction{\num{\expr pn2\decimals 0\fixed1}}{\den{\expr pd2\decimals 0\fixed1}}}}\fs40\par   porque {\*\mjaformula{\expr pn1\decimals 0\fixed1}}\u215 {\*\mjaformula{\expr pd2\decimals 0\fixed1}}{\*\mjaformula{\expr (pn1*pd2&lt;pn2*pd1)?&squot;&lt;&squot;:&squot;&gt;&squot;\decimals 0\fixed1}}{\*\mjaformula{\expr pn2\decimals 0\fixed1}}\u215 {\*\mjaformula{\expr pd1\decimals 0\fixed1}.}  }' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí'">
+   <param name="G_03" value="espacio='TXT' tipo='texto' color='34495e' expresión='[60,250]' texto='Utilizando este criterio resuelve mentalmente las comparaciones que se te planteen.' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' ancho='300'">
+   <param name="G_04" value="espacio='TXT' tipo='imagen' fondo='sí' expresión='(3,-0.83,1,1)' archivo='images/portada04.png'">
+</ajs>
+
+</body>
+
+</html>

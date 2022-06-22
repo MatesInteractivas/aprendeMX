@@ -1,0 +1,36 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "proporcionalidad", 
+    "fracciones", 
+    "Manejo de la información", 
+    "Proporcionalidad y funciones"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "comparación", 
+    "razón", 
+    "fracción", 
+    "oferta", 
+    "caro", 
+    "barato", 
+    "precio", 
+    "valor unitario", 
+    "mejor", 
+    "peor"
+  ], 
+  "descripcion": "¿Cómo saber qué oferta es mejor, 5 canicas por 8 pesos o 3 canicas por 5 pesos? No es fácil comparar razones o fracciones, pero pensando un poco se pueden hacer comparaciones correctas. También hay una manera rápida y directa de hacerlo. Ambas cosas las podrás aprender en esta unidad.",
+  "resena": "Comparación de fracciones y su aplicación en problemas cotidianos.",
+  "titulo": "Comparación de razones y fracciones", 
+  "id": "PA6_OA_MA_3UNAM_023"
+}

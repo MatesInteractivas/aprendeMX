@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, circunferencia, diámetro, perímetro, número Pi, constante de proporcionalidad.">
+
+<head>
+	<title>El perímetro de la circunferencia</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EE1' x='20' y='150' ancho='480' alto='320' dibujar-si='problema==0' fijo='sí' escala='20' O.y='30' despl_imagen='arr-izq' fondo='27ae60' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='EE2' x='20' y='150' ancho='480' alto='320' dibujar-si='problema==1' fijo='sí' despl_imagen='arr-izq' fondo='27ae60' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R3' id='EP0' x='20' y='150' ancho='480' alto='320' dibujar-si='problema==2' despl_imagen='arr-izq' fondo='2c3e50' R3='sí'">
+   <param name="E_05" value="tipo='R2' id='EP1' x='20' y='150' ancho='480' alto='320' dibujar-si='problema==3' fijo='sí' escala='240' despl_imagen='arr-izq' fondo='27ae60' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='EP2' x='20' y='150' ancho='480' alto='320' dibujar-si='problema==4' fijo='sí' escala='2.44' imagen='images/pista-dibujo.png' despl_imagen='arr-izq' fondo='27ae60' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_07" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='problema' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(E2._w*1/4-110,E2._h-66,220,46)' valor='problema' decimales='0' fijo='sí' visible='no' opciones=' Problema 1, Problema 2, Problema 3, Problema 4, Problema 5' acción='calcular' parámetro='Inicio()'">
+   <param name="C_02" value="id='bot1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_bot1]' expresión='(xBot,yBot+0*dyBot,wBot,hBot)' fijo='sí' visible='sí' color-int='blanco' fuente puntos='24' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='doPlay(0)\nbtn=1\nteclado.S=&squot;&squot;+u_bot1\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xBot+&squot;,&squot;+(yBot+0*dyBot)+&squot;,&squot;+wBot+&squot;,&squot;+hBot)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' pos_mensajes='centro'">
+   <param name="C_03" value="id='bot2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[u_bot2]' expresión='(xBot,yBot+1*dyBot,wBot,hBot)' fijo='sí' visible='sí' color-int='blanco' fuente puntos='24' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='doPlay(0)\nbtn=2\nteclado.S=&squot;&squot;+u_bot2\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,&squot;&squot;+xBot+&squot;,&squot;+(yBot+1*dyBot)+&squot;,&squot;+wBot+&squot;,&squot;+hBot)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()' pos_mensajes='centro'">
+   <param name="C_04" value="id='bhint' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Sugerencias' expresión='(E2._w*3/4-110,E2._h-66,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='showHint=1-showHint' dibujar-si='!TodoBien' pos_mensajes='centro'">
+   <param name="C_05" value="id='botro' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro problema' expresión='(E2._w*3/4-110,E2._h-66,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='problema=(problema+1)%NP\nInicio()' dibujar-si='TodoBien' pos_mensajes='centro'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='5' expresión='_bermellon=0;col[0,0]=&squot;bermellon-alizarion e74c3c&squot;;col[0,1]=(14*16+ 7)/255;col[0,2]=( 4*16+12)/255;col[0,3]=( 3*16+12)/255;col[0,4]=1 ;_naranja=1;col[1,0]=&squot;naranja-carrot e67e22&squot;;col[1,1]=(14*16+ 6)/255;col[1,2]=( 7*16+14)/255;col[1,3]=( 2*16+ 2)/255;col[1,4]=1;_amarillo=2;col[2,0]=&squot;amarillo-sunflower f1c40f&squot;;col[2,1]=(15*16+ 1)/255;col[2,2]=(12*16+ 4)/255;col[2,3]=( 0*16+15)/255;col[2,4]=1;_verdeclaro=3;col[3,0]=&squot;verde claro-emerald 2ecc71&squot;;col[3,1]=( 2*16+14)/255;col[3,2]=(12*16+12)/255;col[3,3]=( 7*16+ 1)/255;col[3,4]=1;_verdeagua=4;col[4,0]=&squot;verde agua-turquoise 1abc9c&squot;;col[4,1]=( 1*16+10)/255;col[4,2]=(11*16+12)/255;col[4,3]=( 9*16+12)/255;col[4,4]=1;_azul=5;col[5,0]=&squot;azul-Peter_river 3498db&squot;;col[5,1]=( 3*16+ 4)/255;col[5,2]=( 9*16+ 8)/255;col[5,3]=(13*16+11)/255;col[5,4]=1.00;_lavanda=6;col[6,0]=&squot;lavanda-amethyst 9b59b6&squot;;col[6,1]=( 9*16+11)/255;col[6,2]=( 5*16+ 9)/255;col[6,3]=(11*16+ 6)/255;col[6,4]=1;_azuloscuro=7;col[7,0]=&squot;azul oscuro-wet_asphalt 34495e&squot;;col[7,1]=( 3*16+ 4)/255;col[7,2]=( 4*16+ 9)/255;col[7,3]=( 5*16+14)/255;col[7,4]=1;_concreto=8;col[8,0]=&squot;cian-concrete 95a5a6&squot;;col[8,1]=( 9*16+ 5)/255;col[8,2]=(10*16+ 5)/255;col[8,3]=(10*16+ 6)/255;col[8,4]=1;_nubes=9;col[9,0]=&squot;blanco-clouds ecf0f1&squot;;col[9,1]=(14*16+12)/255;col[9,2]=(15*16+ 0)/255;col[9,3]=(15*16+ 1)/255;col[9,4]=1'">
+   <param name="A_02" value="id='R(c)' expresión='col[c,1]'">
+   <param name="A_03" value="id='V(c)' expresión='col[c,2]'">
+   <param name="A_04" value="id='A(c)' expresión='col[c,3]'">
+   <param name="A_05" value="id='_Cx_(str,w,type,sz)' expresión='(w-7.5-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz))/2'">
+   <param name="A_06" value="id='_Rx_(str,w,type,sz)' expresión='w-15-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz)'">
+   <param name="A_07" value="id='_Nx_(val,d,w,sz)' expresión='_Rx_(_NumToStr_(val,d),w,&squot;PLAIN&squot;,sz)'">
+   <param name="A_08" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_09" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_10" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_11" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_12" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' Local='valor' hacer='valor=(Teclado.S!=&squot;&squot;)?_Num_(_NumACadena_(_Eval_(Teclado.S),2)):&squot;&squot;;u_bot1=(btn==1)?valor:u_bot1;u_bot2=(btn==2)?valor:u_bot2;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0;hideShadeCover();'">
+   <param name="A_13" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_14" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_15" value="id='____PRG____' expresión='0'">
+   <param name="A_16" value="id='P' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='5' filas='12' expresión='xpln=0;stmt=1;hint=2;lbl1=3;rsp1=4;unt1=5;err1=6;lbl2=7;rsp2=8;unt2=9;err2=10;;'">
+   <param name="A_17" value="id='BIEN' vector='sí' evaluar='una-sola-vez' tamaño='2' expresión='BIEN[0]=0;BIEN[1]=0;'">
+   <param name="A_18" value="id='MAL' vector='sí' evaluar='una-sola-vez' tamaño='2' expresión='MAL[0]=0;MAL[1]=0;'">
+   <param name="A_19" value="id='clearAll()' algoritmo='sí' algoritmo='sí' hacer='u_bot1=&squot;&squot;;u_bot2=&squot;&squot;;'">
+   <param name="A_20" value="id='defineProblems()' algoritmo='sí' algoritmo='sí' inicio='NP=0' hacer='P[NP,xpln]=&squot;La figura muestra el esquema de un circuito de paseo para ciclistas que está formado por tres tramos rectos, iguales entre sí, y tres arcos de circunferencia, también iguales entre sí. La medida de los tramos rectos es de 1000 m y el radio de los arcos es de 160 m.&squot;;P[NP,stmt]=&squot;¿Cuál es la longitud de cada arco? ¿Cuál es la longitud total del circuito?&squot;;P[NP,hint]=&squot;Los tres arcos circulares son iguales y juntos equivalen a una circunferencia.&squot;;P[NP,lbl1]=&squot;Longitud de cada arco&squot;;P[NP,rsp1]=335;P[NP,unt1]=&squot;m&squot;;P[NP,err1]=1;P[NP,lbl2]=&squot;Longitud total del circuito&squot;;P[NP,rsp2]=4005;P[NP,unt2]=&squot;m&squot;;P[NP,err2]=2;NP=NP+1;;P[NP,xpln]=&squot;Los diámetros de las monedas mexicanas de $1, $2, $5 y $10, son: 20 mm, 22 mm, 25 mm y 28 mm, respectivamente. Por tanto, si la de $1 rueda sin deslizarse, recorre 62.8 mm en cada vuelta.&squot;;P[NP,stmt]=&squot;¿Qué distancia recorre la de $10 al dar una vuelta rodando? ¿Cuántas vueltas daría la de $5 si recorriera 157 cm rodando?&squot;;P[NP,hint]=&squot;Una moneda al rodar recorre su perímetro cada vez que da una vuelta.&squot;;P[NP,lbl1]=&squot;La de $10 en una vuelta recorre&squot;;P[NP,rsp1]=88;P[NP,unt1]=&squot;mm&squot;;P[NP,err1]=1;P[NP,lbl2]=&squot;Al recorrer 157 cm, la de $5 daría&squot;;P[NP,rsp2]=20;P[NP,unt2]=&squot;vueltas&squot;;P[NP,err2]=0.5;NP=NP+1;;P[NP,xpln]=&squot;Originalmente el metro se definió como la 40,000-ésima parte del perímetro de La Tierra y, aunque actualmente se define en términos de una barra de platino-iridio que se encuentra en París, sigue siendo cierto que el perímetro de La Tierra mide casi exactamente 40,000 kilómertros.&squot;;P[NP,stmt]=&squot;¿Qué distancia hay, sobre la superficie terrestre, entre el Polo Norte y el Círculo del Ecuador?\n¿Cuál es el radio de La Tierra?&squot;;P[NP,hint]=&squot;Del polo al ecuador hay un cuarto de meridiano terrestre. Del diámetro se puede obtener el perímetro y viceversa. El radio es la mitad del diámetro. &squot;;P[NP,lbl1]=&squot;Del polo al ecuador hay&squot;;P[NP,rsp1]=10000;P[NP,unt1]=&squot;km&squot;;P[NP,err1]=1;P[NP,lbl2]=&squot;Radio de La Tierra&squot;;P[NP,rsp2]=6369.5;P[NP,unt2]=&squot;km&squot;;P[NP,err2]=10;NP=NP+1;;P[NP,xpln]=&squot;La longitud del circuito de carreras de autos de Indianápolis, sede de la famosa carrera Indy 500, es poco más de 4 km. El circuito consta de 4 tramos rectos y 4 curvas de un cuarto de circunferencia. Dos de los tramos rectos son paralelos entre sí y miden 1000 m cada uno. Los otros dos, también paralelos entre sí miden 200 m cada uno.&squot;;P[NP,stmt]=&squot;¿Qué longitud tiene cada uno de los cuatro tramos curvos?  ¿Cuál es el radio de los sectores circulares que forman esos tramos curvos?&squot;;P[NP,hint]=&squot;Los cuatro tramos largos deben sumar 4000 metros, menos lo que suman los tramos rectos. Si juntas los cuatro tramos curvos se forma una circunferencia.&squot;;P[NP,lbl1]=&squot;Longitud de un tramo curvo&squot;;P[NP,rsp1]=400;P[NP,unt1]=&squot;m&squot;;P[NP,err1]=5;P[NP,lbl2]=&squot;Radio de los tramos curvos&squot;;P[NP,rsp2]=254.78;P[NP,unt2]=&squot;m&squot;;P[NP,err2]=5;NP=NP+1;;P[NP,xpln]=&squot;Las pistas de atletismo constan de dos segmentos rectos de 84.39 m y dos\nsemicircunferencias de 36.5 m de radio, como muestra la figura. En general\ntienen 8 o 9 carriles de 122 cm de ancho, numerados de adentro hacia afuera.&squot;;P[NP,stmt]=&squot;Cuando un corredor da una vuelta a la pista por el primer carril, recorre 400 m. ¿Cuántos metros recorrería si diera la vuelta por el segundo carril? ¿Qué tanto más adelante debe ponerse la salida del segundo carril para que la competencia sea justa?&squot;;P[NP,hint]=&squot;Las partes rectas no cambian, pero el radio de las curvas aumenta y por tanto también la longitud.&squot;;P[NP,lbl1]=&squot;Distancia que recorrería&squot;;P[NP,rsp1]=405.66;P[NP,unt1]=&squot;m&squot;;P[NP,err1]=0.02;P[NP,lbl2]=&squot;La salida debe adelantarse&squot;;P[NP,rsp2]=5.66;P[NP,unt2]=&squot;m&squot;;P[NP,err2]=0.02;NP=NP+1;;'">
+   <param name="A_21" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='clearAll()' hacer='defineProblems()'">
+   <param name="A_22" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='retro=&squot;&squot;;BIEN[0]=(u_bot1!=&squot;&squot;)&(abs(P[problema,rsp1]-u_bot1)<P[problema,err1]);BIEN[1]=(u_bot2!=&squot;&squot;)&(abs(P[problema,rsp2]-u_bot2)<P[problema,err2]);MAL[0]=(u_bot1!=&squot;&squot;)&!BIEN[0];MAL[1]=(u_bot2!=&squot;&squot;)&!BIEN[1];;TodoBien=BIEN[0]&BIEN[1];'">
+   <param name="A_23" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;¡Ponte a Prueba! Resuelve problemas que requieren el uso del número π (Pi).&squot;' hacer='problema=0;trnsp=0.333;xBot=850;yBot=290;wBot=80;hBot=46;dyBot=hBot+20;x1=5+1.6*cos(pi/6);y1=-4.5+1.6+1.6*sen(pi/6);x4=-x1;y4=y1;x2=1.6*cos(pi/6);y2=y1+10*cos(pi/6);x3=-x2;y3=y2;yC=y2-1.6*sen(pi/6);EP0.rot.z=-40;Inicio();'">
+   <param name="A_24" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='El título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='16a085' expresión='[512,100,0,0]' texto='[P[problema,xpln]]' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='960' info='El planteamiento'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[522,150]' texto='[P[problema,stmt]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='480' info='El enunciado'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[xBot-10-_AnchoDeCadena_(P[problema,lbl1+s*4],&squot;SansSerif&squot;,&squot;PLAIN&squot;,20),yBot+s*dyBot+13]' familia='s' s.intervalo='[0,1]' s.pasos='1' texto='[P[problema,lbl1+s*4]]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='760' info='Las etiquetas'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[xBot+wBot+1,yBot+s*dyBot+13]' familia='s' s.intervalo='[0,1]' s.pasos='1' texto='[P[problema,unt1+s*4]]' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='760' info='Las unidades'">
+   <param name="G_06" value="espacio='EP2' tipo='segmento' fondo='sí' color='16a085' dibujar-si='0' expresión='(-84.39/2,36.5+s*1.22)(84.39/2,36.5+s*1.22)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0' ancho='4'">
+   <param name="G_07" value="espacio='EP2' tipo='segmento' fondo='sí' color='16a085' dibujar-si='0' expresión='(-84.39/2,-36.5-s*1.22)(84.39/2,-36.5-s*1.22)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0' ancho='4'">
+   <param name="G_08" value="espacio='EP2' tipo='arco' fondo='sí' color='16a085' dibujar-si='0' centro='(84.39/2,0)' radio='36.5+s*1.22' inicio='-90' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' ancho='4'">
+   <param name="G_09" value="espacio='EP2' tipo='arco' fondo='sí' color='16a085' dibujar-si='0' centro='(-84.39/2,0)' radio='36.5+s*1.22' inicio='90' fin='270' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' ancho='4'">
+   <param name="G_10" value="espacio='EP2' tipo='segmento' fondo='sí' color='blanco' dibujar-si='0' expresión='(-84.39/2,36.5+s*1.22)(84.39/2,36.5+s*1.22)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0'">
+   <param name="G_11" value="espacio='EP2' tipo='segmento' fondo='sí' color='blanco' dibujar-si='0' expresión='(-84.39/2,-36.5-s*1.22)(84.39/2,-36.5-s*1.22)' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='EP2' tipo='arco' fondo='sí' color='blanco' dibujar-si='0' centro='(84.39/2,0)' radio='36.5+s*1.22' inicio='-90' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí'">
+   <param name="G_13" value="espacio='EP2' tipo='arco' fondo='sí' color='blanco' dibujar-si='0' centro='(-84.39/2,0)' radio='36.5+s*1.22' inicio='90' fin='270' familia='s' s.intervalo='[0,8]' s.pasos='8' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='(!showHint)&(!TodoBien)' expresión='[E2._w*3/4,E2._h-111,0,0]' texto='[retro]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='500' info='Hint'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='16a085' dibujar-si='showHint&(!TodoBien)' expresión='[E2._w*3/4,E2._h-116,0,0]' texto='[P[problema,hint]]' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='450' info='El hint'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='TodoBien' expresión='[E2._w*3/4,E2._h-111,0,0]' texto='¡Muy bien!' fuente='SansSerif,BOLD,30' fijo='sí' info='Felicitación'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' dibujar-si='BIEN[s]' coord_abs='sí' expresión='(xBot+wBot+50,yBot+s*dyBot+16,1,1)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/icon_ok.png'">
+   <param name="G_18" value="espacio='E2' tipo='imagen' dibujar-si='MAL[s]' coord_abs='sí' expresión='(xBot+wBot+50,yBot+s*dyBot+16,1,1)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/icon_wrong.png'">
+   <param name="G_19" value="espacio='EP1' tipo='segmento' fondo='sí' color='(R(_nubes),V(_nubes),A(_nubes),00)' expresión='(-0.5,s*(0.1+0.254))(0.5,s*(0.1+0.254))' familia='s' s.intervalo='[-1,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='10'">
+   <param name="G_20" value="espacio='EP1' tipo='segmento' fondo='sí' color='(R(_nubes),V(_nubes),A(_nubes),00)' expresión='(s*(0.5+0.254),-0.1)(s*(0.5+0.254),0.1)' familia='s' s.intervalo='[-1,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='10'">
+   <param name="G_21" value="espacio='EP1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(0.5,0.1)' radio='0.254' fijo='sí' ancho='10'">
+   <param name="G_22" value="espacio='EP1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(-0.5,0.1)' radio='0.254' inicio='90' fin='180' fijo='sí' ancho='10'">
+   <param name="G_23" value="espacio='EP1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(-0.5,-0.1)' radio='0.254' inicio='180' fin='270' fijo='sí' ancho='10'">
+   <param name="G_24" value="espacio='EP1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(0.5,-0.1)' radio='0.254' inicio='-90' fin='0' fijo='sí' ancho='10'">
+   <param name="G_25" value="espacio='EE2' tipo='imagen' coord_abs='sí' expresión='(EE2._w/3,EE2._h/2,1,1)' archivo='images/5pesos.gif'">
+   <param name="G_26" value="espacio='EE2' tipo='imagen' coord_abs='sí' expresión='(EE2._w*2/3,EE2._h/2,1,1)' archivo='images/10pesos.gif'">
+   <param name="G_27" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(0,yC)(x3,y3)' fijo='sí' tamaño='1'">
+   <param name="G_28" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(0,yC)(x2,y2)' fijo='sí' tamaño='1'">
+   <param name="G_29" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(5,-4.5+1.6)(5,-4.5)' fijo='sí' tamaño='1'">
+   <param name="G_30" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(5,-4.5+1.6)(x1,y1)' fijo='sí' tamaño='1'">
+   <param name="G_31" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(-5,-4.5+1.6)(-5,-4.5)' fijo='sí' tamaño='1'">
+   <param name="G_32" value="espacio='EE1' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),40)' expresión='(-5,-4.5+1.6)(x4,y4)' fijo='sí' tamaño='1'">
+   <param name="G_33" value="espacio='EE1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(5,-4.5+1.6)' radio='1.6' inicio='-90' fin='30' fijo='sí' ancho='5'">
+   <param name="G_34" value="espacio='EE1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(-5,-4.5+1.6)' radio='1.6' inicio='150' fin='270' fijo='sí' ancho='5'">
+   <param name="G_35" value="espacio='EE1' tipo='arco' color='(R(_nubes),V(_nubes),A(_nubes),00)' centro='(0,yC)' radio='1.6' inicio='30' fin='150' fijo='sí' ancho='5'">
+   <param name="G_36" value="espacio='EE1' tipo='segmento' fondo='sí' color='(R(_nubes),V(_nubes),A(_nubes),80)' expresión='(-5,-4.5)(5,-4.5)' familia='s' s.intervalo='[-1,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='5'">
+   <param name="G_37" value="espacio='EE1' tipo='segmento' fondo='sí' color='(R(_nubes),V(_nubes),A(_nubes),00)' expresión='(x1,y1)(x2,y2)' familia='s' s.intervalo='[-1,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='5'">
+   <param name="G_38" value="espacio='EE1' tipo='segmento' fondo='sí' color='(R(_nubes),V(_nubes),A(_nubes),00)' expresión='(x3,y3)(x4,y4)' familia='s' s.intervalo='[-1,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='5'">
+   <param name="G_39" value="espacio='EP2' tipo='imagen' coord_abs='sí' expresión='(312,160,0.5,0.5)' archivo='images/salida400m.png'">
+   <param name="G_40" value="espacio='EP2' tipo='imagen' coord_abs='sí' expresión='(155,160,0.27,0.27)' archivo='images/pista.png'">
+   <param name="G_41" value="espacio='EP1' tipo='imagen' coord_abs='sí' expresión='(307,160,0.69,0.69)' archivo='images/Indy500.jpg'">
+   <param name="G_42" value="espacio='EP1' tipo='imagen' coord_abs='sí' expresión='(155,160,0.600,0.600)' archivo='images/circuito-Indianapolis.jpg'">
+   <param name="S_01" value="espacio='EP0' tipo='esfera' fondo='sí' color='(R(_azul),V(_azul),A(_azul),00)' expresión='Esfera' modelo='luz' ancho='5' Nu='18' Nv='24'">
+   <param name="S_02" value="espacio='EP0' tipo='curva' fondo='sí' color='blanco' expresión='x=2.60*cos(2*pi*u) y=2.60*sen(2*pi*u) z=0' Nu='96'">
+   <param name="S_03" value="espacio='EP0' tipo='curva' fondo='sí' color='blanco' expresión='z=2.60*cos(pi/2*u) y=2.60*sen(pi/2*u) x=0' Nu='18'">
+   <param name="S_04" value="espacio='EP0' tipo='punto' color='blanco' expresión='(4,0,0.3)' texto='Ecuador' fuente='SansSerif,ITALIC,19' fijo='sí' ancho='0'">
+   <param name="S_05" value="espacio='EP0' tipo='punto' color='blanco' expresión='(0,0,3.1)' texto='Polo Norte' fuente='SansSerif,ITALIC,19' fijo='sí' ancho='0'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

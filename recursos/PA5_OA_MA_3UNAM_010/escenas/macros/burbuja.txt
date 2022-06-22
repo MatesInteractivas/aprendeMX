@@ -1,0 +1,13 @@
+tipo_de_macro=R2
+Idioma=espa&ntilde;ol
+id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='IZQ=1;DER=-1;w=250;h=150;x=150;y=150;tnsp=0;rojo=1;verd=1;azul=1;dir=IZQ;'
+tipo='pol&iacute;gono' coord_abs='s&iacute;' expresi&oacute;n='(x-1,y-1)(x+w+1,y-1)(x+w+1,y+h+1)(x-1,y+h+1)(x-1,y-1)' relleno='(rojo,verd,azul,tnsp)' ancho='0' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x-6,y-6,1,1)' archivo='images/burbuja_ar_iz.png' info='arriba izquierda' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w/2,y-6,w,1)' archivo='images/burbuja_ar_ce.png' info='arriba centro' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w+6,y-6,1,1)' archivo='images/burbuja_ar_de.png' info='arriba derecha' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x-6,y+h/2,1,h)' archivo='images/burbuja_ce_iz.png' info='centro izquierda' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w+6,y+h/2,1,h)' archivo='images/burbuja_ce_de.png' info='centro derecha' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x-6,y+h+8,1,1)' archivo='images/burbuja_ab_iz.png' info='abajo izquierda' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w/2,y+h+8,w,1)' archivo='images/burbuja_ab_ce.png' info='abajo centro' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w+6,y+h+8,1,1)' archivo='images/burbuja_ab_de.png' info='abajo derecha' 
+tipo='imagen' dibujar-si='!sinPunta' coord_abs='s&iacute;' expresi&oacute;n='(x+w/2-(dir*w/2+dir*19),y+h/2,dir,1)' archivo='images/burbuja_punta.png' info='abajo derecha' 

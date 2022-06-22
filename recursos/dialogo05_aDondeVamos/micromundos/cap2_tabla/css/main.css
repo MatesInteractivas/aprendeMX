@@ -1,0 +1,364 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p, table, .vntn {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: left;
+    margin: 0px;
+}
+
+
+a {
+    outline: none;
+}
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+.oacontext {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+.content {
+	position: relative;
+	padding-top: 10px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(200, 200, 200, .45);
+    z-index: 55;
+}
+
+.preloader{
+    width: 100px;
+    height: 103px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -52px;
+    background: url('../img/general/preloader.gif');
+    color: transparent;
+
+}
+
+table.solicitudes {
+	width: auto;
+	max-width: 600px;
+	border: none;
+	width: auto;
+	margin: auto;
+	margin-top: 50px;
+	border-collapse: collapse;
+	empty-cells: show;
+}
+table.solicitudes th{
+	font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	text-align: center;
+	border: none;
+	padding: 3px 8px;
+	margin: 0px;
+	padding-right: 8px;
+	text-align: center;
+	background-color: #929292;
+	color: #fff;
+}
+
+table.solicitudes > tbody > tr > td,
+table.solicitudes > thead > tr > th{
+    border: 1px solid #929292;
+    padding: 8px 10px;
+}
+
+table.solicitudes > tbody > tr > td.importancia{
+    font-weight: bold;
+}
+
+table.solicitudes > tbody > tr.indispensable{
+    background-color:rgba(76,225,167,.7);
+}
+table.solicitudes > tbody > tr.importante{
+    background-color:rgba(75,225,208,.7);
+}
+table.solicitudes > tbody > tr.deseable{
+    background-color:rgba(72,203,231,.7);
+}
+
+/* Bt instrucciones */
+.js-btn-instr{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 135px;
+    height: 38px !important;
+    background-image: url('img/bt_instrucciones.png');
+    font-size: 20px !important;
+}
+.js-btn-instr:hover,.js-btn-instr:active{
+    background-image: url('img/bt_instrucciones_over.png');
+}
+
+/* Ventanas */
+.vntn {
+   /* border: 1px solid #000;
+    background-color: #FFF;
+    box-shadow: 0 2px 3px #666666;*/
+    padding: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 50;
+}
+
+.vntn--btn-cerrar {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #989694;
+}
+
+.vntn--titulo {
+    text-transform: uppercase;
+    font-size: 22px !important;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vntn--contenido {
+    font-size: 22px !important;
+}
+
+.vntn--contenido > p {
+    padding-bottom: 10px;
+}
+
+
+.vntn-inst {
+	width: 500px !important;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	margin: auto;
+	z-index: 55;
+	background-color: #fff;
+	border: 3px solid #9b40db;
+}
+
+.vntn-inst > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	font-size: 24px;
+}
+.vntn-inst > .vntn--btn-cerrar::before {
+    border-color: #a520db #a520db transparent transparent;
+    border-style: solid;
+    border-width: 35px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.vntn-inst > .vntn--btn-cerrar:hover::before, 
+.vntn-inst > .vntn--btn-cerrar:active::before{
+	border-color: #7e1aa6 #7e1aa6 transparent transparent;
+}
+
+
+.btn{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+.btn.js-btn-listo{
+    position: absolute;
+    width: 120px;
+    background-color: #0099cc;
+    border: none;
+    right: 10px;
+    top: 495px;
+    box-shadow: -4px 4px 0 #ceb694;
+}
+.btn.js-btn-listo:hover,.js-btn-listo:active{
+    box-shadow: -4px 4px 0 #ceb694;
+}
+
+
+/* Wordselector */
+.word {
+	cursor: url(../img/cursor_frases.ico), pointer;
+}
+.selWord {
+	/*border-bottom: 1px solid cyan;*/
+}
+
+.highlightSelection {
+	background-color: #86dff5;
+}
+
+.highlightFirst {
+	border: dashed 1px #aaa;
+}
+
+.word.e-inactivo {
+	color: #999;
+	cursor: default;
+}
+
+
+/* End Modules */
+
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+.esencial.e-correcto{
+    background-color: #4be1a6;
+}
+.desechable.e-correcto{
+    background-color: #c3c3c3;
+    color: #737373;
+}
+.e-incorrecto{
+    background-color: #f2a6a2;
+}
+.e-oculto {
+	display: none;
+}
+
+.e-activo {
+}
+.e-inactivo {
+	opacity: 0.15;
+}
+.e-inactivo:hover {
+    font-weight: normal !important;
+    font-size: 25px !important;
+}
+.e-seleccionable{
+    cursor: pointer;
+}
+.e-seleccionable:hover{
+    background-color: #fff;
+}
+
+.e-seleccionado {
+	
+}
+.e-marcado {
+	
+}
+
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+.solicitudes.enOrden{
+    display: none;
+}
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

@@ -1,0 +1,119 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+.seccion{
+    display: block;
+    width: 604px;
+    height: auto;
+    margin: 8px 20px;
+    border: 2px solid;
+    background-color: #fcf7ef;
+}
+.seccion:first-child{
+    margin-top: 15px;
+}
+.seccion.presentacion{
+    border-color: #83dcf3;
+}
+.seccion.postura{
+    border-color: #f28298;
+}
+.seccion.argumento{
+    border-color: #86e8bd;
+}
+.seccion.dato{
+    border-color: #a2a9ec;
+}
+.seccion.conclusion{
+    border-color: #fbd759;
+}
+
+.encabezado{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: left;
+    color: #000;
+    padding: 5px;
+    display: inline-block;
+    width: 170px;
+    vertical-align: middle;
+}
+
+.seccion.presentacion > .encabezado{
+    background: #83dcf3 bottom;
+}
+.seccion.postura > .encabezado{
+    background-color: #f28298;
+}
+.seccion.argumento > .encabezado{
+    background-color: #86e8bd;
+}
+.seccion.dato > .encabezado{
+    background-color: #a2a9ec;
+}
+.seccion.conclusion > .encabezado{
+    background-color: #fbd759;
+}
+
+.texto{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 24px;
+    line-height: 25px;
+    display: inline-block;
+    width: 400px;
+    color: #000;
+    vertical-align: top;
+    padding: 5px;
+}
+
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+.btn{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+#bt_mas{
+    position: absolute;
+    background-color: #0099cc;
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 0 #b8bfc0;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+#bt_mas:hover,#bt_mas:active{
+    box-shadow: 4px 4px 0 #727373;
+}
+
+
+.e-oculto{
+    visibility: hidden;
+    opacity: 0;
+}

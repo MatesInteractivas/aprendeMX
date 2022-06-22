@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_028"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Rutas y distancias
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad aprenderás a seguir y dar instrucciones basadas no sólo en los nombres de las calles sino en los puntos cardinales o puntos de refencia del lugar. También practicarás el cálculo de la longitud de un recorrido sobre un mapa, así que recordarása cómo se trabaja con las escalas.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, Forma, espacio y medida, Ubicación espacial
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, norte, sur, este, oeste, puntos cardinales, recorrido, distancia, longitud, trayectoria, calles, instrucciones, girar, avanzar
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

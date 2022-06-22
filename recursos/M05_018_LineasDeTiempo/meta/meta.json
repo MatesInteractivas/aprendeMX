@@ -1,0 +1,44 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "segundo", 
+    "minuto", 
+    "hora", 
+    "día", 
+    "semana", 
+    "quincena", 
+    "año", 
+    "lustro", 
+    "década", 
+    "siglo", 
+    "milenio", 
+    "línea del tiempo", 
+    "tiempo", 
+    "interpretar", 
+    "representación gráfica del tiempo", 
+    "representación gráfica", 
+    "medir", 
+    "leer líneas de tiempo", 
+    "interpretar líneas de tiempo"
+  ], 
+  "descripcion": "Aprenderas a representar los eventos que ocurren en el tiempo a lo largo de una línea.",
+  "resena": "Representación de eventos en una línea de tiempo.",
+  "titulo": "Líneas de tiempo", 
+  "id": "PA5_OA_MA_3UNAM_018"
+}

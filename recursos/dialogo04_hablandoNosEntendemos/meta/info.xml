@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_ES_3UNAM_004_jerarquizacionDeInformacion"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Hablando nos entendemos
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		El alumno y la alumna recopilarán datos y peticiones de personas a partir de un conjunto de textos continuos. Los organizarán en una tabla y calificarán su importancia, de acuerdo con ciertos criterios objetivos y subjetivos que identifican.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto expositivo, Texto discontinuo, Esquema, Tabla
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Español, recuperación de datos, organización de datos, jerarquización de datos, ordenamiento de datos, peticiones, negociar, objetivo, subjetivo, criterios objetivos, viajes, turismo
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

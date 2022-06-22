@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Círculo, circunferencia, radio, diámetro, centro, área, perímetro, polígono regular, sector circular, arco, tangente, secante">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+	<title>SEB aprende.mx Descartes index</title>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+
+
+
+
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='10' ancho='1004' fijo='sí' escala='40' O.x='100' O.y='-40' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='cir' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[(circulo)?&squot;Círculo&squot;:&squot;Circunferencia&squot;]' expresión='(1.0*E2._w/6-155,10,175,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\ncirculo=1-circulo'">
+   <param name="C_02" value="id='rad' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Radio' expresión='(2.0*E2._w/6-123,10,175,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nradio=1-radio'">
+   <param name="C_03" value="id='dia' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Diámetro' expresión='(3.0*E2._w/6-88,10,175,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\ndiametro=1-diametro'">
+   <param name="C_04" value="id='cue' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Cuerda' expresión='(4.0*E2._w/6-54,10,175,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\ncuerda=1-cuerda'">
+   <param name="C_05" value="id='rec' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Recta' expresión='(5.0*E2._w/6-20,10,175,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nrecta=1-recta'">
+   <param name="C_06" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Otro círculo' expresión='((E2._w-180)/2,E2._h-66,180,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\ngeneraCirculo()\n'">
+   <param name="C_07" value="id='A' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(A.x,A.y)' fijo='sí' dibujar-si='cuerda' activo-si='cuerda'">
+   <param name="C_08" value="id='B' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(B.x,B.y)' constricción='(x-A.x)^2+(y-A.y)^2=2.5^2' fijo='sí' dibujar-si='0' activo-si='cuerda'">
+   <param name="C_09" value="id='C' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(C.x,C.y)' fijo='sí' dibujar-si='radio' activo-si='radio'">
+   <param name="C_10" value="id='D' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(D.x,D.y)' constricción='(x-C.x)^2+(y-C.y)^2=Circulo.r^2' fijo='sí' dibujar-si='0' activo-si='radio'">
+   <param name="C_11" value="id='P' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(P.x,P.y)' fijo='sí' dibujar-si='diametro' activo-si='diametro'">
+   <param name="C_12" value="id='Q' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(Q.x,Q.y)' constricción='(x-P.x)^2+(y-P.y)^2=(2*Circulo.r)^2' fijo='sí' dibujar-si='0' activo-si='diametro'">
+   <param name="C_13" value="id='T' tipo='gráfico' espacio='E2' color='ff000000' color-int='cc000000' tamaño='12' expresión='(T.x,T.y)' fijo='sí' dibujar-si='recta' activo-si='recta'">
+   <param name="A_01" value="id='P' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_02" value="id='X' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' filas='4' expresión='_x1_=0;_x2_=1;'">
+   <param name="A_03" value="id='xx' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' filas='4' expresión='_x1_=0;_x2_=1;'">
+   <param name="A_04" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='12' filas='4' expresión='tnsp=0;rojo=1;verd=2;azul=3;;COL[0,tnsp]=0.0;COL[0,rojo]=0.0;COL[0,verd]=0.0;COL[0,azul]=0.0;;COL[1,tnsp]=0.0;COL[1,rojo]=0.95;COL[1,verd]=0.08;COL[1,azul]=0.16;;COL[2,tnsp]=0.0;COL[2,rojo]=0.95;COL[2,verd]=0.60;COL[2,azul]=0.10;;COL[3,tnsp]=0.0;COL[3,rojo]=0.99;COL[3,verd]=0.99;COL[3,azul]=0.10;;COL[4,tnsp]=0.0;COL[4,rojo]=0.00;COL[4,verd]=0.80;COL[4,azul]=0.30;;COL[5,tnsp]=0.0;COL[5,rojo]=0.00;COL[5,verd]=0.75;COL[5,azul]=0.75;;COL[6,tnsp]=0.0;COL[6,rojo]=0.15;COL[6,verd]=0.40;COL[6,azul]=1.00;;COL[7,tnsp]=0.0;COL[7,rojo]=0.80;COL[7,verd]=0.10;COL[7,azul]=0.80;;COL[8,tnsp]=0.0;COL[8,rojo]=0.90;COL[8,verd]=0.10;COL[8,azul]=0.60;;COL[9,tnsp]=0.0;COL[9,rojo]=0.99;COL[9,verd]=0.99;COL[9,azul]=0.99;;COL[10,tnsp]=0.0;COL[10,rojo]=0.7;COL[10,verd]=0.9;COL[10,azul]=0.8;'">
+   <param name="A_05" value="id='DONE' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10000' filas='2' expresión=';'">
+   <param name="A_06" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_07" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_08" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_09" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_10" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_11" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_12" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='Rx=50;Ry=230;Rw=900;x0=32;unitWidth=ent((Rw-x0)/10.5);chw=8;h=2;dX=9;H=20;ND=0;dY=-60;;'">
+   <param name="A_13" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='N=0' hacer='tdh=4.5/E2.escala;tdw=40/E2.escala;generaCirculo();'">
+   <param name="A_14" value="id='isDone(n,d)' algoritmo='sí' expresión='done' algoritmo='sí' Local='j,done' inicio='j=0;done=0' hacer='done=done&(n==DONE[j,0])&(d==DONE[j,1]);j=j+1' mientras='(j<N)&done'">
+   <param name="A_15" value="id='generaCirculo()' algoritmo='sí' algoritmo='sí' hacer='circulo=1;Circulo.x=-7+rnd*11;Circulo.y=-2.5+rnd*3.5;Circulo.r=2.0+rnd*1.0;;A.x=9;A.y=-2;;B.x=9;B.y=-4;;C.x=3;C.y=-6;;D.x=3+Circulo.r;D.y=-6;;P.x=9;P.y=5-2*Circulo.r;;Q.x=9;Q.y=5;;T.x=9;T.y=-6;' mientras='isDone(elNumerador,elDenominador)|(elDecimal>10)|(elDenominado==10)'">
+   <param name="A_16" value="id='Calculos()' algoritmo='sí' algoritmo='sí' inicio='mind=16/E2.escala;epsilon=8/E2.escala;delta=2/E2.escala' hacer='RA=dist(A.x,A.y,Circulo.x,Circulo.y);DA=abs(RA-Circulo.r);A.x=(DA<mind)?Circulo.x+Circulo.r*(A.x-Circulo.x)/RA:A.x;A.y=(DA<mind)?Circulo.y+Circulo.r*(A.y-Circulo.y)/RA:A.y;;RB=dist(B.x,B.y,Circulo.x,Circulo.y);DB=abs(RB-Circulo.r);B.x=(DB<mind)?Circulo.x+Circulo.r*(B.x-Circulo.x)/RB:B.x;B.y=(DB<mind)?Circulo.y+Circulo.r*(B.y-Circulo.y)/RB:B.y;;RC=dist(C.x,C.y,Circulo.x,Circulo.y);DC=abs(RC-Circulo.r);C.x=(DC<mind)?Circulo.x+Circulo.r*(C.x-Circulo.x)/RC:C.x;C.y=(DC<mind)?Circulo.y+Circulo.r*(C.y-Circulo.y)/RC:C.y;C.x=(RC<mind)?Circulo.x:C.x;C.y=(RC<mind)?Circulo.y:C.y;;;RD=dist(D.x,D.y,Circulo.x,Circulo.y);DD=abs(RD-Circulo.r);D.x=(DD<mind)?Circulo.x+Circulo.r*(D.x-Circulo.x)/RD:D.x;D.y=(DD<mind)?Circulo.y+Circulo.r*(D.y-Circulo.y)/RD:D.y;D.x=(RD<mind)?Circulo.x:D.x;D.y=(RD<mind)?Circulo.y:D.y;;;AB.x=(A.x+B.x)/2;AB.y=(A.y+B.y)/2;U.x=(B.y-A.y)*20;U.y=(A.x-B.x)*20;;CD.x=(C.x+D.x)/2;CD.y=(C.y+D.y)/2;V.x=(D.y-C.y)*20;V.y=(C.x-D.x)*20;;RP=dist(P.x,P.y,Circulo.x,Circulo.y);DP=abs(RP-Circulo.r);P.x=(DP<mind)?Circulo.x+Circulo.r*(P.x-Circulo.x)/RP:P.x;P.y=(DP<mind)?Circulo.y+Circulo.r*(P.y-Circulo.y)/RP:P.y;;RQ=dist(Q.x,Q.y,Circulo.x,Circulo.y);DQ=abs(RQ-Circulo.r);;Q.x=(DQ<mind)?Circulo.x+Circulo.r*(Q.x-Circulo.x)/RQ:Q.x;Q.y=(DQ<mind)?Circulo.y+Circulo.r*(Q.y-Circulo.y)/RQ:Q.y;;PQ.x=(P.x+Q.x)/2;PQ.y=(P.y+Q.y)/2;DPQ=dist(PQ.x,PQ.y,Circulo.x,Circulo.y);Q.x=(DPQ<epsilon)?Circulo.x-(P.x-Circulo.x):Q.x;Q.y=(DPQ<epsilon)?Circulo.y-(P.y-Circulo.y):Q.y;PQ.x=(P.x+Q.x)/2;PQ.y=(P.y+Q.y)/2;;RT=dist(T.x,T.y,Circulo.x,Circulo.y);DT=abs(RT-Circulo.r);T.x=(DT<mind)?Circulo.x+Circulo.r*(T.x-Circulo.x)/RT:T.x;T.y=(DT<mind)?Circulo.y+Circulo.r*(T.y-Circulo.y)/RT:T.y;;verTangente=(DT<mind);RT=(verTangente)?Circulo.r:RT;verSecante=(DA<mind)&(DB<mind);verRadio=((RC<mind)&(DD<mind))|((DC<mind)&(RD<mind));verDiametro=(DPQ<epsilon);verCentro=(!verRadio)&(!verDiametro);;msg_recta=&squot;recta exterior&squot;;msg_recta=(RT<Circulo.r)?&squot;recta secante&squot;:msg_recta;msg_recta=(DT<mind)?&squot;recta tangente&squot;:msg_recta;verRecta=1;'">
+   <param name="A_17" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Explora con Juan los elementos geométricos relacionados con el círculo.&squot;)' hacer='initDisplay();Inicio();'">
+   <param name="A_18" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();;;'">
+   
+   <param name="A_20" value="id='Limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_21" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_22" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='limpiar=0\nanimar=0\nplayAudio=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[30,340]' fuente='Monospaced,PLAIN,19' decimales='6' fijo='no' ancho='940' color_borde_texto='335544'">
+   <param name="G_02" value="espacio='E2' tipo='arco' color='(s,s,s,0.0)' centro='(Circulo.x,Circulo.y)' radio='Circulo.r' fin='360' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' relleno='(1.0,1.0,0.0,s+(!circulo))' ancho='6-2*s'">
+   <param name="G_03" value="espacio='E2' tipo='segmento' color='(s*1.0,s*0.2,s*0.4,0.0)' dibujar-si='cuerda' expresión='(A.x,A.y)(B.x,B.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='7-2*s' ancho='6-2*s'">
+   <param name="G_04" value="espacio='E2' tipo='segmento' color='(s*0.9,s*0.8,s*0.2,0.0)' dibujar-si='radio' expresión='(C.x,C.y)(D.x,D.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='7-2*s' ancho='6-2*s'">
+   <param name="G_05" value="espacio='E2' tipo='segmento' color='(s*0.1,s*0.88,s*0.99,0.0)' dibujar-si='diametro' expresión='(P.x,P.y)(Q.x,Q.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='7-2*s' ancho='6-2*s' info='el diámetro'">
+   <param name="G_06" value="espacio='E2' tipo='punto' color='(s*0.1,s,s*0.6,0.0)' dibujar-si='0' expresión='(PQ.x,PQ.y)' familia='s' s.intervalo='[0,1]' s.pasos='81' fijo='sí' tamaño='6-2*s'">
+   <param name="G_07" value="espacio='E2' tipo='segmento' color='80000000' dibujar-si='recta' expresión='(T.x-30*(T.y-Circulo.y)/RT,T.y+30*(T.x-Circulo.x)/RT)(T.x+10*(T.y-Circulo.y),T.y-10*(T.x-Circulo.x))' fijo='sí' tamaño='0' info='La tangente'">
+   <param name="G_08" value="espacio='E2' tipo='segmento' color='c0000000' dibujar-si='recta&verTangente' expresión='(T.x,T.y)(Circulo.x,Circulo.y)' fijo='sí' tamaño='0' info='El radio a la tangente'">
+   <param name="G_09" value="espacio='E2' tipo='punto' color='negro' dibujar-si='1|Hallado' expresión='(Circulo.x,Circulo.y)' fijo='sí' tamaño='4'">
+   <param name="G_10" value="espacio='E2' tipo='punto' color='80335544' dibujar-si='verCentro' expresión='(Circulo.x-tdw+(s%3-1)/E2.escala,Circulo.y-4*tdh+(ent(s/3)-1)/E2.escala)' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='centro' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_11" value="espacio='E2' tipo='punto' color='80335544' dibujar-si='verSecante&cuerda' expresión='(AB.x-tdw+(s%3-1)/E2.escala,AB.y-tdh+(ent(s/3)-1)/E2.escala)' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='cuerda' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='80335544' dibujar-si='verRadio&radio' expresión='(CD.x-2*tdw/3+(s%3-1)/E2.escala,CD.y-tdh+(ent(s/3)-1)/E2.escala)' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='radio' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_13" value="espacio='E2' tipo='punto' color='80335544' dibujar-si='verDiametro&diametro' expresión='((2*P.x+Q.x)/3-1.2*tdw+(s%3-1)/E2.escala,(2*P.y+Q.y)/3-tdh+(ent(s/3)-1)/E2.escala)' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='diámetro' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_14" value="espacio='E2' tipo='punto' color='80335544' dibujar-si='verRecta&recta' expresión='(T.x+3.0*(T.y-Circulo.y)/RT-2*tdw+(s%3-1)/E2.escala,T.y-3.0*(T.x-Circulo.x)/RT-tdh+(ent(s/3)-1)/E2.escala)' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='[msg_recta]' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_15" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='verCentro' expresión='(Circulo.x-tdw,Circulo.y-4*tdh)' texto='centro' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_16" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='verSecante&cuerda' expresión='(AB.x-tdw,AB.y-tdh)' texto='cuerda' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_17" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='verRadio&radio' expresión='(CD.x-2*tdw/3,CD.y-tdh)' texto='radio' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='verDiametro&diametro' expresión='((2*P.x+Q.x)/3-1.2*tdw,(2*P.y+Q.y)/3-tdh)' texto='diámetro' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_19" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='verRecta&recta' expresión='(T.x+3.0*(T.y-Circulo.y)/RT-2*tdw,T.y-3.0*(T.x-Circulo.x)/RT-tdh)' texto='[msg_recta]' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0'">
+   <param name="G_20" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(110,350,1,1)' archivo='images/personajes/boy_04_mirror.png'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="Animación" value="pausa='50' controles='no' auto='sí' hacer=';' mientras='1'">
+</ajs>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

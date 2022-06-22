@@ -1,0 +1,42 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto argumentativo", 
+    "Cohesión"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "texto argumentativo", 
+    "opinión", 
+    "argumento", 
+    "hecho", 
+    "argumentar", 
+    "expresar una opinión", 
+    "referir un hecho", 
+    "contraargumento", 
+    "párrafo", 
+    "cohesión", 
+    "coherencia", 
+    "orden de ideas", 
+    "oración tópico", 
+    "oración compleja", 
+    "conector", 
+    "nexo", 
+    "conectivos lógicos", 
+    "conectivos causales"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Creación guiada de un texto argumentativo. En este recurso se trabaja con una estrategia muy efectiva para defender tus opiniones: la argumentación. Verás que tener buenas ideas es sólo el primer elemento para elaborar un caso a tu favor. El orden en que las presentas puede ser decisivo, así como las palabras que usas para expresarte. El objetivo de todo esto es convencer a los demás de que tu propuesta es buena y merece ser tomada en cuenta.",
+  "resena": "Creación de textos que soportan una opinión. Importancia del orden de presentación y la expresión de ideas.",
+  "titulo": "¿Por qué no?", 
+  "id": "PA6_OA_ES_3UNAM_010_textoArgumentativo"
+}

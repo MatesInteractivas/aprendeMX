@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, área, superficie, polígono, triángulo, rectángulo, paralelogramo, base, altura, descomponer, dividir, partir, agregar, quitar">
+
+<head>
+	<title>Áreas de polígonos</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' O.x='-230' O.y='10' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E0' x='20' y='120' ancho='520' alto='370' fijo='sí' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='N' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(380,60,72,46)' valor='5' decimales='0' fijo='sí' visible='no' opciones='4[4],5[5],6[6],7[7],8[8]' acción='calcular' parámetro='Inicio()' dibujar-si='(status==0)'">
+   <param name="C_02" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro terreno' expresión='(20,E2._h-66,260,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pentagon|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Inicio()'">
+   <param name="C_03" value="id='otraT' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otra partición' expresión='(300,E2._h-66,260,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pentagon_div|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='clearAll()' activo-si='(nS>0)'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='9' filas='5' expresión='col[0,0]=0;col[0,1]=232/255;col[0,2]= 76/255;col[0,3]= 61/255;col[0,4]=1;col[1,0]=0.00;col[1,1]=231/255;col[1,2]=126/255;col[1,3]= 34/255;col[1,4]=1;col[2,0]=0.00;col[2,1]=242/255;col[2,2]=196/255;col[2,3]= 15/255;col[2,4]=1;col[3,0]=0.00;col[3,1]= 46/255;col[3,2]=205/255;col[3,3]=113/255;col[3,4]=1;col[4,0]=0.00;col[4,1]= 53/255;col[4,2]=152/255;col[4,3]=220/255;col[4,4]=1.00;col[5,0]=0.00;col[5,1]=154/255;col[5,2]= 89/255;col[5,3]=181/255;col[5,4]=1;col[6,0]=0.00;col[6,1]=0.0;col[6,2]=0.0;col[6,3]=0.0;col[6,4]=1;col[7,0]=0.00;col[7,1]=149/255;col[7,2]=164/255;col[7,3]=164/255;col[7,4]=1;col[8,0]=0.00;col[8,1]=(3*16+4)/255;col[8,2]=(4*16+9)/255;col[8,3]=(5*16+14)/255;col[8,4]=1'">
+   <param name="A_02" value="id='R(c)' expresión='col[c,1]'">
+   <param name="A_03" value="id='Name' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='Name[0]=&squot;A&squot;;Name[1]=&squot;B&squot;;Name[2]=&squot;C&squot;;Name[3]=&squot;D&squot;;Name[4]=&squot;E&squot;;Name[5]=&squot;F&squot;;Name[6]=&squot;G&squot;;Name[7]=&squot;H&squot;;Name[8]=&squot;I&squot;;Name[9]=&squot;K&squot;;'">
+   <param name="A_04" value="id='V(c)' expresión='col[c,2]'">
+   <param name="A_05" value="id='A(c)' expresión='col[c,3]'">
+   <param name="A_06" value="id='P' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='2' expresión='_x=0;_y=1;'">
+   <param name="A_07" value="id='S' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='6' expresión='_x1=0;_y1=1;_x2=2;_y2=3;_i1=4;_i2=5'">
+   <param name="A_08" value="id='T' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='15' expresión='_x=0;_y=1;_v0=2;_v1=3;_v2=4;_b1=5;_b2=6;_h1x=7;_h1y=8;_h2x=9;_h2y=10;_b=11;_h=12;_A=13;;'">
+   <param name="A_09" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_10" value="id='Dist(i,j)' expresión='dist(P[i,_x],P[i,_y],P[j,_x],P[j,_y])'">
+   <param name="A_11" value="id='isIn(x,y,i0,i1,i2)' algoritmo='sí' expresión='in' algoritmo='sí' Local='in,x0,y0,x1,y1,x2,y2,a,b,c,d,e' hacer='x0=P[i0,_x];y0=P[i0,_y];x1=P[i1,_x];y1=P[i1,_y];x2=P[i2,_x];y2=P[i2,_y];det=(x1-x0)*(y2-y0)-(y1-y0)*(x2-x0);a=((x-x0)*(y2-y0)-(y-y0)*(x2-x0))/det;b=((x1-x0)*(y-y0)-(y1-y0)*(x-x0))/det;XT=x0+a*(x1-x0)+b*(x2-x0);YT=y0+a*(y1-y0)+b*(y2-y0);d=dist(x1,y1,x2,y2);alfa=(y2-y1)/d;beta=(x1-x2)/d;c=alfa*(x-x0)+beta*(y-y0);e=alfa*(x1-x0)+beta*(y1-y0);in=(0<a)&(a<1)&(0<b)&(b<1)&(abs(c)<abs(e));'">
+   <param name="A_12" value="id='makePoligon(n)' algoritmo='sí' algoritmo='sí' Local='i,a,r' inicio='a=rnd*2*pi;i=0' hacer='r=r1+dr*rnd;P[i,_x]=(i<n)?1.2*r*cos(a):P[0,_x];P[i,_y]=(i<n)?r*sen(a):P[0,_y];a=a+2*pi/n;i=i+1' mientras='i<=n'">
+   <param name="A_13" value="id='isSeg(i,j)' algoritmo='sí' expresión='is' algoritmo='sí' Local='is,k' inicio='is=0;k=0' hacer='is=is|(S[k,_i1]==i)&(S[k,_i2]==j)|(S[k,_i1]==j)&(S[k,_i2]==i);k=k+1' mientras='(!is)&(k<nS)'">
+   <param name="A_14" value="id='SorE(i,j)' expresión='isSeg(i,j)|((i+1)%N==j)|((j+1)%N==i)'">
+   <param name="A_15" value="id='isT(i0,i1,i2)' expresión='SorE(i0,i1)&SorE(i1,i2)&SorE(i2,i0)' hacer=';'">
+   <param name="A_16" value="id='calcMids()' algoritmo='sí' algoritmo='sí' Local='i0,i1,i2,ok,x0,y0,x1,y1,x2,y2,xC,yC' inicio='i0=0;i1=1;i2=2' hacer='x0=P[i0,_x];y0=P[i0,_y];x1=P[i1,_x];y1=P[i1,_y];x2=P[i2,_x];y2=P[i2,_y];xC=(x0+x1+x2)/3;yC=(y0+y1+y2)/3;ok=(i0!=i1)&(i1!=i2)&(i2!=i0);ok=ok&isT(i0,i1,i2);ok=ok&isIn(xC,yC,i0,i1,i2);aux=(ok)?newTri(xC,yC,i0,i1,i2):&squot;&squot;;i2=i2+1;jump2=(i2==N);i1=(jump2)?i1+1:i1;i2=(jump2)?i1+1:i2;jump1=(i1==N-1);i0=(jump1)?i0+1:i0;i1=(jump1)?i0+1:i1;i2=(jump1)?i1+1:i2;;' mientras='(i0<N)&(i1<N)&(i2<N)&(i0+2<N)'">
+   <param name="A_17" value="id='regSeg()' algoritmo='sí' algoritmo='sí' Local='isOk' hacer='isOk=(Ix1!=Ix2)&(((Ix1+1)%N)!=Ix2)&(((Ix2+1)%N)!=Ix1);S[nS,_x1]=X;S[nS,_y1]=Y;S[nS,_x2]=Xf;S[nS,_y2]=Yf;S[nS,_i1]=Ix1;S[nS,_i2]=Ix2;nS=(isOk)?nS+1:nS;aux=(nS+3>=N)?calcMids():&squot;&squot;;'">
+   <param name="A_18" value="id='getSeg(x,y)' algoritmo='sí' expresión='ix>=0' algoritmo='sí' Local='i,d' inicio='i=0;ix=-1;Ix2=-1;drawing=0' hacer='better=(dist(x,y,P[i,_x],P[i,_y])<dthr);ix=(better)?i:ix;Xf=(better)?P[i,_x]:Xf;Yf=(better)?P[i,_y]:Yf;Ix2=(better)?i:Ix2;i=i+1;' mientras='i<N'">
+   <param name="A_19" value="id='getPnt(x,y)' algoritmo='sí' expresión='ix>=0' algoritmo='sí' Local='i,ix' inicio='i=0;ix=-1;Ix1=-1;drawing=0' hacer='better=(dist(x,y,P[i,_x],P[i,_y])<dthr);ix=(better)?i:ix;X=(better)?P[i,_x]:X;Y=(better)?P[i,_y]:Y;Ix1=(better)?i:Ix1;drawing=drawing|better;i=i+1;' mientras='i<N'">
+   <param name="A_20" value="id='newTri(x,y,i0,i1,i2)' algoritmo='sí' algoritmo='sí' hacer='T[nT,_x]=x;T[nT,_y]=y;T[nT,_v0]=i0;T[nT,_v1]=i1;T[nT,_v2]=i2;nT=nT+1;'">
+   <param name="A_21" value="id='getTri(x,y)' algoritmo='sí' expresión='tri>=0' algoritmo='sí' Local='n' inicio='n=0;tri=-1;hayTri=0;hayBase=0;hayHgt=0' hacer='tri=(isIn(x,y,T[n,_v0],T[n,_v1],T[n,_v2]))?n:tri;xC=(tri>=0)?T[n,_x]:&squot;&squot;;yC=(tri>=0)?T[n,_y]:&squot;&squot;;T[n,_b]=(tri>=0)?0:T[n,_b];T[n,_h]=(tri>=0)?0:T[n,_h];T[n,_A]=(tri>=0)?0:T[n,_A];T[nT,_A]=SumA();n=n+1' mientras='(tri<0)&(n<nT)'">
+   <param name="A_22" value="id='getBase(x,y)' algoritmo='sí' algoritmo='sí' hacer='x0=P[T[tri,_v0],_x];y0=P[T[tri,_v0],_y];x1=P[T[tri,_v1],_x];y1=P[T[tri,_v1],_y];x2=P[T[tri,_v2],_x];y2=P[T[tri,_v2],_y];d2=abs((x1-x0)*(y-y0)-(x-x0)*(y1-y0));d0=abs((x2-x1)*(y-y1)-(x-x1)*(y2-y1));d1=abs((x0-x2)*(y-y2)-(x-x2)*(y0-y2));hayBase=(dist(x,y,x0,y0)>dthr)&(dist(x,y,x1,y1)>dthr)&(dist(x,y,x2,y2)>dthr);base1=((d2<=d1)&(d2<=d0))?T[tri,_v0]:base1;base2=((d2<=d1)&(d2<=d0))?T[tri,_v1]:base2;base1=((d1<=d0)&(d1<=d2))?T[tri,_v2]:base1;base2=((d1<=d0)&(d1<=d2))?T[tri,_v0]:base2;base1=((d0<=d1)&(d0<=d2))?T[tri,_v1]:base1;base2=((d0<=d1)&(d0<=d2))?T[tri,_v2]:base2;T[tri,_b1]=base1;T[tri,_b2]=base2;;'">
+   <param name="A_23" value="id='getHgt(x,y)' algoritmo='sí' algoritmo='sí' Local='dot,b,bx,by' hacer='b=Dist(base1,base2);bx=(P[base2,_x]-P[base1,_x])/b;by=(P[base2,_y]-P[base1,_y])/b;xV=X;yV=Y;dot=(xV-P[base1,_x])*bx+(yV-P[base1,_y])*by;xP=P[base1,_x]+dot*bx;yP=P[base1,_y]+dot*by;hayHgt=(dist(x,y,xP,yP)<dthr);hayHgt=hayHgt&((Ix1=T[tri,_v0])|(Ix1=T[tri,_v1])|(Ix1=T[tri,_v2]));hayHgt=hayHgt&(Ix1!=T[tri,_b1])&(Ix1!=T[tri,_b2]);T[tri,_h1x]=xV;T[tri,_h1y]=yV;T[tri,_h2x]=xP;T[tri,_h2y]=yP;drawing=0;;'">
+   <param name="A_24" value="id='SumA()' algoritmo='sí' expresión='(ok)?sm:0' algoritmo='sí' Local='sm,n,ok' inicio='sm=0;n=0;ok=1' hacer='ok=ok&(T[n,_b]!=0)&(T[n,_h]!=0);sm=sm+T[n,_A];n=n+1' mientras='n<nT'">
+   <param name="A_25" value="id='calcHPerp()' algoritmo='sí' algoritmo='sí' Local='R' hacer='R=dist(X,Y,MX,MY);dhX=(MY-Y)/R;dhY=-(MX-X)/R;;'">
+   <param name="A_26" value="id='clearAll()' algoritmo='sí' algoritmo='sí' Local='n' inicio='tri=-1;hayTri=0;hayBase=0;hayHgt=0;nS=0;nT=0;n=0' hacer='T[n,_b]=0;T[n,_h]=0;T[n,_A]=0;n=n+1' mientras='n<20'">
+   <param name="A_27" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='status=0;drawing=0;clearAll();makePoligon(N);'">
+   <param name="A_28" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora la triangulación de terrenos y observa cómo calcular sus áreas.&squot;' hacer='r1=1.5;dr=2.0;HT=250;dHT=36;WT=(990-590)/4;dthr=22/E2.escala;Inicio();'">
+   <param name="A_29" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='MP=E0.mouse_pressed;MX=E0.mouse_x;MY=E0.mouse_y;hayTri=(MP&(!MPA)&hayHgt)?0:hayTri;hayBase=(MP&(!MPA)&hayHgt)?0:hayBase;hayHgt=(MP&(!MPA)&hayHgt)?0:hayHgt;aux=((!animando)&MP&(!MPA))?getPnt(MX,MY):&squot;&squot;;aux=((!animando)&MPA&(!MP)&(status==1)&hayBase)?getHgt(MX,MY):&squot;&squot;;aux=((!animando)&MP&(!MPA)&hayTri&(!hayBase))?getBase(MX,MY):&squot;&squot;;hayTri=((!animando)&(MPA&(!MP)&(status==1)&(!hayBase)&getTri(MX,MY)))?1:hayTri;aux=((!animando)&MPA&(!MP)&(status==0)&getSeg(MX,MY))?regSeg():&squot;&squot;;status=(nS+3<N)?0:status;status=((nS+3==N)&(nT+2==N))?1:status;aux=(drawing&hayBase)?calcHPerp():&squot;&squot;;MPA=MP;Difiere();;'">
+   <param name="A_30" value="id='animar' evento='sí' condición='(status==1)&hayHgt' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=0)' expresión='[120,72]' texto='Número de lados del terreno:' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='Elije triángulo'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==0)' expresión='[600,70]' texto='Traza algunos segmentos rectos entre los vértices para partir el polígono en triángulos. ' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Título'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='status==1' expresión='[600,60]' texto='El polígono está triangulado.\nAhora para cada triángulo hay \nque marcar su base y su altura.\nEl programa da las medidas, \nhace los cálculos y llena la tabla.\n' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='Título'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==1)&(T[nT,_A]!=0)&((!hayTri)|(hayTri&hayBase&hayHgt))&(!animando)' expresión='[100,70]' texto='Prueba con otra partición, con otro terreno\no con otras bases y alturas de los triángulos.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Elije triángulo'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==1)&(T[nT,_A]==0)&((!hayTri)|(hayTri&hayBase&hayHgt))&(!animando)' expresión='[120,80]' texto='Selecciona uno de los triángulos.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Elije triángulo'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==1)&hayTri&(!hayBase)&(!animando)' expresión='[120,80]' texto='Elige la base de este triángulo.\n\n' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Elige base'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==1)&hayTri&hayBase&(!hayHgt)&(!animando)' expresión='[120,70]' texto='Traza la altura correspondiente arrastrando el vértice opuesto hacia la base.\n' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Traza altura'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='1abc9c' dibujar-si='(status==0)&(N>4)' expresión='[600,130]' texto='Intenta hacer la partición con el menor número posible de triángulos.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Título'">
+   <param name="G_10" value="espacio='E0' tipo='segmento' color='e74c3c' dibujar-si='(status==1)&(T[nT,_A]!=0)' expresión='(P[T[s,_b1],_x],P[T[s,_b1],_y])(T[s,_h2x],T[s,_h2y])' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' fijo='sí' tamaño='0' info='bases extendidas'">
+   <param name="G_11" value="espacio='E0' tipo='curva' color='34495e' expresión='(P[t,_x],P[t,_y])' t.intervalo='[0,N]' t.pasos='N' relleno='(R(2),V(2),A(2),00)' ancho='2'">
+   <param name="G_12" value="espacio='E0' tipo='curva' color='34495e' dibujar-si='hayTri' expresión='(P[T[tri,_v0+(t%3)],_x],P[T[tri,_v0+(t%3)],_y])' t.intervalo='[0,3]' t.pasos='3' relleno='ffdd22' ancho='2'">
+   <param name="G_13" value="espacio='E0' tipo='segmento' color='34495e' dibujar-si='(status==0)&drawing' expresión='(MX,MY)(X,Y)' fijo='sí' tamaño='0' info='segmento arrastrado para crearlo '">
+   <param name="G_14" value="espacio='E0' tipo='segmento' color='3498db' dibujar-si='(status==1)&drawing&hayBase' expresión='(MX,MY)(X,Y)' fijo='sí' tamaño='0' ancho='4' info='dibujando altura'">
+   <param name="G_15" value="espacio='E0' tipo='segmento' color='3498db' dibujar-si='drawing&hayBase' expresión='(MX-dhX,MY-dhY)(MX+dhX,MY+dhY)' fijo='sí' tamaño='0' ancho='4' info='dibujando altura - perpendicular'">
+   <param name="G_16" value="espacio='E0' tipo='segmento' color='e74c3c' dibujar-si='hayTri&hayBase&hayHgt' expresión='(xP,yP)(P[base2,_x],P[base2,_y])' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' info='la base extendida'">
+   <param name="G_17" value="espacio='E0' tipo='segmento' color='80e74c3c' dibujar-si='hayTri&hayBase' expresión='(11*P[base1,_x]-10*P[base2,_x],11*P[base1,_y]-10*P[base2,_y])(11*P[base2,_x]-10*P[base1,_x],11*P[base2,_y]-10*P[base1,_y])' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' info='la base extendida'">
+   <param name="G_18" value="espacio='E0' tipo='segmento' color='e74c3c' dibujar-si='hayTri&hayBase' expresión='(P[base1,_x],P[base1,_y])(P[base2,_x],P[base2,_y])' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' ancho='5' info='la base'">
+   <param name="G_19" value="espacio='E0' tipo='segmento' color='3498db' dibujar-si='hayTri&hayBase&hayHgt' expresión='(xV,yV)(xP,yP)' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' ancho='4' info='la altura'">
+   <param name="G_20" value="espacio='E0' tipo='segmento' color='3498db' dibujar-si='(status==1)&(T[nT,_A]!=0)&(!animando)' expresión='(T[s,_h1x],T[s,_h1y])(T[s,_h2x],T[s,_h2y])' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' fijo='sí' tamaño='0' ancho='2' info='alturas'">
+   <param name="G_21" value="espacio='E0' tipo='segmento' color='e74c3c' dibujar-si='(status==1)&(T[nT,_A]!=0)&(!animando)' expresión='(P[T[s,_b1],_x],P[T[s,_b1],_y])(P[T[s,_b2],_x],P[T[s,_b2],_y])' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' fijo='sí' tamaño='0' ancho='4' info='bases'">
+   <param name="G_22" value="espacio='E0' tipo='punto' color='8034495e' dibujar-si='(status==1)&(s!=tri)' expresión='(T[s,_x]-0.3,T[s,_y]-0.1)' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='[Name[s]]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' tamaño='0' info='Los nombres'">
+   <param name="G_23" value="espacio='E0' tipo='segmento' color='34495e' dibujar-si='nS>0' expresión='(S[s,_x1],S[s,_y1])(S[s,_x2],S[s,_y2])' familia='s' s.intervalo='[0,nS-1]' s.pasos='nS-1' fijo='sí' tamaño='0' ancho='2' info='los segmentos dibujados'">
+   <param name="G_24" value="espacio='E0' tipo='curva' color='34495e' expresión='(P[t,_x],P[t,_y])' t.intervalo='[0,N]' t.pasos='N'">
+   <param name="G_25" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(status==0)&(nT+2>N)' expresión='[500,260]' texto='Tu partición ya tiene demasiados triángulos.\nPulsa Otra partición para comenzar de nuevo.' fuente='SansSerif,BOLD,20' fijo='sí' ancho='500' info='Título'">
+   <param name="G_26" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[590-1+(100-_AnchoDeCadena_(&squot;Triángulo&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,20))/2,HT-36]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='Triángulo' fuente='SansSerif,PLAIN,20' fijo='sí' info='Etiquetas'">
+   <param name="G_27" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[630,HT+s*dHT+1]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='[Name[s]]' fuente='SansSerif,PLAIN,20' fijo='sí' info='Nombres de los Triángulos'">
+   <param name="G_28" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[700,HT+nT*dHT+2]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='Área del terreno:' fuente='SansSerif,PLAIN,20' fijo='sí' info='Área del terreno'">
+   <param name="G_29" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[690+(100-_AnchoDeCadena_(&squot;base&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,20))/2,HT-36]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='base' fuente='SansSerif,PLAIN,20' fijo='sí' info='Etiqueta base'">
+   <param name="G_30" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[790+(100-_AnchoDeCadena_(&squot;altura&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,20))/2,HT-36]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='altura' fuente='SansSerif,PLAIN,20' fijo='sí' info='etiqueta altura'">
+   <param name="G_31" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)&(T[s,_b]!=0)' expresión='[735-_AnchoDeCadena_(_NumToStr_(T[s,_b],2),&squot;SansSerif&squot;,&squot;PLAIN&squot;,20),HT+s*dHT+0]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}{\colortbl\red231\green76\blue60;\red0\green0\blue0;}\f1\fs40\b{\*\mjaformula\cf0{\expr T[s,_b]}\cf1}\f2\fs42\b0\i{\*\mjaformula{\expr (T[s,_b]!=0)?&squot;m&squot;:&squot;&squot;}\cf1}\f3\fs40\i0}' fuente='SansSerif,BOLD,20' fijo='sí' info='bases'">
+   <param name="G_32" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)&(T[s,_h]!=0)' expresión='[835-_AnchoDeCadena_(_NumToStr_(T[s,_h],2),&squot;SansSerif&squot;,&squot;PLAIN&squot;,20),HT+s*dHT+0]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;}{\colortbl\red52\green152\blue219;\red0\green0\blue0;}\f1\fs40\b{\*\mjaformula\cf0{\expr T[s,_h]}\cf1}\f2\fs42\b0\i{\*\mjaformula{\expr (T[s,_h]!=0)?&squot;m&squot;:&squot;&squot;}\cf1}\f3\fs40\i0}' fuente='SansSerif,BOLD,20' fijo='sí' info='alturas'">
+   <param name="G_33" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)&(T[s,_A]!=0)' expresión='[935-_AnchoDeCadena_(_NumToStr_(T[s,_A],2),&squot;SansSerif&squot;,&squot;PLAIN&squot;,20),HT+s*dHT-5]' familia='s' s.intervalo='[0,nT]' s.pasos='nT' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Times New Roman;\f3\fcharset0 Arial;\f4\fcharset0 Arial;}\f1\fs40\b{\*\mjaformula{\expr T[s,_A]}}\f2\fs44\b0\i{\*\mjaformula\f3\fs40\i m{\supix 2}\f2\fs44}\f4\fs40\i0}' fuente='SansSerif,BOLD,20' fijo='sí' info='áreas'">
+   <param name="G_34" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status=1)' expresión='[890+(100-_AnchoDeCadena_(&squot;área&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,20))/2,HT-36]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='área' fuente='SansSerif,PLAIN,20' fijo='sí' info='área total'">
+   <param name="G_35" value="espacio='E2' tipo='segmento' color='34495e' dibujar-si='(status==1)' coord_abs='sí' expresión='(590,HT-42+s*dHT)(990,HT-42+s*dHT)' familia='s' s.intervalo='[0,nT+2]' s.pasos='nT+2' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_36" value="espacio='E0' tipo='punto' color='34495e' expresión='(P[s,_x],P[s,_y])' familia='s' s.intervalo='[0,N-1]' s.pasos='N-1' decimales='0' fijo='sí' tamaño='3'">
+   <param name="G_37" value="espacio='E2' tipo='segmento' color='34495e' dibujar-si='(status==1)' coord_abs='sí' expresión='(600-10+s*WT,HT-42)(600-10+s*WT,HT-42+(nT+1+((s==0)|(s>2)))*dHT)' familia='s' s.intervalo='[0,4]' s.pasos='4' fuente='SansSerif,BOLD,18' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_38" value="espacio='E0' tipo='punto' color='34495e' dibujar-si='hayTri&hayBase&hayHgt' expresión='((P[base1,_x]+P[base2,_x])/2-0.5,(P[base1,_y]+P[base2,_y])/2-0.2)' texto='[Dist(base1,base2)]' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='medida de la base'">
+   <param name="G_39" value="espacio='E0' tipo='punto' color='34495e' dibujar-si='hayTri&hayBase&hayHgt' expresión='((xV+xP)/2-0.5,(yV+yP)/2-0.2)' texto='[dist(X,Y,xP,yP)]' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='medida de la altura'">
+   <param name="G_40" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(status==1)&(T[nT,_A]!=0)&(!hayTri)' expresión='[735,E2._h-60]' texto='¡Bien hecho!' fuente='SansSerif,BOLD,26' fijo='sí' info='Felicitación'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' inicio='t=0' hacer='t=t+0.1;T[tri,_b]=(hayHgt&(t>0.5))?Dist(base1,base2):0;T[tri,_h]=(hayHgt&(t>0.75))?dist(xV,yV,xP,yP):0;T[tri,_A]=(hayHgt&(t>1))?ent(100*(T[tri,_b]*T[tri,_h])/2+0.5)/100:0;T[nT,_A]=(t>1.5)?SumA():0;salir=(t>=2);hayTri=(salir)?0:hayTri;hayBase=(salir)?0:hayBase;hayHgt=(salir)?0:hayHgt;animando=!salir;tri=(salir)?-1:tri;' mientras='animando'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<!-- Page styles -->
+		<link type='text/css' href='js/contribute/modal/css/basic.css' rel='stylesheet' media='screen' />		
+		<link rel="stylesheet" type="text/css" href="css/style-base.css">
+		<link rel="stylesheet" type="text/css" href="css/style-custom.css">
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+
+		<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/contribute/jquery_shuffle.js"></script>
+		<script src='js/contribute/modal/js/jquery.simplemodal.js' type='text/javascript'></script>
+		
+		<script type="text/javascript" src="js/lite/lite_cuadrosinoptico.js"></script>
+		<script type="text/javascript" src="js/lite/data_lite_cuadrosinoptico.js"></script>
+		<script type="text/javascript">
+		
+			/**
+			 * OnLoad
+			 */
+			$(function(){
+				
+				function onCSFinish(){
+					setTimeout(function(){
+						lite.instances.cs.showMessage(
+							'', //Sin titulo
+							'¡Muy bien! Terminaste de completar el cuadro sinóptico. <br><br> Obsérvalo bien antes de cerrar esta ventana y regresar al diálogo.', //mensaje
+							'final', // clase especial para la ventana
+							function(){// Se llama cuando se cierra la ventana
+								
+								var padre = window.parent;
+								var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: 'cap4_cuadro' } };
+								padre.postMessage(mensajeTipoSet, "*");
+								
+								$('.cuadro_sinoptico cs-opt.gap-to-fill.right:before').prop('content','');
+							}
+						);
+						$('.distractor').css("display","none");
+					},2500);
+				}
+				
+				lite.instances = {};
+				
+				lite.instances['cs'] = 
+					 new lite.cuadrosinoptico(
+						 'main_activity',
+						 lite.cuadrosinoptico.retros_data,
+						 {message:{width:410,height:300}} //Agregamos configuracion del ancho y alto (máximos) 
+				);
+					 
+				// Callback, cuando todas esten puestas correctamente
+				$('#main_activity').on('cs.gameended',onCSFinish);
+				
+				// Botón indicaciones
+				
+				var btnInfo =$('#infoBtn'); 
+				btnInfo.on('click', function(){
+					var initMessage =
+						//'<p><strong>Indicaciones</strong></p>'+
+						'<p>Completa el cuadro sinóptico. Para ayudarte, ya se llenaron algunas casillas.</p>'+
+						'<p>Puedes apoyarte en los datos importantes que extrajimos del <em>blog</em> y en la información proporcionada por la veterinaria. </p>'+
+						'<p>Para colocar una opción, haz clic en ella y luego otro clic en el lugar del cuadro donde la quieres poner. </p>'+
+						'<p>Para quitar una opción incorrecta, simplemente haz clic en ella.<br>¡Ojo!, habrá algunas opciones sobrantes.</p>';
+						
+					lite.instances.cs.showMessage(
+						'Indicaciones', //Sin titulo
+						initMessage, //mensaje
+						'indicaciones', // Sin clase especial para la ventana
+						function(){// Se llama cuando se cierra la ventana
+							btnInfo.removeClass('oculto'); 
+						}
+					);
+					btnInfo.addClass('oculto');
+				});
+				
+				btnInfo.click(); //Aparecemos el mensaje inicial
+				
+				
+				// Botones con micromundos
+				
+				jQuery('.microworldBtn').each( function(){
+					
+					jQuery(this).on("click", function(){
+						var initMessage =
+							'<iframe src="' + jQuery(this).data("url") + ' " class="mwIframe" style="width:644px; height:548px;"></iframe>';
+						
+						//console.log(initMessage);
+						
+						lite.instances.cs.showMessage(
+							'', //Sin titulo
+							initMessage, //mensaje
+							'microworld', // Sin clase especial para la ventana
+							function(){}// Se llama cuando se cierra la ventana
+						);
+					});
+				
+				});
+				
+							 
+			});
+			
+			
+			function getRetrosStructure(){
+				//lite.instances.cs.downloadMainHTML();
+				lite.instances.cs.downloadRetrosDataStructure();
+			}
+			
+		</script>
+		<meta charset="UTF-8">
+		<title> Cuadro sinóptico</title>
+	</head>
+	
+	<body > <!--class='dev'-->
+	
+	<!--<button class='DwStructure' onclick="javascript:getRetrosStructure();">Download "Estructura de retroalimentaciones"</button>-->
+		
+		<div id = 'main_activity' class='activity_container'>
+			
+			<!--<button id='closeBtn'></button>-->
+			
+			<!--<div class='instrucciones'>
+				Llena los espacios con las opciones correspondientes. Para colocar una opción, haz clic en
+				ella y luego otro clic en la línea donde la quieres poner. Habrá opciones sobrantes
+			</div>-->
+			
+			<div class='activity'>
+				<div class='cuadro_sinoptico'>
+					<ul>
+						<li>
+							<label><cs-opt>Su alimentación</cs-opt></label>
+							<ul>
+								<li>
+									<label><cs-opt>¿Qué come?</cs-opt></label>
+									<ul>
+										<li>
+											<label><cs-opt>Croquetas para gato</cs-opt> <span class="arrow">&rarr;</span> A diario</label>
+										</li>
+										<li>
+											<label><cs-opt>Huevo crudo</cs-opt> <span class="arrow">&rarr;</span> Una vez por semana</label>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<label>¿Qué bebe?</label>
+									<ul>
+										<li>
+											<label>Agua simple <span class="arrow">&rarr;</span> Permanentemente</label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						
+						<li>
+							<label>Su espacio</label>
+							<ul>
+								<li>
+									<label>¿Cómo vive?</label>
+									<ul>
+										<li>
+											<label>Enjaulado <span class="arrow">&rarr;</span> <cs-opt>Todos los días y noches</cs-opt></label>
+										</li>
+										<li>
+											<label><cs-opt>Suelto en una habitación</cs-opt> <span class="arrow">&rarr;</span> Tres veces al día</label>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<label><cs-opt>Limpieza</cs-opt></label>
+									<ul>
+										<li>
+											<label><cs-opt>Retirar heces de la jaula</cs-opt> <span class="arrow">&rarr;</span> <cs-opt>A diario</cs-opt></label>
+										</li>
+										<li>
+											<label>Caja con arena para gato <span class="arrow">&rarr;</span> Cuando anda suelto </label>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<label>Cuidados para su salud</label>
+							<ul>
+								<li>
+									<label><cs-opt>Vacunas</cs-opt> <span class="arrow">&rarr;</span> Cada año</label>
+								</li>
+								<li>
+									<label><cs-opt>Aceite para su pelaje</cs-opt> <span class="arrow">&rarr;</span> Por averiguar</label>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<label><cs-opt>Precauciones generales</cs-opt></label>
+							<ul>
+								<li>
+									<label><cs-opt>Atención con la alfombra</cs-opt> <span class="arrow">&rarr;</span> Al sacarlo de su jaula</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+	
+				<div class='right-panel'>
+					<div class='distractor'>
+						<span>Pasearlo en el parque</span>
+						<span>Leche</span>
+						<span>Pájaros y ratones</span>        
+						<span>Duerme</span>     
+						<span>Es juguetón</span>      
+						<span>Desinfectar su jaula</span>
+						<span>Bañarlo</span>          
+					</div>
+				</div>
+		
+			</div>
+			
+			<button id='infoBtn'>Indicaciones</button>
+			<button id='btn_blog' class='microworldBtn' data-url='../cap2_blog_conRubros/index2.html'></button>
+			<button id='btn_llamada' class='microworldBtn' data-url='../cap3_veterinaria/index2.html'></button>
+		</div>
+	
+
+	</body>
+
+</html>

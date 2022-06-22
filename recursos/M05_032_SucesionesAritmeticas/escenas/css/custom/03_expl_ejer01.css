@@ -1,0 +1,16 @@
+@import '03_expl_ejer00.css';
+
+div#INST .coma{
+	color : #3449ff;
+	margin-right: 30px;
+}
+
+
+div.option {
+	font-size: 25px;
+}
+
+
+div#DISP{
+	font-size: 26px;
+}

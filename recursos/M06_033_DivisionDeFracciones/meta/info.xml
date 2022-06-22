@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_033"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		División de fracciones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		¿Cuántas botellas de tres cuartos de litro se necesitan para embotellar 250 litros de vino? Éste es un problema que se resuelve con una división de fracciones. También se puede convertir el ¾ en 0.75 y resolverlo con una división de números decimales. En esta unidad aprenderás a resolver problemas dividiendo fracciones y números decimales.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, fracciones, Sentido numérico y pensamiento algebraico, Problemas multiplicativos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, fración, número decimal, división.
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

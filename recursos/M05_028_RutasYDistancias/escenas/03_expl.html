@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, norte, sur, este, oeste, puntos cardinales, recorrido, distancia, longitud, trayectoria, calles, instrucciones, girar, avanzar">
+
+<head>
+	<title>Rutas y distancias</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='COVER' dibujar-si='0' fijo='sí' despl_imagen='centrada' fondo='7f34495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='AUX_MAPA' dibujar-si='showAux' despl_imagen='arr-izq' archivo='03_expl_aux.html'">
+   <param name="C_01" value="id='_SEPARADOR_' tipo='numérico' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_02" value="id='comenzar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Comenzar' expresión='((E2._w-328)/2,380,328,78)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='32' imagen='_STYLE_|class=btnAprendeMx verdeAgua comenzar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstatus=0' dibujar-si='status<0' pos_mensajes='centro'">
+   <param name="C_03" value="id='menu01' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(x2,y1-1+dh,mw,mh+4)' fijo='sí' visible='no' opciones=' ,hay que ubicar en el mapa la posición del origen (escuela) y el destino (circo),hay que saber si el circo tiene payasos,hay que conocer cuantos kilómetros hay en un metro' dibujar-si='(status>=0)&(nT>0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='menu02' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(x2,y2-1+dh,mw,mh+4)' fijo='sí' visible='no' opciones=' ,se deben reconocer las calles que te permiten acercarte desde el origen al destino,se tienen que conocer los puntos cardinales de memoria,se debe llevar ropa cómoda para un recorrido largo después de la escuela' dibujar-si='(status>=1)&(nT>1)&(menu01==resp01)' pos_mensajes='centro'">
+   <param name="C_05" value="id='menu03' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(x2,y3-1+dh,mw,mh+4)' fijo='sí' visible='no' opciones=' ,hay que observar si la ruta es la mejor fijándose en la la escala del mapa y la distancia total,hay que comprar los boletos del circo utilizando un cupón de dos por uno,hay que revisar el pronostico del clima para conocer si debo llevar un paraguas' dibujar-si='(status>=2)&(nT>2)&(menu02==resp02)' pos_mensajes='centro'">
+   <param name="C_06" value="id='c1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Ubicar' expresión='(x5,y5+0*(mh+sh+10),166,46)' fijo='sí' visible='sí' color='blanco' color-int='3498db' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azul ubicar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='showAux=1\nAUX_MAPA.exec(&squot;initUbicar&squot;,&squot;&squot;)\nAUX_MAPA.update()\ndoPlay(0)' dibujar-si='status>2' pos_mensajes='centro'">
+   <param name="C_07" value="id='c2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Trazar' expresión='(x5,y5+1*(mh+sh+10),166,46)' fijo='sí' visible='sí' color='blanco' color-int='3498db' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azul trazar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='showAux=1\nAUX_MAPA.exec(&squot;initTrazar&squot;,&squot;&squot;)\nAUX_MAPA.update()\ndoPlay(0)' dibujar-si='status>2' activo-si='state>0' pos_mensajes='centro'">
+   <param name="C_08" value="id='c3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Medir' expresión='(x5,y5+2*(mh+sh+10),166,46)' fijo='sí' visible='sí' color='blanco' color-int='3498db' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azul medir|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='showAux=1\nAUX_MAPA.exec(&squot;initMedir&squot;,&squot;&squot;)\nAUX_MAPA.update()\ndoPlay(0)' dibujar-si='status>2' activo-si='state>1' pos_mensajes='centro'">
+   <param name="A_01" value="id='MNU' vector='sí' matriz='sí' evaluar='una-sola-vez' expresión='MNU[0,0]=&squot;hay que ubicar en el mapa la posición del origen (escuela) y el destino (circo)[1]&squot;;MNU[0,1]=&squot;hay que saber si el circo tiene payasos[2]&squot;;MNU[0,2]=&squot;hay que conocer cuantos kilómetros hay en un metro[3]&squot;;;MNU[1,0]=&squot;se deben reconocer las calles que te permiten acercarte desde el origen al destino[1]&squot;;MNU[1,1]=&squot;se tienen que conocer los puntos cardinales de memoria[2]&squot;;MNU[1,2]=&squot;se debe llevar ropa cómoda para un recorrido largo después de la escuela[3]&squot;;;MNU[2,0]=&squot;hay que observar si la ruta es la mejor fijándose en la la escala del mapa y la distancia total[1]&squot;;MNU[2,1]=&squot;hay que comprar los boletos del circo utilizando un cupón de dos por uno[2]&squot;;MNU[2,2]=&squot;hay que revisar el pronostico del clima para conocer si debo llevar un paraguas[3]&squot;'">
+   <param name="A_02" value="id='optStr(n)' algoritmo='sí' expresión='str' algoritmo='sí' Local='str,down,rnd1,rnd2,rnd3' inicio='str=&squot; ,&squot;' hacer='rnd1=ent(rnd*3);down=rnd<0.5;rnd2=(down)?(rnd1-1)%3:(rnd1+1)%3;rnd3=(down)?(rnd1+1)%3:(rnd1-1)%3;str=str+MNU[n,rnd1]+&squot;,&squot;;str=str+MNU[n,rnd2]+&squot;,&squot;;str=str+MNU[n,rnd3]'">
+   <param name="A_03" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_04" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_05" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_06" value="id='label' vector='sí' evaluar='una-sola-vez' tamaño='12'">
+   <param name="A_07" value="id='action' vector='sí' evaluar='una-sola-vez' tamaño='12' expresión='action[0]=&squot;Ubica el origen y el destino&squot;;action[1]=&squot;Traza una ruta del origen al destino&squot;;action[2]=&squot;Mide la ruta trazada&squot;;'">
+   <param name="A_08" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_09" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='bPanel.x=222;bPanel.y=137;bPanel.w=580;bPanel.h=363;;status=-1;state=0;;nT=0;label[nT]=&squot;Primero&squot;;resp01=1;nT=nT+1;label[nT]=&squot;Luego&squot;;resp02=1;nT=nT+1;label[nT]=&squot;Finalmente&squot;;resp03=1;nT=nT+1;menu01.setOptions(optStr(0));menu02.setOptions(optStr(1));menu03.setOptions(optStr(2));'">
+   <param name="A_10" value="id='Calculos()' algoritmo='sí' algoritmo='sí' inicio='alfa=Alfa*pi/180' hacer='status=(menu01==resp01)?1:min(0,status);status=(menu01==resp01)&(menu02==resp02)?2:min(1,status);status=(menu01==resp01)&(menu02==resp02)&(menu03==resp03)?3:min(2,status);;menu03=(status<2)?0:menu03;menu02=(status<1)?0:menu02;menu01=(status<0)?0:menu01;;retro=&squot;&squot;;retro=((status==0)&(menu01==2))?&squot;Saber qué el circo tiene payasos, es interesante y divertido, pero no es el primer paso para determinar la ruta para asistir.&squot;:retro;retro=((status==0)&(menu01==3))?&squot;Conocer cuantos kilómetros hay en un metro es importante para determinar cuál será la distancia total recorrida en un ruta, pero como primer paso no es necesario.&squot;:retro;;retro=((status==1)&(menu02==2))?&squot;Conocer los puntos cardinales de memoria es una buena habilidad, pero en general los mapas te ayudan a determinar hacia donde este el norte, el sur, el este y el oeste.&squot;:retro;retro=((status==1)&(menu02==3))?&squot;Llevar ropa cómoda para salir de paseo es siempre una buena idea, pero no es un paso necesario para planear la ruta que te llevará hasta tu destino.&squot;:retro;;retro=((status==2)&(menu03==2))?&squot;Los descuentos para comprar los boletos de entrada no te ayudan en la planeación de la ruta, para ir al circo.&squot;:retro;retro=((status==2)&(menu03==3))?&squot;El pronóstico del clima es información importante a tener en cuenta cuando salgas de paseo, pero no es un paso para definir el camino de la escuela al circo.&squot;:retro;;'">
+   <param name="A_11" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='Xm=65;Ym=20;dXm=890;dYm=470;mw=630+113+30;bw=140;mh=36;dh=-8;textsep=10;sh=10;x0=60;y0=14+48;x1=x0+30;x2=x1+79;x3=(x1+x2)/2;x3=x2;x4=x2+mw+5;y1=y0+3*mh/2+sh;y2=y1+mh+sh;y3=y2+mh+sh;y4=y3+mh+sh;y5=y4+85;x5=E2._w/2;x6=x5-80;y6=400;;'">
+   <param name="A_12" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_13" value="id='hideMap()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='showAux=0;'">
+   <param name="A_14" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Ponte a prueba.&squot;' hacer='initDisplay();Inicio();'">
+   <param name="A_15" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();;;;;'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='grisObscuro' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='macro' dibujar-si='status<0' expresión='macros/borde.txt' nombre='bPanel' info='marco blanco de inicio '">
+   <param name="G_03" value="espacio='E2' tipo='imagen' dibujar-si='status<0' coord_abs='sí' expresión='(E2._w/2,140,1,1)' archivo='images/arcoiris.png' info='barrita arriba del marco blanco de inicio '">
+   <param name="G_04" value="espacio='E2' tipo='imagen' dibujar-si='status<0' coord_abs='sí' expresión='(E2._w/2,265,1,1)' archivo='images/imagen_prueba.png' info='imagen símbolo de la prueba del marco blanco de inicio '">
+   <param name="G_05" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_06" value="espacio='E2' tipo='imagen' dibujar-si='0' coord_abs='sí' expresión='(80,400,0.49,0.49)' archivo='images/personajes/girl_01_mirror_2x.png' info='niña state>2'">
+   <param name="G_07" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(910,410,0.6,0.6)' archivo='images/personajes/boy_04_2x.png' info='niño'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='34495e' expresión='[x0,y0]' texto='La mamá de Juan le pregunta sobre las decisiones que tomó para determinar la ruta, y él le comenta \nlas ideas y soluciones qué, junto con Lupe, tomaron para definir el camino a recorrer al salir de la escuela.\n' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(status>=s)' expresión='[x2-_AnchoDeCadena_(label[s],&squot;SansSerif&squot;,&squot;PLAIN&squot;,20)-textsep,y1+s*(mh+sh)]' familia='s' s.intervalo='[0,nT-1]' s.pasos='nT-1' texto='[label[s]]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='no'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='27ae5f' dibujar-si='retro!=&squot;&squot;' expresión='[x3,y4-mh*2*(status==0)-mh*(status==1)]' texto='[retro]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='750'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='27ae5f' dibujar-si='status==3' expresión='[x3,y4]' texto='Muy bien. Estos son los pasos básicos para decidir una ruta.' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='19bd9b' dibujar-si='status==3' expresión='[x3,y4+mh+sh]' texto='Ahora apliquemos lo aprendido.' fuente='SansSerif,ITALIC,20' fijo='sí'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='status>2' expresión='[x5-_AnchoDeCadena_(action[s],&squot;SansSerif&squot;,&squot;PLAIN&squot;,20)-sh,y5+12+s*(mh+sh+10)]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[action[s]]' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='imagen' dibujar-si='state>0' coord_abs='sí' expresión='(x5+166+15,y5+0*(mh+sh+10)-5)' archivo='images/checkmark.png'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' dibujar-si='state>1' coord_abs='sí' expresión='(x5+166+15,y5+1*(mh+sh+10)-5)' archivo='images/checkmark.png'">
+   <param name="G_16" value="espacio='E2' tipo='imagen' dibujar-si='state>2' coord_abs='sí' expresión='(x5+166+15,y5+2*(mh+sh+10)-5)' archivo='images/checkmark.png'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='27ae5f' dibujar-si='state>2' expresión='[x5-80,E2._h-42]' texto='¡Muy buen trabajo!' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

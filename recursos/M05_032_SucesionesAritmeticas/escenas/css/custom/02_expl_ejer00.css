@@ -1,0 +1,186 @@
+@import '../btn_style.css';
+@import '03_expl_ejer00.css';
+
+
+div.activity-container{
+	text-align: center;
+}
+
+
+div.activity-container h1 {
+	text-align: left;
+}
+
+div#DISP_container{
+	margin: 10px auto 20px auto;
+	padding: 0px;
+	width: 992px;
+	height: 189px;
+	position: relative;
+
+}
+
+div#DISP{
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing:border-box;
+}
+
+button#btnHelp {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	/* transform: translate(0,-50%); */
+	/* background-color: transparent; */
+	/* background-image: url('../icon_huella.png') !important; */
+	/* background-position: center center; */
+	/* background-repeat: no-repeat; */
+	width: 120px;
+	height: 46px;
+	cursor: pointer;
+	text-align: right;
+	border-right-width: 0px;
+	border-left-width: 0px ;
+	border-top-width: 0px ;
+
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: 0px 2px 0px rgba(0,0,0,0.2);
+}
+
+.nota::before { background-image: url('../icono_nota.png'); display:block; }
+
+
+
+div#message-mask {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+}
+
+
+
+div#message {
+	
+	width: 860px;
+	height: 416px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+	position: relative;
+	transform: translate(0,-50%);
+	text-align: center;
+	display: inline-block;	
+
+	padding: 20px;
+
+	background-repeat: no-repeat;
+	background-image:url('../../images/sucesiones/nota.png'); 
+	background-color: none;
+
+	padding: 80px 10px 10px 20px;
+	box-sizing:border-box;
+}
+
+
+div#message #close_msg{
+	width: 46px;
+	height: 46px;
+
+	left: auto;
+	bottom: auto;
+	top:40px;
+	right:20px;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-image:url('../../images/icon_wrong.png'); 
+	background-color: none;
+	cursor: pointer;
+}
+
+div#message table {
+	font-size: 36px;
+	line-height: 32px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+div#message h2{
+	margin: 0;
+	margin-bottom: 30px;
+	color: #2ecc71;
+}
+
+
+div#message table tr.flechas{
+	line-height: 20px;
+
+}
+
+div#message table tr.flechas td.marca:before,
+div#message table tr.flechas td.marca:after{
+	content: '\2198';
+	font-size: 30px;
+	display: inline-block;
+	visibility: hidden;
+	background: none !important;
+	color: purple;
+	font-weight: bold;;
+}
+
+
+div#message table tr.flechas td.marca{
+	min-width: 55px;
+}
+
+div#message table tr.flechas td.marca.izquierda,
+div#message table tr.flechas td.marca.derecha{
+	background: none;
+}
+
+div#message table tr.flechas td.marca.izquierda:before ,
+div#message table tr.flechas td.marca.derecha:after {
+	visibility: visible;
+}
+
+div#message table tr.flechas td.marca.derecha:after {
+	content: '\2198';
+	float: right;
+}
+div#message table tr.flechas td.marca.izquierda:before{
+	content: "\2197";
+	float: left;
+}
+
+div#message table tr.factor-suma td.fact{
+	color: #e67e22;
+	min-width: 20px;
+	line-height: 15px;
+}
+
+div#message table tr.factor-suma span.fracction .numerador{
+	border-bottom-color: #e67e22; 
+}
+
+div#message table tr.factor-suma span.fracction .denominador{
+	padding-top: 3px;
+}
+
+
+dia.option.correcto {
+	box-shadow: none;
+	border-width: 0;
+
+}
+
+dia.option.correcto:after{
+	content: none;
+}

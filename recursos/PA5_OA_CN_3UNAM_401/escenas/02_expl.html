@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Movimiento, experimento, simulación, palanca, polea, polea simple, poleas compuestas, plano inclinado, masa, peso, tornillo, taladro de bombeo, fulcro, eje">
+
+<head>
+	<title>Denme un punto de apoyo y moveré al mundo.</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' y='20' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1\ndatos()\nanimar=0\ntt=0\nang=0' dibujar-si='fase<2' activo-si='(tt=0)|(tt=10)'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1\ndatos()\nanimar=0\ntt=0\nang=0' dibujar-si='fase>0' activo-si='(tt=0)|(tt=10)' pos_mensajes='centro'">
+   <param name="C_03" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230-380,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' dibujar-si='fase<2' pos_mensajes='centro'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='sig+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(90,305,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAt|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d1=d1+1\ncalAng()' dibujar-si='(d1<10)&(fase=0)' pos_mensajes='centro'">
+   <param name="C_06" value="id='sig-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(90,250,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAd|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d1=d1-1\ncalAng()' dibujar-si='(d1>0)&(fase=0)' pos_mensajes='centro'">
+   <param name="C_07" value="id='sig1+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(870,250,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAd|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d2=d2+1\ncalAng()' dibujar-si='(d2<20)&(fase=0)' pos_mensajes='centro'">
+   <param name="C_08" value="id='sig1-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(870,305,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAt|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d2=d2-1\ncalAng()' dibujar-si='(d2>0)&(fase=0)' pos_mensajes='centro'">
+   <param name="C_09" value="id='soltar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Soltar' expresión='(414,390,200,46)' fijo='sí' visible='sí' color='blanco' color-int='16a085' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_10" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Reiniciar' expresión='(414,390,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2c3e50' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_11" value="id='resT' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Otro ejemplo' expresión='(414,180,200,46)' fijo='sí' visible='sí' color='blanco' color-int='16a085' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=0\ntt=0\nang=0\ndatos()' dibujar-si='(tt=10)&(fase=3)' pos_mensajes='centro'">
+   <param name="C_12" value="id='sig3+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(50,250,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAd|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d3=d3+1\ncalAng2()' dibujar-si='(d3<10)&(fase=1)'">
+   <param name="C_13" value="id='sig3-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(50,310,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAt|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d3=d3-1\ncalAng2()' dibujar-si='(d3>0)&(fase=1)'">
+   <param name="C_14" value="id='sig4+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(570,130,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAd|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d3=d3+1\ncalAng2()' dibujar-si='(d3<10)&(fase=2)'">
+   <param name="C_15" value="id='sig4-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(500,130,45,40)' fijo='sí' visible='sí' color-int='8e44ad' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx lavanda flechaAt|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='d3=d3-1\ncalAng2()' dibujar-si='(d3>0)&(fase=2)'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;info=0;ang=0;RetroMargIzq=150;RetroMargDer=874;RetroMargSup=90;RetroMargInf=474;RetroWidth=RetroMargDer-RetroMargIzq;RetroWidthini=RetroWidth-50;d1=0;d2=20;calAng()'">
+   <param name="A_02" value="id='calAng()' algoritmo='sí' algoritmo='sí' inicio='p1=5;p2=1' hacer='T1=d1*p1;T2=d2*p2;ang=(T1-T2);Y2=(1+d2)*(ang*.23)+(ang*1.1)-(d2*1.1*sgn(ang));Y2=((ang<=20)&(ang>=-10))?Y2+(d2*1.1*sgn(ang)):Y2;Y1=(1+d1)*(-ang*.18)'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[60,16]' texto='Aprende cómo se utiliza una palanca de primer género.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[60,16]' texto='Aprende cómo se utiliza la palanca de segundo y tercer género.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[60,16]' texto='Aprende cómo se combinan distintos tipos de palancas.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[40,55]' texto='A continuación se muestra el funcionamiento de una grúa tipo palanca. Utiliza los pulsadores\npara mover los pesos de la potencia y de la resistencia para mover la carga. Procura que la grúa,\nen todo momento, se mantenga en equilibrio. ' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=1' expresión='[40,55]' texto='Utiliza los pulsadores y observa cómo actúa cada parte de la palanca. ¿Cómo es la potencia\nen cada momento? ¿Quién es más grande, la resistencia o la potencia?' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=2' expresión='[40,55]' texto='Utiliza los pulsadores y observa cómo actúa cada parte de un cortaúñas. El diagrama que se\nmuestra corresponde a  un cortaúñas. ¿Puedes identificar las dos máquinas simples que la\ncomponen?' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_07" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[40,390]' texto='Las dos máquinas simples que componen al cortaúñas lo convierten en un instrumento ideal para cortar una uña Porque la máquina de segundo género proporciona una fuerza grande y la máquina de tercer género proporciona mejor control del movimiento.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='930' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_08" value="espacio='E1' tipo='macro' expresión='--fase=0--'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(515,520,1,1)' archivo='images/aprende/grua_piso.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(500+10*d2,350-Y2,1,1)' archivo='images/aprende/carga.png'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(440,390,-1,1)' archivo='images/aprende/plataforma.png'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(425-6*d1,300-Y1,1,1)' archivo='images/aprende/peso.png' rotini='ang'">
+   <param name="G_13" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(500+10*d2,302-Y2,1,1)' archivo='images/aprende/gancho.png'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(440,290,1,1)' archivo='images/aprende/pluma.png' rotini='ang'">
+   <param name="G_15" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)' coord_abs='sí' expresión='(440,344,1,1)' archivo='images/aprende/base.png'">
+   <param name="G_16" value="espacio='E1' tipo='macro' expresión='--fase=1--'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='(fase=1)' coord_abs='sí' expresión='(353,353,1,1)' archivo='images/aprende/carretilla.png' rotini='-d3*2'">
+   <param name="G_18" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[320,380]' texto='Fulcro' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_19" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[240,200]' texto='Resistencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_20" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[140,410]' texto='Potencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_21" value="espacio='E1' tipo='punto' color='rojo' dibujar-si='(fase=1)' coord_abs='sí' expresión='(350,350)' fijo='sí' tamaño='6'">
+   <param name="G_22" value="espacio='E1' tipo='flecha' dibujar-si='(fase=1)' coord_abs='sí' expresión='(290,225)(290,280)' fijo='sí'">
+   <param name="G_23" value="espacio='E1' tipo='flecha' dibujar-si='(fase=1)' coord_abs='sí' expresión='(170,380)(170,350-d3*7)' fijo='sí'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='(fase=1)' coord_abs='sí' expresión='(850,300,1,1)' archivo='images/aprende/tenazaAr.png' rotini='-2.5+d3*.5'">
+   <param name="G_25" value="espacio='E1' tipo='imagen' dibujar-si='(fase=1)' coord_abs='sí' expresión='(850,300,1,1)' archivo='images/aprende/tenazaAb.png' rotini='2.5-d3*.5'">
+   <param name="G_26" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[490,360]' texto='Resistencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_27" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[660,220]' texto='Potencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_28" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[790,330]' texto='Fulcro' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_29" value="espacio='E1' tipo='flecha' dibujar-si='(fase=1)' coord_abs='sí' expresión='(530,330)(530,275)' fijo='sí'">
+   <param name="G_30" value="espacio='E1' tipo='flecha' dibujar-si='(fase=1)' coord_abs='sí' expresión='(650,205)(650,235+d3*7)' fijo='sí'">
+   <param name="G_31" value="espacio='E1' tipo='punto' color='rojo' dibujar-si='(fase=1)' coord_abs='sí' expresión='(840,300)' fijo='sí' tamaño='8'">
+   <param name="G_32" value="espacio='E1' tipo='macro' expresión='--fase=2--'">
+   <param name="G_33" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)' coord_abs='sí' expresión='(470,275,1,1)' archivo='images/aprende/cortau1.png' rotini='-d3*.7'">
+   <param name="G_34" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)' coord_abs='sí' expresión='(559,280,1,1)' archivo='images/aprende/cortau2.png'">
+   <param name="G_35" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)' coord_abs='sí' expresión='(463,290+(d3*.6),1,1)' archivo='images/aprende/cortau3.png' rotini='d3*.2+3'">
+   <param name="G_36" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[340,340]' texto='Resistencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_37" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[510,180]' texto='Potencia' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_38" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[640,330]' texto='Fulcro' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_39" value="espacio='E1' tipo='punto' color='rojo' dibujar-si='(fase=2)' coord_abs='sí' expresión='(680,310)' fijo='sí' tamaño='8'">
+   <param name="G_40" value="espacio='E1' tipo='flecha' dibujar-si='(fase=2)' coord_abs='sí' expresión='(410,330)(410,275)' fijo='sí'">
+   <param name="G_41" value="espacio='E1' tipo='flecha' dibujar-si='(fase=2)' coord_abs='sí' expresión='(490,205)(490,235+d3*7)' fijo='sí'">
+   <param name="G_42" value="espacio='E1' tipo='macro' expresión='--INFO--'">
+   <param name="G_43" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_44" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[RetroMargIzq,100]' texto='Este tipo de grúa utiliza el principio de funcionamiento de una palanca\nde primer género, porque el fulcro se encuentra entre la resistencia y la potencia.\n\nEn el brazo donde se engancha la carga que se desea levantar, está la resistencia. En el otro brazo hay un peso que es la potencia, el cual se mueve a lo largo de un riel dentro del brazo. Este movimiento permite mover la carga a lo largo de la pluma (es decir a lo largo del brazo donde va la carga), manteniendo la potencia y la resistencia en equilibrio en todo momento. De esta forma la grúa no pierde el equilibrio y es capaz de mover grandes pesos.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_45" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[RetroMargIzq,100]' texto='En la carretilla la potencia es mayor que la resistencia,\ndebido a que la distancia entre el fulcro y la potencia es mayor que del fulcro a la resistencia. Así, al aplicar una pequeña fuerza  la potencia se hace muy grande. Este es un ejemplo de una palanca de segundo género.\n\nEn el caso de la tenaza, que es una palanca de tercer género, la construcción es la ideal para situaciones de precisión. En este caso, la fuerza aplicada suele ser mayor que la fuerza a vencer, debido a que se encuentra más cerca del fulcro, lo que permite mejor control del movimiento.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_46" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,110]' texto='fase=[fase]\ntt=[tt]\nang=[ang]\npaso=[paso]\nd1=[d1]     T1=[T1]     Y1=[Y1]\nd2=[d2]     T2=[T2]     Y2=[Y2]' fijo='sí'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

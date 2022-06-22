@@ -1,0 +1,46 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "masa", 
+    "longitud", 
+    "capacidad", 
+    "tiempo", 
+    "peso", 
+    "metro", 
+    "litro", 
+    "gramo", 
+    "segundo", 
+    "centímetro", 
+    "milimetro", 
+    "kilometro", 
+    "mililitro", 
+    "centilitro", 
+    "múltiplos y submúltiplos del gramo", 
+    "múltiplos y submúltiplos del metro", 
+    "múltiplos y submúltiplos del litro", 
+    "múltiplos y submúltiplos del segundo", 
+    "conversión de unidades de masa", 
+    "conversión de unidades de longitud", 
+    "conversión de unidades de capacidad", 
+    "conversión de unidades de tiempo"
+  ], 
+  "descripcion": "En esta unidad podrás revisar ejemplos de objetos que medimos, con qué los medimos y las unidades de medida que normalmente ocupamos para hacerlo.",
+  "resena": "Medición de distintas cantidades y sus unidades.",
+  "titulo": "Medición", 
+  "id": "PA5_OA_MA_3UNAM_009"
+}

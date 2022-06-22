@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Tiempo, medición, decimales, parte decimal, minutos, segundos, horas, sexagesimal, medida decimal, medida sexagesimal">
+
+<head>
+
+	<title>El tiempo en decimales</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' y='0' ancho='1024' alto='568' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='REGLA' x='20' y='375' ancho='990' alto='180' dibujar-si='_READY_' despl_imagen='arr-izq' archivo='ReglaProporcion.html'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='continuar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Continuar' expresión='(cont.x,cont.y,190,46)' fijo='sí' visible='sí' color='blanco' color-int='3498db' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azul play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='nextRow()\ndoPlay(0)' dibujar-si='0'">
+   <param name="C_02" value="id='txt0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt0.val]' expresión='(txt0.x,txt0.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(0,txt0.x,txt0.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[0]' pos_mensajes='centro'">
+   <param name="C_03" value="id='txt1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt1.val]' expresión='(txt1.x,txt1.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(1,txt1.x,txt1.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[1]' pos_mensajes='centro'">
+   <param name="C_04" value="id='txt2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt2.val]' expresión='(txt2.x,txt2.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(2,txt2.x,txt2.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[2]' pos_mensajes='centro'">
+   <param name="C_05" value="id='txt3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt3.val]' expresión='(txt3.x,txt3.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(3,txt3.x,txt3.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[3]' pos_mensajes='centro'">
+   <param name="C_06" value="id='txt4' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt4.val]' expresión='(txt4.x,txt4.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(4,txt4.x,txt4.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[4]' pos_mensajes='centro'">
+   <param name="C_07" value="id='txt5' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt5.val]' expresión='(txt5.x,txt5.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(5,txt5.x,txt5.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[5]' pos_mensajes='centro'">
+   <param name="C_08" value="id='txt6' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt6.val]' expresión='(txt6.x,txt6.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(6,txt6.x,txt6.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[6]' pos_mensajes='centro'">
+   <param name="C_09" value="id='txt7' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt7.val]' expresión='(txt7.x,txt7.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(7,txt7.x,txt7.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[7]' pos_mensajes='centro'">
+   <param name="C_10" value="id='txt8' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt8.val]' expresión='(txt8.x,txt8.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(8,txt8.x,txt8.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[8]' pos_mensajes='centro'">
+   <param name="C_11" value="id='txt9' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt9.val]' expresión='(txt9.x,txt9.y,txt.w,txt.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(9,txt9.x,txt9.y,txt.w,txt.h)\ndoPlay(0)' dibujar-si='!BIEN[9]' pos_mensajes='centro'">
+   <param name="A_01" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_02" value="id='BIEN' vector='sí' evaluar='una-sola-vez' tamaño='10'">
+   <param name="A_03" value="id='ejercicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='args=&squot;1,no_lo_pela,0,h,0&squot;;REGLA.exec(&squot;setCfg&squot;,args);args=&squot;0.1,6,&squot;+(1/10)+&squot;,0.1&squot;;REGLA.exec(&squot;setPos&squot;,args);REGLA.update()'">
+   <param name="A_04" value="id='initBtns()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='txt.w=140;txt.h=rowH-4;;txt0.x=3*E2._w/8-txt.w/2;txt0.y=bColumn1.y+35;txt0.val=&squot;&squot;;;txt1.x=3*E2._w/8-txt.w/2;txt1.y=bColumn1.y+35+1*rowH;txt1.val=&squot;&squot;;;txt2.x=3*E2._w/8-txt.w/2;txt2.y=bColumn1.y+35+2*rowH;txt2.val=&squot;&squot;;;txt3.x=3*E2._w/8-txt.w/2;txt3.y=bColumn1.y+35+3*rowH;txt3.val=&squot;&squot;;;txt4.x=3*E2._w/8-txt.w/2;txt4.y=bColumn1.y+35+4*rowH;txt4.val=&squot;&squot;;;;txt5.x=7*E2._w/8-txt.w/2-10;txt5.y=bColumn1.y+35;txt5.val=&squot;&squot;;;txt6.x=7*E2._w/8-txt.w/2-10;txt6.y=bColumn1.y+35+1*rowH;txt6.val=&squot;&squot;;;txt7.x=7*E2._w/8-txt.w/2-10;txt7.y=bColumn1.y+35+2*rowH;txt7.val=&squot;&squot;;;txt8.x=7*E2._w/8-txt.w/2-10;txt8.y=bColumn1.y+35+3*rowH;txt8.val=&squot;&squot;;;txt9.x=7*E2._w/8-txt.w/2-10;txt9.y=bColumn1.y+35+4*rowH;txt9.val=&squot;&squot;'">
+   <param name="A_05" value="id='verificar()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='tmpVal=_Eval_(&squot;txt&squot;+whichKey+&squot;.val&squot;);;BIEN[whichKey]=(tmpVal==((whichKey+1)*6))'">
+   <param name="A_06" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_07" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_08" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_09" value="id='showKeyboard(val,x,y,w,h)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='varOpenKeyboard=&squot;txt&squot;+val+&squot;.val&squot;;whichKey=val;teclado.S=_Eval_(varOpenKeyboard);;TCL.update();TCL.set(&squot;S&squot;,teclado.S);TCL.update();TCL.exec(&squot;cfgDisplay&squot;,x+&squot;,&squot;+y+&squot;,&squot;+w+&squot;,&squot;+h);TCL.update();TCL.exec(&squot;setParams&squot;,&squot;20,1,0&squot;);TCL.exec(&squot;setParams&squot;,&squot;5,4,0&squot;);TCL.update();showShadeCover();'">
+   <param name="A_10" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='hideShadeCover()' hacer='tmpStr=varOpenKeyboard+&squot;:=&squot;+Teclado.S;_Eval_(tmpStr);tmpStr=varOpenKeyboard+&squot;:=&squot;+&squot;_Num_(_NumToStr_(&squot;+varOpenKeyboard+&squot;,4))&squot;;_Eval_(tmpStr);;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0;;verificar();;_Trace_(&squot;hola&squot;)'">
+   <param name="A_11" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora la parte decimal en las medidas de tiempo.&squot;' hacer='bColumn1.w=E2._w/2-30;bColumn1.h=250;bColumn1.x=20;bColumn1.y=115;;bColumn1T.w=bColumn1.w/2-1;bColumn1T.h=30;bColumn1T.x=bColumn1.x;bColumn1T.y=bColumn1.y;bColumn1T.R=211/255;bColumn1T.G=84 /255;bColumn1T.B=0;;bColumn2.w=E2._w/2-30;bColumn2.h=250;bColumn2.x=E2._w-bColumn2.w-20;bColumn2.y=115;;bColumn2T.w=bColumn2.w/2-1;bColumn2T.h=30;bColumn2T.x=bColumn2.x;bColumn2T.y=bColumn2.y;bColumn2T.R=211/255;bColumn2T.G=84 /255;bColumn2T.B=0;;rowH=43;;initBtns()'">
+   <param name="A_12" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_13" value="id='animar' evento='sí' condición='(anim)&&(0)' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='34495e' expresión='[17,59]' texto='Utiliza la regleta para llenar la tabla con el valor en minutos de los décimos de hora correspondientes. Arrastra el círculo que está en los décimos al valor que necesites.\n' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='E2._w-40'">
+   <param name="G_03" value="espacio='E2' tipo='macro' expresión='macros/borde.txt' nombre='bColumn1' info='_READY_'">
+   <param name="G_04" value="espacio='E2' tipo='macro' expresión='macros/borde.txt' familia='s' s.intervalo='[0,1]' s.pasos='1' posini='[s*(2+bColumn1T.w),0]' nombre='bColumn1T' info='_READY_'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='ecf0f1' expresión='[E2._w/8,bColumn1.y+17,0,0]' texto='Horas' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='ecf0f1' expresión='[3*E2._w/8,bColumn1.y+17,0,0]' texto='Minutos' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2._w/8,bColumn1.y+55+s*rowH,0,0]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='[(s+1)/10]' fuente='SansSerif,PLAIN,20' decimales='1' fijo='no' info='_READY_'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='3498db' expresión='[3*E2._w/8-60,bColumn1.y+35+s*rowH]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36\b{\*\mjaformula{\fraction{\num 60}{\den 10}}}\fs40\b0\u215 {\*\mjaformula{\expr s+1}}={\*\mjaformula{\expr 6*(s+1)}}}' fuente='SansSerif,BOLD,18' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(E2._w/4+5,bColumn1.y+76+s*rowH,0.5,0.3)' familia='s' s.intervalo='[0,3]' s.pasos='3' archivo='images/linea_amarilla.png' info='_READY_'">
+   <param name="G_10" value="espacio='E2' tipo='macro' expresión='macros/borde.txt' nombre='bColumn2' info='_READY_'">
+   <param name="G_11" value="espacio='E2' tipo='macro' expresión='macros/borde.txt' familia='s' s.intervalo='[0,1]' s.pasos='1' posini='[s*(2+bColumn1T.w),0]' nombre='bColumn2T' info='_READY_'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='ecf0f1' expresión='[5*E2._w/8,bColumn1.y+17,0,0]' texto='Horas' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='ecf0f1' expresión='[7*E2._w/8,bColumn1.y+17,0,0]' texto='Minutos' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' expresión='[5*E2._w/8,bColumn2.y+55+(s-5)*rowH,0,0]' familia='s' s.intervalo='[5,9]' s.pasos='4' texto='[(s+1)/10]' fuente='SansSerif,PLAIN,20' decimales='1' fijo='sí' info='_READY_'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='3498db' expresión='[7*E2._w/8-60,bColumn2.y+35+(s-5)*rowH]' familia='s' s.intervalo='[5,8]' s.pasos='3' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs36\b{\*\mjaformula{\fraction{\num 60}{\den 10}}}\fs40\b0\u215 {\*\mjaformula{\expr s+1}}={\*\mjaformula{\expr 6*(s+1)}}}' fuente='SansSerif,BOLD,18' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='3498db' expresión='[7*E2._w/8,bColumn2.y+55+4*rowH,0,0]' texto='60' fuente='SansSerif,PLAIN,20' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(3*E2._w/4-5,bColumn2.y+76+(s-5)*rowH,0.5,0.3)' familia='s' s.intervalo='[5,8]' s.pasos='3' archivo='images/linea_amarilla.png' info='_READY_'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='0' expresión='[E2._w/4,bColumn1.y+40+(2-withSeconds)*72,0,0]' texto='[_TR_] hora[(_TR_==1)?&squot;&squot;:&squot;s&squot;]' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_19" value="espacio='E2' tipo='texto' color='3498db' dibujar-si='0' expresión='[3*E2._w/4-50,bColumn1.y+40+(2-withSeconds)*72,0,0]' texto='[theTime]' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='0&withSeconds' expresión='[E2._w/4,bColumn1.y+40+2*72,0,0]' texto='[resParcial]' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_21" value="espacio='E2' tipo='texto' color='3498db' dibujar-si='0&withSeconds' expresión='[3*E2._w/4-50,bColumn1.y+40+2*72,0,0]' texto='[resParcialConv]' fuente='SansSerif,PLAIN,22' decimales='4' fijo='no' info='_READY_'">
+   <param name="G_22" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(E2._w/4+5+ent(s/5)*(E2._w/2-10),bColumn1.y+54+(s%5)*rowH,0.8,0.8)' familia='s' s.intervalo='[0,9]' s.pasos='9' archivo='images/igual_chico.png' info='_READY_'">
+   <param name="G_23" value="espacio='E2' tipo='imagen' dibujar-si='BIEN[s]' coord_abs='sí' expresión='(E2._w/4+5+ent(s/5)*(E2._w/2-10)+218,bColumn1.y+54+(s%5)*rowH,0.8,0.8)' familia='s' s.intervalo='[0,9]' s.pasos='9' archivo='images/icon_ok.png'">
+   <param name="G_24" value="espacio='E2' tipo='imagen' dibujar-si='(!BIEN[s])&&(_Eval_(&squot;txt&squot;+s+&squot;.val&squot;)!=&squot;&squot;)' coord_abs='sí' expresión='(E2._w/4+5+ent(s/5)*(E2._w/2-10)+218,bColumn1.y+54+(s%5)*rowH,0.8,0.8)' familia='s' s.intervalo='[0,9]' s.pasos='9' archivo='images/icon_wrong.png'">
+   <param name="G_25" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[0,0]' texto='[_CR_] [_C_] [_TR_] [_T_] [_CRT_] [_TRT_] [_CT_] | [_TT_] ' fijo='sí'">
+   <param name="Animación" value="pausa='pause' controles='no' auto='sí' hacer='aux=((_READY_)&&(!anim))?ejercicio():0;' mientras='(!_READY_)'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;B=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png'
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,B,A)' ancho='0'
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2'
+
+</script>
+
+</body>
+
+</html>

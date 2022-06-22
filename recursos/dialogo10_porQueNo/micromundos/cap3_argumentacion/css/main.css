@@ -1,0 +1,272 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+img{
+}
+
+p, div, ol > li {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+.divPestanyas{
+    width: 600px;
+    height: auto;
+    position: relative;
+    margin: 0px 22px;
+    padding-top: 15px !important;
+    text-align: left;
+    vertical-align: middle;
+}
+.divPestanyas > .pestanya{
+    width: auto;
+    height: 32px;
+    display: inline-block;
+    border-top-right-radius: 10px;
+    padding: 8px 10px 5px 10px;
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #929292;
+    color: #fff;
+}
+.divPestanyas > .pestanya.e-selected[data-id='presentacion'],
+.divPestanyas > .pestanya:hover[data-id='presentacion'],
+.divPestanyas > .pestanya:active[data-id='presentacion']{
+    background-color: #83dcf2;
+    color: #000;
+}
+.divPestanyas > .pestanya.e-selected[data-id='postura'],
+.divPestanyas > .pestanya:hover[data-id='postura'],
+.divPestanyas > .pestanya:active[data-id='postura']{
+    background-color: #cea8f6;
+    color: #000;
+}
+.divPestanyas > .pestanya.e-selected[data-id='enlace'],
+.divPestanyas > .pestanya:hover[data-id='enlace'],
+.divPestanyas > .pestanya:active[data-id='enlace']{
+    background-color: #f28398;
+    color: #000;
+}
+.divPestanyas > .pestanya.e-selected[data-id='argumentos'],
+.divPestanyas > .pestanya:hover[data-id='argumentos'],
+.divPestanyas > .pestanya:active[data-id='argumentos']{
+    background-color: #92ebc4;
+    color: #000;
+}
+.divPestanyas > .pestanya.e-selected[data-id='conclusion'],
+.divPestanyas > .pestanya:hover[data-id='conclusion'],
+.divPestanyas > .pestanya:active[data-id='conclusion']{
+    background-color: #fbd759;
+    color: #000;
+}
+
+.contenido{
+    position: relative;
+    width: 560px;
+    height: 440px;
+    margin: 0px 22px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f8eedd;
+    /*border: 2px solid #9d9b98;
+    box-shadow: -3px 3px 0 #d3c0a1;*/
+}
+
+.divParrafo{
+    width: 96%;
+    min-height: 140px;
+    height: auto;
+    margin: .6%;
+    padding: 10px;
+    overflow: hidden;
+}
+.divParrafo.e-final{
+    height: 408px;
+    overflow: scroll;
+}
+.divParrafo.presentacion{
+    /*background-color: rgba(176,233,247,0.7);*/
+}
+.divParrafo.postura{
+    /*background-color: rgba(206,168,246,0.6);*/
+}
+.divParrafo.enlace{
+    /*background-color: rgba(242,131,152,0.6);*/
+}
+.divParrafo.argumentos{
+    /*background-color: rgba(146,235,196,0.6);*/
+}
+.divParrafo.conclusion{
+    /*background-color: rgba(251,215,89,0.6);*/
+}
+
+
+.divParrafo > h1,
+.divOpciones > h1{
+    margin-top: 0px;
+    font-size: 26px;
+    /*font-weight: bold;*/
+}
+
+.divParrafo > .parrafo{
+    height: auto;
+}
+
+.divParrafo > .parrafo > span {
+    font-size: 25px;
+    line-height: 26px;
+}
+
+.divParrafo.presentacion.e-navegando > .parrafo > span[data-id="presentacion"],
+.divParrafo.presentacion.e-navegando > .parrafo > span[data-id="presentacion_2"],
+.divParrafo.presentacion.e-navegando > .parrafo > span[data-id="porque"]{
+    font-weight: bold;
+    background-color: #83dcf2;
+}
+.divParrafo.postura.e-navegando > .parrafo > span[data-id="postura"]{
+    font-weight: bold;
+    background-color: #cea8f6;
+}
+.divParrafo.enlace.e-navegando > .parrafo > span[data-id="enlace"]{
+    font-weight: bold;
+    background-color: #f28398;
+}
+.divParrafo.argumentos.e-navegando > .parrafo > span[data-id="argumentos"]{
+    font-weight: bold;
+    background-color: #92ebc4;
+}
+.divParrafo.conclusion.e-navegando > .parrafo > span[data-id="frase_conclusion"],
+.divParrafo.conclusion.e-navegando > .parrafo > span[data-id="conclusion"]{
+    font-weight: bold;
+    background-color: #fbd759;
+}
+
+span.e-resaltado{
+    font-weight: bold;
+}
+
+span.e-blue{
+    color: #0099cc;
+    font-weight: bold;
+}
+
+.divOpciones{
+    margin-top: 20px;
+}
+.divOpciones > opciones{
+    width: 100%;
+}
+.divOpciones > .opciones > div.opcion{
+    font-size: 23px;
+    line-height: 23px;
+    padding: 8px;
+    margin: 5px;
+    background-color: rgba(255,255,255,.8);
+    min-height: 40px;
+}
+.divOpciones > .opciones > div.opcion.e-active{
+    cursor: pointer;
+}
+div.divOpciones.presentacion > .opciones > div.opcion.e-selected{
+    background-color: #83dcf2;
+}
+div.divOpciones.enlace > .opciones > div.opcion.e-selected{
+    background-color: #f28398;
+}
+div.divOpciones.argumentos > .opciones > div.opcion.e-selected{
+    background-color: #92ebc4;
+}
+
+
+.divOpciones > .opciones > div.opcion:hover,
+.divOpciones > .opciones > div.opcion:active{
+    background-color: rgba(255,255,255,1);
+}
+
+
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+.e-oculto {
+	display: none;
+	opacity: 0;
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

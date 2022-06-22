@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/custom/02_expl_ejer00.css" type="text/css">
+
+   <script type="text/javascript" src='lib/custom/jquery-2.2.0.min.js'></script>
+   <script type="text/javascript" >
+      $(function(){
+    
+         var message ='';
+         var updateDisplay = function(strOper,nTerms,n,k,moreHelp){
+            var tableH = $('<table>');
+            var htmlSuce = $('<div>' ); 
+
+            var init = n;
+            var oper = (strOper=='+')?'+':'*';
+            htmlSuce.append($('<span>',{'class':'termino',html:init})); 
+            
+            for (var i = 1; i < nTerms; i++) {
+               toOper = init+oper+k;
+               init = eval(toOper);
+               htmlSuce.append($('<span>',{'class':'termino',html:init})); 
+            };
+            
+            
+            htmlSuce = $('span.termino',htmlSuce);
+            var kHtml = strOper+''+k;
+            
+            var tr1 = $('<tr>').appendTo(tableH);
+            var tr2 = $('<tr>').appendTo(tableH);
+            var tr3 = $('<tr>').appendTo(tableH);
+            var length = htmlSuce.length -1;
+            
+            console.log("Ayuda es : ", moreHelp);
+            htmlSuce.each(function(idx,element){
+               $('<td>',{html : element.outerHTML}).appendTo(tr1);
+               var td2 = $('<td>', {'class':'marca'}).appendTo(tr2);
+               $('<td>').appendTo(tr3);
+               
+               if(idx > 0){
+                  td2.addClass('izquierda');
+               }
+               if(idx < length){
+                  td2.addClass('derecha');
+                  $('<td>').appendTo(tr1);
+                  $('<td>').appendTo(tr2);
+
+                  $('<td>',{html : (moreHelp)?kHtml:'?','class':'fact'}).appendTo(tr3);
+               }
+            });
+            tr3.addClass('factor-suma')
+            tr2.addClass('flechas');
+
+            var contM = $('<div>');
+
+            contM.append(tableH);
+
+            //contM.append($('<div>',{html:message}));
+            
+            var container = $('#activity-container');
+            container.html('');
+            container.append(contM);
+         }
+
+         function setMessage(msg){
+            message = msg;
+         }
+
+         function receiveMessage(event){  
+           // data = {name : '<functionToExec>',type : '<exec|update>', value: '<coma.separated-params>'}
+           if(!event.data || !event.data.type )
+              return;
+           if(event.data.type = 'exec'){
+             switch (event.data.name){
+               case 'updateDisplay' :
+                  var val2 = event.data.value.replace(/~/gi,'"');
+                  
+                  var val = val2.split(',');
+                  console.log("Recibimos : ",event.data,val2,val);
+                  var operStr=val[0];
+                  var nTerms = parseInt(val[1]);
+                  var n = parseFloat(val[2]);
+                  var k = parseFloat(val[3]);
+                  var moreHelp = (val[4]+'').match(/^(true|yes|t|y|1)$/i);
+                  updateDisplay(operStr,nTerms,n,k,moreHelp);
+                 break;
+                 case 'setMessage':
+                  var val = event.data.value;
+                  val = val.split(',');
+                  setMessage(val[0]);
+                 break;
+               default:
+                 console.log('No se reconoce el mensaje : ',event.data);
+             }
+           }
+         } 
+         window.updateSecesionDisplay = updateDisplay;
+
+         setMessage('La regularidad la obtienes restando elementos<br> consecutivos de la sucesión');
+         updateDisplay('×',5,4,2,true);
+         window.addEventListener("message", receiveMessage, false);
+});   
+   </script>
+
+</head>
+
+<body style="margin:0px; padding:0px">
+
+   <div id='activity-container'>
+   </div>
+
+</body>
+
+</html>

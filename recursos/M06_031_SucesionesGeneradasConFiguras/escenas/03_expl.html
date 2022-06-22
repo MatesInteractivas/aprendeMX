@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, sucesión, figura geométrica, patrón, regla de formación, progresión geométrica, progresión aritmética, sucesión geométrica, sucesión aritmética.">
+
+<head>
+	<title>Sucesiones generadas con figuras</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/Descartes_spinner.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/03_expl.css" type="text/css">
+
+   <script type='text/javascript' src='lib/custom/bloquea_keyboard.js'></script>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' ancho='1024' alto='568' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='INST' x='INST.x' y='INST.y' ancho='985' alto='250' dibujar-si='!HELP.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='MASK' dibujar-si='HELP.visible' fijo='sí' despl_imagen='arr-izq' fondo='8834495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='HTMLIFrame' id='DISP_IF' x='DISP_IF.x' y='DISP_IF.y' ancho='985' alto='222' despl_imagen='arr-izq' fondo='grisClaro' archivo='suce_aux/sucesion_fig_2.html'">
+   <param name="E_05" value="tipo='R2' id='HELP' x='HELP.x' y='HELP.y' ancho='985' alto='250' dibujar-si='HELP.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='CLOSE_BTN' x='CLOSE_BTN.x' y='CLOSE_BTN.y' ancho='56' alto='56' dibujar-si='(HELP.visible)&(!correcto)' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnDoN' tipo='numérico' interfaz='botón' región='interior' espacio='INST' expresión='(btnDoN.x,btnDoN.y,btnDoN.w,btnDoN.h)' fijo='no' visible='no' fuente puntos='20' imagen='vacio.gif' acción='calcular' parámetro='showFraccEditor(0)\ndoPlay(0)' dibujar-si='0'">
+   <param name="C_02" value="id='btnDoK' tipo='numérico' interfaz='botón' región='interior' espacio='INST' expresión='(btnDoK.x,btnDoK.y,btnDoK.w,btnDoK.h)' fijo='no' visible='no' fuente puntos='20' imagen='vacio.gif' acción='calcular' parámetro='showFraccEditor(1)\ndoPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnDoK2' tipo='numérico' interfaz='botón' región='interior' espacio='INST' expresión='(btnDoK2.x,btnDoK2.y,btnDoK2.w,btnDoK2.h)' fijo='no' visible='no' fuente puntos='20' imagen='vacio.gif' acción='calcular' parámetro='showFraccEditor(2)\ndoPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnDoPPP' tipo='numérico' interfaz='botón' región='interior' espacio='INST' nombre='N' expresión='(btnDoN.x,btnDoN.y,btnDoN.w,btnDoN.h)' fijo='no' visible='no' color='blanco' color-int='blanco' fuente puntos='20' imagen='_STYLE_|class=btnAprendeMx verdeClaro like|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='initEjemplo();doPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_05" value="id='btnCloseH' tipo='numérico' interfaz='botón' región='interior' espacio='CLOSE_BTN' expresión='(btnCloseH.x,btnCloseH.y,btnCloseH.w,btnCloseH.h)' fijo='sí' visible='sí' imagen='images/btn_close.png' acción='calcular' parámetro='closeHELP()' pos_mensajes='centro'">
+   <param name="C_06" value="id='answer.oper' tipo='numérico' interfaz='menú' región='interior' espacio='INST' expresión='(192,71,160,40)' valor='answer.oper' fijo='sí' visible='no' opciones=' [-1],suma[0],multiplica[1]' acción='calcular' parámetro='doLimpiar=1' pos_mensajes='centro' cID='txtType'">
+   <param name="C_07" value="id='answer.k_horizontal' tipo='numérico' región='interior' espacio='INST' nombre='_nada_' expresión='(370,71,130,40)' valor='answer.k_horizontal' incr='1' min='minK' max='maxK' discreto='sí' decimales='maxDecimals' fijo='no' visible='sí' acción='calcular' pos_mensajes='centro' cID='sucesion.k'">
+   <param name="C_08" value="id='answer.n_horizontal' tipo='numérico' región='interior' espacio='INST' nombre='_nada_' expresión='(441,119,130,40)' valor='answer.n_horizontal' incr='1' min='minN' max='maxN' discreto='sí' decimales='maxDecimals' fijo='no' visible='sí' acción='calcular' pos_mensajes='centro' cID='sucesion.n'">
+   <param name="C_09" value="id='answer.tipo' tipo='numérico' interfaz='menú' región='interior' espacio='INST' expresión='(225,191,180,40)' valor='answer.tipo' fijo='sí' visible='no' opciones=' [-1],Aritmética[0],Geométrica[1]' pos_mensajes='centro' cID='menuTipoS'">
+   <param name="C_10" value="id='btnVerif' tipo='numérico' interfaz='botón' región='interior' espacio='INST' nombre='        Verificar' expresión='(btnVerif.x,btnVerif.y,btnVerif.w,btnVerif.h)' fijo='no' visible='no' color='blanco' color-int='blanco' negrita='sí' fuente puntos='22' imagen='_STYLE_|class=btnAprendeMx lavanda verify|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' opciones='Puntos,Polígonos,Espiral 1,Espiral 2,Triángulos,Líneas,Triángulos 2,Flor' acción='calcular' parámetro='verificar()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_11" value="id='btnOtro' tipo='numérico' interfaz='botón' región='interior' espacio='HELP' nombre='        Otra sucesión' expresión='(btnOtro.x,btnOtro.y,btnOtro.w,btnOtro.h)' fijo='no' visible='no' color='blanco' color-int='blanco' negrita='sí' fuente puntos='22' imagen='_STYLE_|class=btnAprendeMx verdeClaro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' opciones='Puntos,Polígonos,Espiral 1,Espiral 2,Triángulos,Líneas,Triángulos 2,Flor' acción='calcular' parámetro='initPregunta()\ndoPlay(0)' dibujar-si='(correcto)' pos_mensajes='centro'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_04" value="id='sucesion' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';'">
+   <param name="A_05" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_06" value="id='getValueAtIdx(idx)' algoritmo='sí' expresión='nTerm' algoritmo='sí' Local='nTerm' hacer='nTerm=(txtOper==1)?(sucesion.n*(sucesion.k^idx)):(sucesion.n+(sucesion.k*idx))'">
+   <param name="A_07" value="id='initEsp()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='DISP.x=(E2._w - DISP._w)/2;DISP.y= 56;;DISP_IF.x=(E2._w - DISP_IF._w)/2;DISP_IF.y=56;;DISP2.x=DISP.x;DISP2.y=DISP.y+DISP._h-DISP2._h;;INST.x=(E2._w - INST._w)/2;INST.y=(E2._h - INST._h-20);;EDIT.x=E2._w-EDIT._w-INST.x;EDIT.y=(E2._h - EDIT._h-INST.x);;;HELP.x=(E2._w-HELP._w)/2;HELP.y=(E2._h-HELP._h-20)'">
+   <param name="A_08" value="id='initBtn()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='btnVerif.w=160;btnVerif.h=45;btnVerif.x=(INST._w - btnVerif.w-20);btnVerif.y=(INST._h - btnVerif.h-20);;txtType.w=100;txtType.h=40;txtType.x=120;txtType.y=10;;;btnCloseH.w=56;btnCloseH.h=56;btnCloseH.x=0;btnCloseH.y=0;;CLOSE_BTN.x=HELP.x+(HELP._w-btnCloseH.w);CLOSE_BTN.y=HELP.y;;btnOtro.w=200;btnOtro.h=46;btnOtro.x=(HELP._w-btnOtro.w)/2;btnOtro.y=(HELP._h-btnOtro.h-20)'">
+   <param name="A_09" value="id='initPregunta()' algoritmo='sí' expresión='x' algoritmo='sí' Local='k,n,maxD' hacer='answer.oper=-1;answer.tipo=-1;answer.k_horizontal=0;answer.n_horizontal=0;;verificado=0;correcto=0;HELP.visible=0;shadeCover=0;;txtOper=(rnd>0.5);idxFig=ent(rnd*8);calcCotasN_K();;n=ent(minN+rnd*(maxN-minN));k=ent(minK+rnd*(maxK-minK));;initEjercicio(n,k);;limpiar=1'">
+   <param name="A_10" value="id='initEjercicio(n,k)' algoritmo='sí' expresión='x' algoritmo='sí' Local='i' hacer='EDITOR.edit=-1;primeraVez=1;sucesion.nTerms=5;maxWTerm=150;strOper=&squot;×&squot;;maxDecimals=3;cambiaFigura(idxFig);setSucesion(n,k);updateTxt()'">
+   <param name="A_11" value="id='updateMaxWTerm()' algoritmo='sí' expresión='0' algoritmo='sí' Local='idx,maxW,nTerm' inicio='ff=&squot;SansSerif&squot;;fw=&squot;BOLD&squot;;fz=30;idx=0;maxW=0;' hacer='nTerm=getValueAtIdx(idx)+&squot;&squot;;;wTerm=_AnchoDeCadena_(nTerm,ff,fw,fz);maxW=max(maxW,wTerm);maxW=max(maxW,150);maxWTerm=maxW;;idx=idx+1' mientras='idx<sucesion.nTerms'">
+   <param name="A_12" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_13" value="id='setSucesion(n,k)' algoritmo='sí' expresión='x' algoritmo='sí' Local='parm' inicio='parm=&squot;&squot;' hacer='sucesion.k=k;sucesion.n=n;;updateSucesion();updateTxt();updateSucesionIFrame(sucesion[0,0],sucesion[1,0],sucesion[2,0],sucesion[3,0],sucesion[4,0],sucesion[5,0])'">
+   <param name="A_14" value="id='updateSucesion()' algoritmo='sí' expresión='nextX' algoritmo='sí' Local='idx,nextX,_cont,nextX,maxW,isImp,isFrac,int,nume,deno,_kn,_kd,_nn,_nd,_newInt' inicio='idx=0;nextX=0;comaW=_AnchoDeCadena_(&squot;,&squot;,&squot;SansSerif&squot;,&squot;BOLD&squot;,30)+10;updateMaxWTerm()' hacer='nTerm=getValueAtIdx(idx);;sucesion[idx,0]=nTerm;sucesion[idx,1]=0;sucesion[idx,2]=1;;nTerm=nTerm+&squot;&squot;;maxW=_AnchoDeCadena_(nTerm,&squot;SansSerif&squot;,&squot;BOLD&squot;,30);;_tw=maxWTerm;sucesion[idx,4]=nextX+(_tw-maxW)/2;sucesion[idx,3]=maxW;;;idx=idx+1;_cont=(idx<sucesion.nTerms);;nextX=nextX+_tw;sucesion.w=nextX;;tt=(_cont)?0:updateLinesK()' mientras='_cont'">
+   <param name="A_15" value="id='updateSucesionIFrame(t0,t1,t2,t3,t4,t5)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parm=t0+&squot;,&squot;+t1+&squot;,&squot;+t2+&squot;,&squot;+t3+&squot;,&squot;+t4+&squot;,&squot;+t5;_Trace_(&squot;Mandamos parametros &squot;+parm);DISP_IF.exec(&squot;setTerminos&squot;,parm);DISP_IF.exec(&squot;limpiar&squot;,&squot;&squot;);DISP_IF.update()'">
+   <param name="A_16" value="id='cambiaFigura(idxFigP)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='idxFig=idxFigP;calcCotasN_K();DISP_IF.exec(&squot;setFigura&squot;,idxFigP);DISP_IF.exec(&squot;limpiar&squot;,&squot;&squot;);DISP_IF.update()'">
+   <param name="A_17" value="id='calcCotasN_K()' algoritmo='sí' expresión='x' algoritmo='sí' Local='n,k,MIN_VERTICES' hacer='MIN_VERTICES=(idxFig==0)?1:MIN_VERTICES;MIN_VERTICES=(idxFig==1)?3:MIN_VERTICES;MIN_VERTICES=(idxFig==2)?2:MIN_VERTICES;MIN_VERTICES=(idxFig==3)?1:MIN_VERTICES;MIN_VERTICES=(idxFig==4)?2:MIN_VERTICES;MIN_VERTICES=(idxFig==5)?1:MIN_VERTICES;MIN_VERTICES=(idxFig==6)?4:MIN_VERTICES;MIN_VERTICES=(idxFig==7)?1:MIN_VERTICES;;;minN=MIN_VERTICES;maxN=(txtOper)?4:20;;minK=(txtOper)?2:1;maxK=(txtOper)?4:10;;;k=max(minK,min(maxK,sucesion.k));n=max(minN,min(maxN,sucesion.n));;setSucesion(n,k)'">
+   <param name="A_18" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_19" value="id='updateTxt()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='tt=(txtType==0)?updateTxt00():0;doLimpiar=1'">
+   <param name="A_20" value="id='updateTxt00()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='texto.x=150-0*220;texto.y=70;;btnDoK.x=texto.x+120;btnDoK.y=texto.y-3;;btnDoN.x=texto.x+285;btnDoN.y=texto.y+50;;dibujaTerminoTxt(0);espFraccionesN=getSpacesForFrac(term.int,term.n,term.d);btnDoN.w=resW+0;;dibujaTerminoTxt(1);espFraccionesK=getSpacesForFrac(term.int,term.n,term.d);btnDoK.w=resW+0;;;btnDoK2.x=-10;btnDoK2.y=-10;btnDoK2.w=10;btnDoK2.h=10'">
+   <param name="A_21" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_22" value="id='appFiguresReady()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='cambiaFigura(idxFig);calcCotasN_K();setSucesion(sucesion.n,sucesion.k);DISP_IFM.visible=1;_Trace_(&squot;Ya lo pudimos cargar : !!!!!&squot;+DISP_IFM.visible)'">
+   <param name="A_23" value="id='verificar()' algoritmo='sí' expresión='x' algoritmo='sí' Local='k,n,oper,type,t0,t1,t2,t3,t4,t5,chkSuceDis' hacer='verificado=1;HELP.visible=1;shadeCover=1;retro.msgType=0;;k=sucesion.k;n=sucesion.n;oper=txtOper;;sucesion.k=answer.k_horizontal;sucesion.n=answer.n_horizontal;txtOper=answer.oper;type=answer.tipo;;malTipoSuce=(txtOper!=type);;correcto=(k==answer.k_horizontal);correcto=(n==answer.n_horizontal)&correcto;correcto=(oper==answer.oper)&correcto;correcto=(!malTipoSuce)&correcto;;;malMenus=(answer.oper<0)?1:0;malMenus=(answer.tipo<0)?2:malMenus;;retro.msgType=(!correcto)?0:retro.msgType;retro.msgType=(malTipoSuce)?3:retro.msgType;retro.msgType=(malMenus==2)?2:retro.msgType;retro.msgType=(malMenus==1)?1:retro.msgType;retro.msgType=(correcto)?-1:retro.msgType;;t0=getValueAtIdx(0);t1=getValueAtIdx(1);t2=getValueAtIdx(2);t3=getValueAtIdx(3);t4=getValueAtIdx(4);t5=getValueAtIdx(5);;chkSuceDis=(retro.msgType==0);tt=(chkSuceDis)?updateSucesionIFrame(t0,t1,t2,t3,t4,t5):0;;;;sucesion.k=k;sucesion.n=n;txtOper=oper;;;corrT=&squot;! Correcto !&squot;;corrT.x=_AnchoDeCadena_(corrT,&squot;SansSerif&squot;,&squot;BOLD&squot;,80);corrT.x=(HELP._w-corrT.x)/2;corrT.y=(HELP._h-66-60)/2;'">
+   <param name="A_24" value="id='closeHELP()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='updateSucesionIFrame(sucesion[0,0],sucesion[1,0],sucesion[2,0],sucesion[3,0],sucesion[4,0],sucesion[5,0]);HELP.visible=0;shadeCover=0'">
+   <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Ponte a prueba construyendo la consigna que describe la sucesión.&squot;' hacer='initEsp();initBtn();EDIT.visible=1;initPregunta();;ô=|editCtr.x,editCtr.y,editCtr.w,editCtr.h|'">
+   <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_27" value="id='updateCtrInTexts' evento='sí' condición='doLimpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_28" value="id='updateCtrInTexts' evento='sí' condición='doLimpiar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_29" value="id='updateCtrInTexts' evento='sí' condición='doLimpiar' acción='calcular' parámetro='doLimpiar=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_30" value="id='showShadeCover' evento='sí' condición='shadeCover' acción='abrir URL' parámetro='javascript:showMask();void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_31" value="id='hideShadeCover' evento='sí' condición='!shadeCover' acción='abrir URL' parámetro='javascript:hideMask();void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_03" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_04" value="espacio='INST' tipo='texto' fondo='sí' color='1abc9c' expresión='[0,20]' texto='Modifica la sucesión cambiando el valor de los pulsadores y los menús.' fuente='SansSerif,ITALIC,22' fijo='sí'">
+   <param name="G_05" value="espacio='INST' tipo='texto' fondo='sí' expresión='[0,190]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs58 Es de progresi\u243 n : {\*\component\NumCtrl menuTipoS}\fs60}' fijo='sí'">
+   <param name="G_06" value="espacio='INST' tipo='texto' fondo='sí' dibujar-si='(txtType==0)' expresión='[texto.x,texto.y]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs60 Se {\*\component\NumCtrl txtType}{\*\mjaformula{\expr (answer.oper==1)?&squot;por&squot;:&squot;&squot;\decimals 2\fixed0}}{\*\component\NumCtrl sucesion.k}{\*\mjaformula{\expr (answer.oper==0)?&squot;a&squot;:&squot;&squot;\decimals 2\fixed0}}cada t\u233 rmino\fs16  \fs60 y el primero\fs16\par \par  \fs60                            es igual a {\*\component\NumCtrl sucesion.n}.}' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_07" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_08" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_09" value="espacio='HELP' tipo='texto' color='e74c3c' dibujar-si='(retro.msgType==0)' expresión='[150,80]' texto='La consigna que construiste no genera la sucesión \n                                 que se te pide.' fuente='SansSerif,BOLD,30' fijo='sí'">
+   <param name="G_10" value="espacio='HELP' tipo='texto' color='e74c3c' dibujar-si='retro.msgType==1' expresión='[220,115]' texto='Debes seleccionar una operación.' fuente='SansSerif,BOLD,30' fijo='sí'">
+   <param name="G_11" value="espacio='HELP' tipo='texto' color='e74c3c' dibujar-si='retro.msgType==2' expresión='[220,100]' texto='Debes seleccionar de que tipo es la sucesión' fuente='SansSerif,BOLD,30' fijo='sí'">
+   <param name="G_12" value="espacio='HELP' tipo='texto' color='e74c3c' dibujar-si='(retro.msgType==3)' expresión='[150,80]' texto='Recuerda que la operación de suma o multiplicación\n    determina el tipo de progresión de la sucesión.' fuente='SansSerif,BOLD,30' fijo='sí'">
+   <param name="G_13" value="espacio='HELP' tipo='texto' color='2ecc71' dibujar-si='(correcto)' expresión='[corrT.x,corrT.y]' texto='[corrT]' fuente='SansSerif,BOLD,80' fijo='sí'">
+   <param name="Animación" value="pausa='10' controles='no' auto='no' mientras='0'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

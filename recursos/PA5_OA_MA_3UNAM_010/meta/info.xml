@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_010"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Gráfica de barras
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad podrás ver ejemplos de distintas gráficas y aprenderás cómo se construyen las gráficas de barras.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, estadística, Manejo de la información, Análisis y representación de datos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Gráficas, gráfica de barras, tablas, organización de información, comparación de información, interpretación de la información, construcción de gráficas, lectura de datos, representación de datos
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

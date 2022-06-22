@@ -1,0 +1,80 @@
+body{
+	overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 630px;
+	height: 520px;
+	border: 0px solid #111111;
+	overflow: hidden;
+	/*background-image: url('../img/fondo.png');*/
+}
+
+#texto{
+	margin: 0px 280px 0px 10px;
+}
+#rubros{
+	position: absolute;
+	left: 360px;
+	top: 10px;
+	width: 260px;
+	height: 100%;
+	border-left: 4px dotted #f2bc02;
+}
+
+.header{
+	width: 96%;
+	height: auto;
+	font-weight: bold;
+	text-align: center !important;
+	margin: 0px 2%;
+	padding: 4px 10px;
+}
+.header.importante{
+	background-color: #ffd200;
+}
+.header.menos-importante{
+	background-color: #c7c7c7;
+}
+.header.duda{
+	background-color: #83def1;
+}
+
+.rubro{
+	min-height: 40px;
+	height: auto;
+	width: auto;
+	margin-top: 10px;
+}
+#importantes.rubro{
+	font-weight: bold;
+}
+#no_importantes.rubro{
+	min-height: 0px;
+}
+
+div > p, .header {
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	letter-spacing: 0.7px;
+	text-align:left;
+}
+
+
+li{
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	text-indent: 0px;
+	padding-left: 0px;
+	text-align: left;
+}
+
+.e-oculto{
+	opacity: 0;
+	visibility: hidden;
+}
+
+

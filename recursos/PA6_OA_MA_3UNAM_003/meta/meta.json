@@ -1,0 +1,29 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Mapa", 
+    "distancia", 
+    "escala", 
+    "medición", 
+    "proporcionalidad"
+  ], 
+  "descripcion": "Con este recurso aprenderás a utilizar las escalas de los mapas para calcular la distancia real entre dos lugares marcados en un mapa.",
+  "resena": "Determinación de la distancia entre lugares en un mapa a partir de una escala dada.",
+  "titulo": "Distancia en mapas: La escala", 
+  "id": "PA6_OA_MA_3UNAM_003"
+}

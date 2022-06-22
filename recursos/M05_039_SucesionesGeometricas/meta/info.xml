@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_039"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Sucesiones geométricas
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Cuánto vale el octavo término de esta sucesión: 2, 4, 8, 16, 32, ...? ¿Y el 16 avo término? ¿Y el 64 avo? Esta es una sucesión geométrica y difiere de las sucesiones aritméticas en que crecen mucho más rápido que aquellas. En esta unidad conocerás las características de las sucesiones geométricas y a comprender la inmensidad de los valores que pueden alcanzar en unos cuantos términos.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, Sentido numérico y pensamiento algebraico, Números y sistemas de numeración
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, sucesión, progresión, geométrico, término, factor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

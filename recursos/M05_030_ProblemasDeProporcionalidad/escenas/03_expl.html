@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, proporcionalidad, razón, razones, equivalencia, proporción, razón de proporcionalidad, tantos de tantos, problema, fracción, a razón de, tantos por tantos, tanto para cada, regla de tres">
+
+<head>
+
+	<title>Problemas de proporcionalidad </title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='ES' dibujar-si='0' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='(R(_nubes),V(_nubes),A(_nubes),00)' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='menu' tipo='numérico' interfaz='menú' región='interior' espacio='ES' expresión='(40,100,160,46)' decimales='0' fijo='sí' visible='no' opciones='Ejemplo,de,menu,con,opciones' acción='calcular' parámetro='Inicio()'">
+   <param name="C_02" value="id='bOtro' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro problema' expresión='((E2._w-250)/2,E2._h-56,250,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='otroProblema()' pos_mensajes='centro'">
+   <param name="C_03" value="id='bVerif' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Verificar' expresión='(2*(E2._w-2*250)/3+250,E2._h-56,250,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='verify()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_04" value="id='btn1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[Ntacos]' expresión='(620,148,68,40)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=1\nteclado.S=Ntacos\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,620+&squot;,&squot;+148+&squot;,&squot;+68+&squot;,&squot;+40)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()\n' pos_mensajes='centro'">
+   <param name="C_05" value="id='btn2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[Ngalletas]' expresión='(620,148+dyp,68,40)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=2\nteclado.S=Ngalletas\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,620+&squot;,&squot;+(148+dyp)+&squot;,&squot;+68+&squot;,&squot;+40)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()\n' pos_mensajes='centro'">
+   <param name="C_06" value="id='btn3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[Nlitros]' expresión='(620,148+2*dyp,68,40)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='btn=3\nteclado.S=Nlitros\nTCL.set(&squot;S&squot;,teclado.S)\nTCL.exec(&squot;cfgDisplay&squot;,620+&squot;,&squot;+(148+2*dyp)+&squot;,&squot;+68+&squot;,&squot;+40)\nTCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;)\nTCL.update()\nshowShadeCover()\n' pos_mensajes='centro'">
+   <param name="C_07" value="id='bVer1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(370,yp1-10,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda calcular|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='ver0=1-ver0' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='bVer2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(370,yp1-10+1*dyp,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda calcular|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='ver1=1-ver1' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_09" value="id='bVer2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(370,yp1-10+2*dyp,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda calcular|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='ver2=1-ver2' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='5' expresión='_bermellon=0;col[0,0]=&squot;bermellon-alizarion e74c3c&squot;;col[0,1]=(14*16+ 7)/255;col[0,2]=( 4*16+12)/255;col[0,3]=( 3*16+12)/255;col[0,4]=1 ;_naranja=1;col[1,0]=&squot;naranja-carrot e67e22&squot;;col[1,1]=(14*16+ 6)/255;col[1,2]=( 7*16+14)/255;col[1,3]=( 2*16+ 2)/255;col[1,4]=1;_amarillo=2;col[2,0]=&squot;amarillo-sunflower f1c40f&squot;;col[2,1]=(15*16+ 1)/255;col[2,2]=(12*16+ 4)/255;col[2,3]=( 0*16+15)/255;col[2,4]=1;_verdeclaro=3;col[3,0]=&squot;verde claro-emerald 2ecc71&squot;;col[3,1]=( 2*16+14)/255;col[3,2]=(12*16+12)/255;col[3,3]=( 7*16+ 1)/255;col[3,4]=1;_verdeagua=4;col[4,0]=&squot;verde agua-turquoise 1abc9c&squot;;col[4,1]=( 1*16+10)/255;col[4,2]=(11*16+12)/255;col[4,3]=( 9*16+12)/255;col[4,4]=1;_azul=5;col[5,0]=&squot;azul-Peter_river 3498db&squot;;col[5,1]=( 3*16+ 4)/255;col[5,2]=( 9*16+ 8)/255;col[5,3]=(13*16+11)/255;col[5,4]=1.00;_lavanda=6;col[6,0]=&squot;lavanda-amethyst 9b59b6&squot;;col[6,1]=( 9*16+11)/255;col[6,2]=( 5*16+ 9)/255;col[6,3]=(11*16+ 6)/255;col[6,4]=1;_azuloscuro=7;col[7,0]=&squot;azul oscuro-wet_asphalt 34495e&squot;;col[7,1]=( 3*16+ 4)/255;col[7,2]=( 4*16+ 9)/255;col[7,3]=( 5*16+14)/255;col[7,4]=1;_concreto=8;col[8,0]=&squot;cian-concrete 95a5a6&squot;;col[8,1]=( 9*16+ 5)/255;col[8,2]=(10*16+ 5)/255;col[8,3]=(10*16+ 6)/255;col[8,4]=1;_nubes=9;col[9,0]=&squot;blanco-clouds ecf0f1&squot;;col[9,1]=(14*16+12)/255;col[9,2]=(15*16+ 0)/255;col[9,3]=(15*16+ 1)/255;col[9,4]=1'">
+   <param name="A_02" value="id='R(c)' expresión='col[c,1]'">
+   <param name="A_03" value="id='V(c)' expresión='col[c,2]'">
+   <param name="A_04" value="id='A(c)' expresión='col[c,3]'">
+   <param name="A_05" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_06" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_07" value="id='_Cx_(str,w,type,sz)' expresión='(w-7.5-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz))/2'">
+   <param name="A_08" value="id='_Rx_(str,w,type,sz)' expresión='w-15-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz)'">
+   <param name="A_09" value="id='_Nx_(val,d,w,sz)' expresión='_Cx_(_NumToStr_(val,d),w,&squot;PLAIN&squot;,sz)'">
+   <param name="A_10" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_11" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_12" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_13" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_14" value="id='showKeyboard(val,x,y,w,h)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='varOpenKeyboard=val;teclado.S=val;;TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;setParams&squot;,&squot;5,4,1&squot;);TCL.exec(&squot;cfgDisplay&squot;,x+&squot;,&squot;+y+&squot;,&squot;+w+&squot;,&squot;+h);TCL.update();showShadeCover();'">
+   <param name="A_15" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' Local='value' hacer='value=(Teclado.S!=&squot;&squot;)?_Num_(_NumACadena_(_Eval_(Teclado.S),2)):&squot;&squot;;Ntacos=(btn==1)?value:Ntacos;Ngalletas=(btn==2)?value:Ngalletas;Nlitros=(btn==3)?value:Nlitros;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0;hideShadeCover();'">
+   <param name="A_16" value="id='Lbl' vector='sí' evaluar='una-sola-vez' expresión='Lbl[0]=&squot;Tacos&squot;;Lbl[1]=&squot;Galletas&squot;;Lbl[2]=&squot;Litros&squot;'">
+   <param name="A_17" value="id='lbl' vector='sí' evaluar='una-sola-vez' expresión='lbl[0]=&squot;tacos&squot;;lbl[1]=&squot;galletas&squot;;lbl[2]=&squot;litros&squot;'">
+   <param name="A_18" value="id='X' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_19" value="id='RES' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_20" value="id='BIEN' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_21" value="id='num' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_22" value="id='den' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_23" value="id='unum' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_24" value="id='uden' vector='sí' evaluar='una-sola-vez'">
+   <param name="A_25" value="id='Mul(n,m)' expresión='(m*ent(n/m+0.000001)==n)'">
+   <param name="A_26" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' Local='k,mcm,minab,mustDivide' inicio='minab=min(a,b);mcm=a*b;k=2' hacer='mustDivide=Mul(a,k)&Mul(b,k);mcm=(mustDivide)?ent(mcm/k+0.000001):mcm;a=(mustDivide)?ent(a/k+0.000001):a;b=(mustDivide)?ent(b/k+0.000001):b;k=(mustDivide)?k:k+1;' mientras='k<=minab'">
+   <param name="A_27" value="id='McD(a,b)' algoritmo='sí' expresión='ent((a*b)/McM(a,b)+0.000001)' algoritmo='sí' hacer=';'">
+   <param name="A_28" value="id='Definiciones()' algoritmo='sí' algoritmo='sí' hacer='xp0=35;dxp0=80;xp1=xp0+dxp0;xp2=xp1+46;dxp2=50;xp3=xp2+dxp2;dxp3=80;;xp4=580;dxp4=180;xp5=370;dxp5=dx4;;xp6=340;;yp1=172+18;yp2=162+15;dyp=2*46+35-6;dytxt=10;;xin=680;yin=68;;'">
+   <param name="A_29" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='otroProblema();'">
+   <param name="A_30" value="id='otroProblema()' algoritmo='sí' algoritmo='sí' Local='k,i' inicio='k=5;i=3' hacer='Ntacos=&squot;&squot;;Ngalletas=&squot;&squot;;Nlitros=&squot;&squot;;X[0]=&squot;?&squot;;X[1]=&squot;?&squot;;X[2]=&squot;?&squot;;RES[0]=&squot;&squot;;RES[1]=&squot;&squot;;RES[2]=&squot;&squot;;BIEN[0]=0;BIEN[1]=0;BIEN[2]=0;ntacos=1+ent(rnd*k);dtacos=1+ent(rnd*k);ngalletas=1+ent(rnd*k);dgalletas=1+ent(rnd*k);nlitros=1+ent(rnd*k);dlitros=1+ent(rnd*k);incinv=McM(McM(dlitros,dgalletas),dtacos);invitados=incinv*(4+ent(rnd*3));untacos=&squot;&squot;;udtacos=&squot;&squot;;ungalletas=&squot;&squot;;udgalletas=&squot;&squot;;unlitros=&squot;&squot;;udlitros=&squot;&squot;;' mientras='(invitados>99)|(ntacos<=dtacos)|(ngalletas<=dgalletas)|(nlitros>=dlitros)|((nlitros==ngalletas)&(dlitros==dgalletas))|(McD(ntacos,dtacos)>1)|(McD(ngalletas,dgalletas)>1)|(McD(nlitros,dlitros)>1)|((ntacos==ngalletas)&(dtacos==dgalletas))|((nlitros==ngalletas)&(dlitros==dgalletas))|((ntacos==nlitros)&(dtacos==dlitros))|(den[0]+den[1]==2)'">
+   <param name="A_31" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='untacos=ntacos;udtacos=dtacos;ungalletas=ngalletas;udgalletas=dgalletas;unlitros=nlitros;udlitros=dlitros;;num[0]=ntacos;den[0]=dtacos;num[1]=ngalletas;den[1]=dgalletas;num[2]=nlitros;den[2]=dlitros;;unum[0]=untacos;uden[0]=udtacos;unum[1]=ungalletas;uden[1]=udgalletas;unum[2]=unlitros;uden[2]=udlitros;;X[0]=((unum[0]==num[0])&(uden[0]==den[0]))?invitados*num[0]/den[0]:&squot;?&squot;;X[1]=((unum[1]==num[1])&(uden[1]==den[1]))?invitados*num[1]/den[1]:&squot;?&squot;;X[2]=((unum[2]==num[2])&(uden[2]==den[2]))?invitados*num[2]/den[2]:&squot;?&squot;;;RES[0]=Ntacos;RES[1]=Ngalletas;RES[2]=Nlitros;;BIEN[0]=(RES[0]==ent(num[0]*invitados/den[0]+0.000001));BIEN[1]=(RES[1]==ent(num[1]*invitados/den[1]+0.000001));BIEN[2]=(RES[2]==ent(num[2]*invitados/den[2]+0.000001));;todoBien=((RES[0]!=&squot;&squot;)&BIEN[0])&((RES[1]!=&squot;&squot;)&BIEN[1])&((RES[2]!=&squot;&squot;)&BIEN[2]);algoMal=((RES[0]!=&squot;&squot;)&!BIEN[0])|((RES[1]!=&squot;&squot;)&!BIEN[1])|((RES[2]!=&squot;&squot;)&!BIEN[2]);pensando=((RES[0]==&squot;&squot;)|(RES[1]==&squot;&squot;)|(RES[2]==&squot;&squot;))&!algoMal;;;;;'">
+   <param name="A_32" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;¡Ponte a prueba! ¿Puedes resolver los siguientes problemas de proporcionalidad?&squot;' hacer='Definiciones();Inicio();'">
+   <param name="A_33" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+   <param name="G_01" value="espacio='ES' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[20,60]' texto='Ejemplo de texto' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='Texto'">
+   <param name="G_02" value="espacio='ES' tipo='texto' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' expresión='[60,180]' texto='Traza algunos segmentos rectos entre los vértices para partir el polígono en triángulos. ' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Instrucciones'">
+   <param name="G_03" value="espacio='ES' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[60+_Cx_(retro,400,&squot;BOLD&squot;,20),260]' texto='[retro]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='500' info='Retroalmentación.'">
+   <param name="G_04" value="espacio='ES' tipo='arco' color='negro' centro='(-5+s*10/9,-1.5)' radio='0.5' fin='360' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí' relleno='(R(s),V(s),A(s),00)'">
+   <param name="G_05" value="espacio='ES' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[_Cx_(&squot;¡Bien hecho!&squot;,E2._w,&squot;BOLD&squot;,30),420]' texto='¡Bien hecho!' fuente='SansSerif,BOLD,30' fijo='sí' info='Felicitación'">
+   <param name="G_06" value="espacio='E2' tipo='texto' fondo='sí' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='El título'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[20,yin+23,984,20]' texto='En la fiesta que Lupe y Juan planean, quieren ofrecer a los invitados tacos a razón de [num[0]] por [(den[0]>1)?&squot;cada &squot;+den[0]+&squot; personas&squot;:&squot;persona&squot;], galletas a razón de [num[1]] por [(den[1]>1)?&squot;cada &squot;+den[1]+&squot; personas&squot;:&squot;persona&squot;] y agua de tamarindo a razón de [(num[2]>1)?&squot;&squot;+num[2]+&squot; litros&squot;:&squot;un litro&squot;] para cada [den[2]] personas. Responde a las siguientes preguntas suponiendo que en la fiesta se esperan [invitados] invitados.' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' ancho='900' info='Texto del pulsador vertical'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[xp5,yp2+s*dyp-8,dxp4,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='¿[(s!=1)?&squot;Cuántos&squot;:&squot;Cuántas&squot;] [lbl[s]] hacen falta? ' fuente='SansSerif,PLAIN,20' fijo='no' info='Texto del pulsador vertical'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[xp5,yp2+s*dyp+34,dxp4,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[X[s]] : [invitados] : : [num[s]] : [den[s]]' fuente='SansSerif,PLAIN,20' fijo='no' info='Texto del pulsador vertical'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[xp5,yp2+s*dyp+60,dxp4,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[num[s]*invitados/den[s]] es a [invitados] como  [num[s]] es a [den[s]].' fuente='SansSerif,BOLD,20' fijo='no' info='Texto del pulsador vertical'">
+   <param name="G_11" value="espacio='E2' tipo='segmento' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' coord_abs='sí' expresión='(xp4+dxp4/3-3,yp2+s*dyp+43)(xp4+2*dxp4/4,yp2+s*dyp+43)' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[xp4+dxp4/3,yp2+s*dyp+44-12,dxp4/6,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[invitados]' fuente='SansSerif,PLAIN,20' fijo='no' info='Texto del pulsador vertical'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[xp4+dxp4/3,yp2+s*dyp+44+15,dxp4/6,0]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='[den[s]]' fuente='SansSerif,PLAIN,20' fijo='no' info='Texto del pulsador vertical'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[xp4+dxp4/3+dxp4/6,yp2+s*dyp+44-12]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto=' × [num[s]] [((num[s]==unum[s])&(den[s]==uden[s]))?&squot;= &squot;+(invitados/den[s])+&squot; × &squot;+num[s]+&squot; = &squot;+(invitados*num[s]/den[s]):&squot;= &squot;+(invitados*num[s]/den[s])]' fuente='SansSerif,PLAIN,20' fijo='no'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' expresión='[750,yp2+s*dyp-21]' familia='s' s.intervalo='[0,2]' s.pasos='2' texto='Hacen falta [invitados*num[s]/den[s]] [lbl[s]].' fuente='SansSerif,BOLD,20' fijo='no'">
+   <param name="G_16" value="espacio='E2' tipo='imagen' dibujar-si='(RES[s]!=&squot;&squot;)&BIEN[s]' coord_abs='sí' expresión='(715,yp2-15+s*dyp,1,1)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/icon_ok.png'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' dibujar-si='(RES[s]!=&squot;&squot;)&!BIEN[s]' coord_abs='sí' expresión='(715,yp2-15+s*dyp,1,1)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/icon_wrong.png'">
+   <param name="G_18" value="espacio='E2' tipo='imagen' dibujar-si='pensando' coord_abs='sí' expresión='(240,350,0.45,0.45)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/boy_06_mirror_2x.png'">
+   <param name="G_19" value="espacio='E2' tipo='imagen' dibujar-si='pensando' coord_abs='sí' expresión='(100,350,0.55,0.55)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/girl_06_mirror_2x.png'">
+   <param name="G_20" value="espacio='E2' tipo='imagen' dibujar-si='todoBien' coord_abs='sí' expresión='(240,350,0.45,0.45)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/boy_02_mirror_2x.png'">
+   <param name="G_21" value="espacio='E2' tipo='imagen' dibujar-si='todoBien' coord_abs='sí' expresión='(100,350,0.55,0.55)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/girl_02_mirror_2x.png'">
+   <param name="G_22" value="espacio='E2' tipo='imagen' dibujar-si='algoMal' coord_abs='sí' expresión='(240,350,0.45,0.45)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/boy_03_mirror_2x.png'">
+   <param name="G_23" value="espacio='E2' tipo='imagen' dibujar-si='algoMal' coord_abs='sí' expresión='(100,350,0.55,0.55)' familia='s' s.intervalo='[0,2]' s.pasos='2' archivo='images/personajes/girl_03_mirror_2x.png'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

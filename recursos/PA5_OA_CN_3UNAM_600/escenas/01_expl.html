@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Sistema Solar, eclipse lunar, eclipse solar, eclipses lunares, eclipses solares, colinearidad, colineal, colineales, Luna, Sol, Tierra, eje, plano, rotación, traslación">
+
+<head>
+	<title>Los eclipses solares y lunares</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='P1' x='20' y='56' ancho='984' alto='436' dibujar-si='StepEscena==0' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='P1_1' x='20' y='140' ancho='487' alto='352' dibujar-si='StepEscena==0' fijo='sí' O.x='-447' O.y='75' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='P1_2' x='517' y='110' ancho='487' alto='382' dibujar-si='StepEscena==0' fijo='sí' escala='33' O.y='40' despl_imagen='arr-izq' fondo='34495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='P1InfoSp' x='(1024-985)/2' y='(585-565)/2' ancho='985' alto='565' dibujar-si='P1ShwInfo' fijo='sí' imagen='images/tablet_back.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(editing>=0)&&(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='AntBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(20,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=0\nP1Init()\nP2Init()\nStepEscena=StepEscena-1' dibujar-si='((StepEscena>0)&(!ShwInfo))&0'">
+   <param name="C_02" value="id='SigBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(E2._w-260,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=0\nP1Init()\nP2Init()\nStepEscena=StepEscena+1' dibujar-si='((StepEscena<1)&(!ShwInfo))&0' pos_mensajes='centro'">
+   <param name="C_03" value="id='P1ReInitBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1_1' nombre='          Reiniciar' expresión='(0,P1_1._h-102,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='P1Init()' dibujar-si='(t>0)&(!animand)' pos_mensajes='centro'">
+   <param name="C_04" value="id='P1AnimarBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1_1' nombre='          Animar' expresión='(0,P1_1._h-46,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda on_off|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=1' dibujar-si='!animand' activo-si='(P1TipoEcMn!=0)&(!P1CicloCompleto)' pos_mensajes='centro'">
+   <param name="C_05" value="id='P1PausarBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1_1' nombre='          Pausar' expresión='(0,P1_1._h-46,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda pause|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=0' dibujar-si='animand' activo-si='P1TipoEcMn!=0' pos_mensajes='centro'">
+   <param name="C_06" value="id='P1TipoEcMn' tipo='numérico' interfaz='menú' región='interior' espacio='P1_1' nombre='_nada_' expresión='(P1_1._w-240,P1_1._h-46,240,46)' decimales='0' fijo='sí' visible='no' opciones='Tipo de eclipse,lunar,solar' acción='calcular' parámetro='animand=0\nP1Init()' pos_mensajes='centro'">
+   <param name="C_07" value="id='P1InfoBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Información' expresión='(E2._w/2-120,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=0\nP1ShwInfo=1' dibujar-si='StepEscena==0' pos_mensajes='centro'">
+   <param name="C_08" value="id='P1InfoAntBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1InfoSp' nombre='          Anterior' expresión='(RetroMargIzq,RetroMargInf-46,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='P1StepInfo=P1StepInfo-1' dibujar-si='P1StepInfo>0' pos_mensajes='centro'">
+   <param name="C_09" value="id='P1InfoSigBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1InfoSp' nombre='          Siguiente' expresión='(RetroMargDer-240,RetroMargInf-46,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='P1StepInfo=P1StepInfo+1' dibujar-si='P1StepInfo<1' pos_mensajes='centro'">
+   <param name="C_10" value="id='ClsP1InfoBt' tipo='numérico' interfaz='botón' región='interior' espacio='P1InfoSp' nombre='_nada_' expresión='(P1InfoSp._w-160,75,46,46)' fijo='sí' visible='sí' imagen='images/icon_wrong.png' acción='calcular' parámetro='P1ShwInfo=0' pos_mensajes='centro'">
+   <param name="C_11" value="id='P2InfoBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Información' expresión='(E2._w/2-120,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fff0f8ff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=0\nP2ShwInfo=1' dibujar-si='(StepEscena==1)&0' pos_mensajes='centro'">
+   <param name="A_01" value="id='titulo' vector='sí' evaluar='una-sola-vez' expresión='titulo[0]=&squot;Explora un modelo simplista de Sol, Tierra y Luna ...&squot;;titulo[1]=&squot;Explora un modelo más realista que el anterior ...&squot;'">
+   <param name="A_02" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_03" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_04" value="id='CT' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='40' filas='19' expresión='ix=0;name=1;middle=2;last=3;value=4;ctx=5;cty=6;ctw=7;cth=8;active=9;interfaz=10;drawIf=11;selected=12;ctrType=13;tclType=14;incr=15;decimals=16;limInf=17;limSup=18;;SPINNER=0;TEXTFIELD=1;MENU=2;;TXT=0;NUM=1'">
+   <param name="A_05" value="id='CP(a,k)' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,pad' inicio='pad=0' hacer='res=(a==ctx)?CT[k,ctx]+pad:res;res=(a==cty)?CT[k,cty]+pad:res;res=(a==ctw)?CT[k,ctw]-pad:res;res=(a==cth)?CT[k,cth]-pad:res;res=(a==active)?CT[k,active]:res;res=(a==interfaz)?CT[k,interfaz]:res;res=(a==drawIf)?CT[k,drawIf]:res;res=(a==selected)?CT[k,selected]:res;'">
+   <param name="A_06" value="id='Str(s)' algoritmo='sí' expresión='str' algoritmo='sí' inicio='str=&squot;&squot;' hacer='str=(CT[s,interfaz]==TEXTFIELD)?clipText(&squot;&squot;+CT[s,name]+CT[s,middle]+CT[s,value]+CT[s,last],CT[s,ctw]-8):str;str=(CT[s,interfaz]==SPINNER)?_NumToStr_(CT[s,value],CT[s,decimals]):str'">
+   <param name="A_07" value="id='editB(k)' algoritmo='sí' algoritmo='sí' hacer='editing=k;teclado.S=CT[k,value];TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,(CP(ctx,k))+&squot;,&squot;+(CP(cty,k))+&squot;,&squot;+CP(ctw,k)+&squot;,&squot;+CP(cth,k));TCL.exec(&squot;setParams&squot;,CT[k,tclType]);TCL.update();;parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_08" value="id='incr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]+CT[k,incr];CT[k,value]=(CT[k,limSup]!=&squot;&squot;)?min(tmpValue,CT[k,limSup]):tmpValue'">
+   <param name="A_09" value="id='decr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]-CT[k,incr];CT[k,value]=(CT[k,limInf]!=&squot;&squot;)?max(tmpValue,CT[k,limInf]):tmpValue'">
+   <param name="A_10" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='aux=(editing>=0)?processKB():0' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update();;editing=-1;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;'">
+   <param name="A_11" value="id='processKB()' algoritmo='sí' algoritmo='sí' hacer='CT[editing,value]=(Teclado.Sa!=Teclado.S)?Teclado.S:CT[editing,value];CT[editing,value]=(CT[editing,ctrType]==NUM)?_Eval_(CT[editing,value]+&squot;&squot;):CT[editing,value];Teclado.Sa=Teclado.S'">
+   <param name="A_12" value="id='set(btn,prop,val)' algoritmo='sí' algoritmo='sí' hacer='CT[btn,prop]=val'">
+   <param name="A_13" value="id='clipText(str,w)' algoritmo='sí' expresión='newStr' algoritmo='sí' Local='i,newStr,tmpStr,condTam' inicio='newStr=str;str.length=_length_(str);minwidth=min(str.length,ent(w/wStr.w));maxwidth=min(str.length,ent(w/iStr.w));i=minwidth;' hacer='tmpStr=_substring_(str,0,i);condTam=(_AnchoDeCadena_(tmpStr,&squot;SansSerif&squot;,&squot;BOLD&squot;,22)<w);newStr=(condTam)?tmpStr:newStr;i=(condTam)?(i+1):(maxwidth+1)' mientras='i<=maxwidth'">
+   <param name="A_14" value="id='drawIfCtr(ctr)' algoritmo='sí' expresión='draw' algoritmo='sí' Local='draw' inicio='draw=0' hacer='draw=(CP(interfaz,ctr)==TEXTFIELD)?CP(drawIf,ctr)&&CP(active,ctr):draw;draw=(CP(interfaz,ctr)==MENU)?CP(drawIf,ctr):draw;draw=(CP(interfaz,ctr)==SPINNER)?CP(drawIf,ctr):draw'">
+   <param name="A_15" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_16" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_17" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_18" value="id='Print(a)' algoritmo='sí' algoritmo='sí' Local='str' hacer='str=&squot;&squot;+a;_Print_(str)'">
+   <param name="A_19" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='iStr.w=_AnchoDeCadena_(&squot;i&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);wStr.w=_AnchoDeCadena_(&squot;w&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);;TCL.x=E2._w-TCL._w-5;TCL.y=E2._h-TCL._h-5;rd=0;brdw=4;editing=-1;Teclado.S=&squot;&squot;;Teclado.Sa=&squot;&squot;;texth=27;textp=10;;spnw=40;spnh=46;mnh=46;;AutorControls();;TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_20" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_21" value="id='Inicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='respDada=ent(rnd*5.99999);CT[respDada,value]=&squot;&squot;+(respDada+1);;pau=1;P1Init();P2Init();;RetroMargIzq=129;RetroMargDer=853;RetroMargSup=90;RetroMargInf=474;RetroWidth=RetroMargDer-RetroMargIzq;;P1panel.x=517-20;P1panel.y=336-56;P1panel.w=487;P1panel.h=156-1;;P2panel.x=517-20;P2panel.y=170-56;P2panel.w=487-1;P2panel.h=322-2'">
+   <param name="A_22" value="id='Calculos()' algoritmo='sí' expresión='0' algoritmo='sí'">
+   <param name="A_23" value="id='AutorControls()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='NCT=0'">
+   <param name="A_24" value="id='P1Init()' algoritmo='sí' algoritmo='sí' hacer='P1CicloCompleto=0;P1AngLuna=0;pau=65;meslunar=29;t=0;tr=0;tdesp=180;tdespluna=(P1TipoEcMn==1)?180:((P1TipoEcMn==2)?0:-1);dt=0.5;P1f=72/73;P1Tr=3.5;P1Lr=1;P1Lt=(365+meslunar)/meslunar;P1Tx=P1Tr*cos((tdesp+t)*pi/180);P1Ty=P1Tr*sin((tdesp+t)*pi/180);P1Lx=P1Tx+P1Lr*cos((tdespluna+P1Lt*t)*pi/180);P1Ly=P1Ty+P1Lr*sin((tdespluna+P1Lt*t)*pi/180);P1ianim=0;'">
+   <param name="A_25" value="id='P1Anim()' algoritmo='sí' algoritmo='sí' hacer='t=tr*P1f;P1ianim=(tr%meslunar==0)?P1ianim+1:P1ianim;P1ianim=(P1ianim==50)?0:P1ianim;P1Tx=P1Tr*cos((tdesp+t)*pi/180);P1Ty=P1Tr*sin((tdesp+t)*pi/180);P1Lx=P1Tx+P1Lr*cos((tdespluna+P1Lt*t)*pi/180);P1Ly=P1Ty+P1Lr*sin((tdespluna+P1Lt*t)*pi/180);P1OffGiroLuna=(P1Lx>0)?180:0;P1AngLuna=(P1Lx!=0)?P1OffGiroLuna+180*atan(P1Ly/P1Lx)/pi:10000;tr=(P1ianim==0)?tr+dt:tr;P1CicloCompleto=(tr>364.5)?1:0;animand=(tr>364.5)?0:animand'">
+   <param name="A_26" value="id='P2Init()' algoritmo='sí' algoritmo='sí' hacer='P2_2.rot.y=-15;P2_2.rot.z=180;pau=1;planoang=30;meslunar=29;t=0;tr=0;tdesp=180;tdespluna=(P2TipoEcMn==1)?180:((P2TipoEcMn==2)?0:-1);P2angluna=(tdespluna+P2Lt*t)*pi/180;dt=0.5;P2f=72/73;P2Tr=3.5;P2Lr=1;P2zmax=P2Lr*sin(planoang);P2Lt=(365+meslunar)/meslunar;P2Tx=P2Tr*cos((tdesp+t)*pi/180);P2Ty=P2Tr*sin((tdesp+t)*pi/180);P2Lx=P2Tx+P2Lr*cos(P2angluna);P2Ly=P2Ty+P2Lr*sin(P2angluna);P2ianim=0'">
+   <param name="A_27" value="id='P2Anim()' algoritmo='sí' algoritmo='sí' hacer='t=tr*P2f;P2ianim=(tr%meslunar==0)?P2ianim+1:P2ianim;P2ianim=(P2ianim==100)?0:P2ianim;P2Tx=P2Tr*cos((tdesp+t)*pi/180);P2Ty=P2Tr*sin((tdesp+t)*pi/180);P2angluna=(tdespluna+P2Lt*t)*pi/180;P2Lx=P2Tx+P2Lr*cos(P2angluna);P2Ly=P2Ty+P2Lr*sin(P2angluna);P2Lz=-P2zmax*sin((tdespluna+P2Lt*t)*pi/180);tr=(P2ianim==0)?tr+dt:tr;animand=(tr>6934.5)?0:animand'">
+   <param name="A_28" value="id='P2AnimManual()' algoritmo='sí' algoritmo='sí' hacer='t=tr*P2f;P2ianim=(tr%meslunar==0)?P2ianim+1:P2ianim;P2ianim=(P2ianim==20-19)?0:P2ianim;P2Tx=P2Tr*cos((tdesp+t)*pi/180);P2Ty=P2Tr*sin((tdesp+t)*pi/180);P2angluna=(tdespluna+P2Lt*t)*pi/180;P2Lx=P2Tx+P2Lr*cos(P2angluna);P2Ly=P2Ty+P2Lr*sin(P2angluna);P2Lz=-P2zmax*sin((tdespluna+P2Lt*t)*pi/180);tr=(P2ianim==0)?tr+manudt:tr;animand=(tr>6934.5)?0:animand'">
+   <param name="A_29" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='Init();Inicio()'">
+   <param name="A_30" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='aux=(editing>=0)?processKB():0' hacer='Calculos();'">
+   <param name="A_31" value="id='play' evento='sí' condición='playAudio' acción='reproducir' parámetro='audio/02_expl.mp3' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_32" value="id='P1inianim' evento='sí' condición='(P1TiempoMn!=0)&(aux!=0)' acción='calcular' parámetro='animand=1' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_33" value="id='P1detanim' evento='sí' condición='(P1TiempoMn==0)|(aux==0)' acción='calcular' parámetro='animand=0' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_34" value="id='animev' evento='sí' condición='animand==1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_35" value="id='P2ReInit' evento='sí' condición='(!animand)&(P2StepAnim==3)' acción='calcular' parámetro='P2Init()' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_36" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' color='34495e' expresión='[60,16]' texto='[titulo[StepEscena]]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='34495e' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==TEXTFIELD)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='34495e' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='negro' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;BOLD&squot;,22))/2,CT[s,cty]+(CT[s,cth]-24)/2]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,BOLD,22' fijo='sí' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_05" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_06" value="espacio='P1' tipo='texto' color='34495e' expresión='[0,0]' texto='Veamos una simulación de la rotación de la Tierra alrededor del Sol y de la Luna alrededor de la Tierra. Recuerda que los eclipses solares ocurren cuando la Luna queda entre el Sol y la Tierra, y los lunares cuando la Tierra queda entre el Sol y la Luna.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='980'">
+   <param name="G_07" value="espacio='P1_1' tipo='texto' color='1abc9c' expresión='[0,0]' texto='Con el menú elige el tipo de eclipse. Para ver la simulación pulsa el botón “Animar” y al pulsar el botón “Pausar” puedes detenerla. Con el botón “Reiniciar” puedes empezar de nuevo. Al final, pulsa el botón “Información”.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='483'">
+   <param name="G_08" value="espacio='P1InfoSp' tipo='texto' color='34495e' dibujar-si='P1StepInfo==0' expresión='[RetroMargIzq,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs44 Seg\u250 n la simulaci\u243 n, deber\u237 a haber un eclipse solar aproximadamente\par cada {\*\mjaformula{\expr meslunar\decimals 0\fixed1}} \u243  {\*\mjaformula{\expr meslunar+1\decimals 0\fixed1}} d\u237 as. Pero esto no es cierto, los eclipses no ocurren tan\par f\u225 cilmente.}' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_09" value="espacio='P1_2' tipo='texto' color='ecf0f1' dibujar-si='animand&(P1ianim!=0)&(P1TipoEcMn==1)' expresión='[20,20]' texto='La Tierra se encuentra justo entre la Luna y el Sol. La Tierra produce una sombra en la Luna.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='447'">
+   <param name="G_10" value="espacio='P1InfoSp' tipo='texto' color='34495e' dibujar-si='P1StepInfo==0' expresión='[RetroMargIzq,195]' texto='Según la simulación, en lugar de lunas llenas sólo habría eclipses lunares. La Luna llena ocurre cuando la luz del Sol ilumina la Luna y la vemos casi completamente. Los eclipses ocurren cuando casi quedan alineados Sol-Tierra-Luna, pero la Tierra no cubre por completo la luz del Sol y éste ilumina la cara de la Luna. Pero si la Tierra siempre se interpusiera entre el Sol y la Luna, nunca veríamos este fenómeno.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth'">
+   <param name="G_11" value="espacio='P1' tipo='macro' dibujar-si='0' expresión='macros/borde.txt' nombre='P1panel'">
+   <param name="G_12" value="espacio='P1_2' tipo='texto' color='ecf0f1' dibujar-si='animand&(P1ianim!=0)&(P1TipoEcMn==2)' expresión='[20,20]' texto='La Luna se encuentra justo entre la Tierra y el Sol. La Luna produce una sombra en la Tierra.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='447'">
+   <param name="G_13" value="espacio='P1_2' tipo='texto' color='ecf0f1' dibujar-si='animand&(P1ianim==0)&(P1TipoEcMn==2)' expresión='[20,20]' texto='La Luna gira alrededor de la Tierra. Tarda alrededor de 28 días (un mes lunar) en que la Luna vuelva a quedar entre la Tierra y el Sol.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='447'">
+   <param name="G_14" value="espacio='P1_2' tipo='texto' color='ecf0f1' dibujar-si='animand&(P1ianim==0)&(P1TipoEcMn==1)' expresión='[20,20]' texto='La Luna gira alrededor de la Tierra. Tarda alrededor de 28 días (un mes lunar) en que la Tierra vuelva a quedar entre la Luna y el Sol.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='447'">
+   <param name="G_15" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[20,0]' texto='aux=[aux]' fijo='sí'">
+   <param name="G_16" value="espacio='P1_2' tipo='segmento' fondo='sí' color='rojo' dibujar-si='0' coord_abs='sí' expresión='(0,P1_2._h-1)(100,P1_2._h-1)' fijo='sí' tamaño='0'">
+   <param name="G_17" value="espacio='P1_2' tipo='segmento' fondo='sí' color='rojo' dibujar-si='0' coord_abs='sí' expresión='(P1_2._w-1,0)(P1_2._w-1,100)' fijo='sí' tamaño='0'">
+   <param name="G_18" value="espacio='P1_2' tipo='arco' color='rojo' radio='P1Tr' fin='360' fijo='sí' ancho='2'">
+   <param name="G_19" value="espacio='P1_2' tipo='imagen' expresión='(0,0,1,1)' archivo='images/sol.png'">
+   <param name="G_20" value="espacio='P1_2' tipo='imagen' expresión='(P1Tx,P1Ty,0.3,0.3)' archivo='images/poloNorte02.png'">
+   <param name="G_21" value="espacio='P1_2' tipo='imagen' expresión='(P1Lx,P1Ly,0.1,0.1)' archivo='images/luna02.png'">
+   <param name="G_22" value="espacio='P1_2' tipo='arco' color='59808080' dibujar-si='sqrt(P1Lx^2+P1Ly^2)>P1Tr+0.8' centro='(P1Lx,P1Ly)' radio='0.23' inicio='P1AngLuna-90' fin='P1AngLuna+90' fijo='sí' relleno='59808080' ancho='0'">
+   <param name="G_23" value="espacio='P1_1' tipo='texto' color='34495e' dibujar-si='animand' expresión='[0,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}{\colortbl\red229\green121\blue18;\red52\green73\blue94;}\f1\fs40\cf0 Tiempo: {\*\mjaformula{\expr ent(t+0.5)\decimals 0\fixed1}} d\u237 as\cf1}' fuente='SansSerif,PLAIN,20' fijo='sí'">
+   <param name="G_24" value="espacio='P1_1' tipo='texto' color='e57912' dibujar-si='animand&(P1ianim!=0)' expresión='[0,250]' texto='[(P1TipoEcMn==1)?&squot;¡Eclipse lunar!&squot;:((P1TipoEcMn==2)?&squot;¡Eclipse solar!&squot;:&squot;&squot;)]' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='483'">
+   <param name="G_25" value="espacio='P1InfoSp' tipo='texto' color='34495e' dibujar-si='P1StepInfo==1' expresión='[RetroMargIzq,90]' texto='Tampoco tendríamos el fenómeno de la Luna nueva, que sucede cuando la cara de la luna está completamente negra. En este caso, la Luna queda en alguna posición intermedia entre el Sol y la Tierra, pero no justo enmedio. De tal forma que la cara que vemos es la no iluminada de la Luna. Si la Luna siempre se interpusiera entre el Sol y la Tierra, no habrían lunas nuevas, sólo eclipses solares.\n\nAsí que existe un elemento que no estamos tomando en cuenta en este modelo.\n\nEn la siguiente sección sabremos de qué se trata.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='660'">
+   <param name="G_26" value="espacio='P1_2' tipo='punto' color='amarillo' dibujar-si='0' expresión='(0,0)' fijo='sí' tamaño='40'">
+   <param name="G_27" value="espacio='P1_2' tipo='punto' color='5757ff' dibujar-si='0' expresión='(P1Tx,P1Ty)' fijo='sí' tamaño='15'">
+   <param name="G_28" value="espacio='P1_2' tipo='punto' color='grisClaro' dibujar-si='0' expresión='(P1Lx,P1Ly)' fijo='sí' tamaño='7'">
+   <param name="G_29" value="espacio='P1_2' tipo='texto' color='blanco' dibujar-si='0' expresión='[20,0]' texto='P1CicloCompleto=[P1CicloCompleto]' fijo='sí'">
+   <param name="Animación" value="pausa='pau' controles='no' auto='no' inicio='ianim=0' hacer='bla=(StepEscena==0)?P1Anim():bla;bla=(StepEscena==1)?P2Anim():bla;ianim=ianim+1' mientras='animand'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Materia, densidad, masa, flotabilidad, principio de Arquímedes, fuerza de empuje">
+
+<head>
+	<title>¿Flotará o no?</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' y='20' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1\nanimar=0\nt=0\ntt=0' dibujar-si='fase<3'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1\nanimar=0\nt=0\ntt=0\ndy=0\ndy0=0' dibujar-si='fase>0' pos_mensajes='centro'">
+   <param name="C_03" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230-380,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='obj+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(40,180,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='obj=obj+1' dibujar-si='(obj<3)&(fase=0)' activo-si='tt=0' pos_mensajes='centro'">
+   <param name="C_06" value="id='obj-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='-' expresión='(40,290,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='obj=obj-1' dibujar-si='(obj>0)&(fase=0)' activo-si='tt=0' pos_mensajes='centro'">
+   <param name="C_07" value="id='obj2+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(860,435,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='tam=tam+1' dibujar-si='(tam<2)&(fase=1)' activo-si='tt=0' pos_mensajes='centro'">
+   <param name="C_08" value="id='obj2-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(750,435,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='tam=tam-1' dibujar-si='(tam>0)&(fase=1)' activo-si='tt=0' pos_mensajes='centro'">
+   <param name="C_09" value="id='sumergir' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Sumergir' expresión='(415,435,200,46)' fijo='sí' visible='sí' color='blanco' color-int='16a085' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=1' dibujar-si='(t=0)&((fase=0)|(fase=1))' pos_mensajes='centro'">
+   <param name="C_10" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Subir' expresión='(415,435,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2c3e50' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=0\nt=0\ntt=0\ndy=0\ndy0=0\n' dibujar-si='(tt=20)&((fase=0)|(fase=1))' pos_mensajes='centro'">
+   <param name="C_11" value="id='anima' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Animar' expresión='(615,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='16a085' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=1\nvel=200' dibujar-si='(t=0)&(fase=2)' pos_mensajes='centro'">
+   <param name="C_12" value="id='reinit2' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Reiniciar' expresión='(615,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2c3e50' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=0\nt=0\ntt=0\nllenaPos()\n' dibujar-si='(tt=20)&(fase=2)' pos_mensajes='centro'">
+   <param name="C_13" value="id='den1+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(650,130,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='den1=den1+.2' dibujar-si='(den1<den2-.2)&(fase=3)' pos_mensajes='centro'">
+   <param name="C_14" value="id='den1-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(650,220,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='den1=den1-.2' dibujar-si='(den1>.1)&(fase=3)' pos_mensajes='centro'">
+   <param name="C_15" value="id='den2+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(650,270,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='den2=den2+.2' dibujar-si='(den2<2)&(fase=3)' pos_mensajes='centro'">
+   <param name="C_16" value="id='den2-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(650,360,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='den2=den2-.2' dibujar-si='(den2>den1+.2)&(fase=3)' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;info=0;obj=0;flu=0;tam=0;vel=20;llenaPos();den1=.9;den2=1;RetroMargIzq=150;RetroMargDer=874;RetroMargSup=90;RetroMargInf=474;RetroWidth=RetroMargDer-RetroMargIzq;RetroWidthini=RetroWidth-50'">
+   <param name="A_02" value="id='denObj' vector='sí' evaluar='una-sola-vez' tamaño='15' expresión='denObj[0]=.2;denObj[1]=.9;denObj[2]=3;denObj[3]=20;denObj[5]=&squot; Corcho&squot;;denObj[6]=&squot;  Hielo&squot;;denObj[7]=&squot;Aluminio&squot;;denObj[8]=&squot;  Oro&squot;;denObj[10]=&squot;images/explora/cubo1.png&squot;;denObj[11]=&squot;images/explora/cubo2.png&squot;;denObj[12]=&squot;images/explora/cubo3.png&squot;;denObj[13]=&squot;images/explora/cubo4.png&squot;;denObj[14]=&squot;images/aprende/cubo5.png&squot;'">
+   <param name="A_03" value="id='denflu' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='denflu[0]=.7;denflu[1]=1;denflu[2]=13;denflu[5]=&squot;Alcohol, su densidad es .7&squot;;denflu[6]=&squot;Agua, su densidad es 1&squot;;denflu[7]=&squot;Mercurio, su densidad es 13&squot;'">
+   <param name="A_04" value="id='f1x' vector='sí' evaluar='una-sola-vez' tamaño='300'">
+   <param name="A_05" value="id='f1y' vector='sí' evaluar='una-sola-vez' tamaño='300'">
+   <param name="A_06" value="id='f2x' vector='sí' evaluar='una-sola-vez' tamaño='300'">
+   <param name="A_07" value="id='f2y' vector='sí' evaluar='una-sola-vez' tamaño='300'">
+   <param name="A_08" value="id='llenaPos()' algoritmo='sí' algoritmo='sí' Local='_i' inicio='_i=0' hacer='f1x[_i]=510+ent(rnd*405);f1y[_i]=160+ent(rnd*232);f2x[_i]=510+ent(rnd*408);f2y[_i]=160+ent(rnd*235);_i=_i+1' mientras='_i<250'">
+   <param name="A_09" value="id='camPos()' algoritmo='sí' algoritmo='sí' Local='_i,varT' inicio='_i=0' hacer='varT=-1+(2*ent(rnd*2));f1x[_i]=((f1x[_i]<909)&(varT=1))?f1x[_i]+6:f1x[_i];f1x[_i]=((f1x[_i]>515)&(varT=-1))?f1x[_i]-6:f1x[_i];f1y[_i]=f1y[_i]+((400-f1y[_i])*.003*tt);f2x[_i]=((f2x[_i]<913)&(varT=1))?f2x[_i]+6:f2x[_i];f2x[_i]=((f2x[_i]>513)&(varT=-1))?f2x[_i]-6:f2x[_i];f2y[_i]=f2y[_i]-((f2y[_i]-150)*.0032*tt);_i=_i+1' mientras='_i<250'">
+   <param name="A_10" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_11" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='flota();'">
+   <param name="A_12" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[60,16]' texto='Aprende cómo afecta la forma de un objeto su flotación' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[60,16]' texto='Aprende cómo es la flotación de líquidos.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[60,16]' texto='Aprende qué tanto de hunden los objetos en los líquidos.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[40,55]' texto='La flotación de un objeto depende del empuje del fluido, que es igual al peso del fluido desplazado. ¿Se\npodrá modificar el empuje, con objetos de la misma forma? A continuación se muestran objetos con la\nmisma forma, pero el de la derecha tiene mayor volumen.' fuente='SansSerif,PLAIN,20' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[40,55]' texto='Un objeto flota si su densidad es menor que la del fluido donde se coloca. Si colocamos dos\nfluidos de diferente densidad ¿alguno quedará arriba, es decir, flotará?' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[40,55]' texto='Si un objeto flota en diversos líquidos, ¿qué parte queda por encima de la superficie? ¿Será la\nmisma para líquidos de diferentes densidades?' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_07" value="espacio='E1' tipo='macro' expresión='--fase=0--'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[30,245]' texto='[denObj[5+obj]]' fuente='SansSerif,PLAIN,24' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='fase<2' coord_abs='sí' expresión='(512,490,1,1)' archivo='images/aprende/mesa.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(275,290,.78,1.1)' archivo='images/explora/contenedor.png'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(515,332,.55,.4)' archivo='images/aprende/contenedor_02.png'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(515,387,.4,.5)' archivo='images/aprende/bascula.png'">
+   <param name="G_13" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(280,175+dy0,1,1)' archivo='denObj[10+obj]'">
+   <param name="G_14" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(270,-85+dy0,1.6,1.6)' archivo='images/aprende/mano.png' rotini='90'">
+   <param name="G_15" value="espacio='E1' tipo='polígono' color='ecf0f1' dibujar-si='fase=0' coord_abs='sí' expresión='(0,0)(1024,0)(1024,107)(0,107)(0,0)' familia='s' s.intervalo='[0,1]' s.pasos='1' relleno='ecf0f1'">
+   <param name="G_16" value="espacio='E1' tipo='polígono' color='ff20303a' dibujar-si='fase=0' coord_abs='sí' expresión='(150,220)(400,220)(400,400)(150,400)(150,220)' familia='s' s.intervalo='[0,1]' s.pasos='1' relleno='78aad5ef'">
+   <param name="G_17" value="espacio='E1' tipo='polígono' color='ff20303a' dibujar-si='fase=0' coord_abs='sí' expresión='(415,350)(615,350)(615,350-t)(415,350-t)(415,350)' familia='s' s.intervalo='[0,1]' s.pasos='1' relleno='cd348eff'">
+   <param name="G_18" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(fase=0)&(tt=20)' expresión='[640,120]' texto='Como podrás notar, el agua que se\ndesplaza al introducir los diferentes\nobjetos es la misma, no importando\nel tipo de material del que este\nhecho el objeto.\n\nEntonces, ¿por qué algunos de ellos\nse hunden? Pulsa el botón\n“Información” para saber la respuesta.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_19" value="espacio='E1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(437,232,1,1)' archivo='images/aprende/boquilla.png'">
+   <param name="G_20" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[60,16]' texto='Aprende cómo afecta la densidad para la flotación de cuerpos.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_21" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[40,55]' texto='En el diagrama se muestra, cómo es el empuje cuando un objeto se sumerge en un fluido.\nA continuación pulsa el botón “Siguiente”.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_22" value="espacio='E1' tipo='macro' expresión='--fase=1--'">
+   <param name="G_23" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(175+668*s,290,.78,.9)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/explora/contenedor.png'">
+   <param name="G_24" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(175+668*s,290,.78,.9)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/explora/contenedor.png'">
+   <param name="G_25" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(410+200*s,302,.50,.4)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/aprende/contenedor_02.png'">
+   <param name="G_26" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(410+200*s,383,.30,.9)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/aprende/bascula.png'">
+   <param name="G_27" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(175+670*s,175+dy0,1+((s>0)?(.3+.3*tam):0),1+((s>0)?(.1+.1*tam):0))' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='denObj[12+2*s]'">
+   <param name="G_28" value="espacio='E1' tipo='polígono' color='ff20303a' dibujar-si='fase=1' coord_abs='sí' expresión='(50+668*s,220)(300+668*s,220)(300+668*s,400)(50+668*s,400)(50+668*s,220)' familia='s' s.intervalo='[0,1]' s.pasos='1' relleno='cd348eff'">
+   <param name="G_29" value="espacio='E1' tipo='polígono' color='ff20303a' dibujar-si='fase=1' coord_abs='sí' expresión='(320+200*s,320)(500+200*s,320)(500+200*s,320-(t*(1+((tam+1)*s))))(320+200*s,320-(t*(1+((tam+1)*s))))(320+200*s,320)' familia='s' s.intervalo='[0,1]' s.pasos='1' relleno='cd348eff'">
+   <param name="G_30" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(337+344*s,232,1-(2*s),1)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/aprende/boquilla.png'">
+   <param name="G_31" value="espacio='E1' tipo='macro' expresión='--fase=2--'">
+   <param name="G_32" value="espacio='E1' tipo='imagen' dibujar-si='fase=2' coord_abs='sí' expresión='(713,277,1.5,1.5)' archivo='images/explora/fondo_moleculas_02.png'">
+   <param name="G_33" value="espacio='E1' tipo='punto' color='c41f51ff' dibujar-si='fase=2' coord_abs='sí' expresión='(f2x[s],f2y[s])' familia='s' s.intervalo='[0,249]' s.pasos='248' fijo='sí' tamaño='7'">
+   <param name="G_34" value="espacio='E1' tipo='punto' color='a1c0c0c0' dibujar-si='fase=2' coord_abs='sí' expresión='(f1x[s],f1y[s])' familia='s' s.intervalo='[0,249]' s.pasos='248' fijo='sí' tamaño='10'">
+   <param name="G_35" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(tt=0)&(fase=2)' expresión='[40,190]' texto='En el contenedor se muestra una mezcla de\nagua con mercurio, las partículas de color\nazul representan el agua y las de color gris\nrepresentan las de mercurio. ¿Al pasar el\ntiempo alguno de los dos líquidos se\ncolocará arriba, es decir, flotará?' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_36" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(tt=20)&(fase=2)' expresión='[40,190]' texto='Como podrás notar, el agua quedó arriba\ndebido a que la densidad del agua es menor\na la del mercurio, en otras palabras, el líquido\nde mayor densidad tiende a desplazar al de\nmenor densidad a la parte superior.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_37" value="espacio='E1' tipo='macro' expresión='--fase=3--'">
+   <param name="G_38" value="espacio='E1' tipo='imagen' dibujar-si='fase=3' coord_abs='sí' expresión='(275,280,.78,.8)' archivo='images/explora/contenedor.png'">
+   <param name="G_39" value="espacio='E1' tipo='imagen' dibujar-si='fase=3' coord_abs='sí' expresión='(280,163+(95*(den1/den2)),.3,.2)' archivo='images/aprende/objeto.png'">
+   <param name="G_40" value="espacio='E1' tipo='polígono' dibujar-si='fase=3' coord_abs='sí' expresión='(150,210)(400,210)(400,360)(150,360)(150,210)' relleno='(34,8e,ff,1-(den2/2.5))' ancho='0'">
+   <param name="G_41" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[540,180]' texto='Densidad del objeto [den1]' fuente='SansSerif,PLAIN,22' decimales='1' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_42" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[540,325]' texto='Densidad del líquido [den2]' fuente='SansSerif,PLAIN,22' decimales='1' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_43" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[40,415]' texto='Nota que si dividimos la densidad del objeto entre la densidad del líquido, obtenemos [(den1/den2)].\nEsto quiere decir que la fracción del objeto que se sumerge es del [ent((den1/den2)*100)]% del objeto.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_44" value="espacio='E1' tipo='macro' expresión='--INFO--'">
+   <param name="G_45" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_46" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[RetroMargIzq,100]' texto='Como acabamos de ver, todos los objetos con el mismo volumen\nreciben el mismo empuje al ser sumergidos en un fluido. Esta fuerza de empuje del líquido es la que intenta mantener al objeto a flote, pero compite con el peso del objeto. Entre más denso sea el objeto, mayor será su peso. Así que entre mayor sea la densidad de un objeto, con mayor facilidad se hundirá.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_47" value="espacio='info' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(500,375,1,1)' archivo='images/aprende/diagrama1.png'">
+   <param name="G_48" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[150,100]' texto='Como el empuje es igual al peso del fluido desplazado, lo que podemos\nhacer para aumentar el empuje es desplazar mayor cantidad de fluido. Por ejemplo, si colocamos una bolita de plastilina en agua, ésta se hundirá porque el empuje no es suficiente para contrarrestar el peso. Pero si le cambiamos la forma a la bolita de plastilina haciéndola hueca como un barquito, ésta desplazará más fluido y experimentará un empuje mayor. Si logras desplazar suficiente agua con la plastilina para que el empuje sea mayor al peso, el barquito de plastilina flotará.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_49" value="espacio='info' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(500,400,.5,.5)' archivo='images/aprende/plastilina.png'">
+   <param name="G_50" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[RetroMargIzq,100]' texto='Las partículas que componen los fluidos se encuentran en constante\nmovimiento, por lo que podemos comparar la mezcla de dos líquidos con el ejemplo de un contenedor en el cuál hay canicas y balines del mismo tamaño. Si comenzamos a agitar el contenedor, los balines se quedarán en la parte de abajo y las canicas (que pesan menos) se quedarán en la parte de arriba.\n\nPor ejemplo, este mecanismo es el que se usa para\nsepara las piedras de los frijoles en las fábricas\nempacadoras de alimentos. Pero si una piedra es\nigual de densa que un frijol no se separa, por eso \nalgunas veces encontramos piedras en las\nbolsas de frijoles.\n' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_51" value="espacio='info' tipo='imagen' dibujar-si='fase=2' coord_abs='sí' expresión='(760,355,1,.9)' archivo='images/aprende/canicas.png'">
+   <param name="G_52" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[RetroMargIzq,100]' texto='La cantidad que se sumerge un objeto en un fluido depende de la\ndensidad del objeto y de la densidad del fluido, por ejemplo el hielo tiene una densidad de .9 y el agua de 1, a continuación dividimos .9 entre 1 obteniendo .9, esto quiere decir que el 90 % del hielo se hundirá y tan solo el 10 % se mantendrá a flote. ¿Qué pasará si un objeto y un fluido tienen la misma densidad?' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_53" value="espacio='info' tipo='imagen' dibujar-si='fase=3' coord_abs='sí' expresión='(500,365,.5,.5)' archivo='images/aprende/iceberg.png'">
+   <param name="G_54" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,300]' texto='fase=[fase]\nNumMol=[NumMol]        t=[t]\nNumMol2=[NumMol2]      tt=[tt]\nobj=[obj]\nflu=[flu]			  tam=[tam]\nden1=[den1]\nden2=[den2]		         [f2x[198]],[f2y[198]]\nflota=[flota]\nvel=[vel]' fijo='sí'">
+   <param name="Animación" value="pausa='vel' controles='no' auto='no' inicio='tt=0' hacer='dy=((flota=2)&(t>=4))?60-((den2/den1)*.3):10*t;t=(t<15)?t+1:t;dy0=tt*5;varTemp=(fase=2)?camPos():0;tt=tt+1;' mientras='tt<20'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

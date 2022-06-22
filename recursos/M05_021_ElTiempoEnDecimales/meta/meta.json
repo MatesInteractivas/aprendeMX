@@ -1,0 +1,35 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "decimales", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Tiempo", 
+    "medición", 
+    "decimales", 
+    "parte decimal", 
+    "minutos", 
+    "segundos", 
+    "horas", 
+    "sexagesimal", 
+    "medida decimal", 
+    "medida sexagesimal"
+  ], 
+  "descripcion": "Como ya sabes, decir 1.5 horas es lo mismo que decir hora y media, que equivale a decir una hora y 30 minutos. Pero ¿cuántos minutos son 0.3 horas? en esta unidad podrás averiguarlo.",
+  "resena": "Representación decimal del tiempo y conversiones entre distintos tipos de expresión del tiempo.",
+  "titulo": "El tiempo en decimales", 
+  "id": "PA5_OA_MA_3UNAM_021"
+}

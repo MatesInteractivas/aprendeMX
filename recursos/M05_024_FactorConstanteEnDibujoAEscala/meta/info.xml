@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_024"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El factor constante en los dibujos a escala
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad trabajaras con las escalas y podrás relacionar el factor de escala con el factor constante de proporcionalidad  para obtener las medidas faltantes de los lados de los dibujos que se te presenten.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, proporcionalidad, Manejo de la información, Proporcionalidad y funciones
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, proporción, factor constante, constante de proporcionalidad, escala, valor faltante
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

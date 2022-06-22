@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/02_expl_ejer00.css" type="text/css">
+
+   <style type="text/css">
+      body,html {
+         background-color: white;
+      }
+
+     
+      .fracc-container{
+         font-weight: bold;
+         font-size: 52px;
+         position: relative;
+         top: 50%;
+         transform: translate(0,-50%);
+         color: #E84C3D;
+         border: 0px solid red;
+         padding-bottom: 10px;
+      }
+
+      .fracc-container h2{
+          font-size: 35px;
+          text-align: left;
+          margin: 0px 0px 20px;
+          color: #9A59B5;
+}
+      }
+
+      .fracc-container .eqEle {
+      
+      }
+
+      .fracc-container .eqEle span.termino {
+         color: #34495e;
+      }
+      
+      .fracc-container .eqEle span.suma{
+         color: #E77E22;
+      }
+
+      .fracc-container .eqEle span.termino.k {
+        color : #E77E22; 
+      }
+      .fracc-container .eqEle span.termino.k .numerador{
+         border-bottom-color: #E77E22;
+      }
+
+      .fracc-container .eqEle span.fracction .numerador{
+         box-shadow: none;
+       
+      }
+   </style>
+
+   <script type="text/javascript" src='lib/custom/jquery-2.2.0.min.js'></script>
+   <script type="text/javascript" src='lib/custom/03_expl_tools.js'></script>
+   
+	<script type="text/javascript" >
+      $(function(){
+         
+
+         function getNumberHtml(fracObj) {
+            var numerador   = fracObj.n;
+            var denominador = fracObj.d
+            var parteEnt    = fracObj.e;
+
+            var htmlDisp = '';
+            if(denominador>1 && numerador > 0 ){
+               htmlDisp += ((parteEnt>0)?parteEnt:'') + 
+               "<span class='fracction'> \
+                  <span class='numerador'>"+numerador+"</span> \
+                  <span class='denominador'>"+denominador+"</span> \
+               </span>";
+            } else {
+               htmlDisp += parteEnt;
+            }
+            return "<span class='termino'>"+htmlDisp+"</span>";
+         };
+         
+         function receiveMessage(event){
+            console.log('llego el mensage ',event);
+           if(!event.data || !event.data.type )
+              return;
+           if(event.data.type = 'exec'){
+              switch (event.data.name){
+                 case 'updateFraction' :
+
+                  var vals = event.data.value.split(',');
+                  for (var i = vals.length - 1; i >= 0; i--) {
+                     vals[i] = parseInt(vals[i]);
+                  };
+                  console.log("Que tenemos de valores : ",vals);
+                  updateFraction(
+
+                     { e:vals[0], n:vals[1], d:vals[2]},
+                     { e:vals[3], n:vals[4], d:vals[5]}
+                  );
+              }
+           }
+         }
+
+         /*
+         */
+         function getSimplifiedFrac(numerador,denominador){
+            var res = {};
+            res.e = Math.floor(numerador/denominador);
+            res.n = (numerador % denominador)
+
+            var tmpD = Math.mcd(numerador, denominador);
+            res.n = res.n/tmpD;
+            res.d = denominador/tmpD;
+            return res;
+         }
+         function updateFraction(initFrac, sumaFrac){
+
+            var txt1 = getSimplifiedFrac(
+               initFrac.d*initFrac.e+initFrac.n,
+               initFrac.d);
+
+            var txt2 = getSimplifiedFrac(
+               sumaFrac.e*sumaFrac.d+sumaFrac.n,
+               sumaFrac.d);
+            var maxCM = Math.mcm(txt1.d,txt2.d);
+            console.log("MCM: "+maxCM,txt1.d,txt2.d, Math.mcd(txt1.d,txt2.d));
+            var txt3_4 = (txt1.e + txt2.e); 
+
+            var txt3 = {
+               e : 0 ,
+               n : txt1.n*(maxCM/txt1.d),
+               d : maxCM,
+            };
+
+            var txt4 = {
+               e : 0 ,
+               n : txt2.n*(maxCM/txt2.d),
+               d : maxCM,
+            };
+            
+            var txt5 = {
+               e : txt3_4 ,
+               n : txt3.n + txt4.n,
+               d : txt3.d,
+            };
+            var txt6 = getSimplifiedFrac(
+               txt5.e*txt5.d + txt5.n,
+               txt5.d
+            );
+            var htmlRes = '';
+            var first = getNumberHtml(txt2).replace(/termino/g,'termino k');
+            var first = "<span class='eqEle'>"+getNumberHtml(txt1) + ' + ' +first+"</span> "; 
+            
+            if(txt3.n > 0 && txt4.n > 0 ){
+               htmlRes +=  "= <span class='eqEle'>";
+               if(txt3_4>0){
+                  htmlRes +=  "<span class='termino'>"+txt3_4+'</span> + ';
+               }
+               htmlRes += getNumberHtml(txt3) + ' + ' +getNumberHtml(txt4)+"</span>"; 
+            }
+
+            htmlRes +=  " = <span class='eqEle'>"+getNumberHtml(txt5)+"</span>"; 
+
+            if(txt5.e != txt6.e || 
+               txt5.n != txt6.n || 
+               txt5.d != txt6.d
+            ){
+               htmlRes +=  " = <span class='eqEle'>"+getNumberHtml(txt6)+"</span>"; 
+            }
+            htmlRes = first + htmlRes;
+
+            htmlRes = htmlRes.replace(/\+/g,"<span class='suma'>+</span>");            
+            htmlRes = '<h2>El resultado de la suma es : </h2>' +htmlRes;
+            $('.fracc-container').html(htmlRes);
+         }
+
+         window.addEventListener("message", receiveMessage, false);
+         updateFraction(
+            { e:2, n:1, d:6},
+            { e:1, n:1, d:3}
+         );
+
+      });
+   </script>
+</head>
+
+<body style="margin:0px; padding:0px">
+   <div class='activity-container'> 
+      <div class='fracc-container'></div>
+   </div>
+
+</body>
+
+</html>

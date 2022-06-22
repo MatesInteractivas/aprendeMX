@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, sucesión, figura geométrica, patrón, regla de formación, progresión geométrica, progresión aritmética, sucesión geométrica, sucesión aritmética.">
+
+<head>
+	<title>Sucesiones generadas con figuras</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   
+   <link rel="stylesheet" href="css/custom/Descartes_spinner.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/icons.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/00_expl.css" type="text/css">
+
+   <script type='text/javascript' src='lib/custom/bloquea_keyboard.js'></script>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='EXAMPLES' dibujar-si='0' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='DISP_IF' x='DISP_IF.x' y='DISP_IF.y' ancho='984' alto='222' despl_imagen='arr-izq' fondo='grisClaro' archivo='suce_aux/sucesion_fig_2.html'">
+   <param name="E_04" value="tipo='R2' id='INST' x='INST.x' y='INST.y' ancho='984' alto='250' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='MASK' dibujar-si='MASK.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='8834495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='FIGURE' x='FIGURE.x' y='FIGURE.y' ancho='500' alto='400' dibujar-si='MASK.visible' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='menu' tipo='numérico' interfaz='menú' región='interior' espacio='EXAMPLES' expresión='(40,100,160,46)' decimales='0' fijo='sí' visible='no' opciones='Ejemplo,de,menu,con,opciones' acción='calcular' parámetro='Inicio()' dibujar-si='(status==0)'">
+   <param name="C_02" value="id='pizq1' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' expresión='(300-46,100,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro izquierda|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pn1=max(pn1-0.25,1.0)' pos_mensajes='centro'">
+   <param name="C_03" value="id='pder1' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' expresión='(300+68,100,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pn1=min(pn1+0.25,12.5)' pos_mensajes='centro'">
+   <param name="C_04" value="id='pabaj2' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' expresión='(500,100+46,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pn2=max(pn2-1,-5)' pos_mensajes='centro'">
+   <param name="C_05" value="id='parri2' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' expresión='(500,100-46,46,46)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro arriba|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pn2=min(pn2+1,12)' pos_mensajes='centro'">
+   <param name="C_06" value="id='b1' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' nombre='          Reiniciar' expresión='(20,E2._h-66,220,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Inicio()' pos_mensajes='centro'">
+   <param name="C_07" value="id='b2' tipo='numérico' interfaz='botón' región='interior' espacio='EXAMPLES' nombre='          Comenzar' expresión='(260,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='clearAll()' pos_mensajes='centro'">
+   <param name="C_08" value="id='_INTER_' tipo='numérico' región='interior' espacio='EXAMPLES' nombre='n8' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_09" value="id='fIter_horizontal' tipo='numérico' región='interior' espacio='INST' nombre='_nada_' expresión='(fIter.x,fIter.y,fIter.w,fIter.h)' valor='fIter_horizontal' incr='1' min='1' max='sucesion.nTerms' discreto='sí' fijo='no' visible='sí' acción='calcular' parámetro='fIter1=fIter_horizontal-1\nmaxIdTerm=max(maxIdTerm,fIter1)\nupdateFracNIter(maxIdTerm+1)' pos_mensajes='centro'">
+   <param name="C_10" value="id='btnFig' tipo='numérico' interfaz='botón' región='interior' espacio='INST' nombre='          Otra sucesión' expresión='(btnFig.x,btnFig.y,btnFig.w,btnFig.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda cambiar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='initEjercicio()' pos_mensajes='centro'">
+   <param name="C_11" value="id='btnCerrar' tipo='numérico' interfaz='botón' región='interior' espacio='FIGURE' expresión='(btnCerrar.x,btnCerrar.y,btnCerrar.w,btnCerrar.h)' fijo='sí' visible='sí' color='blanco' color-int='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' imagen='_STYLE_|class=btnAprendeMx azuloscuro cerrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='MASK.visible=0\nshadeCover=0' pos_mensajes='centro'">
+   <param name="C_12" value="id='zoom' tipo='numérico' región='interior' espacio='FIGURE' nombre='_nada_' expresión='(zoom.x,zoom.y,zoom.w,zoom.h)' valor='zoom' incr='FIGURE.escala*0.1' min='0.001' max='1000' decimales='6' fijo='sí' visible='no' acción='calcular' parámetro='FIGURE.escala=zoom' pos_mensajes='centro'">
+   <param name="A_01" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='5' expresión='_bermellon=0;col[0,0]=&squot;bermellon-alizarion e74c3c&squot;;col[0,1]=(14*16+ 7)/255;col[0,2]=( 4*16+12)/255;col[0,3]=( 3*16+12)/255;col[0,4]=1 ;_naranja=1;col[1,0]=&squot;naranja-carrot e67e22&squot;;col[1,1]=(14*16+ 6)/255;col[1,2]=( 7*16+14)/255;col[1,3]=( 2*16+ 2)/255;col[1,4]=1;_amarillo=2;col[2,0]=&squot;amarillo-sunflower f1c40f&squot;;col[2,1]=(15*16+ 1)/255;col[2,2]=(12*16+ 4)/255;col[2,3]=( 0*16+15)/255;col[2,4]=1;_verdeclaro=3;col[3,0]=&squot;verde claro-emerald 2ecc71&squot;;col[3,1]=( 2*16+14)/255;col[3,2]=(12*16+12)/255;col[3,3]=( 7*16+ 1)/255;col[3,4]=1;_verdeagua=4;col[4,0]=&squot;verde agua-turquoise 1abc9c&squot;;col[4,1]=( 1*16+10)/255;col[4,2]=(11*16+12)/255;col[4,3]=( 9*16+12)/255;col[4,4]=1;_azul=5;col[5,0]=&squot;azul-Peter_river 3498db&squot;;col[5,1]=( 3*16+ 4)/255;col[5,2]=( 9*16+ 8)/255;col[5,3]=(13*16+11)/255;col[5,4]=1.00;_lavanda=6;col[6,0]=&squot;lavanda-amethyst 9b59b6&squot;;col[6,1]=( 9*16+11)/255;col[6,2]=( 5*16+ 9)/255;col[6,3]=(11*16+ 6)/255;col[6,4]=1;_azuloscuro=7;col[7,0]=&squot;azul oscuro-wet_asphalt 34495e&squot;;col[7,1]=( 3*16+ 4)/255;col[7,2]=( 4*16+ 9)/255;col[7,3]=( 5*16+14)/255;col[7,4]=1;_concreto=8;col[8,0]=&squot;cian-concrete 95a5a6&squot;;col[8,1]=( 9*16+ 5)/255;col[8,2]=(10*16+ 5)/255;col[8,3]=(10*16+ 6)/255;col[8,4]=1;_nubes=9;col[9,0]=&squot;blanco-clouds ecf0f1&squot;;col[9,1]=(14*16+12)/255;col[9,2]=(15*16+ 0)/255;col[9,3]=(15*16+ 1)/255;col[9,4]=1'">
+   <param name="A_02" value="id='R(c)' expresión='col[c,1]'">
+   <param name="A_03" value="id='V(c)' expresión='col[c,2]'">
+   <param name="A_04" value="id='A(c)' expresión='col[c,3]'">
+   <param name="A_05" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_06" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_07" value="id='_Cx_(str,w,type,sz)' expresión='(w-7.5-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz))/2'">
+   <param name="A_08" value="id='_Rx_(str,w,type,sz)' expresión='w-15-_AnchoDeCadena_(str,&squot;SansSerif&squot;,type,sz)'">
+   <param name="A_09" value="id='_Nx_(val,d,w,sz)' expresión='_Rx_(_NumToStr_(val,d),w,&squot;PLAIN&squot;,sz)'">
+   <param name="A_10" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_11" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_12" value="id='clearAll()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_13" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='clearAll();pn1=5.25;pn2=-2;retro=&squot;Ejemplo de retroalmentación.&squot;;'">
+   <param name="A_14" value="id='__INTERACTIVO__' expresión='0'">
+   <param name="A_15" value="id='__SUCESION__' expresión='0'">
+   <param name="A_16" value="id='sucesion' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='20' filas='10' expresión=';'">
+   <param name="A_17" value="id='getValueAtIdx(idx)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' hacer='val=(tipoSucesion==1)?(sucesion.n*(sucesion.k^idx)):val;val=(tipoSucesion==0)?(sucesion.n+(sucesion.k*idx)):val'">
+   <param name="A_18" value="id='initSucParams()' algoritmo='sí' expresión='x' algoritmo='sí' Local='initN,tOp,k,label' hacer='tOp=tipoSucesion;k=(tOp==0)?(1+rnd*10):(2+rnd*3);;initN=(typeF==6);initN=(initN)?4:2;;sucesion.n=ent(initN+rnd*4);sucesion.k=ent(k);;label=&squot;lados&squot;;label=((typeF==6)|(typeF==4))?&squot;triángulos&squot;:label;label=((typeF==5)|(typeF==3))?&squot;líneas&squot;:label;label=((typeF==2)|(typeF==0))?&squot;puntos&squot;:label;label= (typeF==7)?&squot;petalos&squot;:label;;sucesion.elementLabel=label'">
+   <param name="A_19" value="id='updateMaxWTerm()' algoritmo='sí' expresión='0' algoritmo='sí' Local='idx,maxW,nTerm' inicio='ff=sucesion.ff;fw=sucesion.fw;fz=sucesion.fz;idx=0;maxW=0;' hacer='nTerm=getValueAtIdx(idx)+&squot;,&squot;;;wTerm=_AnchoDeCadena_(nTerm,ff,fw,fz);maxW=max(maxW,wTerm);maxW=max(maxW,70);maxWTerm=maxW;;idx=idx+1' mientras='idx<sucesion.nTerms'">
+   <param name="A_20" value="id='updateSucesion()' algoritmo='sí' expresión='nextX' algoritmo='sí' Local='idx,nextX,_cont,nextX,maxW,isImp,isFrac,int,nume,deno,_kn,_kd,_nn,_nd,_newInt' inicio='idx=0;nextX=0;updateMaxWTerm();' hacer='nTerm=getValueAtIdx(idx);;sucesion[idx,0]=nTerm;sucesion[idx,1]=0;sucesion[idx,2]=1;;nTerm=nTerm+&squot;,&squot;;maxW=_AnchoDeCadena_(nTerm,sucesion.ff,sucesion.fw,sucesion.fz);;_tw=maxWTerm;sucesion[idx,4]=(_tw-maxW)/2;sucesion[idx,3]=maxW;;;idx=idx+1;_cont=(idx<sucesion.nTerms);;nextX=nextX+_tw;sucesion.w=nextX;;;;;tt=(_cont)?0:updateLinesK();tt=(_cont)?0:updateTermsIF()' mientras='_cont'">
+   <param name="A_21" value="id='updateTermsIF()' algoritmo='sí' expresión='DISP_IF.ready' algoritmo='sí' Local='param=&squot;&squot;' hacer='param=param+sucesion[0,0]+&squot;,&squot;;param=param+sucesion[1,0]+&squot;,&squot;;param=param+sucesion[2,0]+&squot;,&squot;;param=param+sucesion[3,0]+&squot;,&squot;;param=param+sucesion[4,0]+&squot;,&squot;;param=param+sucesion[5,0];;;_Trace_(&squot;Mandamos parametros &squot;+param);DISP_IF.exec(&squot;setFigura&squot;,typeF);DISP_IF.exec(&squot;setTerminos&squot;,param);updateFracNIter(maxIdTerm+1)'">
+   <param name="A_22" value="id='updateFracNIter(nIter)' algoritmo='sí' expresión='x' algoritmo='sí' hacer=';DISP_IF.set(&squot;verSelected&squot;,1);DISP_IF.set(&squot;selected&squot;,fIter1);DISP_IF.set(&squot;debug&squot;,0);DISP_IF.set(&squot;nFigs&squot;,nIter);DISP_IF.exec(&squot;initPos&squot;,&squot;&squot;);DISP_IF.exec(&squot;limpiar&squot;,&squot;&squot;);DISP_IF.update()'">
+   <param name="A_23" value="id='dibujaTermino(idx)' algoritmo='sí' expresión='term.visible' algoritmo='sí' Local=' _lastTerm,initX' inicio='initX=(INST._w-sucesion.w)/2-10;initY=sucesion.initY;wComa=_AnchoDeCadena_(&squot;,&squot;,sucesion.ff,sucesion.fw,sucesion.fz)' hacer='term.int=sucesion[idx,0] ;term.n=sucesion[idx,1];term.d=sucesion[idx,2];term.int=(term.int<=0)?&squot;&squot;:term.int;;;;_lastTerm=(idx+1)>=sucesion.nTerms;term.isFracc=(term.d>1);term.isImp=(term.d>1)&(term.int>0);;_tx=(maxWTerm*idx);;term.w=sucesion[idx,3];term.x=initX+_tx+sucesion[idx,4];term.y=initY;;term.h=(term.isFracc)?70:sucesion.fz;;;pol.x1=term.x;pol.y1=term.y;pol.x2=pol.x1+term.w;pol.y2=pol.y1+term.h;;;term.coma.x=initX+maxWTerm*(idx+1)-wComa;term.coma.y=term.y;term.coma.visible=(idx<(sucesion.nTerms-1));;term.r=R(_azuloscuro);term.g=V(_azuloscuro);term.b=A(_azuloscuro);;term.visible=1;dibujaTerminoListener(idx);'">
+   <param name="A_24" value="id='dibujaTerminoListener(idx)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='term.visible=(idx<=maxIdTerm);term.coma.visible=(idx<maxIdTerm)'">
+   <param name="A_25" value="id='__INIT__' expresión='0'">
+   <param name="A_26" value="id='initEsp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='DISP_IF.x=(E2._w-DISP_IF._w)/2;DISP_IF.y=60;;INST.x=(E2._w - INST._w)/2;INST.y=(E2._h - INST._h-20);;FRACTAL.x=30;FRACTAL.y=INST.y;;BTNS_FRAC.x=FRACTAL.x;BTNS_FRAC.y=E2._h-BTNS_FRAC._h-20;;;MPol.x1=INST.x;MPol.y1=INST.y+287;;MPol.x2=MPol.x1+INST._w;MPol.y2=INST.y+INST._h;;;FIGURE.x=(E2._w-FIGURE._w)/2;FIGURE.y=(E2._h-FIGURE._h)/2'">
+   <param name="A_27" value="id='initCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='fIter.label=&squot;Elemento  &squot;;fIter.label.w=_AnchoDeCadena_(fIter.label,&squot;SansSerif&squot;,&squot;BOLD&squot;,26);;fIter.w=140;fIter.h=46;btnFig.w=200;btnFig.h=46;;wA = fIter.w+fIter.label.w+btnFig.w+20;;fIter.x=(INST._w - wA)/2+fIter.label.w;fIter.y=60;;;btnFig.x=fIter.x+fIter.w+20;btnFig.y=fIter.y;;;;fScale.w=82;fScale.h=46;fScale.x=0;fScale.y=0;;btnCentrar.w=220;btnCentrar.h=46;btnCentrar.x=(BTNS_FRAC._w - btnCentrar.w -0);btnCentrar.y=0;;btnContinuar.w=220;btnContinuar.h=46;btnContinuar.x=INST.x+(INST._w-btnContinuar.w)/2;btnContinuar.y=INST.y+(INST._h-btnContinuar.h-10);;btnCerrar.w=45;btnCerrar.h=45;btnCerrar.x=(FIGURE._w-btnCerrar.w);btnCerrar.y=0;;zoom.w=46;zoom.h=zoom.w*2;zoom.x=0;zoom.y=FIGURE._h-zoom.h;'">
+   <param name="A_28" value="id='initEjercicio()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='sucesion.initY=fIter.y+fIter.h+50;sucesion.fz=24;sucesion.fw=&squot;BOLD&squot;;sucesion.ff=&squot;SansSerif&squot;;sucesion.nTerms=5;zoom=FIGURE.escala;maxIdTerm=0;selected=0;fIter_horizontal=1;fIter1=0;tipoSucesion=(rnd<0.5);setFigure(ent(rnd*8));;;fScale_horizontal=1;fIter_horizontal=1;fIter1=fIter_horizontal-1;;polS.x1=20;polS.y1=sucesion.initY-20;polS.x2=INST._w-20;polS.y2=polS.y1+sucesion.fz+35'">
+   <param name="A_29" value="id='setFigure(idxF)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='typeF=idxF;initSucParams();updateSucesion()'">
+   <param name="A_30" value="id='onClickOverFig(idxFig,Rr,Rg,Rb,Lr,Lg,Lb)' algoritmo='sí' algoritmo='sí' hacer='MASK.visible=1;shadeCover=1;;figure.setFigura(typeF);figure.configuraFigura(sucesion[idxFig,0]);;figure.cR.r=Rr;figure.cR.g=Rg;figure.cR.b=Rb;;figure.cL.r=Lr;figure.cL.g=Lg;figure.cL.b=Lb;;;FIGURE.Ox=0;FIGURE.Oy=0;FIGURE.escala=min(FIGURE._w,FIGURE._h)/4.5;;'">
+   <param name="A_31" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa las siguientes sucesiones de figuras.&squot;' hacer='initEsp();initCtrs();initEjercicio();;;;MASK.visible=0'">
+   <param name="A_32" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_33" value="id='showShadeCover' evento='sí' condición='shadeCover' acción='abrir URL' parámetro='javascript:parent.document.getElementById(&squot;shade_cover&squot;).style.display=&squot;block&squot;;void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_34" value="id='hideShadeCover' evento='sí' condición='!shadeCover' acción='abrir URL' parámetro='javascript:parent.document.getElementById(&squot;shade_cover&squot;).style.display=&squot;none&squot;;void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='EXAMPLES' tipo='texto' fondo='sí' dibujar-si='0' expresión='[__EJEMPLOS_,20]' fijo='sí' info='EJEMPLOS'">
+   <param name="G_02" value="espacio='EXAMPLES' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[20,60]' texto='Ejemplo de texto' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='Texto'">
+   <param name="G_03" value="espacio='EXAMPLES' tipo='curva' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' coord_abs='sí' expresión='(botX(0,300,68,t),botY(0,100,46,t))' t.intervalo='[0,8]' relleno='(R(_nubes),V(_nubes),A(_nubes),00)' info='Campo para texto del pulsador horizontal'">
+   <param name="G_04" value="espacio='EXAMPLES' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[300+_Nx_(pn1,2,68,20),100+13]' texto='[_NumToStr_(pn1,2)]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' info='Texto del pulsador horizontal'">
+   <param name="G_05" value="espacio='EXAMPLES' tipo='curva' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' coord_abs='sí' expresión='(botX(0,500,46,t),botY(0,100,46,t))' t.intervalo='[0,8]' relleno='(R(_nubes),V(_nubes),A(_nubes),00)' info='Campo para texto del pulsador vertical'">
+   <param name="G_06" value="espacio='EXAMPLES' tipo='texto' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[500+_Nx_(pn2,0,46,20),100+13]' texto='[_NumToStr_(pn2,0)]' fuente='SansSerif,PLAIN,20' decimales='0' fijo='sí' info='Texto del pulsador vertical'">
+   <param name="G_07" value="espacio='EXAMPLES' tipo='texto' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' expresión='[60,180]' texto='Traza algunos segmentos rectos entre los vértices para partir el polígono en triángulos. ' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='400' info='Instrucciones'">
+   <param name="G_08" value="espacio='EXAMPLES' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[60+_Cx_(retro,400,&squot;BOLD&squot;,20),260]' texto='[retro]' fuente='SansSerif,BOLD,20' fijo='sí' ancho='500' info='Retroalmentación.'">
+   <param name="G_09" value="espacio='EXAMPLES' tipo='arco' color='negro' centro='(-5+s*10/9,-1.5)' radio='0.5' fin='360' familia='s' s.intervalo='[0,9]' s.pasos='9' fijo='sí' relleno='(R(s),V(s),A(s),00)'">
+   <param name="G_10" value="espacio='EXAMPLES' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[_Cx_(&squot;¡Bien hecho!&squot;,EXAMPLES._w,&squot;BOLD&squot;,30),420]' texto='¡Bien hecho!' fuente='SansSerif,BOLD,30' fijo='sí' info='Felicitación'">
+   <param name="G_11" value="espacio='EXAMPLES' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_INTERACTIVO_,20]' fijo='sí' info='GRAFICOS PROPIOS DE LA ESCENA (No ejemplos)'">
+   <param name="G_12" value="espacio='E2' tipo='texto' fondo='sí' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='El título'">
+   <param name="G_13" value="espacio='INST' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_SUCESION_,20]' fijo='sí' info='GRAFICOS PROPIOS DE LA ESCENA (No ejemplos)'">
+   <param name="G_14" value="espacio='INST' tipo='texto' fondo='sí' dibujar-si='0' expresión='[_INST_,20]' fijo='sí' info='GRAFICOS PROPIOS DE LA ESCENA (No ejemplos)'">
+   <param name="G_15" value="espacio='INST' tipo='texto' fondo='sí' color='(R(_verdeagua),V(_verdeagua),A(_verdeagua),00)' expresión='[0,20]' texto='Cambia el valor del pulsador para mostrar los elementos de la sucesión. Presiona sobre cada figura para ampliarla.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='INST._w-20' info='Instrucciones'">
+   <param name="G_16" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='pasoRetro==1' expresión='[20,retro.y]' texto='Observa que si divides dos términos consecutivos, obtines 4 como resultado.\n\n                                                12 ÷ 3 = 4 ' fuente='SansSerif,BOLD,20' fijo='sí' ancho='445' info='Retroalmentación.'">
+   <param name="G_17" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='pasoRetro==2' expresión='[20,retro.y]' texto='Cada lado se divide en cuatro líneas, entonces puedes saber el número de lados multiplicando por 4 el número de lados del paso anterior. ' fuente='SansSerif,BOLD,20' fijo='sí' ancho='445' info='Retroalmentación.'">
+   <param name="G_18" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='pasoRetro==3' expresión='[20,retro.y]' texto='Por lo tanto regla que genera a la sucesión es  : \n\n&squot;Cada término se obtiene multiplicando el anterior por 4 y el primer elemento es 3&squot;' fuente='SansSerif,BOLD,20' fijo='sí' ancho='445' info='Retroalmentación.'">
+   <param name="G_19" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='pasoRetro>=4' expresión='[20,retro.y]' texto='Las sucesiones donde los términos se obtienen multiplicando el anterior por una cantidad fija se denominan : \n\n         &squot;Sucesiones con progresión geométrica&squot;' fuente='SansSerif,BOLD,20' fijo='sí' ancho='445' info='Retroalmentación.'">
+   <param name="G_20" value="espacio='INST' tipo='texto' dibujar-si='0' expresión='[_DEBUG_+20,0]' texto='fScale_horizontal=[fScale_horizontal]' decimales='6' fijo='no'">
+   <param name="G_21" value="espacio='INST' tipo='texto' fondo='sí' color='(R(_azuloscuro),V(_azuloscuro),A(_azuloscuro),00)' expresión='[fIter.x-fIter.label.w,fIter.y+9]' texto='[fIter.label]' fuente='SansSerif,BOLD,26' fijo='sí' ancho='445' info='Retroalmentación.'">
+   <param name="G_22" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' expresión='[0,130]' texto='Se cuenta el número de [sucesion.elementLabel].' fuente='SansSerif,BOLD+ITALIC,20' fijo='no' ancho='INST._w-40' info='Retroalmentación.'">
+   <param name="G_23" value="espacio='INST' tipo='texto' color='(R(_naranja),V(_naranja),A(_naranja),00)' dibujar-si='((maxIdTerm+1)>=sucesion.nTerms)' expresión='[0,180]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Times New Roman;}{\colortbl\red230\green126\blue34;\red0\green0\blue0;}\cf0\f1\fs40\b La sucesi\u243 n inicia con\i\ul{\*\mjaformula{\expr sucesion.n}}\i0\ulnone y se{\*\mjaformula{\expr (tipoSucesion==0)?&squot;suma a&squot;:&squot;multiplica&squot;\decimals 2\fixed0}}cada t\u233 rmino{\*\mjaformula{\expr (tipoSucesion==0)?&squot;&squot;:&squot;por&squot;\decimals 2\fixed0}}\i\ul{\*\mjaformula{\expr sucesion.k}}\i0\ulnone para obtener el siguiente, por lo tanto \par es una sucesi\u243 n con progresi\u243 n\f3\fs44\i\ul{\*\mjaformula{\expr (tipoSucesion==0)?&squot;aritm\u233 tica&squot;:&squot;geom\u233 trica&squot;\decimals 0\fixed0}}\f1\fs40\i0\ulnone .\cf1}' fuente='SansSerif,BOLD,20' fijo='no' info='Retroalmentación.'">
+   <param name="G_24" value="espacio='FIGURE' tipo='macro' expresión='suce_aux/macros/figuras2.txt' nombre='figure'">
+   <param name="G_25" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[20,40]' texto='typeF=[typeF]' fijo='sí'">
+   <param name="Animación" value="pausa='100' controles='no' auto='sí' inicio='iFUpdated=5' hacer='iFUpdated=iFUpdated-1;updateTermsIF();_Trace_(&squot;Animando : &squot;+iFUpdated)' mientras='(iFUpdated>0)'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, fracción, porcentaje, tanto por ciento, descuento">
+
+<head>
+
+	<title>Porcentajes y fracciones</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' ancho='1024' alto='568' fijo='sí' O.y='100' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E1' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='Emalla' x='47' y='83' ancho='381' alto='381' fijo='sí' escala='38' O.x='-191' O.y='189' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='_SEPARADOR_' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_02" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Otro ejemplo' expresión='(E2._w-260,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='ff1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\notrafigura()\nanimar=1' activo-si='!animand' pos_mensajes='centro'">
+   <param name="C_03" value="id='Animar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Animar' expresión='(20,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='ff1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda on_off|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animand=1-animand\nlaunchanim=1 ' dibujar-si='0' activo-si='!animand' pos_mensajes='centro'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión=' val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(y,d,h,t)' algoritmo='sí' expresión='y' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val'">
+   <param name="A_03" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_04" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_05" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_06" value="id='Limpiar()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_07" value="id='Inicial()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='cuad.v=10;cuad.h=10;;initFigura();setConf_1();;condicion();;permutaOrden();;cual_figura=0;otrafigura();'">
+   <param name="A_08" value="id='FIGURA' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10'">
+   <param name="A_09" value="id='Sucesivos' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' expresión=';'">
+   <param name="A_10" value="id='Numeros' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='5'">
+   <param name="A_11" value="id='Pos' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='2'">
+   <param name="A_12" value="id='nNums' expresión='32'">
+   <param name="A_13" value="id='Nums' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='nNums'">
+   <param name="A_14" value="id='FIG_STR' vector='sí' evaluar='una-sola-vez' tamaño='32' expresión='FIG_STR[0]=&squot;eeeeeaaaaaeeeeeaaaaaeeeeeaaaaaeeeeeaaaaaeeeeeaaaaadddddfffffdddddfffffdddddfffffdddddfffffdddddfffff&squot;;FIG_STR[1]=&squot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafffffdddddfffffdddddfffffdddddfffffdddddfffffddddd&squot;;FIG_STR[2]=&squot;ddddddddddddddddddddeeeeeeeeeeeeeeeeeeeefffffffffffffffffffffaaafffffffaaafffffffaaafffffffffffffffg&squot;;FIG_STR[3]=&squot;feeeeeeeeffffdeedfffffddddddffffdeeeedffffdeaaedffffdeaaedfffffdeedfffffffddfffffffdffdfffffaaaaaaff&squot;;FIG_STR[4]=&squot;ffffffffffdffffffffddfeaeeaefddaaaaaaaadddaeaaeadddddaaaaddddddadddddddddadddddddddddddeeddddddddeed&squot;;FIG_STR[5]=&squot;dddddddddddddgdaddddddfdddfddddaddfddfddddfdddfddddddadfdfddddfdddadaddaddfddddddddadadgdddedededede&squot;;FIG_STR[6]=&squot;dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd&squot;;FIG_STR[7]=&squot;ddddddddddddeeeeeedddeeeeeeeedddeeeeeedddeeeeeeeedddeeeeeedddeeeeeeeedddeeeeeedddddeddeddddddddddddd&squot;;FIG_STR[8]=&squot;eeeeeeeeeefeeeeeeeefffaaaaaaffffdaaaadffaaddaaddaaadddaadddadddddddddddddddddddddddddddeeddddddddddd&squot;;FIG_STR[9]=&squot;ddddddddddddddffdddddffffffffdffffffffffdddddeadddddeeeeaaaaaddedeadadaddeeaaddaaaddeadddaaaaadddddd&squot;;FIG_STR[10]=&squot;aaaaaaaaaaabbbbbbbbaabaaaaaabaababbbbabaababaababaababbababaabaaaababaabbbbbbabaaaaaaaaababbbbbbbbba&squot;;FIG_STR[11]=&squot;caaaaaaaadacaaaaaadaaacaaaadaaaaacaadaaaaaaacdaaaaaaaadcaaaaaaadaacaaaaadaaaacaaadaaaaaacadaaaaaaaac&squot;;FIG_STR[12]=&squot;cccccaaaaacccccaaaaacccccaaaaacccccaaaaacccccaaaaaaaaaadddddaaaaadddddaaaaadddddaaaaadddddaaaaaddddd&squot;;FIG_STR[13]=&squot;bbbbaaccccbaabaacaacbaabaacaacbbbbaaccccaaaaaaaaaaaaaaddaaaaaaaaddaaaaaadaaaadaaaaaddddaaaaaaaaaaaaa&squot;;FIG_STR[14]=&squot;caaaaaaaacbaaaccaaababaaaaaabaaaddddddaaaaddddddaaaaddddddaaaaddddddaaabaaaaaababaaaccaaabcaaaaaaaac&squot;;FIG_STR[15]=&squot;caaaaaaaacacabbbbacaaabaaaabaaabadaadabaabaaddaabaabaaddaabaabadaadabaaabaaaabaaacabbbbacacaaaaaaaac&squot;;FIG_STR[16]=&squot;dddddddddadaaaaaaadadadddddadadadaaadadadadadadadadadadddadadadaaaaadadadddddddadaaaaaaaaadddddddddd&squot;;FIG_STR[17]=&squot;ddddddddddaddddddddaaabbbbbbaaaaabbbbaaaaaaaccaaaaaaaaddaaaaaaabbbbaaaaabbbbbbaaaccccccccacccccccccc&squot;;FIG_STR[18]=&squot;daaaaaaaaddbaaaaaabddbcaaaacbddbcdaadcbddbcdbbdcbddbcdbbdcbddbcdaadcbddbcaaaacbddbaaaaaabddaaaaaaaad&squot;;FIG_STR[19]=&squot;aaaaccccccbbbbbbaaaaaaaaddddddaaaaaaaaaaccccccaaaaaaaabbbbbbddddddaaaaaaaaaaaaaaaaaaccccccbbbbbbaaaa&squot;;FIG_STR[20]=&squot;acadabacadacadabacadacadabacadacadabacadacadabacaddabacadabadabacadabadabacadabadabacadabadabacadaba&squot;;FIG_STR[21]=&squot;aaaabbaaaaaaaaddaaaaaaaddddaaaaaddddddaaadddaadddaddddddddddcccccccccccccccccccccccaaaaccccccaaaaccc&squot;;FIG_STR[22]=&squot;acaabaadaaaacaabaadaacaabaadaaaacaabaadaacaabaadaaaacaabaadaacaabaadaaaacaabaadaacaabaadaaaacaabaada&squot;;FIG_STR[23]=&squot;ddddddddddaaaaaaaaaaadadadadaddadadadadaabababababbababababaacacacacaccacacacacaaaaaaaaaaacccccccccc&squot;;FIG_STR[24]=&squot;aaaaaaaaaaaaccaaccaaaaccaaccaaaaaaaaaaaaaaaaddaaaaaaaaddaaaaabaaaaaabaaabbbbbbaaaabbbbbbaaaaaaaaaaaa&squot;;FIG_STR[25]=&squot;aaaacdaaaaaaaccdaaaaaacccdaaaaaccccdaaaaaaaaadaaaaaaaaadaaaaaaaaddaaaabbbbbbbbbbabbbbbbbbaaabbbbbbaa&squot;;FIG_STR[26]=&squot;aaaaaaaaaaaaaabbaaaaaaaabbaaaaaddddddddaadaaddaadaadaaddaadaaddddddddaddddddddddaaccaaccaaaaccaaccaa&squot;;FIG_STR[27]=&squot;aaaaddaaaaaaaaddaaaaaaaddddaaaaaddddddaaaddddddddabbbbbbbbbbabbbbbbbbaaabbbbbbaaaaabbbbaaaaaaabbaaaa&squot;;FIG_STR[28]=&squot;dddddddddbddddddddbcdddddddbccddddddbcccdddddbccccddddbcccccdddbccccccddbcccccccdbccccccccbccccccccc&squot;;FIG_STR[29]=&squot;cccccaaaaacccccaaaaacccccaaaaacccccaaaaacccccaaaaaaaaaabbbbbaaaaabbbbbaaaaabbbbbaaaaabbbbbaaaaabbbbb&squot;;FIG_STR[30]=&squot;cccccaaaadccccaaaaddcccaaaadddccaaaaddddcaaaadddddaaaabaaaaaaaabbaaaaaaabbbaaaaaabbbbaaaaabbbbbaaaaa&squot;;FIG_STR[31]=&squot;aaaaaaaaaaaaaadddaaaaaaddbddaaaaadbbbdaaaaaddbddaaaaaadddaaaaaaaabaaaaaaaaabbaaaaaaaabaaaaaaabbbaaaa&squot;'">
+   <param name="A_15" value="id='COLORES' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='COLORES[0] =&squot;ffffff&squot;;COLORES[1] =&squot;2ecc71&squot;;COLORES[2] =&squot;3498db&squot;;COLORES[3] =&squot;9b59b6&squot;;COLORES[4] =&squot;f1c40f&squot;;COLORES[5] =&squot;e67e22&squot;;;'">
+   <param name="A_16" value="id='ORDEN' vector='sí' evaluar='una-sola-vez' tamaño='32' expresión='ORDEN[0]=0;ORDEN[1]=1;ORDEN[2]=2;ORDEN[3]=3;ORDEN[4]=4;ORDEN[5]=5;ORDEN[6]=6;ORDEN[7]=7;ORDEN[8]=8;ORDEN[9]=9;ORDEN[10]=10;ORDEN[11]=11;ORDEN[12]=12;ORDEN[13]=13;ORDEN[14]=14;ORDEN[15]=15;ORDEN[16]=16;ORDEN[17]=17;ORDEN[18]=18;ORDEN[19]=19;ORDEN[20]=20;ORDEN[21]=21;ORDEN[22]=22;ORDEN[23]=23;ORDEN[24]=24;ORDEN[25]=25;ORDEN[26]=26;ORDEN[27]=27;ORDEN[28]=28;ORDEN[29]=29;ORDEN[30]=30;ORDEN[31]=31'">
+   <param name="A_17" value="id='permutaOrden()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,indrnd,tmp' inicio='i=0' hacer='indrnd=ent(rnd*ORDEN.long);tmp=ORDEN[indrnd];ORDEN[indrnd]=ORDEN[i];ORDEN[i]=tmp;i=i+1' mientras='i<ORDEN.long'">
+   <param name="A_18" value="id='cuad_x(i)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='x=(i==0)?0:x;x=(i==1)?1:x;x=(i==2)?1:x;x=(i==3)?0:x;'">
+   <param name="A_19" value="id='cuad_y(i)' algoritmo='sí' expresión='y' algoritmo='sí' hacer='y=(i==0)?0:y;y=(i==1)?0:y;y=(i==2)?1:y;y=(i==3)?1:y;'">
+   <param name="A_20" value="id='initFigura()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,ii,jj,celdas' inicio='i=0;celdas=FIGURA.filas*FIGURA.columnas' hacer='ii=i%(cuad.h);jj=ent(i/(cuad.h));;FIGURA[ii,jj]=0;Numeros[i,0]=-1;Numeros[i,1]=-1;Sucesivos[i,0]=-1;Sucesivos[i,0]=-1;Pos[i,0]=0;Pos[i,1]=0;i=i+1' mientras='i<celdas'">
+   <param name="A_21" value="id='codeColor(c)' algoritmo='sí' expresión='cc' algoritmo='sí' Local='cc' inicio='cc=&squot; &squot;' hacer='cc=(c==0)?&squot;a&squot;:cc;cc=(c==1)?&squot;b&squot;:cc;cc=(c==2)?&squot;c&squot;:cc;cc=(c==3)?&squot;d&squot;:cc;cc=(c==4)?&squot;e&squot;:cc;cc=(c==5)?&squot;f&squot;:cc;cc=(c==6)?&squot;g&squot;:cc;cc=(c==7)?&squot;h&squot;:cc;cc=(c==8)?&squot;i&squot;:cc;cc=(c==9)?&squot;j&squot;:cc;cc=(c==10)?&squot;k&squot;:cc;cc=(c==11)?&squot;l&squot;:cc;cc=(c==12)?&squot;m&squot;:cc;cc=(c==13)?&squot;n&squot;:cc;cc=(c==14)?&squot;o&squot;:cc'">
+   <param name="A_22" value="id='decodeColor(c)' algoritmo='sí' expresión='dc' algoritmo='sí' Local='dc' inicio='dc=0' hacer='dc=(c==&squot;a&squot;)?0:dc;dc=(c==&squot;b&squot;)?1:dc;dc=(c==&squot;c&squot;)?2:dc;dc=(c==&squot;d&squot;)?3:dc;dc=(c==&squot;e&squot;)?4:dc;dc=(c==&squot;f&squot;)?5:dc;dc=(c==&squot;g&squot;)?6:dc;dc=(c==&squot;h&squot;)?7:dc;dc=(c==&squot;i&squot;)?8:dc;dc=(c==&squot;j&squot;)?9:dc;dc=(c==&squot;k&squot;)?10:dc;dc=(c==&squot;l&squot;)?11:dc;dc=(c==&squot;m&squot;)?12:dc;dc=(c==&squot;n&squot;)?13:dc;dc=(c==&squot;o&squot;)?14:dc'">
+   <param name="A_23" value="id='setConf_1(conf)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i,ii,jj,c,celdas,j,r' inicio='i=0;celdas=cuad.v*cuad.h;j=0' hacer='ii=i%cuad.v;jj=ent(i/cuad.v);c=_charAt_(conf,i);;FIGURA[ii,jj]=(c==&squot;a&squot;)?0:FIGURA[ii,jj];FIGURA[ii,jj]=(c==&squot;b&squot;)?1:FIGURA[ii,jj];FIGURA[ii,jj]=(c==&squot;c&squot;)?2:FIGURA[ii,jj];FIGURA[ii,jj]=(c==&squot;d&squot;)?3:FIGURA[ii,jj];FIGURA[ii,jj]=(c==&squot;e&squot;)?4:FIGURA[ii,jj];FIGURA[ii,jj]=(c==&squot;f&squot;)?5:FIGURA[ii,jj];;Numeros[j,0]=(FIGURA[ii,jj]!=0)?ii:Numeros[j,0];Numeros[j,1]=(FIGURA[ii,jj]!=0)?jj:Numeros[j,1];Numeros[j,2]=(FIGURA[ii,jj]!=0)?j:Numeros[j,2];;Sucesivos[j-1,0]=(Numeros[i,2]!=0)?j:0;Sucesivos[j-1,1]=(Numeros[i,2]!=0)?j:0;;j=(FIGURA[ii,jj]!=0)?j+1:j;;;i=i+1' mientras='i<celdas'">
+   <param name="A_24" value="id='enCual(x,y)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='x=ent(x);y=ent(y);;enCualX=((x>=0)&&(x<cuad.h))?x:-1;enCualY=((y>=0)&&(y<cuad.v))?y:-1'">
+   <param name="A_25" value="id='enCuadrito(x,y)' expresión='FIGURA[x,y]!=0'">
+   <param name="A_26" value="id='agregaCuadrito(x,y)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='x=ent(x);y=ent(y);x=((x>=0)&&(x<cuad.h))?x:-1;y=((y>=0)&&(y<cuad.v))?y:-1;;cond=(x!=-1)&&(y!=-1);cond=(cond)?!FIGURA[x,y]:0;;FIGURA[x,y]=(cond)?1:FIGURA[x,y];FIGURA[enCualX,enCualY]=(!cond)?1:FIGURA[enCualX,enCualY];;getAreaNueva()'">
+   <param name="A_27" value="id='condicion()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,total' inicio='area_0=0;i=0;total=cuad.h*cuad.v;area_1=0;area_2=0;area_3=0;area_4=0;area_5=0;area_6=0;area_7=0;area_8=0;area_9=0;area_10=0;area_11=0;area_12=0;area_13=0;area_14=0' hacer='ii=i%cuad.h;jj=ent(i/cuad.h);;;area_0=area_0+(FIGURA[ii,jj]=0);area_1=area_1+(FIGURA[ii,jj]=1);area_2=area_2+(FIGURA[ii,jj]=2);area_3=area_3+(FIGURA[ii,jj]=3);area_4=area_4+(FIGURA[ii,jj]=4);area_5=area_5+(FIGURA[ii,jj]=5);area_6=area_6+(FIGURA[ii,jj]=6);area_7=area_7+(FIGURA[ii,jj]=7);area_8=area_8+(FIGURA[ii,jj]=8);area_9=area_9+(FIGURA[ii,jj]=9);area_10=area_10+(FIGURA[ii,jj]=10);area_11=area_11+(FIGURA[ii,jj]=11);area_12=area_12+(FIGURA[ii,jj]=12);area_13=area_13+(FIGURA[ii,jj]=13);area_14=area_14+(FIGURA[ii,jj]=14);;i=i+1' mientras='i<total'">
+   <param name="A_28" value="id='getArea()' algoritmo='sí' algoritmo='sí' hacer='condicion();;area_t=area_1+area_2+area_3+area_4+area_5+area_6+area_7+area_8+area_9+area_10+area_11+area_12+area_13+area_14;;'">
+   <param name="A_29" value="id='getAreaOriginal()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,ii,jj' inicio='i=0;areaOriginal=0;celdas=cuad.h*cuad.v' hacer='ii=i%cuad.h;jj=ent(i/cuad.h);;areaOriginal=areaOriginal+FIGURA[ii,jj];i=i+1' mientras='i<celdas'">
+   <param name="A_30" value="id='Permuta()' algoritmo='sí' algoritmo='sí' inicio='Reinicia();iPe=0' hacer='nrand=ent(rnd*(nNums-iPe-1+0.9999));Nums[iPe,1]=Nums[nrand,0];CopRem();iPe=iPe+1' mientras='iPe<nNums'">
+   <param name="A_31" value="id='Reinicia()' algoritmo='sí' algoritmo='sí' inicio='iRe=0' hacer='Nums[iRe,0]=iRe+1;Nums[iRe,1]=0;iRe=iRe+1' mientras='iRe<nNums'">
+   <param name="A_32" value="id='CopRem()' algoritmo='sí' algoritmo='sí' inicio='iCR=0' hacer='Nums[iCR,0]=(iCR<nrand)?Nums[iCR,0]:Nums[iCR+1,0];iCR=iCR+1' mientras='iCR<nNums-iPe-1'">
+   <param name="A_33" value="id='otrafigura()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='initFigura();;setConf_1(FIG_STR[ORDEN[cual_figura]]);getAreaOriginal();;cual_figura=(cual_figura+1)%ORDEN.long;;;getAreaOriginal();getArea();animand=0;;;'">
+   <param name="A_34" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa que un porcentaje se puede expresar como una fracción o un decimal.&squot;' hacer='Init();Inicial();;panel.x=20;panel.y=56;panel.w=984;panel.h=436;;pix=1/Emalla.escala;;'">
+   <param name="A_35" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';;;'">
+   <param name="A_36" value="id='animev' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_37" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='animar=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='_SEPARADOR_'">
+   <param name="G_02" value="espacio='E2' tipo='punto' color='f1c40f' dibujar-si='muestra_figura_1' expresión='(0,0)' fijo='sí' tamaño='30' info='UN EJEMPLO DE UNA FIGURA (borrar)'">
+   <param name="G_03" value="espacio='E1' tipo='macro' expresión='macros/borde.txt' nombre='panel'">
+   <param name="G_04" value="espacio='E1' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='_SEPARADOR_'">
+   <param name="G_05" value="espacio='E1' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='34495e' expresión='[480,83]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs44 El porcentaje o tanto por ciento son las unidades\par que se toman de cada 100.\par \par Del total del mosaico hay {\*\mjaformula{\expr area_t}} cuadritos coloreados,\par que cubren el {\*\mjaformula{\expr area_t}%} de su \u225 rea, lo cual equivale a\par {\*\mjaformula{\fraction{\num{\expr area_t\decimals 0\fixed1}}{\den 100}}}  y a {\*\mjaformula{\expr area_t/100\decimals 2\fixed1}} del \u225 rea total.}' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí'">
+   <param name="G_07" value="espacio='E1' tipo='texto' color='34495e' expresión='[480,270]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs44 Es decir, \par \par                el porcentaje:    {\*\mjaformula{\expr area_t\decimals 0\fixed1}%}  ;\par                la fracci\u243 n {\*\mjaformula{\fraction{\num{\expr area_t\decimals 0\fixed1}}{\den 100}}}  y  \par                el decimal {\*\mjaformula{\expr area_t/100\decimals 2\fixed1}}}' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='34495e' expresión='[480,440]' texto='son la misma parte del total.' fuente='SansSerif,PLAIN,22' decimales='0' fijo='sí'">
+   <param name="G_09" value="espacio='Emalla' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='_SEPARADOR_'">
+   <param name="G_10" value="espacio='Emalla' tipo='imagen' dibujar-si='0' coord_abs='sí' expresión='(Emalla._w/2,Emalla._h/2,1.1,1.1)' archivo='images/grid_10x10.png'">
+   <param name="G_11" value="espacio='Emalla' tipo='curva' color='bdc3c7' dibujar-si='(FIGURA[s%(cuad.h),ent(s/(cuad.h))]!=0)' expresión='(cuad_x(t%4)+s%(cuad.h),cuad_y(t%4)+ent(s/(cuad.h)))' familia='s' s.intervalo='[0,cuad.h*cuad.v-1]' s.pasos='cuad.h*cuad.v-1' t.intervalo='[0,4]' t.pasos='4' relleno='(_Rojo_( COLORES[FIGURA[s%cuad.h,ent(s/cuad.v)]]),_Verde_(COLORES[FIGURA[s%cuad.h,ent(s/cuad.v)]]),_Azul_(COLORES[FIGURA[s%cuad.v,ent(s/cuad.h)]]),00)' ancho='3'">
+   <param name="G_12" value="espacio='Emalla' tipo='imagen' dibujar-si='1|(FIGURA[s%(cuad.h),ent(s/(cuad.h))]!=0)' expresión='(cuad.h/20+0.0/Emalla.escala+s%(cuad.h),cuad.h/20-0.0/Emalla.escala+ent(s/cuad.h),1.2,1.2)' familia='s' s.intervalo='[0,cuad.h*cuad.v-1]' s.pasos='cuad.h*cuad.v-1' archivo='images/cuadro_bisel.png'">
+   <param name="G_13" value="espacio='Emalla' tipo='curva' color='bdc3c7' expresión='(cuad_x(t%4)+s%(cuad.h),cuad_y(t%4)+ent(s/(cuad.h)))' familia='s' s.intervalo='[0,cuad.h*cuad.v-1]' s.pasos='cuad.h*cuad.v-1' t.intervalo='[0,4]' t.pasos='4'">
+   <param name="G_14" value="espacio='Emalla' tipo='segmento' color='blanco' dibujar-si='0' expresión='(0,s)(cuad.h,s)' familia='s' s.intervalo='[0,cuad.v]' s.pasos='cuad.v' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_15" value="espacio='Emalla' tipo='segmento' color='blanco' dibujar-si='0' expresión='(s,0)(s,cuad.v)' familia='s' s.intervalo='[0,cuad.h]' s.pasos='cuad.h' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_16" value="espacio='Emalla' tipo='segmento' color='bdc3c7' dibujar-si='0' expresión='(0,s)(cuad.h,s)' familia='s' s.intervalo='[0,cuad.v]' s.pasos='cuad.v' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_17" value="espacio='Emalla' tipo='segmento' color='bdc3c7' dibujar-si='0' expresión='(s,0)(s,cuad.v)' familia='s' s.intervalo='[0,cuad.h]' s.pasos='cuad.h' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_18" value="espacio='Emalla' tipo='texto' color='blanco' dibujar-si='(s<=ianim)' expresión='[(Numeros[s,0]+0.6)*Emalla.escala,380-(Numeros[s,1]+0.5)*Emalla.escala,0,0]' familia='s' s.intervalo='[0,area_t-1]' s.pasos='area_t-1' texto='[Numeros[s,2]+1]' fuente='SansSerif,PLAIN,18' decimales='0' fijo='sí'">
+   <param name="Animación" value="pausa='40' controles='no' auto='sí' inicio='ianim=0' hacer='ianim=ianim+1;animand=(ianim<area_t-1)' mientras='animand'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

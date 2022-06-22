@@ -1,0 +1,51 @@
+﻿1
+00:00:00,000 --> 00:00:03,500
+Se cierra un circuito conectando los dos LEDs a un mismo bloque.
+
+2
+00:00:03,500 --> 00:00:08,000
+Cada LED se prende al conectarse. Aquí, los LED están conectados en paralelo.
+
+3
+00:00:08,000 --> 00:00:14,000
+Otro circuito se cierra uniendo los LEDs uno tras otro. Los LEDs sólo prenden si ambos están conectados.
+
+4
+00:00:14,000 --> 00:00:17,000
+Los LEDs en el circuito a la derecha están en serie.
+
+5
+00:00:15,000 --> 00:00:18,000
+
+
+6
+00:00:25,500 --> 00:00:35,000
+Aquí cerramos un circuito con la pila izquierda y se prende el LED.
+
+6
+00:00:35,000 --> 00:00:43,000
+    Se añade otra pila conectando su polo positivo y negativo a donde están conectados ...
+
+7
+00:00:43,000 --> 00:00:48,000
+... el positivo y negativo de la primera pila. El LED se mantiene prendido a la misma intensidad.
+
+8
+00:00:48,000 --> 00:00:51,000
+Aquí, las pilas están conectadas en paralelo.
+
+9
+00:01:06,000 --> 00:01:10,500
+Pero si el polo positivo (rojo) de la pila izquierda es seguido por el LED, ...
+
+10
+00:01:10,500 --> 00:01:16,500
+... y de ahí al negativo de la pila derecha, y del polo positivo de la pila derecha ...
+
+11
+00:01:16,500 --> 00:01:22,000
+... al negativo de la pila izquierda, el LED enciende más intensamente.
+
+12
+00:01:22,000 --> 00:01:30,000
+Aquí, las pilas están conectadas en serie.

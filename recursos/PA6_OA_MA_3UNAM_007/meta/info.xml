@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_007"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El plano cartesiano
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Explorarás cómo funciona un plano cartesiano y aprenderás a ubicar puntos en él, además de saber cómo se escriben las coordenadas para indicarlos.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, Forma, espacio y medida, Ubicación espacial
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Plano cartesiano, coordenadas, abscisas, ordenadas, ejes de coordenadas, ejes coordenados, cuadrantes, sistema de coordenadas, pares ordenados, puntos en el plano
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

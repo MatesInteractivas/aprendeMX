@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Información</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			
+			<table>
+				<thead>
+					<tr>
+						<td>Oraciones</td>
+						<td>Conectores</td>
+						<td>Frases para marcar ideas</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<p>Ejemplos:</p>
+							<ul>
+								<li>Demostró una asombrosa agilidad con el balón.</li>
+								<li>Destacó al rematar a gol.</li>
+								<li>Su condición física no es óptima.</li>
+							</ul>
+						</td>
+						<td>
+							<p>Ejemplos:</p>
+							<ul>
+								<li>sin embargo</li>
+								<li>pero</li>
+								<li>y</li>
+								<li>además</li>
+								<li>en primer lugar</li>
+							</ul>
+						</td>
+						<td id='marcadores'>
+							<p>Ejemplos:</p>
+							<ul>
+								<li>Las pruebas realizadas evidenciaron que… </li>
+								<li>Queremos resaltar que …</li>
+								<li>Conviene señalar que …</li>
+								<li>Es importante mencionar que …</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<script>
+		
+			var mwId = 'cap4_info';
+			
+			window.addEventListener("message", receiveMessage, false);
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="resaltar"){
+						var idTd = evt.data.value;
+						$('#'+idTd).addClass('e-resaltado');
+					}
+				}
+			}
+			
+			
+			$(document).ready(function(){
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+			});
+
+		</script>
+					
+        </body>
+</html>

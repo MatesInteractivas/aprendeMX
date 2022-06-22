@@ -1,0 +1,270 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+.oracionIni{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 95%;
+    height: auto;
+    text-align: center;
+}
+
+p{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+.bt{
+    position: absolute;
+    cursor: pointer;
+    z-index: 30;
+}
+.bt:hover, .bt:active, .bt:focus{
+    /*border-radius: 100px;
+    border: 1px solid #aaa;*/
+}
+
+.bt#tenedor{
+    width: 174px;
+    height: 185px;
+    right: 30px;
+    top: 40px;
+    background-image: url('../img/tenedor.png');
+}
+.bt#tenedor:hover, .bt#tenedor:focus, .bt#tenedor:active{
+    background-image: url('../img/tenedor_over.png');
+}
+.bt#aguja{
+    width: 105px;
+    height: 200px;
+    right: 40px;
+    bottom: 50px;
+    background-image: url('../img/aguja.png');
+}
+.bt#aguja:hover, .bt#aguja:focus, .bt#aguja:active{
+    background-image: url('../img/aguja_over.png');
+}
+.bt#sombrilla{
+    width: 182px;
+    height: 208px;
+    right: 85px;
+    top: 150px;
+    background-image: url('../img/sombrilla.png');
+}
+.bt#sombrilla:hover, .bt#sombrilla:focus, .bt#sombrilla:active{
+    background-image: url('../img/sombrilla_over.png');
+}
+.bt#perro{
+    width: 119px;
+    height: 164px;
+    left: 252px;
+    top: 12px;
+    background-image: url('../img/perro.png');
+}
+.bt#perro:hover, .bt#perro:focus, .bt#perro:active{
+    background-image: url('../img/perro_over.png');
+}
+.bt#huron{
+    width: 156px;
+    height: 139px;
+    left: 120px;
+    top: 110px;
+    background-image: url('../img/huron.png');
+}
+.bt#huron:hover, .bt#huron:focus, .bt#huron:active{
+    background-image: url('../img/huron_over.png');
+}
+.bt#gato{
+    width: 159px;
+    height: 161px;
+    left: 24px;
+    top: 140px;
+    background-image: url('../img/gato.png');
+}
+.bt#gato:hover, .bt#gato:focus, .bt#gato:active{
+    background-image: url('../img/gato_over.png');
+}
+.bt#celular{
+    width: 142px;
+    height: 137px;
+    left: 30px;
+    bottom: 60px;
+    background-image: url('../img/celular.png');
+}
+.bt#celular:hover, .bt#celular:focus, .bt#celular:active{
+    background-image: url('../img/celular_over.png');
+}
+.bt#tele{
+    width: 141px;
+    height: 163px;
+    left: 185px;
+    bottom: 55px;
+    background-image: url('../img/tele.png');
+}
+.bt#tele:hover, .bt#tele:focus, .bt#tele:active{
+    background-image: url('../img/tele_over.png');
+}
+.bt#despertador{
+    width: 128px;
+    height: 134px;
+    left: 340px;
+    bottom: 21px;
+    background-image: url('../img/despertador.png');
+}
+.bt#despertador:hover, .bt#despertador:focus, .bt#despertador:active{
+    background-image: url('../img/despertador_over.png');
+}
+
+.flipCard{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 250px;
+    height: 150px;
+    z-index: 1;
+}
+
+
+
+.flipCard .flipper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: relative;
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition: -moz-transform 1s;
+         -o-transition: -o-transform 1s;
+            transition: transform 1s;
+    
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+
+.flipCard .flipper .front,
+.flipCard .flipper .back
+{
+    
+    text-align: center;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+
+    border-radius : 5px;
+    
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition: -moz-transform 1s;
+         -o-transition: -o-transform 1s;
+            transition: transform 1s;
+    
+}
+
+.flipCard .flipper .back {
+    transform: rotateY(-180deg);
+    z-index: 800;
+
+    background: url("imgs/back.png") no-repeat center;
+    background-size: contain;
+}
+
+.flipCard .flipper .front{
+    z-index: 900;
+    /* for firefox 31 */
+    transform: perspective(200) rotateY(0deg);  
+    /*background-color: #eee*/;
+}
+
+.flipCard.flipped .flipper .front
+{
+     -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+          -o-transform: rotateY( 180deg );
+             transform: rotateY( 180deg );
+}
+
+.flipCard.flipped .flipper .back {
+    z-index: 950;
+    -webkit-transform: rotateY( 0deg );
+       -moz-transform: rotateY( 0deg );
+         -o-transform: rotateY( 0deg );
+            transform: rotateY( 0deg );
+}
+    
+.flipCard .flipper .back {
+	background-color: #eee;
+	border: 3px solid #b33ee0;
+	border-radius: 0px;
+	padding: 20px;
+}
+
+
+
+a.bt_close{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 61px;
+	height: 48px;
+	background: url("img/bt_general.png") no-repeat -165px -96px;
+	text-indent: -5000px;
+	cursor: pointer;
+
+    border:0;
+    outline:0;
+    text-decoration:none
+}
+
+a.bt_close img{border:0}
+a.bt_close:hover,a.bt_close:focus,a.bt_close:active{
+	background-position: -165px -144px;
+}
+
+a.bt_continuar{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 148px;
+    height: 60px;
+    background: url("img/bt_general.png") no-repeat -0px -372px;
+    cursor: pointer;
+    display: block;
+    z-index: 100;
+}
+a.bt_continuar:hover, a.bt_seguir:focus, a.bt_seguir:active{
+    background-position: -150px -372px;
+}
+
+.oculto{
+    display: none !important;
+}

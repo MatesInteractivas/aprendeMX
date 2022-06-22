@@ -1,0 +1,13 @@
+tipo_de_macro=R2
+Idioma=espa&ntilde;ol
+id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w,y+h/2,1,h)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w/2,y+h+2,w,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='s&iacute;' expresi&oacute;n='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='pol&iacute;gono' coord_abs='s&iacute;' expresi&oacute;n='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='cc000000' coord_abs='s&iacute;' expresi&oacute;n='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='s&iacute;' tama&ntilde;o='0' ancho='2' 

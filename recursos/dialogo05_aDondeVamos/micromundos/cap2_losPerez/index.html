@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Los Pérez</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<div id='globo' class='oculto slowShow'>
+				<p class='comentario'></p>
+				<a href='#' class='bt_cerrar' onclick='$("#globo").addClass("oculto");'>X</a>
+			</div>
+
+		</div>
+		
+		<script>
+		
+			var clicked = [];
+			var inicio = true;
+		
+			var family = {
+				goyo:  'A mí llévenme a donde quieran, yo no pongo peros. Con tal que no tenga que estar mucho tiempo en el coche… Mi espalda ya no aguanta. Y bueno, ya saben lo que dicen: “El amor entra por el estómago”.',
+				trini: 'Yo quiero ir a un lugar muy <a class="liga" href="#" onclick="define(\'pintoresco\')">pintoresco</a>. Pasear por las calles, ver las iglesias, ir al mercado, comprar alguna artesanía. Quizá podamos visitar un museo. Eso sí, tendremos que cuidar el bolsillo.',
+				lucia: '¿De verdad tengo que ir? Yo prefiero quedarme aquí con mis amigos. La última vez que hicimos un paseo, ¡no había nadie de mi edad!',
+				tonyo: '¿Museos? ¡Qué aburrido! ¡Mejor vamos a acampar! En la playa, en el bosque, al lado de algún río, ¡no importa! Yo quiero estar afuera para jugar y salir a explorar… ¡Y nadar!'				
+			}
+			
+			function showFamily(){
+				for(var member in family){
+					var $div = $("<div>", { id: member, class: 'member inactivo'});
+					$('#contenedor').append($div);
+				}
+			}
+			
+			function activar(){
+				$('.member').removeClass('inactivo').addClass('activo');
+				$('.member').on('click',function(){
+					   var nombre = $(this).attr('id');
+					   showComment(nombre);
+				});
+			}
+			
+			function showComment(nombre){
+				$('.comentario').html(family[nombre]);
+				var classesToAdd =  'slowShow ' + nombre;
+				$('#globo').removeClass().addClass(classesToAdd);
+				if(clicked.indexOf(nombre)==-1){
+					clicked.push(nombre);
+					if(clicked.length==4){
+						nextQuestion();
+					}
+				}
+			}
+			
+			function define(termino){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "showDefinition", params: {id: 'cap2_losPerez' , value: termino } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function nextQuestion(){
+				setTimeout(function(){
+					if(inicio){
+						inicio = false;
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "gotoNextQuestion", params: {id: 'cap2_losPerez' } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				},5000);
+			}
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="info"){
+					     activar();
+					} else
+					if(evt.data.name=="desplegar"){
+					     showComment(evt.data.value);
+					} else
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer por omisión / sin info específica
+							activar();
+							
+							//esto SIEMPRE debe ir
+							var padre = window.parent;
+							var mensajeTipoSet = { command: "mwReconstructed", params: {id: 'cap2_losPerez' } };
+							padre.postMessage(mensajeTipoSet, "*");	
+							
+						} else {
+							//lo que se tenga que hacer con base en historial
+							//no aplica aquí
+						}
+					} 
+				}
+			}
+			
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				
+				showFamily();
+				//activar();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap2_losPerez' } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

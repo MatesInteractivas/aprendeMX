@@ -1,0 +1,34 @@
+@import 'Descartes_spinner.css';
+
+#RESETA.DescartesSpace2DContainer {
+	box-shadow: 0px 0px 8px 3px #bdc3c7;
+}
+
+#INSTR.DescartesSpace2DContainer {
+	box-shadow: 0px 0px 8px 3px #bdc3c7;
+}
+
+
+#DISP2_numericalControls,#DISP_numericalControls{
+
+	
+}
+
+
+#INST, #EDIT{
+	box-shadow: 0px 0px 4px gray;
+}
+
+#EDIT{
+
+}
+
+div#HELP{
+	box-shadow: 0px 0px 5px -2px #212121;
+}
+
+#editCtr{
+
+}
+
+

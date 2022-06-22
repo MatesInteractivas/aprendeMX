@@ -1,0 +1,48 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "electricidad y magnetismo", 
+    "funcionamiento de un circuito eléctrico y sus componentes", 
+    "materiales conductores y aislantes de la corriente eléctrica", 
+    "aplicaciones del circuito eléctrico."
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Electricidad", 
+    "circuito", 
+    "circuitos", 
+    "voltaje", 
+    "batería", 
+    "pila", 
+    "baterías", 
+    "pilas", 
+    "fuente de voltaje", 
+    "resistencia", 
+    "resistividad", 
+    "conductividad", 
+    "corriente eléctrica", 
+    "foco", 
+    "alambre", 
+    "diagrama eléctrico", 
+    "diagramas eléctricos", 
+    "polo", 
+    "positivo", 
+    "negativo", 
+    "corriente eléctrica", 
+    "foco", 
+    "interruptor"
+  ], 
+  "descripcion": "En esta unidad identificarás los componentes más comunes de un circuito eléctrico, como la fuente de voltaje (pila), los conductores (cables) y elementos resistentes, como un foco, además de interruptores, y conocerás la simbología usual para representarlos. Reconocerás a la corriente eléctrica como aquello que fluye en un circuito eléctrico y notarás que no lo hace con igual facilidad en cualquier objeto o material, y clasificarás diversos materiales como buenos o malos conductores de la electricidad.",
+  "resena": "Los componentes más comunes de los circuitos eléctricos y su relación con el flujo de la corriente eléctrica.",
+  "titulo": "Circuitos y resistencia", 
+  "id": "PA5_OA_CN_3UNAM_000"
+}

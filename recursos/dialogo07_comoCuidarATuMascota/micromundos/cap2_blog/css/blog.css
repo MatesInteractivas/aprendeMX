@@ -1,0 +1,28 @@
+body{
+	overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 585px;
+	height: 477px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/fondo_blog.png') no-repeat;
+}
+
+div > p{
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	letter-spacing: 0.7px;
+	padding: 0px 50px;
+	text-align:left;
+}
+
+div > p:first-child{
+	padding-top: 58px;
+}
+
+

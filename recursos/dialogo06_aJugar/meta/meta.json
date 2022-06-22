@@ -1,0 +1,39 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto expositivo", 
+    "Cohesión"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "párrafo", 
+    "cohesión", 
+    "párrafo cohesionado", 
+    "conector", 
+    "conectores", 
+    "conectores de constraste", 
+    "conectores de oposición", 
+    "conectores de adición", 
+    "conectores de continuación", 
+    "marcadores", 
+    "marcadores textuales", 
+    "orden de ideas", 
+    "gráfica", 
+    "lectura de gráfica", 
+    "futbol"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "El alumno o la alumna analizará un conjunto de datos contenido en una tabla o gráfica. Con base en dicho análisis redactará un párrafo descriptivo de las características encontradas, cohesionado mediante conectores de adición y contraste.",
+  "resena": "Análisis del conjunto de datos en una tabla y su expresión lingüística usando conectores de adición y contraste.",
+  "titulo": "¡A jugar!", 
+  "id": "PA5_OA_ES_3UNAM_006_parrafoCohesionado"
+}

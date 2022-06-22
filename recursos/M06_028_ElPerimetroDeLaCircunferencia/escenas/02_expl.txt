@@ -1,0 +1,68 @@
+﻿P[NP,xpln]='La figura muestra el esquema de un circuito de paseo para ciclistas que está formado por tres tramos rectos, iguales entre sí, y tres arcos de circunferencia, también iguales entre sí. La medida de los tramos rectos es de 1000 m y el radio de los arcos es de 160 m.'
+P[NP,stmt]='Cuál es la longitud de cada arco? ¿Cuál es la longitud total del circuito?'
+P[NP,hint]='Los tres arcos circulares son iguales y juntos equivalen a una circunferencia.'
+P[NP,lbl1]='Longitud de cada arco'
+P[NP,rsp1]=335 m
+P[NP,unt1]='m'
+P[NP,err1]=1
+P[NP,lbl2]='Longitud total del circuito'
+P[NP,rsp2]=4005
+P[NP,unt2]='m'
+P[NP,err2]=2
+NP=NP+1
+
+P[NP,xpln]='El diámetro de las monedas mexicanas de 1$, 2$, 5$ y 10$, son: 20 mm, 22 mm, 25 mm y 28 mm, respectivamente. Por tanto, si la de 1$ rueda sin resbalar, recorre 62.8 mm en cada vuelta.'
+P[NP,stmt]='Qué distancia recorre la de 10$ al dar una vuelta rodando? ¿Cuántas vueltas daría la de 5$ si recorriera 157 cm rodando?'
+P[NP,hint]='Una moneda al rodar recorre su perímetro cada vez que da una vuelta.'
+P[NP,lbl1]='La de 10$ en una vuelta recorre'
+P[NP,rsp1]=88
+P[NP,unt1]='mm'
+P[NP,err1]=1
+P[NP,lbl2]='Al recorrer 1 m, la de 5$ daría'
+P[NP,rsp2]=20
+P[NP,unt2]='vueltas'
+P[NP,err2]=0.5
+NP=NP+1
+
+
+NP=NP+1
+
+P[NP,xpln]='Originalmente el metro se definió como la 40,000-ésima parte del perímetro de La Tierra y, aunque actualmente se define en términos de una barra de platino-iridio que se encuentra en París, sigue siendo cierto que el perímetro de La Tierra mide casi exactamente 40,000 kilómertros.'
+P[NP,stmt]='¿Qué distancia hay, sobre la superficie terrestre, entre el Polo Norte y el Círculo del Ecuador?\n¿Cuál es el radio de La Tierra?'
+P[NP,hint]='Del polo al ecuador hay un cuarto de meridiano terrestre. Del diámetro se puede obtener el perímetro y viceversa. El radio es la mitad del diámetro. '
+P[NP,lbl1]='Del polo al ecuador hay'
+P[NP,rsp1]=10000
+P[NP,unt1]='km'
+P[NP,err1]=1
+P[NP,lbl2]='Radio de La Tierra'
+P[NP,rsp2]=6369.5
+P[NP,unt2]='km'
+P[NP,err2]=10
+NP=NP+1
+
+P[NP,xpln]='La longitud del circuito de carreras de Indianápolis, sede de la famosa carrera Indy 500, es poco más de 4 km. El circuito consta de 4 tramos rectos y cuatro curvas de un cuarto de circunferencia. Dos de los tramos rectos son paralelos entre sí y miden 1000 m. Los otros dos, también paralelos entre sí miden 200 m.'
+P[NP,stmt]='¿Qué longitud tiene cada uno de los cuatro tramos curvos?\n¿Cuál es el radio de los sectores circulares que formasn eson tramos curvos?'
+P[NP,hint]='Los cuatro tramos largos deben sumar 4000 menos lo que sumas los tramos rectos. Los cuatro tramos curvos tienen la misma longitud que una circunferencia con el mismo radio.'
+P[NP,lbl1]='Longitud de un tramo curvo'
+P[NP,rsp1]=400
+P[NP,unt1]='m'
+P[NP,err1]=5
+P[NP,lbl2]='Radio de los tramos curvos'
+P[NP,rsp2]=254.78
+P[NP,unt2]='m'
+P[NP,err2]=5
+NP=NP+1
+
+P[NP,xpln]='Las pistas de atletismo constan de dos segmentos rectos de 84.39 m y dos\nsemicircunferencias de 36.5 m de radio, como muestra la figura. En general\ntienen 8 o 9 carriles de 122 cm de ancho, numerados de adentro hacia afuera.'
+P[NP,stmt]='Cuando un corredor da una vuelta a la pista por el primer carril, recorre 400 m. ¿Cuántos metros recorrería si diera la vuelta por el segundo carril? ¿Qué tanto más adelante debe ponerse la salida del segundo carril para que la competencias sea justa?'
+P[NP,hint]='Las partes rectas no cambian, pero el radio de las curvas aumenta y por tanto también la longitud.'
+P[NP,lbl1]='Distancia que recorrería'
+P[NP,rsp1]=407.67
+P[NP,unt1]='m'
+P[NP,err1]=0.02
+P[NP,lbl2]='La salida debe adelantarse'
+P[NP,rsp2]=7.67
+P[NP,unt2]='m'
+P[NP,err2]=0.02
+NP=NP+1
+

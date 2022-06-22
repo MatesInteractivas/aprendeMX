@@ -1,0 +1,416 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+p, .vntn, div, h1 {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+div{
+    padding: 5px;
+}
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    border-width: 0px;
+    margin: 0 auto;
+    max-width: 1230px;
+    min-width: 1230px;
+    min-height: 610px;
+    max-height: 610px;
+}
+
+
+div.mapaOrig{
+    width: 644px;
+    height: 548px;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+div.pregunta{
+    width: 200px;
+    background-color: #fca965;
+    border: 2px solid #ad6429;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+div.postura{
+    position: absolute;
+    width: 100px;
+    height: auto;
+    padding: 10px 5px;
+    text-align: center;
+    top: 20px;
+}
+
+div.postura.postura1{
+    background-color: #48cbe7;
+    box-shadow: 4px 4px 0px #d3bc9c;
+    left: 40px;
+}
+div.postura.postura1::before{
+    content: "";
+    background-color: #48cbe7;
+    position: absolute;
+    width: 75px;
+    height: 4px;
+    left: 100px;
+    top: 20px;
+}
+div.postura.postura2{
+    background-color: #46f997;
+    box-shadow: 4px 4px 0px #d3bc9c;
+    right: 40px;
+}
+div.postura.postura2::before{
+    content: "";
+    background-color: #46f997;
+    position: absolute;
+    width: 65px;
+    height: 4px;
+    left: -64px;
+    top: 20px;
+    z-index: 0;
+}
+
+div.argumentos{
+    margin: 20px 10px 10px 10px;
+    display: inline-block;
+    color: #fff;
+    background-color: #7f7f7f;
+    padding: 6px 10px;
+    position: absolute;
+    top: 80px;
+}
+div.argumentos.argumentos1{
+    left: 50px;
+}
+div.argumentos.argumentos2{
+    right: 50px;
+}
+div.argumentos::before{
+    position: absolute;
+    content: "";
+    background-color: #7f7f7f;
+    top: -30px;
+    height: 30px;
+    width: 4px;
+}
+div.argumentos.argumentos1::before{
+        left: 20px;
+}
+div.argumentos.argumentos2::before{
+        right: 20px;
+}
+
+div.bando{
+    position: relative;
+    width: 290px;
+    display: inline-block;
+    vertical-align: top;
+    /*border: 1px solid #000;*/
+}
+div.bando.bando1{
+        margin: 130px 10px 10px 10px;
+}
+div.bando.bando2{
+        margin: 130px 10px 10px 0px;
+}
+
+div.bando > div.argumento{
+    width: 90%;
+    margin: 10px 0px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+div.bando1 > div.argumento{
+    background-color: #48cbe7;
+    border: 2px solid #0054a6;
+}
+div.bando2 > div.argumento{
+    background-color: #46fa97;
+    border: 2px solid #3aba73;
+    margin: 10px 0px 10px 10px;
+}
+
+
+
+div.bando > div.apoyo{
+    position: relative;
+    width: auto;
+    font-size: 22px;
+    color: #fff;
+    background-color: #7f7f7f;
+}
+
+div.bando1 > div.apoyo{
+    margin: 10px 30px;
+}
+div.bando2 > div.apoyo{
+    margin: 10px 35px 10px 30px;
+}
+div.bando1 > div.apoyo::before{
+    position: absolute;
+    content: "";
+    background-color: none;
+    border-left: 3px solid #7f7f7f;
+    border-bottom: 3px solid #7f7f7f;
+    top: -10px;
+    left: -25px;
+    height: 25px;
+    width: 25px;
+}
+div.bando2 > div.apoyo::before{
+    position: absolute;
+    content: "";
+    background-color: none;
+    border-right: 3px solid #7f7f7f;
+    border-bottom: 3px solid #7f7f7f;
+    top: -10px;
+    right: -25px;
+    height: 25px;
+    width: 25px;
+}
+
+div.bando > div.ideaDeApoyo{
+    display: inline-block;
+    width: auto;
+    font-size: 21px;
+    margin: 3px 0px 3px 30px;
+}
+
+div.bando1 > div.ideaDeApoyo{
+    background-color: #76dff6;
+}
+div.bando2 > div.ideaDeApoyo{
+    background-color: #90ffc2;
+}
+
+
+
+div.argumento.e-rojo{
+    border: 2px solid #e12828 !important;
+    background-color: #ed7070 !important;
+    color: #fff;
+}
+div.argumento.e-tachado{
+    text-decoration: line-through;
+}
+
+div.argumento.e-morado{
+    border: 2px solid #b33ee0 !important;
+    background-color: #e283e6 !important;
+}
+
+div.argumento.e-resaltado,
+div.ideaDeApoyo.e-resaltado{
+    border: 4px solid #b33ee0 !important;
+}
+
+div.dato{
+    max-width: 200px;
+    height: auto;
+    font-size: 20px;
+    text-height: 20px;
+}
+
+ul{
+  margin: 3px 0px 0px 0px;
+  font-size: 18px;
+  line-height: 17px ;
+}
+
+ul > li.pro{
+    list-style-image: url('img/pro.png');
+    color: #18934f;
+}
+ul > li.contra{
+    list-style-image: url('img/contra.png');
+    color: #ff0000;
+}
+
+
+
+/***** DATOS ****/
+
+div.conDato{
+    position: relative;
+}
+
+div.conDato::before,
+div.conDato::after{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border-radius: 0px;
+    font-size: 16px;
+    line-height: 16px;
+}
+div.conDato::before{
+    top: -10px;
+}
+div.conDato::after{
+    top: 10px;
+}
+div.conDato.beforePro::before,
+div.conDato.afterPro::after{
+    color: #18934f;
+    border-bottom: 1px dotted #18934f;
+}
+div.conDato.beforeContra::before,
+div.conDato.afterContra::after{
+    color: #ff0000;
+    border-bottom: 1px dotted #ff0000;
+}
+
+.bando1 div.conDato::before,
+.bando1 div.conDato::after{
+    padding: 0px 40px 0px 10px;
+    left: -250px;
+}
+.bando2 div.conDato::before,
+.bando2 div.conDato::after{
+    padding: 0px 10px 0px 40px;
+    right: -250px;
+}
+    
+div.conDato.beforePro[data-id="salud"]::before{
+    content: "+ 1 niño en 3 tiene sobrepeso.";
+    width: 220px !important;
+    left: -270px !important;
+}
+div.conDato.afterPro[data-id="salud"]::after{
+    content: "+ OMS recomienda 60 mins. diarios de ejercicio.";
+    width: 290px !important;
+    left: -340px !important;
+}
+
+div.conDato.beforeContra[data-id="diversion"]::before{
+    content: "- A 58% no les gusta el ejercicio.";
+    width: 250px !important;
+    left: -300px !important;
+}
+div.conDato.afterPro[data-id="diversion"]::after{
+    content: "+ El 69% prefiere el fútbol y básquet.";
+    width: 250px !important;
+    left: -300px !important;
+    /*transform: rotate(-25deg);*/
+}
+
+
+div.conDato.beforeContra[data-id="otroLugar"]::before{
+    content: "- Caminata larga de media hora.";
+}
+
+div.conDato.beforeContra[data-id="ecologia"]::before{
+    content: "- Sólo representa 1% de la zona forestal.";
+    width: 250px !important;
+    right: -300px !important;
+}
+
+/*** bando 2 ***/
+div.conDato.afterPro[data-id="ecologia"]::after{
+    content: "+ El 70% de las zonas boscosas de Veracruz ha desaparecido.";
+    width: 300px !important;
+    right: -350px !important;
+}
+
+div.conDato.beforePro[data-id="aire"]::before{
+    content: "+ 22 árboles = oxígeno que consume 1 persona.";
+}
+
+div.conDato.beforeContra[data-id="plantar"]::before{
+    content: "- Requieren 100+ años para crecer a su estado actual.";
+    width: 200px !important;
+    left: -250px !important;
+}
+
+div.conDato.beforePro[data-id="especies"]::before{
+    content: "+ Zona muy biodiversa: 3,356 especies.";
+}
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+
+.e-oculto {
+	opacity: 0;
+	display: none;
+	height: 0px;
+	border: none;
+}
+
+.e-marcado {
+	background: rgba(172,40,180,0.5);
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

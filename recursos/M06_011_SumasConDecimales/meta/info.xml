@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_011"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Sumas con decimales
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Esta unidad te ayudará a practicar el algoritmo de la suma para poderlo aplicar en la resolución de problemas que involucren números enteros y decimales.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, decimales, Sentido numérico y pensamiento algebraico, Problemas aditivos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, adición, suma, problemas, decimales, enteros, punto decimal, resolución de problemas
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

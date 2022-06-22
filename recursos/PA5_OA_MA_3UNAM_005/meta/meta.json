@@ -1,0 +1,40 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "áreas", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Área", 
+    "rectángulo", 
+    "paralelogramo", 
+    "rombo", 
+    "romboide", 
+    "figuras planas", 
+    "base", 
+    "altura", 
+    "paralela", 
+    "perpendicular", 
+    "corte", 
+    "traslación", 
+    "superficie", 
+    "igualdad de áreas", 
+    "fórmula"
+  ], 
+  "descripcion": "Este recurso te permitirá determinar y usar la fórmula para calcular el área de los paralelogramos, incluyendo el rombo y el romboide.",
+  "resena": "Justificación de la regla para calcular el área de un paralelogramo.",
+  "titulo": "Área del paralelogramo", 
+  "id": "PA5_OA_MA_3UNAM_005"
+}

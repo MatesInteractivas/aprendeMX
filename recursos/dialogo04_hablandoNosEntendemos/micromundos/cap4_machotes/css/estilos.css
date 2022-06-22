@@ -1,0 +1,62 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+p, .vntn, div, h1 {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background-image: url("img/fondo.jpg");
+}
+
+.machotes{
+    width: 94%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.machote{
+    position: relative;
+    display: inline-block;
+    width: 261px;
+    height: 230px;
+    margin: 10px;
+    background: url('img/fondoMachote.png') no-repeat;
+    background-position: right 15px bottom 0px;
+    cursor: pointer;
+}
+.machote:hover, .machote:active, .machote.e-seleccionado{
+    background: url('img/fondoMachote_over.png') no-repeat;
+    background-position: right 15px bottom 0px;
+}
+
+.machote > img {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.slowShow{
+    -webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 1.5s;
+}
+
+.e-oculto{
+    visibility: hidden;
+    opacity : 0;
+    display: none;
+}

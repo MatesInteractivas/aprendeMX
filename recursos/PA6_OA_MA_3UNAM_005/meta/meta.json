@@ -1,0 +1,46 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Prisma", 
+    "pirámide", 
+    "poliedro", 
+    "caras", 
+    "arista", 
+    "vértice", 
+    "cuerpos geométricos", 
+    "base", 
+    "altura", 
+    "inclinación", 
+    "perpendicular", 
+    "paralela", 
+    "oblicuo", 
+    "prisma recto", 
+    "pirámide recta", 
+    "polígono regular", 
+    "pentagonal", 
+    "triangular", 
+    "cuadrado", 
+    "hexagonal", 
+    "eptagonal", 
+    "octagonal"
+  ], 
+  "descripcion": "A través de la observación y construcción de diferentes prismas, pirámides, cilindros y conos descubriras cuáles son las características de cada uno de ellos y cómo ubicar sus alturas.",
+  "resena": "Propiedades de prismas y pirámides a partir de su construcción.",
+  "titulo": "Prismas y pirámides", 
+  "id": "PA6_OA_MA_3UNAM_005"
+}

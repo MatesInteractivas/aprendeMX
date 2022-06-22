@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_100"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Un microscopio casero
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad explorarás el fenómeno de la refracción de la luz, y reconocerás la propiedad de las lentes de modificar el tamaño de una imagen, ya sea aumentándola, invirtiéndola, etcétera. Determinarás cómo son las imágenes formadas por diversos tipos de lentes, por ejemplo, lentes planas, convergentes, que son más gruesas en el centro, o divergentes, que son más delgadas al centro, y harás combinaciones de lentes para conseguir una imagen más grande que el objeto original para construir un microscopio casero con el que podrás observar interesantes detalles de varios objetos. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, óptica, uso de los instrumentos ópticos, microscopios y telescopios, alcances y limitaciones de los instrumentos ópticos, relación de la reflexión y refracción de la luz con la formación de imágenes en espejos y lentes, funcionamiento de algunos instrumentos ópticos por medio de la formación de imágenes en objetos e instrumentos con espejos y lentes.
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Óptica geométrica, refracción, amplificación, aumento, foco, lente, convergente, distancia focal, dioptría, estructuras microscópicas, microscopio, imágenes virtuales, imágenes reales, luz, instrumento óptico, microscopio
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

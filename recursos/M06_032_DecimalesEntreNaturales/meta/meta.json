@@ -1,0 +1,28 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "decimales", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Problemas multiplicativos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "fración", 
+    "número decimal", 
+    "división."
+  ], 
+  "descripcion": "¿Cuántas botellas de tres cuartos de litro se necesitan para embotellar 250 litros de vino? Éste es un problema que se resuelve con una división de fracciones. También se puede convertir el ¾ en 0.75 y resolverlo con una división de números decimales. En esta unidad aprenderás a resolver problemas dividiendo fracciones y números decimales.",
+  "resena": "División de números decimales entre naturales y su aplicación en la resolución de problemas.",
+  "titulo": "Decimales entre naturales", 
+  "id": "PA6_OA_MA_3UNAM_032"
+}

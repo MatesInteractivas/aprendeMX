@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="DESCRIPTION OF CONTENT" />
+		<meta name="keywords" content="KEYWORDS FOR CONTENT" />
+		<link rel="icon" type="image/ico" href="img/general/unam.ico" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/stylesheet_fonts.css" />
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<title>Una cuestión de estilo</title>
+	</head>
+	<body>
+		<div class="js-oactx oacontext">
+			
+			<div class="js-overlay overlay"></div>
+
+			<div class="content clearfix">
+
+				<div class="vntn vntn-inst js-instrucciones">
+					<p class="vntn--titulo">
+						Indicaciones
+					</p>
+					<div class="vntn--contenido">
+
+					</div>
+				</div>
+				
+				<!--<div class="main-text js-main-text">
+					<div class="js-players players">
+						<div class="player">
+							<span class="player--name js-player-data" data-player="elena">María Elena</span>
+						</div>
+						<div class="player">
+							<span class="player--name js-player-data" data-player="ana">Ana María</span>
+						</div>
+					</div>	
+				</div>-->
+				
+				
+				<!--tine-->
+				<div class='div-fase2 e-oculto'>
+					
+					<div class='oraciones'>
+						<h1>ORACIONES</h1>
+						<button class="btn btn-cambiarOraciones js-btn-cambiarOraciones" >Cambiar oraciones</button>
+					</div>
+					
+					<div class='lienzo'>
+						<h1>PÁRRAFO</h1>
+						<p class='parrafo'></p>
+						<button class="btn btn-borrar js-btn-borrar e-inactivo" >Borrar última frase</button>
+					</div>
+					
+					<div class='conectoresMarcadores'>
+						<div class='conectores'>
+							<h1>CONECTORES</h1>
+							<div class='oposicion'>
+								<h2>Oposición/contraste</h2>
+								<div class='txtElem conector' data-id='cntr_op_1'>Ahora bien, </div>
+								<div class='txtElem conector' data-id='cntr_op_2'>Por otra parte, </div>
+								<div class='txtElem conector' data-id='cntr_op_3'>En cambio, </div>
+								<div class='txtElem conector' data-id='cntr_op_4'>Sin embargo, </div>
+							</div>
+							
+							<div class='adicion'>
+								<h2>Adición/continuación</h2>
+								<div class='txtElem conector' data-id='cntr_ad_1'>En primer lugar, </div>
+								<!--div class='txtElem conector' data-id='cntr_ad_2'>y </div-->
+								<div class='txtElem conector' data-id='cntr_ad_2'>Además, </div>
+								<div class='txtElem conector' data-id='cntr_ad_3'>También </div>
+								<div class='txtElem conector' data-id='cntr_ad_4'>Asimismo, </div>
+								<div class='txtElem conector' data-id='cntr_ad_5'>Finalmente, </div>
+							</div>
+						</div>
+					
+					
+						<div class='marcadores'>
+							<h1>MARCADORES</h1>
+							<div class='txtElem marcador' data-id='mrcdr_1'>Las pruebas realizadas evidenciaron que </div>
+							<div class='txtElem marcador' data-id='mrcdr_2'>Queremos resaltar que </div>
+							<div class='txtElem marcador' data-id='mrcdr_3'>Conviene señalar que </div>
+							<div class='txtElem marcador' data-id='mrcdr_4'>Es importante mencionar que </div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='div-fase1'>
+				
+					<!--<div class="vntn js-vntn-player vntn-player" data-player="elena">
+						<div class="vntn-player--text">
+							Lo que más le gusta a María Elena del futbol es <span class="blank" data-blank="1"></span>. Del equipo y las compañeras espera <span class="blank" data-blank="2"></span>. 
+							Asimismo, opina que sus virtudes más importantes son <span class="blank" data-blank="3"></span>.
+						</div>
+					</div>-->
+					
+					<img class='foto' />
+					
+					<div class="vntn js-vntn-player vntn-player" data-player="elena">
+						<div class="vntn-player--text">
+							<span class="blank" data-blank="1">María Elena tiene 11 años y cuatro años jugando futbol.</span> <span class="blank" data-blank="2">Es la más rápida de las tres.</span>
+							Además, <span class="blank" data-blank="3">tiene una excelente condición física</span>. <span class="blank" data-blank="4">Su capacidad goleadora es buena</span>, pero <span class="blank" data-blank="5">su habilidad con el balón es sólo aceptable</span>.
+						</div>
+					</div>
+					<div class="vntn js-vntn-player vntn-player" data-player="claudia">
+						<div class="vntn-player--text">
+							<span class="blank" data-blank="1">Claudia tiene doce años y dos años jugando futbol.</span> <span class="blank" data-blank="2">Su capacidad goleadora es excelente</span> y  
+							<span class="blank" data-blank="3">tiene una excelente habilidad con el balón</span>. Sin embargo, <span class="blank" data-blank="4">no corre muy rápido</span> y <span class="blank" data-blank="5">su condición física es sólo aceptable</span>.
+						</div>
+					</div>
+					<div class="vntn js-vntn-player vntn-player" data-player="ana">
+						<div class="vntn-player--text">
+							<span class="blank" data-blank="1">Ana María tiene 11 años y no ha jugado futbol en un equipo antes.</span> <span class="blank" data-blank="2">Tiene una excelente condición física.</span> Asimismo,  
+							<span class="blank" data-blank="3">corre muy rápido</span>. En cambio, <span class="blank" data-blank="4">su capacidad goleadora es sólo aceptable</span> y <span class="blank" data-blank="5">su habilidad con el balón no es tan buena</span>.
+						</div>
+					</div>
+
+					
+					<button class="btn js-btn-finish btn-finish" >¡Listo!</button>
+				</div>
+				
+				<button class="btn js-btn-instr btn-instr" >Indicaciones</button>
+				
+				<div class="vntn js-vntn-feedback vntn-feedback" data-correct="">
+					<div class="vntn--contenido"></div>
+				</div>
+				
+				
+
+			</div><!-- contenido-->
+			
+		</div><!-- /oacontext -->
+	</body>
+</html>

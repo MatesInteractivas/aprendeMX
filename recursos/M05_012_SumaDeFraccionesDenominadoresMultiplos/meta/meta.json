@@ -1,0 +1,33 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "fracciones", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Problemas aditivos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Fracciones", 
+    "denominadores", 
+    "numeradores", 
+    "múltiplos", 
+    "mínimo múltiplo común", 
+    "suma de fracciones", 
+    "resta de fracciones", 
+    "fracciones equivalentes"
+  ], 
+  "descripcion": "En esta unidad podrás explorar cómo se realizan las sumas de fracciones cuando uno de los denominadores es múltiplo del otro. Por ejemplo 2/3 + 1/6 es lo mismo que 4/6 + 1/6 = 5/6.",
+  "resena": "Suma de fracciones con un denominador múltiplo del otro.",
+  "titulo": "Suma de fracciones cuando un denominador es múltiplo del otro", 
+  "id": "PA5_OA_MA_3UNAM_012"
+}

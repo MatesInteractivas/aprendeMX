@@ -1,0 +1,30 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "símbolo", 
+    "decimal", 
+    "vigesimal", 
+    "cero", 
+    "numeral", 
+    "posicional."
+  ], 
+  "descripcion": "Aunque actualmente el sistema de numeración más usado es el decimal, antiguamente había muchos otros. Uno de los más prácticos y avanzados fue inventado en nuestro país. Se trata del sistema de numeración maya. Esta unidad te permitirá conocer y entender el sistema de numeración maya, así como algunas de sus cualidades más importantes.",
+  "resena": "Sistemas de numeración poco comunes como el maya.",
+  "titulo": "El sistema de numeración maya", 
+  "id": "PA5_OA_MA_3UNAM_037"
+}

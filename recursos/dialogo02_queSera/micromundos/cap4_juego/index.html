@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" type="text/css" href="css/adivina-quien.css">
+	<link rel="stylesheet" type="text/css" href="js/contribute/modal/css/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/adivina-quien-custom.css">
+	<link rel="stylesheet" type="text/css" href="css/modal-custom.css">
+	<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+	
+	<script type="text/javascript" src="js/contribute/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/contribute/modal/js/jquery.simplemodal.js"></script>
+	<script type="text/javascript" src="js/adivina-quien.js"></script>
+	<script type="text/javascript" src="js/dialog_adapter.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var AQ_config = {
+				retros_txt : { // texto de retros
+					unico		: {
+						perfecto	: '¡Felicidades! <br> Encontraste el transporte: "@transporte_correcto@".',
+						errorneo	: 'La pregunta que hiciste no te permite eliminar este transporte.',
+						bien		: 'Un consejo antes de seguir. Todavía puedes eliminar más transportes y... ¡ganar el juego! ¿Qué prefieres?',
+						final_error : 'Oh caray. No estaba pensando en ese transporte, sino en éste: "@transporte_correcto@". Algo hicimos mal en el proceso. Juguemos de nuevo. Esta vez será más fácil, ya verás.'
+					},
+					categoricas	: {
+						perfecto	: "¡Bien hecho! Sigamos.",
+						errorneo	: 'La pregunta que hiciste no te permite eliminar este transporte.',
+						bien		: '¡Momento, momento! Hiciste una buena pregunta, tan buena que aún puedes eliminar más transportes. ¿Qué quieres hacer?',
+						final_error : 'Oh caray. No estaba pensando en ese transporte, sino en éste: "@transporte_correcto@". Algo hicimos mal en el proceso. Juguemos de nuevo. Esta vez será más fácil, ya verás.'
+					},
+
+					relativas	: {
+						perfecto	: "¡Bien hecho! <br> Continuemos.",
+						errorneo	: 'Yo, en tu lugar, no haría eso. ¿Estás segurísimo de tu decisión?',
+						bien		: '<br>Sigamos pues.<br><br> ',
+						final_error : 'Oh caray. No estaba pensando en ese transporte, sino en éste: "@transporte_correcto@". Algo hicimos mal en el proceso. Juguemos de nuevo. Esta vez será más fácil, ya verás.'
+					}	 						
+				},
+				
+
+				messageCfg : { // El tamaño de la ventana de retros.
+					width	: 400,
+					height	: 300
+				},
+				imagesDir : 'imgs/transportes',
+				btnLabel : ['No quiero eliminar nada', '<br>¡Listo!<br>'],
+
+				/*
+				* Para poder actuar al llamar 
+				*/
+				llamadaUnicoFinPerfecto : function(){
+					//alert("[llamadaUnicoFinPerfecto]\nSe llamo desde la función instanciada en el index.html");
+					setTimeout(function(){
+						//adapter.setQuestionInDialog("cap4_volverAJugar");
+						adapter.finished_withSuccess();
+					},2000);
+					
+				},
+				llamadaUltimoErroneo : function(filtro, ultimaCarta){
+					//console.log("El filtro fue", filtro);
+					//console.log("La carta que quedo es : ",ultimaCarta);
+					//alert("[llamadaUltimoErroneo]\nSe llamo desde la función instanciada en el index.html");
+					setTimeout(function(){
+						//adapter.setQuestionInDialog("cap4_volverAJugar");
+						adapter.finished_withoutSuccess();
+					},2000);
+				},
+				
+				messageNoSuccess: 'Ay caray. Se te acabaron las preguntas y todavía tenemos varias opciones en el tablero. El transporte en que estaba pensando era "@transporte_correcto@".'
+
+
+			}
+
+
+			var AQ = new lite.AdivinaQuien(
+					'adivina-quien-container', //ID element
+					AQ_config);
+			
+			var cfgAdapter = {
+				micromundoId		: 'juego', 					//ID del icromundo
+				reinitQuestId		: 'cap4_volverAJugar', 	//El ID de la pregunta a mandar cuando se acabe la interacción correctamente
+				unsuccessQuestId	: 'cap4_sinExito',
+				gameOverId		: 'cap4_preg4_fin',
+				unsuccessSuffix		: '_sinExito',					//EL prefijo para armar a la pregunta correspondiente cuando exedio el número de intentos
+				maxPreguntas		: 6,
+				forceCardIdx 		: [0,4,6,12],  //Cual queremos que se seleccione siempre;
+				//forceCardIdx 		: [0,4],  //Cual queremos que se seleccione siempre;
+				forceCardLength		: 4  //2
+			}
+			var adapter = new lite.AdivinaQuien.DialogAdapter(AQ,cfgAdapter);
+			AQ.adapter = adapter;
+			
+			var instrucciones = "Verás un tablero con diferentes tipos de transporte.\
+			                     Seleccioné uno y tú debes adivinar cuál es. \
+					     <br><br>Para eso debes hacerme preguntas específicas que te permitan distinguirlo del resto del grupo,\
+					     preguntas que sólo impliquen responder <em>sí</em> o <em>no</em>.\
+					     <br><br>Por ejemplo, me puedes preguntar <em>¿El transporte es azul?</em>, y yo te diré 'Sí' o 'No'.\
+					     Pero si me preguntas <em>¿De qué color es?</em>, no podré ayudarte. \
+					     <br><br>¡Piensa bien tus preguntas! Busca las características distintivas para poder eliminar muchos transportes a la vez.\
+					     <br><br>Yo te ayudaré lo más que pueda. Si te sientes perdido, escribe ‘pista’.";
+			//AQ.showMessage(false,instrucciones,'instrucciones');
+		});
+	</script>
+
+	
+	<title>Adivina Quien</title>
+	
+</head>
+<body>
+
+
+<div id='adivina-quien-container'>
+	<div class='aq-retro-general-mal'>		RETRO - <b>MAL</b> </div>
+	<div class='aq-retro-general-bien'>		RETRO BIEN <b>BIEN</b> </div>
+	<div class='aq-retro-general-bien-all'>	MICROMUNDO TERMINADO  - <b>BIEN TODO</b> </div>
+	
+	<div class='aq-opt'
+		id = 'coche' 
+		data-object = '{
+		
+			categoricas : {
+			
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: true,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: true,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: true,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "volante",
+				asientos: "asientos",
+				num_llantas: "4 ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "gasolina",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "a la playa",
+				
+				//OTROS
+				capacidad: "grupito",
+				capacidad_cosas: "poca",
+				publico: "pub y priv",
+				conductor: "chofer"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 2,
+				tamanyo: 2,
+				velocidad: 2,
+				historia: 3
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene cuatro llantas."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de gasolina para desplazarse."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa para transportar un grupo pequeño de personas y a veces mercancías."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene volante, frenos, techo, varios asientos, ventanas y luces."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","autopista"],
+					enunciado: "Se usa mucho en las ciudades y en carretera."
+				}
+			}
+		}'>
+	</div>
+
+	
+	<div class='aq-opt'
+		id = 'camioneta' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: true,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: true,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "volante",
+				asientos: "asientos",
+				num_llantas: "4 ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "gasolina",
+				
+				//FUNCIÓN
+				carga_pasaje: "dos",
+				
+				//DONDE
+				playa: "a la playa",
+				
+				//OTROS
+				capacidad: "grupote",
+				capacidad_cosas: "mediana",
+				publico: "pub y priv",
+				conductor: "chofer"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 2,
+				tamanyo: 2,
+				velocidad: 2,
+				historia: 3
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene cuatro llantas."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de gasolina para desplazarse."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa para transportar personas y mercancías. En ella pueden viajar más de cinco personas."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene volante, frenos, techo, varios asientos, ventanas y luces."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","autopista"],
+					enunciado: "Se usa mucho en las ciudades y para viajar de una ciudad a otra."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama chofer, conductor o conductora a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'autobus' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: true,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: true,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "volante",
+				asientos: "asientos",
+				num_llantas: "m ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "diesel",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "a la playa",
+				
+				//OTROS
+				capacidad: "grupote",
+				capacidad_cosas: "mucha",
+				publico: "publico",
+				conductor: "chofer"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 2,
+				tamanyo: 2,
+				velocidad: 2,
+				historia: 3
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene cuatro o más llantas, depende del modelo."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de diésel para desplazarse."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa sobre todo para transportar personas."
+					
+				},
+				capacidad: {
+					claves: ["capacidad"],
+					enunciado: "En él pueden viajar muchas personas."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene volante, frenos, techo, muchos asientos, muchas ventanas y luces."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","autopista"],
+					enunciado: "Se usa en las ciudades y para viajar de una ciudad a otra."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'trailer' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: true,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: true,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "volante",
+				asientos: "asientos",
+				num_llantas: "m ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "diesel",
+				
+				//FUNCIÓN
+				carga_pasaje: "carga",
+				
+				//DONDE
+				playa: "no playa",
+				
+				//OTROS
+				capacidad: "trabajador",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "tmi"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 2,
+				tamanyo: 2,
+				velocidad: 2,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene muchas llantas."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de diésel para desplazarse."
+				},
+				funcion: {
+					claves: ["carga_pasaje","capacidad"],
+					enunciado: "Se usa principalmente para transportar mercancías. Tiene una gran capacidad."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene volante, frenos, techo, unos cuantos asientos, ventanas y luces."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","autopista"],
+					enunciado: "Se usa mucho para transportar mercancías en las ciudades, o de una localidad a otra."
+				},
+				conductor: {
+					claves: ["conductor","camionero"],
+					enunciado: "Se le llama conductor(a), camionero(a) o trailero(a) a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'bicicleta' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: true,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: false,
+				electricidad: false,
+				fuerza_humana: true,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: true,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: true,
+				entre_ciudades: false,
+				entre_ciudades_maso: true,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: false,
+				techo: false,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "manubrio",
+				asientos: "asiento",
+				num_llantas: "2 ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "NA",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "a la playa",
+				
+				//OTROS
+				capacidad: "individual",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "tmi"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 1,
+				tamanyo: 1,
+				velocidad: 1,
+				historia: 2
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene dos llantas."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "No tiene motor. Se mueve con la fuerza de un ser humano."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa para transportar una persona, máximo dos."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","asientos","luces"],
+					enunciado: "Tiene manubrio, frenos, un solo asiento y normalmente no viene con luces incluidas."
+				},
+				conductor: {
+					claves: ["conductor","automovilista"],
+					enunciado: "Se le llama ciclista a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'motocicleta' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: true,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: true,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: true,
+				techo: false,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+				
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "manubrio",
+				asientos: "asiento",
+				num_llantas: "2 ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "gasolina",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "a la playa",
+				
+				//OTROS
+				capacidad: "individual",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "tmi"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 1,
+				tamanyo: 1,
+				velocidad: 2,
+				historia: 3
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte terrestre. Tiene dos llantas."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de gasolina para desplazarse."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa principalmente para transportar personas. Está diseñado para una persona, máximo dos."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene manubrio, frenos, un asiento y luces."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","autopista"],
+					enunciado: "Se usa mucho en las ciudades y para viajar de una ciudad a otra."
+				},
+				conductor: {
+					claves: ["conductor","automovilista"],
+					enunciado: "Se le llama motociclista a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'tractor' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: true,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: true,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: true,
+				entre_ciudades: false,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: true,
+				techo: false,
+				frenos: true,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "volante",
+				asientos: "asiento",
+				num_llantas: "4 ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "gasolina",
+				
+				//FUNCIÓN
+				carga_pasaje: "no función",
+				
+				//DONDE
+				playa: "no playa",
+				
+				//OTROS
+				capacidad: "trabajador",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "chofer"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 2,
+				tamanyo: 2,
+				velocidad: 1,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico"],
+					enunciado: "Es un transporte terrestre."
+					
+				},
+				llantas: {
+					claves: ["num_llantas"],
+					enunciado: "Tiene cuatro llantas."
+					
+				},
+				funcion: {
+					claves: ["carga_pasaje","campo"],
+					enunciado: "Suele usarse para trabajar en el campo."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de gasolina para desplazarse."
+				},
+				estructura: {
+					claves: ["direccion","frenos","asientos","luces"],
+					enunciado: "Tiene volante, frenos, un solo asiento y luces."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'caballo' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: true,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: true,
+				
+				//ENERGÍA
+				motor: false,
+				electricidad: false,
+				fuerza_humana: false,
+				ser_vivo: true,
+				
+				//FUNCIÓN
+				campo: true,
+				turismo: true,
+				pesca: false,
+				se_come: true,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: true,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: true,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: true,
+				entre_ciudades: false,
+				entre_ciudades_maso: true,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: false,
+				techo: false,
+				frenos: false,
+				frenos_especial: false,
+				patas: true,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "no volante",
+				asientos: "no asiento",
+				num_llantas: "no ruedas",
+				material: "celulas",
+				
+				//ENERGÍA
+				combustible: "NA",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "playa",
+				
+				//OTROS
+				capacidad: "individual",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "jinete"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 1,
+				tamanyo: 1,
+				velocidad: 1,
+				historia: 0
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico"],
+					enunciado: "Es un transporte terrestre aunque también se puede mover en el agua (nadando)."
+					
+				},
+				vivo: {
+					claves: ["ser_vivo","patas"],
+					enunciado: "Es un animal. Tiene cuatro patas para moverse."
+					
+				},
+				funcion: {
+					claves: ["carga_pasaje","campo","capacidad"],
+					enunciado: "Suele usarse para trabajar en el campo. También se usa para transportar gente."
+					
+				},
+				capacidad: {
+					claves: ["capacidad"],
+					enunciado: "Sirve para transportar una o dos personas."
+				},
+				conductor: {
+					claves: ["conductor","jinete"],
+					enunciado: "Se le llama jinete a quien lo conduce."
+				}
+			}
+		}'>
+	</div>
+
+	<div class='aq-opt'
+		id = 'pies' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: true,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : true,
+				aereo : false,
+				acuatico: false,
+				nadador: true,
+				
+				//ENERGÍA
+				motor: false,
+				electricidad: false,
+				fuerza_humana: true,
+				ser_vivo: true,
+				
+				//FUNCIÓN
+				campo: true,
+				turismo: true,
+				pesca: true,
+				se_come: false,
+				canibal: true,
+				escuela: true,
+				escuela_agua: false,
+				trabajo: true,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: true,
+				entre_ciudades: false,
+				entre_ciudades_maso: true,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: false,
+				techo: false,
+				frenos: false,
+				frenos_especial: false,
+				patas: false,
+				patas_especial: true,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "no volante",
+				asientos: "no asiento",
+				num_llantas: "no ruedas",
+				material: "celulas",
+				
+				//ENERGÍA
+				combustible: "NA",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "playa",
+				
+				//OTROS
+				capacidad: "individual",
+				capacidad_cosas: "casi_nada",
+				publico: "privado",
+				conductor: "persona"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 0,
+				tamanyo: 1,
+				velocidad: 1,
+				historia: 0
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico"],
+					enunciado: "Es un transporte terrestre aunque también se puede mover en el agua (nadando)."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "No tiene motor. Se mueve con la fuerza de un ser humano."
+					
+				},
+				capacidad: {
+					claves: ["capacidad","carga_pasaje"],
+					enunciado: "Está diseñado para transportar una persona, máximo dos."
+				},
+				funcion: {
+					claves: ["campo","turismo","escuela","trabajo"],
+					enunciado: "Es común usarlo para ir a la escuela o el trabajo."
+					
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'helicoptero' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: true,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : true,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: true,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "timón",
+				asientos: "asientos",
+				num_llantas: "no ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "queroseno",
+				
+				//FUNCIÓN
+				carga_pasaje: "dos",
+				
+				//DONDE
+				playa: "no playa",
+				
+				//OTROS
+				capacidad: "variedad",
+				capacidad_cosas: "mediana",
+				publico: "privado",
+				conductor: "piloto"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 3,
+				tamanyo: 2,
+				velocidad: 3,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte aéreo."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor para desplazarse. Utiliza un combustible llamado queroseno."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa para transportar gente y mercancías."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene timón, varios asientos, ventanas, techo, luces y una hélice para mantenerse en el aire."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad"],
+					enunciado: "Se usa en las ciudades y para trasladarse de una ciudad a otra."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama piloto a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'cohete' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: true,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : true,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: false,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "timón",
+				asientos: "asientos",
+				num_llantas: "no ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "otros",
+				
+				//FUNCIÓN
+				carga_pasaje: "no función",
+				
+				//DONDE
+				playa: "no playa",
+				
+				//OTROS
+				capacidad: "grupito",
+				capacidad_cosas: "mucha",
+				publico: "privado",
+				conductor: "capitán"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 3,
+				tamanyo: 3,
+				velocidad: 3,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte aéreo."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor para desplazarse. Utiliza combustibles mucho más potentes que la gasolina."
+				},
+				funcion: {
+					claves: [],
+					enunciado: "Se usa para hacer viajar y hacer exploraciones fuera del planeta Tierra."
+					
+				},
+				donde: {
+					claves: [],
+					enunciado: ""
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene timón, asientos, ventanas, techo y luces."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama capitán a quien lo maneja."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'avion' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: true,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : true,
+				acuatico: false,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: true,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: false,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "timón",
+				asientos: "asientos",
+				num_llantas: "avión",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "queroseno",
+				
+				//FUNCIÓN
+				carga_pasaje: "dos",
+				
+				//DONDE
+				playa: "no playa",
+				
+				//OTROS
+				capacidad: "variedad",
+				capacidad_cosas: "mucha",
+				publico: "pub y priv",
+				conductor: "piloto"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 3,
+				tamanyo: 3,
+				velocidad: 3,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","num_llantas"],
+					enunciado: "Es un transporte aéreo."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor para desplazarse. Utiliza un combustible llamado queroseno."
+				},
+				funcion: {
+					claves: ["carga_pasaje","escuela","trabajo","capacidad"],
+					enunciado: "Se usa para transportar gente y mercancías. La cantidad de personas que pueden viajar en él depende de su tamaño."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "Tiene timón, asientos, ventanas, techo, luces y alas para mantenerse en el aire."
+				},
+				donde: {
+					claves: ["entre_ciudades","dentro_ciudad","lejos"],
+					enunciado: "Se usa para viajar lejos, entre ciudades, países o incluso continentes."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama piloto a quien lo conduce."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'barco' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: true,
+				cu_canoa: false,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : false,
+				acuatico: true,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: true,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: true,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: true,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: true,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: false,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: true,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+
+				
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "timón",
+				asientos: "asientos",
+				num_llantas: "no ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "diesel",
+				
+				//FUNCIÓN
+				carga_pasaje: "dos",
+				
+				//DONDE
+				playa: "mar",
+				
+				//OTROS
+				capacidad: "variedad",
+				capacidad_cosas: "mucha",
+				publico: "pub y priv",
+				conductor: "capitán"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 3,
+				tamanyo: 3,
+				velocidad: 2,
+				historia: 1
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","playa","dentro_ciudad_agua","entre_ciudades_puerto"],
+					enunciado: "Es un transporte acuático."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "Usa un motor de diésel para desplazarse (los modelos más pequeños usan gasolina)."
+				},
+				funcion: {
+					claves: ["carga_pasaje","capacidad"],
+					enunciado: "Se usa para transportar gente y mercancías. Su tamaño y capacidad varían mucho."
+					
+				},
+				estructura: {
+					claves: ["direccion","frenos","ventana","asientos","techo","luces"],
+					enunciado: "El modelo dibujado en el juego tiene timón, asientos, ventanas, techo y luces."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama capitán a quien lo conduce."
+				},
+				donde: {
+					claves: [],
+					enunciado: ""
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'canoa' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: true,
+				cu_submarino: false,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : false,
+				acuatico: true,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: false,
+				electricidad: false,
+				fuerza_humana: true,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: true,
+				pesca: true,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: true,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: true,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: true,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: false,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: true,
+								
+				//ESTRUCTURA
+				ventana: false,
+				luces: false,
+				techo: false,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "no volante",
+				asientos: "asientos",
+				num_llantas: "no ruedas",
+				material: "madera",
+				
+				//ENERGÍA
+				combustible: "NA",
+				
+				//FUNCIÓN
+				carga_pasaje: "gente",
+				
+				//DONDE
+				playa: "mar",
+				
+				//OTROS
+				capacidad: "grupito",
+				capacidad_cosas: "poca",
+				publico: "privado",
+				conductor: "tmi"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 1,
+				tamanyo: 1,
+				velocidad: 1,
+				historia: 1
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","playa","dentro_ciudad_agua","entre_ciudades_puerto"],
+					enunciado: "Es un transporte acuático."
+					
+				},
+				energia: {
+					claves: ["motor","combustible","fuerza_humana"],
+					enunciado: "No tiene motor. Se mueve por la fuerza de un ser humano, mediante uno o varios remos."
+				},
+				funcion: {
+					claves: ["carga_pasaje","capacidad","turismo"],
+					enunciado: "Se usa principalmente para transportar gente. Los turistas lo usan con frecuencia."
+					
+				},
+				estructura: {
+					claves: ["material"],
+					enunciado: "Tradicionalmente es de madera."
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama canoero a quien lo conduce."
+				}
+			}
+		}'>
+	</div>
+	
+	<div class='aq-opt'
+		id = 'submarino' 
+		data-object = '{
+		
+			categoricas : {
+				
+				//booleanas
+				
+				//ÚNICAS
+				cu_coche: false,
+				cu_trailer: false,
+				cu_motocicleta: false,
+				cu_bicicleta: false,
+				cu_pies: false,
+				cu_caballo: false,
+				cu_helicoptero: false,
+				cu_cohete: false,
+				cu_avion: false,
+				cu_barco: false,
+				cu_canoa: false,
+				cu_submarino: true,
+				
+				//MEDIO
+				terrestre : false,
+				aereo : false,
+				acuatico: true,
+				nadador: false,
+				
+				//ENERGÍA
+				motor: true,
+				electricidad: true,
+				fuerza_humana: false,
+				ser_vivo: false,
+				
+				//FUNCIÓN
+				campo: false,
+				turismo: false,
+				pesca: false,
+				se_come: false,
+				canibal: false,
+				escuela: false,
+				escuela_agua: false,
+				trabajo: false,
+				trabajo_campo: false,
+				trabajo_agua: false,
+				
+				//DONDE SE USA
+				dentro_ciudad: false,
+				dentro_ciudad_campo: false,
+				dentro_ciudad_agua: false,
+				autopista: false,
+				autopista_maso: false,
+				entre_ciudades: false,
+				entre_ciudades_maso: false,
+				entre_ciudades_puerto: true,
+								
+				//ESTRUCTURA
+				ventana: true,
+				luces: true,
+				techo: true,
+				frenos: false,
+				frenos_especial: true,
+				patas: false,
+				patas_especial: false,
+				
+
+				//3+ opciones
+				
+				//ESTRUCTURA
+				direccion: "timón",
+				asientos: "asientos",
+				num_llantas: "no ruedas",
+				material: "mixto",
+				
+				//ENERGÍA
+				combustible: "otros",
+				
+				//FUNCIÓN
+				carga_pasaje: "no función",
+				
+				//DONDE
+				playa: "mar",
+				
+				//OTROS
+				capacidad: "variedad",
+				capacidad_cosas: "mucha",
+				publico: "privado",
+				conductor: "capitán"
+			},
+			
+			//NO SE INCLUYEN EN ENUNCIADOS
+			relativas: {
+				costo: 3,
+				tamanyo: 3,
+				velocidad: 2,
+				historia: 4
+			},
+			
+			enunciados: {
+				medio: {
+					claves: ["terrestre","aereo","acuatico","playa"],
+					enunciado: "Es un transporte acuático."
+					
+				},
+				energia: {
+					claves: ["motor","combustible"],
+					enunciado: "Usa un motor para desplazarse. Utiliza combustibles mucho más potentes que la gasolina."
+				},
+				funcion: {
+					claves: ["carga_pasaje","cu_submarino"],
+					enunciado: "Navega debajo del agua. Se usa principalmente en las guerras y en investigación científica."
+					
+				},
+				conductor: {
+					claves: ["conductor"],
+					enunciado: "Se le llama capitán a quien lo conduce, ya que está a cargo de una tripulación."
+				},
+				estructura: {
+					claves: [],
+					enunciado: ""
+				}
+			}
+		}'>
+	</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿1
+00:00:00,000 --> 00:00:05,900
+Éste es un circuito de una chicharra o timbre rudimentario.
+
+2
+00:00:06,000 --> 00:00:11,999
+Al conectar la pila, la tapa de la lata vibra y hace ruido.
+
+3
+00:00:12,000 --> 00:00:14,900
+Del lado izquierdo, la tapa de lata hace contacto intermitentemente con un clavo de metal.
+
+4
+00:00:15,000 --> 00:00:17,900
+Se alcanza a ver una chispa cerca de la punta del clavo.
+
+5
+00:00:18,000 --> 00:00:20,500
+A la derecha de la lata, muy cerca de ella, hay una espira de alambre o bobina.
+
+6
+00:00:20,600 --> 00:00:23,000
+La bobina no parece tocar la tapa de la lata.

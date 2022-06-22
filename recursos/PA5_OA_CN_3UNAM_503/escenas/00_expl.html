@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Calor, radiación, electromagnético, electromagnética, vacío, calor del Sol, calor de una lámpara, calor en el espacio, transferencia de calor">
+
+<head>
+	<title>¿Cómo nos llega el calor del Sol?</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(20,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=max(nv-1,0)\nplayVideo(nv)' dibujar-si='nv>4' activo-si='nv>4'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=min(nv+1,nV-1)\nplayVideo(nv)' dibujar-si='nv+1<nV' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='v4' tipo='video' región='interior' espacio='E2' expresión='(30,60,560,350)' dibujar-si='nv==4' archivo='videos/radiacion.mp4'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='nV=8;nv=4;animar=1;animando=1;'">
+   <param name="A_04" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='x0=(nv==4)?30:512-212;y0=(nv==4)?410:483;x1=(nv==4)?x0+560-1:x0+424-1;y1=(nv==4)?y0+70:y0+64;;'">
+   <param name="A_05" value="id='stopVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv!=4)?v4.stop():&squot;&squot;;'">
+   <param name="A_06" value="id='playVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv==4)?v4.play():&squot;&squot;;;'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa algunos efectos de la transmisión del calor por radiación.&squot;' hacer='Inicio();;'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos()'">
+   <param name="A_09" value="id='anim' evento='sí' condición='nv>=7' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='polígono' color='e74c3c' coord_abs='sí' expresión='(x0,y0)(x1,y0)(x1,y1)(x0,y1)(x0,y0)' relleno='e74c3c'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_03" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(t==0)' coord_abs='sí' expresión='(250,223,0.40,0.40)' archivo='images/radia2.jpg'">
+   <param name="G_04" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(t==1)' coord_abs='sí' expresión='(250,223,0.40,0.40)' archivo='images/radia3.jpg'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==3' expresión='[100,400]' texto='¿Por qué se ablanda más rápido la \n   mantequilla a la que le da el sol?' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='700' info='mantequilla'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==3' expresión='[490,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs42\b Transmisi\u243 n del calor por \i radiaci\u243 n.\cf0\f3\fs30\b0\i0}' fuente='SansSerif,BOLD,21' fijo='sí' info='#8e44ad'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==3' expresión='[490,110]' texto='El calor no sólo se transmite a través de los cuerpos. También puede transmitirse a distancia cruzando el espacio vacío en forma de radiación.\n\nLa luz es un ejemplo de radiación que puede traernos calor desde una distancia enorme como es la que separa el Sol de la Tierra. \n\nLa radiación no es calor. Es una forma de energía que se convierte en calor cuando es absorbida por un cuerpo.\n\nLa mantequilla expuesta a la luz solar recibe esa radiación, la convierte en calor (vibraciones de las moléculas), aumenta su temperatura y eso hace que se ablande.\n\n' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='480' info='Conducción del calor en un tenedor de acero'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==4' expresión='[145,418]' texto='¿Por qué se ablanda más rápidamente \n    la mantequilla a la que le da la luz?' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='700' info='mantequilla'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==4' expresión='[80,490]' texto='    Advertencia: Para facilitar su visualización unas partes \nde este video se aceleraron y otras corren en cámara lenta.\n' fuente='SansSerif,ITALIC,18' fijo='sí' info='Nota'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==4' expresión='[610,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs40\b Transmisi\u243 n del calor por \i radiaci\u243 n.\cf0\f3\fs30\b0\i0}' fuente='SansSerif,BOLD,20' fijo='sí' info='#8e44ad'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==4' expresión='[610,100]' texto='Los hornos de micro ondas funcionan con radiación que no vemos pero que calienta la comida. Igualmente, la luz de una lámpara es radiación que cuando la absorbe un material, como la mantequilla, éste se calienta. \n\nLa mantequilla se ablanda cuando aumenta su temperatura. Es por esto que el trozo de mantequilla al que le da directamente la luz de la lámpara, se ablanda y se cae del tenedor.\n\nEn esta unidad aprenderás que todos los cuerpos pueden emitir y absorber radiación, al emitirla se enfrían, y al absorberla se calientan. ' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='380' info='Conducción del calor en un tenedor de acero'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='9b59b6' dibujar-si='nv==5' expresión='[20,60]' texto='Todos los cuerpos emiten y absorben radiación.' fuente='SansSerif,BOLD,21' fijo='sí' ancho='240'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==5' expresión='[20,135]' texto='Un cuerpo a temperatura ambiente absorbe tanta radiación como la que emite.\nCuanto más caliente esté un cuerpo, más radiación emite. \n\nLa radiación que emite un cuerpo que está a temperatura muy alta puede ser visible, como en el ejemplo que muestra la fotografía adjunta de un hierro candente.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='260'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==5' expresión='[750,60]' texto='Si el hierro estuviese a temperatura aún más alta, emitiría una luz más brillante y de color más blanco.\n\nUn hierro caliente como éste, al emitir radiación, se va enfriando, su color se va volviendo cada vez de un rojo más obscuro y a la larga, aunque aún esté bastante caliente, se vuelve gris obscuro. Eso no quiere decir que ya no emite radiación, sólo que ésta no es visible.\n' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='250'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' dibujar-si='(nv==5)' coord_abs='sí' expresión='(512,272,0.43,0.43)' archivo='images/hierro-incandescente.jpg'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='9b59b6' dibujar-si='nv==6' expresión='[20,60]' texto='La radiación infrarroja \nno se ve pero se siente.' fuente='SansSerif,BOLD,21' fijo='sí' ancho='250'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==6' expresión='[20,130]' texto='El cuerpo humano en general está a una temperatura más alta que su entorno y emite radiación infrarroja invisible. \n\nLa imagen adjunta es un termograma. La radiación infrarroja emitida a diferentes temperaturas puede distinguirse por su frecuencia y mediante un proceso digital es posible representar cada frecuencia, y por tanto cada temperatura, con un color distinto.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='260'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==6' expresión='[745,60]' texto='En general en los termogramas se utiliza el azul para representar temperaturas bajas y el rojo para temperaturas altas, pasando por todos los colores del arcoiris. El blanco se usa para las temperaturas más altas.\n\nLa barra a la derecha del termograma muestra la escala que relaciona los colores con la temperatura. Así vemos que la temperatura del entorno es de 21 grados centígrados, la de la ropa está entre 25 y 30 grados, la de la piel entre 30 y 35, y la del líquido en la taza arriba de 50 grados.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='265'">
+   <param name="G_19" value="espacio='E2' tipo='imagen' dibujar-si='(nv==6)&0' coord_abs='sí' expresión='(512,270,0.43,0.43)' archivo='images/termograma-mano.jpg'">
+   <param name="G_20" value="espacio='E2' tipo='imagen' dibujar-si='(nv==6)' coord_abs='sí' expresión='(512,270,0.43,0.43)' archivo='images/termograma-bebiendo.jpg'">
+   <param name="G_21" value="espacio='E2' tipo='texto' color='9b59b6' dibujar-si='(nv==7)&(t==0)' expresión='[20,60]' texto='La radiación puede transmitir calor a grandes distancias.' fuente='SansSerif,BOLD,21' fijo='sí' ancho='260'">
+   <param name="G_22" value="espacio='E2' tipo='texto' color='9b59b6' dibujar-si='(nv==7)&(t==1)' expresión='[20,60]' texto='La radiación ultravioleta actúa de manera violenta sobre la piel.' fuente='SansSerif,BOLD,21' fijo='sí' ancho='260'">
+   <param name="G_23" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==7' expresión='[20,160]' texto='La radiación proveniente del Sol contiene luz visible, radiación infrarroja y también radiación ultravioleta. Aunque la radiación ultravioleta no se ve ni se percibe en forma de calor, tiene efectos muy notorios en nuestra piel. Es la que broncea la piel y puede causarle quemaduras. En grandes cantidades, puede producir cáncer de piel ya que puede dañar las células y afectar su crecimiento.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='260'">
+   <param name="G_24" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==7' expresión='[750,60]' texto='Es por esto que debemos protegernos contra la radiación solar.\n\nLa atmósfera se encarga de absorber parte de la radiación ultravioleta. \n\nLa luz solar que llega a la superficie de la Tierra por la mañana o por la tarde ha tenido que recorrer mayor distancia, dentro de la atmósfera, que la que llega al medio día, por lo cual trae menos radiación ultravioleta. \n\nPor eso es menos dañino asolearse por la mañana o por la tarde que al medio día.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='250'">
+   <param name="G_25" value="espacio='E2' tipo='imagen' dibujar-si='(nv==7)&(t==0)' coord_abs='sí' expresión='(512,270,0.43,0.43)' archivo='images/el-sol.jpg'">
+   <param name="G_26" value="espacio='E2' tipo='imagen' dibujar-si='(nv==7)&(t==1)' coord_abs='sí' expresión='(512,270,0.43,0.43)' archivo='images/el-sol-2.jpg'">
+   <param name="G_27" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='nv==5' expresión='[400,492]' texto='El hierro candente emite \nradiación visible e infrarroja.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='Nota'">
+   <param name="G_28" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='nv==6' expresión='[330,503]' texto='El cuerpo humano emite radiación infrarroja.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='Nota'">
+   <param name="G_29" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='(nv==7)&(t==0)' expresión='[320,492]' texto='La radiación puede transmitir calor a grandes distancias, como la del Sol a la Tierra.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='Nota'">
+   <param name="G_30" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='(nv==7)&(t==1)' expresión='[320,492]' texto='La radiación ultravioleta del Sol es más intensa \nal medio día que por la tarde o por la mañana.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='Nota'">
+   <param name="Animación" value="pausa='5000' controles='no' auto='no' inicio='t=0' hacer='t=1-t' mientras='nv>=6'">
+</ajs>
+
+</body>
+
+</html>

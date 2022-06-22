@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_202"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		¿Cómo detecto los sonidos graves y los agudos?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Esta unidad explorarás el fenómeno de la difracción del sonido al observar qué sucede con las ondas sonoras cuando se topan con un obstáculo y cómo pueden rodearlo dependiendo de su tono o frecuencia (sonidos graves o agudos). Con base en estas observaciones, podrás explicar cómo se pueden filtrar sonidos en función de su tono.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, sonido, acústica, relación de la vibración de los materiales con la propagación del sonido, relación de la propagación del sonido con el funcionamiento del oído
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Sonido, ondas, longitud de onda, frecuencia, difracción de sonido, tono, vibración, onda sonora, grave, agudo, oído
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

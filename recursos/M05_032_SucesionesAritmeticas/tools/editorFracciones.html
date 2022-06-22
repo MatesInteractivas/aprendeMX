@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="../escenas/css/btn_style.css" type="text/css">
+	<link rel="stylesheet" href="css/fractionEditor/fractionEditor.css" type="text/css">
+	
+	<script>
+		function initTool() {
+			var tmpInputs = document.getElementsByTagName('input');
+			if(tmpInputs.length <= 0){
+				setTimeout(initTool,200);
+				return;
+			}
+			
+			for(var i= 0 ; i < tmpInputs.length; i++){
+				var inputA = tmpInputs[i];
+				inputA.readOnly=true;
+				if(inputA.className.indexOf('DescartesSpinnerField') >= 0){
+					inputA.addEventListener('focus',function(e){
+						e.target.blur();
+					});
+				}
+			}
+			
+		}
+		window.addEventListener('load', initTool, false)
+		
+	</script>
+	<script type='text/javascript' src='../escenas/lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=500 height=500 code="Descartes">
+   <param name="tamaño" value="500x500">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="cover">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='EDIT' x='EDIT.x' y='EDIT.y' dibujar-si='EDIT.ver' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnEditInt' tipo='numérico' interfaz='botón' región='interior' espacio='EDIT' nombre='           Enteros' expresión='(btnEditInt.x,btnEditInt.y,btnEditInt.w,btnEditInt.h)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx emerald int-edit|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0);displayInt()' dibujar-si='display=1'">
+   <param name="C_02" value="id='btnEditFrac' tipo='numérico' interfaz='botón' región='interior' espacio='EDIT' nombre='          Fracciones' expresión='(btnEditFrac.x,btnEditFrac.y,btnEditFrac.w,btnEditFrac.h)' fijo='sí' visible='sí' color='blanco' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx emerald frac-edit|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0);displayFraction()' dibujar-si='display=0' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnEditAceptar' tipo='numérico' interfaz='botón' región='interior' espacio='EDIT' nombre='          Aceptar' expresión='(btnEditAceptar.x,btnEditAceptar.y,btnEditAceptar.w,btnEditAceptar.h)' fijo='sí' visible='sí' color='blanco' color-int='amarillo' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx emerald aceptar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doAceptar()'">
+   <param name="C_04" value="id='close' tipo='numérico' interfaz='botón' región='interior' espacio='EDIT' expresión='(close.x,close.y,close.w,close.h)' fijo='sí' visible='sí' color='blanco' color-int='ff1abc9b' negrita='sí' fuente puntos='24' imagen='images/editor_fracciones/btn_close.png' acción='calcular' parámetro='doPlay(0);close()' dibujar-si='close.visible'">
+   <param name="C_05" value="id='ctrEnt' tipo='numérico' región='interior' espacio='EDIT' nombre='_nada_' expresión='(ctrEnt.x,ctrEnt.y,ctrEnt.w,ctrEnt.h)' valor='ctrEnt' incr='1' min='ctrEnt.min' max='20' discreto='sí' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='doPlay(0);' dibujar-si='ctrEnt.ver'">
+   <param name="C_06" value="id='ctrNum' tipo='numérico' región='interior' espacio='EDIT' nombre='_nada_' expresión='(ctrNum.x,ctrNum.y,ctrNum.w,ctrNum.h)' valor='ctrNum' incr='1' min='ctrNum.min' max='20' discreto='sí' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='doPlay(0);' dibujar-si='ctrNum.ver'">
+   <param name="C_07" value="id='ctrDen' tipo='numérico' región='interior' espacio='EDIT' nombre='_nada_' expresión='(ctrDen.x,ctrDen.y,ctrDen.w,ctrDen.h)' valor='ctrDen' incr='1' min='1' max='20' discreto='sí' decimales='0' fijo='sí' visible='sí' acción='calcular' parámetro='doPlay(0);' dibujar-si='ctrDen.ver'">
+   <param name="A_01" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_02" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_03" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_04" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_05" value="id='mcd(a,b)' algoritmo='sí' expresión='r0' algoritmo='sí' Local='r0,r1,rTmp,i' inicio='r0=a;r1=b;i=1' hacer='rTmp=r1;r1=(r0%r1);r0=rTmp' mientras='r1>0'">
+   <param name="A_06" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_07" value="id='initEspacios()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='EDIT.x=(E2._w - EDIT._w)/2;EDIT.y=(E2._h - EDIT._h)/2;EDIT.ver=1'">
+   <param name="A_08" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='btnEditInt.w=170;btnEditInt.h=45;btnEditInt.x=10;btnEditInt.y=EDIT._h-btnEditInt.h-10;;btnEditFrac.w=170;btnEditFrac.h=45;btnEditFrac.x=btnEditInt.x;btnEditFrac.y=btnEditInt.y;;btnEditAceptar.w=170;btnEditAceptar.h=45;btnEditAceptar.x=EDIT._w-btnEditAceptar.w-10;btnEditAceptar.y=btnEditInt.y;;close.w=56;close.h=56;close.x=EDIT._w-close.w;close.y=0;close.visible=0;;displayFraction();;setFraction(4,5,6)'">
+   <param name="A_09" value="id='displayFraction()' algoritmo='sí' algoritmo='sí' Local='allH' hacer='display=1;;ctrEnt.ver=1;ctrNum.ver=1;ctrDen.ver=1;;;ctrEnt.w=130;ctrEnt.h=92;;ctrNum.w=ctrEnt.w;ctrNum.h=92;;ctrDen.w=ctrEnt.w;ctrDen.h=92;;_gapX=20;_gapY=16;allH=ctrNum.h+ctrDen.h+2*_gapY;;ctrEnt.x=(EDIT._w-ctrEnt.w-ctrDen.w-_gapX)/2;ctrEnt.y=(btnEditAceptar.y-allH)/2;ctrEnt.y=ctrEnt.y+(allH-ctrEnt.h)/2;;mitadY=(ctrEnt.y+ctrEnt.h/2);;ctrDen.x=ctrEnt.x+ctrEnt.w+_gapX;ctrDen.y=mitadY+_gapY;;ctrNum.x=ctrDen.x;ctrNum.y=mitadY-ctrDen.h-_gapY;;ctrEnt.min=0;ctrNum.min=1'">
+   <param name="A_10" value="id='displayInt()' algoritmo='sí' algoritmo='sí' Local='allH' hacer='display=0;;ctrEnt.ver=1;ctrNum.ver=0;ctrDen.ver=0;;ctrEnt.w=180;ctrEnt.h=100;;ctrEnt.x=(EDIT._w-ctrEnt.w)/2;ctrEnt.y=(EDIT._h-ctrEnt.h-66)/2;;;ctrEnt.min=1;ctrNum.min=0;ctrNum=0'">
+   <param name="A_11" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_12" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_13" value="id='setFraction(entero,numerador,denominador)' algoritmo='sí' algoritmo='sí' Local='debug' hacer='ctrEnt=entero;ctrNum=numerador;ctrDen=denominador;debug=&squot;OOOOO Se va a poner : &squot;+entero+&squot; &squot;+numerador+&squot;/&squot;+denominador;_Trace_(debug)'">
+   <param name="A_14" value="id='close()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.exec(&squot;closedFractionEditor&squot;,&squot;&squot;);parent.update();'">
+   <param name="A_15" value="id='doAceptar()' algoritmo='sí' algoritmo='sí' Local='_param' hacer='_param=ctrEnt+&squot;,&squot;+ctrNum+&squot;,&squot;+ctrDen;parent.exec(&squot;aceptedFractionEditor&squot;,_param);parent.update()'">
+   <param name="A_16" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initEspacios();initBtns();;'">
+   <param name="A_17" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='EDIT' tipo='segmento' dibujar-si='display=1' coord_abs='sí' expresión='(ctrNum.x-_gapX/4,mitadY)(ctrNum.x+ctrNum.w+_gapX/4,mitadY)' fijo='sí' tamaño='1' ancho='4'">
+   <param name="Animación" value="pausa='250' controles='no' auto='no'">
+</ajs>
+</body>
+
+</html>

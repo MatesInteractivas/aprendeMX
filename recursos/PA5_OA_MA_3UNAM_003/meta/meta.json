@@ -1,0 +1,33 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Triángulo", 
+    "base", 
+    "altura", 
+    "acutángulo", 
+    "obtusángulo", 
+    "triángulo rectángulo", 
+    "altura correspondiente a una base", 
+    "base correspondiente a una altura", 
+    "perpendicular"
+  ], 
+  "descripcion": "En este recurso localizarás y trazarás las alturas de diferentes triángulos.",
+  "resena": "Localización de las tres alturas de un triángulo.",
+  "titulo": "Las alturas del triángulo", 
+  "id": "PA5_OA_MA_3UNAM_003"
+}

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Triángulo, base, altura, acutángulo, obtusángulo, triángulo rectángulo, altura correspondiente a una base, base correspondiente a una altura, perpendicular">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <style type="text/css"> 
+   .DescartesMenuContainer { 
+      border: 3px solid #fff; 
+      background: transparent !important; 
+      border-radius: 10px;
+   }
+   select { 
+      border: 1px solid #b46100 !important; 
+      border-radius: 7px;
+      -webkit-appearance: none; 
+      -moz-appearance: none; 
+      appearance: none; 
+      padding-right: 32px !important; 
+      background: url(images/ui_btn_down.png) 101%/32px no-repeat #eee; 
+   }
+   </style>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+<div align="center">
+
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='A' tipo='gráfico' espacio='E2' color='negro' color-int='blanco' tamaño='24' expresión='(220,140)' dibujar-si='0'">
+   <param name="C_02" value="id='B' tipo='gráfico' espacio='E2' color='negro' color-int='blanco' tamaño='24' expresión='(460,140)' fijo='sí' dibujar-si='0'">
+   <param name="C_03" value="id='C' tipo='gráfico' espacio='E2' color='negro' color-int='blanco' tamaño='24' expresión='(410,370)' fijo='sí' dibujar-si='0'">
+   <param name="C_04" value="id='b1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(x_btns+0*52,y_btns,42,42)' fijo='sí' visible='sí' color-int='ee4545' imagen='images/btn_generic_square_03.png' acción='calcular' parámetro='b_naranja=0\nb_verde=0\nb_rojo=0\nb_rojo=1-b_rojo' pos_mensajes='centro'">
+   <param name="C_05" value="id='b2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(x_btns+1*52,y_btns,42,42)' fijo='sí' visible='sí' color-int='84d233' imagen='images/btn_generic_square_02.png' acción='calcular' parámetro='b_naranja=0\nb_verde=0\nb_rojo=0\nb_verde=1-b_verde\n' pos_mensajes='centro'">
+   <param name="C_06" value="id='b3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(x_btns+2*52,y_btns,42,42)' fijo='sí' visible='sí' color-int='fec639' imagen='images/btn_generic_square_01.png' acción='calcular' parámetro='b_naranja=0\nb_verde=0\nb_rojo=0\nb_naranja=1-b_naranja\n' pos_mensajes='centro'">
+   <param name="C_07" value="id='menu' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(750,E2._h-52,165,42)' fijo='sí' visible='no' opciones='distancia,segmento,recta' pos_mensajes='centro'">
+   <param name="A_01" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_02" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_03" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_04" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_05" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_06" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='miescala=50;x_btns=750;y_btns=E2._h-100'">
+   <param name="A_07" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='b_rojo=1;;'">
+   <param name="A_08" value="id='processMD(x,y)' algoritmo='sí' expresión='0' algoritmo='sí' Local='dA,dB,dC,d,min_d' inicio='min_d=20' hacer='dC=abs((x-A.x)*(B.y-A.y)-(y-A.y)*(B.x-A.x))/c;dA=abs((x-B.x)*(C.y-B.y)-(y-B.y)*(C.x-B.x))/a;dB=abs((x-C.x)*(A.y-C.y)-(y-C.y)*(A.x-C.x))/b;d=min(min(dA,dB),dC);b_rojo=(d<min_d)?0:b_rojo;b_verde=(d<min_d)?0:b_verde;b_naranja=(d<min_d)?0:b_naranja;b_rojo=((d<min_d)&(dC<min_d))?1:b_rojo;b_verde=((d<min_d)&(dA<min_d))?1:b_verde;b_naranja=((d<min_d)&(dB<min_d))?1:b_naranja;'">
+   <param name="A_09" value="id='crop()' algoritmo='sí' algoritmo='sí' hacer='A.x=min(max(A.x,20),650);B.x=min(max(B.x,20),650);C.x=min(max(C.x,20),650);A.y=min(max(A.y,10),E2._h-10);B.y=min(max(B.y,10),E2._h-10);C.y=min(max(C.y,10),E2._h-10)'">
+   <param name="A_10" value="id='calcPie(x1,y1,x2,y2,hx,hy)' algoritmo='sí' expresión='obtuso' algoritmo='sí' Local='pie' hacer='pie.x=(x2-x1);pie.y=(y2-y1);pie=sqrt(pie.x^2+pie.y^2);pie=(pie<0.000001)?0.000001:pie;pie.x=pie.x/pie;pie.y=pie.y/pie;dot=pie.x*(hx-x1)+pie.y*(hy-y1);pie.x=x1+dot*pie.x;pie.y=y1+dot*pie.y;;obtuso=obtuso|(dot<0)|(dot>pie);recto=recto|(abs(dot)<2)|(abs(dot-pie)<2);'">
+   <param name="A_11" value="id='Calculos()' algoritmo='sí' algoritmo='sí' Local='dot' hacer='crop();c=sqrt((B.x-A.x)^2+(B.y-A.y)^2);a=sqrt((C.x-B.x)^2+(C.y-B.y)^2);b=sqrt((A.x-C.x)^2+(A.y-C.y)^2);obtuso=0;recto=0;obtuso=obtuso|calcPie(A.x,A.y,B.x,B.y,C.x,C.y);c.x=pie.x;c.y=pie.y;hc=sqrt((C.x-c.x)^2+(C.y-c.y)^2);calcPie(B.x,B.y,C.x,C.y,A.x,A.y);a.x=pie.x;a.y=pie.y;ha=sqrt((A.x-a.x)^2+(A.y-a.y)^2);calcPie(C.x,C.y,A.x,A.y,B.x,B.y);b.x=pie.x;b.y=pie.y;hb=sqrt((B.x-b.x)^2+(B.y-b.y)^2);tipo=&squot;acutángulo&squot;;tipo=(obtuso)?&squot;obtuságulo&squot;:tipo;tipo=(recto)?&squot;rectángulo&squot;:tipo;donde=&squot;El ortocentro está adentro&squot;;donde=(obtuso)?&squot;El ortocentro está afuera&squot;:donde;donde=(recto)?&squot;El ortocentro está en el vértice del ángulo recto&squot;:donde;donde=(b_rojo&b_verde&b_naranja)?donde:&squot;&squot;;x_base=(b_rojo)?(3*A.x+2*B.x)/5:x_base;y_base=(b_rojo)?(3*A.y+2*B.y)/5:y_base;x_base=(b_verde)?(3*B.x+2*C.x)/5:x_base;y_base=(b_verde)?(3*B.y+2*C.y)/5:y_base;x_base=(b_naranja)?(3*C.x+2*A.x)/5:x_base;y_base=(b_naranja)?(3*C.y+2*A.y)/5:y_base;x_altura=(b_rojo)?(3*C.x+3*c.x)/6:x_altura;y_altura=(b_rojo)?(3*C.y+3*c.y)/6:y_altura;x_altura=(b_verde)?(3*A.x+3*a.x)/6:x_altura;y_altura=(b_verde)?(3*A.y+3*a.y)/6:y_altura;x_altura=(b_naranja)?(3*B.x+3*b.x)/6:x_altura;y_altura=(b_naranja)?(3*B.y+3*b.y)/6:y_altura;B=(b_rojo)?c:B;B=(b_verde)?a:B;B=(b_naranja)?b:B;B=B/miescala;B=ent(B*10)/10;base_valor=&squot;base = &squot;+B;h=(b_rojo)?hc:h;h=(b_verde)?ha:h;h=(b_naranja)?hb:h;h=h/miescala;h=ent(h*10)/10;altura_valor=&squot;altura = &squot;+h;;'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Explora la altura del triángulo según el lado que elijas como base.&squot;)' hacer='initDisplay();Inicio();'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();MD=E2.mouse_pressed;aux=(MD|MDA)?processMD(E2.mouse_x,E2.mouse_y):&squot;&squot;;MDA=MD;;;;'">
+   
+   <param name="A_15" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='80000000' coord_abs='sí' expresión='(botX(0,0,E2._w,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='para oscurecer el fondo'">
+   <param name="G_02" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='(obtuso)&b_naranja' expresión='(C.x-20*(A.x-C.x),C.y-20*(A.y-C.y))(C.x+20*(A.x-C.x),C.y+20*(A.y-C.y))' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' info='altura sobre AB, recta'">
+   <param name="G_03" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='(obtuso)&b_rojo' expresión='(B.x-20*(A.x-B.x),B.y-20*(A.y-B.y))(B.x+20*(A.x-B.x),B.y+20*(A.y-B.y))' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' info='altura sobre AB, recta'">
+   <param name="G_04" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='(obtuso)&b_verde' expresión='(B.x-20*(C.x-B.x),B.y-20*(C.y-B.y))(B.x+20*(C.x-B.x),B.y+20*(C.y-B.y))' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' info='altura sobre AB, recta'">
+   <param name="G_05" value="espacio='E2' tipo='segmento' color='(s*0.5,s*0.8,s*1.0,0.0)' dibujar-si='b_rojo' expresión='(C.x,C.y)(c.x,c.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='6-2s' info='altura sobre AB, segmento'">
+   <param name="G_06" value="espacio='E2' tipo='segmento' color='(s*0.5,s*0.8,s*1.0,0.0)' dibujar-si='b_verde' expresión='(A.x,A.y)(a.x,a.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='6-2s' info='altura sobre BC, segmento'">
+   <param name="G_07" value="espacio='E2' tipo='segmento' color='(s*0.5,s*0.8,s*1.0,0.0)' dibujar-si='b_naranja' expresión='(B.x,B.y)(b.x,b.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='6-2s' info='altura sobre CA, segmento'">
+   <param name="G_08" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='b_rojo&(menu==2)' expresión='(C.x-20*(c.x-C.x),C.y-20*(c.y-C.y))(C.x+20*(c.x-C.x),C.y+20*(c.y-C.y))' fijo='sí' tamaño='0' ancho='2' info='altura sobre AB, recta'">
+   <param name="G_09" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='b_verde&(menu==2)' expresión='(A.x-20*(a.x-A.x),A.y-20*(a.y-A.y))(A.x+20*(a.x-A.x),A.y+20*(a.y-A.y))' fijo='sí' tamaño='0' ancho='2' info='altura sobre BC, recta'">
+   <param name="G_10" value="espacio='E2' tipo='segmento' color='(0.5,0.8,1.0,0.0)' dibujar-si='b_naranja&(menu==2)' expresión='(B.x-20*(b.x-B.x),B.y-20*(b.y-B.y))(B.x+20*(b.x-B.x),B.y+20*(b.y-B.y))' fijo='sí' tamaño='0' ancho='2' info='altura sobre CA, recta'">
+   <param name="G_11" value="espacio='E2' tipo='polígono' color='(s,s,s,0)' expresión='(A.x,A.y)(B.x,B.y)(C.x,C.y)(A.x,A.y)' familia='s' s.intervalo='[0,1]' s.pasos='1' ancho='6-2s' info='el triángulo en blanco'">
+   <param name="G_12" value="espacio='E2' tipo='segmento' color='ee4545' dibujar-si='b_rojo' expresión='(A.x,A.y)(B.x,B.y)' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' ancho='4' info='lado AB en color'">
+   <param name="G_13" value="espacio='E2' tipo='segmento' color='84d233' dibujar-si='b_verde' expresión='(B.x,B.y)(C.x,C.y)' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' ancho='4' info='lado BC en color'">
+   <param name="G_14" value="espacio='E2' tipo='segmento' color='fec639' dibujar-si='b_naranja' expresión='(C.x,C.y)(A.x,A.y)' fuente='Monospaced,PLAIN,19' fijo='sí' tamaño='0' ancho='4' info='lado CA en color'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' expresión='(800,250,1,1)' archivo='images/personajes/boy_04.png' info='el niño estudiando con la tableta'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='1' expresión='[30,30]' texto='Este triángulo es [tipo].\n\n[donde]' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='380' color_borde_texto='173320' info='Descripción del triángulo'">
+   <param name="G_17" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[30,y_btns+8]' texto='Mueve los vértices para modificar el triángulo.\nHaz clic sobre un lado para elegirlo como base.\nSelecciona el concepto de altura que quieras usar.' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='Instrucción adicional'">
+   <param name="G_18" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[x_btns-70,y_btns+8]' texto='base:' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='letrero para los botones que escojen las bases'">
+   <param name="G_19" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[x_btns-145,512-38]' texto='alturas como:' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='alturas como'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='blanco' expresión='[x_base-30-30*(menu==0),512-y_base-10]' texto='[(menu==0)?base_valor:&squot;base&squot;]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='la palabra base'">
+   <param name="G_21" value="espacio='E2' tipo='texto' color='blanco' expresión='[x_altura-45-32*(menu=0),512-y_altura-10]' texto='[(menu==0)?altura_valor:&squot;altura&squot;]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='la palabra altura'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+</ajs>
+
+</div>
+
+
+
+</body>
+
+</html>

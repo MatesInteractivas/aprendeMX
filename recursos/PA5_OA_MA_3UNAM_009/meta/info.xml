@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_009"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Medición
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad podrás revisar ejemplos de objetos que medimos, con qué los medimos y las unidades de medida que normalmente ocupamos para hacerlo.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, Forma, espacio y medida, Medida
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, masa, longitud, capacidad, tiempo, peso, metro, litro, gramo, segundo, centímetro, milimetro, kilometro, mililitro, centilitro, múltiplos y submúltiplos del gramo, múltiplos y submúltiplos del metro, múltiplos y submúltiplos del litro, múltiplos y submúltiplos del segundo, conversión de unidades de masa, conversión de unidades de longitud, conversión de unidades de capacidad, conversión de unidades de tiempo
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

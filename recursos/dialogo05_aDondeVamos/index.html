@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />-->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+		<!-- stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/general.css" />
+		<link rel="stylesheet" type="text/css" href="css/dialogo.css" />
+		<link rel="stylesheet" type="text/css" href="css/stylesheet_fonts.css" />
+		<!--<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/keyboard/jsKeyboard.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/keyboard/bootstrap.min.css">
+		<link rel="stylesheet" href="css/keyboard/bootstrap-responsive.min.css">
+
+	
+		<!--Libs externas: jQuery, modernizr, ...-->
+		<script type="text/javascript" src="dist/lib/modernizr.custom.js"></script>
+		<script type="text/javascript" src="dist/lib/jquery-2.1.4.min.js"></script>
+		<!--<script type="text/javascript" src="dist/lib/jquery-ui-1.10.4.custom.min.js"></script>-->
+		<script type="text/javascript" src="dist/lib/detect.min.js"></script>
+		<script type="text/javascript" src="dist/lib/bluebird.min.js"></script>
+		<script type='text/javascript' src='dist/lib/descartes-min.js'></script>
+		<script type='text/javascript' src="dist/lib/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="dist/lib/bootstrap.min.js"></script>
+		<!--<script src="teclado/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>-->
+
+		
+		<!--config diálogo-->
+		<script type="text/javascript" src="config/dialogo.json"></script>
+		<script type="text/javascript" src="config/diccionario.json"></script>
+		<script type="text/javascript" src="config/groserias.json"></script>
+		<script type="text/javascript" src="config/interfaz.js"></script>
+		
+		<!--<script type="text/javascript" src="../../dialogjs/tracking/dialogo_registro.js"></script>-->
+		
+		<!--Código diálogo -->
+		<script type="text/javascript" src="js/inicio.js" ></script>
+		<script type="text/javascript" src="dist/dialogjs.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+		<!--Código diálogo src-->
+		<!--script type="text/javascript" src="../../src/dialogjs/prototypes/prototypes.js" ></script>
+		<script type="text/javascript" src="../../src/dialogjs/dialog/Question.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/dialog/Dialog.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/ui/AvatarDialogUI.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/microworld/IframeMicroworld.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/dialog/DialogManager.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/ling/dialogo_getLemas.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/ling/dialogo_funciones.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/ling/dialogo_arbol.js"></script>
+		<script type="text/javascript" src="../../src/dialogjs/ling/dialogo_arbol_nodo.js"></script-->
+		
+		<!-- Código Teclado -->		
+		<script type="text/javascript" src="js/keyboard/jsKeyboard.js"></script>
+		<script type="text/javascript" src="js/keyboard/main.js"></script>
+		
+
+		<!-- Para audios generados con tecnología text-to-speech -->
+		<!--<script type='text/javascript' src='tts/js/tts.js'></script>-->
+		
+		
+		<title>Diálogo: ¿A dónde vamos?</title>
+		
+	</head>
+	
+        
+        <body align="center">
+		
+		
+		<div id="contenedor">
+			
+		<!--- Elementos de la portada, el inicio y la conclusión --->
+			
+			<div id='portada'>			
+				<div class='txtPortada' >
+					<p>
+					¿Te cuesta trabajo tomar decisiones?
+					</p>
+					<p>
+					A veces es difícil, sobre todo si se trata de decisiones que afectan a los demás... ¡Hay que tomar en cuenta muchas cosas!
+					</p>
+					<p>
+					En esos casos, es importante ir por partes: identificar las ventajas y desventajas de cada opción, anotarlas en una tabla o esquema y ¡compararlas cuidadosamente!
+					Podrás practicarlo en este diálogo.
+					</p>
+				</div>
+				<a class='bt_seguir bt_seguir_portada' href='#' onclick='aInicio();'></a>
+			</div>
+
+			<div id='arranque' class='oculto slowShow centered'>
+				
+				<div id='inicio_cr' class='inicio topLeft'>
+					<a href='#' id='bt_editaPerfil' onclick="editarPerfil(false);"></a>
+					<a class='bt_seguir bt_seguir_inicio oculto slowShow' href='#' onclick="aInicioDialogo(nombre_alumno,getAvatar(),true);"></a>
+				</div>
+				
+				<a href='#' class='bt_ayuda' onclick="showInfo('ayuda');"></a>
+				
+				<div id='capitulos' class='oculto slowShow'>
+				</div>
+			</div>
+			
+			<div id='editarPerfil' class='oculto slowShow centered inicio'>
+				<div type='text' id='usrname_edit' class='inputUsrname'></div>
+				<div class='slider'></div>
+				<a href='#' class='bt_continuar'></a>
+			</div>
+			
+			<div id="virtualKeyboardInicio" class='virtualKeyboard oculto slowShow' style="z-index: 1;"></div>
+			
+			<div id='conclusion'  class='oculto slowShow'>
+				<div class='txtConclusion' >
+					<p>
+						Muchas veces, aunque queremos distintas cosas, tenemos que elegir una o solamente algunas.
+						En otras ocasiones, también hay que ponerse de acuerdo y tomar una decisión, considerando las necesidades, los gustos e intereses de diferentes personas.
+						Todo eso se puede lograr analizando con cuidado la información disponible, buscando la que haga falta, y organizándola para compararla y aclarar las mejores alternativas.
+					</p>
+					
+					<p>
+						Al comparar las características de los lugares para viajar, analizando las semejanzas y las diferencias, ¡tú les ayudaste a los Pérez!
+						La tabla resultó de gran ayuda para organizar y hacer la selección paso a paso, hasta ofrecer la opción más indicada.
+						Utilizaste un mapa, identificaste qué información faltaba y tomaste en cuenta distancias y otros datos que te permitieron llegar a una conclusión y ofrecer un resultado.
+					</p>
+					
+					<p>
+						Definitivamente, ayudaste mucho, ¡¿eh?! Gracias, ¡nos vemos pronto!
+					</p>
+	
+				</div>
+				
+				<a href='#' class='bt_regresar' onclick='regresarADialogo()' ></a>
+			</div>
+			
+			
+			<a href='#' id='bt_home' class='bts_arriba oculto slowShow' onclick='location.reload();'></a>
+			<a href='#' class='bt_creditos bts_arriba' onclick='showInfo("creditos");'></a>
+			<a href='#' class='bt_instrucciones bts_arriba oculto' onclick='showInfo("instrucciones");'></a>
+			
+			<div class='cargador oculto slowShow'>
+				<div class='gif'></div>
+				<div class='texto'>Cargando... 0%</div>
+			</div>
+			
+			
+		<!-- Elementos del diálogo -->
+			
+			<div id="micromundos" class='oculto slowShow'>
+				<div id="micromundoVisitado" class='oculto slowShow' style="overflow:hidden;">
+				</div>
+				<div id="micromundo" class='slowShow' style="overflow:hidden;">
+				</div>
+			</div>
+			
+			<div id="historial_micromundos" class='oculto slowShow'>
+			</div>
+			
+			<div id="chat" class='oculto slowShow'>
+				
+				<div id="div_globos">
+					<div id="div_tutor">
+						<div class="avatar_tutor">
+							<img id="img_tutor" class='img_tutor_class' src="img/tutor/neutro.png"/>
+						</div>
+						<div id="text_tutor"></div>
+						<a href='#' id='scrollUp'></a>
+						<a href='#' id='scrollDown'></a>
+					</div>
+					<div id="div_alumno">
+						<a id="btHistorial" class='oculto slowShow' href="#" title="Haz clic aquí para mostrar el diálogo completo."></a>
+						<div class='text_alumno_container'>
+							<div id="text_alumno" class="txt_alumno_erased">
+								<!--Escribe tu respuesta.-->
+							</div>
+							<div class="avatar_alumno"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="plastaKeyboard"></div>
+				<div id="virtualKeyboardDialog" class='virtualKeyboard' style="z-index: 1;"></div>
+				
+			</div>
+			
+			<div id="historial_chat">
+				<div id="chat_globos" style="overflow:hidden;" >
+				</div>
+			</div>
+			
+			<div id='plastaPopup'  class='oculto slowShow'></div>
+			
+			<div id="popupMicromundos" class='oculto slowShow'>
+				<div id='popupMicromundos_inner'>
+				</div>
+				<a href='#' id='bt_cerrar_pop_micromundo' title="Haz clic aquí para cerrar esta ventana." ></a>
+			</div>	
+			
+			<div class='popup oculto slowShow centered'>
+				<div class='popupContent'></div>
+				<a href='#' class='btCerrar' onclick='cerrarPopup();'></a>
+			</div>
+
+		</div>
+					
+        </body>
+</html>

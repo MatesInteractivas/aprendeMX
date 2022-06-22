@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_017"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Mapas
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad aprenderás a seguir y dar instrucciones basadas en los nombres de las calles para ir de un lugar a otro.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, Forma, espacio y medida, Ubicación espacial
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, recorrido, distancia, longitud, trayectoria, calles, instrucciones, girar, avanzar
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

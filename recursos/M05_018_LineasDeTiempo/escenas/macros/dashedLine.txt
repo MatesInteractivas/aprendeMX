@@ -1,0 +1,6 @@
+tipo_de_macro=R2
+Idioma=espa&ntilde;ol
+id='setPattern(l,s)' algoritmo='s&iacute;' expresi&oacute;n='x' algoritmo='s&iacute;' hacer='len=l;spa=s;;W=sqrt((x0-x1)^2+(y0-y1)^2);NUMSEG=ent(W/(len+spa));'
+id='INICIO' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='x0=300;y0=120;x1=200;y1=200;w=5;R=190/255;G=60/255;B=140/255;;setPattern(10,10)'
+id='CALCULOS' algoritmo='s&iacute;' evaluar='siempre'
+tipo='segmento' color='(R,G,B,00)' coord_abs='s&iacute;' expresi&oacute;n='(x0+(x1-x0)*(s*(spa+len)/W),y0+(y1-y0)*(s*(spa+len)/W))(x0+(x1-x0)*((s*spa+(s+1)*len)/W),y0+(y1-y0)*((s*spa+(s+1)*len)/W))' familia='s' s.intervalo='[0,NUMSEG]' s.pasos='NUMSEG' fijo='s&iacute;' tama&ntilde;o='0' ancho='w' 

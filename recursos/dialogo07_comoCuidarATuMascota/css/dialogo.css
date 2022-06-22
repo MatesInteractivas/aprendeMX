@@ -1,0 +1,855 @@
+/************************************************************************************
+ESTRUCTURA DE LA PçGINA
+*************************************************************************************/
+
+#micromundos{
+	position: absolute;
+	float: left;
+	width: 687px;
+	height: 570px;
+	left: 11px;
+	bottom: 10px;
+}
+
+#micromundo,
+#micromundoVisitado{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#historial_micromundos{
+	position: absolute;
+	height: 50px;
+	text-align: left;
+	vertical-align: bottom;
+	background: url('../img/dialogo/fondo_historial_micromundos.png') no-repeat;
+}
+
+/*iframe en el que se carga el micromundo y que se muestra en #micromundo*/
+.microworld{
+	position: absolute;
+	border: hidden;
+	overflow: hidden;
+}
+
+.linkMicroworld{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	/*margin-left: 5px;*/
+	margin-top: 4px;
+	/*width: 46px;
+	height: 46px;*/
+	background-color: #8acfcb;
+}
+.linkMicroworld:hover,.linkMicroworld:active{
+	background-color: #388f8a;
+}
+.linkMicroworld.selected{
+	background-color: #ffbd00;
+	margin-top: 0px;
+	width: 48px;
+	height: 50px;
+}
+
+.linkMicroworld:first-child{
+	margin-left: 124px;
+}
+
+.linkMw_img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: auto;
+}
+
+/** Espacio total del chat dentro de la pantalla principal **/
+#chat{
+	position: absolute;
+	top: 60px;
+	background: rgba(250, 250, 250, 0.3);
+	border: solid 3px #f2bc02;
+	padding: 0px;
+}
+
+/** Espacio dentro de #chat donde se despliegan los avatares con su globo correspondiente **/
+#div_globos{
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	display: block;
+	padding: 0px;
+}
+
+#div_tutor,
+#div_alumno{
+	position: relative;
+	display: block;
+}
+
+#div_tutor{
+	background-color: #fff;
+	width: auto;
+	overflow: hidden;
+}
+
+#scrollUp,
+#scrollDown{
+	position: absolute;
+	right: 1px;
+	width: 33px;
+	height: 17px;
+	display: none;
+}
+#scrollUp{
+	top: 2px;
+	background-image: url('../img/dialogo/bt_scroll_top_up.png');
+}
+#scrollUp:hover{
+	background-image: url('../img/dialogo/bt_scroll_top_over.png');
+}
+#scrollDown{
+	bottom: 2px;
+	background-image: url('../img/dialogo/bt_scroll_bottom_up.png');
+}
+#scrollDown:hover{
+	background-image: url('../img/dialogo/bt_scroll_bottom_over.png');
+}
+
+.overflow #scrollUp,
+.overflow #scrollDown{
+	display: block;
+	opacity: 0.35;
+}
+.overflow.canScrollUp #scrollUp{
+	opacity: 1;
+}
+.overflow.canScrollDown #scrollDown{
+	opacity: 1;
+}
+
+.isHiddenPar{
+	display: none;
+}
+
+
+.avatar_tutor{
+	position: relative;
+	float: left;
+	margin: 0px;
+	width: 101px;
+	height: 99px;
+	background-color: #5dd0cb;
+	/*background-image: url('../img/dialogo/fondo_avatar.jpg');*/
+	margin-right: 12px;
+}
+.avatar_tutor.flash{
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.avatar_tutor:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 0px;
+	top: 45%;
+	border: 7px solid;
+	border-color: transparent #fff #fff transparent;
+}
+
+
+
+.img_tutor_class{
+	display: block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+#text_tutor,
+#text_alumno{
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	line-height: 26px;
+	letter-spacing: 0.7px;
+	text-align: left;
+	color: #4a4a4a;
+}
+
+#text_tutor > p,
+#text_alumno > p{
+	margin-bottom: 8px;
+	line-height: 25px;
+}
+
+#text_tutor{
+	position: relative;
+	margin: 0px;
+	padding: 10px 15px;
+	height: auto;
+}
+#text_tutor{
+	width: 95%;
+}
+
+.overflow #text_tutor{
+	width: 90%;
+}
+
+br{
+	font-size: 14px;
+}
+
+#div_alumno{
+	width: 100%;
+	height: 75px;
+	margin-top: 6px;
+	padding: 0px;
+}
+
+#btHistorial{
+	/*display: inline-block;
+	vertical-align: top;*/
+	position: absolute;
+	left: 0px;
+	top:0px;
+	width: 72px;
+	height: 75px;
+	background: url("../img/bt_dialogo.png") no-repeat -167px -0px;
+	margin: 0px;
+	padding: 0px;
+}
+#btHistorial:hover,#btHistorial:active{
+	background-position: -205px -166px;
+}
+
+#btHistorial.colapsar{
+	background-position: -133px -171px;
+}
+#btHistorial.colapsar:hover,#btHistorial.colapsar:active{
+	background-position: -135px -91px;
+}
+
+.text_alumno_container {
+	background-color: #e2e2e2;
+	position: absolute;
+	right:0px;
+	top:0px;
+	height: 100%;
+	box-sizing:border-box;
+	margin: 0px;
+	margin-left: 6px;
+}
+
+.avatar_alumno {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    vertical-align: top;
+    width: 75px;
+    height: 75px;
+    background-size: 75px 75px;
+    margin: 0px;
+}
+.avatar_alumno:after {
+   	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 50%;
+	border: 6px solid;
+	border-color: transparent transparent #e2e2e2 #e2e2e2;
+}
+
+#text_alumno{
+	word-wrap: break-word;
+	width: 380px;
+	height: 65px;
+	overflow: auto;
+	padding: 5px;
+}
+
+#text_alumno > span#caret{
+	width: 1px;
+	display: inline-block;
+	height: 17px; /*Esto cambia segun el line height*/
+	
+	border: 0;
+	border-left: 2px solid blue;
+}
+
+#text_alumno > span#caret{
+	animation-duration: 1s;
+	animation-name: caret-blink-in;
+	animation-iteration-count: infinite;
+}
+@keyframes caret-blink-in {
+  from {
+    border-left-color: blue;
+  }
+
+  to {
+     border-left-color: transparent;
+   }
+}
+
+
+.txt_alumno_writing{
+	color: #4a4a4a;
+	font-weight: normal;
+}
+.txt_alumno_accepted{
+	color: #4a4a4a;
+	font-weight: bold;
+}
+.txt_alumno_erased{
+	color: #7a7a7a;
+	font-weight: normal;
+}
+
+
+/** Teclado **/
+.virtualKeyboard,
+#plastaKeyboard{
+    text-align: center;
+    background-color: #b6b6b6;
+    padding-top: 2px;
+    padding-left: 3px;
+    height: 215px;
+}
+
+#virtualKeyboardDialog,
+#plastaKeyboard{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 541px;
+}
+
+#plastaKeyboard{
+	background: rgba(50, 50, 50, 0.5);
+}
+
+.desactivado{
+	opacity: 0.5;
+	cursor: default;
+}
+
+
+
+#historial_chat{
+	position: absolute;
+	visibility: hidden;
+	padding: 0px;
+	background-color: #8151a3;
+}
+
+#chat_globos{
+	width: 96%;
+	height: 95%;
+	margin: 0px;
+	padding: 10px;
+}
+
+
+.esquinaGlobo{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+}
+
+.globo_tutor,
+.globo_usuario{
+	position: relative;
+	display: block;
+	width: 94%;
+	height: auto;
+	overflow: hidden;
+	margin: 10px auto 10px 10px;
+}
+
+.globo_usuario{
+	background-color: #e2e2e2;
+	min-height: 75px;
+}
+
+.globo_tutor{
+	background-color: #fff;
+}
+
+
+.globo_tutor > *,
+.globo_usuario > * {
+    vertical-align: middle;
+}
+
+
+.img_tutor_hist{
+	height: 70px;
+	max-width: 85px;
+	position: relative;
+	margin: 10px 0px auto 0px;
+	display: inline-block;
+}
+
+.img_alumno_hist{
+	display: inline-block;
+	height: 70px;
+	margin: 0px;
+	position: relative;
+	/*float: right;*/
+}
+
+
+/************************************************************************************
+TEXTOS
+*************************************************************************************/
+
+.txt_avatar,
+.txt_usuario{
+	width: auto;
+	height: auto;
+}
+
+.txt_avatar > *,
+.txt_usuario {
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	line-height: 25px;
+	text-align: left;
+	color: #4a4a4a;
+}
+
+.txt_avatar{
+	margin: 0px 0px 0px 15px;
+	padding: 10px 15px 5px 15px;
+}
+.txt_usuario{
+	margin: 0px 25px 0px 0px;
+	padding: 10px 15px 10px 15px;
+}
+
+.radio-group,
+.check-group {
+	list-style: none;
+}
+
+.radio-group > li,
+.check-group > li{
+	padding: 6px 0px;
+}
+
+
+
+ul{
+	list-style-position: inside;
+}
+ul.singleSegment{
+	list-style: none;
+}
+ul.singleSegment > li{
+	font-size: 24px;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+
+.optionTxt {
+	font-size: 23px;
+	padding-top: 5px;
+	margin-left: 10px;
+	vertical-align: top;
+}
+.txtBullet{
+	font-size: 23px;
+	margin-bottom: 8px;
+}
+
+/*************************************
+ 
+Micromundos
+
+********************************************/
+
+.micromundo{
+	border: 1px hidden #eb7433;
+}
+
+
+
+a{
+	color: #44a5a3;
+	text-decoration: underline;
+}
+
+
+
+/*Ventana en la que aparecen los micromundos que se despliegan enfrente */
+#popupMicromundos{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	max-width: 1240px;
+	max-height: 610px;
+	background-color: #ffffff;
+	border: 4px solid #ffc600;
+	border-radius: 0px; 
+	overflow: hidden;
+        /*-webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);*/
+}
+
+#popupMicromundos_inner{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#bt_cerrar_pop_micromundo{
+	position: absolute;
+	width: 62px;
+	height: 48px;
+	background: url("../img/bt_general.png") no-repeat -191px -48px;
+	top: 0px;
+	right: 0px;
+}
+#bt_cerrar_pop_micromundo:hover,#bt_cerrar_pop_micromundo:active{
+	background-position: -191px -0px;
+}
+
+
+#plastaPopup{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.isMwHidden{
+	display: none;
+}
+
+/************************************************************************************
+DEFINICIONES
+*************************************************************************************/
+
+.ligaDefinicion,.ligaDefinicion:hover,.ligaDefinicion:active,
+.ligaConclusion,.ligaConclusion:hover,.ligaConclusion:active{
+	color:#9b40db;
+	text-decoration: underline;
+}
+
+.ventana_definicion{
+	border: 4px solid #b33ee0;
+	border-top: 10px solid #b33ee0;
+	border-radius: 0px;
+	background-color: #ffffff;
+	position: absolute;
+	width: 600px;
+	height: auto;
+	max-height: 530px;
+	top: 100px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	padding: 0px;
+	
+	-webkit-transition: top .5s;
+	transition: top .5s;
+}
+.div_interior_definicion{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.ventana_definicion a.btCerrar {
+    	background: url("../img/bt_general.png") no-repeat -300px -252px;
+	text-indent: -5000px;
+	top: 0px;
+	right: 0px;
+}
+.ventana_definicion a.btCerrar:hover,.ventana_definicion a.btCerrar:active{
+	background-position: -300px -300px;
+}
+
+.texto_definicion,
+.texto_definicion > p{
+	padding: 20px 20px 4px 20px;
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	line-height: 26px;
+	font-style: normal;
+	text-align: justify;
+	color: #010101;
+}
+
+
+.imagen_definicion{
+	display: block;
+	margin: 0 auto;
+	max-width: 90%;
+	overflow: auto;
+	padding-bottom: 25px;
+}
+
+
+
+/*En caso de haber audio, sea pregrabado o mediante tts, bot—n para apagar y volver a prender los audios*/
+.bt_audio{
+	background-image:url('../img/bt_audio.png');
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 16px;
+	right: 20px;
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	text-align: right;
+	color: #4a4a4a;
+	margin-right: 11px;
+}
+.bt_audio.apagar{
+	background-image:url('../img/bt_audio_apagar.png');
+}
+
+
+
+.loader{
+	//background-color: #efefef;
+	background: #efefef; /* Older browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	font-family:Arial;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold; 
+	color: #777777;
+}
+
+
+textarea
+{
+   resize: none;
+}
+
+
+
+/************************************************************************************
+MEDIA QUERIES
+The iPhone is 320x480, the iPhone 4 is 640x960 and the iPhone 5 is 640x1136.
+*************************************************************************************/
+
+
+
+
+/************************************************************************************
+MEDIA QUERIES
+The iPhone is 320x480, the iPhone 4 is 640x960 and the iPhone 5 is 640x1136.
+*************************************************************************************/
+
+/* 1271 px o m‡s*/
+@media screen and (min-width: 1271px) {
+	
+	#chat{
+		right: 25px;
+		width: 545px;
+		height: 549px;
+	}
+	
+	#div_tutor{
+		height: 245px;
+		max-height: 245px;
+	}
+	
+	.text_alumno_container {
+		width: 467px;
+	}
+	
+	#virtualKeyboardDialog,
+	#plastaKeyboard{
+	    -ms-transform: scale(1); /* IE 9 */
+            -webkit-transform: scale(1); 
+            transform: scale(1);
+	}
+	
+	#historial_chat{
+		right: 571px;
+		width: 686px;
+		height: 555px;
+		bottom: 17px;
+	}
+
+	#micromundo,
+	#micromundoVisitado{
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); 
+		transform: scale(1);
+		background : url('../img/dialogo/fondoMicromundos.png') no-repeat;
+		margin-top: 0px;
+	}
+	
+	#popupMicromundos{
+		-ms-transform: scale(1); /* IE 9 */
+		-webkit-transform: scale(1); 
+		transform: scale(1);
+	}
+	
+	#historial_micromundos{
+		left: 146px;
+		top: 10px;
+		width: 534px;
+	}
+
+	.linkMicroworld{
+		margin-left: 5px;
+		width: 46px;
+		height: 46px;
+	}
+	
+	ul > li {
+		font-size: 23px;
+		line-height: 21px;
+	}
+	
+	div, p{
+		font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+		font-size: 24px;
+		line-height: 26px;
+		letter-spacing: 0.7px;
+	}
+
+	
+}
+/* menos de 1271 px */
+@media screen and (max-width: 1270px) {
+	
+	#chat{
+		right: 10px;
+		width: 470px;
+		height: 557px;
+	}
+	
+	#div_tutor{
+		height: 282px;
+		max-height: 282px;
+	}
+	
+	.text_alumno_container {
+		width: 392px;
+	}
+	
+	
+	#virtualKeyboardDialog,
+	#plastaKeyboard{
+	    -ms-transform: scale(.863); /* IE 9 */
+            -webkit-transform: scale(.863); 
+            transform: scale(.863);
+	    -ms-transform-origin: bottom left;
+            -webkit-transform-origin: bottom left;
+	    transform-origin: bottom left;
+	}
+	
+
+	#micromundo,
+	#micromundoVisitado{
+		-ms-transform: scale(.8); /* IE 9 */
+		-webkit-transform: scale(.8); 
+		transform: scale(.8);
+		/*-ms-transform-origin: top left;
+		-webkit-transform-origin: top left;
+		transform-origin: top left;*/
+		background : url('../img/dialogo/fondoMicromundos_2.png') no-repeat;
+		margin-left: -84px;
+		margin-top: 17px;
+	}
+	
+	#popupMicromundos{
+		-ms-transform: scale(.815); /* IE 9 */
+		-webkit-transform: scale(.815); 
+		transform: scale(.815);
+		-ms-transform-origin: top left;
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+	}
+	
+	#historial_micromundos{
+		left: 12px;
+		top: 83px;
+		width: 518px;
+	}
+	
+	.linkMicroworld{
+		margin-left: 2px;
+		width: 45px;
+		height: 45px;
+	}
+	
+	#historial_chat{
+		right: 487px;
+		width: 528px;
+		height: 563px;
+		bottom: 8px;
+	}
+	
+		
+	ul > li {
+		font-size: 20px;
+		line-height: 21px;
+	}
+	
+	div, p{
+		font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+		font-size: 23px;
+		line-height: 25px;
+		letter-spacing: 0.7px;
+	}
+
+}
+
+h1 {
+	font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+}
+
+
+#chat_globos label{
+	cursor: default;
+}
+
+#chat_globos .btn_checkGroup{
+	visibility: hidden;
+}
+#text_tutor .btn_checkGroup{
+	text-decoration: underline;
+	text-align: center;
+	margin-left: 200px;
+}
+

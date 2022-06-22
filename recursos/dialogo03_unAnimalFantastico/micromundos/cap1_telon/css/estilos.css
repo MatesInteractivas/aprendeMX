@@ -1,0 +1,56 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background-image: url('img/fondo.jpg');
+}
+
+.imagenFija{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+.imagenFija.puesto{
+    top: 120px !important;
+}
+.imagenMovil{
+    position: absolute;
+    top: 0px;
+}
+.imagenMovil.left{
+    left: 0px;
+    -webkit-transition: left 1.5s; /* Safari */
+    transition: left 1.5s;
+}
+.imagenMovil.left.open{
+    left: -300px;
+}
+.imagenMovil.right{
+    right: 0px;
+    -webkit-transition: right 1.5s; /* Safari */
+    transition: right 2s;
+}
+.imagenMovil.right.open{
+    right: -300px;
+}
+
+.slowShow{
+    -webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 2s;
+}
+
+.oculto{
+    visibility: hidden;
+    opacity : 0;
+}

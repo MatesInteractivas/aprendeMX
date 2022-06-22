@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_042"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Porcentajes y fracciones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		“Llevamos el 85 por ciento del trabajo terminado.” “Falta un 5% para alcanzar la meta.” “Ofrecen un 30 por ciento de descuento en esa tienda”. Los porcentajes son una manera de expresar medidas fraccionarias. En esta unidad aprenderás a estimar porcentajes, a  relacionarlos con las fracciones y a expresar unos en términos de los otros.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, fracciones, Manejo de la información, Proporcionalidad y funciones
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, fracción, porcentaje, tanto por ciento, descuento
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

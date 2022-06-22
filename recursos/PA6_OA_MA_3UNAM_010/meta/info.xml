@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_010"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Áreas
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Con esta unidad podrás formar diferentes figuras que tengan la misma área.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, áreas, Forma, espacio y medida, Medida
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Área, figuras planas, descomposición de figuras, armado y desarmado de figuras, igualdad de áreas, descomposición y composición de figuras
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,181 @@
+@CHARSET "UTF-8";
+
+
+#adivina-quien-container.disabled{
+	box-sizing:border-box;
+}
+
+
+
+.aq-opt {
+	display: inline-block;	
+	width: 150px;
+	height: 111px;
+	position: relative;
+	box-sixing : border-box;
+	 
+	-webkit-perspective: 800px;
+	   -moz-perspective: 800px;
+		 -o-perspective: 800px;
+		    perspective: 800px;
+		    
+	cursor: pointer;
+	margin: 3px;
+}
+
+
+
+
+.aq-opt.disabled {
+	cursor: wait;
+}
+
+
+.aq-retro-general-bien,
+.aq-retro-general-mal,
+.aq-retro-general-bien-all {
+	display: none;
+}
+
+
+
+.aq-opt:hover .flipper {
+	/*border: 1px solid #5555FF;
+	border-radius : 5px;*/
+}
+
+.aq-opt.disabled img {
+	opacity: 0.4;
+	filter: alpha(opacity=40); /* msie */
+}
+
+
+
+
+.aq-opt .flipper{
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	position: relative;
+	-webkit-transition: -webkit-transform 1s;
+	   -moz-transition: -moz-transform 1s;
+	     -o-transition: -o-transform 1s;
+	        transition: transform 1s;
+	
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	     -o-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+
+}
+
+.aq-opt .flipper .front,
+.aq-opt .flipper .back
+{
+	
+	text-align: center;
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+
+	border: 1px solid #989898;
+	border-radius : 0px;
+	
+
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+
+	-webkit-transition: -webkit-transform 1s;
+	   -moz-transition: -moz-transform 1s;
+	     -o-transition: -o-transform 1s;
+	        transition: transform 1s;
+	
+}
+
+.aq-opt .flipper .back {
+
+	transform: rotateY(-180deg);
+	z-index: 800;
+
+	background: url("imgs/back.jpg") no-repeat center;
+	background-size: contain;
+}
+
+.aq-opt .flipper .front{
+	
+	z-index: 900;
+	/* for firefox 31 */
+	transform: perspective(200) rotateY(0deg);	
+	/*background-color: #eee*/;
+}
+
+
+.aq-opt.flipped .flipper .front
+{
+	 -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+          -o-transform: rotateY( 180deg );
+             transform: rotateY( 180deg );
+}
+
+.aq-opt.flipped .flipper .back {
+	z-index: 950;
+	-webkit-transform: rotateY( 0deg );
+       -moz-transform: rotateY( 0deg );
+         -o-transform: rotateY( 0deg );
+            transform: rotateY( 0deg );
+}
+
+.aq-opt .flipper .front img{
+	width: 100%;
+}
+
+
+.aq-opt:hover .flipper .back img{
+}
+
+.aq-opt .flipper .front:hover,.aq-opt .flipper .front:focus,.aq-opt .flipper .front:active{
+	border: 1px solid #5555FF;
+}
+
+span.counter {
+	
+	position: absolute;
+	right: 10px;
+	top: auto;
+	bottom: 30px;
+
+	color: #000;
+	text-shadow: 1px 1px 2px #EEE;
+	font-family: sans-serif;
+
+	background-color: rgba(255,255,255,0.7);
+	padding: 5px 15px;
+	border-radius: 6px;
+	
+	display: none;
+}
+
+button.btn-listo {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: #8D25D6;
+	border: 2px solid #D7D7D7;
+	color: #FFF;
+	font-size: 30px;
+	font-family: "sf_cartoonist_handregular",Arial,Helvetica,sans-serif;
+	-moz-user-select: none;
+	padding: 5px;
+	cursor: pointer;
+}
+
+
+button.btn-listo:hover {
+	
+}

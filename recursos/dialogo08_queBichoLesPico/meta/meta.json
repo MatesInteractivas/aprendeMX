@@ -1,0 +1,44 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Registro", 
+    "Adecuación de registro"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "situación comunicativa", 
+    "elementos de la situación comunicativa", 
+    "registro", 
+    "adecuación del registro", 
+    "tipo de lenguaje", 
+    "lenguaje formal", 
+    "lenguaje informal", 
+    "lenguaje coloquial", 
+    "tipo de texto", 
+    "destinatario", 
+    "público", 
+    "lector", 
+    "audiencia", 
+    "motivo de comunicación", 
+    "intención comunicativa", 
+    "difusión de información", 
+    "carta", 
+    "entrevista", 
+    "tríptico", 
+    "promocional de radio"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Adecuación del registro en función del contexto comunicativo. Los y las alumnas tendrán contacto con el texto de una canción (la letra) y la analizarán, observando elementos tales como el uso de la tercera persona o el narrador tácito u omnisciente; adicionalmente, abordarán la cuestión del lenguaje ‘formal’. Analizarán una carta personal que recibe el tutor, abordando el uso de la segunda y la primera persona, además del lenguaje informal. Por último, elaborarán un tipo de texto para niños y niñas (entrevista con el bicho) y otro tipo de texto para adultos (tríptico) y valorarán el texto escrito como un medio para difundir información vital para públicos más amplios",
+  "resena": "Análisis de un texto (canción) y del papel de las personas y el narrador. Uso del lenguaje formal.",
+  "titulo": "¿Qué bicho les picó?", 
+  "id": "PA6_OA_ES_3UNAM_008_registro"
+}

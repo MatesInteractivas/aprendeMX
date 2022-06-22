@@ -1,0 +1,179 @@
+body,html{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	width: 100%;
+	height:100%;
+	font-size: 22px;
+	font-family: descartesJS_sansserif;
+	background-color: #ecf0f1;
+}
+div.activity-container {
+	max-width:1024px;
+	max-height:568px;
+
+
+	width:100%;
+	height:100%;
+
+	
+	color: #34495e;
+	padding: 10px 20px 20px 20px;
+	box-sizing: border-box;
+}
+
+div.activity-container h1 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0px 60px 10px 40px;
+
+}
+
+
+div#DISP{
+	
+	width: 992px;
+	height: 189px;
+	margin: 0px auto 20px auto;
+	font-size: 40px;
+	
+	padding: 80px 140px 20px 20px;
+	text-align: center;
+	font-weight: bolder;
+	
+	
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-image: url('../../images/sucesiones/contenedor_espiral.png');
+	background-color: none;
+	box-sizing:border-box;
+}
+
+
+div#DISP .coma{
+	color : #3449ff;
+	margin-right: 40px;
+}
+
+
+div#INST{
+	background-color: none;
+	margin: 10px auto 10px auto;
+	text-align: center;
+}
+
+
+div.option {
+	cursor: pointer;
+	background: #FFF;
+	width: 455px;
+	height: 90px;
+	margin: 15px 0px;
+	display: inline-block;
+	padding: 10px;
+	box-sizing: border-box;
+	vertical-align: top;
+
+	border-bottom: 2px solid #ccc; 
+}
+
+div.option.odd {
+	margin-right: 50px;
+}
+
+span.termino{
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+span.fracction{
+	display: inline-block;
+	vertical-align: middle;
+	margin: auto 5px auto 5px;
+
+}
+
+
+span.fracction .numerador,
+span.fracction .denominador{
+	width: 96%;
+	display: block;
+	text-align: center;
+	font-size: 80%;
+	padding: 0px 10px 0px 10px;
+	margin: 0;
+	box-sizing: border-box;
+	line-height: 90%;
+}
+
+
+span.fracction .numerador{
+	border-bottom: 2px solid #000;
+	padding-bottom: 0px;
+}
+
+
+span.fracction .denominador{
+	padding-top: 0px;
+}
+
+
+
+div#INST span.fracction .numerador,
+div#INST span.fracction .denominador{
+	padding: 0px 3px 0px 3px;
+}
+
+div#INST span.fracction .numerador{
+	padding-bottom: 0px;
+}
+
+
+
+div#INST span.fracction .denominador{
+	padding-top: 2px;
+}
+
+
+div.option{
+	position: relative;;
+}
+
+div.option.selected,
+div.option.correcto{
+	border: 3px solid #2ecc71;
+	box-shadow: 0px 0px 4px 0px gray;
+}
+
+div.option.selected {
+	border-color : #e74c3c;
+}
+
+div.option.correcto{
+	border-color : #2ecc71;
+}
+
+
+div.option::before{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	
+	width: 46px;
+	height: 46px;
+	content: " ";
+}
+
+
+
+div.option.selected::before {
+	background-image: url('../../images/icon_wrong.png');
+}
+
+div.option.correcto::before {
+	background-image: url('../../images/icon_ok.png');
+}
+
+
+

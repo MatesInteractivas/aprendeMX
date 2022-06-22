@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		<script type='text/javascript' src='js/mapa.js'></script>
+		
+		<title>Mapa del Bajío</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+		
+			<img class='ubicacion' src='css/img/ubicacion.png'></img>
+			<img id='infoAdicional' class='oculto slowShow'></img>
+			
+			<div id='plasta' class='oculto slowShow'></div>			
+			
+			<div id='ficha' class='mas oculto slowShow'>
+				<img class='foto'></img>
+				<p class='info'></p>
+				<div class='nombre'></div>
+				<a class='bt_close' onclick='$("#ficha").addClass("oculto");$("#plasta").addClass("oculto")'></a>
+			</div>
+			
+			<div class="vntn vntn-feedback">
+				<div class="vntn--contenido"></div>
+			</div>
+			
+			<div class="vntn vntn-inst js-instrucciones">
+				<p class="vntn--titulo">
+					Indicaciones
+				</p>
+				<div class="vntn--contenido">
+					<p>
+						Si vuelves a presionar sobre los botones 'i', aparecerá nuevamente la descripción de cada lugar y una versión abreviada de nuestra tabla de peticiones.
+					</p>
+					<p>
+						En esa tablita, selecciona las características que <em>definitivamente</em> se cumplen.
+					</p>
+					<p>
+						Presiona '¡Listo!' cuando consideres que ya identificaste todas las características presentes. 
+					</p>
+					<p>
+						<strong>Empieza con Tamasopo.</strong>
+					</p>
+				</div>
+			</div>
+		
+			<button class="btn js-btn-instr btn-instr oculto" >Indicaciones
+			</button>
+		</div>
+					
+        </body>
+</html>

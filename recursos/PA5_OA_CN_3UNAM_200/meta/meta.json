@@ -1,0 +1,38 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "sonido", 
+    "acústica", 
+    "aplicación de conocimiento científico y tecnológico"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Sonido", 
+    "ondas estacionarias", 
+    "longitud de onda", 
+    "frecuencia", 
+    "nodo", 
+    "antinodo", 
+    "nodos", 
+    "antinodos", 
+    "suma de ondas", 
+    "tubo de Kundt", 
+    "tubo de Rubens", 
+    "superposición de ondas", 
+    "suma de ondas", 
+    "cancelación de ondas"
+  ], 
+  "descripcion": "En esta unidad experimentarás los fenómenos sonoros que se producen cuando se suman de dos ondas sonoras que viajan en sentidos opuestos. Apreciarás la formación de ondas estacionarias (fijas) de sonido y explicarás por qué a veces al moverse en una habitación donde hay un sonido constante, hay lugares donde no oye nada y lugares donde se oye con más claridad e intensidad. También identificarás otras situaciones cotidianas en que hay ondas estacionarias, por ejemplo, el movimiento de una cuerda horizontal atada a un poste.",
+  "resena": "Superposición de ondas sonoras para generar ondas estacionarias. Estimación de la longitud de onda a partir de dichas ondas.",
+  "titulo": "El sonido atrapado en un tubo", 
+  "id": "PA5_OA_CN_3UNAM_200"
+}

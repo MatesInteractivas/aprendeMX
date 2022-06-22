@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, número racional, número decimal, aproximación, densidad, recta numérica">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+	<title>SEB aprende.mx Descartes index</title>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+
+
+
+
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='start' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Comenzar' expresión='((E2._w-150)/2,(E2._h-321)/2+188,150,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='22' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nanimar=1\nNumBien=0\ngeneraNumero()\n' dibujar-si='!started'">
+   <param name="C_02" value="id='otra' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Otra vez' expresión='((E2._w-150)/2,(E2._h-321)/2+188,150,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='22' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nstarted=0\nt=0\nnumBien=0\nfinal=0\n' dibujar-si='final' pos_mensajes='centro'">
+   <param name="A_01" value="id='P' vector='sí' evaluar='una-sola-vez' tamaño='5'">
+   <param name="A_02" value="id='X' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' filas='4' expresión='_x1_=0;_x2_=1;'">
+   <param name="A_03" value="id='xx' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' filas='4' expresión='_x1_=0;_x2_=1;'">
+   <param name="A_04" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='12' filas='4' expresión='tnsp=0;rojo=1;verd=2;azul=3;;COL[0,tnsp]=0.0;COL[0,rojo]=0.0;COL[0,verd]=0.0;COL[0,azul]=0.0;;COL[1,tnsp]=0.0;COL[1,rojo]=0.95;COL[1,verd]=0.08;COL[1,azul]=0.16;;COL[2,tnsp]=0.0;COL[2,rojo]=0.95;COL[2,verd]=0.60;COL[2,azul]=0.10;;COL[3,tnsp]=0.0;COL[3,rojo]=0.99;COL[3,verd]=0.99;COL[3,azul]=0.10;;COL[4,tnsp]=0.0;COL[4,rojo]=0.00;COL[4,verd]=0.80;COL[4,azul]=0.30;;COL[5,tnsp]=0.0;COL[5,rojo]=0.00;COL[5,verd]=0.75;COL[5,azul]=0.75;;COL[6,tnsp]=0.0;COL[6,rojo]=0.15;COL[6,verd]=0.40;COL[6,azul]=1.00;;COL[7,tnsp]=0.0;COL[7,rojo]=0.80;COL[7,verd]=0.10;COL[7,azul]=0.80;;COL[8,tnsp]=0.0;COL[8,rojo]=0.90;COL[8,verd]=0.10;COL[8,azul]=0.60;;COL[9,tnsp]=0.0;COL[9,rojo]=0.99;COL[9,verd]=0.99;COL[9,azul]=0.99;;COL[10,tnsp]=0.0;COL[10,rojo]=0.7;COL[10,verd]=0.9;COL[10,azul]=0.8;'">
+   <param name="A_05" value="id='DONE' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10000' filas='2' expresión=';'">
+   <param name="A_06" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_07" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_08" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_09" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_10" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_11" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_12" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='Rx=50;Ry=230;Rw=900;x0=32;unitWidth=ent((Rw-x0)/10.5);chw=8;h=2;dX=9;H=20;ND=0;dY=-60;;'">
+   <param name="A_13" value="id='Inicio()' algoritmo='sí' algoritmo='sí' inicio='N=0' hacer='T=120;t=0;generaNumero();'">
+   <param name="A_14" value="id='evaluar()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='note=NumBien/10;nota=(note<1)?&squot;Nota: &squot;+_NumToStr_(note*10,1):&squot;Nota: 10&squot;;aprecio=(note>0.56)?&squot;¡De panzazo!&squot;:&squot;Mal&squot;;aprecio=(note>0.66)?&squot;Regular&squot;:&squot;Mal&squot;;aprecio=(note>0.76)?&squot;Bien&squot;:aprecio;aprecio=(note>0.86)?&squot;Muy bien&squot;:aprecio;aprecio=(note>0.96)?&squot;¡Excelente!&squot;:aprecio'">
+   <param name="A_15" value="id='generaNumero()' algoritmo='sí' algoritmo='sí' inicio='N=N+1' hacer='decimal=0;fraccion=1-decimal;enDecimales=decimal|(rnd<1);elEntero=ent(rnd*12);elDenominador=2+ent(rnd*9);elNumerador=1+ent(rnd*9)+ent(rnd*9)*elDenominador;elDecimal=(decimal)?rnd*10:elNumerador/elDenominador;MD=(decimal)?4:1+ent(rnd*4);MD=3;ND=0;elDecimal=ent(elDecimal*10^MD)/(10^MD);nUnits=ent((Rw-x0)/unitWidth);DONE[N,0]=elNumerador;DONE[N,1]=elDenominador;x1=0;x2=10;X1=0;X2=10;found=0;selected=0;;' mientras='(elDecimal>10)|(elDenominador==10)'">
+   <param name="A_16" value="id='processMouse(mx,my)' algoritmo='sí' algoritmo='sí' inicio='step=1/(10^ND)' hacer='x1=ent((mx-Rx-x0)/unitWidth);x2=x1+1;selected=(X1+x1*step<=elDecimal)&(elDecimal<X1+x2*step);P[ND]=(selected)?(elDecimal-X1)*(10^ND):P[ND];xx[ND,_x1_]=x1;xx[ND,_x2_]=x2;X[ND,_x1_]=Rx+x0+x1*unitWidth;X[ND,_x2_]=Rx+x0+x2*unitWidth;X1=(selected)?X1+x1*step:X1;X2=(selected)?X1+step:X2;mal=!selected;aux=(selected)?evaluar():&squot;&squot;;aux=(selected)?ampliar():0;'">
+   <param name="A_17" value="id='selectNumber(mx,my)' algoritmo='sí' algoritmo='sí' inicio='step=1/(10^MD)' hacer='x1=(mx-Rx-x0)/unitWidth;found=(X1+(x1-1)*step<=elDecimal)&(elDecimal<X1+(x1+0)*step);P[MD]=(found)?(elDecimal-X1)*(10^ND):P[ND];str=&squot;&squot;+P[MD];S=(found)?ent(x1):-1;NumBien=(found)?NumBien+1:NumBien;aux=(found)?evaluar():&squot;&squot;;aux=(found)?generaNumero():&squot;&squot;'">
+   <param name="A_18" value="id='ampliar()' algoritmo='sí' algoritmo='sí' hacer='ND=ND+1;mal=0;selected=0;'">
+   <param name="A_19" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Ponte a prueba. Ubica 10 fracciones en la recta, en 120 segundos.&squot;)' hacer='initDisplay();Inicio();'">
+   <param name="A_20" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';;;'">
+   
+   <param name="A_22" value="id='Limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_23" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_24" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='limpiar=0\nanimar=0\nplayAudio=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='(animando)|(n>0)' expresión='[(E2._w-_AnchoDeCadena_(tiempo,&squot;SansSerif&squot;,&squot;PLAIN&squot;,17))/2,10]' texto='[tiempo]' fuente='SansSerif,PLAIN,17' decimales='0' fijo='no' ancho='2' color_borde_texto='335544' info='El tiempo'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='animando' expresión='[30,340]' texto='Busca el sitio en la recta que le corresponde al número\n' fuente='Monospaced,PLAIN,19' decimales='6' fijo='no' ancho='940' color_borde_texto='335544'">
+   <param name="G_03" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' dibujar-si='animando' expresión='[30,460]' texto='con [MD] decimales de precisión.' fuente='Monospaced,PLAIN,19' decimales='6' fijo='no' ancho='940' color_borde_texto='335544'">
+   <param name="G_04" value="espacio='E2' tipo='segmento' color='(s,s,s,00)' dibujar-si='animando&fraccion' coord_abs='sí' expresión='(225,405)(300,405)' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0' ancho='5-2s' info='la raya de quebrado'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='animando&fraccion' expresión='[250-(elNumerador>9)*chw-(elNumerador>99)*chw,370]' texto='[elNumerador]' fuente='Monospaced,BOLD,32' decimales='0' fijo='sí' ancho='940' color_borde_texto='335544' info='el numerador'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='animando&fraccion' expresión='[250-(elDenominador>9)*chw-(elDenominador>99)*chw,415]' texto='[elDenominador]' fuente='Monospaced,BOLD,32' decimales='0' fijo='sí' ancho='940' color_borde_texto='335544' info='el denominador'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='animando&fraccion&enDecimales*(ND>0)' expresión='[380,390]' texto='= [ent(elDecimal*10^ED)/(10^ED)]' fuente='Monospaced,BOLD,32' decimales='ED' fijo='sí' ancho='940' color_borde_texto='335544' info='la fracción en decimales'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='animando&decimal' expresión='[280,390]' texto='[elDecimal]' fuente='Monospaced,BOLD,32' decimales='4' fijo='sí' ancho='940' color_borde_texto='335544' info='el decimal'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' fondo='sí' expresión='(820,100,0.75,0.75)' archivo='images/personajes/girl_04.png'">
+   <param name="G_10" value="espacio='E2' tipo='imagen' fondo='sí' expresión='(890,110,0.75,0.75)' archivo='images/personajes/boy_04.png'">
+   <param name="G_11" value="espacio='E2' tipo='segmento' color='rojo' dibujar-si='0' expresión='(X[s,_x1_],Ry-s*dY)(X[s,_x2_],Ry-s*dY)' familia='s' s.intervalo='[0,ND]' s.pasos='ND' fijo='sí' tamaño='5' ancho='3' info='el valor buscado '">
+   <param name="G_12" value="espacio='E2' tipo='flecha' color='ff000000' dibujar-si='(ND>0)&(!found)' expresión='(X[s,_x1_],Ry-s*dY)(Rx+x0,Ry-(s+1)*dY)' familia='s' s.intervalo='[0,ND-1]' s.pasos='ND-1' fijo='sí' tamaño='1' ancho='3' ancho='3' punta='5' flecha='(COL[s+2,rojo],COL[s+2,verd],COL[s+2,azul],0.0)'">
+   <param name="G_13" value="espacio='E2' tipo='flecha' color='ff000000' dibujar-si='(ND>0)&(!found)' expresión='(X[s,_x2_],Ry-s*dY)(Rx+x0+10*unitWidth,Ry-(s+1)*dY)' familia='s' s.intervalo='[0,ND-1]' s.pasos='ND-1' fijo='sí' tamaño='1' ancho='3' ancho='3' punta='5' flecha='(COL[s+2,rojo],COL[s+2,verd],COL[s+2,azul],0.0)'">
+   <param name="G_14" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' expresión='(Rx,Ry-s*dY)(Rx+Rw,Ry-s*dY)' familia='s' s.intervalo='[0,ND]' s.pasos='ND' fijo='sí' tamaño='0' ancho='2' info='Las rectas horizontales'">
+   <param name="G_15" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='ND>=0' expresión='(Rx+x0+s*unitWidth,Ry-h)(Rx+x0+s*unitWidth,Ry+h)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' fijo='sí' tamaño='0' ancho='2' info='las rayitas de los números con 0 decimales'">
+   <param name="G_16" value="espacio='E2' tipo='punto' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='ND>=0' expresión='(Rx+x0+s*unitWidth-dX,Ry-H)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' texto='[s]' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí' tamaño='0' info='los números con 0 decimales'">
+   <param name="G_17" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=1)&enDecimales' expresión='(Rx+x0+s*unitWidth,Ry-h-dY)(Rx+x0+s*unitWidth,Ry+h-dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' fijo='sí' tamaño='0' ancho='2' info='las rayitas de los númeroscon 1 decimal'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=1)&((1==ND)|((s==0)|(s==nUnits)))&enDecimales' expresión='(Rx+x0+s*unitWidth-dX,Ry-H-dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' texto='[xx[0,_x1_]+(s/10)]' fuente='SansSerif,PLAIN,19' decimales='1' fijo='sí' tamaño='0' info='los números con 1 decimal'">
+   <param name="G_19" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=2)&enDecimales' expresión='(Rx+x0+s*unitWidth,Ry-h-2dY)(Rx+x0+s*unitWidth,Ry+h-2dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' fijo='sí' tamaño='0' ancho='2' info='las rayitas de los números con 2 decimales'">
+   <param name="G_20" value="espacio='E2' tipo='punto' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=2)&((2==ND)|((s==0)|(s==nUnits)))&enDecimales' expresión='(Rx+x0+s*unitWidth-2dX,Ry-H-2dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' texto='[xx[0,_x1_]+xx[1,_x1_]/10+(s/100)]' fuente='SansSerif,PLAIN,19' fijo='sí' tamaño='0' info='los números con dos decimales'">
+   <param name="G_21" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=3)&enDecimales' expresión='(Rx+x0+s*unitWidth,Ry-h-3dY)(Rx+x0+s*unitWidth,Ry+h-3dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' fijo='sí' tamaño='0' ancho='2' info='las rayitas de los números con tres decimales'">
+   <param name="G_22" value="espacio='E2' tipo='punto' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=3)&((3==ND)|((s==0)|(s==nUnits)))&enDecimales' expresión='(Rx+x0+s*unitWidth-3dX,Ry-H-3dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' texto='[xx[0,_x1_]+xx[1,_x1_]/10+xx[2,_x1_]/100+(s/1000)]' fuente='SansSerif,PLAIN,19' decimales='3' fijo='sí' tamaño='0' info='los números con tres decimales'">
+   <param name="G_23" value="espacio='E2' tipo='segmento' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=4)&enDecimales' expresión='(Rx+x0+s*unitWidth,Ry-h-4dY)(Rx+x0+s*unitWidth,Ry+h-4dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' fijo='sí' tamaño='0' ancho='2' info='las rayitas de los números con cuatro decimales'">
+   <param name="G_24" value="espacio='E2' tipo='punto' color='(COL[10,rojo],COL[10,verd],COL[10,azul],COL[10,tsnp])' dibujar-si='(ND>=4)&(((4==ND)&(!found))|((s==0)|(s==nUnits)))&enDecimales' expresión='(Rx+x0+s*unitWidth-4dX,Ry-H-4dY)' familia='s' s.intervalo='[0,nUnits]' s.pasos='nUnits' texto='[xx[0,_x1_]+xx[1,_x1_]/10+xx[2,_x1_]/100+xx[3,_x1_]/1000+(s/10000)]' fuente='SansSerif,PLAIN,19' decimales='4' fijo='sí' tamaño='0' info='los números con cuatro decimales'">
+   <param name="G_25" value="espacio='E2' tipo='segmento' color='(COL[9,rojo],COL[9,verd],COL[9,azul],COL[9,tsnp])' dibujar-si='found' expresión='(Rx+x0+P[s]*unitWidth,Ry-s*dY)(Rx+x0+P[s]*unitWidth,Ry-s*dY)' familia='s' s.intervalo='[0,MD]' s.pasos='MD' fijo='sí' tamaño='4' ancho='2' info='Los puntos en todas las ampliaciones'">
+   <param name="G_26" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='found&enDecimales' expresión='(Rx+x0+P[s]*unitWidth-MD*dX,Ry+5-s*dY)' familia='s' s.intervalo='[0,MD]' s.pasos='MD' texto='[elDecimal]' fuente='SansSerif,PLAIN,19' decimales='MD' fijo='sí' tamaño='0' info='Los números del punto buscado en todas las ampliaciones'">
+   <param name="G_27" value="espacio='E2' tipo='imagen' dibujar-si='(!started)|final' coord_abs='sí' expresión='((E2._w-366)/2,(E2._h-321)/2)' archivo='images/window_calculator_4x6.png'">
+   <param name="G_28" value="espacio='E2' tipo='texto' color='negro' dibujar-si='!started' expresión='((E2._w-366)/2+70,(E2._h-321)/2+75)' texto='   Ubica 10 fracciones\n         en la recta\n\n     en 120 segundos' fuente='Monospaced,PLAIN,19' decimales='ED' fijo='sí' ancho='270' info='la fracción en decimales'">
+   <param name="G_29" value="espacio='E2' tipo='texto' color='negro' dibujar-si='final' expresión='((E2._w-366)/2+45,(E2._h-321)/2+60)' texto='Ubicaste [NumBien] fracciones en la recta en [ent(t)] segundos.\n' fuente='Monospaced,BOLD,19' decimales='0' fijo='sí' ancho='270' info='la fracción en decimales'">
+   <param name="G_30" value="espacio='E2' tipo='texto' color='negro' dibujar-si='final' expresión='((E2._w-_AnchoDeCadena_(aprecio,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,(E2._h-321)/2+135)' texto='[aprecio]\n' fuente='Monospaced,PLAIN,19' decimales='0' fijo='sí' ancho='270' info='la fracción en decimales'">
+   <param name="G_31" value="espacio='E2' tipo='imagen' dibujar-si='0&(started)' coord_abs='sí' expresión='((E2._w-40*10)/2+1+10+s*40,50,1,1)' familia='s' s.intervalo='[0,9]' s.pasos='9' archivo='images/icon_score_empty.png'">
+   <param name="G_32" value="espacio='E2' tipo='imagen' dibujar-si='started&(NumBien>0)' coord_abs='sí' expresión='((E2._w-40*10)/2+1+10+s*40,53,1,1)' familia='s' s.intervalo='[0,NumBien-1]' s.pasos='NumBien-1' archivo='images/icon_ok.png'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="Animación" value="pausa='40' controles='no' auto='no' inicio='started=1;animando=1;t=0;dt=0.025' hacer='t=min(t+dt,T);animando=(0<t)&(t<T)&(NumBien<10);tiempo=&squot;&squot;+ent(t)+&squot; seg  &squot;+ent((t-ent(t))*10)+&squot; décimas&squot;;MP=E2.mouse_pressed;ED=(found)?MD:(ND-1);aux=(animando&(MP)&(!found))?selectNumber(E2.mouse_x,E2.mouse_y):&squot;&squot;;aux=(animando&(MP)&(ND<MD))?processMouse(E2.mouse_x,E2.mouse_y):&squot;&squot;;ED=(found)?MD:(ND-1);final=(t==T)|(NumBien==10);;;;' mientras='animando'">
+</ajs>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

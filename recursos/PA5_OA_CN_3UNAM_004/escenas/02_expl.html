@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Electricidad y magnetismo, campo magnético, espira, bobina, solenoide, imán, brújula, norte, sur, polo, positivo, negativo, electroimán, electroimanes, Faraday, Maxwell, inducción electromagnética, generador, generadores, presa hidroeléctrica, interruptor">
+
+<head>
+	<title>Corrientes por imanes</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' O.y='100' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='animar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Soltar' expresión='(450,502,150,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=1' dibujar-si='animar=0'">
+   <param name="C_02" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Subir' expresión='(450,502,150,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='t=0\ntg=0\nmover()\nanimar=0' dibujar-si='animar=1' pos_mensajes='centro'">
+   <param name="C_03" value="id='bobina' tipo='gráfico' espacio='E2' tamaño='30' expresión='(bobina.x,bobina.y)' fijo='sí' imagen='images/aprende/led_vacio.png'">
+   <param name="C_04" value="id='bobina.y' tipo='numérico' región='escenario' espacio='E2' nombre='bobina.y' expresión='(0,0,0,0)' valor='2.6' min='-1' max='2.6' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_05" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1\nt=0\ntg=0\nmover()\nanimar=0' dibujar-si='(fase<2)' pos_mensajes='centro'">
+   <param name="C_06" value="id='regresar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1\nt=0\ntg=0\nmover()\nanimar=0\nprimera=0\nsegunda=0\ntercera=0' dibujar-si='(fase>0)' pos_mensajes='centro'">
+   <param name="C_07" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Información' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' dibujar-si='fase=2' pos_mensajes='centro'">
+   <param name="C_08" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;a=2;b=.935;y0=110;mover();primera=0;Frnd();Dx=100'">
+   <param name="A_02" value="id='mover()' algoritmo='sí' algoritmo='sí' hacer='yf=y0+a*(t^2);y2f=y0+b*(tg^2)'">
+   <param name="A_03" value="id='dist()' algoritmo='sí' algoritmo='sí' hacer='y1=yf-110;y2=abs((bobina.y-2.6)*90);ImgBob=((y1>y2)&(tt>0)&(tt<tenc))?&squot;images/aprende/led_on.png&squot;:&squot;images/aprende/led_off.png&squot;;ImgBob=(fase>0)?&squot;images/aprende/led_off.png&squot;:ImgBob;'">
+   <param name="A_04" value="id='Vrnd' vector='sí' evaluar='una-sola-vez' tamaño='150'">
+   <param name="A_05" value="id='Frnd()' algoritmo='sí' algoritmo='sí' Local='varTem' inicio='i=0' hacer='varTem=ent(rnd*2);Vrnd[i]=(varTem)?1:0;i=i+1' mientras='i<150'">
+   <param name="A_06" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Aprende...&squot;' hacer='init()'">
+   <param name="A_07" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='dist();tenc1=(y2+75)/70;tenc=7-tenc1;bobina.x=-6.25;bobina.x=(fase>0)?-4.19:bobina.x'">
+   <param name="A_08" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' color='34495e' expresión='[60,16]' texto='Aprende qué sucede cuando un imán atraviesa un tubo conductor.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[40,55]' texto='A continuación se muestra un tubo de PVC en donde puedes arrastrar la bobina que está\nenrollada y conectada a un led, pulsa el botón &squot;soltar&squot; para deja caer el imán.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='27ae60' dibujar-si='fase=1' expresión='[40,55]' texto='Ahora veamos cómo es la caída de mismo imán pero en este caso con un tubo de cobre, es\ndecir, un tubo conductor. Del lado izquierdo se muestra el caso anterior para poder compararlo.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='27ae60' dibujar-si='fase=2' expresión='[40,55]' texto='En la parte derecha se muestra cómo se genera el campo magnético de las corrientes en el tubo.\nLa flechas que se muestran indican la dirección de cada uno de los campos magnéticos.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_05" value="espacio='E2' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(150,120)' archivo='images/aprende/tubo_p.png'">
+   <param name="G_06" value="espacio='E2' tipo='imagen' dibujar-si='fase>0' coord_abs='sí' expresión='(150+Dx,120)' archivo='images/aprende/tubo_c.png'">
+   <param name="G_07" value="espacio='E2' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(185,yf)' archivo='images/aprende/iman.png'">
+   <param name="G_08" value="espacio='E2' tipo='imagen' dibujar-si='fase>0' coord_abs='sí' expresión='(20+Dx,120)' archivo='images/aprende/tubo_p.png'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' dibujar-si='fase>0' coord_abs='sí' expresión='(185+Dx,y2f)' archivo='images/aprende/iman.png'">
+   <param name="G_10" value="espacio='E2' tipo='imagen' expresión='(bobina.x-1.35,bobina.y+2.05)' archivo='ImgBob'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(primera=1)&(fase=0)' expresión='[350,155]' texto='Lo que se puede ver es que entre más abajo esté la bobina,\nmenos tiempo dura encendido el led. Esto debido a que\ncuando cae el imán lo hace con mayor rapidez en la parte\nde abajo y por lo tanto pasa menos tiempo por la bobina, la\ncorriente generada en la bobina es mayor en la parte de\nabajo pero esto sólo provoca que el foco encienda con\nmayor intensidad como sucedió en el ejemplo anterior.\n\nPara un foco normal, no importa cómo se deje caer el imán\npues lo único sucede al invertir el imán es que se invierte la\ndirección de la corriente.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='blanco' dibujar-si='(Vrnd[s]=1)&(tt>0)&(tt<tenc)&(fase=0)' coord_abs='sí' expresión='(153+12*(s%11),(y2*.55)+194+8*ent(s/11))' familia='s' s.intervalo='[0,131]' s.pasos='131' fijo='sí' tamaño='1'">
+   <param name="G_13" value="espacio='E2' tipo='imagen' dibujar-si='fase>0' coord_abs='sí' expresión='(55+Dx,yf)' archivo='images/aprende/iman.png'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(segunda=1)&(fase=1)' expresión='[390,155]' texto='En el caso del tubo conductor se nota que el imán cae con\nuna velocidad menor que el imán del tubo de pvc, esto pasa\nporque el campo magnético del imán provoca movimiento\nen las cargas libres del tubo de cobre, es decir una corriente\neléctrica y dicha corriente genera un nuevo campo magnético\npero en dirección opuesta al campo magnético del imán.\n\nPulsa el botón “Siguiente” para ver este proceso.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_15" value="espacio='E2' tipo='curva' color='6bf6963b' dibujar-si='fase=2' coord_abs='sí' expresión='(650+70*cos(t),200+20*sen(t))' t.intervalo='[pi,2*pi]' t.pasos='50' ancho='10'">
+   <param name="G_16" value="espacio='E2' tipo='imagen' dibujar-si='fase=2' coord_abs='sí' expresión='(625,100+tg*3)' archivo='images/aprende/iman.png'">
+   <param name="G_17" value="espacio='E2' tipo='polígono' color='ffff0000' dibujar-si='(tg>0)&(tg<20)&(fase=2)' coord_abs='sí' expresión='(600,180)(700,180)(700,200)(600,200)(600,180)' relleno='c6ff0000'">
+   <param name="G_18" value="espacio='E2' tipo='polígono' color='ff0000ff' dibujar-si='(tg>0)&(tg<20)&(fase=2)' coord_abs='sí' expresión='(600,200)(700,200)(700,220)(600,220)(600,200)' relleno='c60000ff'">
+   <param name="G_19" value="espacio='E2' tipo='curva' color='6bf6963b' dibujar-si='fase=2' coord_abs='sí' expresión='(650+70*cos(t),200+20*sen(t))' t.intervalo='[0,pi]' t.pasos='50' ancho='10'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(tercera=1)&(fase=2)' expresión='[390,280]' texto='Finalmente lo que podemos notar en el tubo de cobre es que\nel led no prende. Esto es porque el imán baja más lento y\nademás porque la corriente prefiere moverse por el camino\nmás cercano que es la orilla del tubo. Entonces poco campo\nmagnético queda para mover la corriente en la espira\nconectada al foco.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_21" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(tg>0)&(tg<20)&(fase=2)' expresión='(5,5)(5,3)' fijo='sí'">
+   <param name="G_22" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(tg>0)&(tg<20)&(fase=2)' expresión='(5,2)(5,3)' fijo='sí'">
+   <param name="G_23" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_24" value="espacio='info' tipo='texto' color='34495e' expresión='[150,100]' texto='Conclusiones:\n\n- Una corriente eléctrica genera un campo magnético.\n- Un campo magnético en movimiento genera una corriente eléctrica\n  sobre un conductor, por ejemplo una bobina de cobre.\n- Si el campo magnético del imán se mueve rápido, la corriente\n  eléctrica que se genera tiene mayor intensidad.\n- La dirección de la corriente generada en una bobina por un imán\n  depende de cuál polo se introduzca en la bobina y también\n  depende de si el imán entra o sale de ella.\n- La corriente busca el camino más cercano para moverse. Como\n  el pvc no es conductor, se mueve por la espira, pero como el\n  tubo de cobre sí lo es y está más cercano al imán, por ahí se van\n  las corrientes.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_25" value="espacio='E2' tipo='texto' dibujar-si='debug' expresión='[20,20+10*s]' familia='s' s.intervalo='[0,25]' s.pasos='25' texto='Vrnd(i)=[Vrnd[s]]' fijo='sí'">
+   <param name="G_26" value="espacio='E2' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='t=[t]\ntg=[tg]\n\n\n\ny0=[y0]\ny1=[y1]\nbobina.y=[bobina.y]\nyf=[yf]\n\ny1=[y1]\ny2=[y2]\n\ntt=[tt]\ntenc=[tenc]\nprimera=[primera]\nsegunda=[segunda]\nfase=[fase]\n' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='no' inicio='t=0; tt=0' hacer='varTemp=mover();t=(t<13)?t+1:t;tt=(y1>y2)?tt+1:tt;primera=(tg>18)?1:primera;segunda=((tg>18)&(fase=1))?1:segunda;tercera=((tg>18)&(fase=2))?1:tercera;varTemp=Frnd();tg=tg+1' mientras='tg<20'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

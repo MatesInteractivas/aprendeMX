@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Óptica, reflexión, espejo, imágenes reales, imágenes virtuales, refracción, holograma, tercera dimensión, 3D, luz">
+
+<head>
+	<title>Hologramas</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' y='20' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1' dibujar-si='fase<4'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1' dibujar-si='fase>0' pos_mensajes='centro'">
+   <param name="C_03" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230-380,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' dibujar-si='(fase!=3)&(fase<5)' pos_mensajes='centro'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='laser' tipo='gráfico' espacio='E1' tamaño='11' expresión='(laser.x,laser.y)' fijo='sí' dibujar-si='(fase<3)|(fase=4)|(fase=5)|(fase=6)' activo-si='(fase<3)|(fase=4)|(fase=5)|(fase=6)'">
+   <param name="C_06" value="id='laser.x' tipo='numérico' región='escenario' espacio='E1' nombre='laser.x' expresión='(0,0,0,0)' valor='-6.8' incr='0' min='-6.8' max='-6.8' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_07" value="id='laser.y' tipo='numérico' región='escenario' espacio='E1' nombre='laser.x' expresión='(0,0,0,0)' valor='-.3' min='-.7' max='.1' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_08" value="id='laser2' tipo='gráfico' espacio='E1' tamaño='10' expresión='(laser.x,laser.y)' fijo='sí' dibujar-si='fase=3' activo-si='fase=3'">
+   <param name="C_09" value="id='laser2.x' tipo='numérico' región='escenario' espacio='E1' nombre='laser2.x' expresión='(0,0,0,0)' valor='-6.8' incr='0' min='-8' max='-8' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="C_10" value="id='laser2.y' tipo='numérico' región='escenario' espacio='E1' nombre='laser2.x' expresión='(0,0,0,0)' valor='-.3' min='-2.5' max='1.9' fijo='sí' visible='sí' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;info=0;distEspX=10;distEspX2=11.8;distEspX3=11.93;distEspX4=3;RetroMargIzq=150;RetroMargDer=874;RetroMargSup=90;RetroMargInf=474;RetroWidth=RetroMargDer-RetroMargIzq;RetroWidthini=RetroWidth-50'">
+   <param name="A_02" value="id='calcAng()' algoritmo='sí' algoritmo='sí' hacer='tetaRad=.6*asen(laser.y+.3);teta=tetaRad*180/pi;Yini=tan(tetaRad)*distEspX;Yfin=(Yini+((distEspX/3)*tan(tetaRad)))*1.1;desTeta=(abs(teta^2))/220;Yfin2=(Yini+((distEspX/3)*tan(tetaRad)))*2;desTeta2=.13*((laser2.y+.3)^2);dxConv=1*sin(tetaRad*2.7);dyConv=1*cos(tetaRad*2.7);tetaRad2=.50*asen((laser2.y+.3)/3);dxConv2=1*sin(tetaRad2*1.2);dyConv2=1*cos(tetaRad2*1.2);disYRefr=tetaRad'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='calcAng();'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' dibujar-si='(fase=0)' expresión='(-8.1+distEspX,3)(-8+distEspX+.15,3)(-8+distEspX+.15,-3.3)(-8.1+distEspX,-3.3)' relleno='3498db'">
+   <param name="G_02" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=0)|(fase=4)' expresión='(-8.1,-.3)(-8.1+distEspX,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_03" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='(fase=0)' expresión='(-8.1/3,Yini-.3)(-8.1+distEspX,Yini-.3)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_04" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=0)' expresión='(-8.1/3,-.3+Yfin)(-8.1+distEspX,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[650,130]' texto='Como podrás notar, el ángulo con\nel que se refleja la luz, es igual al\nángulo con el que incide.\n\nEsto se puede ver gracias a la\nlínea imaginaria que se muestra\nde color gris.\n\nCon un espejo plano es como\npodemos ver de forma perfecta\nnuestro rostro cuando nos\nmiramos en él.\n' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_06" value="espacio='E1' tipo='arco' color='3498db' dibujar-si='(fase=1)|(fase=5)' centro='(6,-.3)' radio='4' inicio='110' fin='250' fijo='sí' ancho='7'">
+   <param name="G_07" value="espacio='E1' tipo='arco' color='negro' dibujar-si='fase=1' centro='(6.05,-.3)' radio='4' inicio='110' fin='250' fijo='sí'">
+   <param name="G_08" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=1)|(fase=5)' expresión='(-8.1,-.3)(-8.1+distEspX+desTeta,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_09" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=1' expresión='(-8.1+distEspX+desTeta+dxConv,-.3+Yini+dyConv)(-8.1+distEspX+desTeta,-.3+Yini)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_10" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=1' expresión='(-8.1+distEspX+desTeta,-.3+Yini)(-8.1+distEspX+desTeta-dxConv,-.3+Yini-dyConv)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_11" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='fase=1' expresión='(-8.1/3+abs(teta/2.5),-.3+Yfin2)(-8.1+distEspX+desTeta,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_12" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[705,140]' texto='Un espejo curvo se comporta\ncomo una sucesión de muchos\nespejos situados en cada punto\ndonde se refleja la luz. Así el\nrayo que se refleja se abre\nmás a comparación de un\nespejo plano.\n\nPuedes hacer la comparación\ncon un espejo plano si pulsas\nel botón anterior.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_13" value="espacio='E1' tipo='arco' color='3498db' dibujar-si='((fase>1)&(fase<4))|(fase=6)' centro='(-.2,-.3)' radio='4' inicio='-70' fin='70' fijo='sí' ancho='7'">
+   <param name="G_14" value="espacio='E1' tipo='arco' color='negro' dibujar-si='(fase>1)&(fase<4)' centro='(-.13,-.3)' radio='4' inicio='-70' fin='70' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=2)|(fase=6)' expresión='(-8.1,-.3)(-8.1+distEspX2-desTeta,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_16" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=2' expresión='(-8.1+distEspX2-desTeta-dxConv,-.3+Yini+dyConv)(-8.1+distEspX2-desTeta,-.3+Yini)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_17" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=2' expresión='(-8.1+distEspX2-desTeta+dxConv,-.3+Yini-dyConv)(-8.1+distEspX2-desTeta,-.3+Yini)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_18" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='fase=2' expresión='(-.2+abs(teta/8),-.3-(teta/10))(-8.1+distEspX2-desTeta,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_19" value="espacio='E1' tipo='imagen' dibujar-si='fase<3' coord_abs='sí' expresión='(120,299,1,1)' archivo='images/explora/laser.png' rotini='teta'">
+   <param name="G_20" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[720,210]' texto='En este caso el rayo que se\nrefleja se abre menos, que si\nfuera un espejo plano, y\nademás se refleja hacia\nadentro a diferencia del caso\nanterior, que lo hace hacia\nafuera.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_21" value="espacio='E1' tipo='punto' color='grisClaro' dibujar-si='(fase=3)' expresión='(-.2,-.3)' fijo='sí' tamaño='5'">
+   <param name="G_22" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[715,220]' texto='En el caso de un espejo\nparabólico, podemos notar\nque todos los rayos se\nreflejan y pasan por un punto\nen común, al cual se le\ndenomina foco.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_23" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=3)' expresión='(-8.1,laser2.y)(-8.1+distEspX2-desTeta2,laser2.y)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_24" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=3' expresión='(-8.1+distEspX2-desTeta2-dxConv2,laser2.y+dyConv2)(-8.1+distEspX2-desTeta2,laser2.y)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_25" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='fase=3' expresión='(-8.1+distEspX2-desTeta2+dxConv2,laser2.y-dyConv2)(-8.1+distEspX2-desTeta2,laser2.y)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_26" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='fase=3' expresión='(-.2,-.3)(-8.1+distEspX2-desTeta2,laser2.y)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_27" value="espacio='E1' tipo='imagen' dibujar-si='fase=3' expresión='(laser2.x,laser2.y,1,1)' archivo='images/explora/laser.png'">
+   <param name="G_28" value="espacio='E1' tipo='segmento' color='turquesa' dibujar-si='(fase=4)' expresión='(-8.1+(distEspX/2),-.3+(Yini/2))(-8.1+distEspX,-.3+Yini)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_29" value="espacio='E1' tipo='segmento' color='grisClaro' dibujar-si='(fase=4)' expresión='(-3-(8.1/3),(Yini/2)-.3)(-11.1+distEspX,(Yini/2)-.3)' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_30" value="espacio='E1' tipo='segmento' color='ff002c' dibujar-si='(fase=4)' expresión='(-5-8.1/3,-.3+(Yfin*.7))(-13.1+distEspX,-.3+(Yini/2))' fijo='sí' tamaño='1' ancho='2'">
+   <param name="G_31" value="espacio='E1' tipo='polígono' dibujar-si='(fase=4)' expresión='(-13.1+distEspX,3)(-13+distEspX+.15,3)(-13+distEspX+.15,-3.3)(-13.1+distEspX,-3.3)' relleno='3498db'">
+   <param name="G_32" value="espacio='E1' tipo='polígono' color='ecf0f1' dibujar-si='fase#7' coord_abs='sí' expresión='(0,0)(1024,0)(1024,110)(0,110)(0,0)' relleno='ecf0f1'">
+   <param name="G_33" value="espacio='E1' tipo='imagen' dibujar-si='(fase=4)' expresión='(laser.x-1,laser.y+.1,-.5,.5)' archivo='images/explora/ojo.png' rotini='(laser.y+.3)*30'">
+   <param name="G_34" value="espacio='E1' tipo='imagen' dibujar-si='(fase=4)' expresión='(-5-8.1/3,-.3+(Yfin*.7),.5,.5)' archivo='images/explora/balon.png' rotini='(laser.y+.3)*30'">
+   <param name="G_35" value="espacio='E1' tipo='imagen' dibujar-si='(fase=4)' expresión='(-8.1+distEspX,-.3+Yini,.5,.5)' archivo='images/explora/balon2.png' rotini='(laser.y+.3)*30'">
+   <param name="G_36" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=4' expresión='[705,140]' texto='La imagen real se encuentra\ndel lado del observador, la\nimagen virtual se genera\ndetrás de la superficie\nreflejante, por lo que un\nespejo da la sensación de\nprofundidad.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_37" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[60,16]' texto='Explora lo que le pasa a la luz cuando se encuentra con un espejo plano.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_38" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[60,16]' texto='Explora lo que le pasa a la luz cuando se encuentra con un espejo convexo.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_39" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(fase=2)|(fase=3)' expresión='[60,16]' texto='Explora lo que le pasa a la luz cuando se encuentra con un espejo cóncavo.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_40" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(fase=4)' expresión='[60,16]' texto='Explora cómo se forma una imagen virtual con un espejo plano.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_41" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[40,55]' texto='¿Cómo se refleja la luz en un espejo a partir de que lo incide? Mueve el control en la punta del láser\npara poder dirigir la luz que incide en el espejo. Pulsa el botón “Información” para ver más detalles.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_42" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=1' expresión='[40,55]' texto='Ahora veamos cómo se refleja la luz en un espejo convexo como el que se muestra. Pulsa el\nbotón ”Información” para ver más detalles.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_43" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=2' expresión='[40,55]' texto='A diferencia de un espejo convexo ¿cómo se refleja la luz en un espejo cóncavo como el que se\nmuestra? Pulsa el botón “Información” para ver más detalles.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_44" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=3' expresión='[40,55]' texto='Ahora veamos un caso interesante, ¿qué pasa cuando rayos de luz paralelos inciden en un\nespejo cóncavo? es decir, si en lugar de rotar la luz, sólo la subimos y bajamos.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_45" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=4' expresión='[40,55]' texto='Mueve el control gráfico y observa donde se posiciona la imagen real, la imagen virtual y el ojo.' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_46" value="espacio='E1' tipo='polígono' color='ecf0f1' coord_abs='sí' expresión='(0,495)(1024,495)(1024,568)(0,568)(0,495)' relleno='ecf0f1'">
+   <param name="G_47" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_48" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[150,90]' texto='Los rayos de luz que inciden sobre\nla superficie de un espejo plano\nson reflejados con el mismo ángulo\ncon el que incidieron. De esta\nmanera, la luz que se refleja en\nun espejo crea una imagen que\nrespeta tamaño, forma y\nposición relativa de los objetos\nde los que proviene.\n\nEsto es lo que sucede cuando\nvemos nuestro rostro en un\nespejo.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_49" value="espacio='info' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(670,290,1,1)' archivo='images/explora/espejo1.png'">
+   <param name="G_50" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[150,100]' texto='En los espejos convexos los\nrayos de luz se hacen diverger,\nes decir, se abren más que en\nun espejo plano. Entonces una\nimagen que se refleja en ellos es\nde menor tamaño que la original.\n\nEste tipo de espejos se suelen\nusar en supermercados y bancos,\ncomo una manera de tener una\nvista panorámica.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_51" value="espacio='info' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(670,290,1,1)' archivo='images/explora/espejo2.png'">
+   <param name="G_52" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[150,80]' texto='En los espejos cóncavos los\nrayos de luz convergen, es decir,\nse abren menos que en un\nespejo plano y todos pasan muy\ncerca de un punto en común.\nEntonces una imagen que se\nrefleja en ellos es de mayor\ntamaño que la original.\n\nComo aumenta las imágenes,\nel espejo cóncavo es un\ndispositivo óptico que se usa\nen algunos tipos de\ntelescopios.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_53" value="espacio='info' tipo='imagen' dibujar-si='fase=2' coord_abs='sí' expresión='(680,310,1,1)' archivo='images/explora/espejo3.png'">
+   <param name="G_54" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=4' expresión='[150,150]' texto='La imagen real de un objeto, se forma cuando la vemos\ndirectamente de los rayos provenientes del objeto.\n\nPor el contrario, una imagen virtual se forma debido a que los\nrayos de luz de un objeto nos llegan de forma indirecta, por\nejemplo las imágenes que vemos en un espejo son virtuales.' fuente='SansSerif,BOLD,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_55" value="espacio='info' tipo='imagen' dibujar-si='fase=4' coord_abs='sí' expresión='(780,280,1,1)' archivo='images/explora/lapiz.png'">
+   <param name="G_56" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,125]' texto='laser.x=[laser.x]\nlaser.y=[laser.y]\n\nteta=[teta]\n[abs(teta/10)]\n\nt=[t]\n\ntetaRad=[tetaRad]\ntetaRad2=[tetaRad2]\nlaser2.y=[laser2.y]\n\nfase=[fase]' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='sí' inicio='t=0' hacer='t=t+1;t=(t>200)?1:t+1' mientras='1'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

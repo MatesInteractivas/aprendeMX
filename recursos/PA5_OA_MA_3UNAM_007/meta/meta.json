@@ -1,0 +1,39 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "áreas", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Área", 
+    "triángulo", 
+    "trapecio", 
+    "figuras planas", 
+    "base", 
+    "altura", 
+    "paralela", 
+    "perpendicular", 
+    "corte", 
+    "traslación", 
+    "rotación", 
+    "superficie", 
+    "igualdad de áreas", 
+    "fórmula"
+  ], 
+  "descripcion": "Este recurso te permitirá determinar y usar la fórmula para calcular el área de cualquier triángulo.",
+  "resena": "Justificación y uso de la fórmula para calcular áreas de triángulos.",
+  "titulo": "Área del triángulo", 
+  "id": "PA5_OA_MA_3UNAM_007"
+}

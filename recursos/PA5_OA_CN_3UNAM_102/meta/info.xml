@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_102"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		La huella digital de algunas sustancias
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad explorarás la descomposición de la luz blanca en los colores del arco iris utilizando objetos caseros que actúan como prismas, e identificarás las rejillas de difracción y los espectros que resultan. Reconocerás que hay otros tipos de luz visible cuando hay ciertos gases en el interior de tubos. Al obtener los espectros de la luz de estas fuentes observarás que cada tipo de luz tiene un espectro característico. Compararás los espectros para determinar qué sustancia está dentro del tubo, y relacionarás los espectros con las técnicas utilizadas en la astronomía para saber de qué sustancias se componen los cuerpos celestes que emiten luz, como las estrellas. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, óptica física, uso de los instrumentos ópticos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Óptica física, difracción, espectrómetro, CD, rejilla de difracción, color, longitud de onda, frecuencia, espectro electromagnético, arcoiris, prisma, espectro visible, espectro de emisión, luz
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

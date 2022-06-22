@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/03_expl_ejer00.css" type="text/css">
+
+   <script type="text/javascript" src='lib/custom/jquery-2.2.0.min.js'></script>
+   <script type="text/javascript" src='lib/custom/03_expl_tools.js'></script>
+	<script type="text/javascript" >
+      $(function(){
+         /**
+         */
+         function displayEjercicio(sucesionCfg,options,textos){
+            
+            var txtRnd = this.shuffle(textos);
+            var htmlDisp = this.getSucesionHTML(sucesionCfg.n,sucesionCfg.k,5); 
+            
+            $('#DISP').html(htmlDisp);
+
+            var opts = $('#INST');
+            opts.empty();
+
+            var idxT = this.getShuffleArray(options.length);
+            for (var i = options.length - 1; i >= 0; i--) {
+               var idxN = idxT[i];
+               var optAct = options[idxN];
+               var optHtml = $('<div>',{'class': 'option'});
+               var txt = txtRnd[idxN];
+               if(i%2 == 1)
+                  optHtml.addClass('odd');
+
+               var optN = this.getNumberHtml(
+                  optAct.n.numerador,
+                  optAct.n.denominador
+               );
+
+               var optK = this.getNumberHtml(
+                  optAct.k.numerador,
+                  optAct.k.denominador
+               );
+
+               txt = txt.replace(/\[opt.n\]/g,optN);
+               txt = txt.replace(/\[opt.k\]/g,optK);
+               optHtml.html(txt);
+               var isCorrect = (idxN==0);
+               optHtml[0].correcto = isCorrect;
+               optHtml.on('click',{'isCorrect' : isCorrect}, this.onOptionClick);
+               opts.append(optHtml); 
+            }
+         }
+         
+         var appSAritmetica = new aprendeMx.SucesionAritmetica(displayEjercicio,false);
+         appSAritmetica.init();
+      });   
+   </script>
+
+</head>
+
+<body style="margin:0px; padding:0px">
+
+   <div class='activity-container'>
+      <h1>Ponte a prueba. Selecciona la consigna que describe la sucesión.</h1>
+      
+      <div id='DISP'>
+      
+      </div>
+      
+      <div id='INST'>
+
+      </div>
+
+   </div>
+
+</body>
+
+</html>

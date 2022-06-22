@@ -1,0 +1,30 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "estadística", 
+    "Manejo de la información", 
+    "Análisis y representación de datos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "media", 
+    "mediana", 
+    "moda", 
+    "población", 
+    "valor representativo", 
+    "medidas de tendencia central"
+  ], 
+  "descripcion": "Además de la media, hay otros valores que pueden representar, en cierto sentido cierta medida de los miembros de una población. Por ejemplo el tipo de música que prefieren entre clásica, tradicional, rock y pop. Si la mayoría prefieren la música pop, entonces decimos que la música pop está de moda, es “la moda”. Si se quiere dividir una población en dos partes iguales, por ejemplo altos y chaparros, hay que elegir un valor de la altura arriba del cual esté la mitad de la población y abajo la otra mitad. Ese valor se llama la mediana. En esta unidad aprenderás a identificar y calcular la mediana como un de los valores representativos de una población.",
+  "resena": "La moda estadística y su utilidad para determinar cuando el número de elementos con una característica es el más frecuente.",
+  "titulo": "Mediana", 
+  "id": "PA6_OA_MA_3UNAM_024_Mediana"
+}

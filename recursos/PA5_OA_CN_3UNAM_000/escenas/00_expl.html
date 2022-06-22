@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Electricidad, circuito, circuitos, voltaje, batería, pila, baterías, pilas, fuente de voltaje, resistencia, resistividad, conductividad, corriente eléctrica, foco, alambre, diagrama eléctrico, diagramas eléctricos, polo, positivo, negativo, corriente eléctrica, foco, interruptor">
+
+<head>
+	<title>Circuitos y resistencia</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='doPlay(0)\ntryPlay(0)' dibujar-si='0&!animando' activo-si='!cfg'">
+   <param name="C_02" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(583,E2._h-66,206,46)' fijo='sí' visible='sí' color='blanco' color-int='ffffffff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo izquierda|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='bla=(iFot>0)?PrevFn():bla' dibujar-si='(Exper==0)' activo-si='iFot>0' pos_mensajes='centro'">
+   <param name="C_03" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(583+206+10,E2._h-66,206,46)' fijo='sí' visible='sí' color='blanco' color-int='ffffffff' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='iFot=iFot+1\nimgFot=(iFot<9)?&squot;images/0&squot;+(iFot+1)+&squot;.jpg&squot;:&squot;images/&squot;+(iFot+1)+&squot;.jpg&squot;' dibujar-si='(Exper==0)&(iFot<10)' pos_mensajes='centro'">
+   <param name="C_04" value="id='detener' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Detener' expresión='((E2._w-145)/2,E2._h-66,145,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx bermellon detener|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nn=3*ent(n/3)+1\nanimarTodo=0\nanimando=0\ndetener=1' dibujar-si='animando&(!detener)' activo-si='!cfg' pos_mensajes='centro'">
+   <param name="C_05" value="id='_SEPARADOR_' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='v9' tipo='video' región='interior' espacio='E2' expresión='(20,56,640,360)' dibujar-si='Exper==1' archivo='videos/Todo.mp4'">
+   <param name="C_07" value="id='VidCompleto' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Video completo' expresión='(20,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx naranja play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='vdlaunch=0\nv9.stop()\nv9.play()' dibujar-si='(Exper==1)&0'">
+   <param name="C_08" value="id='vid1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Parte 1' expresión='(20+240+99,E2._h-66,146,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx naranja play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='vdlaunch=1\nv9.stop()\nv9.currentTime(0.25)\nv9.play()' dibujar-si='(Exper==1)&0'">
+   <param name="C_09" value="id='vid2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Parte 2' expresión='(20+240+99+146+10,E2._h-66,146,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx naranja play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='vdlaunch=2\nv9.stop()\nv9.currentTime(57)\nv9.play()' dibujar-si='(Exper==1)&0'">
+   <param name="C_10" value="id='ConstrucBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Construcción' expresión='(E2._w-240-20,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua construccion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Exper=0\nv9.pause()' dibujar-si='Exper==1' pos_mensajes='centro'">
+   <param name="C_11" value="id='ExperimentoBt' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='         Experimento' expresión='(20,E2._h-66,240,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua experimento|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Exper=1' dibujar-si='Exper==0' pos_mensajes='centro'">
+   <param name="A_01" value="id='Subt' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='5' expresión='Subt[0,0]=0;Subt[0,1]=34.5;Subt[0,2]=&squot;Observa que si el circuito mostrado se cierra con una barra de aluminio, el LED enciende, indicando que hay corriente.\n\nSi lo cierras con un clavo de metal, también enciende.\n\nPero si lo cierras con una barra de plastilina, no enciende.\n\nSi se usa una barra de madera, o la pasta resistiva, tampoco enciende.&squot;;Subt[1,0]=Subt[0,1];Subt[1,1]=47.5;Subt[1,2]=&squot;Si el contacto se hace directo entre la plastilina, el LED se enciende nuevamente.\n\nPero si te tocan los extremos de la pasta que conecta el LED, éste se apaga.\n\n¿Por qué será esto?&squot;;Subt[2,0]=Subt[1,1];Subt[2,1]=60;Subt[2,2]=&squot;El circuito aquí tiene un bloque rojo hecho de dos tiras (una gorda y la otra delgada). Al cerrar el circuito tocando el extremo lejano de la tira delgada, el LED prende muy tenue.\n\nPero si se toca el extremo lejano de la tira gruesa, el LED prende intensamente.&squot;;Subt[3,0]=Subt[2,1];Subt[3,1]=71;Subt[3,2]=&squot;Comparamos también el comportamiento del LED sólo en la tira delgada.\n\nMientras más cerca del LED hacemos el contacto sobre la tira delgada, éste prende más fuerte.&squot;;Subt[4,0]=Subt[3,1];Subt[4,1]=86;Subt[4,2]=&squot;Y mientras más nos alejamos del LED sobre la tira gruesa, más tenue prende el LED.\n\n¿Por qué ocurrirá esto?&squot;'">
+   <param name="A_02" value="id='Fot' vector='sí' evaluar='una-sola-vez' tamaño='11' expresión='Fot[0]=&squot;images/01.jpg&squot;;Fot[1]=&squot;images/02.jpg&squot;;Fot[2]=&squot;images/03.jpg&squot;;Fot[3]=&squot;images/04.jpg&squot;;Fot[4]=&squot;images/05.jpg&squot;;Fot[5]=&squot;images/06.jpg&squot;;Fot[6]=&squot;images/07.jpg&squot;;Fot[7]=&squot;images/08.jpg&squot;;Fot[8]=&squot;images/09.jpg&squot;;Fot[9]=&squot;images/10.jpg&squot;;Fot[10]=&squot;images/11.jpg&squot;'">
+   <param name="A_03" value="id='FotDesc' vector='sí' evaluar='una-sola-vez' tamaño='11'">
+   <param name="A_04" value="id='DATA' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='200' filas='10' expresión='typ=0;vAB=1;vBC=2;vCA=3;vHC=4;vHA=5;vHB=6;acut=0;rect=1;obtu=2;equi=3;isoc=4;NT=5;no=0;si=1'">
+   <param name="A_05" value="id='FIG' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='200' filas='2'">
+   <param name="A_06" value="id='makeFig(k,nen,str)' algoritmo='sí' algoritmo='sí' hacer='FIG[k,nen]=str'">
+   <param name="A_07" value="id='execFig(k,nen)' algoritmo='sí' algoritmo='sí' hacer='_Eval_(FIG[k,nen])'">
+   <param name="A_08" value="id='DIALOGO' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='100' filas='40' expresión='parada=0;saludando=1;asombrada=2;sorprendida=2;tablet=3;senyalando=4;pensando=5;;parado=0;saludando=1;asombrado=2;sorprendido=2;tablet=3;senyalando=4;pensando=5;;lupe=0;lact=1;lrfx=2;lshw=3;lamp=4;lu_x=5;lu_y=6;lutx=7;luty=8;lutw=9;ludT=10;limg=11;;juan=20;jact=21;jrfx=22;jshw=23;jamp=24;ju_x=25;ju_y=26;jutx=27;juty=28;jutw=29;judT=30;jimg=31;;x_ninya=1004-140;y_ninya=310;x_ninyo=160;y_ninyo=310;rflx_ninya=1;rflx_ninyo=1;amp_ninyo=1;amp_ninya=1;tx_ninya=560;ty_ninya=90;tx_ninyo=270;ty_ninyo=80;tw_ninya=200;tw_ninyo=240;ND=0'">
+   <param name="A_09" value="id='fixData(N)' algoritmo='sí' algoritmo='sí' hacer='DIALOGO[N,jimg]=1;DIALOGO[N,jamp]=amp_ninyo;DIALOGO[N,jshw]=1;DIALOGO[N,jrfx]=rflx_ninyo;DIALOGO[N,ju_x]=x_ninyo;DIALOGO[N,ju_y]=y_ninyo;DIALOGO[N,jutx]=tx_ninyo;DIALOGO[N,juty]=ty_ninyo;DIALOGO[N,jutw]=tw_ninyo;;DIALOGO[N,limg]=1;DIALOGO[N,lamp]=amp_ninya;DIALOGO[N,lshw]=1;DIALOGO[N,lrfx]=rflx_ninya;DIALOGO[N,lu_x]=x_ninya;DIALOGO[N,lu_y]=y_ninya;DIALOGO[N,lutx]=tx_ninya;DIALOGO[N,luty]=ty_ninya;DIALOGO[N,lutw]=tw_ninya'">
+   <param name="A_10" value="id='get_dT(n,quien)' expresión='(n%3==0)?DIALOGO[ent(n/3),judT]:DIALOGO[ent(n/3),ludT]'">
+   <param name="A_11" value="id='ninya' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='ninya[parada]=    &squot;images/personajes/girl_01.png&squot;;ninya[saludando]= &squot;images/personajes/girl_02.png&squot;;ninya[asombrada]= &squot;images/personajes/girl_03.png&squot;;ninya[tablet]=    &squot;images/personajes/girl_04.png&squot;;ninya[senyalando]=&squot;images/personajes/girl_05.png&squot;;ninya[pensando]=  &squot;images/personajes/girl_06.png&squot;'">
+   <param name="A_12" value="id='ninyo' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='ninyo[parado]=    &squot;images/personajes/boy_01_mirror.png&squot;;ninyo[saludando]= &squot;images/personajes/boy_02_mirror.png&squot;;ninyo[asombrado]= &squot;images/personajes/boy_03_mirror.png&squot;;ninyo[tablet]=    &squot;images/personajes/boy_04_mirror.png&squot;;ninyo[senyalando]=&squot;images/personajes/boy_05_mirror.png&squot;;ninyo[pensando]=  &squot;images/personajes/boy_06_mirror.png&squot;'">
+   <param name="A_13" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_14" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_15" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='n=0;t=0;ninya_actitud=parada;ninyo_actitud=parado;Handler(ent(n/3));slow=128;r=1.5;nN=3;Rx=280;Rw=460;nw=ent(Rw/(nN+1));Ry=120;;autorInicio();;FotDesc[0]=&squot;Observamos una de las conexiones del circuito ya hecho. Vemos que hay un LED desconectado para poder comparar cómo se ve uno prendido contra uno apagado.\n\n¡Desarmemos el experimento para ver cómo se hizo!&squot;;FotDesc[1]=&squot;Quitamos el LED y desconectamos los alambres. La cubierta de plástico de los alambres fue retirada en las puntas de cada lado para introducirla en la pasta de acuerdo con el color del cable.\n\nEl cable rojo se conecta al polo positivo (+) de la batería y el azul al polo negativo (-).&squot;;FotDesc[2]=&squot;La pasta es un tipo de engrudo conductor. Su preparación se puede hacer en una olla pequeña.\n\nTe mostramos en un recuadro la pasta como se ve al final para que recuerdes qué es lo que se está preparando.&squot;;FotDesc[3]=&squot;Para hacer la pasta, primero agregamos 45 gramos de harina a la olla (9 taparroscas con harina).&squot;;FotDesc[4]=&squot;Luego se agregan alrededor de 30 ml de agua (aproximadamente 6 taparroscas con agua).&squot;;FotDesc[5]=&squot;Posteriormente se agregan alrededor de 15 gramos de sal común (aproximadamente 3 taparroscas con sal). Se utiliza la sal para hacer la “Pasta conductora”. Para hacer la “Pasta resistiva”, es decir, que no conduce la electricidad, utilicen azúcar en lugar de sal.&squot;;FotDesc[6]=&squot;Se agregan entre 5 y 10 gotas de colorante rojo. Recuerda que para hacer la “Pasta conductora” en color azul repite el procedimiento y agrega colorante azul.&squot;;FotDesc[7]=&squot;Se exprime luego el jugo de medio limón.&squot;;FotDesc[8]=&squot;Opcionalmente se agrega una cuarta parte de taparrosca de aceite vegetal. Ello con el fin de darle un poco más de consistencia a la mezcla.&squot;;FotDesc[9]=&squot;Se calientan los ingredientes y se mezclan con una cuchara hasta que tenga consistencia pastosa (alrededor de 5 minutos).\n\nPide a un adulto que te ayude con este paso.\n\nDespués deberás dejar enfriar la pasta.&squot;;FotDesc[10]=&squot;Así pues, parece que el material necesario para el experimento es:\n\n-Colorante para comida rojo y azul.\n-Dos pilas de 9 V.\n-Contactos para las pilas de 9 V.\n-Plastilina blanca.\n-Pasta conductora.\n-1 barrita de madera.\n-1 barrita de aluminio.\n-1 clavo.\n-5 LEDs.\n-1 taparrosca.\n-Pasta conductora en dos colores.&squot;;;panel.x=680;panel.y=56;panel.w=324;panel.h=436;;panelC.x=585;panelC.y=56;panelC.w=419;panelC.h=424'">
+   <param name="A_16" value="id='Limpiar()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_17" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='TJx=TXJ.x-tx_ninyo;TJy=512-TXJ.y-ty_ninyo;TLx=TXL.x-tx_ninya;TLy=512-TXL.y-ty_ninya;;hayFig=((DIALOGO[ent(n/3),jimg]>0)&(n%3==1));hayFig=hayFig|((DIALOGO[ent(n/3),limg]>0)&(n%3==2));hayFig=hayFig&animando;;m=(n%3==1)?2*ent(n/3):m;m=(n%3==2)?2*ent(n/3)+1:m;;prolSegs=(m>=20);aux=((n==0)|(n>=3*(N-1)))?startFigVars():0'">
+   <param name="A_18" value="id='Handler(k)' algoritmo='sí' vector='sí' expresión='0' algoritmo='sí' inicio='pausa_dT=0/8' hacer='ninya_show=DIALOGO[k,lshw];ninya_actitud=((n%3)!=2)?ninya_actitud:DIALOGO[k,lact];ninya_amp=DIALOGO[k,lamp];ninya_reflex=((n%3)!=2)?ninya_reflex:DIALOGO[k,lrfx];ninya_x=DIALOGO[k,lu_x];ninya_y=DIALOGO[k,lu_y];ninya_tx=DIALOGO[k,lutx];ninya_ty=DIALOGO[k,luty];ninya_tw=DIALOGO[k,lutw];ninya_texto=DIALOGO[k,lupe];ninya_dT=DIALOGO[k,ludT];;ninyo_show=DIALOGO[k,jshw];ninyo_actitud=((n%3)!=1)?ninyo_actitud:DIALOGO[k,jact];ninyo_amp=DIALOGO[k,jamp];ninyo_reflex=((n%3)!=1)?ninyo_reflex:DIALOGO[k,jrfx];ninyo_x=DIALOGO[k,ju_x];ninyo_y=DIALOGO[k,ju_y];ninyo_tx=DIALOGO[k,jutx];ninyo_ty=DIALOGO[k,juty];ninyo_tw=DIALOGO[k,jutw];ninyo_texto=DIALOGO[k,juan];ninyo_dT=DIALOGO[k,judT];;ninya_actitud=((n%3)==0)?parada:ninya_actitud;ninya_reflex=((n%3)==0)?1:ninya_reflex;ninyo_actitud=((n%3)==0)?parado:ninyo_actitud;ninyo_reflex=((n%3)==0)?-1:ninyo_reflex'">
+   <param name="A_19" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_20" value="id='autorInicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='muestra_figura_1=0'">
+   <param name="A_21" value="id='initDialog()' algoritmo='sí' algoritmo='sí' Local='str' inicio='N=0' hacer='fixData(N);makeFig(N,0,&squot;&squot;);DIALOGO[N,juan]=&squot;\n\n\n    mmm. . .&squot;;DIALOGO[N,judT]=3;DIALOGO[N,jact]=pensando;makeFig(N,1,&squot;&squot;);DIALOGO[N,lupe]=&squot;\n\n\n    Hola Juan.&squot;;DIALOGO[N,ludT]=2;DIALOGO[N,lact]=saludando;N=N+1;;fixData(N);makeFig(N,0,&squot;&squot;);DIALOGO[N,juan]=&squot;Hola Lupe.\n\n¿Cómo te va?&squot;;DIALOGO[N,judT]=4;makeFig(N,1,&squot;&squot;);DIALOGO[N,lupe]=&squot;\n\n     Muy bien y ¿a ti?&squot;;DIALOGO[N,ludT]=2;DIALOGO[N,lact]=parada;N=N+1;;fixData(N);str=&squot;muestra_figura_1:=1&squot;;makeFig(N,0,str);DIALOGO[N,juan]=&squot;Bien.\nMira esta maravillosa figura.&squot;;DIALOGO[N,judT]=3;DIALOGO[N,jact]=parado;makeFig(N,1,&squot;&squot;);DIALOGO[N,lupe]=&squot;\n\n¡Pero solo es un punto!&squot;;DIALOGO[N,ludT]=3;DIALOGO[N,lact]=senyalando;N=N+1;;fixData(N);str=&squot;muestra_figura_1:=0&squot;;makeFig(N,0,str);DIALOGO[N,juan]=&squot;Bueno, cómo no te gusto mejor la quito.&squot;;DIALOGO[N,judT]=3;DIALOGO[N,jact]=pensando;makeFig(N,1,&squot;&squot;);DIALOGO[N,lupe]=&squot;\n\nQue sentido :(&squot;;DIALOGO[N,ludT]=3;DIALOGO[N,lact]=pensando;N=N+1;;aux=&squot;FIN DEL DIALOGO, NO BORRAR&squot;;fixData(N);makeFig(N,0,&squot;&squot;);DIALOGO[N,juan]=&squot;&squot;;DIALOGO[N,judT]=1;DIALOGO[N,jact]=parado;makeFig(N,1,&squot;&squot;);DIALOGO[N,lupe]=&squot;&squot;;DIALOGO[N,ludT]=1;DIALOGO[N,lact]=parada;N=N+1'">
+   <param name="A_22" value="id='PrevFn()' algoritmo='sí' algoritmo='sí' hacer='iFot=iFot-1;imgFot=(iFot<9)?&squot;images/0&squot;+(iFot+1)+&squot;.jpg&squot;:&squot;images/&squot;+(iFot+1)+&squot;.jpg&squot;'">
+   <param name="A_23" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa el comportamiento de estos circuitos eléctricos...&squot;' hacer='initDialog();Inicio();Exper=1;iFot=0;imgFot=&squot;images/0&squot;+(iFot+1)+&squot;.jpg&squot;;imgx=302;imgy=270;Txtx=600;Txty=70;TxtLen=380'">
+   <param name="A_24" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos()'">
+   <param name="A_25" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_26" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0\nanimar=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_27" value="id='e5' evento='sí' condición='0&(v9.currentTime>14.25)&(vdlaunch==1)' acción='calcular' parámetro='v9.pause()\nvdlaunch=0' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_28" value="id='e6' evento='sí' condición='0&(v9.currentTime>21.0)&(vdlaunch==2)' acción='calcular' parámetro='v9.pause()\nvdlaunch=0' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='_SEPARADOR_'">
+   <param name="G_03" value="espacio='E2' tipo='punto' color='verde' dibujar-si='muestra_figura_1' expresión='(0,0)' fijo='sí' tamaño='30' info='UN EJEMPLO DE UNA FIGURA (borrar)'">
+   <param name="G_04" value="espacio='E2' tipo='macro' dibujar-si='Exper==1' expresión='macros/borde.txt' nombre='panel'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='Exper==1' expresión='[150,460]' texto='¿Cómo es un circuito eléctrico?' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='400'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='Exper==1' expresión='[700,65]' texto='Este es un circuito eléctrico usando pasta conductora.\n\nObservemos cómo funciona.\n\nEn este video podrás observar un circuito eléctrico, pon atención a lo que va a suceder cuando colocamos diversos materiales para cerrarlo.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='260'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='((v9.currentTime>Subt[s,0])&(v9.currentTime<Subt[s,1])&(Exper==1))&0' expresión='[700,65]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='[Subt[s,2]]' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='280'">
+   <param name="G_08" value="espacio='E2' tipo='imagen' dibujar-si='Exper==0' coord_abs='sí' expresión='(imgx,imgy,0.572,0.65)' archivo='[imgFot]'">
+   <param name="G_09" value="espacio='E2' tipo='macro' dibujar-si='Exper==0' expresión='macros/borde.txt' nombre='panelC'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='Exper==0' expresión='[Txtx,Txty]' texto='[FotDesc[iFot]]' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='TxtLen'">
+   <param name="G_11" value="espacio='E2' tipo='polígono' color='negro' dibujar-si='(Exper==1)&0' coord_abs='sí' expresión='(21,55)(659,55)(659,445)(21,445)(21,55)' relleno='negro' ancho='2'">
+   <param name="G_12" value="espacio='E2' tipo='polígono' color='e74c3c' dibujar-si='Exper==1' coord_abs='sí' expresión='(20,415)(659,415)(659,492)(20,492)(20,415)' relleno='e74c3c'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='Exper==1' expresión='[339,453,0,0]' texto='¿Qué son los circuitos y cómo funcionan?' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='polígono' color='e74c3c' dibujar-si='Exper==0' coord_abs='sí' expresión='(20,482)(1004,482)(1004,492)(20,492)(20,482)' relleno='e74c3c'">
+   <param name="Animación" value="pausa='slow' controles='no' auto='sí' hacer='bla=((v9.currentTime>55.00)&(vdlaunch==1))?v9.pause():bla' mientras='1'">
+</ajs>
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

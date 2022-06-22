@@ -1,0 +1,32 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "estadística", 
+    "Manejo de la información", 
+    "Análisis y representación de datos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Gráficas", 
+    "gráfica de barras", 
+    "tablas", 
+    "organización de información", 
+    "comparación de información", 
+    "interpretación de la información", 
+    "construcción de gráficas", 
+    "lectura de datos", 
+    "representación de datos"
+  ], 
+  "descripcion": "En esta unidad podrás ver ejemplos de distintas gráficas y aprenderás cómo se construyen las gráficas de barras.",
+  "resena": "Construcción de gráficas de barras y la interpretación de las mismas.",
+  "titulo": "Gráfica de barras", 
+  "id": "PA5_OA_MA_3UNAM_010"
+}

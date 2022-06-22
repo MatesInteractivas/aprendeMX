@@ -1,0 +1,44 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Enunciado", 
+    "Oración", 
+    "Puntuación"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "enunciado", 
+    "oración", 
+    "idea", 
+    "contexto", 
+    "unidad de significado", 
+    "delimitación de ideas", 
+    "puntuación", 
+    "mayúscula", 
+    "mayúscula inicial", 
+    "punto", 
+    "punto final", 
+    "pregunta", 
+    "signos de interrogación", 
+    "exclamación", 
+    "signos de exclamación", 
+    "signos de admiración", 
+    "tangrama", 
+    "perro", 
+    "coche"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Mediante actividades variadas, la alumna y el alumno adquirirán la noción elemental del enunciado como conjunto ordenado de palabras que comunican una idea. Distinguirán los enunciados que componen un párrafo y los delimitarán correctamente con alta inicial y punto final. Trabajarán con el uso de los signos de interrogación y admiración para marcar preguntas y emociones, respectivamente.", 
+  "titulo": "Las piezas del lenguaje",
+  "resena": "El enunciado como conjunto de palabras ordenadas que dan una idea, así como sus signos de puntuación.",
+  "id": "PA5_OA_ES_3UNAM_001_enunciado"
+}

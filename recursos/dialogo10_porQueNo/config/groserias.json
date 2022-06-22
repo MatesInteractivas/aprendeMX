@@ -1,0 +1,57 @@
+var SWEARWORDS_CONFIG_DATA =
+{
+    "words" : [ 
+        "pendej[ao](da)?[s]?",
+        "p[u]+t(er)?[ao][s]?",
+        "uta",
+        "en la madre",
+        "tu madre",
+        "chinga[rdoas]*",
+        "ching(uer)?o",
+        "culer[oa][s]?",
+        "culo",
+        "fundillo",
+        "(w|gu|gü)[e]+y",
+        "cabr[oó]+n[ae]?[s]?",
+        "m[a]+me[ns]?",
+        "m[a]+nche[ns]?",
+        "verga",
+        "(hu|gu|gü)e([vb])a",
+        "joder",
+        "j[oó]dete"
+    ],
+    "interventions" : [
+        {
+        "feedback" : "¡Qué bonito lenguaje usas! Anda, contesta sin groserías, por favor.",
+        "emotion" : "sorprendido"
+        },
+        {
+        "feedback" : "Así no juego. Si quieres seguir, mejor háblame educadamente.",
+        "emotion" : "reganyon"
+        },
+        {
+        "feedback" : "Ya sabes que así no juego.",
+        "emotion" : "enojado"
+        }
+    ]
+}
+
+
+var COLLOQUIALISMS_CONFIG_DATA =
+[
+    {
+        "word": "chid[oa]s?",
+        "feedback" : "Mmm... la palabra <em>chido</em> no es tan formal, ¿no crees? Es más para usarla con amistades o en una plática informal. Aquí mejor utiliza otra expresión. Te pido que la cambies por favor.",
+        "emotion" : "pensativo"
+    },
+    {
+        "word": "chaf[oa]s?",
+        "feedback" : "Mmm... la palabra <em>chafa</em> no es tan formal, ¿no crees? Es más para usarla con amistades o en una plática informal. Aquí mejor utiliza otra expresión. Te pido que la cambies por favor.",
+        "emotion" : "pensativo"
+    },
+    {
+        "word": "ching[oó]n(es|er[íi]a|er[íi]as)?",
+        "feedback" : "Mmm... la palabra <em>chingón</em> no es tan formal, ¿no crees? Es más para usarla con amistades o en una plática informal. Aquí mejor utiliza otra expresión. Te pido que la cambies por favor.",
+        "emotion" : "pensativo"
+    }
+]

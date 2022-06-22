@@ -1,0 +1,35 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto expositivo", 
+    "Cuadro sinóptico"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "ideas principales", 
+    "ideas principales y secundarias", 
+    "ideas relevantes", 
+    "organización de ideas", 
+    "extracción de ideas", 
+    "identificación de ideas", 
+    "cuadro sinóptico", 
+    "mascota", 
+    "hurón", 
+    "historieta", 
+    "teléfono descompuesto"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "La alumna o el alumno identificará en distintos textos ideas relevantes para realizar una labor específica (el cuidado de una mascota). Posteriormente organizará la información identificada en un cuadro sinóptico, discriminando y clasificando ideas generales y específicas.",
+  "resena": "Identificación y organización de textos sobre una labor (el cuidado de una mascota) según la importancia de las ideas.",
+  "titulo": "Cómo cuidar a tu mascota", 
+  "id": "PA5_OA_ES_3UNAM_006_ideasRelevantes"
+}

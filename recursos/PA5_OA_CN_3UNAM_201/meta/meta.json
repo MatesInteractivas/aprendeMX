@@ -1,0 +1,37 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "sonido", 
+    "acústica", 
+    "propagación del sonido en diferentes medios"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Sonido", 
+    "efecto Doppler", 
+    "cambio de frecuencia", 
+    "frecuencia", 
+    "longitud de onda", 
+    "observador", 
+    "fuente", 
+    "alejar", 
+    "acercar", 
+    "alejarse", 
+    "acercarse", 
+    "agudo", 
+    "grave"
+  ], 
+  "descripcion": "En esta unidad reconocerás la variación en el sonido cuando la fuente sonora está en movimiento respecto a nosotros, ya sea alejándose o acercándose. Explicarás a qué se debe este cambio en el tono del sonido (es decir, en qué tan agudo o grave se escucha). Relacionarás el tono de un sonido con la frecuencia de las ondas sonoras.",
+  "resena": "El cambio de frecuencia en el efecto Doppler como resultado del movimiento relativo de la fuente y el escucha.",
+  "titulo": "¿Por qué cambia el sonido que se escucha?", 
+  "id": "PA5_OA_CN_3UNAM_201"
+}

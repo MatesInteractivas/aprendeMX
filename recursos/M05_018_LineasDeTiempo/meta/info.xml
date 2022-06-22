@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_018"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Líneas de tiempo
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Aprenderas a representar los eventos que ocurren en el tiempo a lo largo de una línea.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, Forma, espacio y medida, Medida
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, segundo, minuto, hora, día, semana, quincena, año, lustro, década, siglo, milenio, línea del tiempo, tiempo, interpretar, representación gráfica del tiempo,representación gráfica, medir, leer líneas de tiempo, interpretar líneas de tiempo
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

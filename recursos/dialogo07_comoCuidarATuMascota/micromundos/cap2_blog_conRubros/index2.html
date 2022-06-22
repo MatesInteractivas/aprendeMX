@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/blog.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Blog</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<div id="texto"> 
+			
+				<p>
+					Tengo un hurón. Se llama Isidro y lo adoro. Es muy juguetón y súper cariñoso, le gusta mucho acurrucarse juntito a mí en la cama. 
+				</p>
+				<p>
+					Todos los días le doy una cápsula con aceite para su pelaje, junto con su comida. Y claro, las vacunas de ley…
+				</p>
+				<p>
+					Cuando lo saco de su jaula tengo que estar muy al pendiente porque le gusta rasguñar la alfombra. ¡Y una vez mi pequeño carnívoro atrapó un canario en casa de una amiga! <span><img src='img/emoticon.png' /></span>
+				</p>
+			</div>
+			
+			<div id="rubros">
+				<div class='header importante'>Datos importantes</div>
+				<ul id="importantes" class="rubro"></ul>
+				<div class='header menos-importante e-oculto'>Datos menos importantes</div>
+				<ul id="no_importantes" class="rubro e-oculto"></ul>
+				<div class='header duda e-oculto'>Dudas por aclarar</div>
+				<ul id="dudas" class="rubro e-oculto"></ul>
+			</div>
+
+		</div>
+		
+		<script>
+		
+		var datosImportantes = ["Necesita una jaula.","Hay que sacarlo de su jaula.","Hay que vacunarlo.","Puede rasguñar la alfombra.","Puede atrapar animalitos (es carnívoro)."];
+		var datosNoImportantes = ["Es juguetón y cariñoso.","Le gusta acostarse en la cama."];
+		var dudas = ["Aceite para su pelaje","¿Qué come?"];
+		var dudas2 = ['Su alimentación','Su espacio','Cuidados para su salud','Limpieza de su espacio','¿Puede causar alergias?','¿Cuánto cuesta tener un hurón?'];
+
+		var found = [];
+		
+		function showAll(){
+			
+			for(var i=0;i<datosImportantes.length;i++){
+				if(found.indexOf(datosImportantes[i])==-1){
+					var li = '<li>'+datosImportantes[i]+'</li>';
+					$("#importantes").append(li);
+				}
+			}
+			/*for(i=0;i<datosNoImportantes.length;i++){
+				if(found.indexOf(datosNoImportantes[i])==-1){
+					var li = '<li>'+datosNoImportantes[i]+'</li>';
+					$("#no_importantes").append(li);
+				}
+			}*/
+		}
+		
+		function showDudas(){
+			$('.header.duda').removeClass('e-oculto');
+			$('#dudas').removeClass('e-oculto');
+			for(i=0;i<3;i++){
+				if(found.indexOf(dudas2[i])==-1){
+					var li = '<li>'+dudas2[i]+'</li>';
+					$("#dudas").append(li);
+				}
+			}
+		}
+
+		/*function showAll(){
+			
+			for(var i=0;i<datosImportantes.length;i++){
+				if(found.indexOf(datosImportantes[i])==-1){
+					var li = '<li>'+datosImportantes[i]+'</li>';
+					$("#importantes").append(li);
+				}
+			}
+			for(i=0;i<datosNoImportantes.length;i++){
+				if(found.indexOf(datosNoImportantes[i])==-1){
+					var li = '<li>'+datosNoImportantes[i]+'</li>';
+					$("#no_importantes").append(li);
+				}
+			}
+		}
+		
+		function showDudas(){
+			for(i=0;i<3;i++){
+				if(found.indexOf(dudas2[i])==-1){
+					var li = '<li>'+dudas2[i]+'</li>';
+					$("#dudas").append(li);
+				}
+			}
+		}*/
+				
+		$(document).ready(function(){
+			showAll();
+			showDudas();
+		});
+
+		</script>
+					
+        </body>
+</html>

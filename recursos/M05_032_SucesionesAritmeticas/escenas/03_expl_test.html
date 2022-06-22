@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' ancho='1024' alto='568' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='WIND' x='WIND.x' y='WIND.y' ancho='1024' alto='500' despl_imagen='arr-izq' archivo='[url]'">
+   <param name="C_01" value="id='no' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          No llega' expresión='(bInst.x,E2._h-66,159,46)' fijo='sí' visible='sí' color='blanco' color-int='rojo' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx bermellon dislike|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='nextEjercicio()\ndoPlay(0)' dibujar-si='!verificado'">
+   <param name="C_02" value="id='si' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Sí llega' expresión='(bInst.x+159+20,E2._h-66,159,46)' fijo='sí' visible='sí' color='blanco' color-int='verde' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeClaro like|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='verificar(1)\ndoPlay(0)' dibujar-si='!verificado'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='nextEjercicio()' expresión='x' algoritmo='sí' hacer='WIND.exec(&squot;doPlay&squot;,k);WIND.update()'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='url=&squot;03_expl_jquery.html&squot;'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="Animación" value="pausa='500' controles='no' auto='no' hacer='stepAnim=(stepAnim+1)%(numInst+6);;paso=((stepAnim-1)>=numInst)?numInst-1:stepAnim-1;paso=((!respuestaCorrecta)&&(paso==(numInst-1)))?numInst-2:paso;;escJuan=((stepAnim-1)>=numInst)?((escJuan==0.5)?1:0.5):0.5;escLupe=((stepAnim-1)>=numInst)?((escLupe==0.5)?1:0.5):0.5;;paso=(!anim)?-1:paso;stepAnim=(!anim)?0:stepAnim;escJuan=(!anim)?0.5:escJuan;escLupe=(!anim)?0.5:escLupe;;scroll.y=(paso<=0)?0:scroll.y;ajustaScroll()' mientras='anim'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

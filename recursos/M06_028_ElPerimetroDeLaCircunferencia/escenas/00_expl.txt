@@ -1,0 +1,246 @@
+﻿fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=0
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Hola Juan! ¿Hiciste la tarea sobre el número π?'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, claro. Pero tuve algunos problemas.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿De veras? A mí se me hizo muy fácil.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Me costó trabajo medir bien el hilo que ajusté alrededor de una rueda de bicicleta.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+str='showimg:=1'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Yo lo hice con una tabla de madera redonda que tiene mi mamá en la cocina.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Qué medidas del diámetro y del perímetro obtuviste?'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='El diámetro era de 33 cm y el perímetro que medí, enredándole un hilo, fue de 104 cm.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Cuánto te salió π?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Pues  104  entre  33  da  3.151515... Como pidieron sólo dos decimales, lo dejé en 3.15.'
+DIALOGO[N,ludT]=9
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='showimg:=0'
+makeFig(N,0,str)
+DIALOGO[N,juan]='El diámetro de mi rueda medía  66 cm  y su perímetro me dio distintos valores,\nentre 2.05 m y 2.10 m.'
+DIALOGO[N,judT]=9
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='En mi calculadora eso da valores de  π  entre... 3.10  y  3.18.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, y eso no me dice lo que vale  π. A ti te dió 3.15 y a mí entre 3.10 y 3.18. ¿Cuánto vale en realidad?'
+DIALOGO[N,judT]=8
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Pues el maestro dice que vale 3.14159... y un montón de decimales más, una infinidad.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y quién puede conocer π? Nadie puede memorizar una infinidad de dígitos.'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Eso no importa, sólo nos piden que memoricemos dos decimales, así que tomaremos π igual a 3.14.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, para las tareas y los exámenes no hay problema, pero ¿alguien realmente puede saber cuánto vale π exactamente?'
+DIALOGO[N,judT]=10
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Caray! Esa es una duda muy profunda. Yo creo que no.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='En eso es en lo que he estado pensando y tengo una idea.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Qué idea? A mí francamente no se me ocurre nada.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='π existe y podemos hablar de él porque podemos conocerlo con tanta precisión como queramos, aunque eso requiere esfuerzo.'
+DIALOGO[N,judT]=9
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿De veras?'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, se pueden encontrar números, uno menor que π y el otro mayor, y que haya muy poca diferencia entre ellos.'
+DIALOGO[N,judT]=9
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Ah sí! Un profesor platicó de Arquímedes, un sabio de la antigua Grecia, que hizo lo que dices.'
+DIALOGO[N,ludT]=10
+DIALOGO[N,lact]=sorprendida
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Si?'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=sorprendido
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Sí! Pero no entendí cómo lo hizo.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pues a mí se me ocurrió cómo, pero aún no lo he hecho. ¿Me ayudas?'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=sorprendido
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Sí claro! Suena muy interesante. ¿Cuál es tu idea?'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='showimg:=2'
+makeFig(N,0,str)
+DIALOGO[N,juan]='Se trata de dibujar polígonos regulares inscritos y circunscritos a una circunferencia y calcular sus perímetros.'
+DIALOGO[N,judT]=10
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Entiendo. El perímetro del polígono inscrito será menor que el de la circunferencia y el del circunscrito será mayor.'
+DIALOGO[N,ludT]=9
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Exacto! Los perímetros de los polígonos son el número de lados por la medida del lado.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='De todas formas vamos a tener errores al medir los lados. Creo que Arquímedes calculó los lados por Geometría.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pero yo no sé hacer eso.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Yo tampoco. Ya lo aprenderemos en Secundaria. Por lo pronto lo haremos dibujando los polígonos y midiendo sus lados.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Sale!'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Caray! Qué buena idea. Me gusta mucho. ¡Manos a la obra!'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]=''
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=parada
+N=N+1

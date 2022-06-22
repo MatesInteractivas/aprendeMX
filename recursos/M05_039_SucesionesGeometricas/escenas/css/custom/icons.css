@@ -1,0 +1,13 @@
+.cambiar::before		{ background-image: url('imgs/icono_cambiar.png');	display:block; }
+.centrar::before		{ background-image: url('imgs/icono_centrar.png');	display:block; }
+.zoom-mas::before		{ background-image: url('imgs/icono_mas.png');		display:block; }
+.zoom-menos::before	{ background-image: url('imgs/icono_menos.png');	display:block; }
+.verify::before		{ background-image: url('imgs/icon_verify.png');	display:block; }
+
+
+
+
+
+
+
+

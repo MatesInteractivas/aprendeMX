@@ -1,0 +1,156 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+p, .vntn, div, h1 {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+#balon{
+    position: absolute;
+    top: 70px;
+    left: 85px;
+}
+
+#lista {
+    position: absolute;
+    width: 387px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    margin: 0px auto;
+}
+#cuestionario {
+    position: absolute;
+    width: 504px;
+    height: 193px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    background-image: url('img/cuestionario.png');
+}
+
+#lista > h1,
+#cuestionario > h1{
+    font-weight: bold;
+    font-size: 28px;
+    color: #fff;
+}
+
+#lista > h1{
+    background: url('img/headerHabilidades.png') no-repeat;
+    width: 350px;
+    height: 66px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    letter-spacing: 2.4px;
+}
+
+#lista > div{
+    display: block;
+    /*margin: 0px 10px 0px 18px;*/
+    width: 300px;
+    padding: 8px;
+    border: 10px solid #b8b9b9;
+    border-top: none;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+}
+#lista > div:nth-child(2){
+    border-top: 10px solid #b8b9b9 !important;
+}
+.prueba.e-marcado {
+	background-color: rgba(199,177,245,0.7) !important;
+}
+
+/* ---------
+ *  States 
+ * --------- */
+
+
+.e-oculto {
+	opacity: 0;
+	display: none;
+	height: 0px;
+	border: none;
+}
+.e-marcado {
+	background: rgba(172,40,180,0.5);
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Gráficas, gráfica de barras, tablas, organización de información, comparación de información, interpretación de la información, construcción de gráficas, lectura de datos, representación de datos">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='INFO' x='10' ancho='1004' dibujar-si='info' fijo='sí' imagen='images/backwindow.png' despl_imagen='mosaico' fondo='9900c35a' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='__SEPARADOR__' tipo='numérico' región='interior' espacio='E2' nombre='__SEPARADOR__' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_02" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='g0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(35,100,300,300)' fijo='sí' visible='sí' imagen='images/btn_grafica0.png' acción='calcular' parámetro='info=1\nimg=0' pos_mensajes='centro'">
+   <param name="C_04" value="id='g1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='((E2._w-300)/2,E2._h-330,300,300)' fijo='sí' visible='sí' imagen='images/btn_grafica1.png' acción='calcular' parámetro='info=1\nimg=1' pos_mensajes='centro'">
+   <param name="C_05" value="id='g2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(E2._w-300-35,100,300,300)' fijo='sí' visible='sí' imagen='images/btn_grafica2.png' acción='calcular' parámetro='info=1\nimg=2' pos_mensajes='centro'">
+   <param name="C_06" value="id='close' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(720,60,55,56)' fijo='sí' visible='sí' imagen='images/btn_close.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_04" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_05" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_06" value="id='__SEPARADOR__' expresión='0'">
+   <param name="A_07" value="id='IMAGES' vector='sí' evaluar='una-sola-vez' expresión='IMAGES[0]=&squot;images/grafica0.png&squot;;IMAGES[1]=&squot;images/grafica1.png&squot;;IMAGES[2]=&squot;images/grafica2.png&squot;'">
+   <param name="A_08" value="id='TIT' vector='sí' evaluar='una-sola-vez' expresión='TIT[0]=&squot;Gráfica de barras&squot;;TIT[1]=&squot;Gráfica de líneas&squot;;TIT[2]=&squot;Gráfica de sectores&squot;'">
+   <param name="A_09" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Observa algunos tipos de gráficas utilizados para presentar información.&squot;)' hacer='TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;pleca=&squot;Para ver las gráficas da clic en cada una de ellas.&squot;;'">
+   <param name="A_10" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   
+   <param name="A_12" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,10,E2._w-20,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='(PLANTILLA)'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='negro' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==MENU)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)-brdw,CP(ctw,s)+2*brdw,t),botY(rd,CP(cty,s)-brdw,CP(cth,s)+2*brdw,t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)+0.70*(!CP(active,s)),CP(active,s)+0.75*(!CP(active,s)) -(s==editing)*0.8 -(CP(selected,s)*0.8),0.2*CP(active,s)+0.80*(!CP(active,s)),0.0)' ancho='0' info='(PLANTILLA) borde exterior'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)!=SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_04" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s)+10,t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(CTRTXT.rojo,CTRTXT.verde,CTRTXT.azul,00)' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;PLAIN&squot;,21))/2,CT[s,cty]+(CT[s,cth]-24)/2+((CP(interfaz,s)==SPINER)*5)]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,PLAIN,21' fijo='sí' ancho='380' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_06" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='blanco' expresión='[(E2._w-_AnchoDeCadena_(pleca,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,20]' texto='[pleca]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='(AUTOR)'">
+   <param name="G_08" value="espacio='INFO' tipo='imagen' expresión='(0,-0.5,0.9,0.9)' archivo='[IMAGES[img]]'">
+   <param name="G_09" value="espacio='INFO' tipo='imagen' expresión='(0,4.6,0.525,0.6)' archivo='images/text_frame_01.png'">
+   <param name="G_10" value="espacio='INFO' tipo='texto' color='blanco' expresión='[(E2._w-_AnchoDeCadena_(TIT[img],&squot;Monospaced&squot;,&squot;PLAIN&squot;,28))/2,25]' texto='[TIT[img]]' fuente='Monospaced,PLAIN,28' fijo='sí' color_borde_texto='(TXT.rojo,TXT.verde,TXT.azul,00)' info='(AUTOR)'">
+</ajs>
+</div>
+
+</body>
+
+</html>

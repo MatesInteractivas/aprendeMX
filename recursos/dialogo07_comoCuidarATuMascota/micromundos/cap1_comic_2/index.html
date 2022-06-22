@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/comic.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Cómic 2</title>
+		
+	</head>
+	
+        
+        <body onload="setBts();" style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<img id="cartoon" src="img/1.jpg"/>
+			
+			<a id="previous" class="desactivado" href="#"></a>		
+			<a id="next" href="#"></a>
+
+
+		</div>
+		
+		<script>
+		
+			var totCartoons = 5;
+			var nCartoon = 1;
+			var inicio = true;
+			
+			var next = function(){
+					nCartoon++;
+					$("#cartoon").attr("src","img/"+nCartoon+".jpg");
+					if(nCartoon==totCartoons){
+						$("#next").unbind("click");
+						$("#next").addClass("desactivado");
+						final();
+					}
+					if($("#previous").hasClass("desactivado")){
+						$("#previous").removeClass("desactivado");
+						$("#previous").bind("click",previous);
+					}
+				}
+				
+			var previous = function(){
+					nCartoon--;
+					$("#cartoon").attr("src","img/"+nCartoon+".jpg");
+					if(nCartoon==1){
+						$("#previous").unbind("click");
+						$("#previous").addClass("desactivado");
+					}
+					if($("#next").hasClass("desactivado")){
+						$("#next").removeClass("desactivado");
+						$("#next").bind("click",next);
+					}
+				}
+			
+			function setBts(){
+				$("#next").bind("click",next);
+			}
+			
+			function final(){
+			    if(inicio){
+				inicio = false;
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: 'cap1_comic_2' } };
+				//var mensajeTipoSet = { command: "gotoQuestion", params: { value: 'idPregunta', id: 'idMicromundo' } };
+				//var mensajeTipoSet = { command: "setAnswer", params: { value: 'texto', id: 'idMicromundo' } };
+				padre.postMessage(mensajeTipoSet, "*");
+			    }
+			  }
+			
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap1_comic' } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+    
+			
+		
+		</script>
+					
+        </body>
+</html>

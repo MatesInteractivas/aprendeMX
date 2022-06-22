@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_003"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El timbre
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad identificarás el funcionamiento básico de un timbre con base en los ciclos de apertura y cierre de un circuito eléctrico que contiene una bobina y algunos elementos mecánicos, como una campana. Para ello construirás un timbre utilizando materiales sencillos que pueden adquirirse en una tlapalería, y aplicarás lo aprendido en las unidades anteriores. Relacionarás el funcionamiento del timbre con el de los motores eléctricos básicos.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, electricidad y magnetismo
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Electricidad y magnetismo, circuito, circuitos, diagrama, bobina, solenoide, espira, imán, electroimán, intermitente, circuito abierto, circuito cerrado, encendido, apagado, brecha, apertura, interruptor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

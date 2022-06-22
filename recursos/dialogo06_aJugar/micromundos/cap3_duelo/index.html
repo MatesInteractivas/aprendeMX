@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="DESCRIPTION OF CONTENT" />
+		<meta name="keywords" content="KEYWORDS FOR CONTENT" />
+		<link rel="icon" type="image/ico" href="img/general/unam.ico" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<title>Duelo de goles</title>
+	</head>
+	<body>
+		<div class="js-oactx oacontext">
+			<div class="js-overlay overlay">
+
+			</div>
+
+			<div class="content clearfix">
+
+				<div class="vntn vntn-inst js-instrucciones">
+					<p class="vntn--titulo">
+						Indicaciones
+					</p>
+					<div class="vntn--contenido">
+						<p>
+							Para jugar, haz lo siguiente:
+						</p>
+						<ol>
+							<li>Presiona sobre la foto de Claudia o Ana María.</li>
+							<li>Lee la oración inicial y revisa los fragmentos y signos disponibles.</li>
+							<li>Construye la descripción colocando uno por uno los fragmentos y signos, en el orden correcto.</li>
+							<li>Para colocar un fragmento o signo, simplemente presiona sobre él.</li>
+						</ol>
+						<p>
+							&iexcl;Ojo! Cada vez que coloques mal un elemento del texto, tu oponente te meterá gol. 
+						</p>
+						<p>
+							Si aciertas, tú anotarás gol.
+						</p>
+						<p>
+							Por último, recuerda: &iexcl;Empieza con las fortalezas!
+						</p>
+					</div>
+				</div>
+				
+				<div class="main-text js-main-text">
+					
+					<div class="js-players players">
+						<div class="player js-player-data" data-player="elena">
+							<span class="player--name">María Elena</span>
+							<img class='player--img' src='img/elena.png' />
+							<!--button class="js--btn-results player--btn-results">Ver resultados</button-->
+						</div>
+						<div class="player js-player-data" data-player="claudia">	
+							<span class="player--name js-player-data">Claudia</span>
+							<img class='player--img' src='img/claudia.png' />
+							<!--button class="js--btn-results player--btn-results">Ver resultados</button-->
+						</div>
+						<div class="player js-player-data" data-player="ana">
+							<span class="player--name js-player-data" >Ana María</span>
+							<img class='player--img' src='img/ana.png' />
+							<!--button class="js--btn-results player--btn-results">Ver resultados</button-->
+						</div>
+					</div>	
+				</div>
+				
+				
+				<button class="btn js-btn-instr btn-instr" >Indicaciones
+				</button>
+				
+				<div class="vntn js-vntn-player vntn-player" data-player="elena">
+					<p>
+					María Elena tiene once años y cuatro jugando futbol.
+					Es la más rápida de las tres. 
+					Además, tiene una excelente condición física. 
+					Su capacidad goleadora es buena, pero su habilidad con el balón es sólo aceptable.
+					</p>
+				</div>
+				
+				
+				<div class="vntn js-vntn-player vntn-player" data-player="claudia">
+					<div class="vntn-player--text">
+						<span class="initial-p">Claudia tiene doce años y dos años jugando futbol.</span> 
+						<span class="prompt js-prompt"></span>
+					</div>
+				</div>
+				<div class="marcador js-marcador e-oculto" data-player="claudia"></div>
+				<img class='portera js-portera e-oculto' data-player="claudia" src='img/claudia.png' />
+				
+				<div class="vntn js-vntn-player vntn-player" data-player="ana">
+					<div class="vntn-player--text">
+						<span class="initial-p">Ana María tiene once años y no ha jugado futbol en un equipo antes.</span> 
+						<span class="prompt js-prompt"></span>
+					</div>
+				</div>
+				<div class="marcador js-marcador e-oculto" data-player="ana"></div>
+				<img class='portera js-portera e-oculto' data-player="ana" src='img/ana.png' />
+				
+				<img class='alumno js-alumno' src='../../img/alumno/alumno1.png' />
+				
+				<img class='balon' src='img/balon.png' />
+				
+				<div class="vntn js-vntn-feedback vntn-feedback" data-correct="">
+					<div class="vntn--contenido"></div>
+				</div>
+				
+				
+
+			</div><!-- contenido-->
+			
+			
+		</div><!-- /oacontext -->
+	</body>
+</html>

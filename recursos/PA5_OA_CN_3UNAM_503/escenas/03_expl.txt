@@ -1,0 +1,128 @@
+﻿NP=0
+PREG[NP,txt]='El calor no puede transmitirse en el vacío'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='¡Claro que puede! Por ejemplo, a la Tierra'
+PREG[NP,rt2]='le llega el calor del Sol mediante la radiación,'
+PREG[NP,rt3]='que recorre enormes distancias por el espacio vacío.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='El cuerpo humano emite continuamente radiación infrarroja.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Esto puede verse en los termogramas, que muestran en'
+PREG[NP,rt2]='distintos colores las zonas de mayor y menor temperatura,'
+PREG[NP,rt3]='las cuales emiten más o menos radiación, respectivamente.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En la formación de nubes de tipo cumulonimbus interviene de manera importante la radiación.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Es precisamente la radiación solar la que hace aumentar'
+PREG[NP,rt2]='la temperatura del suelo, que luego calienta el aire y'
+PREG[NP,rt3]='lo hace elevarse, iniciándose así la formación de nubes.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las piedras no emiten radiación.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Todos los cuerpos absorben y emiten radiación,'
+PREG[NP,rt2]='independientemente de si son o no seres vivos.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Los coches blancos tardan más en calentarse con la luz solar que los negros.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Los colores claros como el blanco reflejan más la radiación'
+PREG[NP,rt2]='luminosa que los oscuros. Por eso los coches de colores'
+PREG[NP,rt3]='claros tardan más en calentarse cuando les da el Sol.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Envolver algo caliente en papel aluminio ayuda a que mantenga su calor.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='La radiación emitida por el objeto caliente se refleja en el'
+PREG[NP,rt2]='papel aluminio que lo cubre y así el cuerpo la puede reabsorber,'
+PREG[NP,rt3]='con lo que disminuye su pérdida de calor debida a la radiación.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Un termo conserva el calor sólo porque evita su conducción al exterior.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='También evita la pérdida de calor por radiación.'
+PREG[NP,rt2]='Para eso es que la pared interior de un termo'
+PREG[NP,rt3]='se construye con un material reflejante.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si una casa se calienta demasiado con la luz del Sol, conviene pintar el techo de negro.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Al contrario, convendría pintarlo de blanco'
+PREG[NP,rt2]='o cubrirlo con un material reflejante,'
+PREG[NP,rt3]='por ejemplo, con papel de aluminio.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si por una ventana que da al oeste entra mucha luz del Sol y eso hace que se caliente demasiado la habitación, conviene ponerle una cortina gruesa y oscura.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='La cortina oscura absorbería la radiación del Sol, pero luego'
+PREG[NP,rt2]='emitiría la mitad hacia adentro. Sería mejor cubrir la ventana'
+PREG[NP,rt3]='con papel de aluminio, que reflejaría casi toda la radiación solar.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Por la noche el suelo y las casas se enfrían porque emiten más radiación de la que reciben.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Por eso las madrugadas son más frescas que los atarcederes.'
+PREG[NP,rt2]=''
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las hojas verdes de las plantas se calientan mucho con el Sol porque no reflejan la radiación.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Las hojas verdes de las plantas absorben la radiación solar, pero'
+PREG[NP,rt2]='no aumentan mucho su temperatura porque la clorofila usa esa radiación'
+PREG[NP,rt3]='para absorber bióxido de carbono, convirtiéndola así en energía química.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='La sombra de los árboles puede imitarse perfectamente con una manta de tela verde.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='La clorofila de las hojas convierte la radiación solar en energía química,'
+PREG[NP,rt2]='en cambio la manta absorbe la radiación y la vuelve a emitir.'
+PREG[NP,rt3]='Por eso la sombra de un árbol es más fresca que la de una manta.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si un extremo de una barra larga de fierro oscuro sin pulir se calienta al rojo vivo, el otro extremo también deberá estar muy caliente.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Aunque el fierro es buen conductor del calor, también es un'
+PREG[NP,rt2]='buen emisor de radiación. Por lo tanto, el calor que se va'
+PREG[NP,rt3]='conduciendo por la barra, se va perdiendo por irradiación.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Una llanta de hule expuesta de cerca a la luz de una lámpara puede calentarse muchísimo y llegar a incendiarse.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='El hule absorbe bien la radiación y es mal conductor del calor.'
+PREG[NP,rt2]='Por eso si se ilumina de cerca con un foco, la zona afectada'
+PREG[NP,rt3]='aumenta rápidamente su temperatura y puede llegar a quemarse.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Una tabla de madera expuesta de cerca a la luz de una lámpara puede calentarse muchísimo y llegar a incendiarse.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='La madera absorbe bien la radiación y es mala conductora del calor.'
+PREG[NP,rt2]='Por eso si se ilumina de cerca con un foco, la zona afectada puede'
+PREG[NP,rt3]='aumentar suficientemente su temperatura como para llegar quemarse.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si un extremo de una cuchara de acero ha estado mucho rato cerca de una lámpara encendida, puede estar toda ella muy caliente.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Aunque el acero pulido de una cuchara no absorbe bien la radiación, algo'
+PREG[NP,rt2]='absorbe, y como no es mal conductor, el calor que absorbe lo transmite'
+PREG[NP,rt3]='al resto, pudiendo llegar a la larga a estar toda ella muy caliente.'
+PREG[NP,img]=no
+NP=NP+1

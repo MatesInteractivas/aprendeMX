@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Área, figuras planas, descomposición de figuras, armado y desarmado de figuras, igualdad de áreas, descomposición y composición de figuras">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='E_IZQ' x='E_IZQ.x' y='E_IZQ.y' ancho='418' alto='380' fijo='sí' escala='37.9' O.x='-50%' O.y='49.8%' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='E_DER' x='E_DER.x' y='E_DER.y' ancho='418' alto='380' fijo='sí' escala='37.9' O.x='-50%' O.y='49.8%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='ECOLORES' x='940' y='15' ancho='50' alto='482' fijo='sí' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='__SEPARADOR__' tipo='numérico' región='interior' espacio='E2' nombre='__SEPARADOR__' fijo='sí' visible='sí' dibujar-si='0'">
+   <param name="C_02" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='veri' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Verificar' expresión='(40,E2._h-46-15,180,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nverificar()' activo-si='!bien' pos_mensajes='centro'">
+   <param name="C_04" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Otro ejercicio' expresión='(40+180+60,E2._h-46-15,180,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\notroEjercicio()' pos_mensajes='centro'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_04" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_05" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_06" value="id='Print(a)' algoritmo='sí' algoritmo='sí' Local='str' hacer='str=&squot;&squot;+a;_Print_(str)'">
+   <param name="A_07" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_08" value="id='Inicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='E_IZQ.x=40;E_IZQ.y=50;E_DER.x=E_IZQ.x+E_IZQ._w+30;E_DER.y=E_IZQ.y;;reticula.N=11;reticula.M=10;;posColores.x=ECOLORES._w/2;posColores.y=458;sepColores=31;tamBtnColores=10;currentColor=10;;otroEjercicio()'">
+   <param name="A_09" value="id='Calculos()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='aux=(E_IZQ.mouse_pressed)?colorea(E_IZQ.mouse_x,E_IZQ.mouse_y,0):0;aux=(E_DER.mouse_pressed)?colorea(E_DER.mouse_x,E_DER.mouse_y,1):0'">
+   <param name="A_10" value="id='__SEPARADOR__' expresión='0'">
+   <param name="A_11" value="id='COLORES' vector='sí' evaluar='una-sola-vez' tamaño='15' expresión='COLORES[0] =&squot;ffffff&squot;;COLORES[1] =&squot;00ffff&squot;;COLORES[2] =&squot;ff00ff&squot;;COLORES[3] =&squot;0000ff&squot;;COLORES[4] =&squot;ffff00&squot;;COLORES[5] =&squot;00ff00&squot;;COLORES[6] =&squot;ff0000&squot;;COLORES[7] =&squot;808080&squot;;COLORES[8] =&squot;008080&squot;;COLORES[9]=&squot;800080&squot;;COLORES[10]=&squot;000080&squot;;COLORES[11]=&squot;808000&squot;;COLORES[12]=&squot;008000&squot;;COLORES[13]=&squot;800000&squot;;COLORES[14]=&squot;000000&squot;'">
+   <param name="A_12" value="id='REJILLA_1' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='30' filas='30'">
+   <param name="A_13" value="id='REJILLA_2' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='30' filas='30'">
+   <param name="A_14" value="id='initRejilla()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,total' inicio='i=0;total=reticula.N*reticula.M' hacer='ii=i%reticula.N;jj=ent(i/reticula.N);;REJILLA_1[ii,jj]=0;REJILLA_2[ii,jj]=0;;i=i+1' mientras='i<total'">
+   <param name="A_15" value="id='obtenColor(_mx,_my)' algoritmo='sí' expresión='_col' algoritmo='sí' Local='ci' inicio='ci=0; _col=-1' hacer='_dist=distancia(posColores.x,posColores.y-ci*sepColores,_mx,_my);_col=(_dist<tamBtnColores)?ci:_col;ci=(_col!=-1)?COLORES.long:(ci+1)' mientras='ci<COLORES.long'">
+   <param name="A_16" value="id='distancia(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_17" value="id='xAbsCOLORES(x)' expresión='x*ECOLORES.escala +ECOLORES._w/2 +ECOLORES.Ox'">
+   <param name="A_18" value="id='yAbsCOLORES(y)' expresión='-y*ECOLORES.escala +ECOLORES._h/2 +ECOLORES.Oy'">
+   <param name="A_19" value="id='colorea(mx,my,cual)' algoritmo='sí' expresión='x' algoritmo='sí' Local='cond' hacer='mx=ent(mx);my=ent(my);cond=(mx>=0)&&(my>=0)&&(mx<reticula.N)&&(my<reticula.M);aux=(cond)?setColor(mx,my,cual):0'">
+   <param name="A_20" value="id='setColor(i,j,cual)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='REJILLA_1[i,j]=(cual==0)?currentColor:REJILLA_1[i,j];REJILLA_2[i,j]=(cual==1)?currentColor:REJILLA_2[i,j]'">
+   <param name="A_21" value="id='cuad_x(i)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='x=(i==0)?0:x;x=(i==1)?1:x;x=(i==2)?1:x;x=(i==3)?0:x;;'">
+   <param name="A_22" value="id='cuad_y(i)' algoritmo='sí' expresión='y' algoritmo='sí' hacer='y=(i==0)?0:y;y=(i==1)?0:y;y=(i==2)?1:y;y=(i==3)?1:y;;'">
+   <param name="A_23" value="id='getArea()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,total' inicio='i=0;total=reticula.N*reticula.M;area_1=0;area_2=0' hacer='ii=i%reticula.N;jj=ent(i/reticula.N);;area_1=area_1+(REJILLA_1[ii,jj]>0);area_2=area_2+(REJILLA_2[ii,jj]>0);;i=i+1' mientras='i<total'">
+   <param name="A_24" value="id='otroEjercicio()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='verificado=0;bien=0' hacer='elArea=10+ent(rnd*21);initRejilla();;'">
+   <param name="A_25" value="id='verificar()' algoritmo='sí' expresión='bien' algoritmo='sí' inicio='verificado=1' hacer='getArea();bien=(elArea==area_1)&&(elArea==area_2)'">
+   <param name="A_26" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Aprende que dos figuras formadas con las mismas partes tienen la misma área.&squot;)' hacer='Init();Inicio();'">
+   <param name="A_27" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+   
+   <param name="A_29" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_30" value="id='color_click' evento='sí' condición='ECOLORES.mouse_pressed' acción='calcular' parámetro='Mx=xAbsCOLORES( ECOLORES.mouse_x )\nMy=yAbsCOLORES( ECOLORES.mouse_y )\n\n_color=obtenColor(Mx,My)\ncurrentColor=(_color==-1)?currentColor:_color\nR2.currentColor=currentColor\n' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_31" value="id='derecho_click' evento='sí' condición='0&E_DER.mouse_pressed' acción='calcular' parámetro='colorea(E_DER.mouse_x,E_DER.mouse_y)' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,10,E2._w-20,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='(PLANTILLA)'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='negro' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==MENU)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)-brdw,CP(ctw,s)+2*brdw,t),botY(rd,CP(cty,s)-brdw,CP(cth,s)+2*brdw,t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)+0.70*(!CP(active,s)),CP(active,s)+0.75*(!CP(active,s)) -(s==editing)*0.8 -(CP(selected,s)*0.8),0.2*CP(active,s)+0.80*(!CP(active,s)),0.0)' ancho='0' info='(PLANTILLA) borde exterior'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)!=SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_04" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(CTRTXT.rojo,CTRTXT.verde,CTRTXT.azul,00)' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;PLAIN&squot;,21))/2,CT[s,cty]+(CT[s,cth]-24)/2]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,PLAIN,21' fijo='sí' ancho='380' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_06" value="espacio='ECOLORES' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_07" value="espacio='ECOLORES' tipo='punto' color='negro' coord_abs='sí' expresión='(posColores.x,posColores.y -currentColor*sepColores)' fijo='sí' tamaño='tamBtnColores+6'">
+   <param name="G_08" value="espacio='ECOLORES' tipo='punto' color='blanco' coord_abs='sí' expresión='(posColores.x,posColores.y -currentColor*sepColores)' fijo='sí' tamaño='tamBtnColores+4'">
+   <param name="G_09" value="espacio='ECOLORES' tipo='punto' color='negro' coord_abs='sí' expresión='(posColores.x,posColores.y -s*sepColores)' familia='s' s.intervalo='[0,COLORES.long-1]' s.pasos='COLORES.long-1' fijo='sí' tamaño='tamBtnColores+1'">
+   <param name="G_10" value="espacio='ECOLORES' tipo='punto' color='(_Rojo_( COLORES[s] ),_Verde_( COLORES[s] ),_Azul_( COLORES[s] ),00)' coord_abs='sí' expresión='(posColores.x,posColores.y -s*sepColores)' familia='s' s.intervalo='[0,COLORES.long-1]' s.pasos='COLORES.long-1' fijo='sí' tamaño='tamBtnColores'">
+   <param name="G_11" value="espacio='ECOLORES' tipo='punto' color='(_Rojo_( COLORES[currentColor] ),_Verde_( COLORES[currentColor] ),_Azul_( COLORES[currentColor] ),00)' coord_abs='sí' expresión='(posColores.x,posColores.y -currentColor*sepColores)' fijo='sí' tamaño='tamBtnColores+2'">
+   <param name="G_12" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='blanco' expresión='[35,18]' texto='Da clic en las rejillas para construir dos figuras que tengan área [elArea]' fuente='Monospaced,PLAIN,19' decimales='0' fijo='sí' color_borde_texto='173320' info='(AUTOR) texto sobre fondo verde'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='bien&&verificado' expresión='[645,E2._h-50]' texto='¡Muy bien!' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='!bien&&verificado' expresión='[485,E2._h-70]' texto='Observa con cuidado el área que se pide.\nLa figura de la izquierda tiene área [area_1] y la de la derecha tiene área [area_2].' fuente='Monospaced,PLAIN,19' fijo='no' ancho='420' color_borde_texto='173320'">
+   <param name="G_16" value="espacio='E_IZQ' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_17" value="espacio='E_IZQ' tipo='curva' color='ff20303a' expresión='(cuad_x(t)+s%reticula.N,cuad_y(t)+ent(s/reticula.N))' familia='s' s.intervalo='[0,reticula.N*reticula.M-1]' s.pasos='reticula.N*reticula.M-1' t.intervalo='[0,3]' t.pasos='3' relleno='(_Rojo_( COLORES[REJILLA_1[s%reticula.N,ent(s/reticula.N)]] ),_Verde_( COLORES[REJILLA_1[s%reticula.N,ent(s/reticula.N)]] ),_Azul_( COLORES[REJILLA_1[s%reticula.N,ent(s/reticula.N)]] ),00)' ancho='0'">
+   <param name="G_18" value="espacio='E_IZQ' tipo='segmento' color='blanco' expresión='(0,s)(reticula.N,s)' familia='s' s.intervalo='[0,reticula.M]' s.pasos='reticula.M' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_19" value="espacio='E_IZQ' tipo='segmento' color='blanco' expresión='(s,0)(s,reticula.M)' familia='s' s.intervalo='[0,reticula.N]' s.pasos='reticula.N' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_20" value="espacio='E_IZQ' tipo='segmento' color='negro' expresión='(0,s)(reticula.N,s)' familia='s' s.intervalo='[0,reticula.M]' s.pasos='reticula.M' fijo='sí' tamaño='0'">
+   <param name="G_21" value="espacio='E_IZQ' tipo='segmento' color='negro' expresión='(s,0)(s,reticula.M)' familia='s' s.intervalo='[0,reticula.N]' s.pasos='reticula.N' fijo='sí' tamaño='0'">
+   <param name="G_22" value="espacio='E_DER' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_23" value="espacio='E_DER' tipo='curva' color='ff20303a' expresión='(cuad_x(t)+s%reticula.N,cuad_y(t)+ent(s/reticula.N))' familia='s' s.intervalo='[0,reticula.N*reticula.M-1]' s.pasos='reticula.N*reticula.M-1' t.intervalo='[0,3]' t.pasos='3' relleno='(_Rojo_( COLORES[REJILLA_2[s%reticula.N,ent(s/reticula.N)]] ),_Verde_( COLORES[REJILLA_2[s%reticula.N,ent(s/reticula.N)]] ),_Azul_( COLORES[REJILLA_2[s%reticula.N,ent(s/reticula.N)]] ),00)' ancho='0'">
+   <param name="G_24" value="espacio='E_DER' tipo='segmento' color='blanco' expresión='(0,s)(reticula.N,s)' familia='s' s.intervalo='[0,reticula.M]' s.pasos='reticula.M' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_25" value="espacio='E_DER' tipo='segmento' color='blanco' expresión='(s,0)(s,reticula.M)' familia='s' s.intervalo='[0,reticula.N]' s.pasos='reticula.N' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_26" value="espacio='E_DER' tipo='segmento' color='negro' expresión='(0,s)(reticula.N,s)' familia='s' s.intervalo='[0,reticula.M]' s.pasos='reticula.M' fijo='sí' tamaño='0'">
+   <param name="G_27" value="espacio='E_DER' tipo='segmento' color='negro' expresión='(s,0)(s,reticula.M)' familia='s' s.intervalo='[0,reticula.N]' s.pasos='reticula.N' fijo='sí' tamaño='0'">
+</ajs>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "sonido", 
+    "acústica", 
+    "relación de la vibración de los materiales con la propagación del sonido", 
+    "relación de la propagación del sonido con el funcionamiento del oído"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Sonido", 
+    "ondas", 
+    "longitud de onda", 
+    "frecuencia", 
+    "difracción de sonido", 
+    "tono", 
+    "vibración", 
+    "onda sonora", 
+    "grave", 
+    "agudo", 
+    "oído"
+  ], 
+  "descripcion": "Esta unidad explorarás el fenómeno de la difracción del sonido al observar qué sucede con las ondas sonoras cuando se topan con un obstáculo y cómo pueden rodearlo dependiendo de su tono o frecuencia (sonidos graves o agudos). Con base en estas observaciones, podrás explicar cómo se pueden filtrar sonidos en función de su tono.",
+  "resena": "Difracción del sonido al rodear obstáculos. Diferencia de dicho efecto según la frecuencia.",
+  "titulo": "¿Cómo detecto los sonidos graves y los agudos?", 
+  "id": "PA5_OA_CN_3UNAM_202"
+}

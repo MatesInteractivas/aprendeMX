@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_028"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El perímetro de la circunferencia
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		La longitud o perímetro de una circunferencia se puede estimar realizando mediciones. Se sabe que es proporcional a su diámetro. El perímetro de una circunferencia es más o menos 3 1/8 veces su diámetro. La constante de proporcionalidad exacta se llama Pi, y es el número más famoso del mundo. En esta unidad aprenderás a estimar el valor de Pi por varios procedimientos y a utilizarlo para calcular el perímetro de una circunferencia.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, geometría, Forma, espacio y medida, Medida
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, circunferencia, diámetro, perímetro, número Pi, constante de proporcionalidad.
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

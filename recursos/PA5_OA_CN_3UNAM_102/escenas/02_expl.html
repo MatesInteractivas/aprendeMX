@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Óptica física, difracción, espectrómetro, CD, rejilla de difracción, color, longitud de onda, frecuencia, espectro electromagnético, arcoiris, prisma, espectro visible, espectro de emisión, luz">
+
+<head>
+	<title>La huella digital de algunas sustancias</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' y='20' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1\nanimar=0\nenc=0\ntt=0' dibujar-si='fase<2'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1\nanimar=0\nenc=0' dibujar-si='fase>1' pos_mensajes='centro'">
+   <param name="C_03" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230-380,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1\nanimar=0\ntt=0'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0'">
+   <param name="C_05" value="id='soltar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Girar' expresión='(1024-230-380,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='16a085' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=1' dibujar-si='(tt<2)&(fase=0)'">
+   <param name="C_06" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Detener' expresión='(1024-230-380,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2c3e50' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=0\ntt=0' dibujar-si='(tt>1)&(fase=0)'">
+   <param name="C_07" value="id='Prender' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Prender' expresión='(120,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='enc=1\nanimar=1' dibujar-si='(enc=0)&((fase=1)|(fase=2))'">
+   <param name="C_08" value="id='Apagar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Apagar' expresión='(120,415,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2c3e50' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx azulOscuro play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='enc=0\nanimar=0\ntt=0' dibujar-si='(enc=1)&((fase=1)|(fase=2))'">
+   <param name="C_09" value="id='color+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(900,220,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='color=color+1' dibujar-si='(color<7)&(fase=1)&(enc=1)&0'">
+   <param name="C_10" value="id='color-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(620,220,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='color=color-1' dibujar-si='(color>0)&(fase=1)&(enc=1)&0'">
+   <param name="C_11" value="id='elem+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(950,210,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx cian paso_adelante|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='elem=elem+1' dibujar-si='(elem<4)&(fase=2)'">
+   <param name="C_12" value="id='elem-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' expresión='(600,210,45,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx blanco paso_atras|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='elem=elem-1' dibujar-si='(elem>1)&(fase=2)'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=1;info=0;enc=0;c1x=-7;c1y=.5;color=1;elem=1;RetroMargIzq=150;RetroMargDer=874;RetroMargSup=90;RetroMargInf=474;RetroWidth=RetroMargDer-RetroMargIzq;RetroWidthini=RetroWidth-50'">
+   <param name="A_02" value="id='Tcolor' vector='sí' evaluar='una-sola-vez' tamaño='50' expresión='Tcolor[0]=&squot;images/aprende/prisma1.png&squot;;Tcolor[1]=&squot;images/aprende/prisma2.png&squot;;Tcolor[9]=&squot;Transparente&squot;;Tcolor[10]=&squot;Rojo&squot;;Tcolor[11]=&squot;Naranja&squot;;Tcolor[12]=&squot;Amarillo&squot;;Tcolor[13]=&squot;Verde&squot;;Tcolor[14]=&squot;Azul&squot;;Tcolor[15]=&squot;Índigo&squot;;Tcolor[16]=&squot;Violeta&squot;;Tcolor[20]=&squot;images/aprende/spect1.jpg&squot;;Tcolor[21]=&squot;images/aprende/spect2.jpg&squot;;Tcolor[22]=&squot;images/aprende/spect3.jpg&squot;;Tcolor[23]=&squot;images/aprende/spect4.jpg&squot;;Tcolor[30]=&squot;Lámpara de Mercurio&squot;;Tcolor[31]=&squot;Lámpara de Neón&squot;;Tcolor[32]=&squot;Lámpara de Sodio&squot;;Tcolor[33]=&squot;Lámpara de Hidrógeno&squot;;Tcolor[40]=&squot;images/aprende/lampara_blanca_off.png&squot;;Tcolor[41]=&squot;images/aprende/lampara_naranja_off.png&squot;;Tcolor[42]=&squot;images/aprende/lampara_amarilla_off.png&squot;;Tcolor[43]=&squot;images/aprende/lampara_amarilla_naranja_off.png&squot;;Tcolor[44]=&squot;images/aprende/lampara_blanca_on.png&squot;;Tcolor[45]=&squot;images/aprende/lampara_naranja_on.png&squot;;Tcolor[46]=&squot;images/aprende/lampara_amarilla_on.png&squot;;Tcolor[47]=&squot;images/aprende/lampara_amarilla_naranja_on.png&squot;'">
+   <param name="A_03" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_04" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_05" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='34495e' expresión='[60,16]' texto='Aprende qué es el espectro de emisión y absorción.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[40,55]' texto='A continuación se muestra cómo obtener un espectro de absorción. Con una lámpara pasamos luz blanca por una sustancia, en este caso clorofila, la luz que sale de la sustancia ya es diferente a la incidente ya que la sustancia absorbió parte de ella, para saber que absorbió hacemos pasar el haz sobre un prisma y al difractarse podemos ver el espectro.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='950' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[20,55]' texto='Para obtener el espectro de un elemento, debemos tener el elemento en estado gaseoso, sobre él se hace pasar una corriente eléctrica provocando que el elemento emita energía luminosa propia (como en un foco de neón), esta luz se pasa por un prisma el cual refracta la luz mostrando así su espectro característico.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='960' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_04" value="espacio='E1' tipo='macro' expresión='--fase=1--'">
+   <param name="G_05" value="espacio='E1' tipo='imagen' expresión='(0,-3.3,1,1)' archivo='images/explora/mesa.png' frecuencia='100'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' expresión='(-9.4,-1,.7,.7)' archivo='images/aprende/lampara_cajon.png' frecuencia='100'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='(enc=0)&(fase=1)' expresión='(-9.7,-.95,.7,.7)' archivo='images/aprende/lampara_blanca_off.png' frecuencia='100'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='(enc=1)&(fase=1)' expresión='(-9.7,-.95,.7,.7)' archivo='images/aprende/lampara_blanca_on.png' frecuencia='100'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' expresión='(-6,-1.2,.7,.7)' archivo='images/aprende/contenedor.png' frecuencia='100'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' expresión='(-.64,-1.5,.9,.9)' archivo='images/aprende/prisma1.png' frecuencia='100'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' dibujar-si='(enc=1)&(fase=1)' expresión='(5.8,-1.5,.6,.6)' archivo='images/aprende/spectcloro.png' frecuencia='100'">
+   <param name="G_12" value="espacio='E1' tipo='polígono' dibujar-si='fase=1' coord_abs='sí' expresión='(160,300)(288,300)(288,400)(160,400)' relleno='3b00e100' ancho='0'">
+   <param name="G_13" value="espacio='E1' tipo='polígono' dibujar-si='(enc=1)&(fase=1)' coord_abs='sí' expresión='(97,323)(152,323)(152,337)(97,337)(97,323)' relleno='55ffffff' ancho='0'">
+   <param name="G_14" value="espacio='E1' tipo='polígono' dibujar-si='(enc=1)&(fase=1)' coord_abs='sí' expresión='(295,323)(453,323)(440,337)(295,337)(295,323)' relleno='be00e100' ancho='0'">
+   <param name="G_15" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(fase=1)&(enc)' expresión='[620,210]' texto='La imagen que se muestra es el espectro de absorción de la clorofila.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='380' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_16" value="espacio='E1' tipo='macro' expresión='--fase=2--'">
+   <param name="G_17" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)' expresión='(-7,-.9,1,1)' archivo='images/aprende/lampara_cajon.png' frecuencia='100'">
+   <param name="G_18" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)' expresión='(-7.5,-.85,1.3,1)' archivo='Tcolor[39+elem+(enc*4)]' frecuencia='100'">
+   <param name="G_19" value="espacio='E1' tipo='imagen' dibujar-si='fase=2' expresión='(-1,-1,.9,.9)' archivo='images/aprende/prisma1.png' frecuencia='100'">
+   <param name="G_20" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[680,225]' texto='[Tcolor[29+elem]]' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_21" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='(enc=1)&(fase=2)' expresión='[680,270]' texto='Espectro de emisión' fuente='SansSerif,PLAIN,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_22" value="espacio='E1' tipo='imagen' dibujar-si='(fase=2)&(enc=1)' expresión='(5.5,-1,.7,.7)' archivo='Tcolor[19+elem]' frecuencia='100'">
+   <param name="G_23" value="espacio='E1' tipo='polígono' dibujar-si='(enc=1)&(fase=2)' coord_abs='sí' expresión='(230,315)(425,315)(417,332)(230,332)(230,315)' relleno='55ffffff' ancho='0'">
+   <param name="G_24" value="espacio='E1' tipo='macro' expresión='--INFO--'">
+   <param name="G_25" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_26" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[RetroMargIzq,90]' texto='En el espectro de absorción el elemento absorbe ciertos tipos de luz y\nen el espectro de emisión el elemento emite su propia luz.\n\nLos espectros, tanto de emisión como de absorción, son característicos de cada elemento. Usando estos espectros podemos identificar los distintos elementos de la tabla periódica.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_27" value="espacio='info' tipo='imagen' dibujar-si='fase=1' coord_abs='sí' expresión='(500,384,1,1)' archivo='images/aprende/colores.png'">
+   <param name="G_28" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[RetroMargIzq,90]' texto='Si juntamos los espectros de absorción y de emisión de un mismo\nelemento resultan ser complementarios, es decir, completan los 7 colores fundamentales. Esto quiere decir, que sabiendo los espectros de absorción podemos saber los de emisión y viceversa.\n\nComo vimos, los espectros de emisión y absorción son únicos para cada elemento. ¿Cómo crees que saben los astrónomos de qué se componen las estrellas y galaxias? Lo que acabamos de aprender sobre los espectros ¿podría ser de utilidad?\n' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='RetroWidth' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_29" value="espacio='info' tipo='imagen' dibujar-si='fase=2' coord_abs='sí' expresión='(500,420,.7,.7)' archivo='images/aprende/compl.png'">
+   <param name="G_30" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,160]' texto='fase=[fase]\ntt=[tt]\nenc=[enc]\ncolor=[color]\nelem=[elem]' fijo='sí'">
+   <param name="Animación" value="pausa='10' controles='no' auto='no' inicio='tt=0' hacer='ang=tt^2;tt=tt+1' mientras='animar=1'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

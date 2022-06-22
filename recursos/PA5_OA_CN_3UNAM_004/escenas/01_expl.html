@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Electricidad y magnetismo, campo magnético, espira, bobina, solenoide, imán, brújula, norte, sur, polo, positivo, negativo, electroimán, electroimanes, Faraday, Maxwell, inducción electromagnética, generador, generadores, presa hidroeléctrica, interruptor">
+
+<head>
+	<title>Corrientes por imanes</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='info' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='iman' tipo='gráfico' espacio='E1' color='ff0000ff' color-int='ffff0000' tamaño='100' expresión='(iman.x,iman.y)' imagen='images/vacio.gif'">
+   <param name="C_02" value="id='iman.x' tipo='numérico' región='exterior' espacio='E1' nombre='iman.x' valor='-4.5' incr='0' min='-5' max='-2.5' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_03" value="id='iman.y' tipo='numérico' región='exterior' espacio='E1' nombre='iman.y' valor='-1.19' min='-1.19' max='-1.19' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_04" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1' dibujar-si='fase<3' activo-si='!info'">
+   <param name="C_05" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1' dibujar-si='fase>0' activo-si='!info' pos_mensajes='centro'">
+   <param name="C_06" value="id='girar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Invertir' expresión='(420,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda invertir|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='giro=!giro' dibujar-si='fase>1' activo-si='!info' pos_mensajes='centro'">
+   <param name="C_07" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' dibujar-si='fase=3' activo-si='!info' pos_mensajes='centro'">
+   <param name="C_08" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;giro=0;info=0'">
+   <param name="A_02" value="id='imgFoco' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='imgFoco[0]=&squot;images/explora/foco_on_0.png&squot;;imgFoco[1]=&squot;images/explora/foco_on_1.png&squot;;imgFoco[2]=&squot;images/explora/foco_on_2.png&squot;;imgFoco[3]=&squot;images/explora/foco_on_3.png&squot;;imgFoco[4]=&squot;images/explora/foco_on_4.png&squot;;imgFoco[5]=&squot;images/explora/foco_on_5.png&squot;;'">
+   <param name="A_03" value="id='imgFoco()' algoritmo='sí' algoritmo='sí' hacer='imgFoco=(abs(intensidad2<=0.1))?imgFoco[0]:imgFoco;imgFoco=((abs(intensidad2>=0.05))&(abs(intensidad2<0.15)))?imgFoco[1]:imgFoco;imgFoco=((abs(intensidad2>=0.15))&(abs(intensidad2<0.35)))?imgFoco[2]:imgFoco;imgFoco=((abs(intensidad2>=0.35))&(abs(intensidad2<0.55)))?imgFoco[3]:imgFoco;imgFoco=((abs(intensidad2>=0.55))&(abs(intensidad2<0.75)))?imgFoco[4]:imgFoco;imgFoco=(abs(intensidad2>=0.75))?imgFoco[5]:imgFoco'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='imgFoco();'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='34495e' expresión='[60,16]' texto='Explora lo que le pasa a la bombilla mientras introduces el imán en la bobina.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[40,55]' texto='Nota cómo es la intensidad de la luz del foco a partir de la rapidez con la que introduces y\nextraes el imán en la bobina. ¿Qué pasa si introduces el imán cada vez más rápido?' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=1' expresión='[40,55]' texto='Lo que ocurre en el dispositivo es que cuando el campo magnético del imán pasa cerca de\nlas cargas de la bobina, éstas son movidas debido a la fuerza del campo magnético, ¿pero\nocurre el mismo proceso cuando entra el imán que cuando sale? Introduce y extrae el\nimán lentamente y observa en que dirección se dirige la corriente.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=2' expresión='[40,55]' texto='Como habrás notado, la corriente va en sentido contrario cuando sale el imán de la bobina\na cuando entra en ella. ¿Qué ocurrirá entonces con la corriente si giramos el imán? Oprime\nel botón “Invertir” para cambiar el sentido del imán.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=3' expresión='[40,55]' texto='Ahora que ya viste cómo es la dirección de la corriente veamos una útima cosa, ¿recuerdas\nque cuando las cargas están en movimiento se produce un campo magnético? ¿Cómo será\neste campo? Es decir, ¿en qué dirección se genera? Introduce y extrae el imán para ver qué\ntipo de campo magnético se genera. Recuerda que también puedes girar el imán.' fuente='SansSerif,ITALIC,22' fijo='sí' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_06" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(534,273)' archivo='images/explora/bobina.png'">
+   <param name="G_07" value="espacio='E1' tipo='imagen' dibujar-si='(fase=0)|((giro=0)&(fase>1))' expresión='(iman.x-3.4,iman.y+1.75)' archivo='images/explora/mano.png'">
+   <param name="G_08" value="espacio='E1' tipo='imagen' dibujar-si='fase=1' expresión='(iman.x-4.5,iman.y+2)' archivo='images/explora/mano_campo.png'">
+   <param name="G_09" value="espacio='E1' tipo='imagen' dibujar-si='((giro=1)&(fase>1))' expresión='(iman.x-3.4,iman.y+1.75)' archivo='images/explora/mano_1.png'">
+   <param name="G_10" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(545,295)' archivo='images/explora/bobina_parche.png'">
+   <param name="G_11" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(807,185)' archivo='images/explora/foco_off.png'">
+   <param name="G_12" value="espacio='E1' tipo='imagen' coord_abs='sí' expresión='(807,185)' archivo='imgFoco'">
+   <param name="G_13" value="espacio='E1' tipo='punto' color='blanco' dibujar-si='(((distancia2>0)|((distancia2=0)&(intensidad2>0.05)))&(giro=0))|(((distancia2<0)|((distancia2=0)&(intensidad2<0)))&(giro=1))' coord_abs='sí' expresión='(560+37*(t%9),410)' fijo='sí' tamaño='3'">
+   <param name="G_14" value="espacio='E1' tipo='punto' color='blanco' dibujar-si='((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1))' coord_abs='sí' expresión='(860-37*(t%9),410)' fijo='sí' tamaño='3'">
+   <param name="G_15" value="espacio='E1' tipo='punto' color='blanco' dibujar-si='(((distancia2>0)|((distancia2=0)&(intensidad2>0.05)))&(giro=0))|(((distancia2<0)|((distancia2=0)&(intensidad2<0)))&(giro=1))' coord_abs='sí' expresión='(840-37*(t%6),393)' fijo='sí' tamaño='3'">
+   <param name="G_16" value="espacio='E1' tipo='punto' color='blanco' dibujar-si='((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1))' coord_abs='sí' expresión='(655+37*(t%6),393)' fijo='sí' tamaño='3'">
+   <param name="G_17" value="espacio='E1' tipo='punto' color='blanco' dibujar-si='((s+1)%(5+(t%4))=0)&(distancia2#0)' coord_abs='sí' expresión='(562+(s),295+60*abs(sen(s*pi/9)))' familia='s' s.intervalo='[0,90]' s.pasos='90' fijo='sí' tamaño='3'">
+   <param name="G_18" value="espacio='E1' tipo='flecha' color='ee0022' dibujar-si='(((distancia2>0)&(giro=0))|((distancia2<0)&(giro=1)))&(fase>0)' expresión='(2,-3)(3,-3)' fijo='sí'">
+   <param name="G_19" value="espacio='E1' tipo='flecha' color='azul' dibujar-si='(((distancia2>0)&(giro=0))|(((distancia2<0)&(giro=1))))&(fase>0)' expresión='(6,-1.9)(5,-1.9)' fijo='sí' flecha='azul'">
+   <param name="G_20" value="espacio='E1' tipo='flecha' color='azul' dibujar-si='(((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1)))&(fase>0)' expresión='(3,-3)(2,-3)' fijo='sí' flecha='azul'">
+   <param name="G_21" value="espacio='E1' tipo='flecha' color='ff0009' dibujar-si='(((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1)))&(fase>0)' expresión='(5,-1.9)(6,-1.9)' fijo='sí' flecha='ff0009'">
+   <param name="G_22" value="espacio='E1' tipo='polígono' color='ffff0000' dibujar-si='((((distancia2>0)|((distancia2=0)&(intensidad2>0.05)))&(giro=0))|(((distancia2<0)|((distancia2=0)&(intensidad2<0)))&(giro=1)))&(fase=3)' coord_abs='sí' expresión='(560,310)(610,310)(610,340)(560,340)(560,310)' relleno='2cff0000'">
+   <param name="G_23" value="espacio='E1' tipo='polígono' color='2c0000ff' dibujar-si='((((distancia2>0)|((distancia2=0)&(intensidad2>0.05)))&(giro=0))|(((distancia2<0)|((distancia2=0)&(intensidad2<0)))&(giro=1)))&(fase=3)' coord_abs='sí' expresión='(610,310)(660,310)(660,340)(610,340)(610,310)' relleno='2c0000ff'">
+   <param name="G_24" value="espacio='E1' tipo='polígono' color='2c0000ff' dibujar-si='(((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1)))&(fase=3)' coord_abs='sí' expresión='(560,310)(610,310)(610,340)(560,340)(560,310)' relleno='2c0000ff'">
+   <param name="G_25" value="espacio='E1' tipo='polígono' color='2cff0000' dibujar-si='(((distancia2<0)&(giro=0))|((distancia2>0)&(giro=1)))&(fase=3)' coord_abs='sí' expresión='(610,310)(660,310)(660,340)(610,340)(610,310)' relleno='2cff0000'">
+   <param name="G_26" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_27" value="espacio='info' tipo='texto' color='34495e' expresión='[150,150]' texto='Ahora podemos concluir que un campo magnético en movimiento\nproduce una corriente en un alambre en forma de espiral y la\ndirección de la corriente producida depende de cómo se oriente\nel campo magnético del imán y de cómo se mueva éste.\n\nFinalmente pudimos notar que la corriente de la bobina genera un\ncampo magnético que se orienta dependiendo de cómo esté\nubicado el imán y cómo se mueva (regla de la mano izquierda),\npero lo que siempre sucede es que este campo generado\nsiempre se opone al movimiento del imán.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='920' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_28" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,5]' texto='brujula.x=[brujula.x]  bien=[bien]  intensidad2=[intensidad2]  t=[t]  distancia=[distancia]  direc=[direc]   distancia2=[distancia2]\n\n\n\n\n\nfase=[fase]' fuente='SansSerif,PLAIN,16' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='sí' repetir='sí' inicio='t=0' hacer='var1=(t%4=0)?iman.x:var1;distancia=var1-iman.x;var2=(t%4=1)?iman.x:var2;distancia2=(var2-iman.x)*-10;direc=-sgn(distancia);intensidad2=((distancia>0)&(intensidad2<1.5))?intensidad2+abs(distancia/30):intensidad2;intensidad2=((distancia<0)&(intensidad2<1.5))?intensidad2+abs(distancia/30):intensidad2;intensidad2=((distancia=0)&(intensidad2>0))?intensidad2-.05:intensidad2;intensidad2=((distancia=0)&(intensidad2<0))?intensidad2+.05:intensidad2;t=(t>1000)?10:t;t=t+1' mientras='1'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+p, .vntn, div, ol > li {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0px;
+}
+
+a {
+    outline: none;
+}
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+.oacontext {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+.content {
+	position: relative;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(200, 200, 200, .45);
+    z-index: 55;
+}
+
+.preloader{
+    width: 100px;
+    height: 103px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -52px;
+    background: url('../img/general/preloader.gif');
+    color: transparent;
+
+}
+
+/**palabras**/
+.palabra{
+    position: absolute;
+    padding: 10px 0px;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+    -webkit-transition: top 1.2s, left 1.2s;
+    transition: top 1.2s, left 1.2s;
+    /*-webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg);*/
+    color: #000;
+}
+
+.oraciones{
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    text-align: left !important;
+}
+ol > li{
+        text-align: left !important;
+	list-style-position: inside;
+	background: rgba(255,255,255,.4);
+	/*-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-ms-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+	transform: skew(-20deg);*/
+	margin-bottom: 10px;
+	padding: 3px 10px;
+}
+
+/* Bt instrucciones */
+.js-btn-instr{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 135px;
+    height: 38px !important;
+    background-image: url('img/bt_instrucciones.png');
+    font-size: 20px !important;
+}
+.js-btn-instr:hover,.js-btn-instr:active{
+    background-image: url('img/bt_instrucciones_over.png');
+}
+
+/* Ventanas */
+.vntn {
+   /* border: 1px solid #000;
+    background-color: #FFF;
+    box-shadow: 0 2px 3px #666666;*/
+    padding: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 50;
+}
+
+.vntn--btn-cerrar {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #989694;
+}
+
+.vntn--titulo {
+    text-transform: uppercase;
+    font-size: 22px !important;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vntn--contenido {
+    font-size: 22px !important;
+}
+
+.vntn--contenido > p {
+    padding-bottom: 10px;
+}
+
+
+.vntn-inst {
+	width: 500px !important;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	margin: auto;
+	z-index: 55;
+	background-color: #fff;
+	border: 3px solid #9b40db;
+}
+
+.vntn-inst > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	font-size: 24px;
+}
+.vntn-inst > .vntn--btn-cerrar::before {
+    border-color: #a520db #a520db transparent transparent;
+    border-style: solid;
+    border-width: 35px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.vntn-inst > .vntn--btn-cerrar:hover::before, 
+.vntn-inst > .vntn--btn-cerrar:active::before{
+	border-color: #7e1aa6 #7e1aa6 transparent transparent;
+}
+
+.vntn-comentario {
+	left: 0;
+	right: 0;
+	height: 227px;
+	width: 616px;
+	max-width: 616px;
+	overflow: hidden;
+}
+.vntn-comentario::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    transform: rotate(45deg);
+    background-color: #989694;
+}
+
+.vntn-comentario > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	width: 44px;
+	height: 44px;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+
+.vntn-comentario--buttons {
+	text-align: center;
+}
+
+.vntn-comentario[data-personaje="trini"] {
+	top: 255px;
+	background: url('img/fondo_ventana_btm.png') no-repeat;
+	padding-top: 40px;
+}
+
+.vntn-comentario[data-personaje="lucia"] {
+	top: 85px;
+	background: url('img/fondo_ventana_top.png') no-repeat;
+	padding-top: 10px;
+}
+.vntn[data-personaje="lucia"] .vntn--titulo{
+    padding-top: 15px;
+}
+
+.vntn-comentario[data-personaje="tono"] {
+	top: auto;
+	bottom: 60px;
+	background: url('img/fondo_ventana_top.png') no-repeat;
+	padding-top: 10px;
+}
+
+.vntn-feedback {
+	border: solid 3px black;
+	overflow: hidden;
+	min-width: 420px;
+	min-height: 230px;
+	top:auto;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	z-index: 60;
+	background-color: #fff;
+	font-size: 24px;
+}
+
+.vntn-feedback::before {
+    content: "";
+    height: 100px;
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    transform: rotate(45deg);
+    width: 100px;
+}
+.vntn-feedback[data-correct="true"] {
+	border-color: green;
+}
+.vntn-feedback[data-correct="true"]::before {
+	background-color: green;
+}
+.vntn-feedback[data-correct="false"] {
+	border-color: red;
+}
+.vntn-feedback[data-correct="false"]::before {
+	background-color: red;
+}
+.vntn-feedback > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	width: 44px;
+	height: 44px;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+.vntn-feedback > .vntn--contenido {
+	padding: 20px 10px;
+}
+
+.btn{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+
+.btn.btn-otra, .btn.btn-reini,.btn.btn-todas{
+    position: absolute;
+    width: 140px;
+    background-color: #0099cc;
+    border: none;
+    margin-right: 20px;
+    margin-top: 15px;
+    box-shadow: -4px 4px 0 #b8bfc0;
+}
+.btn.btn-otra{
+    right: 50%;
+    margin-right: -70px;
+    top: 430px;
+}
+.btn.btn-todas{
+    right: 50%;
+    margin-right: -70px;
+    top: 470px;
+}
+.btn.btn-reini{
+    right: -8px;
+    top: 470px;
+}
+
+.btn.btn-otra:hover,.btn.btn-otra:active,
+.btn.btn-reini:hover,.btn.btn-reini:active,
+.btn.btn-todas:hover,.btn.btn-todas:active{
+    box-shadow: -4px 4px 0 #5fb9cc;
+}
+
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+.esencial.e-correcto{
+    background-color: #4be1a6;
+}
+.desechable.e-correcto{
+    background-color: #c3c3c3;
+    color: #737373;
+}
+.e-incorrecto{
+    background-color: #f2a6a2;
+}
+.e-oculto {
+	display: none;
+}
+
+.e-activo {
+	cursor: pointer;
+}
+.e-inactivo {
+	cursor: default;
+	opacity: 0.4;
+}
+.e-inactivo:hover {
+    font-weight: normal !important;
+    font-size: 25px !important;
+}
+.e-seleccionable{
+    cursor: pointer;
+}
+.e-seleccionable:hover{
+    background-color: #fff;
+}
+
+.e-seleccionado {
+	
+}
+.e-marcado {
+	
+}
+
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+.solicitudes.enOrden{
+    display: none;
+}
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

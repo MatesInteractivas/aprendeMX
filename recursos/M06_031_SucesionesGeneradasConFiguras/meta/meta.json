@@ -1,0 +1,32 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "sucesión", 
+    "figura geométrica", 
+    "patrón", 
+    "regla de formación", 
+    "progresión geométrica", 
+    "progresión aritmética", 
+    "sucesión geométrica", 
+    "sucesión aritmética."
+  ], 
+  "descripcion": "Si se da una regla que permite construir un figura geométrica a partir de otra, y luego se aplica la misma regla a la segunda figura y se sigue haciendo lo mismo, se genera lo que se llama una sucesión de figuras geométricas. Los elementos de esas figuras pueden ir aumentando su número en una progresión aritmética, en una progresión geométrica o de otra manera. En esta unidad conocerás varias sucesiones de éstas y aprenderás a calcular cuántos elementos tiene cada término de la sucesión.",
+  "resena": "Sucesiones de figuras geométricas. Sus patrones de construcción y el cálculo de los elementos dada una generación.",
+  "titulo": "Sucesiones generadas con figuras", 
+  "id": "PA6_OA_MA_3UNAM_031"
+}

@@ -1,0 +1,34 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "desarrollo plano", 
+    "cuerpo geométrico", 
+    "configuración geométrica", 
+    "cubo", 
+    "hexaedro", 
+    "poliedro", 
+    "configuraciones equivalentes", 
+    "aristas", 
+    "vértices", 
+    "caras"
+  ], 
+  "descripcion": "En esta unidad construirás todos los posibles desarrollos planos de un cubo, podrás probar diferentes desarrollos planos y comprobar si con ellos se puede construir un cubo.",
+  "resena": "Distintos recortes planos que al doblarse generan un cubo.",
+  "titulo": "Desarrollos planos", 
+  "id": "PA6_OA_MA_3UNAM_008"
+}

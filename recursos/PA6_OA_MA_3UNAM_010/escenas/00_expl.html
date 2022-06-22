@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Área, figuras planas, descomposición de figuras, armado y desarmado de figuras, igualdad de áreas, descomposición y composición de figuras">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' O.x='-50%' O.y='50%' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0'">
+   <param name="C_02" value="id='__SEPARADOR__' tipo='numérico' región='interior' espacio='E2' nombre='__SEPARADOR__' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='p_1' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(193,370)' fijo='sí'">
+   <param name="C_04" value="id='p_2' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(119,295)' fijo='sí'">
+   <param name="C_05" value="id='p_3' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(305,333)' fijo='sí'">
+   <param name="C_06" value="id='p_4' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(237,295)' fijo='sí'">
+   <param name="C_07" value="id='p_5' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(119,177)' fijo='sí'">
+   <param name="C_08" value="id='p_6' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(193,221)' fijo='sí'">
+   <param name="C_09" value="id='p_7' tipo='gráfico' espacio='E2' color='ffffffff' color-int='cc000000' tamaño='14' expresión='(292,196)' fijo='sí'">
+   <param name="C_10" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Regresar piezas' expresión='(25,E2._h-56-5,180,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nreinit()'">
+   <param name="C_11" value="id='rotDER' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(215,E2._h-56-10,55,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='images/rot_der.png' acción='calcular' parámetro='doPlay(0)\naux=(activo!=-1)?rotar(-1):0'">
+   <param name="C_12" value="id='rotIZQ' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(280,E2._h-56-10,55,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='images/rot_izq.png' acción='calcular' parámetro='doPlay(0)\naux=(activo!=-1)?rotar(1):0'">
+   <param name="C_13" value="id='reflejo' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(345,E2._h-56-10,55,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='images/reflejar.png' acción='calcular' parámetro='doPlay(0)\naux=(activo!=-1)?reflejar():0'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_04" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_05" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_06" value="id='Print(a)' algoritmo='sí' algoritmo='sí' Local='str' hacer='str=&squot;&squot;+a;_Print_(str)'">
+   <param name="A_07" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_08" value="id='Inicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='activo=-1;initRotRefl()'">
+   <param name="A_09" value="id='Calculos()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='activo=(p_1.activo)?0:activo;activo=(p_2.activo)?1:activo;activo=(p_3.activo)?2:activo;activo=(p_4.activo)?3:activo;activo=(p_5.activo)?4:activo;activo=(p_6.activo)?5:activo;activo=(p_7.activo)?6:activo;;ajustaPosiciones();'">
+   <param name="A_10" value="id='__SEPARADOR__' expresión='0'">
+   <param name="A_11" value="id='ROT' vector='sí' evaluar='una-sola-vez' tamaño='7'">
+   <param name="A_12" value="id='REFL' vector='sí' evaluar='una-sola-vez' tamaño='7'">
+   <param name="A_13" value="id='rotar(i)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='ROT[activo]=ROT[activo]+i*5'">
+   <param name="A_14" value="id='reflejar()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='REFL[activo]=REFL[activo]*-1'">
+   <param name="A_15" value="id='ajustaPosiciones()' algoritmo='sí' expresión='0' algoritmo='sí' Local='min_x,max_x,max_y,min_y' inicio='min_x=20;max_x=1000;min_y=20;max_y=492' hacer='p_1.x=min(max(min_x,p_1.x),max_x);p_1.y=min(max(min_y,p_1.y),max_y);p_2.x=min(max(min_x,p_2.x),max_x);p_2.y=min(max(min_y,p_2.y),max_y);p_3.x=min(max(min_x,p_3.x),max_x);p_3.y=min(max(min_y,p_3.y),max_y);p_4.x=min(max(min_x,p_4.x),max_x);p_4.y=min(max(min_y,p_4.y),max_y);p_5.x=min(max(min_x,p_5.x),max_x);p_5.y=min(max(min_y,p_5.y),max_y);p_6.x=min(max(min_x,p_6.x),max_x);p_6.y=min(max(min_y,p_6.y),max_y);p_7.x=min(max(min_x,p_7.x),max_x);p_7.y=min(max(min_y,p_7.y),max_y)'">
+   <param name="A_16" value="id='initRotRefl()' expresión='0' algoritmo='sí' Local='i' inicio='i=0' hacer='ROT[i]=0;REFL[i]=1;;i=i+1' mientras='i<ROT.long'">
+   <param name="A_17" value="id='reinit()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='activo=-1;;p_1.x=193;p_1.y=370;p_2.x=119;p_2.y=295;p_3.x=305;p_3.y=333;p_4.x=237;p_4.y=295;p_5.x=119;p_5.y=177;p_6.x=193;p_6.y=221;p_7.x=292;p_7.y=196;;initRotRefl()'">
+   <param name="A_18" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Observa las figuras que puedes construir y piensa en su área.&squot;)' hacer='Init();Inicio();'">
+   <param name="A_19" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+   
+   <param name="A_21" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,10,E2._w-20,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='(PLANTILLA)'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='negro' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==MENU)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)-brdw,CP(ctw,s)+2*brdw,t),botY(rd,CP(cty,s)-brdw,CP(cth,s)+2*brdw,t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)+0.70*(!CP(active,s)),CP(active,s)+0.75*(!CP(active,s)) -(s==editing)*0.8 -(CP(selected,s)*0.8),0.2*CP(active,s)+0.80*(!CP(active,s)),0.0)' ancho='0' info='(PLANTILLA) borde exterior'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)!=SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_04" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(CTRTXT.rojo,CTRTXT.verde,CTRTXT.azul,00)' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;PLAIN&squot;,21))/2,CT[s,cty]+(CT[s,cth]-24)/2]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,PLAIN,21' fijo='sí' ancho='380' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_06" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='blanco' expresión='[20,20]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='173320' info='(AUTOR) texto sobre fondo verde'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='blanco' expresión='[20,20]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='8a581d' info='(AUTOR) texto sobre fondo cafe'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' expresión='(p_1.x,p_1.y,REFL[0],1)' archivo='images/tangram/pieza_1.png' rotini='ROT[0]'">
+   <param name="G_10" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==0' expresión='(p_1.x,p_1.y)' fijo='sí' tamaño='16'">
+   <param name="G_11" value="espacio='E2' tipo='imagen' expresión='(p_2.x,p_2.y,REFL[1],1)' archivo='images/tangram/pieza_2.png' rotini='ROT[1]'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==1' expresión='(p_2.x,p_2.y)' fijo='sí' tamaño='16'">
+   <param name="G_13" value="espacio='E2' tipo='imagen' expresión='(p_3.x,p_3.y,REFL[2],1)' archivo='images/tangram/pieza_3.png' rotini='ROT[2]'">
+   <param name="G_14" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==2' expresión='(p_3.x,p_3.y)' fijo='sí' tamaño='16'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' expresión='(p_4.x,p_4.y,REFL[3],1)' archivo='images/tangram/pieza_4.png' rotini='ROT[3]'">
+   <param name="G_16" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==3' expresión='(p_4.x,p_4.y)' fijo='sí' tamaño='16'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' expresión='(p_5.x,p_5.y,REFL[4],1)' archivo='images/tangram/pieza_5.png' rotini='ROT[4]'">
+   <param name="G_18" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==4' expresión='(p_5.x,p_5.y)' fijo='sí' tamaño='15'">
+   <param name="G_19" value="espacio='E2' tipo='imagen' expresión='(p_6.x,p_6.y,REFL[5],1)' archivo='images/tangram/pieza_6.png' rotini='ROT[5]'">
+   <param name="G_20" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==5' expresión='(p_6.x,p_6.y)' fijo='sí' tamaño='16'">
+   <param name="G_21" value="espacio='E2' tipo='imagen' expresión='(p_7.x,p_7.y,REFL[6],1)' archivo='images/tangram/pieza_7.png' rotini='ROT[6]'">
+   <param name="G_22" value="espacio='E2' tipo='punto' color='naranja' dibujar-si='activo==6' expresión='(p_7.x,p_7.y)' fijo='sí' tamaño='16'">
+   <param name="G_23" value="espacio='E2' tipo='texto' color='6c4517' dibujar-si='0' expresión='[620,20]' texto='[p_1.x] [p_1.y]\n[p_2.x] [p_2.y]\n[p_3.x] [p_3.y]\n[p_4.x] [p_4.y]\n[p_5.x] [p_5.y]\n[p_6.x] [p_6.y]\n[p_7.x] [p_7.y]' fuente='Monospaced,PLAIN,19' fijo='sí' info='(AUTOR) texto sobre fondo blanco'">
+   <param name="G_24" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(0,0)' archivo='images/marco_izquierdo.png'">
+   <param name="G_25" value="espacio='E2' tipo='imagen' coord_abs='sí' expresión='(1014,0)' archivo='images/marco_derecho.png'">
+</ajs>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, media, promediar, valor promedio, población, conjunto de valores, conjunto de medidas.">
+
+<head>
+
+	<title>La media o valor promedio como dato representativo</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='50' O.x='-430' O.y='80' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='botonStart' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Iniciar' expresión='((E2._w-200)/2,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeClaro iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='SolveOneStepFirst()\ndoPlay(0)' dibujar-si='0&&(startedSolving==0)&&(CheckAverage()==0)'">
+   <param name="C_02" value="id='otroEjemplo' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro ejemplo' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Ej=(Ej+1)%numEjercicios\n_Eval_(&squot;ejercicio&squot;+Ej+&squot;()&squot;)\ndoPlay(0)\n' activo-si='(startedSolving==0)&&(resumeSolving==0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_02" value="id='LABEL' vector='sí' evaluar='una-sola-vez' tamaño='10'">
+   <param name="A_03" value="id='COLORS' vector='sí' evaluar='una-sola-vez' tamaño='7' expresión='COLORS[0]=&squot;1abc9b&squot;;COLORS[1]=&squot;2ecc71&squot;;COLORS[2]=&squot;3498db&squot;;COLORS[3]=&squot;9a59b6&squot;;COLORS[4]=&squot;f2c40f&squot;;COLORS[5]=&squot;e67e22&squot;;COLORS[6]=&squot;e74c3c&squot;;'">
+   <param name="A_04" value="id='FRUIT_NAME' vector='sí' evaluar='una-sola-vez' expresión='FRUIT_NAME[0]=&squot;manzana&squot;;FRUIT_NAME[1]=&squot;plátano&squot;;FRUIT_NAME[2]=&squot;naranja&squot;'">
+   <param name="A_05" value="id='IMGS' vector='sí' evaluar='una-sola-vez' tamaño='10' expresión='IMGS[0]=&squot;images/manzanas.png&squot;;IMGS[1]=&squot;images/platanos.png&squot;;IMGS[2]=&squot;images/naranjas.png&squot;;IMGS[3]=&squot;&squot;;IMGS[4]=&squot;&squot;;IMGS[5]=&squot;&squot;;IMGS[6]=&squot;&squot;;IMGS[7]=&squot;&squot;;IMGS[8]=&squot;&squot;;IMGS[9]=&squot;&squot;'">
+   <param name="A_06" value="id='COLUMNS' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='9'">
+   <param name="A_07" value="id='columnsShaded' vector='sí' evaluar='una-sola-vez' tamaño='10'">
+   <param name="A_08" value="id='mouseDragged' expresión='0'">
+   <param name="A_09" value="id='columns' vector='sí' evaluar='una-sola-vez' tamaño='10'">
+   <param name="A_10" value="id='GetColumn()' algoritmo='sí' expresión='x' algoritmo='sí' Local='x' inicio='x=-1;xPos=E2.mouse_x;i=0' hacer='x=(((i*(2+spaceCols))<xPos)&&(xPos<(2+i*(2+spaceCols))))?i:x;;i=i+1;;' mientras='i<10'">
+   <param name="A_11" value="id='SelectPiece()' algoritmo='sí' algoritmo='sí' Local='valid' hacer='column=GetColumn();valid=(Valid())?(columns[column]>0):0;aux=(valid)?GrabPiece():0;'">
+   <param name="A_12" value="id='DropPiece()' algoritmo='sí' algoritmo='sí' Local='valid' hacer='column=GetColumn();valid=((Valid())&&(columns[column]<MAXHEIGHT));index=(valid==1)?column:selected;wheretoput=GetHeightColumn(index);;columns[index]=(grabbingPiece==1)?columns[index]+1:columns[index];COLUMNS[index,wheretoput]=(grabbingPiece==1)?pieceIdx:-1;;grabbingPiece=0;;done=CheckAverage();break=done;numberMode=(done==1)?1:0;;'">
+   <param name="A_13" value="id='GrabPiece()' algoritmo='sí' algoritmo='sí' hacer='column=GetColumn();;grabbingPiece=(Valid())?1:0;selected=(grabbingPiece==1)?column:-1;;heightcol=GetHeightColumn(column);;pieceIdx=(grabbingPiece==1)?COLUMNS[column,heightcol-1]:-1;;columns[column]=(grabbingPiece==1)?columns[column]-1:columns[column];COLUMNS[column,heightcol-1]=(grabbingPiece==1)?-1:COLUMNS[column,heightcol-1];;'">
+   <param name="A_14" value="id='Valid()' algoritmo='sí' expresión='validCursor' algoritmo='sí' hacer='column=GetColumn();validCursor=((column<0)||(column>=NUMCOLUMNS))?0:1;;validCursor=(validCursor)&&(E2.mouse_y>=0)&&(E2.mouse_y<=8);'">
+   <param name="A_15" value="id='AssignValuesToColumns()' algoritmo='sí' algoritmo='sí' Local='owned' inicio='counter=0' hacer='columns[counter]=(counter<NUMCOLUMNS)?AVERAGE:0;columnsShaded[counter]=(counter<NUMCOLUMNS)?AVERAGE:0;;counter=counter+1;' mientras='counter<columns.long'">
+   <param name="A_16" value="id='Init()' algoritmo='sí' algoritmo='sí' inicio='fruitName=ent(rnd*3);NUMCOLUMNS=6+ent(rnd*5);NUMCOLUMNS=7;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;counter=0;' hacer='source=ent(rnd*NUMCOLUMNS);target=ent(rnd*NUMCOLUMNS);numcols=0;valid=(columns[source]<=0)?0:1;valid=(columns[target]>=MAXHEIGHT)?0:valid;inccols=0;animcols=1;columns[source]=(valid)?columns[source]-1:columns[source];columns[target]=(valid)?columns[target]+1:columns[target];;columnsShaded[source]=columns[source];columnsShaded[target]=columns[target];;widthColumns=((60*(NUMCOLUMNS+1))+(6*30));;startX=E2._w/2-widthColumns/2;;_E2.Ox=(E2._w/2-startX)*-1;;numberMode=0;counter=counter+1;;divisor=&squot;&squot;;answer=&squot;&squot;;;verified=0;InitAnim();;;' mientras='counter<times'">
+   <param name="A_17" value="id='Init2()' algoritmo='sí' algoritmo='sí' hacer='ClearColumn(0);ClearColumn(1);ClearColumn(2);ClearColumn(3);ClearColumn(4);ClearColumn(5);ClearColumn(6);ClearColumn(7);ClearColumn(8);ClearColumn(9);;whatev=(columns[0]>0)?FillColumn(0,columns[0]):0;whatev=(columns[1]>0)?FillColumn(1,columns[1]):0;whatev=(columns[2]>0)?FillColumn(2,columns[2]):0;whatev=(columns[3]>0)?FillColumn(3,columns[3]):0;whatev=(columns[4]>0)?FillColumn(4,columns[4]):0;whatev=(columns[5]>0)?FillColumn(5,columns[5]):0;whatev=(columns[6]>0)?FillColumn(6,columns[6]):0;whatev=(columns[7]>0)?FillColumn(7,columns[7]):0;whatev=(columns[8]>0)?FillColumn(8,columns[8]):0;whatev=(columns[9]>0)?FillColumn(9,columns[9]):0;'">
+   <param name="A_18" value="id='CheckAverage()' algoritmo='sí' expresión='res' algoritmo='sí' Local='res' inicio='counter=0' hacer='res=(columns[counter]>AVERAGE)?0:1;;counter=(res==0)?NUMCOLUMNS:counter+1;numberMode=res;;;' mientras='counter<NUMCOLUMNS'">
+   <param name="A_19" value="id='GetColumnStart()' algoritmo='sí' expresión='y' algoritmo='sí' Local='x,y' inicio='y = -1' hacer='x=GetColumn();;y=(x==0)?0:-1;y=(x==1)?2:y;y=(x==2)?4:y;y=(x==3)?6:y;y=(x==4)?8:y;y=(x==5)?10:y;y=(x==6)?12:y;y=(x==7)?14:y;y=(x==8)?16:y;y=(x==9)?18:y;;;'">
+   <param name="A_20" value="id='GetColumnToGrab()' algoritmo='sí' expresión='x' algoritmo='sí' Local='x,counter' inicio='x=-1;counter=0' hacer='valid=(columns[counter]>AVERAGE)?1:0;;x=(valid==1)?counter:x;;counter=(valid==1)?NUMCOLUMNS:counter+1;' mientras='counter<NUMCOLUMNS'">
+   <param name="A_21" value="id='GetColumnToDrop()' algoritmo='sí' expresión='x' algoritmo='sí' Local='x,counter' inicio='x=-1;counter=0' hacer='valid=(columns[counter]<AVERAGE)?1:0;;x=(valid==1)?counter:x;;counter=(valid==1)?NUMCOLUMNS:counter+1;' mientras='counter<NUMCOLUMNS'">
+   <param name="A_22" value="id='SolveOneStep()' algoritmo='sí' algoritmo='sí' hacer='indexMoveSource=GetColumnToGrab();indexMoveTarget=GetColumnToDrop();	;valid=(indexMoveSource==-1)?0:1;valid=(indexMoveTarget==-1)?0:valid;;whatev=valid?InitAnim():0;heightcol=(valid)?(GetHeightColumn(indexMoveSource)-1):-1;;resumeAnimating=(valid)?1:0;break=(valid)?0:1;indexMoveSource=(valid)?indexMoveSource:0;indexMoveTarget=(valid)?indexMoveTarget:0;pieceIdx=(valid)?COLUMNS[indexMoveSource,heightcol]:-1;columns[indexMoveSource]=(valid)?columns[indexMoveSource]-1:columns[indexMoveSource];;Trace_(&squot;pieceIdx&squot;+pieceIdx);;'">
+   <param name="A_23" value="id='Lerp(minV,maxV,time)' algoritmo='sí' expresión='return' algoritmo='sí' Local='return' hacer='return=minV+((maxV-minV)*time)'">
+   <param name="A_24" value="id='InitAnim()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='animPosX=indexMoveSource;animPosY=columns[indexMoveSource];endPosX=indexMoveTarget;endPosY=columns[indexMoveTarget];TIMER=0;break=0;resumeAnimating=0'">
+   <param name="A_25" value="id='SolveOneStepFirst()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='startedSolving=1;;indexMoveSource=GetColumnToGrab();indexMoveTarget=GetColumnToDrop();	;valid=(indexMoveSource==-1)?0:1;valid=(indexMoveTarget==-1)?0:valid;;heightcol=GetHeightColumn(indexMoveSource)-1;;pieceIdx=(valid==1)?COLUMNS[indexMoveSource,heightcol]:pieceIdx;Trace_(&squot;pieceIdx&squot;+pieceIdx);;;startAnimating=(valid)?1:0;indexMoveSource=(valid)?indexMoveSource:0;indexMoveTarget=(valid)?indexMoveTarget:0;;columns[indexMoveSource]=(valid)?columns[indexMoveSource]-1:columns[indexMoveSource];COLUMNS[indexMoveSource,heightcol]=(valid)?-1:COLUMNS[indexMoveSource,heightcol];;;'">
+   <param name="A_26" value="id='WidthText(string)' algoritmo='sí' expresión='_AnchoDeCadena_(string,&squot;SansSerif&squot;,&squot;BOLD&squot;,21)' algoritmo='sí'">
+   <param name="A_27" value="id='GetColumnStart2(x)' algoritmo='sí' expresión='(x*(2+spaceCols))' algoritmo='sí'">
+   <param name="A_28" value="id='AnimateMovement()' algoritmo='sí' algoritmo='sí' hacer='animPosX=Lerp(GetColumnStart2(indexMoveSource),GetColumnStart2(indexMoveTarget),TIMER);animPosY=Lerp(columns[indexMoveSource]+1,columns[indexMoveTarget]+1,TIMER);movement=indexMoveSource>indexMoveTarget?indexMoveSource-indexMoveTarget:indexMoveTarget-indexMoveSource;movement=Lerp(0.10,0.010,movement/10);;TIMER=TIMER+movement;break=(TIMER>=1)?1:0;startAnimating=(break)?0:1;resumeSolving=(break)?1:0;;heightcol=GetHeightColumn(indexMoveTarget);;columns[indexMoveTarget]=(break)?columns[indexMoveTarget]+1:columns[indexMoveTarget];COLUMNS[indexMoveTarget,heightcol]=(break)?pieceIdx:-1;;;'">
+   <param name="A_29" value="id='AnimateColumns()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='inccols=inccols+0.2;numcols=ent(inccols/2);animcols=(inccols/2>=(NUMCOLUMNS+1))?1:0;;cond=(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1);startedSolving=!cond;resumeSolving=!cond;'">
+   <param name="A_30" value="id='ClearColumn(x)' algoritmo='sí' algoritmo='sí' inicio='counter=0' hacer='COLUMNS[x,counter]=-1;counter=counter+1;;' mientras='counter<MAXHEIGHT'">
+   <param name="A_31" value="id='FillColumn(x,val)' algoritmo='sí' algoritmo='sí' inicio='counter=0' hacer='COLUMNS[x,counter]=x;counter=counter+1;;;' mientras='counter<val'">
+   <param name="A_32" value="id='GetHeightColumn(x)' algoritmo='sí' expresión='columns[x]' algoritmo='sí' hacer=';'">
+   <param name="A_33" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_34" value="id='DIAS' vector='sí' evaluar='una-sola-vez' tamaño='7' expresión='DIAS[0]=&squot;Lunes&squot;;DIAS[1]=&squot;Martes&squot;;DIAS[2]=&squot;Miércoles&squot;;DIAS[3]=&squot;Jueves&squot;;DIAS[4]=&squot;Viernes&squot;;DIAS[5]=&squot;Sábado&squot;;DIAS[6]=&squot;Domingo&squot;;'">
+   <param name="A_35" value="id='NOMBRES' vector='sí' evaluar='una-sola-vez' tamaño='13' expresión='NOMBRES[0]=&squot;Antonio&squot;;NOMBRES[1]=&squot;Magda&squot;;NOMBRES[2]=&squot;Luis&squot;;NOMBRES[3]=&squot;Rosario&squot;;NOMBRES[4]=&squot;Vanesa&squot;;NOMBRES[5]=&squot;Natalia&squot;;NOMBRES[6]=&squot;Carlos&squot;;NOMBRES[7]=&squot;María&squot;;NOMBRES[8]=&squot;Juan&squot;;NOMBRES[9]=&squot;Lupe&squot;;NOMBRES[10]=&squot;Chayo&squot;;NOMBRES[11]=&squot;Elena&squot;;NOMBRES[12]=&squot;Sofía&squot;;'">
+   <param name="A_36" value="id='permutaNombres()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i,rndInd,tmpVal' inicio='i=0;l=NOMBRES.long' hacer='rndInd=ent(rnd*l);;tmpVal=NOMBRES[i];NOMBRES[i]=NOMBRES[rndInd];NOMBRES[rndInd]=tmpVal;;i=i+1' mientras='i<l'">
+   <param name="A_37" value="id='setLabel(which)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i,l,str' inicio='i=0;l=min(_Eval_(which+&squot;.long&squot;),LABEL.long)' hacer='str=&squot;LABEL[&squot;+i+&squot;]:=&squot;+which+&squot;[&squot;+i+&squot;]&squot;;_Eval_(str);;i=i+1' mientras='i<l'">
+   <param name="A_38" value="id='newExercise()' algoritmo='sí' algoritmo='sí' inicio='counter=0' hacer='source=ent(rnd*NUMCOLUMNS);target=ent(rnd*NUMCOLUMNS);numcols=0;valid=(columns[source]<=0)?0:1;valid=(columns[target]>=MAXHEIGHT)?0:valid;inccols=0;animcols=1;columns[source]=(valid)?columns[source]-1:columns[source];columns[target]=(valid)?columns[target]+1:columns[target];;columnsShaded[source]=columns[source];columnsShaded[target]=columns[target];;widthColumns=((60*(NUMCOLUMNS+1))+(6*30));;startX=E2._w/2-widthColumns/2;;_E2.Ox=(E2._w/2-startX)*-1;;numberMode=0;counter=counter+1;;divisor=&squot;&squot;;answer=&squot;&squot;;;verified=0;InitAnim();;;' mientras='counter<times'">
+   <param name="A_39" value="id='ejercicio0()' algoritmo='sí' algoritmo='sí' hacer='setLabel(&squot;DIAS&squot;);enunciado=&squot;En la gráfica se muestra el número de páginas leídas durante la semana. ¿Cuál es el promedio de las páginas leídas por día?&squot;;;NUMCOLUMNS=7;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma del número de páginas leídas entre los días de la semana.&squot;;;newExercise();;Init2()'">
+   <param name="A_40" value="id='ejercicio1()' algoritmo='sí' algoritmo='sí' hacer='setLabel(&squot;DIAS&squot;);enunciado=&squot;En la gráfica se presenta el número de niños que ha sacado algún libro de la biblioteca cada día de la semana.&squot;;;NUMCOLUMNS=7;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma de niños que han sacado un libro entre los días de la semana.&squot;;;newExercise();;Init2()'">
+   <param name="A_41" value="id='ejercicio2()' algoritmo='sí' algoritmo='sí' hacer='setLabel(&squot;DIAS&squot;);enunciado=&squot;¿Cuál fue el promedio de llamadas por día durante la semana?&squot;;;NUMCOLUMNS=7;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma de llamadas entre los días de la semana.&squot;;;newExercise();;Init2()'">
+   <param name="A_42" value="id='ejercicio3()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;¿Cuál es el promedio de libros leídos en el club de lectura de Luis?&squot;;;NUMCOLUMNS=5;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1.5;;retroMedia=&squot;La media se puede obtener dividiendo la suma de libros leídos entre las personas en el club de lectura.&squot;;;newExercise();;Init2()'">
+   <param name="A_43" value="id='ejercicio4()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;En promedio cuántos hermanos tienen los amigos de Raúl.&squot;;;NUMCOLUMNS=6;AVERAGE=1+ent(rnd*3);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1.25;;retroMedia=&squot;La media se puede obtener dividiendo la suma de hermanos entre el número de amigos de Raúl.&squot;;;newExercise();;Init2()'">
+   <param name="A_44" value="id='ejercicio5()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;¿Cuál fue el promedio de goles anotados en los partidos del torneo de la Escuela?&squot;;;NUMCOLUMNS=5+ent(rnd*3);AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma de goles entre el número de niños que anotarón.&squot;;;newExercise();;Init2()'">
+   <param name="A_45" value="id='ejercicio6()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;¿Cuál fue el promedio de canastas anotadas en el torneo de basquetbol?&squot;;;NUMCOLUMNS=5+ent(rnd*3);AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma de canastas entre el número de niños que anotarón.&squot;;;newExercise();;Init2()'">
+   <param name="A_46" value="id='ejercicio7()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;¿Cuál fue el promedio de la longitud de salto de 5 compañeros?&squot;;;NUMCOLUMNS=5;AVERAGE=2+ent(rnd*5);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1.5;;retroMedia=&squot;La media se puede obtener dividiendo la suma de las longitudes de salto entre el número de niños.&squot;;;newExercise();;Init2()'">
+   <param name="A_47" value="id='ejercicio8()' algoritmo='sí' algoritmo='sí' hacer='permutaNombres();setLabel(&squot;NOMBRES&squot;);enunciado=&squot;¿En promedio cuántas latas se reunieron para reciclar en el grupo de Sofia?&squot;;;NUMCOLUMNS=7;AVERAGE=1+ent(rnd*6);TOTALPOINTS=AVERAGE*NUMCOLUMNS;AssignValuesToColumns();times=8+rnd*8;;spaceCols=1;;retroMedia=&squot;La media se puede obtener dividiendo la suma de las latas entre el número de niños.&squot;;;newExercise();;Init2()'">
+   <param name="A_48" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora cómo obtener la media aritmética o promedio.&squot;' hacer='WIDTHIMG=50;HEIGHTIMG=30;MAXHEIGHT=9;spaceCols=1;;bPanel.x=20;bPanel.y=56;bPanel.w=983;bPanel.h=433;;E2.Oy=120;E2.escala=30;val1=&squot;test&squot;;posTextSuperior=115;;Ej=0;numEjercicios=9;ejercicio0();;;'">
+   <param name="A_49" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_50" value="id='mousePressed' evento='sí' condición='(E2.mouse_pressed==1)&&(numberMode==0)' acción='calcular' parámetro='SelectPiece()' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_51" value="id='mouseReleased' evento='sí' condición='E2.mouse_pressed==0' acción='calcular' parámetro='DropPiece()' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_52" value="id='BeginDraw' evento='sí' condición='startAnimating==1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_53" value="id='ResumeDraw' evento='sí' condición='resumeAnimating==1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_54" value="id='ResumeDrawReset' evento='sí' condición='resumeAnimating==1' acción='calcular' parámetro='resumeAnimating=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_55" value="id='ContinueSolving' evento='sí' condición='resumeSolving==1' acción='calcular' parámetro='SolveOneStep()' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_56" value="id='e9' evento='sí' condición='(CheckAverage()==1)&&(break==1)&&(numberMode==1)' acción='calcular' parámetro='startedSolving=0' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_57" value="id='e10' evento='sí' condición='done' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_02" value="espacio='E2' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='bPanel'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='34495e' expresión='[34,64]' texto='[enunciado]' fuente='SansSerif,PLAIN,20' fijo='no' ancho='E2._w-68'">
+   <param name="G_04" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_05" value="espacio='E2' tipo='polígono' color='bdc3c7' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2<=NUMCOLUMNS+1)' expresión='(s*(2+spaceCols),0)(s*(2+spaceCols)+2,0)(s*(2+spaceCols)+2,MAXHEIGHT)(s*(2+spaceCols),MAXHEIGHT)(s*(2+spaceCols),0)' familia='s' s.intervalo='[0,numcols-1]' s.pasos='numcols-1' relleno='bdc3c7' ancho='10' info='Rectangulo de la columna'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='c0392b' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(s+1<=inccols/2)&&(inccols/2<=NUMCOLUMNS+1)' expresión='[E2.Ox+E2._w/2+(1.5+(s*(2+spaceCols)))*E2.escala-E2.escala/2,155,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-1]' s.pasos='NUMCOLUMNS-1' texto='[s+1]' fuente='SansSerif,BOLD,21' fijo='no' info='Contador de columnas'">
+   <param name="G_07" value="espacio='E2' tipo='polígono' color='34495e' dibujar-si='(s%COLUMNS.filas)<columns[ent(s/COLUMNS.filas)]' expresión='(ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas))(2+ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas))(2+ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas)+1)(ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas)+1)(ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas))' familia='s' s.intervalo='[0,COLUMNS.filas*COLUMNS.columnas-1]' s.pasos='COLUMNS.filas*COLUMNS.columnas-1' relleno='(_Rojo_(COLORS[COLUMNS[ent(s/COLUMNS.filas),(s%COLUMNS.filas)]]),_Verde_(COLORS[COLUMNS[ent(s/COLUMNS.filas),(s%COLUMNS.filas)]]),_Azul_(COLORS[COLUMNS[ent(s/COLUMNS.filas),(s%COLUMNS.filas)]]),00)' ancho='2' info='Fondo de la imagen'">
+   <param name="G_08" value="espacio='E2' tipo='imagen' dibujar-si='0&((s%COLUMNS.filas)<columns[ent(s/COLUMNS.filas)])' expresión='(1+ent(s/COLUMNS.filas)*(2+spaceCols),(s%COLUMNS.filas)+0.5,1,1)' familia='s' s.intervalo='[0,COLUMNS.filas*COLUMNS.columnas-1]' s.pasos='COLUMNS.filas*COLUMNS.columnas-1' archivo='[IMGS[fruitName]]' info='Imagenes de los objetos '">
+   <param name="G_09" value="espacio='E2' tipo='polígono' color='34495e' dibujar-si='grabbingPiece' expresión='(E2.mouse_x-1,E2.mouse_y-0.5)(E2.mouse_x+1,E2.mouse_y-0.5)(E2.mouse_x+1,E2.mouse_y+0.5)(E2.mouse_x-1,E2.mouse_y+0.5)(E2.mouse_x-1,E2.mouse_y-0.5)' relleno='(_Rojo_(COLORS[pieceIdx]),_Verde_(COLORS[pieceIdx]),_Azul_(COLORS[pieceIdx]),00)' ancho='2' info='Fondo de la imagen que se mueve '">
+   <param name="G_10" value="espacio='E2' tipo='imagen' dibujar-si='0&&grabbingPiece' expresión='(E2.mouse_x-0.5,E2.mouse_y+0.5)' archivo='[IMGS[fruitName]]' info='Imagen que se mueve con el mouse'">
+   <param name="G_11" value="espacio='E2' tipo='polígono' color='34495e' dibujar-si='startAnimating' expresión='(animPosX-1,animPosY-0.5)(animPosX+1,animPosY-0.5)(animPosX+1,animPosY+0.5)(animPosX-1,animPosY+0.5)(animPosX-1,animPosY-0.5)' relleno='(_Rojo_(COLORS[pieceIdx]),_Verde_(COLORS[pieceIdx]),_Azul_(COLORS[pieceIdx]),00)' ancho='0' info='Fondo de la imagen que se mueve '">
+   <param name="G_12" value="espacio='E2' tipo='imagen' dibujar-si='startAnimating' expresión='(animPosX,animPosY,1,1)' archivo='[IMGS[fruitName]]' info='Imagen que se mueve cuando se anima pieceIdx'">
+   <param name="G_13" value="espacio='E2' tipo='imagen' dibujar-si='startAnimating' expresión='(animPosX,animPosY-0.8,1,1)' archivo='images/hand_cursor.png' info='Imagen mano cursor'">
+   <param name="G_14" value="espacio='E2' tipo='segmento' color='f39c12' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)' expresión='(-0.5,AVERAGE)((2+spaceCols)*NUMCOLUMNS-0.5,AVERAGE)' fijo='sí' tamaño='0' ancho='4' info='Barra que marca el promedio'">
+   <param name="G_15" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(s*(2+spaceCols)))*E2.escala-E2.escala/2,E2.Oy+E2._h/2+63,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-1]' s.pasos='NUMCOLUMNS-1' texto='[columns[s]]' fuente='SansSerif,BOLD,21' fijo='no' info='Numeros debajo de las columnas'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(s*(2+spaceCols)))*E2.escala-E2.escala/2,E2.Oy+E2._h/2+23,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-1]' s.pasos='NUMCOLUMNS-1' texto='[LABEL[s]]' fuente='SansSerif,PLAIN,22' fijo='no' info='Texto debajo de las columnas'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(2+spaceCols)/2+(s*(2+spaceCols)))*E2.escala-E2.escala/2,E2.Oy+E2._h/2+63,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-2]' s.pasos='NUMCOLUMNS-2' texto='+' fuente='SansSerif,BOLD,21' fijo='sí' info='Suma en la expresion de la parte inferior'">
+   <param name="G_19" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+((NUMCOLUMNS*(2+spaceCols)))*E2.escala,E2.Oy+E2._h/2+63,1,1]' texto='=' fuente='SansSerif,BOLD,21' fijo='sí' info='Igual en la expresion de la parte inferior'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(NUMCOLUMNS*(2+spaceCols)))*E2.escala,E2.Oy+E2._h/2+63,1,1]' texto='[NUMCOLUMNS*AVERAGE]' fuente='SansSerif,BOLD,21' fijo='no' info='Suma de las columnas en la parte inferior'">
+   <param name="G_21" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_22" value="espacio='E2' tipo='imagen' dibujar-si='verified' expresión='[NUMCOLUMNS*1.5+3,-1]' archivo='images/icon_ok.png'">
+   <param name="G_23" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(s*(2+spaceCols)))*E2.escala-E2.escala/2,posTextSuperior,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-1]' s.pasos='NUMCOLUMNS-1' texto='[columnsShaded[s]]' fuente='SansSerif,BOLD,21' fijo='no' info='num inicial de elementos, parte superior  '">
+   <param name="G_24" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(2+spaceCols)/2+(s*(2+spaceCols)))*E2.escala-E2.escala/2,posTextSuperior,1,1]' familia='s' s.intervalo='[0,NUMCOLUMNS-2]' s.pasos='NUMCOLUMNS-2' texto='+' fuente='SansSerif,BOLD,21' fijo='sí' info='+ parte superior'">
+   <param name="G_25" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+((NUMCOLUMNS*(2+spaceCols)))*E2.escala,posTextSuperior,1,1]' texto='=' fuente='SansSerif,BOLD,21' fijo='sí' info='igual parte superior'">
+   <param name="G_26" value="espacio='E2' tipo='texto' color='34495e' expresión='[E2.Ox+E2._w/2+(1.5+(NUMCOLUMNS*(2+spaceCols)))*E2.escala,posTextSuperior,1,1]' texto='[NUMCOLUMNS*AVERAGE]' fuente='SansSerif,BOLD,21' fijo='no' info='pretotal superior'">
+   <param name="G_27" value="espacio='E2' tipo='texto' color='c0392b' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[E2.Ox+E2._w/2+(-0.45+(NUMCOLUMNS*(2+spaceCols))/2)*E2.escala,posTextSuperior+25,1,1]' texto='[min(numcols,NUMCOLUMNS)] ' fuente='SansSerif,BOLD,21' fijo='no' info='total de columnas primera suma larga '">
+   <param name="G_28" value="espacio='E2' tipo='segmento' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>NUMCOLUMNS+1)' expresión='(0,9.35)((2+spaceCols)*NUMCOLUMNS-1.5,9.35)' fijo='sí' tamaño='1' ancho='3' info='Linea de division en la parte superior '">
+   <param name="G_29" value="espacio='E2' tipo='segmento' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='((NUMCOLUMNS*(2+spaceCols))+1,9.35)((NUMCOLUMNS*(2+spaceCols))+2,9.35)' fijo='sí' tamaño='1' ancho='3'">
+   <param name="G_30" value="espacio='E2' tipo='texto' color='c0392b' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[E2.Ox+E2._w/2+(1.5+(NUMCOLUMNS*(2+spaceCols)))*E2.escala,140,1,1]' texto='[NUMCOLUMNS]' fuente='SansSerif,BOLD,21' fijo='no' info='divisor parte superior  '">
+   <param name="G_31" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[E2.Ox+E2._w/2+(3+(NUMCOLUMNS*(2+spaceCols)))*E2.escala,125,1,1]' texto='=' fuente='SansSerif,BOLD,21' fijo='sí' info='igual parte superior '">
+   <param name="G_32" value="espacio='E2' tipo='texto' color='f39c12' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[E2.Ox+E2._w/2+(4+(NUMCOLUMNS*(2+spaceCols)))*E2.escala,125,1,1]' texto='[AVERAGE]' fuente='SansSerif,BOLD,21' fijo='no' info='total parte superior '">
+   <param name="G_33" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_34" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2<NUMCOLUMNS+1)' expresión='[808,193]' texto='Número de\n    datos:' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_35" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2<NUMCOLUMNS+1)' expresión='[850,250]' texto='[min(numcols,NUMCOLUMNS)]' fuente='SansSerif,BOLD,21' fijo='no' info='total de columnas, en numero de datos '">
+   <param name="G_36" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[0,0]' texto='[done] [CheckAverage()] [break] [numberMode]' fijo='sí'">
+   <param name="G_37" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[793,363]' texto='La media es:' fuente='SansSerif,PLAIN,24' fijo='no'">
+   <param name="G_38" value="espacio='E2' tipo='texto' color='f39c12' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[843,393]' texto='[AVERAGE]' fuente='SansSerif,BOLD,48' fijo='no'">
+   <param name="G_39" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[730,165]' texto='[retroMedia]' fuente='SansSerif,PLAIN,21' fijo='no' ancho='250'">
+   <param name="G_40" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CheckAverage()==1)&&(break==1)&&(numberMode==1)&&(inccols/2>=NUMCOLUMNS+1)' expresión='[800,275]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs42{\*\mjaformula{\fraction{\num{\expr NUMCOLUMNS*AVERAGE\decimals 0\fixed0}}{\den{\expr NUMCOLUMNS\decimals 0\fixed0}}}} = {\*\mjaformula{\expr AVERAGE\decimals 0\fixed0}}}' fuente='SansSerif,PLAIN,21' fijo='no'">
+   <param name="G_41" value="espacio='E2' tipo='texto' fondo='sí' color='1abc9b' expresión='[17,500]' texto='Acomoda los rectángulos de las columnas para obtener el promedio.' fuente='SansSerif,ITALIC,20' fijo='sí'">
+   <param name="Animación" value="controles='no' auto='no' hacer='aux=(break==0)?AnimateMovement():0;;aux=((CheckAverage()==1)&&(break==1)&&(numberMode==1))?AnimateColumns():0;' mientras='(break==0)||(animcols==0)'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+
+</script>
+
+</body>
+
+</html>

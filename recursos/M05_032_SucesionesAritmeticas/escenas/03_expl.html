@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, progresión, sucesión, fracciones, fracción, término, regla de formación, regla, ">
+
+<head>
+	<title>Sucesiones aritméticas</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' ancho='1024' alto='568' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='WIND' x='WIND.x' y='WIND.y' ancho='1024' alto='568' despl_imagen='arr-izq' archivo='[url]'">
+   <param name="E_03" value="tipo='R2' id='espMenu' x='espMenu.x' y='espMenu.y' ancho='120' alto='40' fijo='sí' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='MSG.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='d7000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='BOTONES' x='BOTONES.x' y='BOTONES.y' ancho='1024' alto='70' despl_imagen='arr-izq' fondo='ff820000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_06" value="tipo='R2' id='MSG' x='MSG.x' y='MSG.y' ancho='580' alto='250' dibujar-si='(MSG.visible&(MSG.isText>0))' escala='1' O.x='-50%' O.y='-50%' imagen='css/arcoiris.png' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnCont' tipo='numérico' interfaz='botón' región='interior' espacio='BOTONES' nombre='          Continuar' expresión='(btnCont.x,btnCont.y,btnCont.w,btnCont.h)' fijo='sí' visible='sí' color='blanco' color-int='ffc500' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx turquoise derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='pressCont()' dibujar-si='MSG.visible&(MSG.isText<=0)'">
+   <param name="C_02" value="id='btnContMSG' tipo='numérico' interfaz='botón' región='interior' espacio='MSG' nombre='          Continuar' expresión='(btnContMSG.x,btnContMSG.y,btnContMSG.w,btnContMSG.h)' fijo='sí' visible='sí' color='blanco' color-int='ffc500' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx turquoise derecha|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='MSG.visible=0\nMSG.isText=0\ntt=(MSG.isText<2)?WIND.exec(&squot;setNivel&squot;,nivel):nextEjercicio()'">
+   <param name="C_03" value="id='nivel' tipo='numérico' interfaz='menú' región='interior' espacio='espMenu' expresión='(0,0,espMenu._w,espMenu._h)' valor='nivel' fijo='sí' visible='no' opciones='Nivel 1,Nivel 2,Nivel 3,Nivel 4' acción='calcular' parámetro='doPlay(0)\nsetNivel(nivel)' pos_mensajes='centro'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='ejercURLs' vector='sí' evaluar='una-sola-vez' tamaño='2' expresión='ejercURLs[0]=&squot;03_expl_ejer00.html&squot;;ejercURLs[1]=&squot;03_expl_ejer01.html&squot;'">
+   <param name="A_04" value="id='initCtrs()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='espMenu.x=E2._w-espMenu._w-40;espMenu.y=120;;;MSG.x=(E2._w - MSG._w)/2;MSG.y=(E2._h - MSG._h)/2;;btnContMSG.w=200;btnContMSG.h=46;;btnContMSG.x=(MSG._w - btnContMSG.w)/2;btnContMSG.y=(MSG._h - btnContMSG.h-20);;;;;;;;btnCont.w=180;btnCont.h=46;btnCont.x=(BOTONES._w-btnCont.w)/2;btnCont.y=BOTONES._h-btnCont.h-20;;;BOTONES.x=(E2._w - BOTONES._w)/2;BOTONES.y=(E2._h - BOTONES._h);;;;'">
+   <param name="A_05" value="id='nextEjercicio()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='MSG.visible=0;idxEjer=ent(rnd*ejercURLs.long);url=ejercURLs[idxEjer];WIND.exec(&squot;setNivel&squot;,nivel)'">
+   <param name="A_06" value="id='setNivel(idxNivel)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='nivel=idxNivel;_Trace_(&squot;Vamos a poner el nivel &squot;+nivel);contLevel=0;WIND.exec(&squot;setNivel&squot;,nivel);'">
+   <param name="A_07" value="id='wasRigthAnswer(isRight)' algoritmo='sí' algoritmo='sí' hacer=';_Trace_(&squot;Recivimos isRight : &squot;+isRight);contLevelNew=contLevel+((isRight)?1:-1);_Trace_(&squot;Comparamos : &squot;+contLevel+&squot;,&squot;+contLevelNew);contLevel=max(min(contLevelNew,maxAskInRow),-1*maxAskInRow);MSG.visible=1'">
+   <param name="A_08" value="id='incrementaNivel()' algoritmo='sí' algoritmo='sí' hacer='nivel=min(3,nivel+1);MSG.visible=1;MSG.isText=2;;'">
+   <param name="A_09" value="id='decrementaNivel()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='nivel=max(0,nivel-1);MSG.visible=1;MSG.isText=1'">
+   <param name="A_10" value="id='pressCont()' algoritmo='sí' expresión='x' algoritmo='sí' Local='doNext,doLvDw,doLvUp,tt' hacer='MSG.visible=0;;doLvDw=(contLevel<=-1*maxAskInRow)&(nivel>0);doLvUp=(contLevel>=maxAskInRow)&(nivel<3);doNext=(!doLvUp)&(!doLvDw);;_Trace_(&squot;QUe tenemos en el continuar &squot;+doLvDw+&squot;,&squot;+doLvUp+&squot;,&squot;+doNext);tt=(doNext)?nextEjercicio():0;tt=(doLvUp)?incrementaNivel():0;tt=(doLvDw)?decrementaNivel():0;doPlay(0)'">
+   <param name="A_11" value="id='onReady()' algoritmo='sí' algoritmo='sí' hacer='WIND.exec(&squot;setNivel&squot;,nivel);_Trace_(&squot;SUB ESCEBENA READY&squot;)'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='initCtrs();nivel=0  ;idxEjer=0;nextEjercicio();;maxAskInRow=2'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="G_01" value="espacio='BOTONES' tipo='texto' dibujar-si='0' expresión='[BOTONES._w-400,BOTONES._h-30]' texto='[contLevel]  [idxEjer]  [url]' fijo='no'">
+   <param name="G_02" value="espacio='MSG' tipo='texto' color='2c3e50' dibujar-si='(MSG.isText==1)' expresión='[20,20]' texto='                 Cometiste muchos errores.\n\n                  Vamos a poner ejercicios \n                             más fáciles.' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="G_03" value="espacio='MSG' tipo='texto' color='2c3e50' dibujar-si='(MSG.isText==2)' expresión='[20,60]' texto='                 Parece que es fácil para ti,\n                     aumentemos el reto' fuente='SansSerif,PLAIN,30' fijo='sí'">
+   <param name="Animación" value="pausa='500' controles='no' auto='no' hacer='stepAnim=(stepAnim+1)%(numInst+6);;paso=((stepAnim-1)>=numInst)?numInst-1:stepAnim-1;paso=((!respuestaCorrecta)&&(paso==(numInst-1)))?numInst-2:paso;;escJuan=((stepAnim-1)>=numInst)?((escJuan==0.5)?1:0.5):0.5;escLupe=((stepAnim-1)>=numInst)?((escLupe==0.5)?1:0.5):0.5;;paso=(!anim)?-1:paso;stepAnim=(!anim)?0:stepAnim;escJuan=(!anim)?0.5:escJuan;escLupe=(!anim)?0.5:escLupe;;scroll.y=(paso<=0)?0:scroll.y;ajustaScroll()' mientras='anim'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

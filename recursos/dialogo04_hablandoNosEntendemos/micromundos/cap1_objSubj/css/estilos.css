@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+p, .vntn, div, h1 {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background-image: url("img/fondo.jpg");
+}
+
+.tabla{
+    width: 360px;
+    height: auto;
+    position: relative;
+    margin-left: 270px;
+    margin-top: 10px;
+    box-shadow: -3px 3px 0 #ceb79b;
+}
+.tabla:first-child{
+    margin-top: 20px;
+}
+
+.header{
+    background-color: #929292;
+    color: #fff;
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 0px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.content{
+    margin-top: 0px;
+    background-color: #faf9ed;
+    color: #252525;
+    height: auto;
+    min-height: 140px;
+    padding: 1px 10px;
+    margin-bottom: 8px;
+    border: 2px solid #929292;
+}
+
+.content > ul > li {
+    padding: 0px;
+    font-size: 24px;
+    line-height: 25px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+.slowShow{
+    -webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 1.5s;
+}
+
+.e-oculto{
+    visibility: hidden;
+    opacity : 0;
+    display: none;
+}

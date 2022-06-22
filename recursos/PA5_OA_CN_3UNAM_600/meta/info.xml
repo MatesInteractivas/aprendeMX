@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_600"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Los eclipses solares y lunares
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad observarás eclipses solares y lunares con base en el modelo heliocéntrico, vistos tanto desde la superficie de la Tierra como fuera de su órbita. Identificarás las posiciones relativas en que deben estar los tres cuerpos cuando ocurre cada tipo de eclipse. Explicarás la razón de que los eclipses solares totales se observen rara vez en un punto determinado de la Tierra, mientras que los lunares son más frecuentes en una región dada y debe haber “Luna llena”. Reconocerás la condición geométrica deben cumplir la Tierra, la Luna y el Sol para que se produzca un eclipse.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, mecánica celeste, sistema solar, ¿cómo es nuestro Sistema Solar?, modelación del Sistema Solar, aportaciones en el conocimiento del Sistema Solar
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Sistema Solar, eclipse lunar, eclipse solar, eclipses lunares, eclipses solares, colinearidad, colineal, colineales, Luna, Sol, Tierra, eje, plano, rotación, traslación
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

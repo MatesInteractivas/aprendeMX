@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Calor, corriente de convección, corrientes de convección, corriente convectiva, corrientes convectivas, agua caliente, agua fría, acarreo de material caliente, celdas de convección, hervir, ebullición,  transferencia de calor, líquidos, gases, fluidos, vientos, atmósfera">
+
+<head>
+
+	<title>Transmisión del calor por convección</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(20,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=max(nv-1,0)\nplayVideo(nv)' dibujar-si='nv>1' activo-si='nv>1'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=min(nv+1,nV-1)\nplayVideo(nv)' dibujar-si='nv+1<nV' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='v1' tipo='video' región='interior' espacio='E2' expresión='(40,60,560,315)' dibujar-si='nv==1' archivo='videos/avena_final.mp4'">
+   <param name="C_04" value="id='v2' tipo='video' región='interior' espacio='E2' expresión='(30,60,560,315)' dibujar-si='nv==2' archivo='videos/conveccion.mp4'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='nV=4;nv=1;v0.stop()'">
+   <param name="A_04" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='x0=(nv<2)?40:x0;y0=(nv<2)?60+315:y0;x1=(nv<2)?x0+560-1:x1;y1=(nv<2)?y0+115:y1;;x0=(nv==2)?30:x0;y0=(nv==2)?60+315:y0;x1=(nv==2)?x0+560-1:x1;y1=(nv==2)?y0+95:y1;;;'">
+   <param name="A_05" value="id='stopVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv==0)?v0.stop():&squot;&squot;;aux=(nv==1)?v1.stop():&squot;&squot;;animando=0;aux=(nv==3)?v3.stop():&squot;&squot;;'">
+   <param name="A_06" value="id='playVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv==0)?v0.play():&squot;&squot;;aux=(nv==1)?v1.play():&squot;&squot;;aux=(nv==2)?v2.play():&squot;&squot;;animar=(nv==3);animando=animar;'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa unos ejemplos de transmisión del calor por convección.&squot;' hacer='Inicio();;'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos()'">
+   <param name="A_09" value="id='anim' evento='sí' condición='nv==3' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(ent(t)==0)' expresión='(0,1,1,1)' archivo='images/cn-03.jpg'">
+   <param name="G_02" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(ent(t)>=1)&(ent(t)<3)' expresión='(0,10*(2-t),1.5,1.5)' archivo='images/cn-08.jpg'">
+   <param name="G_03" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&((ent(t)==3)|(ent(t)==4))' expresión='(0,0,1,1)' archivo='images/cn-09.jpg'">
+   <param name="G_04" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&((ent(t)==5)|(ent(t)==6))' expresión='(0,0,1,1)' archivo='images/cn-07.jpg'">
+   <param name="G_05" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&((ent(t)==7)|(ent(t)==8))' expresión='(0,0,1.0,1.0)' archivo='images/cn.jpg'">
+   <param name="G_06" value="espacio='E2' tipo='polígono' color='e74c3c' dibujar-si='nv<3' coord_abs='sí' expresión='(x0,y0)(x1,y0)(x1,y1)(x0,y1)(x0,y0)' relleno='e74c3c'">
+   <param name="G_07" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv<2' expresión='[145,383]' texto='¿Cómo se mueve el agua hirviendo?' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='980' info='hojuelas de avena'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv<2' expresión='[60,409]' texto='¿Por qué parece subir en donde da la flama y luego fluye hacia otras zonas del cazo? ¿Aunque se calienta sólo un lado del cazo, toda el agua que contiene aumenta su temperatura?\n' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='520' info='hojuelas de avena'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv<2' expresión='[630,65]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs40\b\u191 C\u243 mo se realiza la transmisi\u243 n \par    del calor en agua hirviendo?\f2\fs30\b0}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv<2' expresión='[630,130]' texto='El agua caliente es un poco menos densa que la fría y por ello tiende a subir, dejando libre un espacio cerca de la flama, que se llena inmediatamente con agua más fría. Así se produce una circulación que transporta el fluido por todo el cazo. \n\nAdemás, el agua al hervir, genera burbujas de vapor y como el vapor es mucho menos denso que el agua, las burbujas tienden a subir, incrementado aún más la circulación. ' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='340' info='hojuelas de avena'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==2' expresión='[60,390]' texto='Observa cómo se difunde la tinta en un líquido jabonoso cuando el recipiente se calienta sólo por un lado. ¿Por qué crees que sucede esto? ¿Qué tiene que ver esto con la convección?' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='520' info='hojuelas de avena'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==2' expresión='[620,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs40\b\u191 C\u243 mo se comporta una gota de \par  tinta en un l\u237 quido si se calienta \par  el recipiente s\u243 lo por un lado?\f2\fs30\b0}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==2' expresión='[630,150]' texto='Este video muestra un recipiente transparente que contiene agua con jabón y que se está calentando, únicamente del lado izquierdo, con una flama que no se aprecia en la imagen.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='350' info='tinta en solución jabonosa'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==2' expresión='[630,275]' texto='Cuando se deja caer un poco de tinta al lado derecho del líquido, puede verse cómo la tinta primero se hunde, luego viaja hacia la izquierda por abajo y sube porque el líquido está más caliente de ese lado y regresa a la derecha por arriba. Esto muestra cómo se comporta la corriente de convección provocada por el calentamiento de un líquido únicamente por un lado.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='350' info='tinta en solución jabonosa'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==1' expresión='[90,515]' texto='Advertencia: Partes de este video corren en cámara lenta.\n' fuente='SansSerif,ITALIC,18' fijo='sí' info='Nota'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==2' expresión='[240,485]' texto='Advertencia: este video no corre en tiempo real. \nDespués de soltar la tinta se acelera para \napreciar el fenómeno con mayor claridad.' fuente='SansSerif,ITALIC,18' fijo='sí' info='Nota'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==3' expresión='[240,490]' texto='Cuando el aire cercano a la tierra es calentado por el Sol se eleva dejando espacio para que el aire frío circule y ocupe su lugar. Así se crean corrientes de convección. Al elevarse el aire caliente, su humedad se condensa y forma nubes del tipo llamado cumulonimbus.' fuente='SansSerif,PLAIN,18' fijo='sí' ancho='760' color_borde_texto='80000000' info='nubes'">
+   <param name="Animación" value="pausa='25' controles='no' auto='sí' inicio='t=0' hacer='t=t+0.02;t=t%9' mientras='nv==3'">
+</ajs>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+﻿PREG[NP,txt]='El hielo pesa más que el agua.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='El hielo es menos denso que el agua, por eso flota.'
+PREG[NP,rt2]='Una misma cantidad de hielo que de agua ocupa más espacio.'
+PREG[NP,rt3]='Un volumen de hielo pesa menos que el mismo volumen de agua.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='El agua pesa más que el hielo.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='El hielo es menos denso que el agua, por eso flota.'
+PREG[NP,rt2]='Una misma cantidad de hielo que de agua ocupa más espacio.'
+PREG[NP,rt3]='Un volumen de hielo pesa menos que el mismo volumen de agua.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Cuando se ponen los rieles en una vía de tren hay que pegar perfectamente cada uno con el siguiente para que al pasar el tren no haga ruido.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Al contrario, hay que dejar un par de centímetros de separación'
+PREG[NP,rt2]='entre cada dos rieles para que si llegara a calentarlos'
+PREG[NP,rt3]='mucho el Sol puedan dilatarse sin tener que enchuecarse.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En las carreteras que pasan por lugares muy soleados se pueden producir ondulaciones en el pavimento.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Al calentarse mucho el pavimento éste tiende a expandirse'
+PREG[NP,rt2]='más que el suelo sobre el que está colocado'
+PREG[NP,rt3]='y por eso se producen ondulaciones.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Una cucharada de sopa instantánea granulada se disuelve mejor en agua caliente que en agua fría.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Las moléculas del agua caliente se mueven más rápidamente'
+PREG[NP,rt2]='que las del agua fría y cuando chocan con las de la sopa'
+PREG[NP,rt3]='eso contribuye a que se desprendan mejor de los gránulos.'
+PREG[NP,img]=no
+NP=NP+1
+PREG[NP,txt]='El chocolate se disuelve mejor en leche fría que en leche caliente.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Las moléculas de la leche caliente se mueven más rápidamente que las'
+PREG[NP,rt2]='de la leche fría y eso ayuda a que las del chocolate se mezclen mejor.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si se mete un vaso de vidrio muy caliente en agua fría, puede quebrarse.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Al entrar en contacto con el agua fría, algunas partes del vidrio'
+PREG[NP,rt2]='se contraen más de prisa que otras y eso puede provocar que se rompa.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si se mete un vaso de vidrio muy frío en agua caliente, puede quebrarse.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Al entrar en contacto con el agua caliente, algunas partes del vidrio'
+PREG[NP,rt2]='se expanden más de prisa que otras y eso puede provocar que se rompa.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En el desierto hace mucho calor porque el Sol calienta el aire en las alturas y éste baja a la superficie calentándola mucho.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='En el desierto el cielo suele estar despejado y el Sol pega de lleno'
+PREG[NP,rt2]='en la tierra y la calienta. La tierra caliente tranfiere calor al aire'
+PREG[NP,rt3]='que está en contacto con ella y por eso aumenta la temperatura ambiental.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='A la altura en que vuelan los aviones la temperatura suele ser muy baja (40 o 50 grados centígrados bajo cero) y por eso el aire es muy denso.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Es cierto que ese aire está muy frío pero también está sujeto a una'
+PREG[NP,rt2]='presión muy baja, así que no está comprimido. La densidad del aire'
+PREG[NP,rt3]='no sólo depende de su temperatura sino también de la presión.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si vaciamos de agua una botella desechable, la tapamos y la metemos al refrigerador, al sacarla estará inflada.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Al contrario, el aire que está dentro de la botella al enfriarse'
+PREG[NP,rt2]='disminuirá su volumen y eso hará que la botella se aplaste un poco.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si ponemos una botella llena de agua en el congelador durante varias horas ésta se contrae y se aplasta.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Al contrario, al transformarse el agua en hielo, éste'
+PREG[NP,rt2]='ocupará más espacio que el agua y la botella se inflará.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En lugares donde la temperatura cambia mucho del día a la noche, en una noche muy muy fría pueden llegar a caerse los azulejos de una pared.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='El material con que está hecha la pared puede contraerse más'
+PREG[NP,rt2]='con el frío que el de los azulejos. En ese caso los azulejos no'
+PREG[NP,rt3]='pueden mantenerse pegados a la pared y tendrán que saltar y caer.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las paredes de un edificio pueden crujir con los cambios de temperatura.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como las paredes están hechas con una variedad de materiales, por ejemplo,'
+PREG[NP,rt2]='ladrillos, cemento, cal y pintura, los cuales se comprimen y se expanden con'
+PREG[NP,rt3]='el calor, unos más y otros menos, se crean tensiones entre ellos y crujen.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Igual que el hielo es menos denso que el agua, también el agua es menos densa que el vapor.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='El agua al hervir se convierte en vapor y éste requiere mucho más espacio'
+PREG[NP,rt2]='que el que ocupa la misma cantidad de agua líquida, y si no lo tiene,'
+PREG[NP,rt3]='aumenta mucho la presión, que es lo que ocurre en las ollas exprés.'
+PREG[NP,img]=no
+NP=NP+1

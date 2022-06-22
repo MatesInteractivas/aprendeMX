@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Grupos</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<!--objetos-->
+			<div id='tenedor'
+			     class='bt' 
+			     data-info = 'Un <strong>tenedor</strong> es un <em>objeto</em> que sirve para comer.'>
+			
+			</div>
+			<div id='aguja'
+			     class='bt'
+			     data-info = 'Una <strong>aguja</strong> es un <em>objeto</em> que sirve para coser.'>
+			
+			</div>
+			<div id='sombrilla'
+			     class='bt'
+			     data-info = 'Una <strong>sombrilla</strong> es un <em>objeto</em> que sirve para protegerse del sol.'>
+			
+			</div>
+			
+			<!--animales-->
+			<div id='gato'
+			     class='bt'
+			     data-info = 'Un <strong>gato</strong> es un <em>animal</em> al que no le gusta mojarse.'>
+			
+			</div>
+			<div id='huron'
+			     class='bt'
+			     data-info = 'Un <strong>hurón</strong> es un <em>animal</em> que tiene la reputación de oler feo.'>
+			
+			</div>
+			<div id='perro'
+			     class='bt'
+			     data-info = 'Un <strong>perro</strong> es un <em>animal</em> que se lleva bien con los humanos.'>
+			
+			</div>
+			
+			
+			<!--aparatos-->
+			<div id='celular'
+			     class='bt'
+			     data-info = 'Un <strong>celular</strong> es un <em>aparato</em> que sirve para hacer llamadas.'>
+			
+			</div>
+			<div id='tele'
+			     class='bt'
+			     data-info = 'Una <strong>tele</strong> es un <em>aparato</em> que sirve para ver películas.'>
+			
+			</div>
+			<div id='despertador'
+			     class='bt'
+			     data-info = 'Un <strong>despertador</strong> es un <em>aparato</em> que sirve para despertarse.'>
+			
+			</div>
+			
+			<a class='bt_continuar oculto' href='#'></a>
+	
+		</div>
+		
+
+		
+		<script>
+
+			var inicio = true;
+			var mwId = 'cap2_preg5_expli';
+			var rebuilding = false;
+			
+			var all = ["tenedor","aguja","sombrilla","gato","perro","huron","celular","tele","despertador"];
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							all = [];
+						} else {
+							//lo que se tenga que hacer con base en historial
+							rebuilding = true;
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='volteado'){
+									checkVolteados(pair[1]);
+								}
+							}
+							rebuilding = false;
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			
+			window.addEventListener("message", receiveMessage, false);
+			
+			function gotoNextQuestion(delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+    
+			$(document).ready(function(){
+				
+				addFlippers();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+			function addFlippers(){
+				
+				$('.bt').each(function(){
+				
+					var $bt = $(this);
+					var btId = $bt.attr('id');
+					var info = $bt.attr('data-info');
+
+					var card = $("<div>", { 'class':'flipCard', 'data-id': btId });
+					var flipper = $("<div>", {'class':'flipper'});
+					var back	= $("<div>", {'class':'back'});
+					var front	= $("<div>", {'class':'front'});
+					var text	= $("<p>", {'class': 'par', 'data-id': btId });
+					var close = $("<a>", { 'class' : 'bt_close', 'data-id': btId });
+					
+					card.appendTo($('#contenedor'));
+					flipper.appendTo(card);
+					front.appendTo(flipper);
+					back.appendTo(flipper);
+					text.appendTo(back);
+					text.html(info);
+					close.appendTo(back);
+					close.on('click',function(event){
+						var id = $(event.currentTarget).attr('data-id');
+						$('.flipCard[data-id="'+id+'"]').removeClass('flipped');	
+					});
+					
+					$bt.on('click',function(event){
+						var id = $(event.currentTarget).attr('id');
+						$('.flipCard').removeClass('flipped');
+						$('.flipCard[data-id="'+id+'"]').addClass('flipped');
+						$('.flipCard[data-id="'+id+'"]').css('z-index','50');
+						setTimeout(function(){
+							$('.flipCard:not(.flipped)').css('z-index','1');	
+						},1000);
+						
+						//eliminar de all
+						checkVolteados(id);
+					});
+				});
+			
+			}
+			
+			function checkVolteados(id){
+				var ind = all.indexOf(id);
+				if(ind!=-1){
+					all.splice(ind,1);
+					if(all.length == 1 && $('a.bt_continuar').hasClass('oculto')){
+						$('a.bt_continuar').removeClass('oculto');
+						$('a.bt_continuar').on('click',function(){
+							if(!rebuilding){
+								gotoNextQuestion(1000);
+							}
+						});
+					}
+					if(!rebuilding){
+						addMwSettings('volteado',id);
+					}
+				}
+			}
+			
+		
+		</script>
+					
+        </body>
+</html>

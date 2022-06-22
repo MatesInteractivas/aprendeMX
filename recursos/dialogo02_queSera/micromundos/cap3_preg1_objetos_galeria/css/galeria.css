@@ -1,0 +1,127 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 620px;
+	height: 460px;
+	border: 0px;
+	overflow: hidden;
+	background: url('img/fondo.png') no-repeat;
+}
+
+
+.oracionIni{
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    padding-left: 20px;
+}
+
+p{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 32px;
+    line-height: 34px;
+}
+
+
+.slider{
+    position: absolute;
+    bottom: 115px;
+    left: 35px;
+    width: 580px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+.sliderBt{
+    display: inline-block;
+    width: 62px;
+    height: 104px;
+    margin-bottom: 15px;
+}
+
+a.sliderBt.left{
+    background: url("img/bt_registro.png") no-repeat -222px -260px;
+}
+a.sliderBt.left:hover,a.sliderBt.left:focus,a.sliderBt.left:active{
+    background-position: -258px -0px;
+}
+a.sliderBt.right{
+    background: url("img/bt_registro.png") no-repeat -283px -104px;
+}
+a.sliderBt.right:hover,a.sliderBt.right:focus,a.sliderBt.right:active{
+    background-position: -221px -156px;
+}
+
+a{
+    cursor: pointer;
+}
+
+.sliderDiv{
+    position: relative;
+    display: inline-block;
+    width: 410px;
+    height: 145px;
+    margin: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.sliderInnerDiv{
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    width: auto;
+    height: 100%;
+    -webkit-transition: left 1.5s; /* Safari */
+    transition: left 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.pic_div{
+    display: inline-block;
+    margin: 0px 3px;
+    width: 127px;
+    height: 127px;
+    border-radius: 8px;
+    background-color: #808080;
+}
+.pic_div:first-child{
+    margin-left: 5px;
+}
+.pic{
+    position: relative;
+    width: 125px;
+    height:  125px;
+    display: block;
+    margin: 1px;
+    border-radius: 8px;
+}
+
+.inactive{
+    opacity: 0.5;
+    cursor: default !important;
+}
+
+a.bt_seguir{
+    position: absolute;
+    left: 235px;
+    bottom: 80px;
+    width: 141px;
+    height: 44px;
+    background: url("img/bt_continuar.png") no-repeat;
+}
+a.bt_seguir:hover, a.bt_seguir:focus, a.bt_seguir:active{
+    background: url("img/bt_continuar_over.png") no-repeat;
+}
+

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, denominadores, numeradores, múltiplos, múltiplo común, fracciones equivalentes, comparación de fracciones">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+<style type="text/css"> 
+   .DescartesMenuContainer { 
+      border: 3px solid #bdc; 
+      background: transparent !important; 
+      border-radius: 10px;
+   }
+   select { 
+      border: 1px solid #b46100 !important; 
+      border-radius: 7px;
+      -webkit-appearance: none; 
+      -moz-appearance: none; 
+      appearance: none; 
+      padding-right: 32px !important; 
+      background: url(images/ui_btn_down.png) 101%/32px no-repeat #eee; 
+   }
+</style>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='TCL' x='10' y='0' ancho='1004' alto='512' dibujar-si='editing>=0' despl_imagen='arr-izq' fondo='fff0f8fa' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='cmp' tipo='numérico' interfaz='menú' región='interior' espacio='E' expresión='(407,140,200,40)' fijo='sí' visible='no' opciones=' ,es menor que,es equivalente a,es mayor que' activo-si='(!verificado)'">
+   <param name="C_02" value="id='verify' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='Verificar' expresión='((E._w-140)/2,310,140,56)' fijo='sí' visible='sí' color='aaeecc' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nverificar()' dibujar-si='(cmp>0)&(!verificado)&(count<=10)&(!verificado)'">
+   <param name="C_03" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='Otro' expresión='((E._w-140)/2,310,140,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nnewFrac()' dibujar-si='verificado&(count<10)' pos_mensajes='centro'">
+   <param name="C_04" value="id='again' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='Otra vez' expresión='((E._w-140)/2,E._h-71,140,56)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\ncount=count+1\nreStart()' dibujar-si='(count==10)&verificado' pos_mensajes='centro'">
+   <param name="C_05" value="id='tb00' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='[Str(0)]' expresión='(CP(ctx,0),CP(cty,0),CP(ctw,0),CP(cth,0))' fijo='sí' visible='sí' fuente puntos='21' imagen='VACIO.GIF' pos_mensajes='centro'">
+   <param name="C_06" value="id='tb01' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='[Str(1)]' expresión='(CP(ctx,1),CP(cty,1),CP(ctw,1),CP(cth,1))' fijo='sí' visible='sí' fuente puntos='21' imagen='VACIO.GIF' pos_mensajes='centro'">
+   <param name="C_07" value="id='tb02' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='[Str(2)]' expresión='(CP(ctx,2),CP(cty,2),CP(ctw,2),CP(cth,2))' fijo='sí' visible='sí' fuente puntos='21' imagen='VACIO.GIF' pos_mensajes='centro'">
+   <param name="C_08" value="id='tb03' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='[Str(3)]' expresión='(CP(ctx,3),CP(cty,3),CP(ctw,3),CP(cth,3))' fijo='sí' visible='sí' fuente puntos='21' imagen='VACIO.GIF' pos_mensajes='centro'">
+   <param name="A_01" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_02" value="id='BUENA' vector='sí' evaluar='una-sola-vez' tamaño='50'">
+   <param name="A_03" value="id='initBUENA()' algoritmo='sí' algoritmo='sí' Local='i' inicio='i=0' hacer='BUENA[i]=0;i=i+1;' mientras='i<BUENA.long'">
+   <param name="A_04" value="id='countBuenas()' algoritmo='sí' expresión='buenas' algoritmo='sí' Local='buenas,i' inicio='buenas=0;i=1' hacer='buenas=buenas+BUENA[i];i=i+1' mientras='i<=10'">
+   <param name="A_05" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_06" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_07" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_08" value="id='McM(a,b)' algoritmo='sí' expresión='mcm' algoritmo='sí' Local='k,mcm,ab' inicio='ab=a*b;mcm=ab;k=2' hacer='dividir=(k*ent(a/k)==a)&(k*ent(b/k)==b);a=(dividir)?a/k:a;b=(dividir)?b/k:b;mcm=(dividir)?mcm/k:mcm;k=(dividir)?k:k+1;' mientras='k<=min(a,b)'">
+   <param name="A_09" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='4' expresión='tsp=0;roj=1;ver=2;azu=3;;COL[0,tsp]=0.0;COL[0,roj]=0.0;COL[0,ver]=0.0;COL[0,azu]=0.0;;COL[1,tsp]=0.0;COL[1,roj]=0.99;COL[1,ver]=0.20;COL[1,azu]=0.40;;COL[2,tsp]=0.0;COL[2,roj]=0.95;COL[2,ver]=0.75;COL[2,azu]=0.30;;COL[3,tsp]=0.0;COL[3,roj]=0.99;COL[3,ver]=0.99;COL[3,azu]=0.30;;COL[4,tsp]=0.0;COL[4,roj]=0.20;COL[4,ver]=0.90;COL[4,azu]=0.50;;COL[5,tsp]=0.0;COL[5,roj]=0.25;COL[5,ver]=0.85;COL[5,azu]=0.85;;COL[6,tsp]=0.0;COL[6,roj]=0.30;COL[6,ver]=0.60;COL[6,azu]=1.00;;COL[7,tsp]=0.0;COL[7,roj]=0.95;COL[7,ver]=0.30;COL[7,azu]=0.99;;COL[8,tsp]=0.0;COL[8,roj]=0.95;COL[8,ver]=0.20;COL[8,azu]=0.70;;COL[9,tsp]=0.0;COL[9,roj]=0.99;COL[9,ver]=0.99;COL[9,azu]=0.99;'">
+   <param name="A_10" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_11" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_12" value="id='CT' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='40' filas='20' expresión='ix=0;name=1;middle=2;last=3;value=4;ctx=5;cty=6;ctw=7;cth=8;active=9;interfaz=10;drawIf=11;selected=12;ctType=13;tclType=14;incr=15;decimals=16;limInf=17;limSup=18;id=19;;SPINNER=0;BUTTON=1;MENU=2;;TXT=0;NUM=1'">
+   <param name="A_13" value="id='CP(a,k)' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,pad' inicio='pad=0' hacer='res=(a==ctx)?CT[k,ctx]+pad:res;res=(a==cty)?CT[k,cty]+pad:res;res=(a==ctw)?CT[k,ctw]-pad*2:res;res=(a==cth)?CT[k,cth]-pad*2:res;res=(a==active)?CT[k,active]:res;res=(a==interfaz)?CT[k,interfaz]:res;res=(a==drawIf)?CT[k,drawIf]:res;res=(a==selected)?CT[k,selected]:res;;'">
+   <param name="A_14" value="id='notEmpty(s)' expresión='CT[s,value]!=&squot;&squot;'">
+   <param name="A_15" value="id='Str(s)' algoritmo='sí' expresión='str' algoritmo='sí' inicio='str=&squot;&squot;' hacer='str=(CT[s,interfaz]==BUTTON)?CT[s,name]+CT[s,middle]+clipText(CT[s,value],CT[s,ctw]-8)+CT[s,last]:str;str=(CT[s,interfaz]==SPINNER)?_NumToStr_(CT[s,value],CT[s,decimals]):str;'">
+   <param name="A_16" value="id='editB(k)' algoritmo='sí' algoritmo='sí' hacer='editing=k;teclado.S=CT[k,value];TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,(CP(ctx,k))+&squot;,&squot;+CP(cty,k)+&squot;,&squot;+CP(ctw,k)+&squot;,&squot;+CP(cth,k));TCL.exec(&squot;setParams&squot;,CT[k,tclType]);TCL.update();;'">
+   <param name="A_17" value="id='incr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]+CT[k,incr];CT[k,value]=(CT[k,limSup]!=&squot;INF&squot;)?min(tmpValue,CT[k,limSup]):tmpValue'">
+   <param name="A_18" value="id='decr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]-CT[k,incr];CT[k,value]=(CT[k,limInf]!=&squot;INF&squot;)?max(tmpValue,CT[k,limInf]):tmpValue'">
+   <param name="A_19" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='aux=(editing>=0)?processKB():0' hacer='editing=-1;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;;'">
+   <param name="A_20" value="id='processKB()' algoritmo='sí' algoritmo='sí' hacer='CT[editing,value]=(Teclado.Sa!=Teclado.S)?Teclado.S:CT[editing,value];CT[editing,value]=(CT[editing,ctType]==NUM)?_Eval_(_NumToStr_(&squot;&squot;+_Eval_(CT[editing,value]),12)):CT[editing,value];CT[editing,value]=ent(CT[editing,value]+0.0001);Teclado.Sa=Teclado.S;'">
+   <param name="A_21" value="id='set(btn,prop,val)' algoritmo='sí' algoritmo='sí' hacer='CT[btn,prop]=val'">
+   <param name="A_22" value="id='clipText(str,w)' algoritmo='sí' expresión='newStr' algoritmo='sí' Local='i,newStr,tmpStr,condTam' inicio='newStr=str;str.length=_length_(str);minwidth=min(str.length,ent(w/wStr.w));maxwidth=min(str.length,ent(w/iStr.w));i=minwidth;' hacer='tmpStr=_substring_(str,0,i);condTam=(_AnchoDeCadena_(tmpStr,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21)<w);newStr=(condTam)?tmpStr:newStr;i=(condTam)?(i+1):(maxwidth+1)' mientras='i<=maxwidth'">
+   <param name="A_23" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='iStr.w=_AnchoDeCadena_(&squot;i&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);wStr.w=_AnchoDeCadena_(&squot;w&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);;TCL.x=E._w-TCL._w-5;TCL.y=E._h-TCL._h-5;rd=3;brdw=4;editing=-1;Teclado.S=&squot;&squot;;Teclado.Sa=&squot;&squot;;texth=27;textp=10;;spnw=32;spnh=50;;AutorControls();;TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_24" value="id='AutorControls()' algoritmo='sí' expresión='0' algoritmo='sí' Local='xtxt,dxtxt,ytxt' inicio='NCT=0' hacer='CT[NCT,ix]=NCT;CT[NCT,id]=&squot;numA&squot;;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;&squot;;CT[NCT,ctx]=Xs;CT[NCT,cty]=Ys;CT[NCT,ctw]=Wc;CT[NCT,cth]=Hc;CT[NCT,tclType]=&squot;4,4,0&squot;;CT[NCT,interfaz]=BUTTON;CT[NCT,ctType]=NUM;CT[NCT,decimals]=1;CT[NCT,active]=0;CT[NCT,drawIf]=1;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,id]=&squot;denA&squot;;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;&squot;;CT[NCT,ctx]=Xs;CT[NCT,cty]=Ys+Gy+Hc;CT[NCT,ctw]=Wc;CT[NCT,cth]=Hc;CT[NCT,tclType]=&squot;4,4,0&squot;;CT[NCT,interfaz]=BUTTON;CT[NCT,ctType]=NUM;CT[NCT,decimals]=1;CT[NCT,active]=0;CT[NCT,drawIf]=1;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,id]=&squot;numAA&squot;;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;&squot;;CT[NCT,ctx]=Xs+2*Wc+4*Gx+125;CT[NCT,cty]=Ys;CT[NCT,ctw]=Wc;CT[NCT,cth]=Hc;CT[NCT,tclType]=&squot;5,4,0&squot;;CT[NCT,interfaz]=BUTTON;CT[NCT,ctType]=NUM;CT[NCT,decimals]=1;CT[NCT,active]=0;CT[NCT,drawIf]=1;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,id]=&squot;denAA&squot;;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;&squot;;CT[NCT,ctx]=Xs+2*Wc+4*Gx+125;CT[NCT,cty]=Ys+Gy+Hc;CT[NCT,ctw]=Wc;CT[NCT,cth]=Hc;CT[NCT,tclType]=&squot;5,4,0&squot;;CT[NCT,interfaz]=BUTTON;CT[NCT,ctType]=NUM;CT[NCT,decimals]=1;CT[NCT,active]=0;CT[NCT,drawIf]=1;NCT=NCT+1;;;'">
+   <param name="A_25" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='borde.x=311;borde.y=80;borde.w=398;borde.h=168;;Xs=borde.x+15;Ys=borde.y+30;Wc=64;Hc=48;Gx=12;Gy=12;;;'">
+   <param name="A_26" value="id='FRAC' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='50' filas='4' expresión='nF=0;;FRAC[nF,0]=1;FRAC[nF,1]=2;FRAC[nF,2]=2;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=3;FRAC[nF,2]=1;FRAC[nF,3]=4;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=5;FRAC[nF,2]=2;FRAC[nF,3]=4;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=5;FRAC[nF,2]=2;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=5;FRAC[nF,2]=4;FRAC[nF,3]=8;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=4;FRAC[nF,2]=2;FRAC[nF,3]=6;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=6;FRAC[nF,2]=3;FRAC[nF,3]=4;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=3;FRAC[nF,2]=1;FRAC[nF,3]=4;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=2;FRAC[nF,2]=3;FRAC[nF,3]=5;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=4;FRAC[nF,2]=3;FRAC[nF,3]=8;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=2;FRAC[nF,2]=2;FRAC[nF,3]=7;nF=nF+1;;FRAC[nF,0]=3;FRAC[nF,1]=5;FRAC[nF,2]=1;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=3;FRAC[nF,1]=5;FRAC[nF,2]=1;FRAC[nF,3]=10;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=5;FRAC[nF,2]=1;FRAC[nF,3]=2;nF=nF+1;;FRAC[nF,0]=3;FRAC[nF,1]=4;FRAC[nF,2]=2;FRAC[nF,3]=12;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=3;FRAC[nF,2]=2;FRAC[nF,3]=8;nF=nF+1;;FRAC[nF,0]=3;FRAC[nF,1]=12;FRAC[nF,2]=2;FRAC[nF,3]=4;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=6;FRAC[nF,2]=3;FRAC[nF,3]=5;nF=nF+1;;FRAC[nF,0]=1;FRAC[nF,1]=4;FRAC[nF,2]=3;FRAC[nF,3]=9;nF=nF+1;;FRAC[nF,0]=2;FRAC[nF,1]=8;FRAC[nF,2]=3;FRAC[nF,3]=9;nF=nF+1;;FRAC[nF,0]=6;FRAC[nF,1]=10;FRAC[nF,2]=1;FRAC[nF,3]=5;nF=nF+1;;FRAC[nF,0]=6;FRAC[nF,1]=14;FRAC[nF,2]=2;FRAC[nF,3]=7;nF=nF+1;;FRAC[nF,0]=3;FRAC[nF,1]=4;FRAC[nF,2]=1;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=4;FRAC[nF,1]=8;FRAC[nF,2]=1;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=6;FRAC[nF,1]=8;FRAC[nF,2]=1;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=6;FRAC[nF,1]=9;FRAC[nF,2]=1;FRAC[nF,3]=3;nF=nF+1;;FRAC[nF,0]=6;FRAC[nF,1]=9;FRAC[nF,2]=2;FRAC[nF,3]=8;nF=nF+1;;'">
+   <param name="A_27" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='parado=1;parada=1;saludando=2;asombrado=3;asombrada=3;senyalando=5;pensando=6;vez=0;reStart()'">
+   <param name="A_28" value="id='randomFractions()' algoritmo='sí' algoritmo='sí' Local='case,nf' inicio='vez=min(vez+1,40);denAa=denA;denBa=denB;' hacer='case=ent(rnd*3);nf=ent(rnd*nF);denA=(case==0)?FRAC[nf,1]:2+ent(rnd*(3+vez/2));numA=(case==0)?FRAC[nf,0]:1+ent(rnd*(2+vez/3));denB=(case==0)?FRAC[nf,3]:2+ent(rnd*(3+vez/1));numB=(case==0)?FRAC[nf,2]:1+ent(rnd*(2+vez/2));;' mientras='(denAa==denA)|(denBa==denB)|(denAa==denB)|(denBa==denA)|(denA==denB)|(numA==denA)|(numB==denB)|((case==2)&(McM(denA,denB)==denA*denB))'">
+   <param name="A_29" value="id='Simplify()' algoritmo='sí' algoritmo='sí' Local='d,dividir' inicio='d=2' hacer='dividir=((numerador=d*ent(numerador/d))&(denominador=d*ent(denominador/d)));numerador=(dividir)?ent(numerador/d+0.49):numerador;denominador=(dividir)?ent(denominador/d+0.49):denominador;d=(dividir)?d:d+1;' mientras='d<16'">
+   <param name="A_30" value="id='otrasFracciones()' algoritmo='sí' algoritmo='sí' inicio='RECTA.escala=(RECTA._w/1.667);n1=num1;d1=den1;n2=num2;d2=den2;numA=1;denA=8;numB=1;denB=8;equiv=ent(rnd<1/8)' hacer='den1=2+ent(15*rnd);num1=1+ent(den1*1.4*rnd);den2=2+ent(15*rnd);num2=1+ent(den2*1.4*rnd);;numerador=num1;denominador=den1;aux=(!equiv)?Simplify():&squot;&squot;;num1=numerador;den1=denominador;;numerador=num2;denominador=den2;aux=(!equiv)?Simplify():&squot;&squot;;num2=numerador;den2=denominador;;numA=num1;denA=den1;numB=num2;denB=den2;;den=5' mientras='(abs(num1/den1-num2/den2)>1/4)|(num1==den1)|(num2==den2)|((num1==num2)&(den1==den2))|(den1==d1)|(den2==d1)|(den1==d2)|(den2==d2)|(equiv&(num1*den2!=num2*den1))'">
+   <param name="A_31" value="id='newFrac()' algoritmo='sí' algoritmo='sí' inicio='cmp=0;verificado=0;count=count+1' hacer='otrasFracciones();;CT[0,value]=_NumToStr_(numA,0);CT[1,value]=_NumToStr_(denA,0);CT[2,value]=_NumToStr_(numB,0);CT[3,value]=_NumToStr_(denB,0);CT[4,value]=&squot;&squot;;CT[5,value]=&squot;&squot;;numS=CT[4,value];denS=CT[5,value];actitud=pensando;'">
+   <param name="A_32" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer=';'">
+   <param name="A_33" value="id='reStart()' algoritmo='sí' algoritmo='sí' inicio='count=0;msg_nota=&squot;&squot;' hacer='initBuenas();newFrac()'">
+   <param name="A_34" value="id='verificar()' algoritmo='sí' algoritmo='sí' inicio='verificado=1' hacer=';BIEN=((numA*denB<numB*denA)&(cmp==1))|((numA*denB==numB*denA)&(cmp==2))|((numA*denB>numB*denA)&(cmp==3));actitud=(BIEN)?saludando:asombrado;BUENA[count]=BIEN;;note=countBuenas()/10;nota=(note<1)?&squot;Nota: &squot;+_NumToStr_(note*10,1):&squot;Nota: 10&squot;;aprecio=(note>0.56)?&squot;¡De panzazo!&squot;:&squot;Mal&squot;;aprecio=(note>0.66)?&squot;Regular&squot;:&squot;Mal&squot;;aprecio=(note>0.76)?&squot;Bien&squot;:aprecio;aprecio=(note>0.86)?&squot;Muy bien&squot;:aprecio;aprecio=(note>0.96)?&squot;¡Excelente!&squot;:aprecio;;msg_nota=nota;'">
+   <param name="A_35" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Ponte a prueba. ¿Sabes comparar fracciones con distintos denominadores?&squot;)' hacer='initDisplay();Init();Inicio();;;;'">
+   <param name="A_36" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='actitud=((cmp>0)&(!verificado))?parado:actitud;aux=((cmp>0)&verificado)?verificar():&squot;&squot;;pregunta=&squot;Ejercicio: &squot;+(count)+&squot; de 10&squot;;;'">
+   
+   <param name="A_38" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E' tipo='texto' color='blanco' dibujar-si='(count<10)|((count==10)&(!verificado))' expresión='[(E._w-_AnchoDeCadena_(pregunta,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,30]' texto='[pregunta]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='335544' info='El número de la pregunta'">
+   <param name="G_02" value="espacio='E' tipo='texto' color='blanco' dibujar-si='(count==10)&verificado' expresión='[(E._w-_AnchoDeCadena_(&squot;Fin&squot;,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,30]' texto='Fin' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='335544' info='El número de la pregunta'">
+   <param name="G_03" value="espacio='E' tipo='curva' fondo='sí' color='aa000000' coord_abs='sí' expresión='(botX(0,0,E._w,t),botY(0,0,E._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='para oscurecer el fondo'">
+   <param name="G_04" value="espacio='E' tipo='imagen' dibujar-si='actitud==parado' coord_abs='sí' expresión='(870,260,1,1)' archivo='images/personajes/boy_01.png'">
+   <param name="G_05" value="espacio='E' tipo='imagen' dibujar-si='actitud==parada' coord_abs='sí' expresión='(140,260,1,1)' archivo='images/personajes/girl_01_mirror.png'">
+   <param name="G_06" value="espacio='E' tipo='imagen' dibujar-si='actitud==saludando' coord_abs='sí' expresión='(870,260,1,1)' archivo='images/personajes/boy_02.png'">
+   <param name="G_07" value="espacio='E' tipo='imagen' dibujar-si='actitud==saludando' coord_abs='sí' expresión='(140,260,1,1)' archivo='images/personajes/girl_02_mirror.png'">
+   <param name="G_08" value="espacio='E' tipo='imagen' dibujar-si='actitud==asombrado' coord_abs='sí' expresión='(870,260,1,1)' archivo='images/personajes/boy_03.png'">
+   <param name="G_09" value="espacio='E' tipo='imagen' dibujar-si='actitud==asombrada' coord_abs='sí' expresión='(140,260,1,1)' archivo='images/personajes/girl_03_mirror.png'">
+   <param name="G_10" value="espacio='E' tipo='imagen' dibujar-si='actitud==senyalando' coord_abs='sí' expresión='(870,260,1,1)' archivo='images/personajes/boy_05.png'">
+   <param name="G_11" value="espacio='E' tipo='imagen' dibujar-si='actitud==senyalando' coord_abs='sí' expresión='(140,260,1,1)' archivo='images/personajes/girl_05_mirror.png'">
+   <param name="G_12" value="espacio='E' tipo='imagen' dibujar-si='actitud==pensando' coord_abs='sí' expresión='(870,260,1,1)' archivo='images/personajes/boy_06.png'">
+   <param name="G_13" value="espacio='E' tipo='imagen' dibujar-si='actitud==pensando' coord_abs='sí' expresión='(140,260,1,1)' archivo='images/personajes/girl_06_mirror.png'">
+   <param name="G_14" value="espacio='E' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='borde'">
+   <param name="G_15" value="espacio='E' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,borde.x-2,borde.w+4,t),botY(0,borde.y-2,borde.h+4,t))' t.intervalo='[0,8]' relleno='cc335544' info='para oscurecer el fondo del recuadro'">
+   <param name="G_16" value="espacio='E' tipo='curva' fondo='sí' color='aa335544' coord_abs='sí' expresión='(botX(3,CP(ctx,s),CP(ctw,s),t),botY(3,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='f0fff8'">
+   <param name="G_17" value="espacio='E' tipo='segmento' color='55335544' coord_abs='sí' expresión='(CT[2*s,ctx]-Gx/3,CT[2*s+1,cty]-Gy/2)(CT[2*s,ctx]+CT[2*s,ctw]+Gx/3,CT[2*s+1,cty]-Gy/2)' familia='s' s.intervalo='[0,NCT/2-1]' s.pasos='NCT/2-1' fijo='sí' tamaño='0' info='las rayas de quebrado'">
+   <param name="G_18" value="espacio='E' tipo='texto' expresión='[CT[2*s,ctx]+CT[2*s,ctw]+Gx/3+11,CT[2*s+1,cty]-Gy/2-10]' familia='s' s.intervalo='[0,NCT/2-2]' s.pasos='NCT/2-2' texto='[(s%2==0)?&squot;&squot;:&squot;&squot;]' fuente='Serif,PLAIN,19' fijo='sí' info='Los símbolos de igualdad'">
+   <param name="G_19" value="espacio='E' tipo='texto' color='blanco' dibujar-si='verificado&(count<10)' expresión='[(E._w-60)/2,280]' texto='[(BIEN)?&squot;BIEN&squot;:&squot;MAL&squot;]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='335544'">
+   <param name="G_20" value="espacio='E' tipo='texto' color='blanco' dibujar-si='verificado&(count==10)' expresión='[(E._w-_AnchoDeCadena_(aprecio,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,285]' texto='[aprecio]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='335544'">
+   <param name="G_21" value="espacio='E' tipo='texto' color='blanco' dibujar-si='(count>=10)&verificado' expresión='[(E._w-_AnchoDeCadena_(msg_nota,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,330]' texto='[msg_nota]' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='335544' info='La nota'">
+   <param name="G_22" value="espacio='E' tipo='imagen' dibujar-si='(BUENA[s])&((s<count)|((s==count)&verificado))' coord_abs='sí' expresión='(252-25+s*50,400,1,1)' familia='s' s.intervalo='[1,10]' s.pasos='9' archivo='images/icon_ok.png'">
+   <param name="G_23" value="espacio='E' tipo='imagen' dibujar-si='(!BUENA[s])&((s<count)|((s==count)&verificado))' coord_abs='sí' expresión='(252-25+s*50,400,1,1)' familia='s' s.intervalo='[1,10]' s.pasos='9' archivo='images/icon_wrong.png'">
+</ajs>
+</div>
+
+<!-- macro para dibujar los bordes -->
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;tnsp=0;rojo=1;verd=1;azul=1'
+tipo='imagen' coord_abs='sí' expresión='(x-22,y-22,1,1)' archivo='images/borde_ar_iz.png' info='arriba izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y-22,w,1)' archivo='images/borde_ar_ce.png' info='arriba centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y-22,1,1)' archivo='images/borde_ar_de.png' info='arriba derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h/2,1,h)' archivo='images/borde_ce_iz.png' info='centro izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h/2,1,h)' archivo='images/borde_ce_de.png' info='centro derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h+22,1,1)' archivo='images/borde_ab_iz.png' info='abajo izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+22,w,1)' archivo='images/borde_ab_ce.png' info='abajo centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h+22,1,1)' archivo='images/borde_ab_de.png' info='abajo derecha' 
+tipo='polígono' coord_abs='sí' expresión='(x-1,y-1)(x+w+1,y-1)(x+w+1,y+h+1)(x-1,y+h+1)(x-1,y-1)' relleno='(rojo,verd,azul,tnsp)' ancho='0' 
+</script>
+
+
+</body>
+</html>

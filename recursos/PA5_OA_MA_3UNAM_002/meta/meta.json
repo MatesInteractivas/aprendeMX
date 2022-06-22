@@ -1,0 +1,38 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "peso", 
+    "masa", 
+    "múltiplos y submúltiplos del gramo", 
+    "conversión de unidades de masa", 
+    "tonelada", 
+    "miriagramo", 
+    "quintal", 
+    "kilogramo", 
+    "hectogramo", 
+    "decagramo", 
+    "gramo", 
+    "decigramo", 
+    "centigramo", 
+    "miligramo"
+  ], 
+  "descripcion": "A través de ejemplos revisarás las diferentes unidades con las que se mide la masa y realizarás conversiones entre ellas.",
+  "resena": "Medición de la masa, las distintas unidades que la representan y la conversión entre ellas.",
+  "titulo": "Unidades de masa", 
+  "id": "PA5_OA_MA_3UNAM_002"
+}

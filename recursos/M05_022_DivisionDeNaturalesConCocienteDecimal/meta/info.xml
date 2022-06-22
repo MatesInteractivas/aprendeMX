@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_022"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		División de naturales con cociente decimal
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Si se reparten 4 galletas entre 2 niños, a cada uno le tocan 2 galletas, pero si hay 3 niños, ¿cuántas galletas le tocan a cada niño? El resultado ya no es un número natural, sino un decimal.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, decimales, Sentido numérico y pensamiento algebraico, Problemas multiplicativos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, número natural, entero, división,decimal,cociente, divisor, parte entera, residuo
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

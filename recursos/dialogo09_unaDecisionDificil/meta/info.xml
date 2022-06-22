@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_ES_3UNAM_009_argumentacion"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Una decisión difícil
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		 Mapa mental con datos y ejemplos que apoyan una opinión. En una escuela rural en Veracruz están teniendo un debate: construir canchas o no hacerlo para conservar los árboles. El alumno o la alumna se dará a la tarea de buscar argumentos a favor de ambas posturas, los cuales se incluirán en un mapa mental. Posteriormente, identificará datos que pueden respaldar los argumentos de ambos bandos. Al final, tendrá que elegir una postura y elaborará un cartel en su apoyo.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto expositivo, Cohesión
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, IMATE, LITE, Español, dilema, debate, opinión, argumentar, argumentación, argumento, contraargumento, falacia, dato, hecho, respaldar un argumento, mapa mental, mapa conceptual, cartel, eslogan, ecología, conservación, biodiversidad, tala de árboles, deporte, canchas deportivas, Veracruz
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/Aprende.Mx/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		Aprende.Mx
+	]]></proyecto>
+
+</recurso>

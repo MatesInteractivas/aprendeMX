@@ -1,0 +1,39 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "áreas", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "área", 
+    "superficie", 
+    "polígono", 
+    "triángulo", 
+    "rectángulo", 
+    "paralelogramo", 
+    "base", 
+    "altura", 
+    "descomponer", 
+    "dividir", 
+    "partir", 
+    "agregar", 
+    "quitar"
+  ], 
+  "descripcion": "Aprenderás a calcular el área de figuras poligonales, por ejemplo terrenos con formas irregulares. Aprenderás a dividir las figuras poligonales en triángulos, rectángulos y paralelogramos. Obtendrás las áreas de cada parte de manera directa y luego sumarás las áreas de cada parte. En ocasiones la descomposición se hace quitando algunas figuras y en esos casos hay que restar esas áreas.",
+  "resena": "Cálculo de áreas de polígonos mediante descomposición en triángulos, rectángulos y paralelogramos.",
+  "titulo": "Áreas de polígonos", 
+  "id": "PA6_OA_MA_3UNAM_034"
+}

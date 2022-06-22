@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_006"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Decimales y fracciones en la recta
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad aprenderás a ubicar fracciones y decimales en la recta numérica. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, fracciones, decimales, Sentido numérico y pensamiento algebraico, Números y sistemas de numeración
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, número racional, número decimal, aproximación, densidad, recta numérica
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

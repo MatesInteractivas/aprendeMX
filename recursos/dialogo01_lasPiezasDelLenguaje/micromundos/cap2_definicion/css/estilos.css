@@ -1,0 +1,114 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('img/fondo.jpg') no-repeat;
+}
+
+.encabezado{
+    width: 95%;
+    height: auto;
+    margin: 15px auto;
+    padding: 10px 0px;
+    text-align: center;
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    background-color: rgba(139,237,234,.7);
+}
+
+.definition{
+    position: relative;
+    width: 95%;
+    min-height: 120px;
+    height: auto;
+    margin: 0px auto 10px auto;
+    background-color: rgba(255,255,255,0.5);
+}
+.definition:first-child{
+    margin-top: 30px;
+    vertical-align: middle;
+}
+.definition.tutor{
+     min-height: 150px;
+}
+.img{
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    width: 115px;
+    /*display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;*/
+}
+.img.rae{
+    margin-left: 10px;
+    height: auto;
+}
+.img.alumno{
+    height: 100px;
+    /*background-color: #e0b003;*/
+}
+.img.tutor{
+    height: 100px;
+    border: 2px solid #898989;
+    background-color: #8acfcb;
+}
+
+.txt{
+    /*vertical-align: middle;
+    display: inline-block;*/
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    width: 420px;
+    height: auto;
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 24px;
+    line-height: 25px;
+    text-align: left;
+    color: #000;
+    padding: 10px;
+}
+
+
+
+#next{
+    position: absolute;
+    width: 141px;
+    height: 44px;
+    cursor: pointer;
+    bottom: 0px;
+    background: url('img/bt_continuar.png') no-repeat;
+    left: 50%;
+    margin-left: -70px;
+}
+#next:hover,#next:active{
+    background: url('img/bt_continuar_over.png') no-repeat;
+}
+
+.slowShow{
+    -webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 1.5s;
+}
+
+.e-oculto{
+    visibility: hidden;
+    opacity : 0;
+}
+
+.e-inactivo{
+    
+}

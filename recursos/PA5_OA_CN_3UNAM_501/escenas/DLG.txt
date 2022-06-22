@@ -1,0 +1,280 @@
+﻿fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\n\n'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=pensando
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\n\n¡Hola Juan!\n\n¿Qué te preocupa?'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\nHola Lupe.\nEs que me dejaron una tarea que no se hacer.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=saludando
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\n¿De veras?\n¿De qué se trata?'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\nTengo que calcular la superficie de un terreno que tiene una forma bien mafufa.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\n¡Eso no puede ser tan complicado!'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=asombrada
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\nEs que no sabes lo feo que está el terreno.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=asombrado
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\nA ver, enséñamelo.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+fixData(N)
+str='figura:=0'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nAquí está un dibujo.\n¡Pa que te des un ligero quemón!'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=senyalando
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\n¡Ajá!'
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=pensativa
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\n¿Verdad que no está tan fácil?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\n¡Facilísimo!\nSólo tienes que partir la figura en triángulos. Lo demás es trivial.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\n¿Pero cómo voy a hacer eso?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\nNo hay una receta, pero siempre se puede.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]='\n\nA ver.\n¡Hazlo tú!'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=sorprendido
+str='figura:=1'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nAquí tienes.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\n¡Caray!\n\¿Por qué no se me habrá ocurrido antes?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=pensando
+makeFig(N,1,'')
+DIALOGO[N,lupe]='\n\nQuizás porque nunca habás visto un ejemplo.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=-1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nPonme otro ejemplo. A ver si lo puedo triangular.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+makeFig(N,1,'')
+DIALOGO[N,lupe]='De acuerdo. Déjame pensar . . .'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str='figura:=-1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\n¡Que no sea muy difícil!'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=senyalando
+str='figura:=2'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nA ver qué te parece éste.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=senyalando
+N=N+1
+
+fixData(N)
+str='figura:=2'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nAhora déjame pensar a mí...'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=pensando
+str='figura:=2'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nNomás ve trazando rectas entre los vértices.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=3'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\n¡Ya se!\nEmpiezo con ésta.'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nBuen comienzo.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=4'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nAhora sigo con ésta.'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nMuy bien.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=5'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nSigo con ésta.'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Y ahora?'
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=6'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n¡Termino con ésta!\n\nYa quedó lista la triangulación.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=senyalando
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Perfecto!'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nGracias.\nCreo que ya entendí.'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\n\nMe parece que sí.'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\n¡Con esta idea ya puedo calcular el área de cualquier terreno!'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=senyalando
+makeFig(N,1,str)
+DIALOGO[N,lupe]='\nNo de cualquiera.\nSólo de los que tienen forma poligonal.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\n¿Qué quieres decir?'
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=pensando
+str='figura:=7'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Que si el terreno tiene orillas curvas, como éste, no lo vas a poder triangular.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Claro!\nTienes razón.\nEsto sólo sirve si tienen orillas rectas.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=sorprendido
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Efectivamente.'
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\nPero por ahora eso me basta. Me voy a medir las bases y las alturas de estos triángulos para calcular sus áreas.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí.\nOrganiza bien tu trabajo, haz una tabla con los datos de cada triángulo.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\nEso haré, la base, la altura y luego el área de cada uno.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Y al final sólo tendrás que sumar las áreas de todos los triángulos.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str='figura:=-1'
+makeFig(N,0,str)
+DIALOGO[N,juan]='\n\nGracias de nuevo y ¡hasta la vista!'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=saludando
+makeFig(N,0,str)
+DIALOGO[N,lupe]='\nDe nada.\nMe da gusto verte contento.\n\nCiao.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=saludando
+N=N+1
+
+aux='FIN DEL DIALOGO, NO BORRAR'
+fixData(N)
+makeFig(N,0,'')
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+makeFig(N,1,'')
+DIALOGO[N,lupe]=''
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=parada
+N=N+1

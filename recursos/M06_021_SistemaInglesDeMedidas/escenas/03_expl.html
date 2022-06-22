@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, metro, kilómetro, centímetro, pulgada, pié, yarda, milla, litro, galón, cuarto, pinta, gramo, kilogramo, libra, cuarto de libra, tonelada.">
+
+<head>
+
+	<title>El sistema inglés de medidas</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' y='0' ancho='1024' alto='568' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='REGLA' x='20' y='320' ancho='990' alto='180' dibujar-si='muestraRegleta' despl_imagen='arr-izq' archivo='ReglaProporcion.html'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='btn0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Pulgada (in)' expresión='(btn0.x,btn0.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda longitud|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=0\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=0'">
+   <param name="C_02" value="id='btn0_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Pulgada (in)' expresión='(btn0.x,btn0.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo longitud|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==0' pos_mensajes='centro'">
+   <param name="C_03" value="id='btn1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Pie (ft)' expresión='(btn1.x,btn1.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda longitud|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=1\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='btn1_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Pie (ft)' expresión='(btn1.x,btn1.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo longitud|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==1' pos_mensajes='centro'">
+   <param name="C_05" value="id='btn2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Yarda (yd)' expresión='(btn2.x,btn2.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda metro|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=2\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=2' pos_mensajes='centro'">
+   <param name="C_06" value="id='btn2_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Yarda (yd)' expresión='(btn2.x,btn2.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo metro|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==2' pos_mensajes='centro'">
+   <param name="C_07" value="id='btn3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Milla (mi)' expresión='(btn3.x,btn3.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda metro|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=3\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=3' pos_mensajes='centro'">
+   <param name="C_08" value="id='btn3_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Milla (mi)' expresión='(btn3.x,btn3.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo metro|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==3' pos_mensajes='centro'">
+   <param name="C_09" value="id='btn4' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Libra (lb)' expresión='(btn4.x,btn4.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda masa|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=4\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=4' pos_mensajes='centro'">
+   <param name="C_10" value="id='btn4_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Libra (lb)' expresión='(btn4.x,btn4.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo masa|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==4' pos_mensajes='centro'">
+   <param name="C_11" value="id='btn5' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Onza (oz)' expresión='(btn5.x,btn5.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda masa|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=5\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=5' pos_mensajes='centro'">
+   <param name="C_12" value="id='btn5_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Onza (oz)' expresión='(btn5.x,btn5.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo masa|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==5' pos_mensajes='centro'">
+   <param name="C_13" value="id='btn6' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Galón (gal)' expresión='(btn6.x,btn6.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda volumen|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=6\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=6' pos_mensajes='centro'">
+   <param name="C_14" value="id='btn6_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Galón (gal)' expresión='(btn6.x,btn6.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo volumen|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==6' pos_mensajes='centro'">
+   <param name="C_15" value="id='btn7' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Onza líquida (fl. oz)' expresión='(btn7.x,btn7.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='20' imagen='_STYLE_|class=btnAprendeMx lavanda volumen|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='cualBtn=7\nnewExercise()\ndoPlay(0)' dibujar-si='cualBtn!=7' pos_mensajes='centro'">
+   <param name="C_16" value="id='btn7_sel' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Onza líquida (fl. oz)' expresión='(btn7.x,btn7.y,btn.w,btn.h)' fijo='sí' visible='sí' color='blanco' color-int='2ecc71' negrita='sí' fuente puntos='20' imagen='_STYLE_|class=btnAprendeMx amarillo volumen|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)' dibujar-si='cualBtn==7' pos_mensajes='centro'">
+   <param name="C_17" value="id='swapBtn' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(E2._w-46-45,bInfo.y+(bInfo.h-46)/2,46,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda swap|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='swapVals()\ndoPlay(0)' dibujar-si='0&&(cualBtn!=-1)' pos_mensajes='centro'">
+   <param name="C_18" value="id='verificar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Verificar' expresión='((E2._w-200)/2,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda verificar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='verificar()\ndoPlay(0)' activo-si='(!bien)&&(cualBtn!=-1)' pos_mensajes='centro'">
+   <param name="C_19" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro ejemplo' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='newExercise()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_20" value="id='ayuda' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Ayuda' expresión='(20,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda help|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='muestraRegleta=1-muestraRegleta\ndoPlay(0)' activo-si='(verificado)&&(!bien)' pos_mensajes='centro'">
+   <param name="C_21" value="id='txt1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='[txt1.val]' expresión='(txt1.x,txt1.y,txt1.w,txt1.h)' fijo='sí' visible='sí' color='34495e' color-int='blanco' fuente puntos='21' imagen='_STYLE_|border=1|borderColor=34495e' acción='calcular' parámetro='showKeyboard(&squot;txt1.val&squot;,txt1.x,txt1.y,txt1.w,txt1.h)\ndoPlay(0)' dibujar-si='cualBtn!=-1' activo-si='!bien' pos_mensajes='centro'">
+   <param name="A_01" value="id='UNIDADES' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='15' filas='2' expresión='SIN=0;PLU=1'">
+   <param name="A_02" value="id='initUnidades()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='U_IN=0;UNIDADES[U_IN,0]=&squot;pulgada&squot;;UNIDADES[U_IN,1]=&squot;pulgadas&squot;;;U_FT=1;UNIDADES[U_FT,0]=&squot;pie&squot;;UNIDADES[U_FT,1]=&squot;pies&squot;;;U_YD=2;UNIDADES[U_YD,0]=&squot;yarda&squot;;UNIDADES[U_YD,1]=&squot;yardas&squot;;;U_MI=3;UNIDADES[U_MI,0]=&squot;milla&squot;;UNIDADES[U_MI,1]=&squot;millas&squot;;;U_LB=4;UNIDADES[U_LB,0]=&squot;libra&squot;;UNIDADES[U_LB,1]=&squot;libras&squot;;;U_OZ=5;UNIDADES[U_OZ,0]=&squot;onza&squot;;UNIDADES[U_OZ,1]=&squot;onzas&squot;;;U_GAL=6;UNIDADES[U_GAL,0]=&squot;galón&squot;;UNIDADES[U_GAL,1]=&squot;galones&squot;;;U_FLOZ=7;UNIDADES[U_FLOZ,0]=&squot;onza líquida&squot;;UNIDADES[U_FLOZ,1]=&squot;onzas líquidas&squot;;;U_CM=8;UNIDADES[U_CM,0]=&squot;centímetro&squot;;UNIDADES[U_CM,1]=&squot;centímetros&squot;;;U_M=9;UNIDADES[U_M,0]=&squot;metro&squot;;UNIDADES[U_M,1]=&squot;metros&squot;;;U_KM=10;UNIDADES[U_KM,0]=&squot;kilómetro&squot;;UNIDADES[U_KM,1]=&squot;kilómetros&squot;;;U_G=11;UNIDADES[U_G,0]=&squot;gramo&squot;;UNIDADES[U_G,1]=&squot;gramos&squot;;;U_KG=12;UNIDADES[U_KG,0]=&squot;kilogramo&squot;;UNIDADES[U_KG,1]=&squot;kilogramos&squot;;;U_L=13;UNIDADES[U_L,0]=&squot;litro&squot;;UNIDADES[U_L,1]=&squot;litros&squot;;;U_ML=14;UNIDADES[U_ML,0]=&squot;mililitro&squot;;UNIDADES[U_ML,1]=&squot;mililitros&squot;;'">
+   <param name="A_03" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_04" value="id='initBtns()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='btn.sepH=10;btn.sepV=15;btn.x=20;btn.y=100;btn.w=(E2._w -2*btn.x -3*btn.sepH)/4;btn.h=46;;btn0.x=btn.x;btn0.y=btn.y;btn4.x=btn.x+btn.w+btn.sepH;btn4.y=btn.y;btn2.x=btn.x+2*(btn.w+btn.sepH);btn2.y=btn.y;btn6.x=btn.x+3*(btn.w+btn.sepH);btn6.y=btn.y;;btn1.x=btn.x;btn1.y=btn.y+(btn.h+btn.sepV);btn5.x=btn.x+(btn.w+btn.sepH);btn5.y=btn.y+(btn.h+btn.sepV);btn3.x=btn.x+2*(btn.w+btn.sepH);btn3.y=btn.y+(btn.h+btn.sepV);btn7.x=btn.x+3*(btn.w+btn.sepH);btn7.y=btn.y+(btn.h+btn.sepV);'">
+   <param name="A_05" value="id='swapVals()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='tmp=unit0;unit0=unit1;unit1=tmp;;tmp=unit0_name;unit0_name=unit1_name;unit1_name=tmp;;tmp=conv;conv=convR;convR=tmp;;maxVal=10;val=ent(maxVal/2);;args=&squot;0,&squot;+unit0+&squot;,0,&squot;+unit1+&squot;,0&squot;;REGLA.exec(&squot;setCfg&squot;,args);args=&squot;1,&squot;+conv+&squot;,&squot;+(1/maxVal)+&squot;,&squot;+val;REGLA.exec(&squot;setPos&squot;,args);REGLA.update()'">
+   <param name="A_06" value="id='newExercise()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='muestraRegleta=0;verificado=0;bien=0;bien1=0;bien2=0;txt1.val=&squot;&squot;;;_Eval_(&squot;ejercicio&squot;+cualBtn+&squot;()&squot;);'">
+   <param name="A_07" value="id='ejercicio0()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;pulgada a centímetro&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?0.01:0;multiplo=0;multiplo_unit=&squot;m&squot;;multiplo_name=U_M;;unit0=&squot;cm&squot;;unit0_name=U_CM;unit1=&squot;in&squot;;unit1_name=U_IN;conv=2.54;convR=0.3937;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val);'">
+   <param name="A_08" value="id='ejercicio1()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;pie a centímetro&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?0.01:0;multiplo_unit=&squot;m&squot;;multiplo_name=U_M;;unit0=&squot;cm&squot;;unit0_name=U_CM;unit1=&squot;ft&squot;;unit1_name=U_FT;conv=30.48;convR=0.0328;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_09" value="id='ejercicio2()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;yarda a centímetro&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?0.01:0;multiplo_unit=&squot;m&squot;;multiplo_name=U_M;;unit0=&squot;cm&squot;;unit0_name=U_CM;unit1=&squot;yd&squot;;unit1_name=U_YD;conv=91.44;convR=0.0109;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_10" value="id='ejercicio3()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;milla a kilómetro&squot;' hacer='num0=10+ent(rnd*200);multiplo=0;;unit0=&squot;km&squot;;unit0_name=U_KM;unit1=&squot;mi&squot;;unit1_name=U_MI;conv=1.6093;convR=0.6213;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_11" value="id='ejercicio4()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;libra a gramo&squot;' hacer='num0=10+ent(rnd*10);multiplo=(rnd<0.5)?0.001:0;multiplo_unit=&squot;kg&squot;;multiplo_name=U_KG;;unit0=&squot;g&squot;;unit0_name=U_G;unit1=&squot;lb&squot;;unit1_name=U_LB;conv=453.592;convR=0.0022;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_12" value="id='ejercicio5()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;onza a gramo&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?0.001:0;multiplo_unit=&squot;kg&squot;;multiplo_name=U_KG;;unit0=&squot;g&squot;;unit0_name=U_G;unit1=&squot;oz&squot;;unit1_name=U_OZ;conv=28.3495;convR=0.0352;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_13" value="id='ejercicio6()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;galón a litro&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?1000:0;multiplo_unit=&squot;ml&squot;;multiplo_name=U_ML;;unit0=&squot;l&squot;;unit0_name=U_L;unit1=&squot;gal&squot;;unit1_name=U_GAL;conv=3.7854;convR=0.2641;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_14" value="id='ejercicio7()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='com=&squot;onza líquida a mililitro&squot;' hacer='num0=10+ent(rnd*200);multiplo=(rnd<0.5)?0.001:0;multiplo_unit=&squot;l&squot;;multiplo_name=U_L;;unit0=&squot;ml&squot;;unit0_name=U_ML;unit1=&squot;fl. oz&squot;;unit1_name=U_FLOZ;conv=29.5735;convR=0.0338;maxVal=num0+10;val=1;;confRegleta(unit0,unit1,conv,1/maxVal,val)'">
+   <param name="A_15" value="id='confRegleta(unit0,unit1,conv,maxVal,val)' algoritmo='sí' expresión='0' algoritmo='sí' Local='args,wlocal' hacer='medidaPreg=&squot;                          &squot;+UNIDADES[unit0_name,PLU]+&squot; (&squot;+unit0+&squot;)&squot;;tmpW=strWidth(medidaPreg);;medidaPreg2=&squot;                          &squot;+UNIDADES[multiplo_name,PLU]+&squot; (&squot;+multiplo_unit+&squot;)&squot;;tmpW2=strWidth(medidaPreg2);;wlocal=(multiplo==0)?tmpW:tmpW2;txt1.x=(3*E2._w/4-wlocal/2 +8);txt1.y=bInfo.y+50 -17;;args=&squot;0,&squot;+unit0+&squot;,0,&squot;+unit1+&squot;,0&squot;;REGLA.exec(&squot;setCfg&squot;,args);args=&squot;1,&squot;+conv+&squot;,&squot;+maxVal+&squot;,&squot;+val;REGLA.exec(&squot;setPos&squot;,args);REGLA.update();;'">
+   <param name="A_16" value="id='verificar()' algoritmo='sí' expresión='0' algoritmo='sí' Local='bien1,bien2' hacer='verificado=1;;bien1=igual(txt1.val,(num0*conv));bien2=igual(txt1.val,(num0*conv*multiplo));;bien=(multiplo==0)?bien1:bien2;;_Trace_((txt1.val)+&squot;,&squot;+(num0*conv)+&squot;,&squot;+(num0*conv*multiplo)+&squot;,&squot;+bien1+&squot;,&squot;+bien2+&squot;,&squot;+bien)'">
+   <param name="A_17" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_18" value="id='strWidth(str)' expresión='_strWidth_(str,&squot;SansSerif&squot;,&squot;PLAIN&squot;,&squot;23&squot;)'">
+   <param name="A_19" value="id='igual(a,b)' expresión='abs(a-b)<0.00005'">
+   <param name="A_20" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_21" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_22" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_23" value="id='showKeyboard(val,x,y,w,h)' algoritmo='sí' expresión='x' algoritmo='sí' inicio='showShadeCover()' hacer='varOpenKeyboard=val;teclado.S=_Eval_(val);;TCL.set(&squot;ALING&squot;,&squot;center&squot;);TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,x+&squot;,&squot;+y+&squot;,&squot;+w+&squot;,&squot;+h);TCL.exec(&squot;setParams&squot;,&squot;5,4,0&squot;);TCL.update();'">
+   <param name="A_24" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' Local='tmpStr' inicio='hideShadeCover()' hacer='tmpStr=varOpenKeyboard+&squot;:=&squot;+Teclado.S;_Eval_(tmpStr);tmpStr=varOpenKeyboard+&squot;:=&squot;+&squot;_Num_(_NumToStr_(&squot;+varOpenKeyboard+&squot;,4))&squot;;_Eval_(tmpStr);;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;TCL.ready=0;'">
+   <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Ponte a prueba realizando conversiones entre unidades.&squot;' hacer='cualBtn=-1;;initUnidades();initBtns();;imgGood=&squot;images/icon_ok.png&squot;;imgBad=&squot;images/icon_wrong.png&squot;;;bInfo.w=E2._w-40;bInfo.h=98;bInfo.x=(E2._w-bInfo.w)/2;bInfo.y=213;;txt1.w=100;txt1.h=32'">
+   <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='aux=(TCL.ready)?TCL.set(&squot;mustClear&squot;,1):0;aux=(TCL.ready)?TCL.update():0'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[17,64]' texto='Escoge la unidad que quieres repasar y realiza la conversión.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='E2._w-40'">
+   <param name="G_03" value="espacio='E2' tipo='macro' dibujar-si='cualBtn!=-1' expresión='macros/borde.txt' nombre='bInfo'">
+   <param name="G_04" value="espacio='E2' tipo='imagen' dibujar-si='verificado' coord_abs='sí' expresión='(E2._w-60,bInfo.y+50-2,1,1)' archivo='[(bien)?imgGood:imgBad]'">
+   <param name="G_05" value="espacio='E2' tipo='imagen' dibujar-si='cualBtn!=-1' coord_abs='sí' expresión='(490,238)' archivo='images/igual_chico.png'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='cualBtn!=-1' expresión='[E2._w/4,bInfo.y+50,0,0]' texto='[num0] [UNIDADES[unit1_name,PLU]] ([unit1])' fuente='SansSerif,PLAIN,22' decimales='3' fijo='no'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='3498db' dibujar-si='cualBtn!=-1' expresión='[3*E2._w/4,bInfo.y+50,0,0]' texto='[(multiplo==0)?medidaPreg:medidaPreg2]' fuente='SansSerif,PLAIN,23' decimales='3' fijo='no'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png'
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0'
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2'
+
+</script>
+
+</body>
+
+</html>

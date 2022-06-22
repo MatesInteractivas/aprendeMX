@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<!-- mediaelement-->
+		<script src="mediaelement/jquery.js"></script>	
+		<!--<script src="mediaelement/mediaelement-and-player.min.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.min.css" />-->
+		<script src="mediaelement/mediaelement-and-player.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.css" />
+		<link rel="stylesheet" href="mediaelement/mejs-skins.css" />
+			
+		<title>Blog sobre Chikungunya</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			
+			<div class="blog">
+			
+				<img class='imagen mosquito' src="img/mosquito.png" />
+				
+				<h1>Chikunguña</h1>
+				
+				<p>
+				El mosquito Chikungunya o también Chikunguña pertenece a la familia de los <span class="expr par1" data-id="mosquitos Aedes">mosquitos Aedes</span>.
+				Es llamado así porque es el mosquito que produce la <span class="expr par1" data-id="artritis epidémica">artritis epidémica</span> chikunguña o fiebre de chikunguña, una enfermedad que se transmite de forma similar al <span class="expr par1" data-id="dengue">dengue</span>.
+				En los últimos meses se ha convertido en una epidemia <span class="expr par1" data-id="latente">latente</span> en algunos países de Latinoamérica como Brasil y ha llegado a México para extenderse poco a poco por todo el país.
+				</p>
+				
+				<h2><span class="expr par2" data-id="sintomatología">Sintomatología</span> y riesgos del Chikungunya</h2>
+				<p>
+				La fiebre de chikunguña se presenta con una <span class="expr par2" data-id="fase febril">fase febril</span> <span class="expr par2" data-id="agudo">aguda</span> que dura de 2 a 5 días, seguida de un período de dolores en las <span class="expr par2" data-id="articulaciones de las extremidades">articulaciones de las extremidades</span>; este dolor puede persistir semanas, meses o años.
+				<br>Las personas recién nacidas, los mayores de 65 años y las personas con <span class="expr par2" data-id="presión sanguínea alta">presión sanguínea alta</span>, <span class="expr par2" data-id="diabetes">diabetes</span>, o problemas <span class="expr par2" data-id="coronario">coronarios</span> son los más <span class="expr par2" data-id="propenso">propensos</span> a tener la enfermedad en caso de picadura del mosquito.
+				En estos momentos no existe ningún tratamiento específico para evitar la enfermedad por lo que se recomienda acudir lo antes posible al médico.
+				</p>
+				
+				<h2>Los casos de Chikungunya en México</h2>
+				<p>
+				Según datos del Centro Nacional de Programas Preventivos y Control de Enfermedades -Cenaprece-, la Secretaría de Salud de México ha utilizado insecticidas que no tuvieron ningún resultado efectivo contra el mosquito ni del dengue ni del chikungunya.
+				Tras un exhaustivo análisis se encontró que el mosquito es resistente a los piretroides, por lo que comenzaron a usar organofosforados y carbamatos, compuestos que tuvieron mayor efectividad en los estados de Guerrero, Chiapas, Michoacán y Yucatán, lugares donde existía una mayor presencia de casos de la enfermedad.
+				</p>
+				
+				<img class='imagen cuadro' src="img/cuadro.png" />
+				
+				<h2>Presencia del Chikungunya en América Latina</h2>
+				<p>
+				Desde 1952 hasta hoy, se reportaron casos a causa del mosquito Chikungunya, que lleva una larga trayectoria de casos por todo el planeta. Sólo en América Latina, el Caribe y Estados Unidos, ya ha causado 1.379.788 de casos desde que apareciera en el año 2013 el primer caso de Chikungunya en esta región.
+				</p>
+				
+			</div>
+			
+			
+		</div>
+		
+		<script>
+
+			var inicio = true;
+			var mwId = "cap3_blog";
+			
+			
+			function resaltar(par){
+				$('span.expr.e-resaltado').removeClass('e-resaltado');
+				$('span.expr.'+par).addClass('e-resaltado').on('click',function(){
+					$(this).off();
+					$(this).removeClass('e-resaltado').addClass('e-presionado');
+					var txt = $(this).data('id');
+					setAnswer(txt,500);
+				});
+			}
+			
+			
+			/**** chat *****/
+			
+			function gotoNextQuestion(delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function setAnswer(str,delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "setAnswer", params: { id:mwId , value: str } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function disableChat(){
+				var mensajeTipoSet = {
+					command: "disableChat", 
+					params: { 
+						id: mwId
+					}
+				};
+				var padre = window.parent;
+				padre.postMessage(mensajeTipoSet, "*");
+			}
+		
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function showTutorIntervention(text, emotion, delay){
+				var _this = this;
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "showTutorIntervention", params: {id: mwId , text: text, emotion: emotion } };
+					padre.postMessage(mensajeTipoSet, "*");	
+				},delay);
+			}
+
+			window.addEventListener("message", receiveMessage, false);
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="show"){
+						
+					} else 
+					if(evt.data.name=="hide"){
+						
+					} else 
+					if(evt.data.name=="resaltar"){
+						resaltar(evt.data.value);
+					} else 
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							inicio = false;
+							showLetra();
+						} else {
+							//lo que se tenga que hacer con base en historial
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='audioEnded' && pair[1]=='true'){
+									inicio = false;
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+
+
+			$(document).ready(function(){
+				
+				$('.mejs-wmp').addClass('e-oculto');
+				
+				//showPlayer();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+
+		</script>
+					
+        </body>
+</html>

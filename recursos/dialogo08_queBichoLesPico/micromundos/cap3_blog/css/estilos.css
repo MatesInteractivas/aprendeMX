@@ -1,0 +1,86 @@
+body{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+p, div {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	width: 644px;
+	height: 548px;
+	border: 0px solid #000000;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+div.blog{
+	position: absolute;
+	width: 582px;
+	height: 477px;
+	top: 20px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	padding: 20px;
+	overflow: auto;
+}
+
+div.blog > h1{
+	display: inline-block;
+	background-color: #a2a9ec;
+	padding: 10px;
+	border-radius: 15px;
+	font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	text-align: center;
+	color: #000;
+	margin-bottom: 15px !important;
+	margin-left: 50px;
+}
+
+div.blog > h2{
+	font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	text-align: left;
+	color: #525bb3;
+}
+div.blog > p{
+	font-size: 24px;
+	line-height: 25px;
+	margin-top: 0px;
+	margin-right: 20px;
+}
+
+div.blog > p:first-child{
+	margin-top: 20px;
+}
+
+span.expr.e-resaltado{
+	cursor: pointer;
+	background-color: #83dcf2;
+}
+span.expr.e-presionado{
+	cursor: default;
+	background-color: #a5c1c8;
+}
+
+img.imagen.mosquito{
+	float: right;
+	margin: 0px 0px 0px 20px;
+}
+img.imagen.cuadro{
+	position: relative;
+	margin-left: 10px;
+}
+
+.e-oculto{
+	display: none;
+	opacity: 0;
+}

@@ -1,0 +1,11 @@
+id='TIPO_FIGURA' constante='s&iacute;' expresi&oacute;n='0' evaluar='una-sola-vez'
+id='VERTICES' constante='s&iacute;' expresi&oacute;n='3' evaluar='una-sola-vez'
+id='MIN_VERTICES' constante='s&iacute;' expresi&oacute;n='3' evaluar='una-sola-vez'
+id='RADIO_1' constante='s&iacute;' expresi&oacute;n='1' evaluar='una-sola-vez'
+id='RADIO_2' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+id='ANCHO_P' constante='s&iacute;' expresi&oacute;n='1' evaluar='una-sola-vez'
+id='ANCHO_L' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+id='petalo.n' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+id='petalo.theta' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+id='petalo.n' constante='s&iacute;' expresi&oacute;n='2' evaluar='una-sola-vez'
+

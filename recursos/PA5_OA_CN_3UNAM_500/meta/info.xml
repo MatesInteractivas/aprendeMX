@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_500"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		¿Qué les pasa a los cuerpos cuando se les transfiere calor?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad visualizarás el calor como el flujo de energía térmica que se transfiere del cuerpo más caliente al más frío cuando estos cuerpos se ponen en contacto o se acercan lo suficiente. Al cambiar la temperatura de los objetos, apreciarás cómo cambian de color conforme sus temperaturas cambian. Reconocerás que al poner en contacto dos cuerpos a temperaturas diferentes, ambos llegan a una temperatura intermedia. Explorarás situaciones en que el hielo puede transferir calor a otro cuerpo, e identificarás que hay materiales que conducen el calor mejor que otros. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, ¿cómo se transfiere el calor entre materiales?, experimentación con procesos de transferencia del calor, características de los materiales conductores y aislantes del calor y su aplicación en actividades cotidianas, prevención de accidentes relacionados con la transferencia del calor
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Calor, energía, efectos del calor en la materia, derretir, fusión, evaporación, calentar, calentamiento, temperatura, conducción del calor, transferencia de calor, flujo de calor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,36 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/avion.jpg') no-repeat;
+}
+
+.oracionIni{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 95%;
+    height: auto;
+    text-align: center;
+}
+.oracionIni.left{
+    text-align: left;
+    width: 92%;
+}
+
+p{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 30px;
+    line-height: 28px;
+}

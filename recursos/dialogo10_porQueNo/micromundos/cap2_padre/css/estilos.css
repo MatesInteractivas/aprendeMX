@@ -1,0 +1,41 @@
+body{
+    overflow: hidden;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('img/fondo.jpg') no-repeat;
+}
+
+#contenedor > .globo{
+    width: 420px;
+    height: 250px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    padding: 20px 30px 50px 20px;
+    background: url('img/globo.png') no-repeat;
+}
+#contenedor > .globo > p{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    text-align: left;
+    margin: 8px;
+    width: 90%;
+}
+
+.e-oculto{
+    visibility: hidden;
+    opacity : 0;
+}

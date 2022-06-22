@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Esquema argumentación</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			
+			<div class="seccion presentacion" data-id="1">
+				<div class="encabezado">Presentación del tema<br><br></div>
+				<div class="texto">La razón más común que me dan mis padres para negarme un permiso son mis malas calificaciones.</div>
+			</div>
+			<div class="seccion postura e-oculto" data-id="2">
+				<div class="encabezado">Postura del autor e introducción del argumento</div>
+				<div class="texto">Yo creo que no es una razón válida y para probarlo les argumento lo siguiente.</div>
+			</div>
+			<div class="seccion argumento e-oculto" data-id="3">
+				<div class="encabezado">Argumento<br><br></div>
+				<div class="texto">El estado de ánimo de los estudiantes es fundamental en el rendimiento escolar.</div>
+			</div>
+			<div class="seccion dato e-oculto" data-id="4">
+				<div class="encabezado">Dato 1<br><br></div>
+				<div class="texto">Se ha probado que las personas felices tienen mejores resultados en la escuela.</div>
+			</div>
+			<div class="seccion dato e-oculto" data-id="5">
+				<div class="encabezado">Dato 2</div>
+				<div class="texto">Estar con mis amigos me hace feliz.</div>
+			</div>
+			<div class="seccion conclusion e-oculto" data-id="6">
+				<div class="encabezado">Conclusión<br><br><br><br></div>
+				<div class="texto">Por lo tanto, salir con ellos permitirá que mejore mi rendimiento escolar. Al contrario, negarme el permiso sólo hará que mis calificaciones empeoren.</div>
+			</div>
+
+			<button id='bt_mas' class='btn'>Avanzar</button>
+
+			
+		</div>
+		
+		<script>
+		
+			var n = 1;
+			var nTot = 6;
+			var mwId = "cap2_cuadro";
+			
+			function init(){
+				$("#bt_mas").removeClass("e-oculto").on("click",function(){
+					n++;
+					$('div.seccion[data-id="'+n+'"]').removeClass("e-oculto");
+					if(n==nTot){
+						$(this).off();
+						$(this).addClass("e-oculto");
+						nextQ();
+						addMwSettings("inicio","false");
+					}
+				});
+			}
+
+			function nextQ(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function setAnswer(str,delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "setAnswer", params: { id:mwId , value: str } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+		
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							$('div.seccion').removeClass("e-oculto");
+							$("#bt_mas").remove();
+						} else {
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='inicio' && pair[1]=='false'){
+									$('div.seccion').removeClass("e-oculto");
+									$("#bt_mas").remove();
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			  
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				
+				init();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: { id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+				
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

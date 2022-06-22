@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_033"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Resta de fracciones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad podrás explorar cómo se realizan las restas de fracciones aunque ninguno de los denominadores sean múltiplo del otro.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, fracciones, Sentido numérico y pensamiento algebraico, Problemas aditivos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Fracciones, denominadores, numeradores, múltiplos, mínimo múltiplo común, suma de fracciones, resta de fracciones, fracciones equivalentes
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

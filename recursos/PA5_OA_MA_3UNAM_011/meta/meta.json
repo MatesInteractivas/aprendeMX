@@ -1,0 +1,36 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Círculo", 
+    "circunferencia", 
+    "radio", 
+    "diámetro", 
+    "centro", 
+    "área", 
+    "perímetro", 
+    "polígono regular", 
+    "sector circular", 
+    "arco", 
+    "tangente", 
+    "secante"
+  ], 
+  "descripcion": "Al trabajar con esta unidad aprenderás a reconocer los elementos del círculo y la circunferencia y descubrirás sus propiedades, además podrás usar dos herramientas que te presenta el programa para ubicar el centro de una circunferencia.",
+  "resena": "Elementos de la circunferencia, rectas características y métodos de trazado.",
+  "titulo": "El círculo y la circunferencia", 
+  "id": "PA5_OA_MA_3UNAM_011"
+}

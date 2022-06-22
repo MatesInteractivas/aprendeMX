@@ -1,0 +1,5 @@
+@import 'icons.css';
+
+div#DISP_IF{
+	box-shadow: 3px 3px 2px #ccc;
+}

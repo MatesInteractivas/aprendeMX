@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_035"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Problemas de comparación de razones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		¿Cómo saber cuál oferta es mejor: 30 canicas por 80 pesos o 22 canicas por 55 pesos? Éste es un problema de comparación de razones, o de comparación de fracciones, según se quiera ver. Para resolverlo es necesario que aprendas a comparar todo tipo de razones y fracciones. Esta unidad te ayudará a realizar dichas comparaciones. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, proporcionalidad, fracciones, Manejo de la información, Proporcionalidad y funciones
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, razones, fracciones, equivalencia, comparación de fracciones, comparación de razones
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

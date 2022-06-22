@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/galeria.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type="text/javascript" src="js/Galeria.js" ></script>
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Galería de imágenes</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			<p class='oracionIni'>Es un objeto que vuela a grandes velocidades.</p>
+			<div class='slider'></div>
+			<a href='#' class='bt_seguir inactive'></a>
+		</div>
+		
+		<script>
+		
+			var inicio = true;
+			var galeria = new Galeria({});
+			galeria.init();
+
+			function nextQ(){
+				if(inicio){
+					inicio=false;
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: {id: 'cap3_preg1_objetos' } };
+					padre.postMessage(mensajeTipoSet, "*");
+				}
+			}
+			
+    
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap3_preg1_objetos' } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

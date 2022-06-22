@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_009"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Múltiplos y divisores
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Explora qué tienen que ver los engranes con los múltiplos y divisores de dos números. 
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, Sentido numérico y pensamiento algebraico, Números y sistemas de numeración
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, múltiplos, divisores, mínimo común múltiplo, máximo común divisor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

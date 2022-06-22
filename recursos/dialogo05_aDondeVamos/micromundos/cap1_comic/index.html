@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/comic.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Cómic</title>
+		
+	</head>
+	
+        
+        <body onload="setBts();" style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<img id="cartoon" src="img/1.jpg"/>
+			<p id='pensamiento'></p>
+			<a id="previous" class="desactivado" href="#"></a>		
+			<a id="next" href="#"></a>
+
+		</div>
+		
+		<script>
+			var mwId = 'cap1_comic';
+			var totCartoons = 7;
+			var nCartoon = 1;
+			var inicio = true;
+			
+			var textos = [
+				      '¡Justo lo que quería!<br>',
+				      '¡Está claro que mi tía no tiene una tableta!',
+				      'Esta vez por lo menos le atinó a algo…',
+				      '¡Ay, con mi tía! ¡Esta mochila no se parece en nada a la que le pedí!'
+				      ]
+
+			
+			var next = function(){
+					nCartoon++;
+					setCartoon();
+					if(nCartoon==totCartoons){
+						final();
+					}
+				}
+				
+			var previous = function(){
+					nCartoon--;
+					setCartoon();
+					
+				}
+				
+			function setCartoon(){
+								
+				$("#cartoon").attr("src","img/"+nCartoon+".jpg");
+				if(nCartoon==7){
+					$("#pensamiento").css('display','block');
+				} else {
+					$("#pensamiento").css('display','none');
+				}
+				
+				if(nCartoon==1){
+					$("#previous").unbind("click");
+					$("#previous").addClass("desactivado");
+				} else if(nCartoon==totCartoons){
+					$("#next").unbind("click");
+					$("#next").addClass("desactivado");
+				}
+					
+				if($("#next").hasClass("desactivado") && nCartoon<totCartoons){
+					$("#next").removeClass("desactivado");
+					$("#next").bind("click",next);
+				}
+				
+				if($("#previous").hasClass("desactivado") && nCartoon>1){
+					$("#previous").removeClass("desactivado");
+					$("#previous").bind("click",previous);
+				}
+			}
+			
+			function setBts(){
+				$("#next").bind("click",next);
+			}
+			
+			function final(){
+			    if(inicio){
+				inicio = false;
+				gotoNextQuestion();
+				addMwSettings('inicio','false');
+			    }
+			}
+			  
+			function gotoNextQuestion(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="escena"){
+					      nCartoon = evt.data.value;
+					      setCartoon();
+					} else
+					if(evt.data.name=="texto"){
+						var nText = evt.data.value;
+						var nImg = parseInt(nText)+1;
+						$("#pensamiento").html(textos[nText]+"<br><img src='img/emoticon" + nImg + ".png' />");
+					} else
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							var nText = 2;
+							var nImg = parseInt(nText)+1;
+							$("#pensamiento").html(textos[nText]+"<br><img src='img/emoticon" + nImg + ".png' />");
+							
+						} else {
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='inicio' && pair[1]=='false'){
+									inicio = false;
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+						
+					} 
+					
+				}
+			}
+			
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

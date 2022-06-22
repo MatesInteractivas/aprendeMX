@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, ángulo, ángulo agudo, ángulo obtuso, ángulo recto, ángulo llano, ángulo concavo, transportador, lados, grados, medición de ángulos">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin: 0px;padding:0px">
+
+<ajs name="Descartes" width=850 height=450 code="Descartes">
+   <param name="tamaño" value="850x450">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='TX2' fijo='sí' despl_imagen='arr-izq' fondo='f8e8b0' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='audio' tipo='numérico' interfaz='botón' región='interior' espacio='TX2' expresión='(5,5,56,56)' fijo='sí' visible='sí' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;HELP&squot;)'">
+   <param name="A_02" value="id='IMAGES' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='IMAGES[0]=&squot;images/a_recto.png&squot;;IMAGES[1]=&squot;images/a_agudo.png&squot;;IMAGES[2]=&squot;images/a_llano.png&squot;;IMAGES[3]=&squot;images/a_obtuso.png&squot;;IMAGES[4]=&squot;images/a_concavo.png&squot;;IMAGES[5]=&squot;images/a_completo.png&squot;'">
+   <param name="A_03" value="id='TXT' vector='sí' evaluar='una-sola-vez' tamaño='6' expresión='TXT[0]=&squot;Un ángulo recto mide 90°&squot;;TXT[1]=&squot;Un ángulo agudo mide&squot;;TXT[2]=&squot;Un ángulo llano mide 180°&squot;;TXT[3]=&squot;Un ángulo obtuso mide más&squot;;TXT[4]=&squot;Un ángulo cóncavo mide&squot;;TXT[5]=&squot;Un ángulo completo mide&squot;'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='amp=1;inicioy=10;altura=200;sepTexto=80'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   
+   <param name="A_07" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='TX2' tipo='texto' fondo='sí' color='6c4517' expresión='[20,20]' texto='Los ángulos se pueden clasificar dependiendo de la magnitud de su abertura.' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_02" value="espacio='TX2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(TX2._w/6+TX2._w/3*(s%3),inicioy+TX2._h/4+altura*ent(s/3),1,1)' familia='s' s.intervalo='[0,5]' s.pasos='5' archivo='[IMAGES[s]]'">
+   <param name="G_03" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(0%3)-_AnchoDeCadena_(TXT[0],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(0/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 recto\cf0  mide 90\u176 \fs38}' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_04" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(1%3)-_AnchoDeCadena_(TXT[1],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(1/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 agudo\cf0  mide\par        menos de 90\u176 }' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_05" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(2%3)-_AnchoDeCadena_(TXT[2],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(2/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 llano\cf0  mide 180\u176 \fs38}' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_06" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(3%3)-_AnchoDeCadena_(TXT[3],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(3/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 obtuso\cf0  mide m\u225 s\par de 90\u176  pero menos de 180\u176 \fs38}' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_07" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(4%3)-_AnchoDeCadena_(TXT[4],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(4/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 c\u243 ncavo\cf0  mide\par       m\u225 s que un llano}' fuente='Monospaced,PLAIN,19' fijo='sí'">
+   <param name="G_08" value="espacio='TX2' tipo='texto' fondo='sí' color='negro' expresión='[TX2._w/6+TX2._w/3*(5%3)-_AnchoDeCadena_(TXT[5],&squot;Monospaced&squot;,&squot;PLAIN&squot;,19)/2,TX2._h/4+altura*ent(5/3)+sepTexto]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;}{\colortbl\red108\green69\blue23;\red180\green97\blue0;}\cf0\f1\fs38 Un \u225 ngulo \cf1 completo\cf0  mide\par     cuatro \u225 ngulos rectos}' fuente='Monospaced,PLAIN,19' fijo='sí'">
+</ajs>
+
+</body>
+
+</html>

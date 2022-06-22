@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Conectores</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<div class="conectores">
+				<ul class="serie" data-id="1">
+					<li>En primer lugar, ...</li>
+					<li>En segundo, ...</li>
+					<li>Finalmente, ...</li>
+				</ul>
+				
+				<ul class="serie e-oculto" data-id="2">
+					<li>Para empezar, ...</li>
+					<li>Además, ...</li>
+					<li>Por último, ...</li>
+				</ul>
+				
+				<ul class="serie e-oculto" data-id="3">
+					<li>Por un lado, ...</li>
+					<li>Por el otro, ...</li>
+				</ul>
+			</div>
+			
+
+			<button id='bt_mas' class='btn e-oculto' >Ver más ejemplos</button>
+
+			
+			
+		</div>
+		
+		<script>
+		
+			var n = 1;
+			var nTot = 3;
+			var mwId = "cap4_conectores";
+			
+			function activarUl(){
+				$('ul.serie').addClass("e-active").on("click",function(){
+					var txt = $("li:first-child",$(this)).text();
+					setAnswer(txt,500);
+					if($(this).data('id')=='3'){
+						$(this).addClass('e-correcto');
+					} else {
+						$(this).addClass('e-incorrecto');
+					}
+					$('ul.serie').removeClass("e-active").off();
+				});
+				
+			}
+
+			function nextQ(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			function setAnswer(str,delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "setAnswer", params: { id:mwId , value: str } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="verMas"){
+						$("#bt_mas").removeClass("e-oculto").on("click",function(){
+							n++;
+							$('ul.serie[data-id="'+n+'"]').removeClass("e-oculto");
+							if(n==3){
+								$(this).off();
+								$(this).addClass("e-oculto");
+								nextQ();
+								addMwSettings("inicio","false");
+							}
+						});
+					} else
+					if(evt.data.name=="activar"){
+						activarUl();
+					} else
+					if(evt.data.name=="resaltar"){
+						//$('ul.serie').removeClass("e-incorrecto");
+						setTimeout(function(){
+							$('ul.serie[data-id="3"]').addClass("e-correcto");	
+						},3000);
+						
+					} else
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							$('ul.serie').removeClass("e-oculto");
+						} else {
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='inicio' && pair[1]=='false'){
+									$('ul.serie').removeClass("e-oculto");
+									$("#bt_mas").remove();
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			  
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: { id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+				
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

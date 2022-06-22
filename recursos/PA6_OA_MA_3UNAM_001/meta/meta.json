@@ -1,0 +1,36 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "decimales", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Unidades", 
+    "decenas", 
+    "centenas", 
+    "décimas", 
+    "centésimas", 
+    "milésimas", 
+    "enteros", 
+    "punto decimal", 
+    "parte decimal", 
+    "parte fraccionaria", 
+    "lectura de números decimales", 
+    "escritura de números decimales"
+  ], 
+  "descripcion": "En esta unidad podrás revisar cómo se leen y cómo se escriben con palabras los números decimales.",
+  "resena": "Representación de números decimales con palabras.",
+  "titulo": "Lectura y escritura de números decimales", 
+  "id": "PA6_OA_MA_3UNAM_001"
+}

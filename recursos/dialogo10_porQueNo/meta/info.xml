@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA6_OA_ES_3UNAM_010_textoArgumentativo"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Una decisión difícil
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Creación guiada de un texto argumentativo. En este recurso se trabaja con una estrategia muy efectiva para defender tus opiniones: la argumentación. Verás que tener buenas ideas es sólo el primer elemento para elaborar un caso a tu favor. El orden en que las presentas puede ser decisivo, así como las palabras que usas para expresarte. El objetivo de todo esto es convencer a los demás de que tu propuesta es buena y merece ser tomada en cuenta.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto argumentativo, Cohesión
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Español, texto argumentativo, opinión, argumento, hecho, argumentar, expresar una opinión, referir un hecho, contraargumento, párrafo, cohesión, coherencia, orden de ideas, oración tópico, oración compleja, conector, nexo, conectivos lógicos, conectivos causales
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

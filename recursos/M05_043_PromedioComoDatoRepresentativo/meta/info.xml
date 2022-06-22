@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_043"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		La media o valor promedio como dato representativo
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		¿De qué altura habría que construir un bebedero para niños de 5º y 6º grados de primaria? Para responder a esta pregunta hay determinar una altura media de esos niños y construir el bebedero adecuado a ella. La media o valor promedio sirve para tomar decisiones que sean útiles a una mayoría. La media es una información útil, a pesar de que quizás ningún elemento de la población tenga esa medida. En esta unidad aprenderás para qué sirve la media de un conjunto de valores y también aprenderás a calcularla.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, estadística, Manejo de la información, Análisis y representación de datos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, media, promediar, valor promedio, población, conjunto de valores, conjunto de medidas.
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

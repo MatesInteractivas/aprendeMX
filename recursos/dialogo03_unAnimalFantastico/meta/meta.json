@@ -1,0 +1,41 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto descriptivo", 
+    "Orden de ideas", 
+    "Párrafo"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "descripción", 
+    "texto descriptivo", 
+    "enunciado", 
+    "características", 
+    "enumeración de características", 
+    "lluvia de ideas", 
+    "orden de ideas", 
+    "párrafo ordenado", 
+    "oración tópico", 
+    "puntuación", 
+    "párrafo", 
+    "punto y aparte", 
+    "hipérbole", 
+    "analogía", 
+    "aposición", 
+    "alebrije"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Orden de ideas en un párrrafo, con oración tópico y oraciones de apoyo. La alumna y el alumno crearán una descripción personalizada de un alebrije. Pasarán de una lista de características a un párrafo ordenado en donde se omiten las repeticiones, se ordena la información temáticamente y se agregan algunos giros literarios a su gusto.",
+  "resena": "Estructura de un párrafo e importancia de sus oraciones componentes.",
+  "titulo": "Un animal fantástico", 
+  "id": "PA5_OA_ES_3UNAM_003_parrafoOrdenado"
+}

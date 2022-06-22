@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Calor, energía, efectos del calor en la materia, derretir, fusión, evaporación, calentar, calentamiento, temperatura, conducción del calor, transferencia de calor, flujo de calor">
+
+<head>
+	<title>¿Qué les pasa a los cuerpos cuando se les transfiere calor?</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(20,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=max(nv-1,0)\nplayVideo(nv)' dibujar-si='nv>0' activo-si='nv>0'">
+   <param name="C_02" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='gris' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='doPlay(0)\nstopVideo(nv)\nnv=min(nv+1,nV-1)\nplayVideo(nv)' dibujar-si='nv+1<nV' activo-si='nv+1<nV' pos_mensajes='centro'">
+   <param name="C_03" value="id='v0' tipo='video' región='interior' espacio='E2' expresión='(20,60,560,350)' dibujar-si='nv==0' archivo='videos/botella.mp4'">
+   <param name="C_04" value="id='v2' tipo='video' región='interior' espacio='E2' expresión='(20,60,560,350)' dibujar-si='nv==1' archivo='videos/difusion.mp4'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='nV=4;v0.stop()'">
+   <param name="A_04" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='x0=(nv==0)?20:x0;y0=(nv==0)?410:y0;x1=(nv==0)?x0+559:x1;y1=(nv==0)?y0+70:y1;;x0=(nv==1)?20:x0;y0=(nv==1)?410:y0;x1=(nv==1)?x0+559:x1;y1=(nv==1)?y0+70:y1;;x0=(nv==2)?20:x0;y0=(nv==2)?390:y0;x1=(nv==2)?x0+560:x1;y1=(nv==2)?y0+90:y1;;x0=(nv==3)?21:x0;y0=(nv==3)?405:y0;x1=(nv==3)?x0+457:x1;y1=(nv==3)?y0+75:y1;;'">
+   <param name="A_05" value="id='stopVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv==0)?v0.stop():&squot;&squot;;aux=(nv==1)?v1.stop():&squot;&squot;;animando=0;aux=(nv==3)?v3.stop():&squot;&squot;;'">
+   <param name="A_06" value="id='playVideo(nv)' algoritmo='sí' algoritmo='sí' hacer='aux=(nv==0)?v0.play():&squot;&squot;;aux=(nv==1)?v1.play():&squot;&squot;;aux=(nv==2)?v2.play():&squot;&squot;;animar=(nv==3);animando=animar;'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa algunos efectos del calor.&squot;' hacer='Inicio();;'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos()'">
+   <param name="G_01" value="espacio='E2' tipo='polígono' color='e74c3c' coord_abs='sí' expresión='(x0,y0)(x1,y0)(x1,y1)(x0,y1)(x0,y0)' relleno='e74c3c'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_03" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==0' expresión='[80,433]' texto='¿Por qué la botella caliente chupa el líquido frío?' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='700' info='botella'">
+   <param name="G_04" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==0' expresión='[595,55]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs40\b El aire se \i expande\i0  al calentarse. Lo mismo\par ocurre con la mayor\u237 a de sustancias.\cf0\f3\fs30\b0}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==0' expresión='[595,125]' texto='Los gases, como el aire, se expanden cuando se calientan. Eso los hace menos densos, es decir, poca cantidad de ellos ocupa mucho espacio. \n\nCuando la botella de este experimento se calienta, también lo hace el aire que tiene adentro, provocando que se expanda. Al entrar en contacto con el líquido, el aire dentro de la botella comienza a enfriarse y se contrae, es decir, disminuye su volumen. Esto crea un vacío dentro de la botella que es ocupado por el líquido, empujado por la presión atmosférica.\n\nIgual que el aire casi todas las substancias se expanden al calentarse y se contraen al enfriarse.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='botella'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==1' expresión='[120,421]' texto=' ¿Por qué la tinta se mezcla mejor \ncon el agua caliente que con la fría?\n' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='580' info='mantequilla'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==1' expresión='[595,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs40\b La mayor\u237 a de las substancias se disuelven \par mejor en agua caliente que en agua fr\u237 a.\cf0\f2\fs30\b0}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_08" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==1' expresión='[595,130]' texto='El recipiente de la izquierda tiene agua fría y el de la derecha tiene agua caliente. \n\nObserva que al depositar una gota de tinta ésta se difunde mejor en el agua caliente que en la fría.\n\nEn esta unidad verás que esto se debe a que las moléculas del agua caliente se mueven más rápidamente y acarrean mejor a las de tinta. También verás que los gases se expanden con el calor porque éste hace que sus moléculas viajen a velocidades mayores.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='Difusión de la tinta en agua fría y caliente'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' dibujar-si='(nv==2)' coord_abs='sí' expresión='(160,225,0.55,0.55)' archivo='images/TubosDeEnsaye-1.jpg'">
+   <param name="G_10" value="espacio='E2' tipo='imagen' dibujar-si='(nv==2)' coord_abs='sí' expresión='(445,225,0.55,0.55)' archivo='images/TubosDeEnsaye-2.jpg'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==2' expresión='[40,400]' texto='Estos dos tubos contienen la misma cantidad de agua pintada de rojo.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='240' info='dos tubos con la misma cantidad de agua pintada'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='nv==2' expresión='[335,400]' texto='El tubo de la derecha se metió un rato en el congelador.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='240' info='Dos tubos, uno congelado.'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==2' expresión='[605,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs40\b El agua se expande al congelarse\cf0\f2\fs30\b0 .}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==2' expresión='[605,100]' texto='A la izquierda aparecen dos tubos con la misma cantidad de agua pintada de rojo. El de la derecha se pone unas horas en el congelador y vemos que su nivel aumenta. La columna de hielo es más alta que la de agua.\n\nEsto demuestra que al congelarse el agua se expande. Por eso el hielo flota. Porque es menos denso que el agua.\n\nEsta curiosa propiedad, que cuando se congela se expande, casi exclusiva del agua, tiene gran impacto en las formas de vida de nuestro planeta. Por ejemplo, si el hielo se hundiera, las plantas marinas se congelarían y los peces no tendrían alimento. \n\n\n' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='400' info='los tubos con agua coloreada'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(_t<=1)' coord_abs='sí' expresión='(250,235,0.70,0.70)' archivo='images/Jarrita-1-antes.jpg'">
+   <param name="G_16" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(_t==2)' coord_abs='sí' expresión='(250,235,0.70,0.70)' archivo='images/Jarrita-2-rota.jpg'">
+   <param name="G_17" value="espacio='E2' tipo='imagen' dibujar-si='(nv==3)&(_t==3)' coord_abs='sí' expresión='(250,235,0.70,0.70)' archivo='images/Jarrita-3-hielo.jpg'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='(nv==3)&(t<=1)' expresión='[80,420]' texto='Esta jarrita se llenó de agua y se metió\na un congelador durante unas horas...' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='520' info='hojuelas de avena'">
+   <param name="G_19" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='(nv==3)&(t==2)' expresión='[70,420]' texto='Cuando se sacó del congelador el agua \nestaba congelada pero la jarrita estaba rota. ' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='520' info='hojuelas de avena'">
+   <param name="G_20" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='(nv==3)&(t==3)' expresión='[125,432]' texto='¿Por qué se rompió la jarrita?' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='520' info='hojuelas de avena'">
+   <param name="G_21" value="espacio='E2' tipo='texto' color='8e44ad' dibujar-si='nv==3' expresión='[500,60]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red32\green48\blue58;}\f1\fs40\b El hielo ocupa m\u225 s espacio que el agua\cf0\f2\fs30\b0}' fuente='SansSerif,BOLD,20' fijo='sí'">
+   <param name="G_22" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==3' expresión='[500,100]' texto='A la izquierda aparece una sucesión de imágenes que muestran el efecto que puede producir congelar agua en un recipiente.\n\n¿Por qué se rompió la jarrita? \n\nLa razón es que el agua en estado sólido (hielo), ocupa más espacio que el agua en estado líquido. Por eso al congelarse el agua de la superficie forma una capa de hielo que impide, por la forma que tiene la jarrita, que el agua que se encuentra debajo se expanda al congelarse. Por eso cuando ésta se congela, al no tener espacio para expandirse, hace presión sobre las paredes de la jarrita y la rompe. Lo mismo puede pasarle a una botella de refresco en el congelador.\n\n\n\n' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='500' info='hojuelas de avena'">
+   <param name="G_23" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='nv==0' expresión='[100,E2._h-70]' texto='¡Cuidado! Para evitar quemarte, utiliza pinzas \no guantes al manejar la botella caliente.' fuente='SansSerif,PLAIN,19' fijo='sí' ancho='400' info='botella'">
+   <param name="Animación" value="pausa='4000' controles='no' auto='sí' inicio='_t=0' hacer='_t=(nv==3)?(_t+1)%4:0' mientras='1'">
+</ajs>
+
+</body>
+
+</html>

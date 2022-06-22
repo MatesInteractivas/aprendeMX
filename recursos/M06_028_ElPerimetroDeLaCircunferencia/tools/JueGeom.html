@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Juego de geometría</title>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body style="padding: 0px; margin: 0px;">
+
+<div align="center">
+<ajs name="Descartes" width=960 height=550 code="Descartes">
+   <param name="tamaño" value="960x550">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="cover">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='JG' dibujar-si='JG.ver' fijo='sí' escala='1' O.x='200' despl_imagen='expand.' fondo='e4000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='C' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(0,40)' dibujar-si='0' activo-si='transportador'">
+   <param name="C_02" value="id='A' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(C.x+TRANSP.L,C.y)' fijo='sí' dibujar-si='0' activo-si='transportador'">
+   <param name="C_03" value="id='B' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(C.x,C.y+TRANSP.L)' fijo='sí' dibujar-si='0' activo-si='transportador'">
+   <param name="C_04" value="id='P' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(-REGLA.L/2,-175)' fijo='sí' dibujar-si='0' activo-si='regla'">
+   <param name="C_05" value="id='Q' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(REGLA.L/2,-175)' constricción='(x-P.x)' fijo='sí' dibujar-si='0' activo-si='regla'">
+   <param name="C_06" value="id='R' tipo='gráfico' espacio='JG' color='grisObscuro' color-int='ffffff88' tamaño='40' expresión='(0,-175)' fijo='sí' dibujar-si='0' activo-si='regla'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='S' expresión='s*pi/180'">
+   <param name="A_04" value="id='ArcTan(x,y)' algoritmo='sí' expresión='at' algoritmo='sí' Local='at' inicio='at=(abs(x)>0.000001)?atan(abs(y)/abs(x)):pi/2' hacer='at=((x>=0)&(y>=0))?at:at;at=((x< 0)&(y>=0))?pi-at:at;at=((x< 0)&(y< 0))?pi+at:at;at=((x>=0)&(y< 0))?2*pi-at:at;'">
+   <param name="A_05" value="id='InicioT(x0,y0,w0,h0,bh)' algoritmo='sí' algoritmo='sí' hacer='JG.x0=x0;JG.y0=y0;JG.w0=w0;JG.h0=h0;TRANSP.L=80;Re=2*TRANSP.L;Rt=Re-27;PA.x=P.x;PA.y=P.y;wTit=3*JG.w0/5;hTit=3*JG.h0/5;xTit=(JG.w0-wTit)/2;yTit=(JG.h0-hTit)/2;tButton=-1;JG.ver=1;JG.x=0;JG.y=0;JG.xa=0;JG.ya=0'">
+   <param name="A_06" value="id='Ri(s)' algoritmo='sí' expresión='ri' algoritmo='sí' Local='ri' inicio='ri=Re-5' hacer='ri=(s%5==0)?Re-10:ri;ri=(s%10==0)?Re-15:ri;;'">
+   <param name="A_07" value="id='CalculosT()' algoritmo='sí' algoritmo='sí' hacer='Cmoved=(CA.x!=C.x)|(CA.y!=C.y);A.x=(Cmoved)?A.x+C.x-CA.x:A.x;A.y=(Cmoved)?A.y+C.y-CA.y:A.y;B.x=(Cmoved)?B.x+C.x-CA.x:B.x;B.y=(Cmoved)?B.y+C.y-CA.y:B.y;CA.x=C.x;CA.y=C.y;nA=max(sqrt((A.x-C.x)^2+(A.y-C.y)^2),0.000001);A.x=C.x+(2*TRANSP.L-27)*(A.x-C.x)/nA;A.y=C.y+(2*TRANSP.L-27)*(A.y-C.y)/nA;nB=max(sqrt((B.x-C.x)^2+(B.y-C.y)^2),0.000001);B.x=C.x+(2*TRANSP.L-27)*(B.x-C.x)/nB;B.y=C.y+(2*TRANSP.L-27)*(B.y-C.y)/nB;alfa=ArcTan(A.x-C.x,A.y-C.y);Alfa=alfa*180/pi;beta=ArcTan(B.x-C.x,B.y-C.y);ANG=((beta-alfa)*180/pi)%360;GRAD=ent(ANG);MIN=ent((ANG-GRAD)*60);SEG=ent((ANG-GRAD-MIN/60)*3600);;'">
+   <param name="A_08" value="id='InicioR(x0,y0,w0,h0,bh)' algoritmo='sí' algoritmo='sí' hacer='REGLA.L=500;RR=25;mm=5'">
+   <param name="A_09" value="id='T(s)' expresión='5+3*(s%5==0)+3*(s%10==0)'">
+   <param name="A_10" value="id='CalculosR()' algoritmo='sí' algoritmo='sí' hacer='Q.x=((times>2)&(P.xa!=P.x))?Q.x+(P.x-P.xa):Q.x;Q.y=((times>2)&(P.ya!=P.y))?Q.y+(P.y-P.ya):Q.y;nB=max(sqrt((P.x-Q.x)^2+(P.y-Q.y)^2),0.000001);alfa=ArcTan(Q.x-P.x,Q.y-P.y);ca=cos(alfa);sa=sen(alfa);D=min(max(0,(R.x-P.x)*ca+(R.y-P.y)*sa),nB-20);R.x=P.x+D*ca;R.y=P.y+D*sa;ux=-sa;uy= ca;ux24=24*ux;uy24=24*uy;dx=-RR*ca;dy=-RR*sa;x1=dx+P.x;y1=dy+P.y;x2=dx+Q.x+2*RR*ca;y2=dy+Q.y+2*RR*sa;x3=dx+Q.x+2*RR*ca+2*RR*sa;y3=dy+Q.y-2*RR*ca+2*RR*sa;x4=dx+P.x+2*RR*sa;y4=dy+P.y-2*RR*ca;DR=D*3/mm;CM=DR/30;cmcms0=CM%0.1;cmcms=((cmcms0>0.03)&(cmcms0<0.07))?0.05:cmcms0;CM=CM-cmcms0+cmcms;P.xa=P.x;P.ya=P.y;times=times+1;;'">
+   <param name="A_11" value="id='calcTr(RE,s)' algoritmo='sí' expresión='1' algoritmo='sí' Local='u,v,ri,re,a' hacer='re=RE*mm;a=(s+Alfa)*pid180;ri=re-10+4*(s%2);u=cos(a);v=sen(a);TRis.x=ri*u;TRis.y=ri*v;TRes.x=re*u;TRes.y=re*v;;'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='fdis=7;fdis2=fdis/2;fdish=6;JG.blanco=1;Lshift=15;segundos=0;minutos=0;decimas=1;JG.escala=1;JG.Ox=0;JG.Oy=0;pid180=pi/180;InicioT(0,0,JG._w,JG._h,40);InicioR(0,0,JG._w,JG._h,40);transportador=1;regla=1;compas=1;times=0;;;'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='JG.blanco=1' hacer='CalculosT();CalculosR()'">
+   <param name="G_01" value="espacio='JG' tipo='arco' color='22e8f4ff' dibujar-si='transportador' centro='(C.x,C.y)' radio='Re+2' fin='360' fijo='sí' relleno='88112244'">
+   <param name="G_02" value="espacio='JG' tipo='arco' color='22e8f4ff' dibujar-si='transportador' centro='(C.x,C.y)' radio='50' inicio='Alfa' fin='Alfa+ANG' fijo='sí' relleno='44ee2244'">
+   <param name="G_03" value="espacio='JG' tipo='segmento' color='e8f4ff' dibujar-si='transportador&calcTr(32,s)' expresión='(C.x+TRis.x,C.y+TRis.y)(C.x+TRes.x,C.y+TRes.y)' familia='s' s.intervalo='[0,360]' s.pasos='72' fijo='sí' tamaño='0' ancho='2' info='rayitas de los grados'">
+   <param name="G_04" value="espacio='JG' tipo='punto' color='e8f4ff' dibujar-si='transportador&(s<360)&calcTr(26.8,s)' expresión='(C.x+TRes.x-(2+(s>9)+(s>99))*fdis2,C.y+TRes.y-fdish)' familia='s' s.intervalo='[0,360]' s.pasos='12' texto='[s]' fuente='SansSerif,BOLD,17' decimales='0' fijo='sí' tamaño='0' info='Los números de los grados'">
+   <param name="G_05" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='transportador' expresión='(C.x+0.05*(A.x-C.x),C.y+0.05*(A.y-C.y))(C.x+0.86*(A.x-C.x),C.y+0.86*(A.y-C.y))' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_06" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='transportador' expresión='(C.x+1.14*(A.x-C.x),C.y+1.14*(A.y-C.y))(C.x+1.30*(A.x-C.x),C.y+1.30*(A.y-C.y))' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_07" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='transportador' expresión='(C.x+0.05*(B.x-C.x),C.y+0.05*(B.y-C.y))(C.x+0.86*(B.x-C.x),C.y+0.86*(B.y-C.y))' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_08" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='transportador' expresión='(C.x+1.14*(B.x-C.x),C.y+1.14*(B.y-C.y))(C.x+1.30*(B.x-C.x),C.y+1.30*(B.y-C.y))' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_09" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='transportador' centro='(C.x,C.y)' radio='6' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='centro'">
+   <param name="G_10" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='transportador' centro='(A.x,A.y)' radio='17' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='cero grados'">
+   <param name="G_11" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='transportador' centro='(B.x,B.y)' radio='17' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='lado final'">
+   <param name="G_12" value="espacio='JG' tipo='polígono' color='88e8f4ff' dibujar-si='regla' expresión='(x1,y1)(x2,y2)(x3,y3)(x4,y4)(x1,y1)' relleno='88112244'">
+   <param name="G_13" value="espacio='JG' tipo='polígono' color='ffe8f4ff' dibujar-si='regla' expresión='(P.x,P.y)(R.x,R.y)(R.x-ux*16,R.y-uy*16)(P.x-ux*16,P.y-uy*16)(P.x,P.y)' relleno='44ee2244'">
+   <param name="G_14" value="espacio='JG' tipo='segmento' color='e8f4ff' dibujar-si='regla' expresión='(P.x+RR*ux+mm*ca*s-dy,dx+P.y+RR*uy+mm*sa*s)(P.x+(RR-T(s))*ux+mm*ca*s-dy,dx+P.y+(RR-T(s))*uy+mm*sa*s)' familia='s' s.intervalo='[0,ent(nB/mm)]' s.pasos='ent(nB/mm)' fijo='sí' tamaño='0' ancho='2' info='rayitas de la regla'">
+   <param name="G_15" value="espacio='JG' tipo='punto' color='e8f4ff' dibujar-si='regla' expresión='(P.x+ca*s*10*mm-(2+(s>9))*fdis2-dy+2,dx+P.y+sa*s*10*mm-2-fdish)' familia='s' s.intervalo='[0,ent(nB/(10*mm))]' s.pasos='ent(nB/(10*mm))' texto='[s]' fuente='SansSerif,BOLD,17' decimales='0' fijo='sí' tamaño='0'">
+   <param name="G_16" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='regla' centro='(P.x-ux24,P.y-uy24)' radio='16' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='punto P'">
+   <param name="G_17" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='regla' centro='(Q.x-ux24,Q.y-uy24)' radio='16' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='punto Q'">
+   <param name="G_18" value="espacio='JG' tipo='arco' color='88e8f4ff' dibujar-si='regla' centro='(R.x-ux24,R.y-uy24)' radio='16' fin='360' fijo='sí' relleno='aa112244' ancho='2' info='punto R que marca la distancia medida'">
+   <param name="G_19" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='regla' expresión='(P.x+ux*24,P.y+uy*24)(P.x-ux*24,P.y-uy*24)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_20" value="espacio='JG' tipo='segmento' color='blanco' dibujar-si='regla' expresión='(R.x+ux*24,R.y+uy*24)(R.x-ux*24,R.y-uy*24)' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_21" value="espacio='JG' tipo='curva' color='blanco' dibujar-si='regla' coord_abs='sí' expresión='(botX(3,15,90,t),botY(3,15,30,t))' t.intervalo='[0,8]' relleno='88112244'">
+   <param name="G_22" value="espacio='JG' tipo='curva' color='blanco' dibujar-si='transportador' coord_abs='sí' expresión='(botX(3,JG._w-95,80,t),botY(3,15,30,t))' t.intervalo='[0,8]' relleno='88112244'">
+   <param name="G_23" value="espacio='JG' tipo='texto' color='blanco' dibujar-si='regla&(decimas)' expresión='[20+(CM<10)*10,20]' texto='[CM] cm' fuente='SansSerif,PLAIN,18' fijo='sí' info='medida regla'">
+   <param name="G_24" value="espacio='JG' tipo='texto' color='blanco' dibujar-si='transportador' expresión='[JG._w-58-9*((GRAD>9)+(GRAD>99)),20]' texto='[GRAD]° ' fuente='SansSerif,PLAIN,18' decimales='0' fijo='sí' ancho='2' info='medición'">
+</ajs>
+</div>
+</body>
+</html>

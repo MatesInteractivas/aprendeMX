@@ -1,0 +1,34 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "¿cómo se transfiere el calor entre materiales?", 
+    "experimentación con procesos de transferencia del calor: conducción y convección en algunos materiales", 
+    "procesos de transferencia del calor en la naturaleza", 
+    "termodinámica"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Calor", 
+    "radiación", 
+    "electromagnético", 
+    "electromagnética", 
+    "vacío", 
+    "calor del Sol", 
+    "calor de una lámpara", 
+    "calor en el espacio", 
+    "transferencia de calor"
+  ], 
+  "descripcion": "En esta unidad explorarás otro mecanismo para la transmisión del calor a distancia e incluso a través del espacio vacío, sin necesidad de contacto entre los cuerpos, y lo identificarás como radiación. Experimentarás la transmisión de calor por radiación a través de un foco que calienta un trozo de mantequilla.",
+  "resena": "Transmisión de calor por radiación con diversos ejemplos.",
+  "titulo": "¿Cómo nos llega el calor del Sol?", 
+  "id": "PA5_OA_CN_3UNAM_503"
+}

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Prisma, pirámide, poliedro, caras, arista, vértice, cuerpos geométricos, base, altura, inclinación, perpendicular, paralela, oblicuo, prisma recto, pirámide recta, polígono regular, pentagonal, triangular, cuadrado, hexagonal, eptagonal, octagonal">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R3' id='E3' x='162' y='50' ancho='680' alto='400' escala='64' O.y='-20' despl_imagen='arr-izq' fondo='negro' despliegue='pintor' R3='sí'">
+   <param name="E_03" value="tipo='R2' id='NOMBRE' x='262' y='35' ancho='480' alto='50' fijo='sí' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='E' nombre='otro' expresión='((E._w-120)/2,E._h-56,120,46)' fijo='sí' visible='sí' fuente puntos='19' acción='calcular' parámetro='otroCuerpo()' dibujar-si='0'">
+   <param name="C_02" value="id='elNombre' tipo='numérico' interfaz='botón' región='interior' espacio='NOMBRE' nombre='[nombre]' expresión='(0,0,NOMBRE._w,NOMBRE._h)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' pos_mensajes='centro'">
+   <param name="A_01" value="id='XX' vector='sí' evaluar='una-sola-vez' tamaño='130'">
+   <param name="A_02" value="id='YY' vector='sí' evaluar='una-sola-vez' tamaño='130'">
+   <param name="A_03" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='4' expresión='tsp=0;roj=1;ver=2;azu=3;;COL[0,tsp]=0.0;COL[0,roj]=0.0;COL[0,ver]=0.0;COL[0,azu]=0.0;;COL[1,tsp]=0.0;COL[1,roj]=0.99;COL[1,ver]=0.20;COL[1,azu]=0.40;;COL[2,tsp]=0.0;COL[2,roj]=0.95;COL[2,ver]=0.75;COL[2,azu]=0.30;;COL[3,tsp]=0.0;COL[3,roj]=0.99;COL[3,ver]=0.99;COL[3,azu]=0.30;;COL[4,tsp]=0.0;COL[4,roj]=0.20;COL[4,ver]=0.90;COL[4,azu]=0.50;;COL[5,tsp]=0.0;COL[5,roj]=0.25;COL[5,ver]=0.85;COL[5,azu]=0.85;;COL[6,tsp]=0.0;COL[6,roj]=0.30;COL[6,ver]=0.60;COL[6,azu]=1.00;;COL[7,tsp]=0.0;COL[7,roj]=0.95;COL[7,ver]=0.30;COL[7,azu]=0.99;;COL[8,tsp]=0.0;COL[8,roj]=0.95;COL[8,ver]=0.20;COL[8,azu]=0.70;;COL[9,tsp]=0.0;COL[9,roj]=0.99;COL[9,ver]=0.99;COL[9,azu]=0.99;'">
+   <param name="A_04" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_05" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_06" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_07" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_08" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_09" value="id='dist(x1,y1,x2,y2)' expresión='sqrt((x2-x1)^2+(y2-y1)^2)'">
+   <param name="A_10" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='miescala=50;'">
+   <param name="A_11" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='T=1;trnsp=0.00;rojo=0.99;verde=0.99;azul=0.33;NL=3;hP=1.5;E3.rot.z=90;prisma=1;piramide=2;cilindro=3;cono=4;otroCuerpo();;borde.x=153;borde.y=51;borde.w=678;borde.h=398'">
+   <param name="A_12" value="id='calcBase()' algoritmo='sí' algoritmo='sí' Local='n' inicio='alfa=(NL%2==0)?(pi/(NL)):0;n=0' hacer='XX[n]=-r*sen(alfa+2*pi*n/NL);YY[n]=r*cos(alfa+2*pi*n/NL);n=n+1;XX[NL]=XX[0];YY[NL]=YY[0];' mientras='n<=NL'">
+   <param name="A_13" value="id='randomizeBase()' algoritmo='sí' algoritmo='sí' Local='n,dr' inicio='alfa=(NL%2==0)?(pi/(NL)):0;n=0' hacer='dr=(rnd-0.5)*r/2;XX[n]=-(r+dr)*sen(alfa+2*pi*n/NL);YY[n]=(r+dr)*cos(alfa+2*pi*n/NL);n=n+1;XX[NL]=XX[0];YY[NL]=YY[0];' mientras='n<=NL'">
+   <param name="A_14" value="id='X(n,T)' algoritmo='sí' expresión='R*XX[n]+P.x*T' algoritmo='sí' hacer='R=((caso==prisma)|(caso==cilindro))?1:1-T'">
+   <param name="A_15" value="id='Y(n,T)' algoritmo='sí' expresión='R*YY[n]+P.y*T' algoritmo='sí' hacer='R=((caso==prisma)|(caso==cilindro))?1:1-T'">
+   <param name="A_16" value="id='getName()' algoritmo='sí' expresión='name' algoritmo='sí' Local='name' inicio='name=&squot;&squot;' hacer='name=(caso==1)?name+&squot;Prisma&squot;:name;name=(caso==2)?name+&squot;Pirámide&squot;:name;name=(caso==3)?name+&squot;Cilindro&squot;:name;name=(caso==4)?name+&squot;Cono&squot;:name;name=(NL==3)?name+&squot; triangular&squot;:name;name=(NL==4)?name+&squot; cuadrangular&squot;:name;name=(NL==5)?name+&squot; pentagonal&squot;:name;name=(NL==6)?name+&squot; hexagonal&squot;:name;name=(NL==7)?name+&squot; heptagonal&squot;:name;name=(NL==8)?name+&squot; octagonal&squot;:name;name=(NL==9)?name+&squot; nonagonal&squot;:name;name=(NL==10)?name+&squot; decagonal&squot;:name;name=(NL==11)?name+&squot; undecagonal&squot;:name;name=(NL==12)?name+&squot; dodecagonal&squot;:name;name=((regular==1)&(caso<3))?name+&squot; regular&squot;:name;name=(regular==2)?name+&squot; irregular&squot;:name;name=((dP==0)&(caso!=2))?name+&squot; recto&squot;:name;name=((dP==0)&(caso==2)&(regular==1))?name+&squot; recta&squot;:name;'">
+   <param name="A_17" value="id='Calculos()' algoritmo='sí' algoritmo='sí' inicio='DP=24/E3.escala' hacer='regular=(caso>=3)?1:regular;B.x=((NL<128)&(caso>=3))?B.x/sen(pi/12):B.x;B.x=((NL==128)&(caso<3))?r*sen(pi/12):B.x;NL=(caso<3)?min(12,NL):NL;NL=(caso>=3)?128:NL;strNL=_NumToStr_(NL,0);H.x=2.5;H.y=min(max(-1.5,H.y),2);B.y=-1.65;B.x=min(max(0,B.x),1.25);hP=H.y+1.5;r=(caso<3)?min(B.x/sen(pi/NL),1.5):B.x;B.x=(caso<3)?r*sen(pi/NL):r;aux=(regular!=2)?calcBase():&squot;&squot;;dP=dist(0,0,P.x,P.y);P.x=(dP<DP)?0:P.x;P.y=(dP<DP)?0:P.y;dP=(dP<DP)?0:dP;;;'">
+   <param name="A_18" value="id='otroCuerpo()' algoritmo='sí' algoritmo='sí' Local='oldname' inicio='momento=2;oldname=getName()' hacer='caso=1+ent(rnd<0.5);caso=(rnd<0.3)?caso+2:caso;esRecto=(rnd<0.5);P.x=(esRecto)?0:1+rnd;P.y=(esRecto)?0:1+rnd;P.x=(rnd<0.5)?-P.x:P.x;P.y=(rnd<0.5)?-P.y:P.y;B.x=0.5+rnd;H.y=0.25+1.0*rnd;NL=(caso<3)?3+ent(rnd*6):128;regular=((caso==1)|(caso==2))?1+ent(rnd*2):1;aux=(regular==2)?calcBase():&squot;&squot;;aux=(regular==2)?randomizeBase():&squot;&squot;;col=1+ent(rnd*8);rojo =COL[col,roj];verde=COL[col,ver];azul =COL[col,azu];Calculos();nombre=getName();' mientras='oldname==nombre'">
+   <param name="A_19" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Observa con Lupe y Juan estos prismas, pirámides, cilindros y conos.  Anota sus nombres.&squot;)' hacer='initDisplay();Inicio();'">
+   <param name="A_20" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='E3.rot.y=0;;'">
+   
+   <param name="A_22" value="id='Limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_23" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_24" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='limpiar=0\nanimar=0\nplayAudio=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E' tipo='curva' fondo='sí' color='aa000000' coord_abs='sí' expresión='(botX(0,0,E._w,t),botY(0,0,E._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='para oscurecer el fondo'">
+   <param name="G_02" value="espacio='E' tipo='imagen' coord_abs='sí' expresión='(80,260,1,1)' archivo='images/personajes/boy_01_mirror.png'">
+   <param name="G_03" value="espacio='E' tipo='imagen' coord_abs='sí' expresión='(920,260,1,1)' archivo='images/personajes/girl_01.png'">
+   <param name="G_04" value="espacio='E' tipo='texto' fondo='sí' color='blanco' dibujar-si='0' expresión='[(E._w-_AnchoDeCadena_(&squot;¿Cómo se llama este cuerpo?&squot;,&squot;Monospaced&squot;,&squot;PLAIN&squot;,19))/2,15]' texto='¿Cómo se llama este cuerpo?' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='940' color_borde_texto='335544' info='Instrucciones 0'">
+   <param name="G_05" value="espacio='E' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='borde'">
+   <param name="S_01" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==3)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))' posini='(0,0,H.y)' aristas='sí'">
+   <param name="S_02" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==4)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))(X(3,1),Y(3,1))' posini='(0,0,H.y)' aristas='sí'">
+   <param name="S_03" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==5)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))(X(3,1),Y(3,1))(X(4,1),Y(4,1))' posini='(0,0,H.y)' aristas='sí'">
+   <param name="S_04" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==6)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))(X(3,1),Y(3,1))(X(4,1),Y(4,1))(X(5,1),Y(5,1))' posini='(0,0,H.y)'">
+   <param name="S_05" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==7)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))(X(3,1),Y(3,1))(X(4,1),Y(4,1))(X(5,1),Y(5,1))(X(6,1),Y(6,1))' posini='(0,0,H.y)'">
+   <param name="S_06" value="espacio='E3' tipo='cara' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==1)&(NL==8)' expresión='(X(0,1),Y(0,1))(X(1,1),Y(1,1))(X(2,1),Y(2,1))(X(3,1),Y(3,1))(X(4,1),Y(4,1))(X(5,1),Y(5,1))(X(6,1),Y(6,1))(X(7,1),Y(7,1))' posini='(0,0,H.y)'">
+   <param name="S_07" value="espacio='E3' tipo='superficie' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso<3)' expresión='x=X(u*NL,v*1) y=Y(u*NL,v*1) z=B.y+(H.y-B.y)*v*1' aristas='sí' modelo='metal' Nu='NL' Nv='1'">
+   <param name="S_08" value="espacio='E3' tipo='superficie' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso>=3)' expresión='x=X(u*NL,v*1) y=Y(u*NL,v*1) z=B.y+(H.y-B.y)*v*1' modelo='metal' Nu='NL' Nv='1'">
+   <param name="S_09" value="espacio='E3' tipo='superficie' color='(0.8,0.9,1.0,0.8)' color_reverso='(0.8,0.9,1.0,0.8)' expresión='x=3*(2*u-1) y=3*(2*v-1) z=B.y-0.05' aristas='sí' Nu='1' Nv='1'">
+   <param name="S_10" value="espacio='E3' tipo='superficie' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='0&(caso>=3)' expresión='x=-u*r*sen(2*pi*v) y=u*r*cos(2*pi*v) z=B.y-0.025' familia='s' s.intervalo='[0,1]' s.pasos='1' modelo='metal' Nu='1' Nv='32'">
+   <param name="S_11" value="espacio='E3' tipo='superficie' color='(rojo,verde,azul,trnsp)' color_reverso='(rojo,verde,azul,trnsp)' dibujar-si='(caso==3)' expresión='x=-u*r*sen(2*pi*v)+P.x y=u*r*cos(2*pi*v)+P.y z=H.y+0.025' familia='s' s.intervalo='[0,1]' s.pasos='1' modelo='metal' Nu='1' Nv='32'">
+   <param name="Animación" value="pausa='60' controles='no' auto='sí' inicio='tau=0' hacer='aux=(tau%60==0)?otroCuerpo():&squot;&squot;;tau=tau+1;E3.rot.z=E3.rot.z+3;' mientras='1'">
+</ajs>
+</div>
+
+<!-- macro para dibujar los bordes -->
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;tnsp=0;rojo=1;verd=1;azul=1'
+tipo='imagen' coord_abs='sí' expresión='(x-22,y-22,1,1)' archivo='images/borde_ar_iz.png' info='arriba izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y-22,w,1)' archivo='images/borde_ar_ce.png' info='arriba centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y-22,1,1)' archivo='images/borde_ar_de.png' info='arriba derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h/2,1,h)' archivo='images/borde_ce_iz.png' info='centro izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h/2,1,h)' archivo='images/borde_ce_de.png' info='centro derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h+22,1,1)' archivo='images/borde_ab_iz.png' info='abajo izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+22,w,1)' archivo='images/borde_ab_ce.png' info='abajo centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h+22,1,1)' archivo='images/borde_ab_de.png' info='abajo derecha' 
+tipo='polígono' coord_abs='sí' expresión='(x-1,y-1)(x+w+1,y-1)(x+w+1,y+h+1)(x-1,y+h+1)(x-1,y-1)' relleno='(rojo,verd,azul,tnsp)' ancho='0' 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>TITULO</title>
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+<body BGCOLOR="e0e4e8">
+
+<p align="center">
+<ajs name="Descartes" width=970 height=550 code="Descartes">
+   <param name="tamaño" value="970x550">
+   <param name="image_loader" value="">
+   <param name="expand" value="cover">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='50' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='n1' tipo='numérico' región='interior' espacio='E1' nombre='n1' expresión='(0,0,150,40)' valor='7' incr='1' min='0' max='7' discreto='sí' fijo='sí' visible='sí' acción='calcular' parámetro='setFigura(n1)\ninitPos()' dibujar-si='debug'">
+   <param name="C_02" value="id='E1.escala' tipo='numérico' región='interior' espacio='E1' nombre='E1.escala' expresión='(160,0,200,40)' valor='57' incr='E1.escala*0.1' fijo='sí' visible='sí' acción='calcular' parámetro='initPos()' dibujar-si='debug' pos_mensajes='centro'">
+   <param name="A_01" value="id='___AUX___' expresión='0'">
+   <param name="A_02" value="id='col' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10' expresión='_bermellon=0;col[0,0]=&squot;bermellon-alizarion e74c3c&squot;;col[0,1]=(14*16+ 7)/255;col[0,2]=( 4*16+12)/255;col[0,3]=( 3*16+12)/255;col[0,4]=1 ;_naranja=1;col[1,0]=&squot;naranja-carrot e67e22&squot;;col[1,1]=(14*16+ 6)/255;col[1,2]=( 7*16+14)/255;col[1,3]=( 2*16+ 2)/255;col[1,4]=1;_amarillo=2;col[2,0]=&squot;amarillo-sunflower f1c40f&squot;;col[2,1]=(15*16+ 1)/255;col[2,2]=(12*16+ 4)/255;col[2,3]=( 0*16+15)/255;col[2,4]=1;_verdeclaro=3;col[3,0]=&squot;verde claro-emerald 2ecc71&squot;;col[3,1]=( 2*16+14)/255;col[3,2]=(12*16+12)/255;col[3,3]=( 7*16+ 1)/255;col[3,4]=1;_verdeagua=4;col[4,0]=&squot;verde agua-turquoise 1abc9c&squot;;col[4,1]=( 1*16+10)/255;col[4,2]=(11*16+12)/255;col[4,3]=( 9*16+12)/255;col[4,4]=1;_azul=5;col[5,0]=&squot;azul-Peter_river 3498db&squot;;col[5,1]=( 3*16+ 4)/255;col[5,2]=( 9*16+ 8)/255;col[5,3]=(13*16+11)/255;col[5,4]=1.00;_lavanda=6;col[6,0]=&squot;lavanda-amethyst 9b59b6&squot;;col[6,1]=( 9*16+11)/255;col[6,2]=( 5*16+ 9)/255;col[6,3]=(11*16+ 6)/255;col[6,4]=1;_azuloscuro=7;col[7,0]=&squot;azul oscuro-wet_asphalt 34495e&squot;;col[7,1]=( 3*16+ 4)/255;col[7,2]=( 4*16+ 9)/255;col[7,3]=( 5*16+14)/255;col[7,4]=1;_concreto=8;col[8,0]=&squot;cian-concrete 95a5a6&squot;;col[8,1]=( 9*16+ 5)/255;col[8,2]=(10*16+ 5)/255;col[8,3]=(10*16+ 6)/255;col[8,4]=1;_nubes=9;col[9,0]=&squot;blanco-clouds ecf0f1&squot;;col[9,1]=(14*16+12)/255;col[9,2]=(15*16+ 0)/255;col[9,3]=(15*16+ 1)/255;col[9,4]=1;'">
+   <param name="A_03" value="id='sucesion' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='10' filas='10' expresión=';'">
+   <param name="A_04" value="id='abs2Rel(x,y)' algoritmo='sí' expresión='res.x' algoritmo='sí' hacer='res.x=(x-E1._w/2-E1.Ox)/E1.escala;res.y=(E1._h/2+E1.Oy-y)/E1.escala'">
+   <param name="A_05" value="id='rel2Abs(x,y)' algoritmo='sí' expresión='res.x' algoritmo='sí' hacer='res.x=x*E1.escala+E1._w/2+E1.Ox;res.y=-y*E1.escala+E1._h/2+E1.Oy'">
+   <param name="A_06" value="id='rndColorsAux()' algoritmo='sí' expresión='x' algoritmo='sí' Local='idx,idxC' inicio='idx=0;' hacer='idxC=(idx%7);sucesion[idx,1]=idxC;idx=idx+1' mientras='idx<nFigs'">
+   <param name="A_07" value="id='rndColors()' algoritmo='sí' expresión='x' algoritmo='sí' Local='idx,idx1,idx2,val' inicio='rndColorsAux();idx=0' hacer='idx1=ent(rnd*nFigs);idx2=ent(rnd*nFigs);val=sucesion[idx1,1];;sucesion[idx1,1]=sucesion[idx2,1];sucesion[idx2,1]=val;;idx=idx+1' mientras='idx<nFigs*2'">
+   <param name="A_08" value="id='___MACRO___' expresión='0'">
+   <param name="A_09" value="id='fig0.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(0,idxPol);;fig0.cR.r=cR.r;fig0.cR.g=cR.g;fig0.cR.b=cR.b;;fig0.cL.r=cL.r;fig0.cL.g=cL.g;fig0.cL.b=cL.b;'">
+   <param name="A_10" value="id='fig1.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(1,idxPol);;fig1.cR.r=cR.r;fig1.cR.g=cR.g;fig1.cR.b=cR.b;;fig1.cL.r=cL.r;fig1.cL.g=cL.g;fig1.cL.b=cL.b;'">
+   <param name="A_11" value="id='fig2.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(2,idxPol);;fig2.cR.r=cR.r;fig2.cR.g=cR.g;fig2.cR.b=cR.b;;fig2.cL.r=cL.r;fig2.cL.g=cL.g;fig2.cL.b=cL.b;;'">
+   <param name="A_12" value="id='fig3.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(3,idxPol);;fig3.cR.r=cR.r;fig3.cR.g=cR.g;fig3.cR.b=cR.b;;fig3.cL.r=cL.r;fig3.cL.g=cL.g;fig3.cL.b=cL.b;'">
+   <param name="A_13" value="id='fig4.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(4,idxPol);;fig4.cR.r=cR.r;fig4.cR.g=cR.g;fig4.cR.b=cR.b;;fig4.cL.r=cL.r;fig4.cL.g=cL.g;fig4.cL.b=cL.b;;'">
+   <param name="A_14" value="id='fig5.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(5,idxPol);;fig5.cR.r=cR.r;fig5.cR.g=cR.g;fig5.cR.b=cR.b;;fig5.cL.r=cL.r;fig5.cL.g=cL.g;fig5.cL.b=cL.b;'">
+   <param name="A_15" value="id='fig6.getColor(idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' hacer='getColor(6,idxPol);;fig6.cR.r=cR.r;fig6.cR.g=cR.g;fig6.cR.b=cR.b;;fig6.cL.r=cL.r;fig6.cL.g=cL.g;fig6.cL.b=cL.b;'">
+   <param name="A_16" value="id='updateValues()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='fig0.configuraFigura(sucesion[0,0]);fig1.configuraFigura(sucesion[1,0]);fig2.configuraFigura(sucesion[2,0]);fig3.configuraFigura(sucesion[3,0]);fig4.configuraFigura(sucesion[4,0]);fig5.configuraFigura(sucesion[5,0]);fig6.configuraFigura(sucesion[6,0]);;rndColors();initPos()'">
+   <param name="A_17" value="id='updateRadios()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='fig0.RADIO_1=RADIO_1;fig0.RADIO_2=RADIO_2;;fig1.RADIO_1=RADIO_1;fig1.RADIO_2=RADIO_2;;fig2.RADIO_1=RADIO_1;fig2.RADIO_2=RADIO_2;;fig3.RADIO_1=RADIO_1;fig3.RADIO_2=RADIO_2;;fig4.RADIO_1=RADIO_1;fig4.RADIO_2=RADIO_2;;fig5.RADIO_1=RADIO_1;fig5.RADIO_2=RADIO_2'">
+   <param name="A_18" value="id='updateCfgGraf()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='fig0.RADIO_1=RADIO_1;fig0.RADIO_2=RADIO_2;fig0.ANCHO_P=ANCHO_P;fig0.ANCHO_L=ANCHO_L;;fig1.RADIO_1=RADIO_1;fig1.RADIO_2=RADIO_2;fig1.ANCHO_P=ANCHO_P;fig1.ANCHO_L=ANCHO_L;;fig2.RADIO_1=RADIO_1;fig2.RADIO_2=RADIO_2;fig2.ANCHO_P=ANCHO_P;fig2.ANCHO_L=ANCHO_L;;fig3.RADIO_1=RADIO_1;fig3.RADIO_2=RADIO_2;fig3.ANCHO_P=ANCHO_P;fig3.ANCHO_L=ANCHO_L;;fig4.RADIO_1=RADIO_1;fig4.RADIO_2=RADIO_2;fig4.ANCHO_P=ANCHO_P;fig4.ANCHO_L=ANCHO_L;;fig5.RADIO_1=RADIO_1;fig5.RADIO_2=RADIO_2;fig5.ANCHO_P=ANCHO_P;fig5.ANCHO_L=ANCHO_L;;;fig6.RADIO_1=RADIO_1;fig6.RADIO_2=RADIO_2;fig6.ANCHO_P=ANCHO_P;fig6.ANCHO_L=ANCHO_L;'">
+   <param name="A_19" value="id='___SETS___' expresión='0'">
+   <param name="A_20" value="id='setFigura(idx)' algoritmo='sí' expresión='x' algoritmo='sí' Local='tmpA,chgW,tmpR,chgR' hacer='idxF=_Eval_(&squot;&squot;+idx);_Trace_(&squot;Vamos a poner la figura : &squot;+(idxF+0.5));fig0.setFigura(idxF);fig1.setFigura(idxF);fig2.setFigura(idxF);fig3.setFigura(idxF);fig4.setFigura(idxF);fig5.setFigura(idxF);;tmpA=ANCHO_P;chgW=(idxF==2)|(idxF==0);chgR=(idxF==0);tmpR=RADIO_2;;R_ADIO_2=(chgR)?(RADIO_2/2):tmpR;A_NCHO_P=(chgW)?(ANCHO_P*2):tmpA;updateCfgGraf();RADIO_2=tmpR;ANCHO_P=tmpA'">
+   <param name="A_21" value="id='setTerminos(t0,t1,t2,t3,t4,t5)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='sucesion[0,0]=t0;sucesion[1,0]=t1;sucesion[2,0]=t2;sucesion[3,0]=t3;sucesion[4,0]=t4;sucesion[5,0]=t5;sucesion[6,0]=t6;updateValues();rndColors()'">
+   <param name="A_22" value="id='init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='RADIO_1=0.5;RADIO_2=1;ANCHO_P=3;ANCHO_L=1;nFigs=5;debug=0;;verSelected=0;selected=0;;verLabels=1;verIndex=1;updateCfgGraf();;setFigura(7);;setTerminos(8,4,2,6,7,8);;;fig0.debug=0;fig1.debug=0;fig2.debug=0;fig3.debug=0;fig4.debug=0;fig5.debug=0;;'">
+   <param name="A_23" value="id='initPos()' algoritmo='sí' algoritmo='sí' Local='allW,gapX' hacer='width=E1.escala*max(RADIO_1,RADIO_2)*2;gapX=40;allW=(width+gapX)*nFigs-gapX;;terms.fig.w=width;terms.fig.h=width;terms.fig.initX=(E1._w-allW)/2+width/2;terms.fig.initY=(E1._h-width)/2+width/2;terms.fig.gapX=gapX;;pol.x1=terms.fig.initX-terms.fig.w/2;pol.y1=terms.fig.initY-terms.fig.h/2;pol.x2=pol.x1+allW;pol.y2=pol.y1+terms.fig.h'">
+   <param name="A_24" value="id='___GRAF___' expresión='0'">
+   <param name="A_25" value="id='getFigPos(idx)' algoritmo='sí' expresión='idx<nFigs' algoritmo='sí' hacer='fig.abs.x=terms.fig.initX+(terms.fig.w+terms.fig.gapX)*idx;fig.abs.y=terms.fig.initY;fig.abs.w=terms.fig.w;fig.abs.h=terms.fig.h;;;;fig.x=abs2Rel(fig.abs.x,fig.abs.y);fig.y=res.y;fig.w=fig.abs.w/E1.escala;fig.h=fig.abs.h/E1.escala;;;fig.RADIO_1=RADIO_1;fig.RADIO_2=RADIO_2;fig.setFigura(idxF);fig.configuraFigura(sucesion[idx,0])'">
+   <param name="A_26" value="id='getFigTxtPos(idx)' algoritmo='sí' expresión='fig.txt.visible' algoritmo='sí' Local='ver,ff,fw,fz' inicio='fz=22;ff=&squot;SansSerif&squot;;fw=&squot;BOLD&squot;' hacer='ver=(verLabels)?getFigPos(idx):0;fig.txt.visible=ver ;fig.txt=sucesion[idx,0];fig.txt.w=(ver)?(_AnchoDeCadena_(fig.txt+&squot;&squot;,ff,fw,fz)):0;fig.txt.x=fig.abs.x-(fig.txt.w)/2;fig.txt.y=fig.abs.y+fig.abs.h/2+15'">
+   <param name="A_27" value="id='getFigIdxPos(idx)' algoritmo='sí' expresión='fig.txt.visible' algoritmo='sí' Local='ver,ff,fw,fz' inicio='fz=22;ff=&squot;SansSerif&squot;;fw=&squot;BOLD&squot;' hacer='ver=(verIndex)?getFigPos(idx):0;fig.txt.visible=ver ;fig.txt=idx+1;fig.txt.w=(ver)?(_AnchoDeCadena_(fig.txt+&squot;&squot;,ff,fw,fz)):0;fig.txt.x=fig.abs.x-(fig.txt.w)/2;fig.txt.y=fig.abs.y-(fig.abs.h/2+5)-fz'">
+   <param name="A_28" value="id='getColor(idxFig,idxPol)' algoritmo='sí' expresión='1' algoritmo='sí' Local='idxC' hacer='cL.r=0;cL.g=0;cL.b=0;;idxC=sucesion[idxFig,1];cR.r=col[idxC,1];cR.g=col[idxC,2];cR.b=col[idxC,3];'">
+   <param name="A_29" value="id='getSelectTerm()' algoritmo='sí' expresión='verSelected' algoritmo='sí' Local='m' inicio='m=10/E1.escala' hacer='tt=(selected>-1)?getFigPos(selected):0;;img.x=fig.x;img.y=fig.y-fig.h/2;;sel.pol.x1=fig.x-fig.w/2;sel.pol.y1=fig.y-fig.h/2;;sel.pol.x2=sel.pol.x1+fig.w;sel.pol.y2=sel.pol.y1+fig.h;;sel.pol.x1=sel.pol.x1-m;sel.pol.y1=sel.pol.y1-m;sel.pol.x2=sel.pol.x2+m;sel.pol.y2=sel.pol.y2+m'">
+   <param name="A_30" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init()'">
+   <param name="A_31" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E1' tipo='polígono' dibujar-si='0' coord_abs='sí' expresión='(pol.x1,pol.y1)(pol.x2,pol.y1)(pol.x2,pol.y2)(pol.x1,pol.y2)(pol.x1,pol.y1)' relleno='ffff80'">
+   <param name="G_02" value="espacio='E1' tipo='polígono' color='ffffb4' dibujar-si='getSelectTerm()' expresión='(sel.pol.x1,sel.pol.y1)(sel.pol.x1,sel.pol.y2)(sel.pol.x2,sel.pol.y2)(sel.pol.x2,sel.pol.y1)(sel.pol.x1,sel.pol.y1)' relleno='ffffb4'">
+   <param name="G_03" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(0)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig0'">
+   <param name="G_04" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(1)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig1'">
+   <param name="G_05" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(2)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig2'">
+   <param name="G_06" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(3)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig3'">
+   <param name="G_07" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(4)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig4'">
+   <param name="G_08" value="espacio='E1' tipo='macro' dibujar-si='0&getFigPos(5)' expresión='macros/figuras.txt' posini='[fig.x,fig.y]' nombre='fig5'">
+   <param name="G_09" value="espacio='E1' tipo='macro' dibujar-si='getFigPos(s)' expresión='macros/figuras.txt' familia='s' s.intervalo='[0,5]' s.pasos='5' posini='[fig.x,fig.y]' nombre='fig'">
+   <param name="G_10" value="espacio='E1' tipo='segmento' dibujar-si='getFigTxtPos(s)' coord_abs='sí' expresión='(fig.abs.x-fig.abs.w/2,fig.txt.y-4)(fig.abs.x+fig.abs.w/2,fig.txt.y-4)' familia='s' s.intervalo='[0,nFigs-1]' s.pasos='nFigs-1' fijo='sí' tamaño='1' ancho='3'">
+   <param name="G_11" value="espacio='E1' tipo='texto' dibujar-si='getFigIdxPos(s)' expresión='[fig.txt.x,fig.txt.y]' familia='s' s.intervalo='[0,nFigs-1]' s.pasos='nFigs-1' texto='[fig.txt]' fuente='SansSerif,BOLD+ITALIC,18' decimales='6' fijo='no' info='INDICES DE LAS FIGURAS'">
+   <param name="G_12" value="espacio='E1' tipo='texto' dibujar-si='getFigTxtPos(s)' expresión='[fig.txt.x,fig.txt.y]' familia='s' s.intervalo='[0,nFigs-1]' s.pasos='nFigs-1' texto='[fig.txt]' fuente='SansSerif,BOLD,22' decimales='6' fijo='no'">
+   <param name="G_13" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='verIndex' expresión='[20,20]' texto='[terms.fig.initX],[terms.fig.initY],[terms.fig.w],[terms.fig.h]' fijo='sí'">
+   <param name="G_14" value="espacio='E1' tipo='texto' color='blanco' dibujar-si='0' expresión='[20,20]' texto='[terms.fig.initX],[terms.fig.initY],[terms.fig.w],[terms.fig.h]' fijo='sí'">
+   <param name="G_15" value="espacio='E1' tipo='imagen' dibujar-si='getSelectTerm()' expresión='(img.x,img.y,1,-1)' archivo='../images/sucesiones/flecha_senalar_fraccion.png'">
+</ajs></p>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+img{
+}
+
+p, div, ol > li {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+
+.imgAlebrije{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: 50;
+}
+.imgAlebrije.e-small{
+    top: 10px;
+    left: auto;
+    right: 30px;
+    margin: 0px;
+    width: 50%;
+    height: 50%;
+}
+
+.fondoParrafo{
+    position: absolute;
+    width: 580px;
+    height: auto;
+    min-height: 200px;
+    right: 0px;
+    left: 0px;
+    bottom: 10px;
+    top: auto;
+    margin: 0px auto;
+    padding: 15px;
+    text-align: left;
+    background-color: #f8eedd;
+    border: 2px solid #9d9b98;
+    box-shadow: -3px 3px 0 #d3c0a1;
+}
+.fondoParrafo::before {
+    content: "";
+    height: 20px;
+    top: -12px;
+    left: 200px;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 20px;
+    background-color: #f8eedd;
+    border: solid 2px #989694;
+    border-bottom: none;
+    border-left: none;
+}
+.fondoParrafo.arriba{
+    top: 5px;
+    bottom: auto;
+}
+.slowMove{
+    -webkit-transition: top 1s;
+    transition: top 1s;
+}
+
+.fondoParrafo.arriba::before {
+    top: auto;
+    bottom: -12px;
+    transform: rotate(-225deg);
+}
+
+.fondoParrafo > h1{
+    margin-top: 0px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.fondoParrafo > p.parrafo{
+    font-size: 26px;
+    line-height: 28px;
+}
+
+
+.blank {
+	/*display: inline-block;*/
+	min-width: 100px;
+	min-height: 30px;
+}
+.blank.e-activo{
+    	background-color: rgba(174,235,246,0.9);
+	cursor: pointer;
+}
+.blank.e-activo:hover, .blank.e-activo:active{
+    background-color: #94e1ef;
+}
+.blank.e-resuelto {
+	background-color: rgba(174,235,246,0.9);
+	display: inline;
+}
+span.e-resaltado{
+    background-color: rgba(174,235,246,0.9);
+}
+.blank.e-seleccionado {
+	background-color: rgba(174,235,246,0.9);
+}
+
+.options {
+	position: absolute;
+	width: 620px;
+	left: 0px;
+	right: 0px;
+	bottom: 5px;
+	margin: 0px auto;
+	border: solid 3px #67cbdd;
+	z-index: 50;
+}
+
+.option {
+	display: block;
+	min-width: 44px;
+	min-height: 40px;
+	line-height: 26px;
+	margin: 4px;
+	text-align: left;
+	padding: 5px 10px;
+	background-color: rgba(255,255,255,.58);
+}
+.option:not(.e-inactivo){
+    cursor: pointer;
+}
+.option:not(.e-inactivo):hover,.option:not(.e-inactivo):active{
+    background-color: #aeebf6;
+}
+.option.e-seleccionado{
+    background-color: #aeebf6;
+}
+
+/* ---------
+ *  States 
+ * --------- */
+
+.e-oculto {
+	display: none;
+}
+
+.e-marcado {
+}
+
+.e-nuevo{
+    /*background: rgba(172,40,180,0.5);*/
+    background: rgba(72,203,231,.6);
+}
+
+.e-azul{
+    color: blue;
+}
+.e-morado{
+    color: #9b40db;
+    font-weight: bold;
+    /*background: rgba(172,40,180,0.2);*/
+    background: rgba(72,203,231,.6);
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

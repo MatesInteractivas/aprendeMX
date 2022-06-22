@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Sonido, ondas, longitud de onda, frecuencia, difracción de sonido, tono, vibración, onda sonora, grave, agudo, oído">
+
+<head>
+	<title>¿Cómo detecto los sonidos graves y los agudos?</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E1' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='Onda1' x='100' y='150' ancho='800' alto='280' fijo='sí' despl_imagen='arr-izq' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='info' dibujar-si='info=1' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ffecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Siguiente' expresión='(1024-230,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase+1\nanimar=0\ntt=0\nt=0\nCal1()' dibujar-si='fase<6'">
+   <param name="C_02" value="id='anterior' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Anterior' expresión='(30,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='fase=fase-1\nanimar=0\ntt=0\nt=0\nCal1()' dibujar-si='fase>0' pos_mensajes='centro'">
+   <param name="C_03" value="id='info' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Información' expresión='(1024-230-380,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='1abc9c' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx verdeAgua informacion|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='info=1' pos_mensajes='centro'">
+   <param name="C_04" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='info' expresión='(840,70,56,56)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='images/icon_wrong.png' acción='calcular' parámetro='info=0' pos_mensajes='centro'">
+   <param name="C_05" value="id='sig+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='+' expresión='(920,220,80,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx verdeAgua |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Aber=Aber+1\nCal1()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='sig-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='-' expresión='(920,280,80,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx verdeAgua |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='Aber=Aber-1\nCal1()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='sig2+' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='+' expresión='(10,220,80,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx verdeAgua |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='L=L+1\nCal1()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_08" value="id='sig2-' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='-' expresión='(10,280,80,40)' fijo='sí' visible='sí' color-int='16a085' fuente puntos='19' imagen='_STYLE_|class=btnAprendeMx verdeAgua |shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='L=L-1\nCal1()' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_09" value="id='soltar' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Animar' expresión='(1024-230-380,440,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda play|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=1' dibujar-si='(animar=0)' pos_mensajes='centro'">
+   <param name="C_10" value="id='reinit' tipo='numérico' interfaz='botón' región='interior' espacio='E1' nombre='          Detener' expresión='(1024-230-380,440,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='animar=0' dibujar-si='(animar=1)' pos_mensajes='centro'">
+   <param name="A_01" value="id='init()' algoritmo='sí' algoritmo='sí' hacer='fase=0;info=0;animar=0;tim=50;Aber=50;L=10;Dif=L-Aber;'">
+   <param name="A_02" value="id='Cal1()' algoritmo='sí' algoritmo='sí' hacer='Dif=L-Aber;Aber=(fase>=2)?2:50;L=(fase=3)?20:((fase=4)?30:((fase=2)?10:((fase=6)?30:((fase=5)?10:L))))'">
+   <param name="A_03" value="id='datos()' algoritmo='sí' algoritmo='sí'">
+   <param name="A_04" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='init();'">
+   <param name="A_05" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_06" value="id='anima' evento='sí' condición='animar=1' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[60,16]' texto='Explora cómo se propagan las ondas.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E1' tipo='texto' color='34495e' dibujar-si='fase>0' expresión='[60,16]' texto='Explora cómo se produce la difracción.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_03" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=0' expresión='[20,55]' texto='Pulsa el botón “Animar” para ver qué figuras forman las ondas de sonido al viajar.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_04" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=1' expresión='[20,55]' texto='Pulsa el botón “Animar” y observa qué pasa con una onda cuando ésta se encuentra con una barrera que tiene una abertura.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_05" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=2' expresión='[20,55]' texto='Observa este caso donde la abertura es pequeña ¿Qué le sucede al sonido después de pasar por la barrera?' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_06" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=3' expresión='[20,55]' texto='Observa qué pasa si se aumenta la longitud de onda ¿Qué le sucede al sonido después de pasar por la barrera? Pulsa el botón “Animar” y observa.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_07" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=4' expresión='[20,55]' texto='Observa qué sucede si se aumenta aún más la longitud de onda ¿Qué le sucede al sonido después de pasar por la barrera? Pulsa el botón “Animar” y observa.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_08" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=5' expresión='[20,55]' texto='Observa un caso interesante. El sonido se encuentra con la orilla de una barrera, ¿sucederá lo mismo que cuando se encuentra con la abertura en un barrera? Pulsa el botón “Animar” y observa.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_09" value="espacio='E1' tipo='texto' color='27ae60' dibujar-si='fase=6' expresión='[20,55]' texto='Observa un caso parecido al anterior pero ahora con un sonido más grave. Pulsa el botón “Animar” y observa.' fuente='SansSerif,ITALIC,22' fijo='sí' ancho='980'">
+   <param name="G_10" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_11" value="espacio='Onda1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(400,140,1,1)' archivo='images/explora/fondo_01.png'">
+   <param name="G_12" value="espacio='Onda1' tipo='imagen' dibujar-si='fase=0' coord_abs='sí' expresión='(410,119,1,1)' archivo='images/explora/bocina.png'">
+   <param name="G_13" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=0)' radio='(tt%13)-(s/2)-.08' fin='360' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_14" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=0)' radio='(tt%13)-(s/2)-.04' fin='360' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_15" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=0)' radio='(tt%13)-(s/2)' fin='360' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_16" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_17" value="espacio='Onda1' tipo='imagen' dibujar-si='(fase>0)' coord_abs='sí' expresión='(400,140,1,1)' archivo='images/explora/fondo_02.png'">
+   <param name="G_18" value="espacio='Onda1' tipo='segmento' color='de0000' dibujar-si='fase>0' coord_abs='sí' expresión='(((tt+(s*L/10))%40)*10,0)(((tt+(s*L/10))%40)*10,280)' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_19" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=1)&(((tt>30)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(-595+((tt+40+(s*L/10))%40)*10,140)' radio='1000' inicio='3' fin='-3' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_20" value="espacio='Onda1' tipo='imagen' dibujar-si='(fase=1)' coord_abs='sí' expresión='(437,380-398*s,1,1)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/explora/pared_3d.png'">
+   <param name="G_21" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_22" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=2)&(((tt>30)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(405,140)' radio='10+((tt+(s*L/10))%40)*10' inicio='45' fin='-45' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_23" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_24" value="espacio='Onda1' tipo='imagen' dibujar-si='(fase>1)&(fase<5)' coord_abs='sí' expresión='(437,335-305*s,1,1)' familia='s' s.intervalo='[0,1]' s.pasos='1' archivo='images/explora/pared_3d.png'">
+   <param name="G_25" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=3)&(((tt>30)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(405,140)' radio='10+((tt+(s*L/10))%40)*10' inicio='67' fin='-67' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_26" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_27" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=4)&(((tt>30)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(405,140)' radio='10+((tt+(s*L/10))%40)*10' inicio='90' fin='-90' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_28" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_29" value="espacio='Onda1' tipo='segmento' color='de0000' dibujar-si='(fase=5)&(((tt>28)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' expresión='(405+((tt+(s*L/10))%40)*10,0)(405+((tt+(s*L/10))%40)*10,140)' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_30" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=5)&(((tt>28)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(395,140)' radio='10+((tt+(s*L/10))%40)*10' inicio='60' fin='0' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_31" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_32" value="espacio='Onda1' tipo='segmento' color='de0000' dibujar-si='(fase=6)&(((tt>28)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' expresión='(405+((tt+(s*L/10))%40)*10,0)(405+((tt+(s*L/10))%40)*10,140)' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' tamaño='0' ancho='2'">
+   <param name="G_33" value="espacio='Onda1' tipo='arco' color='de0000' dibujar-si='(fase=6)&(((tt>28)&(tt<=40)&(((tt+40+(s*L/10))%40)*10<300))|(tt>40))' coord_abs='sí' centro='(395,140)' radio='10+((tt+(s*L/10))%40)*10' inicio='90' fin='0' familia='s' s.intervalo='[0,4]' s.pasos='4' fijo='sí' ancho='2'">
+   <param name="G_34" value="espacio='Onda1' tipo='imagen' dibujar-si='(fase>4)' coord_abs='sí' expresión='(434,347,1,1)' archivo='images/explora/pared_3d.png'">
+   <param name="G_35" value="espacio='E1' tipo='punto' fondo='sí' dibujar-si='0' expresión='(00000000000,0)' fijo='sí'">
+   <param name="G_36" value="espacio='info' tipo='imagen' coord_abs='sí' expresión='(20,0)' archivo='images/tablet.png'">
+   <param name="G_37" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[150,100]' texto='Cuando tiras una piedra en el agua las ondas necesitan un medio para viajar. Lo mismo pasa con las ondas del sonido. En este caso, el medio por el que viajan es el aire, sin él el sonido no existiría.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_38" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=0' expresión='[150,205]' texto='Como habrás notado, el sonido viaja en todas direcciones. Si pudiéramos ver en un espacio tridimensional cómo se propaga, veríamos que se generan esferas cuyo centro está en el lugar donde se origina el sonido.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='705'">
+   <param name="G_39" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[150,100]' texto='Imagina que una onda de sonido es como una onda en un estanque, ¿qué pasa si esta onda se encuentra con una barrera que tiene una abertura? ¿Del otro lado de la barrera habría movimiento?' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_40" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=1' expresión='[150,205]' texto='En el caso que se acaba de mostrar, la abertura es grande por lo que la onda pasa al otro lado sin problema, casi sin ser afectada por las orillas por las que pasa.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='705'">
+   <param name="G_41" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=2' expresión='[150,100]' texto='En este caso la abertura es menor que la longitud de onda y como puedes ver, el sonido trata de pasar haciendo mayor esfuerzo provocando así que al pasar por la abertura se difracte.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_42" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[150,100]' texto='Observa que para ondas más graves, es decir, con longitud de onda mayor, el cono que se forma al pasar por la abertura es más abierto. Qué tan abierto es el cono depende del tamaño relativo entre la longitud de onda y la abertura.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_43" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=3' expresión='[150,235]' texto='Entre mayor es la longitud de onda el sonido se desvía más al pasar por un agujero.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='705'">
+   <param name="G_44" value="espacio='E1' tipo='texto' dibujar-si='debug' expresión='[20,20]' texto='fase=[fase]\nanimar=[animar]\ntt=[tt]\nt=[t]\nAber=[Aber]\nL=[L]\nDif=[Dif]' fijo='sí'">
+   <param name="G_45" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=4' expresión='[150,100]' texto='En este último caso en el que la longitud de onda es mucho más larga que la abertura, el sonido se propaga como si la fuente estuviera en el orificio. Es decir, se propaga en todas las direcciones posibles.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_46" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=5' expresión='[150,100]' texto='En este caso el sonido también se desvía dando la vuelta a la esquina y formando un cono. La abertura del cono, como en los casos anteriores, dependen la longitud de onda del sonido.\n\nA continuación veremos qué pasa con los sonidos más graves.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='705'">
+   <param name="G_47" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=6' expresión='[150,100]' texto='En este caso el sonido se desvía más alrededor del obstáculo debido a que es más grave.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='675'">
+   <param name="G_48" value="espacio='info' tipo='texto' color='34495e' dibujar-si='fase=6' expresión='[150,180]' texto='¡Sonidos suficientemente graves son capaces de dar vuelta a esquinas de 90º!' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='705'">
+   <param name="Animación" value="pausa='100' controles='no' auto='no' hacer='tt=tt+1;t=((fase=2)&(t<tim))?t+1:0' mientras='animar'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

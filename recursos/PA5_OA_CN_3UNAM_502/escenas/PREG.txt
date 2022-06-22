@@ -1,0 +1,175 @@
+﻿NP=0
+PREG[NP,txt]='Si una cazuela hecha toda de aluminio está calentándose en una estufa y tiene agua hirviendo, puedes tocar su mango con tus dedos sin quemarte.'
+PREG[NP,rt1]='El aluminio es un buen conductor del calor. Si la cazuela'
+PREG[NP,rt2]='tiene agua hirviendo, ésta estará a cerca de 100 grados'
+PREG[NP,rt3]='centígrados y su mango a unos 90. ¡Si lo tocas te quemas!'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Cuando hace calor y nos ponemos frente a un ventilador encendido nos refrescamos porque el ventilador avienta aire frío.'
+PREG[NP,rt1]='El aire que avienta el ventilador no está más frío que el resto.'
+PREG[NP,rt2]='El frescor que sentimos se debe a que el aire que avienta remueve y'
+PREG[NP,rt3]='aleja al que tocaba nuestra piel, que ya habíamos calentado y humedecido.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Cuando tocamos los objetos que nos rodean, unos se sienten más fríos que otros, pero en realidad todos están a la misma temperatura.'
+PREG[NP,rt1]='Si la temperatura ambiente es menor que la de nuestro cuerpo,'
+PREG[NP,rt2]='los objetos hechos con materiales conductores del calor'
+PREG[NP,rt3]='se sienten más fríos, aunque en realidad no lo estén.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Un refirgerador enfría todo lo que contiene a la misma temperatura, aunque los recipientes de metal que contiene se sientan más fríos que los de papel o plástico.'
+PREG[NP,rt1]='Los objetos de metal se sienten más fríos porque son conductores del'
+PREG[NP,rt2]='calor y transmiten más rápido, al resto de ellos mismos, el calor que'
+PREG[NP,rt3]='roban a nuestra piel, que sigue perdiendo calor y eso da sensación de frío.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Usamos cucharas de madera para cocinar porque la madera no transmite el calor a nuestras manos.'
+PREG[NP,rt1]='La madera es mala conductora del calor, por eso'
+PREG[NP,rt2]='los instrumentos de madera sirven para cocinar ya que'
+PREG[NP,rt3]='nos permiten manipular la comida caliente sin quemarnos.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Los conductores del calor siempre se sienten más fríos que los aislantes.'
+PREG[NP,rt1]='Eso pasa cuando la temperatura ambiente es menor que la de nuestro cuerpo.'
+PREG[NP,rt2]='Pero cuando es mayor, sentimos los conductores como más calientes porque el'
+PREG[NP,rt3]='calor que nos pasan lo recuperan inmediatamente de las partes que no tocamos.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='En lugares donde hace mucho frío, construyen las ventanas con doble vidrio porque el vidrio es muy buen aislante.'
+PREG[NP,rt1]='El vidrio no es buen aislante ni buen conductor, pero en cambio el aire'
+PREG[NP,rt2]='es muy buen aislante. Se ponen dos vidrios para dejar aire entre ellos.'
+PREG[NP,rt3]='En esas ventanas conviene poner los vidrios muy separados.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Para coger con la mano algo muy caliente y no quemarnos, podríamos usar guantes de lana.'
+PREG[NP,rt1]='La lana es un buen aislante térmico, especialmente porque lleva'
+PREG[NP,rt2]='aire atrapado entre sus fibras. Lo mismo sirve para mantenernos'
+PREG[NP,rt3]='calientes que para protegernos de las cosas demasiado calientes.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Las prendas más abrigadoras lo son porque generan calor propio.'
+PREG[NP,rt1]='Lo que hacen las prendas abrigadoras es evitar que nuestro cuerpo pierda calor.'
+PREG[NP,rt2]='Están hechas con materiales que llevan aire atrapado y éste, que es aislante,'
+PREG[NP,rt3]='evita la transmisión del calor de nuestro cuerpo al aire frío del exterior.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Si el aire fuera tan buen aislante térmico como dicen, no necesitaríamos abrigarnos.'
+PREG[NP,rt1]='Aunque el aire es aislante, también es fluído y cuando la piel lo calienta'
+PREG[NP,rt2]='se expande y se eleva, alejándose de ella, por lo que esta última vuelve'
+PREG[NP,rt3]='a entrar en contacto con aire más fresco y sigue perdiendo calor.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Los esquimales hacen sus casas, llamadas iglús, de hielo porque así son menos frías.'
+PREG[NP,rt1]='El hielo es un buen aislante térmico. Mantiene la temperatura interior del iglú'
+PREG[NP,rt2]='cerca de cero grados centígrados, mucho más alta que la del exterior que puede llegar a 40'
+PREG[NP,rt3]='bajo cero. Además, no tienen a la mano otros materiales de construcción más baratos.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Si al meternos a una piscina sentimos frío es porque el aire está más caliente que el agua de la piscina.'
+PREG[NP,rt1]='No necesariamente. Aunque el agua esté a la misma'
+PREG[NP,rt2]='temperatura que el aire, la sentimos más fría porque'
+PREG[NP,rt3]='es 20 veces mejor conductor térmico que el aire. '
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Sentimos más frío cuando hay viento que cuando el aire está en reposo.'
+PREG[NP,rt1]='Es porque el viento es aire en movimiento y el que llega a nuestra piel'
+PREG[NP,rt2]='aleja al que estaba pegado a ella y que ya habíamos calentado, así que'
+PREG[NP,rt3]='tiene que seguir cediendo calor para calentar el aire nuevo que la toca.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Si las paredes de una casa se construyen con un material aislante para que sea calientita en invierno, la casa tendrá que ser calurosa en verano.'
+PREG[NP,rt1]='Si las paredes son aislantes lo mismo sirven para aislar el'
+PREG[NP,rt2]=' interior de la casa del frío exterior que del calor exterior.'
+PREG[NP,rt3]=''
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Si el techo de una casa es muy alto, ésta tiende a ser más fresca que si tuviera un techo bajo.'
+PREG[NP,rt1]='El aire caliente del interior tiende a elevarse,'
+PREG[NP,rt2]='así que el aire que queda en la parte de abajo, '
+PREG[NP,rt3]='donde la gente habita, estará más fresco.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Si el techo de una casa es muy alto, ésta tiende a ser más caliente que si tuviera un techo bajo.'
+PREG[NP,rt1]='El aire caliente del interior tiende a elevarse, así que'
+PREG[NP,rt2]='si el techo fuera alto, el aire que queda en la parte'
+PREG[NP,rt3]='de abajo, donde la gente habita, estaría más fresco.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='Si se hace una abertura en la parte más alta del techo de una casa, cuidando que no entre por él la luz del Sol, la casa se mantendrá más fresca en días de calor.'
+PREG[NP,rt1]='Como el aire caliente del interior tiende a elevarse,'
+PREG[NP,rt2]='éste saldrá por el hueco y dejará entrar aire más fresco del exterior.'
+PREG[NP,rt3]='Esto funciona sólo si el exterior no está más caliente que el interior.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Las casas antiguas tenían sótanos y eso las hacía menos frías durante el invierno.'
+PREG[NP,rt1]='Un sótano contiene una gran cantidad de aire'
+PREG[NP,rt2]='que aísla la casa de la tierra que, por'
+PREG[NP,rt3]='las noches, podría enfriarse mucho.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Los pisos más altos de un edificio de departamentos son fríos por las noches y calurosos de día.'
+PREG[NP,rt1]='Por las noches pierden calor por radiación y durante el día reciben el calor'
+PREG[NP,rt2]='del Sol por el techo. Los pisos medios mantienen una temperatura más estable'
+PREG[NP,rt3]='porque los pisos superiores e inferiores los aíslan de la intemperie.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='No conviene cubrir el mango de una cazuela de aluminio con madera o plástico porque así quemará más.'
+PREG[NP,rt1]='Al contrario, el plástico y más la madera,'
+PREG[NP,rt2]='son aislantes y ayudan a que el calor que llega'
+PREG[NP,rt3]='al mango de la cazuela no pase a la mano del cocinero.'
+PREG[NP,rsp]=no
+NP=NP+1
+
+PREG[NP,txt]='El vidrio y el agua tienen casi la misma conductividad térmica, mucho mayor que la del aire y mucho menor que la de la mayoría de los metales.'
+PREG[NP,rt1]='Efectivamente. Por eso un vaso con agua fría se siente frío pero'
+PREG[NP,rt2]='más fríos se sienten un vaso de alumunio o una copa de plata'
+PREG[NP,rt3]='que contengan agua a la misma temperatura.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Las cucharas tienen un adelgazamiento al inicio del mango porque eso ayuda a que conduzcan menos el calor de la sopa a la mano.'
+PREG[NP,rt1]='Efectivamente. Por un angostamiento pasa menos calor.'
+PREG[NP,rt2]='De hecho si un extremo de un alambre de cobre se pone al fuego'
+PREG[NP,rt3]='el otro extremo no se calentará mucho, a menos que el alambre sea muy grueso.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Es fácil saber si el material de que está hecho un cuerpo es un buen conductor térmico o no.'
+PREG[NP,rt1]='A temperatura ambiente normal, digamos a 18 grados centígrados,'
+PREG[NP,rt2]='basta tocar el cuerpo y lo sabremos de inmediato. Si se siente frío'
+PREG[NP,rt3]='es que es buen conductor del calor. Si no, es más bien un asilante.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Un termo es un recipiente de paredes dobles entre las que se ha hecho el vacío. Conserva el calor, en parte, porque el vacío no conduce el calor.'
+PREG[NP,rt1]='Ya que la conducción del calor se produce cuando unas moléculas,'
+PREG[NP,rt2]='transmiten parte de su enegía de movimiento a otras, es imposible'
+PREG[NP,rt3]='la conducción del calor en ausencia de moléculas, o sea en el vacío.'
+PREG[NP,rsp]=si
+NP=NP+1
+
+PREG[NP,txt]='Un termo es un recipiente de paredes gruesas hechas de un material plástico que es muy mal conductor del calor.'
+PREG[NP,rt1]='En realidad un termo es un recipiente de paredes dobles y reflejantes'
+PREG[NP,rt2]='entre las que se ha hecho el vacío. Conserva el calor porque el vacío'
+PREG[NP,rt3]='no puede conducir el calor y las paredes reflejantes no emiten radiación.'
+PREG[NP,rsp]=no
+NP=NP+1

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Blog</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			<div class='infoCuadro'>
+				
+				<p><strong>Cuadros sin&oacute;pticos</strong></p>
+				
+				<p>Los cuadros sin&oacute;pticos ofrecen un tipo de organizaci&oacute;n de &lsquo;mayor a menor&rsquo;: la informaci&oacute;n se presenta en grupos de ideas que van de lo m&aacute;s general (lado izquierdo) a lo m&aacute;s espec&iacute;fico (lado derecho).</p>
+				
+				<p>En el cuadro sin&oacute;ptico que vamos a elaborar, hay cuatro grupos de temas: <em>Su espacio</em>, <em>Cuidados para su salud</em>, y otros dos que t&uacute; tendr&aacute;s que identificar.</p>
+				
+				<p>Estas son las ideas m&aacute;s generales, y seg&uacute;n te vas moviendo hacia la derecha en el cuadro, se llenar&aacute;n con datos cada vez m&aacute;s espec&iacute;ficos o puntuales.</p>
+	
+				<a class='closeBt' onclick='closeInfo();'></a>
+		
+			</div>
+			
+			<a class='infoBt' onclick='showInfo();'></a>
+		
+		<script>
+		
+
+			var inicio = true;
+			
+			function closeInfo(){
+				$(".infoCuadro").css("display","none");
+				$(".infoBt").css("display","block");
+				if(inicio){
+					inicio = false;
+					clock();
+				}
+			}
+			
+			function showInfo(){
+				$(".infoCuadro").css("display","block");
+				$(".infoBt").css("display","none")
+			}
+		
+			function clock(){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: {id: 'cap4_cuadroSinoptico_info' } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},5000);
+			}
+			
+			
+			$(document).ready(function(){
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap4_cuadroSinoptico_info' } };
+				padre.postMessage(mensajeTipoSet, "*");
+			});
+
+		</script>
+					
+        </body>
+</html>

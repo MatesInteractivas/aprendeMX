@@ -1,0 +1,20 @@
+body{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	width: 644px;
+	height: 548px;
+	border: 0px solid #000000;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+.e-oculto{
+	display: none;
+	opacity: 0;
+}

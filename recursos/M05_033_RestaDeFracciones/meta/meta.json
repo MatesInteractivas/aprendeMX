@@ -1,0 +1,33 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "fracciones", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Problemas aditivos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Fracciones", 
+    "denominadores", 
+    "numeradores", 
+    "múltiplos", 
+    "mínimo múltiplo común", 
+    "suma de fracciones", 
+    "resta de fracciones", 
+    "fracciones equivalentes"
+  ], 
+  "descripcion": "En esta unidad podrás explorar cómo se realizan las restas de fracciones aunque ninguno de los denominadores sean múltiplo del otro.",
+  "resena": "Resta de fracciones cuando ningún denominador es múltiplo del otro.",
+  "titulo": "Resta de fracciones", 
+  "id": "PA5_OA_MA_3UNAM_033"
+}

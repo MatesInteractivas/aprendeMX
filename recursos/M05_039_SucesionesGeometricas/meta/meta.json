@@ -1,0 +1,29 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "sucesión", 
+    "progresión", 
+    "geométrico", 
+    "término", 
+    "factor"
+  ], 
+  "descripcion": "Cuánto vale el octavo término de esta sucesión: 2, 4, 8, 16, 32, ...? ¿Y el décimo sexto término? ¿Y el sexagésimo cuarto? Esta es una sucesión geométrica y difiere de las sucesiones aritméticas en que crecen mucho más rápido que aquellas. En esta unidad conocerás las características de las sucesiones geométricas y comprenderás la inmensidad de los valores que pueden alcanzar en unos cuantos términos.",
+  "resena": "Reglas en el cálculo de sucesiones geométricas y su tasa de crecimiento.",
+  "titulo": "Sucesiones geométricas", 
+  "id": "PA5_OA_MA_3UNAM_039"
+}

@@ -1,0 +1,33 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto descriptivo"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "descripción", 
+    "definición", 
+    "característica", 
+    "característica distintiva", 
+    "comparación de características", 
+    "adivinanza", 
+    "adivina quién", 
+    "transporte", 
+    "oración", 
+    "caricatura"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Identificar características distintivas para elaborar una descripción: El alumno o la alumna reconocerá la estructura formal de pequeñas oraciones descriptivas del tipo 'Un [sust] es un [sust] que [verbo]…'. Identificará las características distintivas de personas, objetos o animales para emplearlas en la elaboración de una descripción precisa.",
+  "resena": "Características de una descripción. Identificación de los componentes gramaticales asociados.",
+  "titulo": "¿Qué será?", 
+  "id": "PA5_OA_ES_3UNAM_002_caracteristicasDistintivas"
+}

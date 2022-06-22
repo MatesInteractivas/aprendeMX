@@ -1,0 +1,62 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+}
+
+#cartoon{
+    display: block;
+    margin: auto;
+}
+
+#previous,
+#next{
+    display: block;
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    bottom: 0px;
+}
+
+#previous{
+    background: url('../img/previous.png') no-repeat;
+    left: 0px;
+}
+#previous:hover,#previous:active,#previous:focus{
+    background: url('../img/previous_over.png') no-repeat;
+}
+#next{
+    background: url('../img/next.png') no-repeat;
+    right: 0px;
+}
+#next:hover,#next:active,#next:focus{
+    background: url('../img/next_over.png') no-repeat;
+}
+
+#next.desactivado,
+#previous.desactivado{
+    opacity: 0.5;
+    cursor: default;
+}
+#next:hover.desactivado,
+#previous:hover.desactivado{
+    opacity: 0.5;
+    cursor: default;
+}
+
+#next:hover.desactivado{
+    background-image: url('../img/next.png');
+}
+
+#previous:hover.desactivado{
+    background-image: url('../img/previous.png');
+}

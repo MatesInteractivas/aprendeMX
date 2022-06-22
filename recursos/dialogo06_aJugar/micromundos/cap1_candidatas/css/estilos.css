@@ -1,0 +1,305 @@
+body{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+p, h1, div, .vntn {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0px;
+}
+
+h1{
+   font-size: 28px;
+   font-weight: bold;
+   line-height: 65px;
+}
+
+#contenedor{
+	position: relative;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background-image: url('img/fondo.jpg');
+}
+
+.candidata{
+    position: absolute;
+    cursor: pointer;
+}
+.candidata[data-name="mariaElena"]{
+    left: 44px;
+    top: 28px;
+    width: 249px;
+    height: 249px;
+    background-image: url('../img/mariaElena.png');
+}
+.candidata[data-name="claudia"]{
+    right: 41px;
+    top: 28px;
+    width: 248px;
+    height: 247px;
+    background-image: url('../img/claudia.png');
+}
+.candidata[data-name="anaMaria"]{
+    left: 195px;
+    bottom: 20px;
+    width: 260px;
+    height: 240px;
+    background-image: url('../img/anaMaria.png');
+}
+
+.info{
+    position: absolute;
+    width: 644px;
+    height: 548px;
+}
+
+.foto{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.datosPersonales{
+    position: absolute;
+    width: 391px;
+    height: 138px;
+    top: 50px;
+}
+
+.resultados, .cuestionario{
+    position: absolute;
+    width: 100%;
+    height: 355px;
+    bottom: 0px;
+}
+
+.fondo_resultados{
+    position: absolute;
+    background-image: url('img/fondo_resultados.png');
+    width: 396px;
+    height: 32px;
+    top: 0px;
+    font-weight: bold;
+}
+
+.info[data-name="mariaElena"] .datosPersonales{
+    background-image: url('img/fondo_mariaElena.png');
+    right: 25px;
+}
+.info[data-name="mariaElena"] .fondo_resultados{
+    right: 25px;
+}
+.info[data-name="claudia"] .datosPersonales{
+    background-image: url('img/fondo_claudia.png');
+    right: 20px;
+}
+.info[data-name="claudia"] .fondo_resultados{
+    right: 20px;
+}
+.info[data-name="anaMaria"] .datosPersonales{
+    background-image: url('img/fondo_anaMaria.png');
+    right: 20px;
+}
+.info[data-name="anaMaria"] .fondo_resultados{
+    right: 20px;
+}
+
+.resultado{
+    position: relative;
+    display: block;
+    background-color: rgba(72,203,231,.4);
+    height: 30px;
+    width: 570px;
+    text-align: left;
+    margin: 10px 30px 0px 30px;
+    padding: 3px 10px;
+}
+.resultado:nth-child(4){
+    margin-top: 50px;
+}
+.infoBt{
+    position: absolute;
+    display: block;
+    right: 0px;
+    top: 0px;
+    width: 36px;
+    height: 36px;
+    background-image: url('img/bt_info.png');
+    cursor: pointer;
+}
+.infoBt:hover,.infoBt:active{
+    background-image: url('img/bt_info_over.png');
+}
+
+
+.h1_cuest{
+    background-color: #929292;
+    height: 35px;
+    color: #fff;
+    margin: 45px 30px 5px 30px;
+    line-height: 36px;
+}
+
+.pregunta{
+    text-align: left;
+    margin: 0px 30px 5px 30px;
+    background-color: rgba(250,250,250,.5);
+    padding: 5px 10px;
+}
+
+/**** ESTADOS ***/
+
+.e-oculto{
+    visibility: hidden;
+    opacity : 0;
+}
+.slowShow{
+    -webkit-transition: opacity 2.5s; /* Safari */
+    transition: opacity 2.5s;
+}
+
+
+
+/* Ventanas */
+
+.vntn {
+   /* border: 1px solid #000;
+    background-color: #FFF;
+    box-shadow: 0 2px 3px #666666;*/
+    padding: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 50;
+}
+
+.vntn--btn-cerrar {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #989694;
+    cursor: pointer;
+}
+
+.vntn--titulo {
+    text-transform: uppercase;
+    font-size: 22px !important;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vntn--contenido {
+    font-size: 25px;
+}
+
+.vntn--contenido > p {
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.vntn-info {
+	width: 500px !important;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -5%);
+	-webkit-transform: translate(-50%, -5%);
+	-ms-transform: translate(-50%, -5%);
+	-o-transform: translate(-50%, -5%);
+	margin: auto;
+	z-index: 55;
+	background-color: #fff;
+	border: 3px solid #929292;
+}
+
+.vntn-info > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	font-size: 24px;
+}
+.vntn-info > .vntn--btn-cerrar::before {
+    border-color: #929292 #929292 transparent transparent;
+    border-style: solid;
+    border-width: 35px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.vntn-info > .vntn--btn-cerrar:hover::before, 
+.vntn-info > .vntn--btn-cerrar:active::before{
+	border-color: #929292 #929292 transparent transparent;
+}
+
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+.btn-cuest, .btn-prueba, .btn-todas{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 166px;
+    height: 40px;
+
+}
+.btn-cuest{
+    right: 0px;
+    background-image: url('img/bt_cuest.png');
+}
+.btn-cuest:hover,.btn-cuest:active{
+    background-image: url('img/bt_cuest_over.png');
+}
+.btn-prueba{
+    left: 0px;
+    background-image: url('img/bt_prueba.png');
+}
+.btn-prueba:hover, .btn-prueba:active{
+    background-image: url('img/bt_prueba_over.png');
+}
+.btn-todas{
+    left: 0px;
+    background-image: url('img/bt_todas.png');
+}
+.btn-todas:hover, .btn-todas:active{
+    background-image: url('img/bt_todas_over.png');
+}

@@ -1,0 +1,626 @@
+body{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    background-color: #DBDBDB !important;
+}
+
+/****** Contenedor general, en el que se encuentra todo *****/
+
+#contenedor{
+    	width: 1280px;
+	height: 632px;
+	position: relative;
+	display: block;
+	margin: auto;
+	background-image: url('../img/general/fondo.jpg');
+	padding: 0px;
+	box-shadow: -18px 18px 0 rgba(0, 0, 0, 0.10); 
+}
+
+
+/******* PORTADA *******/
+
+#portada{
+    position: absolute;
+    height: 100%;
+    background: url('../img/general/portada.png') no-repeat;
+}
+
+.txtPortada{
+    position: absolute;
+    left: 175px;
+    top: 300px;
+    text-align: center;
+    width: 700px;
+    height: auto;
+}
+
+.txtPortada > p{
+    padding: 3px 0px;
+}
+.txtPortada > p:first-child{
+    padding-top: 0px;
+}
+
+.bt_seguir_portada{
+    bottom: 60px;
+}
+
+
+/************* CONCLUSIÓN **************/
+#conclusion{
+    position: absolute;
+    width: 1005px;
+    height: 100%;
+    left: 50%;
+    margin-left: -502px;
+    background: url('../img/general/fondo_conclusion.png') no-repeat;
+}
+
+.txtConclusion{
+    position: relative;
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px auto;
+    text-align: justify;
+    margin-top: 200px;
+    width: 770px;
+    height: 300px;
+    overflow: auto;
+}
+.txtConclusion > p {
+    padding: 5px 30px 5px 0px;
+}
+
+.ulConclusion, .olConclusion{
+    list-style-position: outside;
+}
+
+.ulConclusion > li, .olConclusion > li{
+    padding: 4px 0px;
+}
+
+
+/************** DIV REGISTRO ****************/
+#arranque{
+    height: 100%;
+    width: 740px;
+}
+#arranque.conCapitulos{
+    width: 1000px;
+}
+
+/******* INICIO CON REGISTRO CUANDO LOCALSTORAGE NO RECONOCE USUARIO *******/
+
+.inicio{
+    width: 740px;
+    height: 100%;
+}
+
+.slowShow{
+    -webkit-transition: opacity 1.5s; /* Safari */
+    transition: opacity 1.5s;
+}
+
+.inputUsrname{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    font-size: 35px !important;
+    letter-spacing: 0.7px;
+    border: 2px solid #000000 !important;
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    width: 270px;
+    height: 45px !important;
+    left: 50%;
+    top: 137px;
+    margin-left: -115px;
+    cursor: text;
+    padding-top: 15px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/********* Caret teclado **********/
+
+.inputUsrname > span#caret{
+	width: 1px;
+	display: inline-block;
+	height: 17px; /*Esto cambia segun el line height*/
+	
+	border: 0;
+	border-left: 2px solid blue;
+}
+
+.inputUsrname > span#caret{
+	animation-duration: 1s;
+	animation-name: caret-blink-in;
+	animation-iteration-count: infinite;
+}
+
+a#bt_desdeInicio{
+    position: absolute;
+    top: 475px;
+    left: 115px;
+    width:221px;
+    height:53px;
+    background: url("../img/bt_registro.png") no-repeat -0px -209px;
+}
+
+a#bt_desdeInicio:hover, a#bt_desdeInicio:active{
+    background-position: -0px -156px;
+}
+
+a#bt_elijoCapitulo{
+    position: absolute;
+    top: 465px;
+    left: 380px;
+    width: 258px;
+    height: 78px;
+    background: url("../img/bt_registro.png") no-repeat -0px -0px;
+}
+a#bt_elijoCapitulo:hover, a#bt_elijoCapitulo_up:active{
+    background-position: -0px -77px;
+}
+
+.bt_seguir_inicio{
+    bottom: 58px;
+}
+
+
+
+/******* INICIO SIN REGISTRO CUANDO LOCALSTORAGE SÍ RECONOCE USUARIO *******/
+
+#inicio_cr{
+    background: url('../img/general/inicio_conReconocimiento.png') no-repeat;
+}
+
+a#bt_editaPerfil{
+    position: absolute;
+    top: 60px;
+    left: 550px;
+    width:111px;
+    height:59px;
+    background: url("../img/bt_registro.png") no-repeat -112px -262px;
+}
+a#bt_editaPerfil:hover, a#bt_editaPerfil:active{
+    background-position: -112px -322px;
+}
+
+
+#editarPerfil{    
+    background: url('../img/general/editarPerfil.png') no-repeat;
+}
+
+.centered{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    margin-top: 24px;
+}
+
+.topLeft{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#img_alumno{
+    width: 117px;
+}
+
+/* checkboxes para elegir opción de incio */
+a.optionInicio{
+    position: absolute;
+    left: 190px;
+    width:48px;
+    height:45px;
+    background: url("../img/bt_registro.png") no-repeat -283px -208px;
+}
+a.optionInicio:hover, a.optionInicio:active{
+    background-position: -283px -208px;
+}
+
+/****** PARA AMBOS INICIOS, ELECCIÓN DE CAPÍTULO **********/
+
+#capitulos{
+    width: 270px;
+    height: auto;
+    position: absolute;
+    top: 37px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.capitulo{
+    position: relative;
+    display: block;
+    width: 270px;
+    background-color: #f3de89;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.capitulo_img_div{
+    position: relative;
+    width: 96px;
+    height: 100%;
+    background-color: #f5c93b;
+    display: inline-block;
+    vertical-align: top;
+}
+.capitulo_txt_div{
+    width: 170px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.capitulo_txt{
+    padding: 6px;
+    padding-left: 8px;
+    line-height: 20px;
+    text-align: left;
+}
+.capitulo_titulo{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.capitulo_info{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/****** SLIDER AVATARES *****/
+
+.slider{
+    width: 535px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 336px;
+    margin-left: -250px;
+}
+
+.sliderBt{
+    display: inline-block;
+    width: 62px;
+    height: 104px;
+}
+
+a.sliderBt.left{
+    background: url("../img/bt_registro.png") no-repeat -222px -260px;
+}
+a.sliderBt.left:hover,a.sliderBt.left:active{
+    background-position: -258px -0px;
+}
+a.sliderBt.right{
+    background: url("../img/bt_registro.png") no-repeat -283px -104px;
+}
+a.sliderBt.right:hover,a.sliderBt.right:active{
+    background-position: -221px -156px;
+}
+
+.sliderDiv{
+    position: relative;
+    display: inline-block;
+    width: 390px;
+    height: 115px;
+    margin: auto 5px;
+    overflow: hidden;
+}
+
+.sliderInnerDiv{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: 100%;
+    -webkit-transition: left 1.5s; /* Safari */
+    transition: left 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.avatar_div{
+    display: inline-block;
+    margin: 0px 3px;
+    width: 115px;
+    height: 115px;
+    /*cursor: pointer;*/
+}
+.avatar_div:first-child{
+    margin-left: 6px;
+}
+
+.avatar_div.selected{
+    background-color: #a13fe4;
+}
+
+.avatar{
+    position: relative;
+    width: 107px;
+    height:  107px;
+    display: block;
+    margin: 4px;
+    cursor: pointer;
+}
+
+
+/****** FLECHA SEGUIR ****/
+
+a.bt_seguir{
+    position: absolute;
+    left: 50%;
+    margin-left: -56px;
+    width: 148px;
+    height: 60px;
+    background: url("../img/bt_general.png") no-repeat -159px -192px;
+}
+a.bt_seguir:hover, a.bt_seguir:active{
+    background-position: -182px -96px;
+}
+
+a.bt_regresar{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -56px;
+    width: 148px;
+    height: 47px;
+    background: url("../img/bt_general.png") no-repeat -148px -338px;
+}
+a.bt_regresar:hover,a.bt_regresar:active{
+    background-position: -0px -338px;
+}
+
+a.bt_continuar{
+    position: absolute;
+    left: 50%;
+    margin-left: -56px;
+    bottom: 95px; 
+    width: 159px;
+    height: 48px;
+    background: url("../img/bt_general.png") no-repeat -0px -240px;
+}
+a.bt_continuar:hover,a.bt_continuar:active{
+    background-position: -0px -192px;
+}
+
+.txtInicio{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+
+/******** BOTONES ARRIBA + AYUDA ******/
+
+a.bts_arriba{
+    position: absolute;
+    top: 0px;
+}
+
+
+a#bt_home{
+    width: 150px;
+    height: 50px;
+    left: 0px;
+    background: url("../img/bt_general.png") no-repeat -0px -288px;
+}
+a#bt_home:hover,a#bt_home:active{
+    background-position: -150px -288px;
+}
+
+a.bt_creditos{
+    right: 0px;
+    width: 55px;
+    height: 48px;
+    background: url("../img/bt_general.png") no-repeat -307px -204px;
+}
+a.bt_creditos:hover, a.bt_creditos:active{
+    background-position: -307px -156px;
+}
+
+a.bt_instrucciones{
+    right: 50px;
+    width: 191px;
+    height: 48px;
+    background: url("../img/bt_general.png") no-repeat -0px -48px;
+}
+a.bt_instrucciones:hover, a.bt_instrucciones:active{
+    background-position: -0px -0px;
+}
+
+a.bt_ayuda{
+    position: absolute;
+    width: 112px;
+    height: 48px;
+    background: url("../img/bt_registro.png") no-repeat -0px -262px;
+    top: 234px;
+    left: 560px;
+}
+a.bt_ayuda:hover, a.bt_ayuda:active{
+    background-position: -0px -310px;
+}
+
+a{
+    cursor: pointer;
+}
+
+
+a.btCerrar{
+	position: absolute;
+	width: 61px;
+	height: 48px;
+}
+
+.creditos a.btCerrar, .ayuda a.btCerrar{
+    	background: url("../img/bt_general.png") no-repeat -300px -252px;
+	text-indent: -5000px; 
+}
+.creditos a.btCerrar:hover,.creditos a.btCerrar:active,
+.ayuda a.btCerrar:hover,.ayuda a.btCerrar:active{
+	background-position: -300px -300px;
+}
+.creditos a.btCerrar{
+	top: 45px;
+	right: 4px;
+}
+.ayuda a.btCerrar{
+	top: 89px;
+	right: 30px;
+}
+
+
+.instrucciones a.btCerrar{
+    background: url("../img/bt_general.png") no-repeat -253px -0px;
+    top: 89px;
+    right: 30px;
+}
+.instrucciones a.btCerrar:hover, .instrucciones a.btCerrar:active{
+    background-position: -253px -48px;
+}
+
+
+
+
+/***** VENTANAS EMERGENTES ****/
+.popup{
+    margin-top: 0px !important;
+    height: 632px;
+}
+.popup.creditos{
+    width: 963px;
+    background-image: url('../img/general/fondoVentanaCreditos.png');
+}
+.popup.ayuda{
+    width: 768px;
+    background-image: url('../img/general/fondoVentanaAyuda.png');
+}
+.popup.instrucciones{
+    width: 768px;
+    background-image: url('../img/general/fondoVentanaInstrucciones.png');
+}
+
+.popupContent{
+    position: relative;
+}
+
+.creditos .popupContent{
+    width: 90%;
+    height: 485px;
+    padding-top: 90px;
+    padding-left: 28px;
+}
+.ayuda .popupContent,
+.instrucciones .popupContent{
+    width: 580px;
+    margin-left: 135px;
+}
+.ayuda .popupContent{
+    margin-top: 150px;
+    height: 330px;
+}
+.instrucciones .popupContent{
+    margin-top: 100px;
+    height: 380px;
+}
+
+
+.txt_instrucciones{
+    width: 580px;
+    height: auto;
+}
+
+.infoIframe{
+    border-width: 0px;
+    width: 930px;
+    height: 485px;
+    overflow-x: hidden;
+}
+
+/************ KEYBOARD *************/
+#virtualKeyboardInicio{
+    position: absolute;
+    left: 50%;
+    margin-left: -260px;
+    border: 1px solid #000;
+    width: 530px;
+    top: 265px;
+    margin-left: -255px;
+}
+/************* CARGADOR ************/
+
+.cargador{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.cargador .texto{
+    color: #555;
+    font-size: 11px;
+    padding-top:5px;
+    text-align: center;
+}
+
+.cargador .gif{
+    display: block;
+    width:220px;
+    height: 19px;
+    margin: 0px auto;
+    background-image: url('../img/general/loading.gif');
+}
+
+
+
+/******** OTRAS CLASES *********/
+
+.oculto{
+    visibility: hidden;
+    opacity : 0;
+}
+
+.inactive{
+    opacity: 0.5;
+    cursor: default !important;
+}
+
+
+
+/************************************************************************************
+MEDIA QUERIES
+The iPhone is 320x480, the iPhone 4 is 640x960 and the iPhone 5 is 640x1136.
+*************************************************************************************/
+
+/* 1280 px o más*/
+@media screen and (min-width: 1271px) {
+	#contenedor {
+		width: 1280px;
+	}
+	#portada{
+	    width: 1110px;
+	    left: 130px;
+	}	
+}
+/* menos de 1280 px */
+@media screen and (max-width: 1270px) {
+	#contenedor {
+		width: 1024px;
+	}
+	#portada{
+	    width: 1024px;
+	    left: 20px;
+	}
+
+}
+

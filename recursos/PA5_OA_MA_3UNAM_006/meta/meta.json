@@ -1,0 +1,31 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "fracciones", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Fracciones", 
+    "denominadores", 
+    "numeradores", 
+    "múltiplos", 
+    "múltiplo común", 
+    "fracciones equivalentes", 
+    "comparación de fracciones"
+  ], 
+  "descripcion": "En esta unidad podrás comparar fracciones utilizando la recta numérica.",
+  "resena": "Regla de comparación de fracciones y la representación de las mismas en la recta numérica.",
+  "titulo": "Comparación de fracciones", 
+  "id": "PA5_OA_MA_3UNAM_006"
+}

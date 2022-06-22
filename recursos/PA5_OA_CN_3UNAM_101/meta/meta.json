@@ -1,0 +1,35 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "óptica geométrica", 
+    "uso de los instrumentos ópticos", 
+    "relación de la reflexión y refracción de la luz con la formación de imágenes en espejos y lentes", 
+    "funcionamiento de algunos instrumentos ópticos por medio de la formación de imágenes en objetos e instrumentos con espejos y lentes."
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Óptica", 
+    "reflexión", 
+    "espejo", 
+    "imágenes reales", 
+    "imágenes virtuales", 
+    "refracción", 
+    "holograma", 
+    "tercera dimensión", 
+    "3D", 
+    "luz"
+  ], 
+  "descripcion": "En esta unidad explorarás en torno a la formación de imágenes en espejos planos mediante la reflexión de la luz, y cómo es el paso de la luz a través de objetos traslúcidos. Con la combinación de estos fenómenos crearás imágenes que aparentan ser tridimensionales, llamadas hologramas. Reflexionarás sobre las características de las imágenes en cuanto a si son reales o no, y cómo nuestro cerebro interpreta la información luminosa que reciben nuestros ojos.",
+  "resena": "Reflexión de la luz y creación de un holograma casero usando imágenes reflejadas.",
+  "titulo": "Hologramas", 
+  "id": "PA5_OA_CN_3UNAM_101"
+}

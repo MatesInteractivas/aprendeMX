@@ -1,0 +1,37 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto expositivo", 
+    "Texto discontinuo", 
+    "Esquema", 
+    "Tabla"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "recuperación de datos", 
+    "organización de datos", 
+    "jerarquización de datos", 
+    "ordenamiento de datos", 
+    "peticiones", 
+    "negociar", 
+    "objetivo", 
+    "subjetivo", 
+    "criterios objetivos", 
+    "viajes", 
+    "turismo"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "El alumno y la alumna recopilarán datos y peticiones de personas a partir de un conjunto de textos continuos. Los organizarán en una tabla y calificarán su importancia, de acuerdo con ciertos criterios objetivos y subjetivos que identifican.",
+  "resena": "Texto continuo que representa datos. Criterios de organización y clasificación y su expresión en tablas.",
+  "titulo": "Hablando nos entendemos", 
+  "id": "PA5_OA_ES_3UNAM_004_jerarquizacionDeInformacion"
+}

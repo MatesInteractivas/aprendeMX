@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, denominadores, numeradores, múltiplos, mínimo múltiplo común, suma de fracciones, resta de fracciones, fracciones equivalentes">
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+	<title>Suma de fracciones cuando un denominador es múltiplo del otro</title>
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body style="margin: 0px;padding:0px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ajs name="Descartes" width=912 height=512 code="Descartes">
+   <param name="tamaño" value="912x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='TX2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='audio' tipo='numérico' interfaz='botón' región='interior' espacio='TX2' expresión='(5,5,56,56)' fijo='sí' visible='sí' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;HELP&squot;)'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='amp=0.5;x1=200;x2=400'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_04" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='TX2' tipo='imagen' fondo='sí' expresión='(0,-1.26,1,1)' archivo='images/portada03.png'">
+   <param name="G_02" value="espacio='TX2' tipo='texto' fondo='sí' color='2ecc71' dibujar-si='n==0' expresión='[30,20]' texto='Aprende a sumar fracciones cuando uno de los denominadores es múltiplo del otro.' fuente='SansSerif,BOLD,32' fijo='sí' ancho='850' info='texto 01'">
+   <param name="G_03" value="espacio='TX2' tipo='texto' fondo='sí' color='34495e' dibujar-si='n==0' expresión='[50,160]' texto='Recuerda que la clave es convertir la fracción \ncon el denominador más pequeño a una \nequivalente, con el otro denominador.\n\nTe sugerimos escribir primero el denominador \nque vayas a usar y luego los numeradores, \nasegurándote de que la fracción que modificas \nsea equivalente a la original.\n\nPara finalizar, escribirás el denominador y el \nnumerador del resultado.' fuente='SansSerif,PLAIN,20' fijo='sí' info='texto 01'">
+   <param name="G_04" value="espacio='TX2' tipo='imagen' fondo='sí' dibujar-si='0' coord_abs='sí' expresión='(650,300,amp,amp)' archivo='images/personajes/boy_01_2x.png'">
+   <param name="G_05" value="espacio='TX2' tipo='imagen' fondo='sí' dibujar-si='0' coord_abs='sí' expresión='(800,300,amp,amp)' archivo='images/personajes/girl_01_mirror_2x.png'">
+   <param name="G_06" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x1,420)' radio='50' fin='360' fijo='sí' relleno='f1c40f'">
+   <param name="G_07" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x1,420)' radio='50' inicio='-0' fin='-90' fijo='sí' relleno='blanco'">
+   <param name="G_08" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x1,420)(x1+50*cos(pi/2+s*2*pi/3),420-50*sen(pi/2+s*2*pi/3))' familia='s' s.intervalo='[0,1]' s.pasos='1' fijo='sí' tamaño='0'">
+   <param name="G_09" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x1,420)(x1+50*cos(pi/2+2*pi/3+2*pi*s/12),420-50*sen(pi/2+2*pi/3+2*pi*s/12))' familia='s' s.intervalo='[0,5]' s.pasos='5' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x2,420)' radio='50' fin='360' fijo='sí' relleno='f1c40f'">
+   <param name="G_11" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x2,420)' radio='50' inicio='-0' fin='-90' fijo='sí' relleno='blanco'">
+   <param name="G_12" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x2,420)(x2+50*cos(pi/2+2*pi/3+2*pi*s/12),420-50*sen(pi/2+2*pi/3+2*pi*s/12))' familia='s' s.intervalo='[-4,5]' s.pasos='9' fijo='sí' tamaño='0'">
+</ajs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

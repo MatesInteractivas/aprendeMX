@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_037"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El sistema de numeración maya
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Aunque actualmente el sistema de numeración más usado es el decimal, antiguamente había muchos otros. Uno de los más prácticos y avanzados fue inventado en nuestro país. Se trata del sistema de numeración maya. Esta unidad te permitirá conocer y entender el sistema de numeración maya, así como algunas de sus cualidades más importantes.  
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, Sentido numérico y pensamiento algebraico, Números y sistemas de numeración
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, símbolo, decimal, vigesimal, cero, numeral, posicional.
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

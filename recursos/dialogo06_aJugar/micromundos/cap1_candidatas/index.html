@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+		<title>Las candidatas</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			
+			<div class='candidata slowShow' data-name='mariaElena'>
+			</div>
+			<div class='candidata slowShow' data-name='claudia'>
+			</div>
+			<div class='candidata slowShow' data-name='anaMaria'>
+			</div>
+			
+			<div class='info e-oculto slowShow' data-name=''>
+				<img class='foto'/>
+				<div class='datosPersonales' >
+					<h1 class='nombre'></h1>
+					<p class='edad'></p>
+					<p class='experiencia'></p>
+				</div>
+				<div class='resultados'>
+					<div class='fondo_resultados'>
+						Resultados de la prueba física
+					</div>
+					<button class="btn btn-todas js-btn-todas"> 
+					</button>
+					<button class="btn btn-cuest js-btn-cuest"> 
+					</button>
+				</div>
+				<div class='cuestionario e-oculto'>
+					<h1 class='h1_cuest'>Cuestionario</h1>
+					<button class="btn btn-prueba js-btn-prueba"> 
+					</button>
+				</div>
+			</div>
+			
+			<div class="js-overlay overlay">
+			</div>
+			
+			<div class="vntn js-vntn-info vntn-info" data-correct="">
+				<div class="vntn--contenido"></div>
+			</div>
+
+		</div>
+					
+        </body>
+</html>

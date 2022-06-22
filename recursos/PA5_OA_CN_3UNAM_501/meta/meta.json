@@ -1,0 +1,41 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "¿cómo se transfiere el calor entre materiales?", 
+    "experimentación con procesos de transferencia del calor: conducción y convección en algunos materiales", 
+    "procesos de transferencia del calor en la naturaleza: ciclo del agua y corrientes de aire"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Calor", 
+    "corriente de convección", 
+    "corrientes de convección", 
+    "corriente convectiva", 
+    "corrientes convectivas", 
+    "agua caliente", 
+    "agua fría", 
+    "acarreo de material caliente", 
+    "celdas de convección", 
+    "hervir", 
+    "ebullición", 
+    " transferencia de calor", 
+    "líquidos", 
+    "gases", 
+    "fluidos", 
+    "vientos", 
+    "atmósfera"
+  ], 
+  "descripcion": "En esta unidad observarás cómo el calor puede transferirse de una parte a otra de un líquido o un gas a través del mecanismo de convección. Relacionarás esta forma de transferencia de calor con los vientos dominantes a varias horas del día o en diversas estaciones del año, y con las corrientes marinas.",
+  "resena": "Convección como forma de transmisión de calor en fluidos.",
+  "titulo": "Transmisión del calor por convección", 
+  "id": "PA5_OA_CN_3UNAM_501"
+}

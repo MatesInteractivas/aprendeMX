@@ -1,0 +1,41 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Medida"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "metro", 
+    "kilómetro", 
+    "centímetro", 
+    "pulgada", 
+    "pié", 
+    "yarda", 
+    "milla", 
+    "litro", 
+    "galón", 
+    "cuarto", 
+    "pinta", 
+    "gramo", 
+    "kilogramo", 
+    "libra", 
+    "cuarto de libra", 
+    "tonelada."
+  ], 
+  "descripcion": "En algunos países, en particular en EEUU, no se usan el metro, el gramo y el litro para medir distancias, pesos y volúmenes. La distancia se mide en pulgadas, pies, yardas y millas, el peso en libras y el volumen en galones. Esta unidad didáctica te ayudará conocer y ese otro sistema de medidas, el llamado sistema inglés. Tamién aprenderás a calcular los valores equivalentes del sistema inglés al internacional que se usa en México y en casi todo el mundo civilizado, y viceversa.",
+  "resena": "El sistema inglés de unidades y la conversión de éstas al sistema internacional.",
+  "titulo": "El sistema inglés de medidas", 
+  "id": "PA6_OA_MA_3UNAM_021"
+}

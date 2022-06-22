@@ -1,0 +1,103 @@
+.btnAprendeMx { box-sizing:border-box; border-color:rgba(0,0,0,0.2); border-bottom-style:solid; border-width:2px; box-shadow:0 0 4px rgba(0, 0, 0, 0.1); overflow:hidden;}
+.btnAprendeMx::before { box-sizing:border-box; content:''; position:absolute; left:0; top:0; width:46px; height:46px; pointer-events:none; display:none; }
+.btnAprendeMx[data-active="true"]:active { border-style:solid; border-width:1px; }
+.btnAprendeMx[data-active="true"]:active::before { background-position:1px 1px; width:47px; border-width:1px; }
+.btnAprendeMx[data-active="false"] { border-width: 0; }
+
+/* estilo de los botones (https://flatuicolors.com/) */
+/* boton turquoise, cuadro icono green_sea */
+.turquoise, .verdeAgua { background:#1abc9c !important; }
+.turquoise::before, .verdeAgua::before { background:#16a085; }
+/* boton emerald, cuadro icono nephritis */
+.emerald, .verdeClaro { background:#2ecc71 !important; }
+.emerald::before, .verdeClaro::before { background:#27ae60; }
+/* boton peter_river, cuadro icono belize_hole */
+.peter_river, .azul { background:#3498db !important; }
+.peter_river::before, .azul::before { background:#2980b9; }
+/* boton amethyst, cuadro icono wisteria */
+.amethyst, .lavanda { background:#9b59b6 !important; }
+.amethyst::before, .lavanda::before { background:#8e44ad; }
+/* boton wet_asphalt, cuadro icono midnight_blue */
+.wet_asphalt, .azulOscuro { background:#34495e !important; }
+.wet_asphalt::before, .azulOscuro::before { background:#2c3e50; }
+/* boton sun_flower, cuadro icono orange */
+.sun_flower, .amarillo { background:#f1c40f !important; }
+.sun_flower::before, .amarillo::before { background:#f39c12; }
+/* boton carrot, cuadro icono pumpkin */
+.carrot, .naranja { background:#e67e22 !important; }
+.carrot::before, .naranja::before { background:#d35400; }
+/* boton alizarin, cuadro icono pomegranate */
+.alizarin, .bermellon { background:#e74c3c !important; }
+.alizarin::before, .bermellon::before { background:#c0392b; }
+/* boton concrete, cuadro icono asbestos */
+.concrete, .cian { background:#95a5a6 !important; }
+.concrete::before, .cian::before { background:#7f8c8d; }
+/* lapices */
+.laprojo, .aliz { background:#e74c3c !important; }
+.laprojo::before, .aliz::before { background:#e74c3c; }
+.lapamarillo, .amar { background:#f1c40f !important; }
+.lapamarillo::before, .amar::before { background:#f1c40f; }
+.lapazul, .azl { background:#3498db !important; }
+.lapazul::before, .azl::before { background:#3498db; }
+.laplavanda, .lv { background:#9b59b6 !important; }
+.laplavanda::before, .lv::before { background:#9b59b6; }
+/* boton clouds, cuadro icono silver */
+.clouds, .blanco { background:#ecf0f1 !important; }
+.clouds::before, .blanco::before { background:#bdc3c7; }
+.cloudslight, .blanco { background:#ecf0f1 !important; }
+.cloudslight::before, .blanco::before { background:#ecf0f1; }
+
+/* estilo de los botones con iconos */
+
+.calcular::before { background-image: url('icon_calcular.png'); display:block; }
+.casa::before { background-image: url('icon_casa.png'); display:block; }
+.cerrar::before { background-image: url('icon_cerrar.png'); display:block; }
+.corazon::before{ background-image: url('icon_corazon.png'); display:block; }
+.correo::before { background-image: url('icon_correo.png'); display:block; }
+.estrella::before { background-image: url('icon_estrella.png'); display:block; }
+.home::before { background-image: url('icon_home.png'); display:block; }
+.huella::before{ background-image: url('icon_huella.png'); display:block; }
+.iniciar::before { background-image: url('icon_iniciar.png'); display:block; }
+.regresar::before { background-image: url('icon_regresar.png'); display:block; }
+.investigar::before { background-image: url('icon_investigar.png'); display:block; }
+.libro::before{ background-image: url('icon_libro.png'); display:block; }
+.like::before { background-image: url('icon_like.png'); display:block; }
+.pi::before { background-image: url('icon_pi.png'); display:block; }
+.puntero::before { background-image: url('icon_puntero.png'); display:block; }
+.reloj::before{ background-image: url('icon_reloj.png'); display:block; }
+
+.play::before { background-image: url('icon_play.png'); display:block; }
+.stop::before { background-image: url('icon_stop.png'); display:block; }
+.detener::before{ background-image: url('icon_stop.png'); display:block; }
+.pause::before { background-image: url('icon_pause.png'); display:block; }
+.restart:before { background-image: url('icon_restart.png'); display:block; }
+.on_off:before { background-image: url('icon_on_off.png'); display:block; }
+.on:before { background-image: url('icon_on.png'); display:block; }
+.off:before { background-image: url('icon_off.png'); display:block; }
+.paso_adelante::before{ background-image: url('icon_paso_adelante.png'); display:block; }
+.paso_atras::before{ background-image: url('icon_paso_atras.png'); display:block; }
+.al_inicio::before{ background-image: url('icon_al_inicio.png'); display:block; }
+.al_final::before{ background-image: url('icon_al_final.png'); display:block; }
+.verificar::before{ background-image: url('icon_verify.png'); display:block; }
+.otrepgraf::before{ background-image: url('icon_other_graphics.png'); display:block; }
+.lapiz0::before{ background-image: url('icon_color_pencil_off.png'); display:block; }
+.lapiz1::before{ background-image: url('icon_color_pencil_on.png'); display:block; }
+.gridclean::before{ background-image: url('icon_grid_clean.png'); display:block; }
+.coleraser::before{ background-image: url('icon_color_eraser_off.png'); display:block; }
+
+.adelante::before{ background-image: url('adelante.png'); display:block; }
+.atras::before{ background-image: url('atras.png'); display:block; }
+.calcular::before{ background-image: url('calcular.png'); display:block; }
+.construccion::before{ background-image: url('construccion.png'); display:block; }
+.dislike::before{ background-image: url('dislike.png'); display:block; }
+.experimento::before{ background-image: url('experimento.png'); display:block; }
+.final::before{ background-image: url('final.png'); display:block; }
+.informacion::before{ background-image: url('informacion.png'); display:block; }
+.investigar::before{ background-image: url('investigar.png'); display:block; }
+.like::before{ background-image: url('like.png'); display:block; }
+.principio::before{ background-image: url('principio.png'); display:block; }
+
+.cierto::before{ background-image: url('cierto.png'); display:block; width:78px; height:78px; }
+.comenzar::before{ background-image: url('comenzar.png'); display:block; width:78px; height:78px; }
+.falso::before{ background-image: url('falso.png'); display:block; width:78px; height:78px; }
+.otravez::before{ background-image: url('otravez.png'); display:block; width:78px; height:78px; }

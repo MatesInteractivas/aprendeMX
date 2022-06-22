@@ -1,0 +1,182 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+p, div {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+div.menus{
+    padding: 16px 20px;
+    width: 100%;
+}
+
+div.menu{
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+div.menu > .header{
+    width: 100%;
+    height: 30px;
+    background-color: #5674b9;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+div.menu > .options{
+    width: 100%;
+    height: auto;
+    background-color: #f8eedd;
+    display: block;
+}
+
+div.menu > .options > .option{
+    display: inline-block;
+    padding: 2px;
+    margin: 6px 0px;
+    cursor: pointer;
+    background-color: #a7a39c;
+}
+div.menu > .options > .option.e-selected{
+    padding: 4px;
+    background-color: #5674b9;
+}
+div.menu > .options > .option:hover,
+div.menu > .options > .option:active{
+    background-color: #cac9c7;
+}
+
+div.menu > .options > .option:first-child{
+    margin-left: 6px;
+}
+div.menu > .options > .option:last-child{
+    margin-right: 6px;
+}
+div.menu > .options.colores > .option:first-child{
+    margin-left: 8px;
+}
+
+div.menu > .options > .option > img{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+div.menu > .options > .option > div.color{
+    padding: 0px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+}
+
+div.color[data-clr="rojo"]{
+    background-color: #e12744;
+}
+div.color[data-clr="azul"]{
+    background-color: #0d5cd2;
+}
+div.color[data-clr="verde"]{
+    background-color: #03ad29;
+}
+
+
+
+div.alebrije{
+    width: 100%;
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* ---------
+ *  States 
+ * --------- */
+
+
+.e-oculto {
+	opacity: 0;
+	display: none;
+	height: 0px;
+	border: none;
+}
+.e-marcado {
+	background: rgba(172,40,180,0.5);
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

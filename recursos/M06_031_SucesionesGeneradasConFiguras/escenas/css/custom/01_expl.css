@@ -1,0 +1,42 @@
+@import 'Descartes_spinner.css';
+
+#RESETA.DescartesSpace2DContainer {
+	box-shadow: 0px 0px 8px 3px #bdc3c7;
+}
+
+#INSTR.DescartesSpace2DContainer {
+	box-shadow: 0px 0px 8px 3px #bdc3c7;
+}
+
+
+#DISP2_numericalControls,#DISP_numericalControls{
+
+	
+}
+
+#EDIT{
+
+}
+
+div#DISP_IF{
+	box-shadow: 3px 3px 2px #ccc;
+}
+
+#editCtr{
+
+}
+#txtOper_menuSelect{
+	border: 1px solid red;
+	font-size: 24px !important;
+	font-weight: bold;
+	
+}
+
+div.DescartesMenuContainer{
+	background: none !important;
+}
+div.DescartesMenuContainer label{
+	background: none;
+	border:0;
+}
+

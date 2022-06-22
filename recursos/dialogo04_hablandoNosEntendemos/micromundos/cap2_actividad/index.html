@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="DESCRIPTION OF CONTENT" />
+		<meta name="keywords" content="KEYWORDS FOR CONTENT" />
+		<link rel="icon" type="image/ico" href="img/general/unam.ico" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/string.min.js"></script>
+		<script type="text/javascript" src="js/WordWrapper.js"></script>
+		<script type="text/javascript" src="js/WordSelector.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<title>Micromundo &iquest; a d&oacute;nde vamos ?</title>
+	</head>
+	<body>
+		<div class="js-oactx oacontext">
+			<div class="js-overlay overlay">
+
+			</div>
+
+			<div class="content clearfix">
+
+				<div class="vntn vntn-inst js-instrucciones">
+					<p class="vntn--titulo">
+						Indicaciones
+					</p>
+					<div class="vntn--contenido">
+						<p>
+							<br>Primero elige un integrante de la familia presionando sobre ella o él con el dedo. Se mostrarán nuevamente sus comentarios.
+						</p>
+						<p>
+							Selecciona uno por uno los fragmentos que contienen un deseo o una solicitud respecto al viaje, moviendo el dedo sobre el texto.
+						</p>
+						<p>
+							Puedes “Confirmar” o “Borrar” tu selección.
+						</p>
+						<p>
+							Procede de esta manera para las personas faltantes.
+						</p>
+						<p>
+							Si te cuesta mucho trabajo, prometo echarte la mano un poquito.
+						</p>
+					</div>
+				</div>
+				<button class="btn js-btn-instr btn-instr" >Indicaciones
+				</button>
+				<table class="solicitudes">
+
+					<thead>
+						<th></th>
+						<th>Peticiones</th>
+					</thead>
+
+					<tbody>
+						<!-- GOYO -->
+						<tr class="solicitudes--contenedor" data-personaje="goyo">
+							<th rowspan="2" class="solicitudes--personth">
+								<span class="solicitudes--personaje"><div class='foto goyo'></div></span>
+							</th>
+							<td>
+								<span class="solicitudes--solicitud" data-frag="1">Que est&eacute; cerca.</span>
+							</td>
+						</tr>
+						<tr class="solicitudes--contenedor" data-personaje="goyo">
+							<td>
+								<span class="solicitudes--solicitud" data-frag="2">Que haya rica comida.</span>
+							</td>
+						</tr>
+						
+						<tr class="empty-row"></tr>
+						
+						<!-- TRINI -->
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="trini">
+							<th rowspan="3">
+								<span  class="solicitudes--personaje"><div class='foto trini'></div></span>
+							</th>
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="1">
+									Que sea muy pintoresco, con bonitas calles, iglesias, artesanías y mercados.
+								</span>
+							</td>
+						</tr>
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="trini">
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="2">
+									Que haya museos.
+								</span>
+							</td>
+						</tr>
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="trini">
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="3">
+									Que sea econ&oacute;mico.
+								</span>
+							</td>
+						</tr>
+						
+						<tr class="empty-row"></tr>
+						
+						<!-- LUCIA -->
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="lucia">
+							<th>
+								<span class="solicitudes--personaje"><div class='foto lucia'></div></span>
+							</th>
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="2">
+									Que haya otros j&oacute;venes.
+								</span>
+							</td>
+						</tr>
+						
+						<tr class="empty-row"></tr>
+						
+						<!-- TONO -->
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="tono">
+							<th rowspan="3">
+								<span class="solicitudes--personaje"><div class='foto tonyo'></div></span>
+							</th>
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="2">
+									Que se pueda acampar.
+								</span>
+							</td>
+						</tr>
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="tono">
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="4">
+									Que haya mucha naturaleza y espacios al aire libre.
+								</span>
+							</td>
+						</tr>
+						<tr class="solicitudes--contenedor js-person-container" data-personaje="tono">
+							<td>
+								<span class="solicitudes--solicitud e-oculto" data-frag="5">
+									Que se pueda nadar.
+								</span>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+
+				<div class="vntn vntn-comentario js-vntn-comment" data-personaje="trini">
+					<p class="vntn--titulo">
+						Trini, la mam&aacute;
+					</p>
+					<div class="vntn--contenido">
+						<div class="js-texto-orig">
+							<p>
+								<span data-frag="1">Yo quiero ir a un <span class="js-sel-min">lugar muy pintoresco</span>. <span class="js-sel-min">Pasear por las calles</span>, ver las <span class="js-sel-min">iglesias</span>,
+									ir al <span class="js-sel-min">mercado</span>, comprar alguna <span class="js-sel-min">artesanía</span>.</span>
+								<span data-frag="2">Quizá podamos <span class="js-sel-min">visitar un museo</span>.</span><span data-frag="3">Eso sí, tendremos que <span class="js-sel-min">cuidar el bolsillo</span>.</span> 
+							</p>
+						</div>
+						<div class="js-texto-final"></div>
+						<div class="vntn-comentario--buttons">
+							<button class="js-confirmar btn">
+								Confirmar
+							</button>
+							<button class="js-borrar btn">
+								Borrar
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="vntn vntn-comentario js-vntn-comment" data-personaje="lucia">
+					<p class="vntn--titulo">
+						Luc&iacute;a, la hija de 13
+					</p>
+					<div class="vntn--contenido">
+						<div class="js-texto-orig">
+							<p>
+								<span data-frag="1" data-err="true">¿De verdad tengo que ir? Yo prefiero quedarme aquí con mis amigos.</span>
+								<span data-frag="2">La última vez que hicimos un paseo ¡no había nadie de <span class="js-sel-min">mi edad</span>!</span>
+							</p>
+						</div>
+						<div class="js-texto-final"></div>
+						<div class="vntn-comentario--buttons">
+							<button class="js-confirmar btn">
+								Confirmar
+							</button>
+							<button class="js-borrar btn">
+								Borrar
+							</button>
+						</div>
+
+					</div>
+				</div>
+				<div class="vntn vntn-comentario js-vntn-comment" data-personaje="tono">
+					<p class="vntn--titulo">
+						To&ntilde;o, el hijo de 9
+					</p>
+					<div class="vntn--contenido">
+						<div class="js-texto-orig">
+							<p>
+								<span data-frag="1" data-err="true">¿Museos? ¡Qué aburrido! </span>
+								<span data-frag="2">¡Mejor vamos a <span class="js-sel-min">acampar</span>! </span>
+								<span data-frag="3" data-err="true">En la playa, en el bosque, al lado de algún río, ¡no importa! </span>
+								<span data-frag="4">Yo quiero <span class="js-sel-min">estar afuera</span> para <span class="js-sel-min">jugar</span> y salir a <span class="js-sel-min">explorar</span>... </span>
+								<span data-frag="5">¡Y <span class="js-sel-min">nadar</span>!</span>
+							</p>
+						</div>
+						<div class="js-texto-final"></div>
+						<div class="vntn-comentario--buttons">
+							<button class="js-confirmar btn">
+								Confirmar
+							</button>
+							<button class="js-borrar btn">
+								Borrar
+							</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="vntn js-vntn-feedback vntn-feedback" data-correct="">
+					<div class="vntn--contenido"></div>
+				</div>
+
+			</div><!-- contenido-->
+		</div><!-- /oacontext -->
+	</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Figuras y cuerpos", 
+    "Simetría", 
+    "eje de simetría", 
+    "reflexión", 
+    "simetría axial"
+  ], 
+  "descripcion": "En está unidad identificarás los ejes de simetría de una figura y podrás completar figuras tomando en cuenta su simetría.", 
+  "titulo": "Simetría",
+  "resena": "Determinación de simetría de figuras a partir de sus ejes y completación de figuras dada la mitad y un eje.",
+  "id": "PA6_OA_MA_3UNAM_002"
+}

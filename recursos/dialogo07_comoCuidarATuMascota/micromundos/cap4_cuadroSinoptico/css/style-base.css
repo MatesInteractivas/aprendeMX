@@ -1,0 +1,286 @@
+@CHARSET "UTF-8";
+
+
+body {
+	background-color: #00908d;
+	text-align: center;
+	font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+.activity_container {
+	border:4px solid #f0b200;
+	padding: 0px;
+	padding-left: 10px;
+	position: relative;
+	background-color: white;
+	text-align: left;
+}
+
+.activity_container cs-opt,
+.activity_container .distractor > span{
+	cursor: pointer;
+}
+
+#closeBtn {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: none;
+	background: url("img/closeBtn.png") top right no-repeat;
+	
+	cursor: pointer;
+	padding: 0;
+	margin: 0px;
+	border: 0px;
+	
+	width: 62px;
+	height: 48px;
+}
+
+/*
+#closeBtn::before {
+	content: 'X';
+	color: white;
+	top:0px;
+	right: 5px;
+	position: absolute;
+	font-size: 25px;
+	font-weight: bold;
+}
+*/
+
+.instrucciones{
+	border:0px solid #f0b200;
+	border-bottom-width: inherit;
+	padding: 10px 40px 10px 10px;
+}
+
+.activity{
+	display: table;
+	
+}
+
+.activity > div {
+	display: table-cell;
+	max-height: 300px;
+	
+}
+
+.activity > div.right-panel {
+	width: 35%;
+	padding: 10px;
+	vertical-align: top;
+	border-left: 2px solid #eee;
+	margin-left: 10px; 
+}
+
+.cuadro_sinoptico{
+	padding: 10px;		
+}
+
+.cuadro_sinoptico > ul,
+.cuadro_sinoptico li > ul{
+	list-style: none;
+	display: inline-block;		
+}
+
+.cuadro_sinoptico > ul > li{	
+	border-bottom: 2px solid #eee;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.cuadro_sinoptico > ul > li:last-child{
+	border: 0px;
+	margin-bottom: 0px;
+}
+
+.cuadro_sinoptico ul {
+	display: inline-block;
+	
+}
+
+
+.cuadro_sinoptico li  {
+	display: block;
+	margin: 5px 0px 5px 0px; 
+}
+
+.cuadro_sinoptico ul{
+	display: inline-table;
+	vertical-align: middle;
+	
+	padding: 5px 0px 5px 20px;	
+	background: 
+		url(img/llave/top.png)		10px 	top		no-repeat,
+		url(img/llave/top.png)		10px 	bottom	no-repeat,
+		url(img/llave/top.png)		0px 	center	no-repeat,
+		url(img/llave/center.png)	10px	center	repeat-y;
+		
+        
+}
+
+.cuadro_sinoptico > ul{
+	background: none;
+	padding: 0px;
+	margin: 0;
+}
+
+
+.cuadro_sinoptico li label cs-opt {
+	display: inline-block;
+	border : 1px solid red;
+	vertical-align: middle;		
+}
+
+
+
+.distractor > span{
+	border: 1px solid #DDD;
+	display: inline-block;
+	padding: 5px;
+	color: #00908d;
+	width: 150px;
+	margin: 5px;
+	vertical-align: top;
+	box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+
+
+.cuadro_sinoptico > ul > li > label{
+	width: 160px;
+	display: inline-block;
+}
+
+
+/* <label> en <li> de segundo nivel */
+.cuadro_sinoptico > ul > li > ul > li > label{
+	width: 170px;
+	display: inline-block;
+}
+
+
+
+.cuadro_sinoptico > ul > li:nth-child(3) > ul > li > label {
+	width: auto !important;
+}
+
+
+
+
+
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill {
+	border: 2px none;
+	border: 2px dashed gray;
+	padding: 1px 4px;
+
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+   position: relative;
+		
+}
+
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill:not(.cover){
+	background-color:white;
+	color: white; /* Fallback for older browsers */
+        color: rgba(0, 0, 0, 0.01);
+}
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill:not(.cover) > *{
+	visibility: hidden;
+}
+
+
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill.cover {
+	color: inherit;
+	text-shadow: 0px 0px 2px #aaa;
+	font-style: italic;
+}
+
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill.selected {
+	background-color:graytext;
+	border: 2px dashed gray;
+}
+
+
+/*
+.cuadro_sinoptico li label cs-opt.gap-to-fill.right:after,
+.cuadro_sinoptico li label cs-opt.gap-to-fill.error:after{
+	position: absolute;
+	right: -10px;
+	bottom:  -10px;
+	content: url("img/bien.png");
+	content: url("img/mal.png");
+	
+	display: inline-block;
+}
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill.error:after{
+	content: url("img/mal.png");
+}
+
+.cuadro_sinoptico li label cs-opt.gap-to-fill.right:after{
+	content: url("img/bien.png");
+}
+*/
+
+
+.activity .distractor > span.selected{
+	background-color:#009900;
+	border: 2px dashed #006600;
+	color: white;
+	
+}
+
+
+
+
+/**
+	Si el body tiene la calse dev, suponemos que esta en desarrollo y 
+	ayudamos al debug mostrando id y en colores distintoas opciones
+*/
+body.dev .distractor > span{
+	border: 1px solid #FAE;
+}
+
+body.dev span.correct{
+	border: 1px solid green;
+}
+
+body.dev .distractor > span{
+	position: relative;
+}
+
+body.dev .distractor > span:after{
+	content: attr(opt-id);
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: xx-small;
+}
+
+body:not(.dev) #DwStructure{
+	display: none;
+}
+
+
+
+
+
+

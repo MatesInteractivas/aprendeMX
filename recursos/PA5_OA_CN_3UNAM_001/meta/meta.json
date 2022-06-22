@@ -1,0 +1,41 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "electricidad y magnetismo", 
+    "funcionamiento de un circuito eléctrico y sus componentes", 
+    "aplicaciones del circuito eléctrico."
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Electricidad", 
+    "circuito", 
+    "circuitos", 
+    "en paralelo", 
+    "en serie", 
+    "resistencias", 
+    "focos", 
+    "resistencia", 
+    "foco", 
+    "pila", 
+    "pilas", 
+    "batería", 
+    "baterías", 
+    "corriente eléctrica", 
+    "conductividad", 
+    "foco", 
+    "interruptor"
+  ], 
+  "descripcion": "En esta unidad explorarás dos formas de hacer conexiones en un circuito eléctrico: en serie y en paralelo. Identificarás qué sucede con el voltaje y la corriente en cada forma de conexión. Armarás diversos circuitos y observarás la intensidad de la luz del foco de acuerdo a la estructura del circuito. En forma experimental, construirás dos circuitos, uno conectado en serie y el otro en paralelo, y observarás en cada caso qué sucede si quitas uno de los foquitos. Harás también diversas conexiones de pilas para observar cómo influye la manera de conectarlas en la intensidad de la luz del foquito.",
+  "resena": "Efectos de los circuitos en serie y en paralelo sobre la corriente y el voltaje.",
+  "titulo": "Circuitos en serie y en paralelo", 
+  "id": "PA5_OA_CN_3UNAM_001"
+}

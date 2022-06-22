@@ -1,0 +1,20 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/cap2_preg1_adivina.jpg') no-repeat;
+}
+#contenedor.objeto{
+    background: url('../img/cap2_preg1_adivina_objeto.jpg') no-repeat;
+}
+#contenedor.carac{
+    background: url('../img/cap2_preg1_adivina_carac.jpg') no-repeat;
+}

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+   <title>SEB aprende.mx</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' O.y='55' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='HTMLIFrame' id='TCL' dibujar-si='(editing>=0)&&(TCL.ready)' despl_imagen='arr-izq' archivo='tools/Teclado.html'">
+   <param name="C_01" value="id='mn0' tipo='numérico' interfaz='menú' región='interior' espacio='E2' expresión='(CP(ctx,0),CP(cty,0),CP(ctw,0),CP(cth,0))' fijo='sí' visible='no' imagen='VACIO.GIF' opciones=' ,opción 1,opción 2,opción 3' acción='calcular' parámetro='doPlay(0)' dibujar-si='drawIfCtr(0)' activo-si='CP(active,0)'">
+   <param name="C_02" value="id='spIzq1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,1),CP(cty,1),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='decr(1)\ndoPlay(0)' dibujar-si='drawIfCtr(1)' activo-si='CP(active,1)' pos_mensajes='centro'">
+   <param name="C_03" value="id='spDer1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,1)+CP(ctw,1)-spnw,CP(cty,1),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='incr(1)\ndoPlay(0)' dibujar-si='drawIfCtr(1)' activo-si='CP(active,1)' pos_mensajes='centro'">
+   <param name="C_04" value="id='tb2' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,2),CP(cty,2),CP(ctw,2),CP(cth,2))' fijo='sí' visible='sí' imagen='VACIO.GIF' acción='calcular' parámetro='editB(2)\ndoPlay(0)' dibujar-si='drawIfCtr(2)' pos_mensajes='centro'">
+   <param name="C_05" value="id='tb3' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,3),CP(cty,3),CP(ctw,3),CP(cth,3))' fijo='sí' visible='sí' imagen='VACIO.GIF' acción='calcular' parámetro='editB(3)\ndoPlay(0)' dibujar-si='drawIfCtr(3)' pos_mensajes='centro'">
+   <param name="C_06" value="id='_SEPARADOR_' tipo='numérico' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='InvCorr' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Invertir' expresión='(280,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda invertir|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='IndC=IndC+1\nIC=180*(IndC%2)' activo-si='(t=0)&(!encendido)' pos_mensajes='centro'">
+   <param name="C_08" value="id='Mostrar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Mostrar' expresión='(550,502,200,46)' fijo='sí' visible='sí' color='blanco' color-int='8e44ad' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda mostrar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='mostrar=mostrar+1' activo-si='(t=0)&(!encendido)' pos_mensajes='centro'">
+   <param name="C_09" value="id='brujula' tipo='gráfico' espacio='E2' color='ff0000ff' color-int='ffff0000' tamaño='70' expresión='(brujula.x,brujula.y)' fijo='sí' dibujar-si='comentario=0' activo-si='comentario=0'">
+   <param name="C_10" value="id='brujula.x' tipo='numérico' región='exterior' espacio='E2' nombre='brujula.x' valor='-200' min='-350' max='350' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="C_11" value="id='brujula.y' tipo='numérico' región='exterior' espacio='E2' nombre='brujula.y' min='-120' max='120' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' pos_mensajes='centro'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='CT' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='40' filas='19' expresión='ix=0;name=1;middle=2;last=3;value=4;ctx=5;cty=6;ctw=7;cth=8;active=9;interfaz=10;drawIf=11;selected=12;ctrType=13;tclType=14;incr=15;decimals=16;limInf=17;limSup=18;;SPINNER=0;TEXTFIELD=1;MENU=2;;TXT=0;NUM=1'">
+   <param name="A_04" value="id='CP(a,k)' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,pad' inicio='pad=0' hacer='res=(a==ctx)?CT[k,ctx]+pad:res;res=(a==cty)?CT[k,cty]+pad:res;res=(a==ctw)?CT[k,ctw]-pad:res;res=(a==cth)?CT[k,cth]-pad:res;res=(a==active)?CT[k,active]:res;res=(a==interfaz)?CT[k,interfaz]:res;res=(a==drawIf)?CT[k,drawIf]:res;res=(a==selected)?CT[k,selected]:res;;'">
+   <param name="A_05" value="id='Str(s)' algoritmo='sí' expresión='str' algoritmo='sí' inicio='str=&squot;&squot;' hacer='str=(CT[s,interfaz]==TEXTFIELD)?clipText(&squot;&squot;+CT[s,name]+CT[s,middle]+CT[s,value]+CT[s,last],CT[s,ctw]-8):str;str=(CT[s,interfaz]==SPINNER)?_NumToStr_(CT[s,value],CT[s,decimals]):str'">
+   <param name="A_06" value="id='editB(k)' algoritmo='sí' algoritmo='sí' hacer='editing=k;teclado.S=CT[k,value];TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,(CP(ctx,k))+&squot;,&squot;+CP(cty,k)+&squot;,&squot;+CP(ctw,k)+&squot;,&squot;+CP(cth,k));TCL.exec(&squot;setParams&squot;,CT[k,tclType]);TCL.update();;parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_07" value="id='incr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]+CT[k,incr];CT[k,value]=(CT[k,limSup]!=&squot;&squot;)?min(tmpValue,CT[k,limSup]):tmpValue'">
+   <param name="A_08" value="id='decr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]-CT[k,incr];CT[k,value]=(CT[k,limInf]!=&squot;&squot;)?max(tmpValue,CT[k,limInf]):tmpValue'">
+   <param name="A_09" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='aux=(editing>=0)?processKB():0' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update();;editing=-1;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;'">
+   <param name="A_10" value="id='processKB()' algoritmo='sí' algoritmo='sí' hacer='CT[editing,value]=(Teclado.Sa!=Teclado.S)?Teclado.S:CT[editing,value];CT[editing,value]=(CT[editing,ctrType]==NUM)?_Eval_(CT[editing,value]+&squot;&squot;):CT[editing,value];Teclado.Sa=Teclado.S'">
+   <param name="A_11" value="id='set(btn,prop,val)' algoritmo='sí' algoritmo='sí' hacer='CT[btn,prop]=val'">
+   <param name="A_12" value="id='clipText(str,w)' algoritmo='sí' expresión='newStr' algoritmo='sí' Local='i,newStr,tmpStr,condTam' inicio='newStr=str;str.length=_length_(str);minwidth=min(str.length,ent(w/wStr.w));maxwidth=min(str.length,ent(w/iStr.w));i=minwidth;' hacer='tmpStr=_substring_(str,0,i);condTam=(_AnchoDeCadena_(tmpStr,&squot;SansSerif&squot;,&squot;BOLD&squot;,22)<w);newStr=(condTam)?tmpStr:newStr;i=(condTam)?(i+1):(maxwidth+1)' mientras='i<=maxwidth'">
+   <param name="A_13" value="id='drawIfCtr(ctr)' algoritmo='sí' expresión='draw' algoritmo='sí' Local='draw' inicio='draw=0' hacer='draw=(CP(interfaz,ctr)==TEXTFIELD)?CP(drawIf,ctr)&&CP(active,ctr):draw;draw=(CP(interfaz,ctr)==MENU)?CP(drawIf,ctr):draw;draw=(CP(interfaz,ctr)==SPINNER)?CP(drawIf,ctr):draw'">
+   <param name="A_14" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_15" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_16" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_17" value="id='Print(a)' algoritmo='sí' algoritmo='sí' Local='str' hacer='str=&squot;&squot;+a;_Print_(str)'">
+   <param name="A_18" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='iStr.w=_AnchoDeCadena_(&squot;i&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);wStr.w=_AnchoDeCadena_(&squot;w&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);;TCL.x=E2._w-TCL._w-5;TCL.y=E2._h-TCL._h-5;rd=0;brdw=4;editing=-1;Teclado.S=&squot;&squot;;Teclado.Sa=&squot;&squot;;texth=27;textp=10;;spnw=40;spnh=46;mnh=46;;AutorControls();;TXT.rojo= ( 8*16+ 0)/256;TXT.verde=( 5*16+ 0)/256;TXT.azul= ( 1*16+ 8)/256;;CTRTXT.rojo= ( 1*16+ 8)/256;CTRTXT.verde=( 2*16+ 0)/256;CTRTXT.azul= ( 2*16+ 8)/256;;CTR.rojo= (11*16+ 4)/256;CTR.verde=( 6*16+ 1)/256;CTR.azul= ( 0*16+ 0)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;'">
+   <param name="A_19" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_20" value="id='Inicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='IC=0;IndC=0;mostrar=0'">
+   <param name="A_21" value="id='Calculos()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='angulo();posBruj()'">
+   <param name="A_22" value="id='AutorControls()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='NCT=0' hacer='CT[NCT,ix]=NCT;CT[NCT,interfaz]=MENU;CT[NCT,ctx]=10;CT[NCT,cty]=60;CT[NCT,ctw]=200;CT[NCT,cth]=mnh;CT[NCT,name]=&squot;menu&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=0;CT[NCT,active]=1;CT[NCT,drawIf]=0;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,interfaz]=SPINNER;CT[NCT,ctx]=10;CT[NCT,cty]=115;CT[NCT,ctw]=250;CT[NCT,cth]=spnh;CT[NCT,name]=&squot;pulsador&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=0;CT[NCT,incr]=0.1;CT[NCT,decimals]=2;CT[NCT,limInf]=&squot;&squot;;CT[NCT,limSup]=&squot;&squot;;CT[NCT,active]=1;CT[NCT,drawIf]=0;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,interfaz]=TEXTFIELD;CT[NCT,ctx]=10;CT[NCT,cty]=170;CT[NCT,ctw]=450;CT[NCT,cth]=46;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;Control de texto con un teclado de 16,1,0&squot;;CT[NCT,tclType]=&squot;16,1,0&squot;;CT[NCT,active]=1;CT[NCT,drawIf]=0;CT[NCT,ctrType]=TXT;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,interfaz]=TEXTFIELD;CT[NCT,ctx]=10;CT[NCT,cty]=225;CT[NCT,ctw]=450;CT[NCT,cth]=46;CT[NCT,name]=&squot;&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=&squot;Control numérico con un teclado de 12,4,1&squot;;CT[NCT,tclType]=&squot;12,4,1&squot;;CT[NCT,active]=1;CT[NCT,drawIf]=0;CT[NCT,ctrType]=NUM;NCT=NCT+1;'">
+   <param name="A_23" value="id='angulo()' algoritmo='sí' algoritmo='sí' hacer='ang=atan((brujula.y)/(brujula.x))*180/pi;ang=(brujula.x=0)?90:ang;ang=((brujula.y=0)&(brujula.x<0))?180:ang;ang=((brujula.y>0)&(brujula.x<0))?180+ang:ang;ang=((brujula.y<0)&(brujula.x<=0))?180+ang:ang;ang=((brujula.y<0)&(brujula.x>0))?360+ang:ang;teta=ang+IC'">
+   <param name="A_24" value="id='posBruj()' algoritmo='sí' algoritmo='sí' hacer='rBruj=sqrt((brujula.x^2)+(brujula.y^2));brujula.x=(rBruj<120)?120*(brujula.x)/rBruj:brujula.x;brujula.y=(rBruj<120)?120*(brujula.y)/rBruj:brujula.y'">
+   <param name="A_25" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora...&squot;' hacer='Init();Inicio();'">
+   <param name="A_26" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='aux=(editing>=0)?processKB():0' hacer='Calculos();'">
+   <param name="A_27" value="id='play' evento='sí' condición='playAudio' acción='reproducir' parámetro='audio/02_expl.mp3' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_28" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' color='negro' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;BOLD&squot;,22))/2,CT[s,cty]+(CT[s,cth]-24)/2]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,BOLD,22' fijo='sí' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='34495e' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==TEXTFIELD)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='34495e' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_04" value="espacio='E2' tipo='arco' color='gris' dibujar-si='(mostrar%2=1)' radio='(s^4)/2000' fin='360' familia='s' s.intervalo='[0,30]' s.pasos='30' fijo='sí' ancho='2'">
+   <param name="G_05" value="espacio='E2' tipo='polígono' color='ecf0f1' coord_abs='sí' expresión='(0,0)(1024,0)(1024,190)(0,190)(0,0)' relleno='ecf0f1'">
+   <param name="G_06" value="espacio='E2' tipo='texto' color='34495e' expresión='[60,16]' texto='Explora el movimiento de una brújula cerca de un cable con corriente eléctrica.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_07" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(mostrar%2=1)' expresión='(97,-12*(1-2*(IndC%2)))(97,12*(1-2*(IndC%2)))' fijo='sí'">
+   <param name="G_08" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(mostrar%2=1)' expresión='(-97,12*(1-2*(IndC%2)))(-97,-12*(1-2*(IndC%2)))' fijo='sí'">
+   <param name="G_09" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(mostrar%2=1)' expresión='(-12*(1-2*(IndC%2)),-97)(12*(1-2*(IndC%2)),-97)' fijo='sí'">
+   <param name="G_10" value="espacio='E2' tipo='flecha' color='ee0022' dibujar-si='(mostrar%2=1)' expresión='(12*(1-2*(IndC%2)),97)(-12*(1-2*(IndC%2)),97)' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_12" value="espacio='E2' tipo='punto' color='f0d300' expresión='(0,0)' fijo='sí' tamaño='10'">
+   <param name="G_13" value="espacio='E2' tipo='texto' color='2c3e50' expresión='[25,60]' texto='El punto amarillo representa un cable que sale de la pantalla, en él pasa una corriente, puedes invertir el sentido con el botón “Invertir”. Si la corriente entra hacia la pantalla se mostrará una cruz sobre el cable, pero si la corriente sale de la pantalla observarás un punto.' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='975' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_14" value="espacio='E2' tipo='texto' color='1abc9c' expresión='[25,135]' texto='Mueve la brújula alrededor del cable y determina cómo es el campo magnético generado. Si no te lo puedes imaginar pulsa el botón &squot;Mostrar&squot;.' fuente='SansSerif,ITALIC,20' fijo='sí' ancho='975' info='INFORMACION PARA LOS CONTROLES'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' expresión='(brujula.x,brujula.y+20,1,1)' archivo='images/explora/brujula.png'">
+   <param name="G_16" value="espacio='E2' tipo='imagen' expresión='(brujula.x,brujula.y,1,1)' archivo='images/explora/aguja.png' rotini='teta'">
+   <param name="G_17" value="espacio='E2' tipo='texto' dibujar-si='debug' expresión='[20,90]' texto='B1=([brujula.x],[brujula.y])    d1=[d1]\nB2=([brujula2.x],[brujula2.y])  d2=[d2]\nB3=([brujula3.x],[brujula3.y])  d3=[d3]\n\nnormabrujula=[rBruj]\nang=[ang]\nIC=[IC]' fijo='sí'">
+   <param name="G_18" value="espacio='E2' tipo='punto' dibujar-si='!(IndC%2)' expresión='(0,0)' fijo='sí' tamaño='3'">
+   <param name="G_19" value="espacio='E2' tipo='segmento' dibujar-si='(IndC%2)' expresión='(-6,-6)(6,6)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_20" value="espacio='E2' tipo='segmento' dibujar-si='(IndC%2)' expresión='(-6,6)(6,-6)' fijo='sí' tamaño='0' ancho='3'">
+</ajs>
+
+</body>
+
+</html>

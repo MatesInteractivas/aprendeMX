@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, denominadores, numeradores, múltiplos, mínimo múltiplo común, suma de fracciones, resta de fracciones, fracciones equivalentes">
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+	<title>Suma de fracciones cuando un denominador es múltiplo del otro</title>
+
+
+
+
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body style="margin: 0px;padding:0px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ajs name="Descartes" width=912 height=512 code="Descartes">
+   <param name="tamaño" value="912x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='TX2' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='audio' tipo='numérico' interfaz='botón' región='interior' espacio='TX2' expresión='(5,5,56,56)' fijo='sí' visible='sí' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0'">
+   <param name="A_01" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;HELP&squot;)'">
+   <param name="A_02" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='amp=0.5;x1=250;x2=430;yG=430'">
+   <param name="A_03" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer=';'">
+   <param name="A_04" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='TX2' tipo='imagen' fondo='sí' expresión='(0,-1.26,1,1)' archivo='images/portada01.png'">
+   <param name="G_02" value="espacio='TX2' tipo='texto' fondo='sí' color='2ecc71' dibujar-si='n==0' expresión='[30,20]' texto='¿Cómo sumar fracciones cuando uno de los denominadores es múltiplo del otro?' fuente='SansSerif,BOLD,32' fijo='sí' ancho='850' info='texto 01'">
+   <param name="G_03" value="espacio='TX2' tipo='texto' fondo='sí' color='34495e' dibujar-si='0' expresión='[65,115]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs40\u191 C\u243 mo sumar \fs44{\*\mjaformula{\fraction{\num 2}{\den 3}}+{\fraction{\num 1}{\den 6}}}\fs40 ?\par Para sumar fracciones hay que expresarlas \par con un mismo denominador. En este caso, \par como 6 es m\u250 ltiplo de 3 (6 = 3 \u215  2), convetimos\par \fs44{\*\mjaformula{\fraction{\num 2}{\den 3}}}\fs40  a su equivalemte \fs44{\*\mjaformula{\fraction{\num 4}{\den 6}}}\fs40  para as\u237  poder \par sumar las fracciones expresadas en sextos:\par               \fs44{\*\mjaformula{\fraction{\num 2}{\den 3}}+{\fraction{\num 1}{\den 6}}={\fraction{\num 4}{\den 6}}+{\fraction{\num 1}{\den 6}}={\fraction{\num 5}{\den 6}}}\fs40 . \par \par \par \par \par \f3\fs38}' fuente='SansSerif,PLAIN,20' fijo='sí' ancho='2' info='texto 01'">
+   <param name="G_04" value="espacio='TX2' tipo='texto' fondo='sí' color='34495e' dibujar-si='1' expresión='[30,145]' texto='Para sumar fracciones es necesario usar un \ndenominador común. \n' fuente='SansSerif,PLAIN,20' fijo='sí' info='texto 01'">
+   <param name="G_05" value="espacio='TX2' tipo='texto' fondo='sí' color='34495e' dibujar-si='1' expresión='[30,200]' texto='Cuando uno de los denominadores es múltiplo \ndel otro, conviene convertir la fracción con menor \ndenominador a su equivalente con el denominador \nmás gande. Por ejemplo, para sumar' fuente='SansSerif,PLAIN,20' fijo='sí' info='texto 01'">
+   <param name="G_06" value="espacio='TX2' tipo='texto' fondo='sí' color='34495e' expresión='[30,305]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs44{\*\mjaformula{\fraction{\num 2}{\den 3}}+{\fraction{\num 1}{\den 6}}}\fs40  vemos que 6 = 3 \u215  2. Entonces \par convertimos\fs44  {\*\mjaformula{\fraction{\num 2}{\den 3}}}\fs40  a su equivalente \fs44{\*\mjaformula{\fraction{\num 4}{\den 6}}}\fs40 , \par y sumamos los numeradores: \par                \fs44{\*\mjaformula{\fraction{\num 2}{\den 3}}+{\fraction{\num 1}{\den 6}}={\fraction{\num 4}{\den 6}}+{\fraction{\num 1}{\den 6}}={\fraction{\num 5}{\den 6}}}\fs40 . \par \par \par \par \par \f3\fs38}' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='2' info='texto 01'">
+   <param name="G_07" value="espacio='TX2' tipo='imagen' fondo='sí' dibujar-si='0' coord_abs='sí' expresión='(680,330,amp,amp)' archivo='images/personajes/boy_01_2x.png'">
+   <param name="G_08" value="espacio='TX2' tipo='imagen' fondo='sí' dibujar-si='0' coord_abs='sí' expresión='(820,330,amp,amp)' archivo='images/personajes/girl_01_mirror_2x.png'">
+   <param name="G_09" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x1,yG)' radio='50' fin='360' fijo='sí' relleno='f1c40f'">
+   <param name="G_10" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x1,yG)' radio='50' inicio='-30' fin='-90' fijo='sí' relleno='blanco'">
+   <param name="G_11" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x1,yG)(x1+50*cos(pi/2+s*2*pi/3),yG-50*sen(pi/2+s*2*pi/3))' familia='s' s.intervalo='[0,2]' s.pasos='2' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x1,yG)(x1+50*cos(pi/2+5*pi/3),yG-50*sen(pi/2+5*pi/3))' fijo='sí' tamaño='0'">
+   <param name="G_13" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x2,yG)' radio='50' fin='360' fijo='sí' relleno='f1c40f'">
+   <param name="G_14" value="espacio='TX2' tipo='arco' color='34495e' dibujar-si='0' coord_abs='sí' centro='(x2,yG)' radio='50' inicio='-30' fin='-90' fijo='sí' relleno='blanco'">
+   <param name="G_15" value="espacio='TX2' tipo='segmento' color='34495e' dibujar-si='0' coord_abs='sí' expresión='(x2,yG)(x2+50*cos(pi/2+s*pi/3),yG-50*sen(pi/2+s*pi/3))' familia='s' s.intervalo='[0,5]' s.pasos='5' decimales='5' fijo='sí' tamaño='0'">
+</ajs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

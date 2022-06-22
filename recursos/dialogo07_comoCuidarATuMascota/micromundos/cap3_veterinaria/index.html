@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/veterinaria.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<!-- mediaelement-->
+		<script src="mediaelement/jquery.js"></script>	
+		<!--<script src="mediaelement/mediaelement-and-player.min.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.min.css" />-->
+		<script src="mediaelement/mediaelement-and-player.js"></script>
+		<link rel="stylesheet" href="mediaelement/mediaelementplayer.css" />
+		<link rel="stylesheet" href="mediaelement/mejs-skins.css" />
+			
+		<title>Llamada con la veterinaria</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			<audio id="player" class="mejs-wmp" src="audio/conversacion.mp3" type="audio/mp3" controls="controls">	
+			</audio>
+		</div>
+		
+		<script>
+
+			var inicio = true;
+		
+			var player = new MediaElementPlayer('#player',{
+				audioWidth: 147,
+				// height of audio player
+				audioHeight: 30,
+				// initial volume when the player starts
+				startVolume: 0.8,
+				// useful for <audio> player loops
+				loop: false,
+				// enables Flash and Silverlight to resize to content size
+				enableAutosize: false,
+				// the order of controls you want on the control bar (and other plugins below)
+				features: ['playpause','progress','current','duration'],
+				//features: ['playpause','progress','current','duration','volume'],
+				// force iPad's native controls
+				iPadUseNativeControls: false,
+				// force iPhone's native controls
+				iPhoneUseNativeControls: false, 
+				// force Android's native controls
+				AndroidUseNativeControls: false,
+				// forces the hour marker (##:00:00)
+				alwaysShowHours: false,
+				// show framecount in timecode (##:00:00:00)
+				showTimecodeFrameCount: false,
+				// used when showTimecodeFrameCount is set to true
+				framesPerSecond: 25,
+				// turns keyboard support on and off for this instance
+				enableKeyboard: true,
+				// when this player starts, it will pause other players
+				pauseOtherPlayers: true,
+				// array of keyboard commands
+				keyActions: []
+			});
+			
+			$('#player').bind('ended',function(){
+				if(inicio){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: {id: 'cap3_veterinaria' } };
+					padre.postMessage(mensajeTipoSet, "*");
+					inicio = false;
+				}
+			});
+
+
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap3_veterinaria' } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+
+		</script>
+					
+        </body>
+</html>

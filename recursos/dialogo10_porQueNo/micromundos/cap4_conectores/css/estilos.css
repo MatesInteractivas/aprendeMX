@@ -1,0 +1,106 @@
+body{
+    overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/fondo.jpg') no-repeat;
+}
+
+.conectores{
+    width: 100%;
+    height: 80%;
+    vertical-align: top;
+}
+
+ul.serie{
+    width: 150px;
+    height: 400px;
+    background-color: rgba(255,255,255,.6);
+    margin: 20px 0px 10px 15px;
+    display: inline-block;
+    vertical-align: top;
+     list-style-position: outside;
+}
+
+ul.serie.e-active{
+    cursor: pointer;
+    
+}
+ul.serie.e-active:hover, ul.serie.e-active:active{
+   background-color: rgba(255,255,255,.8);
+}
+
+ul.serie.e-correcto,ul.serie.e-correcto:hover,ul.serie.e-correcto:active{
+    background-color: #92ebc4;
+}
+ul.serie.e-incorrecto,ul.serie.e-incorrecto:hover,ul.serie.e-incorrecto:active{
+    background-color: #f28398;
+}
+
+ul.serie > li{
+    margin: 20px 0px;
+} 
+
+p, li, a{
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+ul {
+    list-style-position: inside;
+    text-indent: 5px;
+    text-align: left;
+}
+
+li{
+    font-size: 25px;
+}
+
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+.btn{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+#bt_mas{
+    position: absolute;
+    background-color: #0099cc;
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 0 #b8bfc0;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+#bt_mas:hover,#bt_mas:active{
+    box-shadow: 4px 4px 0 #727373;
+}
+
+
+.e-oculto{
+    visibility: hidden;
+    opacity: 0;
+}

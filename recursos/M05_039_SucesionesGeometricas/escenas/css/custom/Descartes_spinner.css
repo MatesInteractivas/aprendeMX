@@ -1,0 +1,117 @@
+@import 'icons.css'
+
+.DescartesSpinnerContainer {
+}
+
+.DescartesSpinnerContainer  canvas {
+	display:none;
+}
+
+.DescartesSpinnerContainer input.DescartesSpinnerField {
+	text-align: center;
+	font-size: 30px !important;
+	padding-right: 5px !important; 
+	font-weight: bold;
+	border-radius: 0px 2px 2px 0px !important;
+}
+
+.DescartesSpinnerContainer  div.up,
+.DescartesSpinnerContainer  div.down {
+	background-color: #34495e !important;
+	border: 1px solid black;
+	background-size: contain;
+
+	
+}
+
+
+.DescartesSpinnerContainer  div.up{
+	border-top-left-radius : 0px;
+	background-image: url('../icon_arriba.png') ;
+	
+}
+
+.DescartesSpinnerContainer  div.down {
+	background-image: url('../icon_abajo.png');
+	border-bottom-left-radius : 0px;
+}
+/**
+	**********************************************************
+	*  HORIZONTAL SPINNERS  *
+	**********************************************************
+*/
+div[id$="_horizontal"].DescartesSpinnerContainer {
+	background: none !important;
+}
+
+
+
+div[id$="_horizontal"].DescartesSpinnerContainer input.DescartesSpinnerField {
+	text-align: center;
+	/* float: left; */
+	display: block;
+	/* position: relative !important; */
+	/* height: 100% !important; */
+	width: 80px !important;
+	left: 40px !important;
+	right: 40px !important;
+	position: absolute !important;
+	padding: 0px;
+}
+
+div[id$="_horizontal"].DescartesSpinnerContainer  canvas {
+	display:none;
+}
+
+
+div[id$="_horizontal"].DescartesSpinnerContainer  div.up,
+div[id$="_horizontal"].DescartesSpinnerContainer  div.down {
+	background-color: #34495e !important;
+	height: 100% !important;
+	width: 40px !important;
+	border: 1px solid black;
+	background-size: contain;	
+}
+
+div[id$="_horizontal"].DescartesSpinnerContainer  div.up{
+	border-top-left-radius : 0px;
+	background-image: url('../icon_derecha.png');
+
+	top:0 !important;
+	left: auto !important;
+	right: 0px !important;
+}
+
+div[id$="_horizontal"].DescartesSpinnerContainer  div.down {
+	background-image: url('../icon_izquierda.png');
+	border-bottom-left-radius : 0px;
+	top: 0px !important;
+}
+
+
+/* estilo de los botones con iconos */
+.teclado::before { 
+	width: 56px;
+	height: 64px;
+	background-image: url('../../../images/btn_tool_calculator.png'); 
+	display:block; 
+}
+
+
+
+div[id$="zoom"].DescartesSpinnerContainer  div.up,
+div[id$="zoom"].DescartesSpinnerContainer  div.down {
+	background-color: #34495e !important;
+	border: 1px solid black;
+	background-size: contain;	
+}
+
+div[id*="zoom"].DescartesSpinnerContainer  div.up{
+	background-image: url('imgs/icono_mas.png'); 
+}
+
+
+div[id*="zoom"].DescartesSpinnerContainer  div.down{
+	background-image: url('imgs/icono_menos.png'); 
+}
+

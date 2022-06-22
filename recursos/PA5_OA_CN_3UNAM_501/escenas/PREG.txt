@@ -1,0 +1,138 @@
+instruc='10 enunciados en minuto y medio'
+nP=10
+T=90
+TINR=6
+
+NP=0
+PREG[NP,txt]='Durante la mañana la brisa marina sopla del mar a la tierra.'
+PREG[NP,rt1]='El aire sobre la tierra al calentarse con el sol se eleva,'
+PREG[NP,rt2]='dejando hueco al aire más frío que viene del mar, que está más frío.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Durante la noche la brisa marina sopla del mar a la playa.'
+PREG[NP,rt1]='El aire frío sobre la tierra se condensa y desciende,'
+PREG[NP,rt2]='empujando al aire más caliente de la superficie hacia el mar.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las nubes tipo cumulonimbus se forman como efecto de la convección del calor.'
+PREG[NP,rt1]='El aire caliente al subir se enfría,'
+PREG[NP,rt2]='su humedad se condensa y eso forma las nubes.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las chimeneas se usan para que por ellas entre aire caliente del exterior.'
+PREG[NP,rt1]='Por las chimeneas suben tanto el aire caliente'
+PREG[NP,rt2]='como el humo, y así salen de las casas.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las chimeneas se usan para que por ellas salga el aire frío del interior.'
+PREG[NP,rt1]='Por las chimeneas suben tanto el aire caliente'
+PREG[NP,rt2]='como el humo, y así salen de las casas.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las chimeneas se usan para que salga por ellas el humo y el aire caliente del interior.'
+PREG[NP,rt1]='Por las chimeneas suben tanto el aire caliente'
+PREG[NP,rt2]='como el humo, y así salen de las casas.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='El humo que se ve salir de una taza de café caliente es vapor condensado que se eleva por efecto de la convección.'
+PREG[NP,rt1]='El vapor caliente se eleva formando una corriente de convección hacia'
+PREG[NP,rt2]='arriba de la taza. El vapor al enfriarse se condensa y forma el humo.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Al soplarle a un plato de sopa caliente ésta se enfría.'
+PREG[NP,rt1]='Con el soplido quitamos el aire caliente y el vapor'
+PREG[NP,rt2]='que se encuentra sobre la sopa dejando, sitio al aire más frío.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Al soplarle a un vaso de agua helada ésta se enfría más.'
+PREG[NP,rt1]='Con el soplido quitamos el aire frío que está sobre el vaso, dejando espacio'
+PREG[NP,rt2]='para el aire más caliente que ayudará a elevar la temperatura del agua.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Se siente más frío al lado de un bloque de hielo que arriba de él.'
+PREG[NP,rt1]='El aire caliente arriba del hielo se enfría, desciende'
+PREG[NP,rt2]='y luego, ya estando frío, se desplaza hacia los lados.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En el hemisferio norte los vientos van principalmente de norte a sur.'
+PREG[NP,rt1]='El aire caliente de los trópicos, cerca del ecuador, se eleva,'
+PREG[NP,rt2]='atrayendo aire frío por la superficie del  hemisferio norte hacia el ecuador.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En el hemisferio norte los vientos van principalmente hacia el norte.'
+PREG[NP,rt1]='El aire caliente de los trópicos, cerca del ecuador, se eleva,'
+PREG[NP,rt2]='atrayendo aire frío por la superficie del  hemisferio norte hacia el ecuador.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En el hemisferio sur los vientos vienen principalmente del sur.'
+PREG[NP,rt1]='El aire caliente de los trópicos, cerca del ecuador, se eleva,'
+PREG[NP,rt2]='atrayendo aire frío por la superficie del hemisferio sur hacia el ecuador.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='En el hemisferio sur los vientos van principalmente de norte a sur.'
+PREG[NP,rt1]='El aire caliente de los trópicos, cerca del ecuador, se eleva,'
+PREG[NP,rt2]='atrayendo aire frío por la superficie del hemisferio sur hacia el ecuador.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si un hielo flota en el centro de un cazo con agua, la temperatura más baja del agua será la de aquella que está bajo el hielo.'
+PREG[NP,rt1]='El agua cercana al hielo se enfría y tiende a hundirse.'
+PREG[NP,rt2]=''
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si un hielo flota en el centro de un recipiente con agua, entonces se forma una corriente en la superficie que va hacia el centro.'
+PREG[NP,rt1]='El agua alrededor del hielo se enfría y se hunde,'
+PREG[NP,rt2]='atrayendo agua de la superficie hacia el hielo.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Las neblinas matutinas que se forman en las costas sobre el mar se deben al aire frío que llega por la noche desde tierra.'
+PREG[NP,rt1]='El aire frío que llega por la noche desde la tierra condensa'
+PREG[NP,rt2]='la humedad del aire más cálido sobre el mar y crea la neblina.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Los remolinos y tornados se forman en las zonas muy nubladas.'
+PREG[NP,rt1]='Más bien se forman en las zonas soleadas'
+PREG[NP,rt2]=' que están rodeadas por zonas nubladas.'
+PREG[NP,rsp]=no
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Los remolinos y tornados se forman en zonas soleadas rodeadas de nubes.'
+PREG[NP,rt1]='El aire de la zona soleada se calienta'
+PREG[NP,rt2]='y se eleva atrayendo aire más frío hacia ella.'
+PREG[NP,rsp]=si
+PREG[NP,img]=no
+NP=NP+1

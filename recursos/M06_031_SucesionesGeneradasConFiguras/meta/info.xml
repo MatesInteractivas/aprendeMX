@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_031"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Sucesiones generadas con figuras
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Si se da una regla que permite construir un figura geométrica a partir de otra, y luego se aplica la misma regla a la segunda figura y se sigue haciendo lo mismo, se genera lo que se llama una sucesión de figuras geométricas. Los elementos de esas figuras pueden ir aumentando su número en una progresión aritmética, en una progresión geométrica o de otra manera. En esta unidad conocerás varias sucesiones de éstas y aprenderás a calcular cuántos elementos tiene cada término de la sucesión.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, Sentido numérico y pensamiento algebraico, Números y sistemas de numeración
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, sucesión, figura geométrica, patrón, regla de formación, progresión geométrica, progresión aritmética, sucesión geométrica, sucesión aritmética.
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

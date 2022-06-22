@@ -1,0 +1,38 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "mecánica", 
+    "dinámica", 
+    "movimiento de los objetos con base en el punto de referencia"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Movimiento", 
+    "rapidez", 
+    "trayectoria", 
+    "dirección", 
+    "caída", 
+    "experimento de Galileo", 
+    "simulación", 
+    "fricción", 
+    "energía", 
+    "velocidad", 
+    "reposo", 
+    "experimento", 
+    "plano inclinado", 
+    "peso"
+  ], 
+  "descripcion": "En esta unidad explorarás la caída libre de objetos desde la misma altura mediante planos inclinados para que sea más lenta y medible. Identificarás el papel que juega la fricción en el tiempo de caída de objetos de masa distinta, y cómo la fricción se relaciona con la forma de los objetos y la diferencia en la caída de objetos. Podrás concluir si la masa de los objetos es realmente el factor que determina el tiempo de caída o es la fricción lo que importa.",
+  "resena": "Experimento y razonamiento detrás de la lógica de que todos los cuerpos caen a igual tasa independiente de su masa.",
+  "titulo": "¿Caen los objetos pesados más rápido que los ligeros?", 
+  "id": "PA5_OA_CN_3UNAM_400"
+}

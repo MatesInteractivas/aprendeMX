@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_030"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		El concepto de razón
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		¿Qué significa que haya 5 árboles por cada 3 casas en una calle donde hay 12 casas? ¿Qué significa que haya 11 mujeres por cada 9 hombres en un pueblo donde hay 400 habitantes? Las descripciones que se dan en la forma "tantos por cada tantos" se llaman razones y se usan frecuentemente para describir relaciones numéricas entre dos cantidades. En esta unidad aprenderás su significado y a realizar algunos cálculos con ellas.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, proporcionalidad, Manejo de la información, Proporcionalidad y funciones
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, tantos de tantos, tanto para cada tantos, razón, proporción, relación, equivalente
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Lista objetivo-subjetivo</title>
+		
+	</head>
+	
+        
+        <body>
+		
+		<div id="contenedor">
+			<div class='tabla tabla1'>
+				<div class="header">Frases objetivas</div>
+				<div class="content objetivo">
+					<ul>
+						<li class='e-oculto' data-nr='1'>El gato es un pequeño mamífero carnívoro.</li>
+						<li class='e-oculto' data-nr='2'>El gato puede cazar pequeños roedores como el ratón.</li>
+						<li class='e-oculto' data-nr='3'>Mi gato se llama Manchitas, es blanco con negro y café y ya está viejito.</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class='tabla tabla2'>
+				<div class="header">Frases subjetivas</div>
+				<div class="content subjetivo">
+					<ul>
+						<li class='e-oculto' data-nr='1'>Los gatos son las mejores mascotas de todas.</li>
+						<li class='e-oculto' data-nr='2'>El gato de don Porfirio es la cosa más linda que hay.</li>
+					</ul>
+				</div>
+			</div>
+		
+		</div>
+		
+		<script>
+		
+			var inicio = true;
+			var mwId = 'cap1_objSubj';
+			
+			function gotoNextQuestion(delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			
+			window.addEventListener("message", receiveMessage, false);
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="objetivo" || evt.data.name=="subjetivo"){
+						var tipo = evt.data.name;
+						var nr = evt.data.value;
+						$('.content.'+tipo+' li[data-nr="'+nr+'"]').removeClass('e-oculto');
+					} else
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							inicio = false;
+							activateBts();
+						} else {
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='inicio' && pair[1]=='false'){
+									inicio = false;
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			
+    
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

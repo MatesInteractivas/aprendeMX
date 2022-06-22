@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Avión</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			<p class='oracionIni'>Un avión es un objeto que vuela a grandes velocidades.</p>
+		</div>
+		
+		<script>
+		
+			var inicio = true;
+			var mwId = 'cap3_preg1_avion';
+			
+			var caracteristicas = {
+					      'capacidad': 'Transporta una gran cantidad de personas y cosas.',
+					      'funcion': 'Sirve para transportar personas y cosas.',
+					      'distancia': 'Se puede usar para viajar cortas, medianas y grandes distancias.',
+					      'alas': 'Tiene alas.',
+					      'capacidad_heli': 'Por lo general tiene más capacidad que un helicóptero.',
+					      'velocidad': 'Vuela a una velocidad promedio de 260 km/h.',
+					      'velocidad_heli': 'Es más rápido que el helicóptero.',
+					      'altura_heli': 'Vuela a mayores alturas que el helicóptero.',
+					      'pista': 'Necesita una pista para despegar y aterrizar.',
+					      'interior': 'Se usa para viajar al interior del mundo, cortas, medianas y largas distancias.',
+					      'llantas': 'Tiene alas, pero utiliza llantas para despegar y aterrizar.',
+					      'ventanas': 'Tiene muchas ventanas.'
+					};
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="objeto"){
+						$('.oracionIni').html('Un avión es un <strong><span style="color: #ff3333;">objeto</span></strong> que vuela a grandes velocidades.');
+					} else
+					if(evt.data.name=="transporte"){
+						$('.oracionIni').html('Un avión es un <span style="text-decoration: line-through; color: #ff3333;">objeto</span> <strong><span style="color: #3333ff;">medio de transporte</strong> que vuela a grandes velocidades.');
+					} else
+					if(evt.data.name=="carac"){
+						$('.oracionIni').addClass('left');
+						var newTxt = '<strong>' + caracteristicas[evt.data.value] + '</strong>';
+						var oldTxt = $('.oracionIni').html();
+						$('.oracionIni').html(oldTxt + ' ' + newTxt);
+					} else
+					if(evt.data.name=="final"){
+						$('.oracionIni').addClass('left');
+						$('.oracionIni').html('Un avión es un medio de transporte que vuela a grandes velocidades. Tiene alas y puede transportar una gran cantidad de personas y cosas.');
+					} else
+					/* FUNCIÓN DE CAJÓN PARA TODOS LOS MMS CON INTERACTIVIDAD QUE SE TENGA QUE RECUPERAR
+					  EVT.DATA.VALUE = '' AL INICIAR A PARTIR DE UN CAPÍTULO
+					  EVT.DATA.VALUE = STRING CON NAME-VALUE PAIRS AL HABER HISTORIAL LOCALSTORAGE*/
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							$('.oracionIni').addClass('left');
+							$('.oracionIni').html('Un avión es un medio de transporte que vuela a grandes velocidades. Tiene alas y puede transportar una gran cantidad de personas y cosas.');
+						} else {
+							//lo que se tenga que hacer con base en historial
+							//nada
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

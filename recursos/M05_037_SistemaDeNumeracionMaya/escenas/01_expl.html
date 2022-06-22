@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, símbolo, decimal, vigesimal, cero, numeral, posicional.">
+
+<head>
+	<title>El sistema de numeración maya</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' y='0' ancho='1024' alto='568' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='siguiente' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro ejemplo' expresión='(E2._w-220,E2._h-66,200,46)' fijo='sí' visible='sí' color='blanco' color-int='9b59b6' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx lavanda restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='otroEjercicio()\ndoPlay(0)'">
+   <param name="A_01" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_02" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_03" value="id='IMG_SIMBOLOS' vector='sí' evaluar='una-sola-vez' expresión='IMG_SIMBOLOS[0]=&squot;images/maya_cero.png&squot;;IMG_SIMBOLOS[1]=&squot;images/maya_uno.png&squot;;IMG_SIMBOLOS[2]=&squot;images/maya_cinco.png&squot;;'">
+   <param name="A_04" value="id='SIMBOLOS' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='60' filas='60' expresión='CERO=0;UNO=1;CINCO=2;;TYPE=0;POS_X=1;POS_Y=2;CELL=3;;'">
+   <param name="A_05" value="id='CELDAS' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='5' filas='4' expresión='CERO=0;UNO=1;CINCO=2;VALUE=3;NEEDCERO=4;'">
+   <param name="A_06" value="id='initSimbolos()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i' inicio='i=0' hacer='SIMBOLOS[i,TYPE]=(i<20)?CERO:SIMBOLOS[i,TYPE];SIMBOLOS[i,POS_X]=(i<20)?posCero.x:SIMBOLOS[i,POS_X];SIMBOLOS[i,POS_Y]=(i<20)?posCero.y:SIMBOLOS[i,POS_X];;SIMBOLOS[i,TYPE]=((i>=20)&&(i<40))?UNO:SIMBOLOS[i,TYPE];SIMBOLOS[i,POS_X]=((i>=20)&&(i<40))?posUno.x:SIMBOLOS[i,POS_X];SIMBOLOS[i,POS_Y]=((i>=20)&&(i<40))?posUno.y:SIMBOLOS[i,POS_Y];;SIMBOLOS[i,TYPE]=((i>=40)&&(i<60))?CINCO:SIMBOLOS[i,TYPE];SIMBOLOS[i,POS_X]=((i>=40)&&(i<60))?posCinco.x:SIMBOLOS[i,POS_X];SIMBOLOS[i,POS_Y]=((i>=40)&&(i<60))?posCinco.y:SIMBOLOS[i,POS_Y];;SIMBOLOS[i,CELL]=-1;;i=i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_07" value="id='initCeldas()' algoritmo='sí' expresión='x' algoritmo='sí' Local='i' inicio='i=0' hacer='CELDAS[i,CERO]=0;CELDAS[i,UNO]=0;CELDAS[i,CINCO]=0;CELDAS[i,NEEDCERO]=0;i=i+1' mientras='i<CELDAS.filas'">
+   <param name="A_08" value="id='init()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='which=-1' hacer='bInfo.x=20;bInfo.y=118;bInfo.w=608;bInfo.h=428;;numCeldas=4;celdas.x=233;celdas.y=129;celdas.w=180;celdas.h=102;;simbolo.w=50;simbolo.h=30;posCero.x=93;posCero.y=240;posUno.x=posCero.x;posUno.y=posCero.y+80;posCinco.x=posCero.x;posCinco.y=posCero.y+160;;otroEjercicio();'">
+   <param name="A_09" value="id='otroEjercicio()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='TOTAL=0' hacer='initSimbolos();initCeldas();;num=1+nivel*incrNivel+ent(rnd*incrNivel);num=min(num,49999);;nivel=nivel+1;'">
+   <param name="A_10" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_11" value="id='relToAbs(coord,type)' algoritmo='sí' expresión='res' algoritmo='sí' Local='res' hacer='res=(type==&squot;x&squot;)?coord*E2.escala+E2._w/2-E2.Ox:res;res=(type==&squot;y&squot;)?-coord*E2.escala+E2._h/2+E2.Oy:res'">
+   <param name="A_12" value="id='whichSymbol(x,y)' algoritmo='sí' expresión='res' algoritmo='sí' Local='i,res' inicio='i=0;x=relToAbs(x,&squot;x&squot;);y=relToAbs(y,&squot;y&squot;);res=-1' hacer='extraW=((SIMBOLOS[i,TYPE]==CINCO)&&(SIMBOLOS[i,CELL]!=-1))?35:0;;inX=((SIMBOLOS[i,POS_X]-extraW)<x)&&(x<(SIMBOLOS[i,POS_X]+simbolo.w+extraW));inY=(SIMBOLOS[i,POS_Y]<y)&&(y<(SIMBOLOS[i,POS_Y]+simbolo.h));;cond=(inX)&&(inY);res=(cond)?i:res;;i=(cond)?SIMBOLOS.filas:i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_13" value="id='whichCelda(x,y)' algoritmo='sí' expresión='res' algoritmo='sí' Local='i,res' inicio='i=0;x=relToAbs(x,&squot;x&squot;);y=relToAbs(y,&squot;y&squot;);res=-1' hacer='inX=(celdas.x<x)&&(x<(celdas.x+celdas.w));inY=((celdas.y+i*celdas.h)<y)&&(y<(celdas.y+celdas.h+i*celdas.h));;cond=(inX)&&(inY);res=(cond)?CELDAS.filas-1-i:res;;i=(cond)?CELDAS.filas:i+1' mientras='i<CELDAS.filas'">
+   <param name="A_14" value="id='colocaSimbolo(index,return_x,return_y)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='SIMBOLOS[index,POS_X]=return_x;SIMBOLOS[index,POS_Y]=return_y;'">
+   <param name="A_15" value="id='releaseSymbol(x,y)' algoritmo='sí' expresión='0' algoritmo='sí' Local='return_x,return_y,theCelda' hacer='theCelda=whichCelda(x,y);;return_x=(SIMBOLOS[which,TYPE]==CERO)?posCero.x:return_x;return_y=(SIMBOLOS[which,TYPE]==CERO)?posCero.y:return_y;return_x=(SIMBOLOS[which,TYPE]==UNO)?posUno.x:return_x;return_y=(SIMBOLOS[which,TYPE]==UNO)?posUno.y:return_y;return_x=(SIMBOLOS[which,TYPE]==CINCO)?posCinco.x:return_x;return_y=(SIMBOLOS[which,TYPE]==CINCO)?posCinco.y:return_y;;simCelda=SIMBOLOS[which,CELL];CELDAS[simCelda,SIMBOLOS[which,TYPE]]=(simCelda!=-1)?CELDAS[simCelda,SIMBOLOS[which,TYPE]]-1:CELDAS[simCelda,SIMBOLOS[which,TYPE]];;SIMBOLOS[which,CELL]=(theCelda==-1)?-1:SIMBOLOS[which,CELL];aux=(theCelda!=-1)?colocaEnCelda(theCelda,return_x,return_y):colocaSimbolo(which,return_x,return_y);;doLayout();;;CELDAS[0,VALUE]=CELDAS[0,UNO]+CELDAS[0,CINCO]*5;CELDAS[1,VALUE]=CELDAS[1,UNO]+CELDAS[1,CINCO]*5;CELDAS[2,VALUE]=CELDAS[2,UNO]+CELDAS[2,CINCO]*5;CELDAS[3,VALUE]=CELDAS[3,UNO]+CELDAS[3,CINCO]*5;TOTAL=CELDAS[0,VALUE]+CELDAS[1,VALUE]*20+CELDAS[2,VALUE]*400+CELDAS[3,VALUE]*8000;;checkCeros()'">
+   <param name="A_16" value="id='colocaEnCelda(theCelda,return_x,return_x)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='cond=(SIMBOLOS[which,TYPE]==CERO);cond1=(theCelda==0);cond2=(theCelda==1)&&((CELDAS[2,UNO]>0)||(CELDAS[2,CINCO]>0)||(CELDAS[3,UNO]>0)||(CELDAS[3,CINCO]>0));cond3=(theCelda==2)&&((CELDAS[3,UNO]>0)||(CELDAS[3,CINCO]>0));releaseCond=(cond)&&(cond1||cond2||cond3);CELDAS[theCelda,CERO]=(releaseCond)?1:CELDAS[theCelda,CERO];CELDAS[theCelda,UNO]=(releaseCond)?0:CELDAS[theCelda,UNO];CELDAS[theCelda,CINCO]=(releaseCond)?0:CELDAS[theCelda,CINCO];aux=(releaseCond)?removeAll(theCelda):0;SIMBOLOS[which,CELL]=(releaseCond)?theCelda:SIMBOLOS[which,CELL];;;cond=(SIMBOLOS[which,TYPE]==UNO);releaseCond=(cond)&&(CELDAS[theCelda,UNO]<4);CELDAS[theCelda,CERO]=(releaseCond)?0:CELDAS[theCelda,CERO];CELDAS[theCelda,UNO]=(releaseCond)?CELDAS[theCelda,UNO]+1:CELDAS[theCelda,UNO];aux=(releaseCond)?removeCeros(theCelda):0;SIMBOLOS[which,CELL]=(releaseCond)?theCelda:SIMBOLOS[which,CELL];;;cond=(SIMBOLOS[which,TYPE]==CINCO);releaseCond=(cond)&&(CELDAS[theCelda,CINCO]<3);CELDAS[theCelda,CERO]=(releaseCond)?0:CELDAS[theCelda,CERO];CELDAS[theCelda,CINCO]=(releaseCond)?CELDAS[theCelda,CINCO]+1:CELDAS[theCelda,CINCO];aux=(releaseCond)?removeCeros(theCelda):0;SIMBOLOS[which,CELL]=(releaseCond)?theCelda:SIMBOLOS[which,CELL];'">
+   <param name="A_17" value="id='removeAll(theCelda)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i' inicio='i=0' hacer='SIMBOLOS[i,CELL]=(SIMBOLOS[i,CELL]==theCelda)?-1:SIMBOLOS[i,CELL];;i=i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_18" value="id='removeCeros(theCelda)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i' inicio='i=0' hacer='SIMBOLOS[i,CELL]=((SIMBOLOS[i,CELL]==theCelda)&&(SIMBOLOS[i,TYPE]==CERO))?-1:SIMBOLOS[i,CELL];;i=i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_19" value="id='doLayout()' algoritmo='sí' expresión='0' algoritmo='sí' Local='i' inicio='i=0' hacer='doLayoutCelda(i);i=i+1' mientras='i<CELDAS.filas'">
+   <param name="A_20" value="id='doLayoutCelda(index)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i,cond,return_x,return_y' inicio='i=0;cuantos(index);unosColocados=0;cincosColocados=0' hacer='aux=((SIMBOLOS[i,CELL]==-1)&&(SIMBOLOS[i,TYPE]==CERO))?colocaSimbolo(i,posCero.x,posCero.y):0;aux=((SIMBOLOS[i,CELL]==-1)&&(SIMBOLOS[i,TYPE]==UNO))?colocaSimbolo(i,posUno.x,posUno.y):0;aux=((SIMBOLOS[i,CELL]==-1)&&(SIMBOLOS[i,TYPE]==CINCO))?colocaSimbolo(i,posCinco.x,posCinco.y):0;;;cond=(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==CERO);return_x=(cond)?celdas.x+(celdas.w-simbolo.w)/2:return_x;return_y=(cond)?celdas.y+(celdas.h-simbolo.h)/2+(3-SIMBOLOS[i,CELL])*celdas.h:return_y;aux=(cond)?colocaSimbolo(i,return_x,return_y):0;;;cond=(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==UNO);tmpw=celdas.w/(cuantosUnos+1);unosColocados=(cond)?unosColocados+1:unosColocados;return_x=(cond)?celdas.x+(tmpw)*unosColocados-simbolo.w/2:return_x;return_y=(cond)?celdas.y+5+(3-SIMBOLOS[i,CELL])*celdas.h:return_y;aux=(cond)?colocaSimbolo(i,return_x,return_y):0;;;cond=(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==CINCO);return_x=(cond)?celdas.x+(celdas.w-simbolo.w)/2:return_x;return_y=(cond)?celdas.y+35-cincosColocados*20+(celdas.h-simbolo.h)/2+(3-SIMBOLOS[i,CELL])*celdas.h:return_y;cincosColocados=(cond)?cincosColocados+1:cincosColocados;aux=(cond)?colocaSimbolo(i,return_x,return_y):0;;;i=i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_21" value="id='cuantos(index)' algoritmo='sí' expresión='0' algoritmo='sí' Local='i' inicio='i=0;cuantosCeros=0;cuantosUnos=0;cuantosCincos=0' hacer='cuantosCeros=cuantosCeros+(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==CERO);cuantosUnos=cuantosUnos+(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==UNO);cuantosCincos=cuantosCincos+(SIMBOLOS[i,CELL]==index)&&(SIMBOLOS[i,TYPE]==CINCO);;i=i+1' mientras='i<SIMBOLOS.filas'">
+   <param name="A_22" value="id='cleanCelda(index)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='CELDAS[index,CERO]=0;CELDAS[index,UNO]=0;CELDAS[index,CINCO]=0;CELDAS[index,VALUE]=0;removeAll(index);doLayoutCelda(index)'">
+   <param name="A_23" value="id='checkCeros()' algoritmo='sí' expresión='0' algoritmo='sí' Local='cond' inicio='needCerosCond=0' hacer='i=2;cond=(CELDAS[i,CERO]==0)&&(CELDAS[i,VALUE]==0)&&(CELDAS[i+1,VALUE]!=0);CELDAS[i,NEEDCERO]=cond;needCerosCond=needCerosCond||cond;;i=1;cond=(CELDAS[i,CERO]==0)&&(CELDAS[i,VALUE]==0)&&((CELDAS[i+1,VALUE]!=0)||(CELDAS[i+2,VALUE]!=0));CELDAS[i,NEEDCERO]=cond;needCerosCond=needCerosCond||cond;;i=0;cond=(CELDAS[i,CERO]==0)&&(CELDAS[i,VALUE]==0)&&((CELDAS[i+1,VALUE]!=0)||(CELDAS[i+2,VALUE]!=0)||(CELDAS[i+3,VALUE]!=0));CELDAS[i,NEEDCERO]=cond;needCerosCond=needCerosCond||cond;;com=&squot;remove ceros&squot;;i=2;cond=(CELDAS[i,CERO]==1)&&(CELDAS[i+1,VALUE]==0);aux=(cond)?cleanCelda(i):0;;i=1;cond=(CELDAS[i,CERO]==1)&&(CELDAS[i+1,VALUE]==0)&&(CELDAS[i+2,VALUE]==0);aux=(cond)?cleanCelda(i):0;;TOTAL=CELDAS[0,VALUE]+CELDAS[1,VALUE]*20+CELDAS[2,VALUE]*400+CELDAS[3,VALUE]*8000;;'">
+   <param name="A_24" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Explora los números maya.&squot;' hacer='incrNivel=80;nivel=0;;init();'">
+   <param name="A_25" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="A_26" value="id='mouse_pressed' evento='sí' condición='E2.mouse_pressed' acción='calcular' parámetro='which=whichSymbol(E2.mouse_x,E2.mouse_y)' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_27" value="id='mouse_released' evento='sí' condición='!E2.mouse_pressed' acción='calcular' parámetro='aux=(which!=-1)?releaseSymbol(E2.mouse_x,E2.mouse_y):0\nwhich=-1' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' color='34495e' expresión='[17,64]' texto='¿Cómo se representa el número [num] en maya?' fuente='SansSerif,PLAIN,22' fijo='no' ancho='E2._w-40'">
+   <param name="G_03" value="espacio='E2' tipo='texto' fondo='sí' color='1abc9c' expresión='[19,90]' texto='Arrastra los símbolos a los recuadros para formar el número indicado.' fuente='SansSerif,ITALIC,22' fijo='sí'">
+   <param name="G_04" value="espacio='E2' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='bInfo'">
+   <param name="G_05" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo.x+194,bInfo.y+bInfo.h/2,1,bInfo.h)' archivo='images/sep_tabla_izquierda.png'">
+   <param name="G_06" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo.x+414,bInfo.y+bInfo.h/2,1,bInfo.h)' archivo='images/sep_tabla_derecha.png'">
+   <param name="G_07" value="espacio='E2' tipo='polígono' fondo='sí' color='95a5a6' coord_abs='sí' expresión='(celdas.x,celdas.y+s*celdas.h)(celdas.x+celdas.w,celdas.y+s*celdas.h)(celdas.x+celdas.w,celdas.y+celdas.h+s*celdas.h)(celdas.x,celdas.y+celdas.h+s*celdas.h)(celdas.x,celdas.y+s*celdas.h)' familia='s' s.intervalo='[0,3]' s.pasos='3' relleno='f6f6f6' ancho='2'">
+   <param name="G_08" value="espacio='E2' tipo='imagen' dibujar-si='s!=which' coord_abs='sí' expresión='(SIMBOLOS[s,POS_X]+simbolo.w/2,SIMBOLOS[s,POS_Y]+simbolo.h/2,1+1.25*((SIMBOLOS[s,TYPE]==CINCO)&&(SIMBOLOS[s,CELL]!=-1)),1)' familia='s' s.intervalo='[0,SIMBOLOS.filas-1]' s.pasos='SIMBOLOS.filas-1' archivo='[IMG_SIMBOLOS[SIMBOLOS[s,TYPE]]]'">
+   <param name="G_09" value="espacio='E2' tipo='imagen' dibujar-si='which!=-1' coord_abs='sí' expresión='(relToAbs(E2.mouse_x,&squot;x&squot;),relToAbs(E2.mouse_y,&squot;y&squot;),1,1)' archivo='[IMG_SIMBOLOS[SIMBOLOS[which,TYPE]]]'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='(CELDAS[s,CERO]+CELDAS[s,UNO]+CELDAS[s,CINCO])>0' expresión='[celdas.x+celdas.w+28,celdas.y+(4-s)*celdas.h+10-celdas.h/2]' familia='s' s.intervalo='[0,CELDAS.filas-1]' s.pasos='CELDAS.filas-1' texto='[CELDAS[s,UNO]+CELDAS[s,CINCO]*5] × [20^s] = [(CELDAS[s,UNO]+CELDAS[s,CINCO]*5)*(20^s)]' fuente='SansSerif,PLAIN,22' fijo='no'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='34495e' dibujar-si='CELDAS[s,NEEDCERO]' expresión='[celdas.x+celdas.w+28,celdas.y+(4-s)*celdas.h-18-celdas.h/2]' familia='s' s.intervalo='[0,CELDAS.filas-1]' s.pasos='CELDAS.filas-1' texto='Coloca en esta casilla \nel cero para indicar \nque está vacía.' fuente='SansSerif,PLAIN,19' fijo='no' info='(CELDAS[s,CERO]+CELDAS[s,UNO]+CELDAS[s,CINCO])>0'">
+   <param name="G_12" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(730,170)' archivo='images/igual.png'">
+   <param name="G_13" value="espacio='E2' tipo='imagen' dibujar-si='TOTAL==num' coord_abs='sí' expresión='(894,167)' archivo='images/icon_ok.png'">
+   <param name="G_14" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[760,150]' texto='El número es:' fuente='SansSerif,PLAIN,22' fijo='no'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='ecf0f1' dibujar-si='!needCerosCond' expresión='[835,193,1,1]' texto='[TOTAL]' fuente='SansSerif,BOLD,22' fijo='no'">
+   <param name="G_16" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(!needCerosCond)&&(TOTAL<num)&&(TOTAL!=0)' expresión='[700,310]' texto='Tu número es más pequeño \nque el requerido.' fuente='SansSerif,BOLD,22' fijo='no'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(!needCerosCond)&&(TOTAL>num)' expresión='[700,310]' texto='Tu número es más grande \nque el requerido.' fuente='SansSerif,BOLD,22' fijo='no'">
+   <param name="G_18" value="espacio='E2' tipo='texto' color='e67e22' dibujar-si='(!needCerosCond)&&(TOTAL==num)' expresión='[725,310]' texto='Muy bien, prueba con \notro número.' fuente='SansSerif,BOLD,22' fijo='no'">
+   <param name="G_19" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[0,0]' texto='[TOTAL]' fijo='sí'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png'
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png'
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png'
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png'
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png'
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png'
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png'
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png'
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0'
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2'
+</script>
+
+</body>
+
+</html>

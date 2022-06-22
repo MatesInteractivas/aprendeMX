@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_MA_3UNAM_008"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Suma de fracciones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad usarás las regletas para resolver sumas de fracciones.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, fracciones, Sentido numérico y pensamiento algebraico, Problemas aditivos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, denominadores, numeradores, múltiplos, mínimo múltiplo común, suma de fracciones, resta de fracciones, fracciones equivalentes
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

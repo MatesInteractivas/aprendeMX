@@ -1,0 +1,33 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Ciencias naturales", 
+    "flotabilidad", 
+    "fluidos", 
+    "experimentación con sólidos", 
+    "líquidos y gases para construir representaciones de las propiedades medibles de masa y volumen", 
+    "medición de la masa y del volumen de diferentes objetos", 
+    "relación de masa y volumen con objetos de diferentes materiales"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Materia", 
+    "densidad", 
+    "masa", 
+    "flotabilidad", 
+    "principio de Arquímedes", 
+    "fuerza de empuje"
+  ], 
+  "descripcion": "En esta unidad explorarás la flotabilidad de diversos cuerpos en líquidos distintos, y descubrirás por qué flotan si son más pesados que el agua. Además, construirás un vaso con capas multicolores de diversos líquidos explicando qué propiedad es la fundamental para que una capa de líquido flote sobre otra.",
+  "resena": "Papel de la densidad de fluidos en la flotabilidad, así como aplicaciones prácticas del fenómeno.",
+  "titulo": "¿Flotará o no?", 
+  "id": "PA5_OA_CN_3UNAM_300"
+}

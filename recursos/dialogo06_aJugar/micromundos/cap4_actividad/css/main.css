@@ -1,0 +1,573 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    line-height: 44px;
+}
+
+p, table, .vntn, .main-text, .trash, h1, h2, div {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 44px;
+    text-align: left;
+    margin: 0px;
+}
+
+a {
+    outline: none;
+}
+
+button {
+	outline: 0;
+	background: none;
+	cursor: pointer;
+	/*border: solid 1px #333;*/
+	border: none;
+	min-height: 40px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+.oacontext {
+    padding: 0;
+    border-width: 0px;
+    margin: 0 auto;
+    max-width: 1230px;
+    min-width: 1230px;
+    min-height: 610px;
+    max-height: 610px;
+    position: relative;
+    background-color: #f8eedd;
+}
+
+.content {
+	position: relative;
+	height: 100%;
+	min-height: 610px;
+	max-height: 610px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(50, 50, 50, .45);
+    z-index: 55;
+}
+
+.preloader{
+    width: 100px;
+    height: 103px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -52px;
+    background: url('../img/general/preloader.gif');
+    color: transparent;
+
+}
+
+ /* content */
+.main-text {
+	margin: 10px;
+	padding: 10px;
+	line-height: 35px;
+}
+
+
+
+/* Ventanas */
+.vntn {
+   /* border: 1px solid #000;
+    background-color: #FFF;
+    box-shadow: 0 2px 3px #666666;*/
+    padding: 20px;
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 50;
+}
+
+
+.vntn--btn-cerrar {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    color: #000;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #989694;
+}
+
+.vntn--titulo {
+    text-transform: uppercase;
+    font-size: 22px !important;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.vntn--contenido {
+    font-size: 24px;
+    line-height: 25px;
+}
+
+.vntn--contenido > p {
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+.vntn-inst {
+	width: 750px;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	bottom: auto;
+	right: auto;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	margin: auto;
+	z-index: 55;
+	background-color: #fff;
+	border: 3px solid #9b40db;
+}
+
+.vntn-inst > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	font-size: 24px;
+}
+.vntn-inst > .vntn--btn-cerrar::before {
+    border-color: #a520db #a520db transparent transparent;
+    border-style: solid;
+    border-width: 35px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.vntn-inst > .vntn--btn-cerrar:hover::before, 
+.vntn-inst > .vntn--btn-cerrar:active::before{
+	border-color: #7e1aa6 #7e1aa6 transparent transparent;
+}
+
+.vntn-feedback {
+	border: solid 3px #f987a7;
+	overflow: hidden;
+	min-width: 250px;
+	min-height: 100px;
+	top: auto;
+	bottom: auto;
+	left: 0;
+	right: 0;
+	width: 90%;
+	z-index: 60;
+	z-index: 60;
+	background-color: #fff;
+}
+.vntn-feedback > .vntn--btn-cerrar {
+	border: none;
+	background: none;
+	top: 0px;
+	right: 0px;
+	color: white;
+	width: 44px;
+	height: 44px;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+.vntn-feedback > .vntn--btn-cerrar::before {
+    border-color: #f987a7 #f987a7 transparent transparent;
+    border-style: solid;
+    border-width: 35px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+.vntn-feedback > .vntn--btn-cerrar:hover::before,
+.vntn-feedback > .vntn--btn-cerrar:active::before{
+    border-color: #db547a #db547a transparent transparent;
+}
+
+
+.vntn-feedback > .vntn--contenido {
+	padding: 20px 10px;
+}
+
+.vntn-feedback[data-correct="true"] {
+	border-color: #02c277;
+}
+.vntn-feedback[data-correct="true"] > .vntn--btn-cerrar::before {
+	border-color: #02c277 #02c277 transparent transparent;
+}
+.vntn-feedback[data-correct="true"] > .vntn--btn-cerrar:hover::before,
+.vntn-feedback[data-correct="true"] > .vntn--btn-cerrar:active::before{
+	border-color: #14a27e #14a27e transparent transparent;
+}
+
+.vntn-feedback[data-correct="false"] {
+	border-color: #cc4940;
+}
+.vntn-feedback[data-correct="false"] > .vntn--btn-cerrar::before {
+	border-color: #cc4940 #cc4940 transparent transparent;
+}
+.vntn-feedback[data-correct="false"] > .vntn--btn-cerrar:hover::before,
+.vntn-feedback[data-correct="false"] > .vntn--btn-cerrar:active::before{
+	border-color: #b3362e #b3362e transparent transparent;
+}
+
+
+
+.btn{
+    font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+
+.btn-instr{
+    background-image: url('img/bt_indicaciones.png');
+    width: 135px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 21px;
+}
+
+.btn-finish, .btn-cambiarOraciones, .btn-borrar{
+    position: absolute;
+    background-color: #0099cc;
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 0 #b8bfc0;
+}
+
+
+.btn.btn-finish:hover,.btn.btn-finish:active,
+.btn.btn-borrar:hover,.btn.btn-borrar:active,
+.btn.btn-cambiarOraciones:hover,.btn.btn-cambiarOraciones:active{
+    box-shadow: -4px 4px 0 #5fb9cc;
+}
+
+.btn-finish{
+    top: 530px;
+    right: 20px;
+    width: 110px;
+}
+
+.btn-cambiarOraciones, .btn-borrar{
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    bottom: 16px;
+}
+
+.btn-cambiarOraciones{
+        width: 240px;
+}
+.btn-borrar{
+        width: 280px;
+}
+
+.vntn-player--text{
+    margin-top: 0px;
+}
+
+.options {
+	/*position: absolute;
+	width: auto;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	border: solid 1px #999;*/
+	margin: 20px 40px 0px 40px;
+	cursor: pointer;
+}
+
+.option {
+	display: block;
+	min-width: 44px;
+	min-height: 40px;
+	line-height: 26px;
+	margin: 4px;
+	text-align: left;
+	padding: 5px 10px;
+	background-color: #d6d6d6;
+}
+.option:hover,.option:active{
+    background-color: #e5e5e5;
+}
+.option.e-seleccionado{
+    background-color: #d3b9f4;
+}
+
+.div-fase1 .foto{
+    position: absolute;
+    left: 25px;
+    top: 200px;
+}
+
+.vntn-player {
+	position: absolute;
+	top: 0px;
+	left: 40px;
+    	width: 850px;
+	max-width: 850px;
+	height: 520px !important;
+	background-color: #fff;
+	border: 2px solid #cbcbcb;
+	box-shadow: 4px 4px 0 #dadada;
+}
+
+.blank {
+	/*display: inline-block;*/
+	min-width: 100px;
+	min-height: 30px;
+	background-color: rgba(174,235,246,0.9);
+	cursor: pointer;
+}
+.blank.e-resuelto {
+	background-color: #d3b9f4;
+	display: inline;
+}
+.blank.e-seleccionado {
+	background-color: #d3b9f4;
+}
+
+.div-fase1, .div-fase2{
+    position: absolute;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+h1{
+    text-align: center;
+}
+
+.oraciones, .lienzo, .conectoresMarcadores{
+    margin: 50px 3px 10px 3px;
+    display: inline-block;
+    height: 550px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.oraciones, .lienzo, .marcadores, .oposicion, .adicion{
+    background-color: #fff;
+}
+
+.oraciones{
+    width: 325px;
+    margin-left: 15px;
+}
+.oraciones > h1{
+    background-color: #92ebc4;
+}
+
+.lienzo > h1{
+    background-color: #cea8f6;
+}
+.lienzo {
+    position: relative;
+    width: 490px !important;
+    box-shadow: 4px 4px 0 #dadada;
+}
+
+.conectoresMarcadores{
+    width: 388px;
+}
+.marcadores, .conectores{
+    width: 100%;
+}
+
+.conectores{
+    margin-bottom: 5px;
+}
+.oposicion, .adicion{
+    width: 190px;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+    height: 270px;
+    overflow: hidden;
+}
+
+.oposicion > h2, .adicion > h2{
+    background-color: #b0e9f7;
+    font-size: 23px;
+    text-align: center;
+}
+
+.marcadores {
+    padding-bottom: 10px;
+}
+.marcadores > h1{
+    background-color: #f28398;
+}
+.conectores > h1{
+    background-color: #83dcf2;
+}
+
+
+.parrafo{
+    padding: 10px 20px;
+    line-height: 35px;
+    font-size: 24px;
+    line-height: 27px;
+}
+.fragmento{
+    /*cursor: pointer;*/
+}
+.fragmento.conector{
+    color: #2388c9;
+}
+.fragmento.marcador{
+    color: #d64863;
+}
+.oraciones{
+    position: relative;
+    width: 300px !important;
+    min-width: 300px !important;
+}
+
+
+.txtElem{
+    font-size: 23px;
+    line-height: 24px;
+    min-height: 28px;
+    margin: 5px 4px;
+    padding: 4px;
+    border: 0px solid #ededed;
+    cursor: pointer;
+}
+.txtElem.oracion{
+    border: 2px dashed #92ebc4;
+}
+.txtElem.conector{
+    border: 2px dashed #83dcf2;
+    text-align: center;
+}
+.txtElem.marcador{
+    border: 2px dashed #f28398;
+    text-align: center;
+}
+/* End Modules */
+
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+.e-oculto {
+	display: none;
+}
+
+.e-activo {
+	cursor: pointer;
+}
+.e-inactivo {
+	opacity: .4;
+	cursor: default;
+}
+.btn-finish.e-inactivo{
+    display: none;
+}
+
+.e-highlight {
+	/*background-color: #73c789;*/
+}
+
+.e-seleccionado {
+	
+}
+.e-marcado {
+	
+}
+
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

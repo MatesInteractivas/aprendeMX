@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA5_OA_CN_3UNAM_504"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		¿Por qué se dice que la Tierra se está sobrecalentando?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		En esta unidad explorarás el fenómeno del sobrecalentamiento de la Tierra y experimentarás con distintos gases que representan a la atmósfera terrestre, donde observarás el calentamiento que se produce en el líquido que está en contacto con ellos cuando estos gases reciben calor en forma de radiación. Entre varias situaciones que se te presenten, elegirás aquellas en las que ocurra el efecto invernadero y experimentarás con modelos caseros para apreciar el efecto invernadero en los líquidos. Relacionarás este efecto con las actividades humanas.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Ciencias naturales, ¿qué es el calentamiento global y qué puedo hacer para reducirlo?, causas y efectos de la contaminación del aire en el ambiente y la salud humana, valoración de las acciones personales para contribuir a la mitigación de la contaminación del aire, causas del calentamiento global: relación entre la contaminación del aire y el efecto invernadero, efectos del calentamiento global en el ambiente, cambio climático y riesgos en la salud, evaluación de alcances y limitaciones de diferentes acciones nacionales, ¿de qué manera la huella ecológica nos permite identificar el impacto de nuestras actividades en el ambiente?, ¿qué acciones podemos realizar para reducir el impacto que generamos en el ambiente?, ¿qué es el calentamiento global y qué puedo hacer para reducirlo?
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, Calor, efecto invernadero, gas invernadero, gases invernadero, radiación, CFCs, clorofluorocarbonos, invernadero, sobrecalentamiento, ciclo del carbón, cambio climático, freón, metano, dióxido de carbono, bióxido de carbono, óxido nitroso, emisión, cambio climático, temperatura promedio
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

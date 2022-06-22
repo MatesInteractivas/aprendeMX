@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, progresión, sucesión, fracciones, fracción, término, regla de formación, regla, ">
+
+<head>
+	<title>Sucesiones aritméticas</title>
+	
+	<script type='text/javascript' src='lib/custom/00_expl.js'></script>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<link rel="stylesheet" href="css/custom/00_expl.css" type="text/css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='calendar' x='calendar.x' y='calendar.y' ancho='509' alto='492' dibujar-si='calendar.visible' fijo='sí' escala='1' O.x='-50%' O.y='-50%' imagen='images/sucesiones/Calendario.png' despl_imagen='expand.' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='INSTR' x='INSTR.x' y='INSTR.y' ancho='491' alto='414' escala='1' O.x='-50%' O.y='-50%' despl_imagen='arr-izq' fondo='blanco' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='MASK' dibujar-si='GLOBO.visible' fijo='sí' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='GLOBO' x='GLOBO.x' y='GLOBO.y' ancho='250' alto='180' dibujar-si='GLOBO.visible' fijo='sí' imagen='images/globo/dialogo001.png' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnReinit' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Otro ejemplo' expresión='(btnAdelante.x,btnAdelante.y,btnAdelante.w,btnAdelante.h)' fijo='sí' visible='sí' color='blanco' color-int='amarillo' negrita='sí' fuente puntos='24' fondo='sí' imagen='_STYLE_|class=btnAprendeMx amarillo restart|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='initEjerc();doPlay(0)' dibujar-si='(paso>=maxPaso)'">
+   <param name="C_02" value="id='btnAdelante' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Siguiente' expresión='(btnAdelante.x,btnAdelante.y,btnAdelante.w,btnAdelante.h)' fijo='sí' visible='sí' color='blanco' color-int='amarillo' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo iniciar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=min(paso+1,maxPaso);ponPaso(paso);doPlay(0)' dibujar-si='(paso<maxPaso)' activo-si='(!escenaBloqueada)&(paso<maxPasoVisto)' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnAtras' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='          Anterior' expresión='(btnAtras.x,btnAtras.y,btnAtras.w,btnAtras.h)' fijo='sí' visible='sí' color='blanco' color-int='amarillo' negrita='sí' fuente puntos='24' imagen='_STYLE_|class=btnAprendeMx amarillo regresar|shadowTextColor=rgba(0,0,0,0.2)|shadowTextOffsetY=2|shadowTextBlur=0|textBorder=0' acción='calcular' parámetro='paso=max(paso-1,0);ponPaso(paso);doPlay(0)' activo-si='(!escenaBloqueada)&(paso>0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='diasLabels' vector='sí' evaluar='una-sola-vez' tamaño='7' expresión='diasLabels[0]=&squot;Domingo&squot;;diasLabels[1]=&squot;Lunes&squot;;diasLabels[2]=&squot;Martes&squot;;diasLabels[3]=&squot;Miércoles&squot;;diasLabels[4]=&squot;Jueves&squot;;diasLabels[5]=&squot;Viernes&squot;;diasLabels[6]=&squot;Sábado&squot;'">
+   <param name="A_02" value="id='sucesion' vector='sí' evaluar='una-sola-vez' tamaño='20' expresión='sucesion[0]=0;sucesion[1]=0;sucesion[2]=0'">
+   <param name="A_03" value="id='vistos' vector='sí' evaluar='una-sola-vez' tamaño='20'">
+   <param name="A_04" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_05" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_06" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_07" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_08" value="id='initEspacios()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='calendar.x=E2._w-calendar._w-3;calendar.y=(E2._h-calendar._h-20);calendar.visible=1;;INSTR.x=10;INSTR.y=calendar.y+20'">
+   <param name="A_09" value="id='initBtns()' algoritmo='sí' algoritmo='sí' hacer='btnAdelante.w=200;btnAdelante.h=45;btnAdelante.x=INSTR.x + INSTR._w - btnAdelante.w;btnAdelante.y=calendar.y+calendar._h-btnAdelante.h;;btnAtras.w=btnAdelante.w;btnAtras.h=btnAdelante.h;btnAtras.x=INSTR.x;btnAtras.y=btnAdelante.y;;;bufandaImg.w=163;bufandaImg.h=268;bufandaImg.x=(INSTR._w-bufandaImg.w-10);bufandaImg.y=(INSTR._h-bufandaImg.h-20);;'">
+   <param name="A_10" value="id='getCalDayLabelPos(idx)' algoritmo='sí' expresión='1' algoritmo='sí' Local='s,sx,sy,cX,cY' hacer='s=(idx+initCell);sx=s%7;sy=ent(s/7) ;;label.txt=((idx<9)?&squot; &squot;:&squot;&squot;) +(idx+1);;cW=68 ;cH=68;cX=46;cY=178;;label.dx=cX;label.dy=cY;label.w=cW;label.h=cH;label.x=cX+cW*sx;label.y=cY+cH*sy'">
+   <param name="A_11" value="id='getCalDayMoneyPos(idx)' algoritmo='sí' expresión='1' algoritmo='sí' Local='s,noRango,idxD,sx,sy,iniD' hacer='s=idx+ahorro.iniD;iniD=initCell+ahorro.iniD;;posX =(iniD%7)-1;posX2=ent((posX+idx)/5);;dinero.txt=sucesion[idx];dinero.txt=&squot;$&squot;+dinero.txt;dinero.dia.n=s+posX2*2;;getCalDayLabelPos(dinero.dia.n);dinero.x=label.x-32;dinero.y=label.y-43;;s=(initCell+dinero.dia.n)%7;dinero.dia.txt=diasLabels[s];; '">
+   <param name="A_12" value="id='getCalDayMoneyPosAnim(idx)' algoritmo='sí' expresión='visible&(idx>-1)&(vistos[idx])' algoritmo='sí' Local='visible,idx2,tt' hacer='visible=(paso>=0);idx2=max(0,idx);tt=(visible)?getCalDayMoneyPos(idx):0;;pol.x1=dinero.x;pol.y1=dinero.y-2;;pol.x2=dinero.x+cW-3;pol.y2=dinero.y+cH-5'">
+   <param name="A_13" value="id='initEjerc()' algoritmo='sí' expresión='x' algoritmo='sí' Local='s,ô,sucesLeng,masBuf,maxDay' hacer='initCell=ent(5*rnd);;ahorro.nDays=5;ahorro.k=5+ent(rnd*5);ahorro.n=20+ent(rnd*7)*5;;ô=|******************************************|;ô=|**Para que no caiga en sabado o domingo **|;masBuf=1+ent(rnd*3);;maxDay=35-10-ahorro.nDays-masBuf-initCell;ahorro.iniD=ent(rnd*(maxDay));actualizaSucesion();;bufanda.sece_idx = ahorro.nDays+masBuf;bufanda.precio=sucesion[bufanda.sece_idx];;getCalDayMoneyPos(bufanda.sece_idx);diaFin.n=dinero.dia.n;diaFin.txt=dinero.dia.txt;;tPaso=bufanda.sece_idx-ahorro.nDays;;maxPasoVisto=0;;ponPaso(0)'">
+   <param name="A_14" value="id='sobreCual(x,y)' algoritmo='sí' expresión='sobre' algoritmo='sí' Local='idx,sobre,tmpB,tmpPaso' inicio='idx=0;sobre=-1;y=(y<0)?-y:y' hacer='ö=|********HACK PARA QUE BUSQUE EN TODO*************|;tmpPaso=paso;paso=6;getCalDayMoneyPosAnim(idx);ö=|****** REGRESAMOS EL VALOR*************|;paso=tmpPaso;;tmpB=(pol.x1<=x)&(pol.x2>=x)&(pol.y1<=y)&(pol.y2>=y);sobre=(tmpB)?idx:sobre;idx=idx+1' mientras='(sobre<0)&(idx<=bufanda.sece_idx)'">
+   <param name="A_15" value="id='setGlobo(idx)' algoritmo='sí' expresión='x' algoritmo='sí' Local='gVer,d,tt,idxB' hacer='gVer=(idx>=0);idxB=max(0,idx);tt=(gVer)?getCalDayMoneyPosAnim(idx):0;;GLOBO.txt.y=(idxB==bufanda.sece_idx)?20:30;;globo.pol.x1=calendar.x+pol.x1;globo.pol.y1=calendar.y+pol.y1;globo.pol.x2=calendar.x+pol.x2;globo.pol.y2=calendar.y+pol.y2;;GLOBO.visible=gVer;tt=(gVer)?doPlay(0):0;;d=abs(pol.x2-pol.x1)/4;GLOBO.x=calendar.x-GLOBO._w+(pol.x1+d)+35;GLOBO.y=calendar.y-GLOBO._h+pol.y1+5;;GLOBO.x=(gVer*GLOBO.x);GLOBO.y=(gVer*GLOBO.y);;d=sucesion[idxB];d0=(idxB>0)?sucesion[idxB-1]:0;GLOBO.txt=&squot;Este día tiene $&squot;+d+&squot; \n\nNota que \n  &squot;+d+&squot; - &squot;+d0+&squot; = &squot;+ahorro.k+&squot;&squot;;;;t0=&squot;Su papá le dio a Lupe\n$&squot;+ahorro.n+&squot; de inicio.&squot;;GLOBO.txt=(idx>0)?GLOBO.txt:t0;;t0=&squot;¡Este día Lupe tendrá el dinero suficiente para comprar la bufanda !&squot;;GLOBO.txt=(idxB==bufanda.sece_idx)?t0:GLOBO.txt;;;_Trace_(&squot;Ponemos el globo:&squot;+GLOBO.x+&squot;,&squot;+GLOBO.y+&squot; visible:&squot;+GLOBO.visible);'">
+   <param name="A_16" value="id='setGloboNada(x,y,w,h)' algoritmo='sí' expresión='x' algoritmo='sí' Local='gVer,d,tt,idxB' hacer=';globo.pol.x1=calendar.x+x;globo.pol.y1=calendar.y+y;globo.pol.x2=calendar.x+x+w;globo.pol.y2=calendar.y+y+h;;GLOBO.visible=1;doPlay(0);;d=w/4;GLOBO.x=globo.pol.x1-GLOBO._w+50;GLOBO.y=globo.pol.y1-GLOBO._h+5;;GLOBO.txt=&squot;Este día Lupe no está ahorrando.&squot;'">
+   <param name="A_17" value="id='getNVistos()' algoritmo='sí' expresión='nVistos' algoritmo='sí' Local='idx,nVistos' inicio='idx=0;nVistos=0;' hacer='nVistos=nVistos+(vistos[idx]==1);idx=idx+1' mientras='(idx<=bufanda.sece_idx)'">
+   <param name="A_18" value="id='actualizaSucesion()' algoritmo='sí' expresión='x' algoritmo='sí' Local='idx' inicio='idx=0' hacer='sucesion[idx]=(ahorro.n+ahorro.k*idx);vistos[idx]=0;;idx=idx+1' mientras='idx<sucesion.long'">
+   <param name="A_19" value="id='ponPaso(idxPaso)' algoritmo='sí' expresión='x' algoritmo='sí' Local='t' hacer='nEspera=2;animarRes=0;idxOver=-1;t=(idxPaso==5)?ponPaso5():0;t=(idxPaso==4)?ponPaso4():0;t=(idxPaso==3)?ponPaso3():0;t=(idxPaso==2)?ponPaso2():0;t=(idxPaso==1)?ponPaso1():0;t=(idxPaso==0)?ponPaso0():0;;maxPasoVisto=max(paso,maxPasoVisto);;fadeInInst()'">
+   <param name="A_20" value="id='ponPaso0()' algoritmo='sí' algoritmo='sí' Local='idx' inicio='paso=0;idx=0;idxOver=-1;setGlobo(idxOver);' hacer='vistos[idx]=0;idx=idx+1;' mientras='idx<=bufanda.sece_idx'">
+   <param name="A_21" value="id='ponPaso1()' algoritmo='sí' algoritmo='sí' Local='idx' inicio='paso=1;idx=0;idxOver=-1;setGlobo(idxOver);' hacer='vistos[idx]=(idx<ahorro.nDays);idx=idx+1' mientras='idx<=bufanda.sece_idx'">
+   <param name="A_22" value="id='ponPaso2()' algoritmo='sí' algoritmo='sí' hacer='paso=2;animarRes=1;;;tResAct=0;tPasosIdx=bufanda.sece_idx-ahorro.nDays+2;tPasosAnim=tPasosIdx*3;tPasoFact=tPasosIdx/tPasosAnim;;'">
+   <param name="A_23" value="id='ponPaso3()' algoritmo='sí' algoritmo='sí' hacer='paso=3;'">
+   <param name="A_24" value="id='ponPaso4()' algoritmo='sí' algoritmo='sí' hacer='paso=4'">
+   <param name="A_25" value="id='ponPaso5()' algoritmo='sí' algoritmo='sí' hacer='paso=5'">
+   <param name="A_26" value="id='calcPaso00()' algoritmo='sí' expresión='x' algoritmo='sí' Local='tt,nVistos' hacer='idxOver=sobreCual(calendar.mouse_x,calendar.mouse_y);tt=(idxOver<0)?calcDiaNoAhorro():setGlobo(idxOver);tt=(idxOver>=ahorro.nDays);idxOver=(tt)?-1:idxOver;;idxB=max(0,idxOver);vistos[idxB]=(idxOver>=0)?1:vistos[idxB];;GLOBO.txt=(!tt)?GLOBO.txt:&squot;Sólo puedes escoger los días marcados&squot;'">
+   <param name="A_27" value="id='calcPaso01()' algoritmo='sí' expresión='x' algoritmo='sí' Local='tt,nVistos,isPlay' hacer='idxOver=sobreCual(calendar.mouse_x,calendar.mouse_y);nVistos=getNVistos();idx2=max(0,idxOver);;updateVisto=(idxOver==nVistos);isGlobo=(idxOver==bufanda.sece_idx)|((idxOver>-1)&(!updateVisto));tt=(isGlobo)?setGlobo(idxOver):0;;tt=(idxOver>nVistos);idxOver=(tt)?-1:idxOver;GLOBO.txt=(!tt)?GLOBO.txt:&squot;Sólo puedes escoger el siguiente día de los marcados&squot;;;_Trace_(&squot;El idxOver : &squot;+idxOver);vistos[idx2]=(updateVisto)?1:vistos[idx2];;isNoAhorro=!(GLOBO.visible|updateVisto);_Trace_(&squot;No es Ahorro &squot; + isNoAhorro + &squot;:&squot;+gVer);tt=(isNoAhorro)?calcDiaNoAhorro():doPlay(0);_Trace_(&squot;**********************************************&squot;);'">
+   <param name="A_28" value="id='calcDiaNoAhorro()' algoritmo='sí' expresión='x' algoritmo='sí' Local='idx,label.x2,label.y2,over' inicio='idx=0-initCell;over=0;mx=calendar.mouse_x;my=-calendar.mouse_y;_Trace_(&squot;Buscando Celda NO:[&squot;+mx+&squot;,&squot;+my+&squot;]&squot;)' hacer='getCalDayLabelPos(idx);;label.x1=label.x-36;label.y1=label.y-48;label.x2=label.x1+label.w;label.y2=label.y1+label.h;;over=(mx>=label.x1)&(mx<=label.x2)&(my>=label.y1)&(my<=label.y2);tt=(over)?setGloboNada(label.x1,label.y1,label.w,label.h):0;idx=idx+1' mientras='(idx<35)&(!over)'">
+   <param name="A_29" value="id='calcGlobo()' algoritmo='sí' algoritmo='sí' hacer='idxOver=-1;setGlobo(idxOver);;nVistos=getNVistos();nextPaso0=(paso==0)&(nVistos>=3);nextPaso1=(paso==1)&(nVistos>bufanda.sece_idx);;;tt=(nextPaso0)?ponPaso(1):0;tt=(nextPaso1)?ponPaso(2):0'">
+   <param name="A_30" value="id='_animaciones_' expresión='0'">
+   <param name="A_31" value="id='animaEspera()' algoritmo='sí' expresión='escenaBloqueada' algoritmo='sí' hacer='nEspera=nEspera-0.25;escenaBloqueada=nEspera>0'">
+   <param name="A_32" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='titulo=&squot;Observa y sigue las instrucciones que le dió Juan a Lupe para llegar a su casa.&squot;;titulo=&squot;Observa las cantidades que Lupe anotó en el calendario cu\u225 nto lleva cada día desde que empezó a ahorrar.&squot;;;;maxPaso=2;;initEspacios();initBtns();initEjerc();;'">
+   <param name="A_33" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='soltado=(pressAnt)&(!calendar.mouse_pressed);;tt=((soltado)&(paso==1))?calcPaso01():0;tt=((soltado)&(paso==0))?calcPaso00():0;;;tt=(MASK.mouse_pressed|GLOBO.mouse_pressed);tt=(tt)?calcGlobo():0;;empezarAnimar=(!animando)&((animarRes)|(nEspera>0));;;pressAnt=calendar.mouse_pressed;'">
+   <param name="A_34" value="id='e3' evento='sí' condición='empezarAnimar' acción='animar' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='Observa las cantidades que Lupe anotó en el calendario.' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_PASOS_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_03" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='paso==0' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Arial;\f5\fcharset0 Arial;}{\colortbl\red22\green160\blue133;\red52\green73\blue94;}\f1\fs44 Lupe quiere comprar una bufanda que cuesta\b{\*\mjaformula ${\expr bufanda.precio\decimals 2\fixed0}}\b0\par y sabemos que ella ahorra del dinero que le dan \par para el recreo, la misma cantidad todos los d\u237 as.\par Adem\u225 s, su pap\u225  le dio\b{\*\mjaformula ${\expr ahorro.n\decimals 2\fixed0}}\b0 para ayudarla\par desde el primer d\u237 a. Entonces:\par \par \fs42\b\u191 Cu\u225 nto  est\u225  ahorrando Lupe \par cada d\u237 a?\b0\par \par \fs44\i\cf0 Toca los d\u237 as en el calendario \par para obtener m\u225 s informacion.\fs42\i0\cf1}' fuente='SansSerif,PLAIN,22' fijo='no' info='Siguiente elemento en la sucesion 01'">
+   <param name="G_04" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='paso==1' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;\f4\fcharset0 Arial;}{\colortbl\red230\green126\blue34;\red52\green73\blue94;\red22\green160\blue133;}\f1\fs44 Para poder saber cu\u225 nto ahorra cada d\u237 a hay que\par hacer la diferencia entre el dinero que tiene en \par dos d\u237 as consecutivos.\fs42\par \par \cf0\fs44\b Entonces, ella est\u225  ahorrando{\*\mjaformula ${\expr ahorro.k\decimals 2\fixed0}}\par al d\u237 a.\fs42\b0\cf1\par \par \fs44\i\cf2 Toca sobre los siguientes d\u237 as\par para revisar cu\u225 nto ahorrar\u225 , \par y averiguar cu\u225 ndo tendr\u225  el \par dinero suficiente.\fs42\i0\cf1}' fuente='SansSerif,PLAIN,22' fijo='no' info='Siguiente elemento en la sucesion 01'">
+   <param name="G_05" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='(paso==2)' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Arial;}{\colortbl\red230\green126\blue34;\red52\green73\blue94;}\f1\fs44 Dado que la bufanda cuesta{\*\mjaformula ${\expr bufanda.precio\decimals 2\fixed0},}Lupe tendr\u225  \par suficiente dinero para comprarla el d\u237 a : \par                      \par                                        \cf0\fs48\b{\*\mjaformula{\expr diaFin.txt\decimals 2\fixed0}{\expr diaFin.n+1\decimals 2\fixed0}}del mes.\cf1\fs42\b0}' fuente='SansSerif,PLAIN,22' fijo='no' info='Siguiente elemento en la sucesion 01'">
+   <param name="G_06" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='paso==3' expresión='[10,10]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;}\f1\fs42 Observa que aqu\u237  tenemos una secesi\u243 n con sucesion con \par progresi\u243 n aritm\u233 tica y al descubrir su regularidad de cambio \par pudimos predecir cu\u225 ndo Lupe tendr\u237 a suficiente dinero \par para comprar la bufanda.}' fuente='SansSerif,PLAIN,21' fijo='no' info='Siguiente elemento en la sucesion 01'">
+   <param name="G_07" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='(paso==3)' expresión='[50+50*s,175]' familia='s' s.intervalo='[0,bufanda.sece_idx]' s.pasos='bufanda.sece_idx' texto='[sucesion[s]][(s==bufanda.sece_idx)?&squot;&squot;:&squot;,&squot;]' fuente='SansSerif,BOLD+ITALIC,22' fijo='no' color_borde_texto='blanco'">
+   <param name="G_08" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_CALENDARIO_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_09" value="espacio='calendar' tipo='polígono' dibujar-si='getCalDayMoneyPosAnim(s)' coord_abs='sí' expresión='(pol.x1,pol.y1)(pol.x2,pol.y1)(pol.x2,pol.y2)(pol.x1,pol.y2)(pol.x1,pol.y1)' familia='s' s.intervalo='[0,bufanda.sece_idx-1]' s.pasos='bufanda.sece_idx-1' relleno='beece3' ancho='0'">
+   <param name="G_10" value="espacio='calendar' tipo='polígono' dibujar-si='getCalDayMoneyPosAnim(bufanda.sece_idx)' coord_abs='sí' expresión='(pol.x1,pol.y1)(pol.x2,pol.y1)(pol.x2,pol.y2)(pol.x1,pol.y2)(pol.x1,pol.y1)' relleno='84dbc9' ancho='0'">
+   <param name="G_11" value="espacio='calendar' tipo='imagen' dibujar-si='getCalDayMoneyPosAnim(s)' coord_abs='sí' expresión='(pol.x1,pol.y1+24)' familia='s' s.intervalo='[0,bufanda.sece_idx]' s.pasos='bufanda.sece_idx' archivo='images/sucesiones/alcancia.png'">
+   <param name="G_12" value="espacio='calendar' tipo='texto' color='1162c5' dibujar-si='getCalDayMoneyPosAnim(s)' expresión='[dinero.x,dinero.y]' familia='s' s.intervalo='[ahorro.nDays,bufanda.sece_idx]' s.pasos='bufanda.sece_idx-ahorro.nDays' texto='[dinero.txt]' fuente='SansSerif,BOLD+ITALIC,24' fijo='no'">
+   <param name="G_13" value="espacio='calendar' tipo='texto' color='0e2b40' dibujar-si='getCalDayLabelPos(s)' expresión='[label.x,label.y]' familia='s' s.intervalo='[0,29]' s.pasos='29' texto='[label.txt]' fuente='Monospaced,BOLD,20' fijo='no'">
+   <param name="G_14" value="espacio='E2' tipo='punto' dibujar-si='0' expresión='(_DEBUG_,_SEPARADOR_)' fijo='sí' info='(_SEPARADOR_)'">
+   <param name="G_15" value="espacio='E2' tipo='texto' dibujar-si='0' expresión='[20,E2._h-15]' texto='nEspera=[nEspera] empezarAnimar=[empezarAnimar] animando=[animando] anim1=[anim1] anim0=[anim0]\ntxtDebug=[txtDebug]' fijo='no' color_borde_texto='blanco'">
+   <param name="G_16" value="espacio='INSTR' tipo='imagen' dibujar-si='(paso<2)' coord_abs='sí' expresión='(bufandaImg.x,bufandaImg.y)' archivo='images/sucesiones/bufanda.png' info='.y'">
+   <param name="G_17" value="espacio='INSTR' tipo='texto' color='34495e' dibujar-si='(paso<2)' expresión='[bufandaImg.x,bufandaImg.y+85]' texto='$[bufanda.precio]' fuente='SansSerif,BOLD,22' fijo='no'">
+   <param name="G_18" value="espacio='GLOBO' tipo='texto' expresión='[10,GLOBO.txt.y]' texto='[GLOBO.txt]' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='GLOBO._w-10'">
+   <param name="G_19" value="espacio='MASK' tipo='polígono' color='naranja' coord_abs='sí' expresión='(0,0)(MASK._w,0)(MASK._w,MASK._h)(0,MASK._h)(0,0)(globo.pol.x1,globo.pol.y1)(globo.pol.x1,globo.pol.y2)(globo.pol.x2,globo.pol.y2)(globo.pol.x2,globo.pol.y1)(globo.pol.x1,globo.pol.y1)(0,0)' relleno='80000000' ancho='0'">
+   <param name="G_20" value="espacio='calendar' tipo='texto' color='e74c3c' dibujar-si='getCalDayMoneyPos(s)' expresión='[dinero.x,dinero.y]' familia='s' s.intervalo='[0,ahorro.nDays-1]' s.pasos='ahorro.nDays-1' texto='[dinero.txt]' fuente='SansSerif,BOLD,24' fijo='no'">
+   <param name="G_21" value="espacio='INSTR' tipo='imagen' dibujar-si='(paso==2)' coord_abs='sí' expresión='(20,135)' archivo='images/sucesiones/Lupe_regalo.png'">
+   <param name="Animación" value="pausa='250' controles='no' auto='no' hacer='anim1=(nEspera>0)?animaEspera():0;empezarAnimar=0;animando=anim1;;txtDebug=txtDebug+1' mientras='animando'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png' 
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png' 
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png' 
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0' 
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2' 
+</script>
+
+</body>
+
+</html>

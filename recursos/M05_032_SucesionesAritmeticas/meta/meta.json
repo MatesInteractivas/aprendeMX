@@ -1,0 +1,32 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Números y sistemas de numeración"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "progresión", 
+    "sucesión", 
+    "fracciones", 
+    "fracción", 
+    "término", 
+    "regla de formación", 
+    "regla", 
+    ""
+  ], 
+  "descripcion": "En esta unidad aprenderás a generar los términos de una sucesión aritmética a partir de su regla de formación y también a descubrir la regla de una sucesión aritmética.",
+  "resena": "Identificación de la regla de una sucesión aritmética y su uso para calcular los términos de la misma.",
+  "titulo": "Sucesiones aritméticas", 
+  "id": "PA5_OA_MA_3UNAM_032"
+}

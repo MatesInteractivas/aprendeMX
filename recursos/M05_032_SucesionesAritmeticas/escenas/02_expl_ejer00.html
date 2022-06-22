@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+	<title>SEB aprende.mx</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/02_expl_ejer00.css" type="text/css">
+
+   <script type="text/javascript" src='lib/custom/jquery-2.2.0.min.js'></script>
+   <script type="text/javascript" src='lib/custom/03_expl_tools.js'></script>
+   <script type="text/javascript" src='lib/custom/02_expl_tools.js'></script>
+	<script type="text/javascript" >
+      $(function(){
+         /**
+         */
+         function displayEjercicio(sucesionCfg,options,textos){
+            this.errores = 0;
+            var txtRnd = this.shuffle(textos);
+            var htmlDisp = this.getSucesionHTML(sucesionCfg.n,sucesionCfg.k,5); 
+            
+            $('#DISP').html(htmlDisp);
+
+            var opts = $('#INST');
+            opts.empty();
+            var idxT = this.getShuffleArray(options.length);
+            
+
+            for (var i = options.length - 1; i >= 0; i--) {
+               var idxN = idxT[i];
+               var optAct = options[idxN];
+               var optHtml = $('<div>',{'class': 'option'});
+               var txt = txtRnd[idxN];
+               if(i%2 == 1)
+                  optHtml.addClass('odd');
+               
+               var optN = this.getNumberHtml(
+                  optAct.n.numerador,
+                  optAct.n.denominador
+               );
+
+               var optK = this.getNumberHtml(
+                  optAct.k.numerador,
+                  optAct.k.denominador
+               );
+
+               txt = txt.replace(/\[opt.n\]/g,optN);
+               txt = txt.replace(/\[opt.k\]/g,optK);
+               optHtml.html(txt);
+               var isCorrect = (idxN==0);
+               optHtml[0].correcto = isCorrect;
+               var onClick = $.proxy(this.onOptionClick,this)
+               optHtml.on('click',{'isCorrect' : isCorrect}, onClick);
+
+               opts.append(optHtml);
+            }
+         }
+         
+         var appSAritmetica = new aprendeMx.SucesionAritmetica(displayEjercicio,false);
+
+         appSAritmetica.onHelpClick = function(event){
+            var tableH = $('<table>');
+            var htmlSuce = $('#DISP span.termino');
+            
+            var sucesionCfg = this.sucesion;
+            var kHtml = '+'+this.getNumberHtml(
+               sucesionCfg.k.numerador,
+               sucesionCfg.k.denominador
+            );
+            
+            var tr1 = $('<tr>').appendTo(tableH);
+            var tr2 = $('<tr>').appendTo(tableH);
+            var tr3 = $('<tr>').appendTo(tableH);
+            var length = htmlSuce.length -1;
+            
+            var moreHelp = (this.errores-1) > this.maxErrores;
+            console.log("Ayuda es : ", this.errores ,moreHelp,this);
+            htmlSuce.each(function(idx,element){
+               $('<td>',{html : element.outerHTML}).appendTo(tr1);
+               var td2 = $('<td>', {'class':'marca'}).appendTo(tr2);
+               $('<td>').appendTo(tr3);
+               
+               if(idx > 0){
+                  td2.addClass('izquierda');
+               }
+               if(idx < length){
+                  td2.addClass('derecha');
+                  $('<td>').appendTo(tr1);
+                  $('<td>').appendTo(tr2);
+
+                  $('<td>',{html : (moreHelp)?kHtml:'?','class':'fact'}).appendTo(tr3);
+               }
+            });
+            tr3.addClass('factor-suma')
+            tr2.addClass('flechas');
+
+            var contM = $('<div>',{html:'<h2>Recuerda que : </h2>'});
+
+            contM.append(tableH);
+            contM.append($('<div>La regularidad la obtienes restando elementos<br> consecutivos de la sucesión</div>'));
+            this.showModalMsg(contM);
+         }
+         appSAritmetica.init();
+        //appSAritmetica.showHelpBtn(true);
+      });   
+   </script>
+
+</head>
+
+<body style="margin:0px; padding:0px">
+
+   <div class='activity-container'>
+      <h1>Aprende a reconocer la consigna que determina la sucesión.</h1>
+      <div id='DISP_container'>
+         <div id='DISP'></div>
+      </div>
+
+      <div id='INST'></div>
+   </div>
+
+</body>
+
+</html>

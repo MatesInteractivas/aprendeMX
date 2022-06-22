@@ -1,0 +1,233 @@
+﻿fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Hola Lupe,\nbuenos días!'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=saludando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Qué bueno que te veo! Acabo de enterarme de que nuestra calificación en matemáticas fue un 10.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿La de ambos?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Sí! Nos van a dar un premio, a los dos.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Caray! Me da gusto, pero me extraña un poco.'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Pero por qué te extraña? Después de todo hemos estado discutiendo mucho sobre matemáticas.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, es cierto, pero ¿tú crees que nos fue bien por eso?'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Claro! Esas discusiones nos han ayudado a profundizar en las ideas matemáticas.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Tienes razón, eso nos ha ayudado, pero yo creo que hay algo más.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Pero qué más? Simplemente nos hemos esforzado por entender bien las cosas.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=sorprendida
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, pero muchas de las cosas que discutimos no vinieron en los exámenes.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=sorprendido
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Eso también es cierto. Entonces crees que hay algo más. A ver, ¿qué nos preguntaron en el último examen?'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Eran problemas de razones y los resolví usando fracciones y comparando unas con otras.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Es verdad! También recuerdo haber estado convirtiendo fracciones a un denominador común.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=sorprendida
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Lo ves? Yo creo que nos fue bien porque aprendimos a manejar muy bien las razones y las fracciones.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Tal vez tengas razón. Es un tema muy importante y útil, que realmente estudiamos muy a fondo.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Por cierto,\n ví que resolviste los problemas de una manera distinta a como lo hago yo.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Sí?\n\n¿Pues cómo lo haces tú?'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Cada vez uso lo que más convenga. Convierto a porcentajes, o a decimales y a veces uso fracciones.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Pues yo casi siempre uso fracciones. Las convierto a un denominador común y así resulta fácil resolver los problemas.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pero a veces no es fácil encontrar un denominador común.\n¿No crees?'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='No. Yo lo hago ya sin pensar. Tomo como denominador común al producto de los denominadores y ¡listo!'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y eso siempre funciona?'
+DIALOGO[N,judT]=3
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Siempre!'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y cómo entiendes eso?\n\n¿Me lo puedes explicar?'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Sí, claro.\nEs más fácil si lo hacemos para fracciones propias.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Cuáles son esas?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Aquellas en las que el numerador es menor que el denominador.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='O sea aquellas cuyo valor es menor que uno.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Exacto. Si a las otras les quitas la parte entera, ya sólo tienes que ocuparte de las fracciones propias.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='De acuerdo.\n\nBueno, ahora explícame cómo comparas las fracciones propias.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str='showimage:=1'
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Mira, este dibujo lo aclara todo. Estúdialo y explora bien la idea.'
+DIALOGO[N,ludT]=8
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, lo estoy mirando...'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Buena suerte. Hasta luego.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]=''
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1

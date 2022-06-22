@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, símbolo, decimal, vigesimal, cero, numeral, posicional.">
+
+<head>
+
+	<title>El sistema de numeración maya</title>
+
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body style="margin:0px; padding:0px">
+
+<ajs name="Descartes" width=1024 height=568 code="Descartes">
+   <param name="tamaño" value="1024x568">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.353, 2016-02-17">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='0' y='0' ancho='1024' alto='568' fijo='sí' despl_imagen='arr-izq' fondo='ecf0f1' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='INFO' x='0' y='0' ancho='1024' alto='568' dibujar-si='(sisNum>=0)' fijo='sí' despl_imagen='arr-izq' fondo='7f34495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='btnRomano' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(bInfo1.x,bInfo1.y,bInfo1.w,bInfo1.h)' fijo='sí' visible='sí' imagen='vacio.gif' acción='calcular' parámetro='sisNum=ROMANO\nshowShadeCover()\ndoPlay(0)'">
+   <param name="C_02" value="id='btnDecimal' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(bInfo1.x+tmpW_5*2,bInfo1.y,bInfo1.w,bInfo1.h)' fijo='sí' visible='sí' imagen='vacio.gif' acción='calcular' parámetro='sisNum=DECIMAL\nshowShadeCover()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_03" value="id='btnEgipcio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(bInfo2.x,bInfo2.y,bInfo2.w,bInfo2.h)' fijo='sí' visible='sí' imagen='vacio.gif' acción='calcular' parámetro='sisNum=EGIPCIO\nshowShadeCover()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='btnMaya' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(bInfo2.x+tmpW_5*2,bInfo2.y,bInfo2.w,bInfo2.h)' fijo='sí' visible='sí' imagen='vacio.gif' acción='calcular' parámetro='sisNum=MAYA\nshowShadeCover()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_05" value="id='cerrar' tipo='numérico' interfaz='botón' región='interior' espacio='INFO' expresión='(bInfo.x+bInfo.w-56,bInfo.y,56,56)' fijo='sí' visible='sí' imagen='images/btn_close.png' acción='calcular' parámetro='sisNum=-1\nhideShadeCover()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="A_01" value="id='TABLET_BARRA' vector='sí' evaluar='una-sola-vez' tamaño='4' expresión='TABLET_BARRA[0]=&squot;images/tablet_romano_linea.png&squot;;TABLET_BARRA[1]=&squot;images/tablet_decimal_linea.png&squot;;TABLET_BARRA[2]=&squot;images/tablet_egipcio_linea.png&squot;;TABLET_BARRA[3]=&squot;images/tablet_maya_linea.png&squot;;;'">
+   <param name="A_02" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_03" value="id='init()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='lineW=12;lineTime.x=30;lineTime.y=E2._h/2+50;tmpW=E2._w-lineTime.x*2;tmpW_5=tmpW/5;;sepV=40;;bInfo1.w=2*tmpW_5-20;bInfo1.h=160;bInfo1.x=lineTime.x+tmpW_5-bInfo1.w/2;bInfo1.y=lineTime.y-bInfo1.h-sepV;;bInfo2.w=bInfo1.w;bInfo2.h=bInfo1.h;bInfo2.x=lineTime.x+2*tmpW_5-bInfo2.w/2;bInfo2.y=lineTime.y+sepV;;sisNum=-1;ROMANO=0;DECIMAL=1;EGIPCIO=2;MAYA=3;;bInfo.w=760;bInfo.h=415;bInfo.x=(INFO._w-bInfo.w)/2;bInfo.y=102'">
+   <param name="A_04" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_05" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;showShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;, 1);parent.update()'">
+   <param name="A_06" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;hideShadeCover&squot;,&squot;&squot;);parent.set(&squot;SHADE.ver&squot;,0);parent.update()'">
+   <param name="A_07" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='titulo=&squot;Observa información sobre algunos sistemas de numeración.&squot;' hacer='init()'">
+   <param name="A_08" value="id='CALCULOS' algoritmo='sí' evaluar='siempre'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[60,16]' texto='[titulo]' fuente='SansSerif,BOLD,24' fijo='sí' info='Título'">
+   <param name="G_02" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[17,64]' texto='Observa la información de la línea de tiempo. Para conocer un poco más sobre los sistemas de numeración presentados, selecciona las fichas para expandir la información.' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='E2._w-40'">
+   <param name="G_03" value="espacio='E2' tipo='segmento' fondo='sí' color='9a59b5' coord_abs='sí' expresión='(lineTime.x+tmpW/5+s*tmpW_5,lineTime.y)(lineTime.x+tmpW/5+s*tmpW_5,lineTime.y+((s%2)?100:-100))' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí' tamaño='0' ancho='lineW-7'">
+   <param name="G_04" value="espacio='E2' tipo='segmento' fondo='sí' color='16a085' coord_abs='sí' expresión='(lineTime.x-30,lineTime.y)(E2._w-lineTime.x+30,lineTime.y)' fijo='sí' tamaño='0' ancho='lineW-6'">
+   <param name="G_05" value="espacio='E2' tipo='segmento' fondo='sí' color='16a085' coord_abs='sí' expresión='(lineTime.x+35,lineTime.y-10)(lineTime.x+35,lineTime.y+10)' fijo='sí' tamaño='0' ancho='3' info='Segmento 5000 a.C.'">
+   <param name="G_06" value="espacio='E2' tipo='segmento' fondo='sí' color='16a085' coord_abs='sí' expresión='(E2._w-lineTime.x-35,lineTime.y-10)(E2._w-lineTime.x-35,lineTime.y+10)' fijo='sí' tamaño='0' ancho='3' info='Segmento 2000 d.C.'">
+   <param name="G_07" value="espacio='E2' tipo='punto' fondo='sí' color='9a59b5' coord_abs='sí' expresión='(lineTime.x+(s+1)*tmpW/5,lineTime.y)' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí' tamaño='lineW+1'">
+   <param name="G_08" value="espacio='E2' tipo='punto' fondo='sí' color='blanco' coord_abs='sí' expresión='(lineTime.x+(s+1)*tmpW_5,lineTime.y)' familia='s' s.intervalo='[0,3]' s.pasos='3' fijo='sí' tamaño='lineW-3'">
+   <param name="G_09" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[lineTime.x-8,lineTime.y+20]' texto='5000 a.C.' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_10" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[E2._w-lineTime.x-80,lineTime.y-45]' texto='2000 d.C.' fuente='SansSerif,PLAIN,22' fijo='sí'">
+   <param name="G_11" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_12" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo1.x-12,bInfo1.y-12)' archivo='images/Observa_romano_cuadro.png'">
+   <param name="G_13" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo1.x+7,bInfo1.y,bInfo1.w,55]' texto='El sistema de numeración romano' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_14" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo1.x,bInfo1.y-15,bInfo1.w,bInfo1.h]' texto='(4000 a.C.)' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_15" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo1.x+2*tmpW/5-12,bInfo1.y-12)' archivo='images/Observa_decimal_cuadro.png'">
+   <param name="G_16" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo1.x+2*tmpW_5+7,bInfo1.y,bInfo1.w,55]' texto='El sistema de numeración decimal' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_17" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo1.x+2*tmpW_5,bInfo1.y-15,bInfo1.w,bInfo1.h]' texto='(1000 a.C.)' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_18" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo2.x-12,bInfo2.y-12)' archivo='images/Observa_egipcio_cuadro.png'">
+   <param name="G_19" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo2.x+7,bInfo2.y,bInfo2.w,55]' texto='El sistema de numeración egipcio' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_20" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo2.x,bInfo2.y-15,bInfo2.w,bInfo2.h]' texto='(3000 a.C.)' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_21" value="espacio='E2' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(bInfo2.x+2*tmpW/5-12,bInfo2.y-12)' archivo='images/Observa_maya_cuadro.png'">
+   <param name="G_22" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo2.x+2*tmpW_5+7,bInfo2.y,bInfo2.w,55]' texto='El sistema de numeración maya' fuente='SansSerif,PLAIN,24' fijo='sí'">
+   <param name="G_23" value="espacio='E2' tipo='texto' fondo='sí' color='34495e' expresión='[bInfo2.x+2*tmpW_5,bInfo2.y-15,bInfo2.w,bInfo2.h]' texto='(36 a.C.)' fuente='SansSerif,BOLD,24' fijo='sí'">
+   <param name="G_24" value="espacio='INFO' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(17,25.5)' archivo='images/tablet.png'">
+   <param name="G_25" value="espacio='INFO' tipo='imagen' dibujar-si='sisNum>=0' coord_abs='sí' expresión='(bInfo.x-1,bInfo.y-1)' archivo='[TABLET_BARRA[sisNum]]'">
+   <param name="G_26" value="espacio='INFO' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_27" value="espacio='INFO' tipo='texto' color='2ecd71' dibujar-si='sisNum==ROMANO' expresión='[bInfo.x+20,bInfo.y+10]' texto='Sistema de numeración Romano' fuente='SansSerif,BOLD,36' fijo='sí'">
+   <param name="G_28" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==ROMANO' expresión='[bInfo.x+20,bInfo.y+60]' texto='El sistema de numeración romano fue utilizado alrededor de 4000 a.C. en la Antigua Roma. Los romanos desconocían el cero, por lo que no cuentan con un símbolo para representarlo. Es un sistema de numeración no posicional, aunque posee reglas para colocar sus símbolos, las cuales son:\n    •  Si un símbolo aparece después de uno igual o mayor, se suma su valor.\n    •  Si un símbolo aparece antes de uno mayor, se resta su valor.\n    •  Los símbolos no pueden repetirse más de tres veces seguidas.\n    •  Por último, los símbolos V, L y D no pueden repetirse.\n\nEjemplo:' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='bInfo.w-40'">
+   <param name="G_29" value="espacio='INFO' tipo='imagen' dibujar-si='sisNum==ROMANO' coord_abs='sí' expresión='(INFO._w/2-100,bInfo.y+bInfo.h-55,1,1)' archivo='images/tablet_romano_num.png'">
+   <param name="G_30" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==ROMANO' expresión='[bInfo.x+410,bInfo.y+340]' texto='=    2016' fuente='SansSerif,BOLD,32' fijo='sí'">
+   <param name="G_31" value="espacio='INFO' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_32" value="espacio='INFO' tipo='texto' color='2ecd71' dibujar-si='sisNum==DECIMAL' expresión='[bInfo.x+20,bInfo.y+10]' texto='Sistema de numeración Decimal' fuente='SansSerif,BOLD,36' fijo='sí'">
+   <param name="G_33" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==DECIMAL' expresión='[bInfo.x+20,bInfo.y+60]' texto='El sistema de numeración decimal, es el sistema de numeración posicional con base 10 más utilizado en las civilizaciones actuales (desde 1000 a.C.). Cuenta con un símbolo que representa al cero.\n\nLas cantidades son representadas utilizando 10 símbolos (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), los cuales dependiendo de su posición se multiplican por potencias de 10 y se van sumando.\n\nEjemplo:' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='bInfo.w-40'">
+   <param name="G_34" value="espacio='INFO' tipo='imagen' dibujar-si='sisNum==DECIMAL' coord_abs='sí' expresión='(INFO._w/2-280,bInfo.y+bInfo.h-60,1,1)' archivo='images/tablet_decimal_num.png'">
+   <param name="G_35" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==DECIMAL' expresión='[bInfo.x+180,bInfo.y+335]' texto='=    4 × 1000 + 9 × 100 + 8 × 10 + 3 × 1' fuente='SansSerif,PLAIN,36' fijo='sí'">
+   <param name="G_36" value="espacio='INFO' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_37" value="espacio='INFO' tipo='texto' color='2ecd71' dibujar-si='sisNum==EGIPCIO' expresión='[bInfo.x+20,bInfo.y+10]' texto='Sistema de numeración Egipcio' fuente='SansSerif,BOLD,36' fijo='sí'">
+   <param name="G_38" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==EGIPCIO' expresión='[bInfo.x+20,bInfo.y+60]' texto='El sistema de numeración egipcio fue utilizado alrededor de 3000 a.C. en el Antiguo Egipto. Fue el primer sistema desarrollado en utilizar la base 10. Es un sistema de numeración no posicional, ya que los números representados no dependen de la posición de sus símbolos.\nLos números se escriben utilizando jeroglíficos como símbolos, usando tantos símbolos como la cantidad que se quería representar. Permite representar números desde el uno hasta millones, aunque las cantidades representadas podían ser muy largas.\n\nEjemplo:' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='bInfo.w-40'">
+   <param name="G_39" value="espacio='INFO' tipo='imagen' dibujar-si='sisNum==EGIPCIO' coord_abs='sí' expresión='(INFO._w/2-213,bInfo.y+bInfo.h-40,1,1)' archivo='images/tablet_egipcio_num.png'">
+   <param name="G_40" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==EGIPCIO' expresión='[bInfo.x+317,bInfo.y+355]' texto='=    100 + 1 + 1000 + 1 = 1102' fuente='SansSerif,PLAIN,36' fijo='sí'">
+   <param name="G_41" value="espacio='INFO' tipo='punto' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_42" value="espacio='INFO' tipo='texto' color='2ecd71' dibujar-si='sisNum==MAYA' expresión='[bInfo.x+20,bInfo.y+10]' texto='Sistema de numeración Maya' fuente='SansSerif,BOLD,36' fijo='sí'">
+   <param name="G_43" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==MAYA' expresión='[bInfo.x+20,bInfo.y+60]' texto='El sistema de numeración maya (36 a. C.) es un sistema de numeración vigesimal, es decir, utiliza la base 20 para representar los números. Es posicional, se escribe de abajo hacia arriba y utiliza suma de potencias de 20 para el valor de los números representados.\nLos mayas conocían el cero y asociaron un símbolo especial (un caracol) para representarlo. El sistema cuenta solo con 3 símbolos, un caracol (vale cero), un punto (vale uno) y una barra (vale cinco).\n\nEjemplo:' fuente='SansSerif,PLAIN,22' fijo='sí' ancho='bInfo.w-40'">
+   <param name="G_44" value="espacio='INFO' tipo='imagen' dibujar-si='sisNum==MAYA' coord_abs='sí' expresión='(INFO._w/2-60,bInfo.y+bInfo.h-85,1,1)' archivo='images/tablet_maya_num.png'">
+   <param name="G_45" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==MAYA' expresión='[bInfo.x+390,bInfo.y+310]' texto='=    4800 + 0 + 9 = 4809' fuente='SansSerif,PLAIN,36' fijo='sí'">
+   <param name="G_46" value="espacio='INFO' tipo='texto' color='34495e' dibujar-si='sisNum==MAYA' expresión='[bInfo.x+135,bInfo.y+268]' texto='12 × 400\n     0 × 20\n        9 × 1' fuente='SansSerif,PLAIN,36' fijo='sí'">
+</ajs>
+
+<script type="descartes/macro" id="macros/borde.txt">
+
+tipo_de_macro=R2
+
+Idioma=español
+
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;A=0;R=1;G=1;V=1'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y,1,1)' archivo='macros/borde_ar_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y,w-8,1)' archivo='macros/borde_ar_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y,1,1)' archivo='macros/borde_ar_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h/2,1,h-8)' archivo='macros/borde_ce_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h/2,1,h-8)' archivo='macros/borde_ce_de.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x,y+h+2,1,1)' archivo='macros/borde_ab_iz.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+2,w-8,1)' archivo='macros/borde_ab_ce.png'
+
+tipo='imagen' coord_abs='sí' expresión='(x+w,y+h+2,1,1)' archivo='macros/borde_ab_de.png'
+
+tipo='polígono' coord_abs='sí' expresión='(x,y)(x+w,y)(x+w,y+h+2)(x,y+h+2)(x,y)' relleno='(R,G,V,A)' ancho='0'
+
+tipo='segmento' color='c0000000' coord_abs='sí' expresión='(x+1,y+h+1)(x+w-1,y+h+1)' fijo='sí' tamaño='0' ancho='2'
+
+</script>
+
+</body>
+
+</html>

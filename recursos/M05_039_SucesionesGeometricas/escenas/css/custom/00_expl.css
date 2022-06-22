@@ -1,0 +1,45 @@
+#calendar.DescartesSpace2DContainer {
+	
+}
+
+#FRACTAL,
+#INST.DescartesSpace2DContainer {
+	box-shadow: 0px 1px 6px rgba(0,0,0,0.1);
+	border-bottom: 2px solid #cccccc; 
+}
+
+#INSTR_canvas{
+	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+	animation-duration: 4s;
+}
+
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes aparece {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes aparece {
+     from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+#fIter_horizontal.DescartesSpinnerContainer input#fIter_horizontal_spinner{
+	width: 108px !important;
+}
+
+
+#zoom_horizontal.DescartesSpinnerContainer div.up,#zoom_horizontal.DescartesSpinnerContainer div.down{
+	background-color: #8f44ad !important;
+	border: 0;
+	border-bottom: 2px solid #7C4792;
+	box-sizing: border-box;
+	background-position: center center;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}

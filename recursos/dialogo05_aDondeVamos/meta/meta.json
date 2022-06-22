@@ -1,0 +1,41 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Español", 
+    "Texto expositivo", 
+    "Texto discontinuo", 
+    "Tabla", 
+    "Mapa"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "Español", 
+    "esquema", 
+    "tabla", 
+    "mapa", 
+    "lectura de mapa", 
+    "comparación de datos", 
+    "comparación de características", 
+    "identificación de características", 
+    "descripción", 
+    "texto descriptivo", 
+    "inferencia de significado", 
+    "contexto", 
+    "viaje", 
+    "lugares", 
+    "costumbres", 
+    "turismo"
+  ], 
+  "tamano": {"ancho":1299,"alto":650},
+  "descripcion": "Lectura de mapas; identificación de características en un texto descriptivo; comparación de características. El alumno y la alumna compararán una lista de requisitos (características esenciales, importantes y deseables de un destino de viaje) con distintas fuentes de información, con el objeto de encontrar el lugar que más se ajuste a las peticiones. En primer lugar, ubicarán los destinos en un mapa e identificarán la información que falta para poder descartar algunos destinos con base en los requerimientos indispendables. Posteriormente, compararán la lista de peticiones con una descripción de los lugares restantes, para llegar a una conclusión respecto al destino ideal. Asimismo, inferirán el significado de algunas palabras desconocidas a partir del contexto.",
+  "resena": "Decisión sobre el destino a visitar en un mapa al tomar en cuenta los criterios de elección.",
+  "titulo": "¿A dónde vamos?", 
+  "id": "PA5_OA_ES_3UNAM_005_comparacionCaracteristicas"
+}

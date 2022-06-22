@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Definición 'enunciado'</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			<div class='encabezado'>
+				¿Qué es un enunciado? 
+			</div>
+			
+			<div class='definition rae e-oculto'>
+				<div class='img rae'>
+					<img src='img/rae.png'/>
+				</div>
+				<div class='txt'>
+					<strong>El diccionario de la Real Academia Española dice:</strong>
+					<br>Secuencia con valor comunicativo, sentido completo y entonación propia.
+				</div>
+			</div>
+			<div class='definition alumno e-oculto'>
+				<div class='img alumno'>
+					<img id='userImg'/>
+				</div>
+				<div class='txt'></div>
+			</div>
+			<div class='definition tutor e-oculto'>
+				<div class='img tutor'>
+					<img src='img/tutor.png'/>
+				</div>
+				<div class='txt'>
+					<strong>A mí se me ocurrió:</strong>
+					<br>Palabra o grupo ordenado de palabras que transmiten una idea.<br>No olvidar al escribirlos:<br>Mayúscula = inicio. Punto = final.
+
+				</div>
+			</div>
+			
+			<a id="next" class="slowShow e-oculto" href="#"></a>
+		</div>
+		
+		<script>
+		
+			var inicio = true;
+			var mwId = 'cap2_definicion';
+			var userName = "Tú";
+			var defAlumno = "";
+			  
+			function showDefAlumno(html){
+				$('.definition.alumno .txt').html(html);
+				$('.definition.alumno').removeClass('e-oculto');
+			}
+
+			function gotoNextQuestion(delay){
+				setTimeout(function(){
+					var padre = window.parent;
+					var mensajeTipoSet = { command: "gotoNextQuestion", params: { id: mwId } };
+					padre.postMessage(mensajeTipoSet, "*");
+				},delay);
+			}
+			
+			function addMwSettings(name,value){
+				//alert('setting name: '+name+'& value: '+value);
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "addMicroworldSettings", params: {id: mwId, name: name, value: value } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			
+			window.addEventListener("message", receiveMessage, false);
+			
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="userAvatar"){
+						$('#userImg').attr('src','../../img/alumno/' + evt.data.value + '.png');
+						$('#userImg').css('width',105);
+					} else
+					if(evt.data.name=="userName"){
+						userName = evt.data.value;
+					} else
+					if(evt.data.name=="defRae"){
+						$('.definition.rae').removeClass('e-oculto');
+					} else
+					if(evt.data.name=="defAlumno"){
+						if(/\w/.test(evt.data.value)){ //cuando NO está reconstruyendo
+							if(/palabras que …/.test(defAlumno)){
+								defAlumno = defAlumno.replace(/…/,' ');
+								defAlumno += evt.data.value;
+							} else {
+								defAlumno = evt.data.value;
+							}
+							addMwSettings('defAlumno',defAlumno); //reconstruyendo
+						} 
+						var html = '<strong>' + userName + ' dice:</strong><br>' + defAlumno;
+						showDefAlumno(html);
+					} else
+					if(evt.data.name=="defTutor"){
+						$('.definition.tutor').removeClass('e-oculto');
+						if(!$('#next').hasClass('e-inactivo')){
+							$('#next').removeClass('e-oculto');
+							$('#next').on('click',function(){
+								gotoNextQuestion(1);
+								addMwSettings('nextClicked','true');
+								$(this).addClass('e-oculto');
+								$(this).off();
+							});
+						}
+					} else
+					if(evt.data.name=="mwReconstruction"){
+						if(evt.data.value=='default'){
+							//lo que se tenga que hacer en este mm cuando NO hay historial
+							$('.definition.rae').removeClass('e-oculto');
+							var html = '<strong>' + userName + ' dice: </strong><br>¿...?';
+							showDefAlumno(html);
+							$('.definition.tutor').removeClass('e-oculto');
+						} else {
+							//lo que se tenga que hacer con base en historial
+							//lo que se tenga que hacer con base en historial
+							var arrPairs = evt.data.value.split(',');
+							for(var i=0;i<arrPairs.length;i++){
+								var pair = arrPairs[i].split(':');
+								if(pair[0]=='nextClicked' && pair[1]=='true'){
+									$('#next').addClass('e-inactivo');
+								} else
+								if(pair[0]=='defAlumno'){
+									if(pair[1].length > defAlumno.length){
+										defAlumno = pair[1];
+									}
+									
+								}
+							}
+						}
+						//esto SIEMPRE debe ir
+						var padre = window.parent;
+						var mensajeTipoSet = { command: "mwReconstructed", params: {id: mwId } };
+						padre.postMessage(mensajeTipoSet, "*");	
+					}
+				}
+			}
+			
+    
+			$(document).ready(function(){
+				
+				var padre = window.parent;
+				
+				var mensajeTipoSet = { command: "getUserAvatar", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+				
+				var mensajeTipoSet = { command: "getUserName", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+				
+				mensajeTipoSet = { command: "microWorldReady", params: {id: mwId } };
+				padre.postMessage(mensajeTipoSet, "*");
+
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

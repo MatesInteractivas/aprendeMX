@@ -1,0 +1,31 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "aritmética", 
+    "decimales", 
+    "Sentido numérico y pensamiento algebraico", 
+    "Problemas multiplicativos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "DescartesJS", 
+    "Multiplicación", 
+    "producto", 
+    "multiplicando", 
+    "multiplicador", 
+    "algoritmo", 
+    "suma"
+  ], 
+  "descripcion": "Si el boleto para entrar a un concierto costaba $54 y al concierto asistieron 2931 personas que pagaron entrada, ¿cuánto dinero debe haberse recabado por la venta de boletos? En esta unidad aprenderás a realizar este tipo de cálculos sin necesidad de recurrir a una calculadora. Para ello aplicarás el algoritmo de la multiplicación con números grandes.",
+  "resena": "Algoritmo de la multiplicación para números grandes y sus aplicaciones en problemas cotidianos.",
+  "titulo": "Multiplicación con decimales", 
+  "id": "PA5_OA_MA_3UNAM_040"
+}

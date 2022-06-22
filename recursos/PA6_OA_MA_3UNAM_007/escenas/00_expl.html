@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Plano cartesiano, coordenadas, abscisas, ordenadas, ejes de coordenadas, ejes coordenados, cuadrantes, sistema de coordenadas, pares ordenados, puntos en el plano">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' despl_imagen='centrada' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='PLANO' x='b1.x' y='b1.y' ancho='910' alto='450' fijo='sí' escala='111' imagen='images/fondoCiudad.png' despl_imagen='expand.' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='R2' id='POSTIT' x='485' y='250' ancho='510' alto='250' dibujar-si='(paso==1)||(paso==3)||(paso==5)' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_04" value="tipo='R2' id='PREV' x='10' y='227' ancho='58' alto='58' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='R2' id='NEXT' x='956' y='227' ancho='58' alto='58' fijo='sí' despl_imagen='arr-izq' fondo='ffffffff' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0' activo-si='!cfg'">
+   <param name="C_02" value="id='_SEPARADOR_' tipo='numérico' región='interior' espacio='E2' nombre='_SEPARADOR_' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_03" value="id='prev' tipo='numérico' interfaz='botón' región='interior' espacio='PREV' expresión='(2,2,55,56)' fijo='sí' visible='sí' imagen='images/btn_izq.png' acción='calcular' parámetro='paso=max(0,paso-1)\ndoPlay(0)' dibujar-si='paso>0' activo-si='paso>0' pos_mensajes='centro'">
+   <param name="C_04" value="id='next' tipo='numérico' interfaz='botón' región='interior' espacio='NEXT' expresión='(2,2,55,56)' fijo='sí' visible='sí' imagen='images/btn_der.png' acción='calcular' parámetro='paso=min(maxPaso,paso+1)\ndoPlay(0)' dibujar-si='paso<maxPaso' activo-si='paso<maxPaso' pos_mensajes='centro'">
+   <param name="C_05" value="id='coordenada' tipo='gráfico' espacio='PLANO' color='negro' color-int='naranja' tamaño='14' fijo='sí' dibujar-si='paso==maxPaso'">
+   <param name="A_01" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='17' filas='4' expresión='COL.sz=17;tnsp=0;rojo=1;verd=2;azul=3;n=0;COL[n,tnsp]=0;COL[n,rojo]=0;COL[n,verd]=0;COL[n,azul]=0;n=1;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=1;COL[n,azul]=1;n=2;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.8;COL[n,azul]=0.8;n=3;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=1;COL[n,azul]=0.7;n=4;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.65;COL[n,azul]=0.65;n=5;COL[n,tnsp]=0;COL[n,rojo]=0.8;COL[n,verd]=0.9;COL[n,azul]=1;n=6;COL[n,tnsp]=0;COL[n,rojo]=0.8;COL[n,verd]=0.9;COL[n,azul]=0.0;n=7;COL[n,tnsp]=0;COL[n,rojo]=0.5;COL[n,verd]=1.0;COL[n,azul]=0.6;n=8;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.5;COL[n,azul]=0.5;n=9;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=1;COL[n,azul]=0.4;n=10;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.8;COL[n,azul]=1;n=11;COL[n,tnsp]=0;COL[n,rojo]=0.8;COL[n,verd]=0.8;COL[n,azul]=0.8;n=12;COL[n,tnsp]=0;COL[n,rojo]=0.95;COL[n,verd]=0.8;COL[n,azul]=0.0;n=13;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.7;COL[n,azul]=1;n=14;COL[n,tnsp]=0;COL[n,rojo]=0.5;COL[n,verd]=0.9;COL[n,azul]=0.4;n=15;COL[n,tnsp]=0;COL[n,rojo]=0.9;COL[n,verd]=0.9;COL[n,azul]=1.0;n=16;COL[n,tnsp]=0;COL[n,rojo]=1;COL[n,verd]=0.4;COL[n,azul]=0.4;;'">
+   <param name="A_02" value="id='Col(n,rgv)' expresión='Col[n,rgv]'">
+   <param name="A_03" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_04" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_05" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_06" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='paso=0;maxPaso=6;;b1.x=57;b1.y=31;b1.w=PLANO._w;b1.h=PLANO._h;;b2.x=45;b2.y=45;b2.w=POSTIT._w-90;b2.h=POSTIT._h-90'">
+   <param name="A_07" value="id='Calculos()' algoritmo='sí' algoritmo='sí' hacer='coordenada.x=ent(coordenada.x+0.5);coordenada.x=max(coordenada.x,-4);coordenada.x=min(coordenada.x,4);;coordenada.y=ent(coordenada.y+0.5);coordenada.y=max(coordenada.y,-2);coordenada.y=min(coordenada.y,2)'">
+   <param name="A_08" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_09" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_10" value="id='_SEPARADOR_' expresión='0'">
+   <param name="A_11" value="id='LETRA' vector='sí' evaluar='una-sola-vez' tamaño='8' expresión='LETRA[0]=&squot;A&squot;;LETRA[1]=&squot;B&squot;;LETRA[2]=&squot;C&squot;;LETRA[3]=&squot;D&squot;;LETRA[4]=&squot;E&squot;;LETRA[5]=&squot;F&squot;;LETRA[6]=&squot;G&squot;;LETRA[7]=&squot;H&squot;'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Observa cómo funciona el plano cartesiano.&squot;)' hacer='Inicio();'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='Calculos();'">
+   
+   <param name="A_15" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,10,E2._w-20,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000'">
+   <param name="G_02" value="espacio='E2' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='b1'">
+   <param name="G_03" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_04" value="espacio='PLANO' tipo='polígono' dibujar-si='paso>0' coord_abs='sí' expresión='(0,0)(PLANO._w,0)(PLANO._w,PLANO._h)(0,PLANO._h)(0,0)' relleno='cc1432a5' ancho='0'">
+   <param name="G_05" value="espacio='PLANO' tipo='segmento' color='negro' dibujar-si='paso>0' expresión='(-10,s)(10,s)' familia='s' s.intervalo='[-5,5]' s.pasos='10' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='2'">
+   <param name="G_06" value="espacio='PLANO' tipo='segmento' color='negro' dibujar-si='paso>0' expresión='(s,-10)(s,10)' familia='s' s.intervalo='[-5,5]' s.pasos='10' fuente='Monospaced,PLAIN,12' fijo='sí' ancho='2'">
+   <param name="G_07" value="espacio='PLANO' tipo='flecha' color='blanco' dibujar-si='paso>2' expresión='(0,0)(0,-2)' fijo='sí' tamaño='4' ancho='5' punta='9' flecha='blanco'">
+   <param name="G_08" value="espacio='PLANO' tipo='flecha' color='blanco' dibujar-si='paso>2' expresión='(0,0)(0,2)' fijo='sí' tamaño='4' ancho='5' punta='9' flecha='blanco'">
+   <param name="G_09" value="espacio='PLANO' tipo='flecha' color='blanco' dibujar-si='paso>2' expresión='(0,0)(-4,0)' fijo='sí' tamaño='4' ancho='5' punta='9' flecha='blanco'">
+   <param name="G_10" value="espacio='PLANO' tipo='flecha' color='blanco' dibujar-si='paso>2' expresión='(0,0)(4,0)' fijo='sí' tamaño='4' ancho='5' punta='9' flecha='blanco'">
+   <param name="G_11" value="espacio='PLANO' tipo='texto' color='blanco' dibujar-si='paso==maxPaso' expresión='[PLANO._w/2+coordenada.x*PLANO.escala-45-(coordenada.x*8),PLANO._h/2-coordenada.y*PLANO.escala-50+(coordenada.y>0)*85]' texto='  ([ent(coordenada.x)], [ent(coordenada.y)])  ' fuente='Monospaced,PLAIN,24' decimales='0' fijo='no' color_borde_texto='negro'">
+   <param name="G_12" value="espacio='POSTIT' tipo='punto' fondo='sí' dibujar-si='0' expresión='(_SEPARADOR_,_SEPARADOR_)' fijo='sí'">
+   <param name="G_13" value="espacio='POSTIT' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='b2'">
+   <param name="G_14" value="espacio='POSTIT' tipo='texto' color='6c4517' dibujar-si='paso==1' expresión='[50,60]' texto='Los planos de grandes extensiones se dibujan sobre una cuadrícula, los objetos se localizan nombrando la columna y la fila en que se encuentran.' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='POSTIT._w-110'">
+   <param name="G_15" value="espacio='POSTIT' tipo='texto' color='6c4517' dibujar-si='paso==3' expresión='[50,60]' texto='Un plano  cartesiano está formado por dos rectas perpendiculares llamadas ejes de coordenadas.' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='POSTIT._w-110'">
+   <param name="G_16" value="espacio='POSTIT' tipo='texto' color='6c4517' dibujar-si='paso==5' expresión='[50,60]' texto='Cada punto del plano está determinado por un par ordenado de coordenadas: la primera corresponde al eje horizontal (abscisas) y la segunda al eje vertical (ordenadas).\nMueve el punto para ver sus coordenadas.' fuente='Monospaced,PLAIN,19' fijo='sí' ancho='POSTIT._w-110'">
+   <param name="G_17" value="espacio='PLANO' tipo='texto' color='blanco' dibujar-si='(paso==1)||(paso==2)' expresión='[-23+PLANO.escala+s*PLANO.escala,10]' familia='s' s.intervalo='[0,8]' s.pasos='8' texto='[LETRA[s]]' fuente='Monospaced,PLAIN,30' fijo='no' color_borde_texto='negro'">
+   <param name="G_18" value="espacio='PLANO' tipo='texto' color='blanco' dibujar-si='(paso==1)||(paso==2)' expresión='[15,-30+PLANO.escala+s*PLANO.escala]' familia='s' s.intervalo='[0,4]' s.pasos='4' texto='[s+1]' fuente='Monospaced,PLAIN,30' fijo='no' color_borde_texto='negro'">
+</ajs>
+</div>
+
+<!-- macro para dibujar los bordes -->
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;tnsp=0;rojo=1;verd=1;azul=1'
+tipo='imagen' coord_abs='sí' expresión='(x-22,y-22,1,1)' archivo='images/borde_ar_iz.png' info='arriba izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y-22,w,1)' archivo='images/borde_ar_ce.png' info='arriba centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y-22,1,1)' archivo='images/borde_ar_de.png' info='arriba derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h/2,1,h)' archivo='images/borde_ce_iz.png' info='centro izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h/2,1,h)' archivo='images/borde_ce_de.png' info='centro derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h+22,1,1)' archivo='images/borde_ab_iz.png' info='abajo izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+22,w,1)' archivo='images/borde_ab_ce.png' info='abajo centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h+22,1,1)' archivo='images/borde_ab_de.png' info='abajo derecha' 
+tipo='polígono' coord_abs='sí' expresión='(x-1,y-1)(x+w+1,y-1)(x+w+1,y+h+1)(x-1,y+h+1)(x-1,y-1)' relleno='(rojo,verd,azul,tnsp)' ancho='0' 
+</script>
+
+</body>
+
+</html>

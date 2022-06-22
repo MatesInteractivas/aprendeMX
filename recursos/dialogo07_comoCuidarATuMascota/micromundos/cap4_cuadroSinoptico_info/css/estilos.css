@@ -1,0 +1,60 @@
+body{
+	overflow: hidden;
+}
+
+#contenedor{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 644px;
+	height: 548px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../img/esquema.png') no-repeat;
+}
+
+.infoCuadro{
+	width: 540px;
+	height: 450px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -270px;
+	margin-top: -230px;
+	border: 3px solid #a520db;
+	background-color: #ffffff;
+}
+
+div > p{
+	font-family: 'sf_cartoonist_handregular',Arial,Helvetica,sans-serif;
+	font-size: 23px;
+	padding: 0px 15px 10px 15px;
+	text-align:left;
+}
+
+.closeBt{
+	width: 62px;
+	height: 48px;
+	background-image: url('../img/bt_cerrar_up.png');
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+}
+.closeBt:hover{
+	background-image: url('../img/bt_cerrar_over.png');
+}
+
+.infoBt{
+	width: 110px;
+	height: 35px;
+	background-image: url('../img/bt_info_up.png');
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	display: none;
+}
+.infoBt:hover{
+	background-image: url('../img/bt_info_over.png');
+}

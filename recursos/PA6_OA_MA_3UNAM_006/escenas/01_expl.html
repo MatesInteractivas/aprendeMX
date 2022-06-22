@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+
+
+
+
+
+
+<html>
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Fracciones, número racional, número decimal, aproximación, densidad, recta numérica">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+
+
+
+
+
+
+	<title>SEB aprende.mx Descartes index</title>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div align="center">
+
+
+
+
+
+
+
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=100 ancho_oeste=120 alto=50">
+   <param name="E_01" value="tipo='R2' id='E2' x='10' ancho='1004' fijo='sí' escala='1' O.x='-512' O.y='256' despl_imagen='centrada' fondo='ff335544' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='RECTA' x='76' y='25' ancho='872' alto='160' fijo='sí' escala='48' O.x='-452' despl_imagen='arr-izq' fondo='aa335544' red='no' red10='no' ejes='blanco' texto='no' números='sí'">
+   <param name="C_01" value="id='izquierda' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(5,78,56,56)' valor='120' fijo='sí' visible='no' imagen='images/btn_left.png' acción='calcular' parámetro='RECTA.Ox=RECTA.Ox+RECTA._w/4'">
+   <param name="C_02" value="id='derecha' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(1004-61,78,56,56)' valor='120' fijo='sí' visible='no' imagen='images/btn_right.png' acción='calcular' parámetro='RECTA.Ox=RECTA.Ox-RECTA._w/4' pos_mensajes='centro'">
+   <param name="C_03" value="id='alejar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Alejar' expresión='(66,210,120,50)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nxc=(0-RECTA.Ox)/RECTA.escala\nRECTA.escala=max(RECTA.escala/1.5,RECTA._w/10)\nRECTA.Ox=0-xc*RECTA.escala\n\n' pos_mensajes='centro'">
+   <param name="C_04" value="id='acercar' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Acercar' expresión='(938-120,210,120,50)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='doPlay(0)\nxc=(0-RECTA.Ox)/RECTA.escala\nRECTA.escala=min(RECTA.escala*1.5,200000)\nRECTA.Ox=0-xc*RECTA.escala\n\n' pos_mensajes='centro'">
+   <param name="C_05" value="id='minus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(343,210,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='doPlay(0)\nND=max(ND-1,0)' pos_mensajes='centro'">
+   <param name="C_06" value="id='plus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(425,210,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='doPlay(0)\nND=min(ND+1,4)' pos_mensajes='centro'">
+   <param name="C_07" value="id='nminus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(618,185,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='doPlay(0)\nnum=max(1,num-1)' pos_mensajes='centro'">
+   <param name="C_08" value="id='nplus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(700,185,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='doPlay(0)\nnum=min(num+1,100)' pos_mensajes='centro'">
+   <param name="C_09" value="id='dminus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(618,235,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='doPlay(0)\nden=max(2,den-1)' pos_mensajes='centro'">
+   <param name="C_10" value="id='dplus' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(700,235,32,50)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='doPlay(0)\nden=min(den+1,100)' pos_mensajes='centro'">
+   <param name="A_01" value="id='COL' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='12' filas='4' expresión='tnsp=0;rojo=1;verd=2;azul=3;;COL[0,tnsp]=0.0;COL[0,rojo]=0.0;COL[0,verd]=0.0;COL[0,azul]=0.0;;COL[1,tnsp]=0.0;COL[1,rojo]=0.95;COL[1,verd]=0.08;COL[1,azul]=0.16;;COL[2,tnsp]=0.0;COL[2,rojo]=0.95;COL[2,verd]=0.60;COL[2,azul]=0.10;;COL[3,tnsp]=0.0;COL[3,rojo]=0.99;COL[3,verd]=0.99;COL[3,azul]=0.10;;COL[4,tnsp]=0.0;COL[4,rojo]=0.00;COL[4,verd]=0.80;COL[4,azul]=0.30;;COL[5,tnsp]=0.0;COL[5,rojo]=0.00;COL[5,verd]=0.75;COL[5,azul]=0.75;;COL[6,tnsp]=0.0;COL[6,rojo]=0.15;COL[6,verd]=0.40;COL[6,azul]=1.00;;COL[7,tnsp]=0.0;COL[7,rojo]=0.80;COL[7,verd]=0.10;COL[7,azul]=0.80;;COL[8,tnsp]=0.0;COL[8,rojo]=0.90;COL[8,verd]=0.10;COL[8,azul]=0.60;;COL[9,tnsp]=0.0;COL[9,rojo]=0.99;COL[9,verd]=0.99;COL[9,azul]=0.99;;COL[10,tnsp]=0.0;COL[10,rojo]=0.7;COL[10,verd]=0.9;COL[10,azul]=0.8;'">
+   <param name="A_02" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_03" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_04" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_05" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_06" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_07" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='Rx=50;Ry=350;Rw=900;x0=32;unitWidth=ent((Rw-x0)/10.5);chw=8;h=2;dX=9;H=20;ND=0;dY=-60;;'">
+   <param name="A_08" value="id='generaNumero()' algoritmo='sí' algoritmo='sí' hacer='Numero=ent(rnd*6*10^ND)/10^ND;'">
+   <param name="A_09" value="id='generaFraccion()' algoritmo='sí' algoritmo='sí' inicio='fraccion=1' hacer='den=2+ent(rnd*11);num=1+ent(rnd*9*den);;'">
+   <param name="A_10" value="id='Inicio()' algoritmo='sí' algoritmo='sí' hacer='RECTA.escala=(RECTA._w/10);maxOx=-ent(RECTA._w/2);ND=1;Numero=5;num=36;den=7;fraccion=1;'">
+   <param name="A_11" value="id='processMouse(mx,my)' algoritmo='sí' algoritmo='sí' inicio='mx=max(0,mx)' hacer='Numero=ent(mx*(10^ND)+0.4999)/(10^ND);'">
+   <param name="A_12" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Explora la recta con Lupe localizando en ella fracciones y números decimales.&squot;)' hacer='initDisplay();Inicio();'">
+   <param name="A_13" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='RECTA.Oy=0;RECTA.Ox=min(RECTA.Ox,maxOx);MP=RECTA.mouse_pressed;aux=(MP)?processMouse(RECTA.mouse_x,RECTA.mouse_y):&squot;&squot;;MPA=MP;;;;;'">
+   
+   <param name="A_15" value="id='Limpiar' evento='sí' condición='limpiar' acción='limpiar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_16" value="id='Animar' evento='sí' condición='animar' acción='animar' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_17" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='limpiar=0\nanimar=0\nplayAudio=0\n' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[30,310]' texto='Puedes elegir cualquier punto tocando en el sitio que quieras y observar su valor numérico hasta con cuatro decimales. \n\nTambién puedes definir el numerador y el denominador de una fracción, la cual aparece en la recta en color amarillo. \n\nIntenta acotar fracciones difíciles como 36/7 entre dos decimales muy cercanos. ' fuente='Monospaced,PLAIN,19' decimales='6' fijo='no' ancho='600' color_borde_texto='335544'">
+   <param name="G_02" value="espacio='E2' tipo='imagen' expresión='(820,120,1,1)' archivo='images/personajes/girl_04.png'">
+   <param name="G_03" value="espacio='RECTA' tipo='polígono' fondo='sí' color='negro' coord_abs='sí' expresión='(0,0)(RECTA._w-1,0)(RECTA._w-1,RECTA._h-1)(0,RECTA._h-1)(0,0)'">
+   <param name="G_04" value="espacio='RECTA' tipo='punto' color='blanco' expresión='(0,0)' fuente='Monospaced,BOLD,19' decimales='4' fijo='sí' tamaño='3'">
+   <param name="G_05" value="espacio='E2' tipo='curva' fondo='sí' color='negro' coord_abs='sí' expresión='(botX(0,375,50,t),botY(0,210,50,t))' t.intervalo='[0,8]' relleno='blanco'">
+   <param name="G_06" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[235,227]' texto='decimales' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='negro'">
+   <param name="G_07" value="espacio='E2' tipo='texto' color='negro' expresión='[392,227]' texto='[ND]' fuente='SansSerif,PLAIN,19' decimales='0' fijo='sí'">
+   <param name="G_08" value="espacio='RECTA' tipo='punto' color='ffff88' dibujar-si='fraccion' expresión='(num/den,0)' fijo='sí' tamaño='3'">
+   <param name="G_09" value="espacio='RECTA' tipo='punto' color='ffff88' dibujar-si='fraccion' expresión='(num/den-(20/RECTA.escala),-40/RECTA.escala)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;}\f1\fs42\b{\*\mjaformula{\fraction{\num{\expr num\decimals 0\fixed1}}{\den{\expr den\decimals 0\fixed1}}}}\fs38}' fuente='SansSerif,BOLD,21' fijo='sí' tamaño='0'">
+   <param name="G_10" value="espacio='RECTA' tipo='punto' color='blanco' expresión='(Numero,0)' fuente='Monospaced,BOLD,19' decimales='4' fijo='sí' tamaño='3'">
+   <param name="G_11" value="espacio='RECTA' tipo='punto' color='blanco' expresión='(Numero-(10+8*ND)/RECTA.escala,20/RECTA.escala)' texto='[Numero]' fuente='SansSerif,BOLD,19' decimales='ND' fijo='sí' tamaño='0'">
+   <param name="G_12" value="espacio='RECTA' tipo='segmento' fondo='sí' color='dd000000' coord_abs='sí' expresión='(RECTA._w/2,0)(RECTA._w/2,RECTA._h)' fijo='sí' tamaño='0'">
+   <param name="G_13" value="espacio='E2' tipo='texto' fondo='sí' color='blanco' expresión='[510,227]' texto='fracción:' fuente='Monospaced,PLAIN,19' fijo='sí' color_borde_texto='negro'">
+   <param name="G_14" value="espacio='E2' tipo='curva' fondo='sí' color='negro' coord_abs='sí' expresión='(botX(0,650,50,t),botY(0,185,50,t))' t.intervalo='[0,8]' relleno='blanco'">
+   <param name="G_15" value="espacio='E2' tipo='texto' color='negro' dibujar-si='fraccion' expresión='[665-5*((num>9)+(num>99)),200]' texto='[num]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí'">
+   <param name="G_16" value="espacio='E2' tipo='curva' fondo='sí' color='negro' coord_abs='sí' expresión='(botX(0,650,50,t),botY(0,235,50,t))' t.intervalo='[0,8]' relleno='blanco'">
+   <param name="G_17" value="espacio='E2' tipo='texto' color='negro' dibujar-si='fraccion' expresión='[665-5*((den>9)+(den>99)),250]' texto='[den]' fuente='SansSerif,BOLD,19' decimales='0' fijo='sí'">
+   <param name="S_01" value="tipo='cilindro' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Cilindro' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_02" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=2' expresión='Polireg' familia='s' s.intervalo='[0,h]' s.pasos='1' posini='(0,0,s)' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="S_03" value="espacio='E3' tipo='cono' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Cono' rotini='(180,0,0)' posini='(0,0,h/2)' aristas='sí' modelo='luz' ancho='ancho' largo='ancho' alto='h' Nu='NL' Nv='1'">
+   <param name="S_04" value="espacio='E3' tipo='polireg' color='ffff80' color_reverso='ffff80' dibujar-si='NC=1' expresión='Polireg' modelo='luz' ancho='ancho' largo='ancho' Nu='NL'">
+   <param name="Animación" value="pausa='25' controles='no' auto='no' inicio='animando=1;T=1;t=(vuelta)?T:0;dt=(vuelta)?-1/16:1/16;Calculos()' hacer='t=min(t+dt,T);Calculos();animando=(0<t)&(t<T);limpiar=!animando;momento=(vuelta&!animando)?0:momento;' mientras='animando'">
+</ajs>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

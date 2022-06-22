@@ -1,0 +1,169 @@
+﻿NP=0
+
+PREG[NP,txt]='Si en un salón hay 9 niñas y 6 niños, entonces la razón de niñas a niños es de  3 : 2  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de niñas es  9 = 3 x 3  y el de niños es  6 = 2 x 3,'
+PREG[NP,rt2]='hay  3  niñas por cada  2  niños y por lo tanto'
+PREG[NP,rt3]='la razón de niñas a niños es  3 : 2  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un salón hay  9  niñas y  6  niños, entonces la razón de niños a niñas es de  3 : 2  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='La razón de niñas a niños sí es de  3 : 2,'
+PREG[NP,rt2]='pero la de niños a niñas es  2 : 3  .'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un salón hay 9 niñas y 6 niños, entonces la razón de niñas a niños es de  2 : 3  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='La razón de niñas a niños es de  3 : 2.'
+PREG[NP,rt2]='La razón de  2 : 3  es la de niños a niñas.'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un salón hay  9  niños y  6  niñas, entonces la razón de niños a niñas es de  3 : 2  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de niños es  9 = 3 x 3  y el de niñas es  6 = 2 x 3,'
+PREG[NP,rt2]='hay  3  niños por cada  2  niñas y por tanto'
+PREG[NP,rt3]='la razón de niños a niñas es de  3 : 2  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un salón de clase la razón de niñas a niños es de  3 : 2  y contamos  12  niños, entonces debe haber  18  niñas.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de niños es  12 = 2 x 6,'
+PREG[NP,rt2]='y la razón de niñas a niños es  3 : 2,'
+PREG[NP,rt3]='entonces debe haber  18 = 3 x 6  niñas.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un salón de clase la razón de niñas a niños es de  3 : 2  y contamos  12  niñas, entonces debe haber  18  niños.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como el número de niñas es  12 = 3 x 4,'
+PREG[NP,rt2]='y la razón de niñas a niños es  3 : 2,'
+PREG[NP,rt3]='entonces debe haber  8 = 2 x 4  niños.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  20  pelotas de futbol y  8  de americano, entonces la razón de pelotas de futbol a pelotas de americano es de  5 : 2  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de pelotas de futbol es  20 = 5 x 4'
+PREG[NP,rt2]='y el de pelotas de americano es  8 = 2 x 4, entonces'
+PREG[NP,rt3]='hay  5  de futbol por cada  2  de americano y la razón es  5 : 2  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  20  pelotas de futbol y  8  de americano, entonces la razón de pelotas de futbol a pelotas de americano es de  5 : 4  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como el número de pelotas de futbol es  20 = 5 x 4'
+PREG[NP,rt2]='y el de pelotas de americano es  8 = 2 x 4, entonces'
+PREG[NP,rt3]='hay  5  de futbol por cada  2  de americano y la razón es  5 : 2 .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  20  pelotas de futbol y  15  de americano, entonces la razón de pelotas de futbol a pelotas de americano es de  5 : 3  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como el número de pelotas de futbol es  20 = 4 x 5'
+PREG[NP,rt2]='y el de pelotas de americano es  15 = 3 x 5, entonces'
+PREG[NP,rt3]='hay  4  de futbol por cada  3  de americano y la razón es  4 : 3  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  20  pelotas de futbol y  15  de americano, entonces la razón de pelotas de futbol a pelotas de americano es de  4 : 3  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como el número de pelotas de futbol es  20 = 4 x 5'
+PREG[NP,rt2]='y el de pelotas de americano es  15 = 3 x 5, entonces'
+PREG[NP,rt3]='hay  4  de futbol por cada  3  de americano y la razón es  4 : 3  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  15  pelotas de básquet y  10  de beisbol, entonces la razón de pelotas de básquet a pelotas de beisbol es de  3 : 2  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de pelotas de básquet es  15 = 3 x 5'
+PREG[NP,rt2]='y el de pelotas de beisbol es  10 = 2 x 5, entonces'
+PREG[NP,rt3]='hay  3  de básquet por cada  2  de beisbol y la razón es  3 : 2  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  15  pelotas de básquet y  10  de beisbol, entonces la razón de pelotas de básquet a pelotas de beisbol es de  5 : 2  .'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como el número de pelotas de básquet es  15 = 3 x 5'
+PREG[NP,rt2]='y el de pelotas de beisbol es  10 = 2 x 5, entonces'
+PREG[NP,rt3]='hay  3  de básquet por cada  2  de beisbol y la razón es  3 : 2  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un campo deportivo hay  8  pelotas de básquet por cada  5  pelotas de beisbol, entonces la razón de pelotas de básquet a pelotas de beisbol es de  8 : 5  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Decir que por cada  8  pelotas de básquet hay  5  de beisbol'
+PREG[NP,rt2]='es exactamente lo mismo que decir que'
+PREG[NP,rt3]='las pelotas de básquet están a razón de  8 a 5  con las de beisbol.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay una docena de árboles por cada  5  casas, entonces la razón de árboles a casas es de  12 : 5  .'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Lo que nos dicen es que hay  12  casas por cada  5  árboles.'
+PREG[NP,rt2]='Por lo tanto, la razón del número de árboles al número de casas es  12 a 5.'
+PREG[NP,rt2]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay una docena de árboles por cada  6  casas, entonces hay dos árboles por cada casa.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Lo que nos dicen es que hay  12 = 2 x 6  casas por cada  6 = 1 x 6  árboles,'
+PREG[NP,rt2]='o sea que hay  2  árboles por cada casa.'
+PREG[NP,rt3]='Por lo tanto, la razón de árboles a casas también es  2 : 1  .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay tres árboles por cada casa y sabemos que hay  12  casas entonces debe haber  24  árboles.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='El número de árboles debe ser el triple del de casas'
+PREG[NP,rt2]='por lo tanto debe ser  3 x 12 = 36 .'
+PREG[NP,rt3]=''
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay tres árboles por cada dos casas, y sabemos que hay  12  casas, entonces debe haber  18  árboles.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de casas es  12 = 2 x 6 '
+PREG[NP,rt2]='y la razón de árboles a casas es  3 : 2,'
+PREG[NP,rt3]='entonces el número de árboles debe ser  3 x 6 = 18 .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay tres árboles por cada dos casas, y sabemos que hay  18  árboles, entonces debe haber  12  casas.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como el número de árboles es  18 = 3 x 6 '
+PREG[NP,rt2]='y la razón de árboles a casas es  3 : 2,'
+PREG[NP,rt3]='entonces el número de casas debe ser  2 x 6 = 12 .'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay el tres árboles por cada dos casas, entonces hay el triple de árboles que de casas.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Si hubiera el triple número de árboles que de casas'
+PREG[NP,rt2]='entonces el fraccionamiento tendría  3  árboles por cada casa'
+PREG[NP,rt3]='y no tres árboles por cada dos casas, que es lo que nos dicen.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay  4  árboles por cada  3  casas, y sabemos que hay  20  árboles, entonces debe haber  15  casas.'
+PREG[NP,rsp]=si
+PREG[NP,rt1]='Como hay  20 = 4 x 5  árboles'
+PREG[NP,rt2]='y la razón de árboles a casas en  4 : 3,'
+PREG[NP,rt3]='entonces debe haber  3 x 5 = 15  casas.'
+PREG[NP,img]=no
+NP=NP+1
+
+PREG[NP,txt]='Si en un fraccionamiento hay  4  casas por cada  3  árboles, y sabemos que hay  12  casas, entonces debe haber  15  árboles.'
+PREG[NP,rsp]=no
+PREG[NP,rt1]='Como hay  12 = 3 x 4  casas'
+PREG[NP,rt2]='y la razón de árboles a casas en  4 : 3,'
+PREG[NP,rt3]='entonces debe haber  4 x 4 = 16  árboles.'
+PREG[NP,img]=no
+NP=NP+1

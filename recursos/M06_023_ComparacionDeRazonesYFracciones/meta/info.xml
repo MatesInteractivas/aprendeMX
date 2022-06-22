@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso
+	id="PA6_OA_MA_3UNAM_023"
+	nivel="Primaria"
+	plataforma="HTML 5"
+	>
+	<titulo><![CDATA[
+		Comparación de razones y fracciones
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		¿Cómo saber qué oferta es mejor, 5 canicas por 8 pesos o 3 canicas por 5 pesos? No es fácil comparar razones o fracciones, pero pensando un poco se pueden hacer comparaciones correctas. También hay una manera rápida y directa de hacerlo. Ambas cosas las podrás aprender en esta unidad.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, aritmética, proporcionalidad, fracciones, Manejo de la información, Proporcionalidad y funciones
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, DescartesJS, comparación, razón, fracción, oferta, caro, barato, precio, valor unitario, mejor, peor
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id=""><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			
+		<!-- Reseteamos el view port a una escala inicial de 1 -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet_fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+		
+		<script type='text/javascript' src='../lib/jquery-2.1.4.min.js'></script>
+		
+		<title>Transportes</title>
+		
+	</head>
+	
+        
+        <body style="border: 0px; margin: 0px; padding: 0px; overflow: auto; " align="center">
+		
+		<div id="contenedor">
+			
+			
+			<div id='indicaciones'>
+				<p class='oracionIni'>Características distintivas del avión:</p>
+				<a href='#' id='bt_mas' class='bt apagado' ></a>
+				<a href='#' id='bt_menos' class='bt apagado'></a>
+			</div>
+			<!--<a href='#' class='bt_seguir' onclick='nextQ();'></a>-->
+			
+			<ul class='caracteristicas'>
+				<li class='caracteristica' data-array='avion,helicoptero,cohete,ovni,escoba,meteorito,chancla,frisbee'>Vuela a grandes velocidades.</li>
+				<li class='caracteristica oculto' data-array='avion,helicoptero,cohete,ovni,escoba'>Es un medio de transporte.</li>
+				<li class='caracteristica oculto' data-array='avion,helicoptero,cohete'>Lo podemos ver y usar en la actualidad.</li>
+				<li class='caracteristica oculto' data-array='avion,helicoptero'>Se usa para viajar al interior del mundo.</li>
+				<li class='caracteristica oculto' data-array='avion'>Tiene alas para mantenerse en el aire.</li>
+				<li class='caracteristica oculto' data-array='avion'>Puede transportar una gran cantidad de personas y cosas.</li>
+			</ul>
+			
+			<div id='objetos'>
+				<img src='img/avion.png' id='avion'></img>
+				<img src='img/meteorito.png' id='meteorito'></img>
+				<img src='img/helicoptero.png' id='helicoptero'></img>
+				<img src='img/escoba.png' id='escoba'></img>
+				<img src='img/cohete.png' id='cohete'></img>
+				<img src='img/chancla.png' id='chancla'></img>
+				<img src='img/ovni.png' id='ovni'></img>
+				<img src='img/frisbee.png' id='frisbee'></img>
+				
+			</div>
+		</div>
+		
+		<script>
+		
+			var n;
+			
+			function inicializar(){
+				n = 1;
+				activarBt('mas',true);
+			}
+			
+			function activarBt(id,activo){
+				if(activo){
+					$('#bt_'+id).on('click',function(){
+						$[id]();
+					});
+					$('#bt_'+id).removeClass('apagado');
+				} else{
+					$('#bt_'+id).off('click');
+					$('#bt_'+id).addClass('apagado');
+				}
+			}
+		
+			jQuery.mas = function(){
+				n++;
+				$('.caracteristica:nth-child('+n+')').removeClass('oculto');
+				var data = $('.caracteristica:nth-child('+n+')').attr('data-array');
+				var array = data.split(",");
+				$('img').each(function(){
+					var imgId = $(this).attr('id');
+					if(array.indexOf(imgId)==-1){
+						$(this).addClass('apagado');
+					}
+				});
+				if(n==2){
+					activarBt('menos',true);
+				} else
+				if(n==6){
+					activarBt('mas',false);
+				}
+			}
+			
+			jQuery.menos = function(){
+				$('.caracteristica:nth-child('+n+')').addClass('oculto');
+				n--;
+				var data = $('.caracteristica:nth-child('+n+')').attr('data-array');
+				var array = data.split(",");
+				$('img').each(function(){
+					var imgId = $(this).attr('id');
+					if(array.indexOf(imgId)!=-1){
+						$(this).removeClass('apagado');
+					}
+				});
+				if(n==1){
+					activarBt('menos',false);
+				} else
+				if(n==5){
+					activarBt('mas',true);
+				}
+				
+			}
+
+			function nextQ(){
+				$('.bt_seguir').css('display','none');
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "gotoNextQuestion", params: {id: 'cap3_preg1_objetos' } };
+				padre.postMessage(mensajeTipoSet, "*");	
+			}
+			
+			  
+			function receiveMessage(evt) {
+			// mensaje tipo set
+				if (evt.data && evt.data.type === "set") {
+					if(evt.data.name=="objeto"){
+					}
+				}
+			}
+			  
+			window.addEventListener("message", receiveMessage, false);
+    
+			$(document).ready(function(){
+				
+				inicializar();
+				
+				var padre = window.parent;
+				var mensajeTipoSet = { command: "microWorldReady", params: {id: 'cap3_preg1_objetos' } };
+				padre.postMessage(mensajeTipoSet, "*");
+				
+			});
+			
+		
+		</script>
+					
+        </body>
+</html>

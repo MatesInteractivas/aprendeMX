@@ -1,0 +1,220 @@
+﻿fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=0
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Hola Juan!\n¿Ya entendiste cómo localizar fracciones en la recta numérica?'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, en general esos problemas no se me hacen difíciles.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿De veras?\nEn clase te oí decir que no entendías nada.'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Sí, es verdad que dije eso, pero me refería sólo a cierto tipo de problemas.'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿A cuál?'
+DIALOGO[N,ludT]=2
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Cuando sólo te dan una fracción sobre la recta y te piden localizar otras.'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Y qué tiene de especial ese caso?'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Pues que para mí ese problema no tiene sentido!'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Ah, caray!\n¿Por qué lo dices?'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Es como si te dijeran: multiplica 325, así nomás.'
+DIALOGO[N,judT]=6
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Eso sí que no tendría sentido, deberían darte el otro número por el que vas a multiplicar.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Exacto! Para mí es igual de absurdo. No puedo localizar las otras fracciones sin saber dónde está el cero, o bien otra fracción.'
+DIALOGO[N,judT]=9
+DIALOGO[N,jact]=sorprendido
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¿Quieres decir que falta información?'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=pensando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Pues claro!'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='En realidad tienes razón, pero lo que te están pidiendo es que determines tú la información que falta.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Pero yo puedo poner el cero donde se me antoje y tú en un sitio diferente y el vecino en otro...'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='¡Sí! Se trata de que te des cuenta de que hay muchas soluciones al problema.'
+DIALOGO[N,ludT]=6
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¡Vaya! Pues me parece muy raro. Nunca nos pidieron multiplicar 325 sin decirnos por cuánto. Yo multiplicaría por 1.'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Pero decidir multiplicar por 1 no tiene consecuencias.\nEn el caso de las fracciones en la recta, las cosas son diferentes.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Qué quieres decir?'
+DIALOGO[N,judT]=2
+DIALOGO[N,jact]=pensando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Que aunque la decisión de dónde pones el cero sea arbitraria, después deberás atenerte a ella, ser coherente.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿O sea que puedo decidir poner el cero donde sea, con tal de que luego tome en cuenta y respete esa decisión?'
+DIALOGO[N,judT]=7
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Así es.\nAunque lo que sí debes cuidar es que las fracciones mayores deben quedar a la derecha de las menores.'
+DIALOGO[N,ludT]=7
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=0
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='De hecho el cero debe quedar a la izquierda de todo.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='¿Y por qué no lo puedo hacer al revés, el cero a la derecha y las fracciones a su izquierda? Puedo ser coherente así también.'
+DIALOGO[N,judT]=9
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Creo que eso no te conviene hacerlo. Hay convenciones que debemos respetar.'
+DIALOGO[N,ludT]=5
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Tienes razón. Más vale que haga lo que dices, no me lo vayan a contar mal.'
+DIALOGO[N,judT]=5
+DIALOGO[N,jact]=senyalando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Esa es una actitud muy sensata.'
+DIALOGO[N,ludT]=3
+DIALOGO[N,lact]=parada
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]='Bueno, gracias, creo que aclararse mi duda.'
+DIALOGO[N,judT]=4
+DIALOGO[N,jact]=saludando
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]='Me alegra haberte ayudado. ¡Hasta luego!'
+DIALOGO[N,ludT]=4
+DIALOGO[N,lact]=saludando
+N=N+1
+
+fixData(N)
+str=''
+makeFig(N,0,str)
+DIALOGO[N,juan]=''
+DIALOGO[N,judT]=1
+DIALOGO[N,jact]=parado
+str=''
+makeFig(N,1,str)
+DIALOGO[N,lupe]=''
+DIALOGO[N,ludT]=1
+DIALOGO[N,lact]=parada
+N=N+1

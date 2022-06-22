@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<head>
+   <title>SEB aprende.mx</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+   <link rel="stylesheet" href="css/btn_style.css" type="text/css">
+   <link rel="stylesheet" href="css/custom/02_expl_ejer01.css" type="text/css">
+
+   <script type="text/javascript" src='lib/custom/jquery-2.2.0.min.js'></script>
+   <script type="text/javascript" src='lib/custom/03_expl_tools.js'></script>
+   <script type="text/javascript" src='lib/custom/02_expl_tools.js'></script>
+   <script type="text/javascript">
+
+      $(function(){
+         /**
+         */
+         function displayEjercicio(sucesionCfg,options,textos){
+            
+            var txtRnd = this.shuffle(textos);
+            var optN = this.getNumberHtml(
+                        sucesionCfg.n.numerador,
+                        sucesionCfg.n.denominador
+                     );
+            var optK = this.getNumberHtml(
+                        sucesionCfg.k.numerador,
+                        sucesionCfg.k.denominador
+                     );
+            
+            var txt = Math.floor(Math.random()*textos.length);
+            txt = textos[txt];
+            txt = txt.replace(/\[opt.n\]/g,optN);
+            txt = txt.replace(/\[opt.k\]/g,optK);
+            $('#DISP').html(txt);
+
+            var opts = $('#INST');
+            opts.empty();
+
+           var idxT = this.getShuffleArray(options.length);
+
+            for (var i = options.length - 1; i >= 0; i--) {
+               var kn,kd,ki,nn,nd,mcd,htmlDisp;
+               var idxN = idxT[i];
+               var optAct = options[idxN];
+               var optHtml = $('<div>',{'class': 'option'});
+               if(i%2 == 1)
+                  optHtml.addClass('odd');
+
+               htmlDisp = this.getSucesionHTML(optAct.n,optAct.k,5);
+               optHtml.html(htmlDisp);
+
+               var isCorrect = (idxN==0);
+               optHtml[0].correcto = isCorrect;
+               var onClick = $.proxy(this.onOptionClick,this)
+               optHtml.on('click',{'isCorrect' : isCorrect}, onClick);
+               opts.append(optHtml);
+            };
+         }
+         
+         var appSAritmetica = new aprendeMx.SucesionAritmetica(displayEjercicio,false);
+         
+          appSAritmetica.onHelpClick = function(event){
+            var tableH = $('<table>');
+            
+            
+            var sucesionCfg = this.sucesion;
+            var kHtml = "+"+this.getNumberHtml(
+               sucesionCfg.k.numerador,
+               sucesionCfg.k.denominador
+            );
+            var nHtml = this.getNumberHtml(
+               sucesionCfg.n.numerador,
+               sucesionCfg.n.denominador
+            );
+            
+            var tr1 = $('<tr>').appendTo(tableH);
+            var tr2 = $('<tr>').appendTo(tableH);
+            var tr3 = $('<tr>').appendTo(tableH);
+            var length = 5-1;
+            var idxTR = Math.random()*length;
+            
+            var idxT = Math.floor(1+idxTR);
+            var tHtml = this.getNumberHtml(
+               idxT*sucesionCfg.k.numerador*sucesionCfg.n.denominador + sucesionCfg.k.denominador*sucesionCfg.n.numerador,
+               sucesionCfg.k.denominador*sucesionCfg.n.denominador
+            );
+
+            var moreHelp = (this.errores-1) > this.maxErrores;
+            console.log("** Ayuda es : ", this.errores ,moreHelp);
+            console.log("El aleatorio de esto es : "+idxTR+','+idxT);
+            for (var idx = 0; idx <= length; idx++) {
+               var isError2 = (idx==idxT) && (moreHelp);
+               var htmlT = (idx == 0)?nHtml:((isError2)?tHtml:'?');
+               $('<td>',{html : htmlT}).appendTo(tr1);
+               var td2 = $('<td>', {'class':'marca'}).appendTo(tr2);
+               $('<td>').appendTo(tr3);
+               
+               if(idx > 0){
+                  td2.addClass('izquierda');
+               }
+               if(idx < length){
+                  td2.addClass('derecha');
+                  $('<td>').appendTo(tr1);
+                  $('<td>').appendTo(tr2);
+                  $('<td>',{html : kHtml,'class':'fact'}).appendTo(tr3);
+               }
+            };
+
+            tr3.addClass('factor-suma')
+            tr2.addClass('flechas');
+
+            var contM = $('<div>',{html:'<h2>Recuerda que : </h2>'});
+            contM.append(tableH)
+            this.showModalMsg(contM);
+         }
+
+         appSAritmetica.init();
+         //appSAritmetica.showHelpBtn(true);
+      }); 
+   </script>
+
+</head>
+
+<body style="margin:0px; padding:0px">
+
+   <div class='activity-container'>
+     <h1>Aprende a reconocer las sucesiones que se obtienen según la consigna.</h1>
+      <div id='DISP_container'>
+         <div id='DISP'></div>
+      </div>
+      <div id='INST'></div>
+   </div>
+
+</body>
+
+</html>

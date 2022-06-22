@@ -1,0 +1,34 @@
+{
+  "nivel": [
+    "Primaria"
+  ], 
+  "area": [
+    "Matemáticas", 
+    "geometría", 
+    "Forma", 
+    "espacio y medida", 
+    "Figuras y cuerpos"
+  ], 
+  "etiquetas": [
+    "SEP", 
+    "UNAM", 
+    "APRENDEMX", 
+    "IMATE", 
+    "LITE", 
+    "Laboratorio LITE", 
+    "ángulo", 
+    "ángulo agudo", 
+    "ángulo obtuso", 
+    "ángulo recto", 
+    "ángulo llano", 
+    "ángulo concavo", 
+    "transportador", 
+    "lados", 
+    "grados", 
+    "medición de ángulos"
+  ], 
+  "descripcion": "En esta unidad aprenderás a reconocer los elementos de un ángulo y a clasificarlos de acuerdo a su abertura.", 
+  "titulo": "Ángulos",
+  "resena": "Concepto de ángulo, su medición y los distintos tipos de ángulos.",
+  "id": "PA5_OA_MA_3UNAM_001"
+}

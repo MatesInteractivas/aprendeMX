@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_ES_3UNAM_005_comparacionCaracteristicas"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		¿A dónde vamos?
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Lectura de mapas; identificación de características en un texto descriptivo; comparación de características. El alumno y la alumna compararán una lista de requisitos (características esenciales, importantes y deseables de un destino de viaje) con distintas fuentes de información, con el objeto de encontrar el lugar que más se ajuste a las peticiones. En primer lugar, ubicarán los destinos en un mapa e identificarán la información que falta para poder descartar algunos destinos con base en los requerimientos indispendables. Posteriormente, compararán la lista de peticiones con una descripción de los lugares restantes, para llegar a una conclusión respecto al destino ideal. Asimismo, inferirán el significado de algunas palabras desconocidas a partir del contexto.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto expositivo, Texto discontinuo, Tabla, Mapa
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Español, esquema, tabla, mapa, lectura de mapa, comparación de datos, comparación de características, identificación de características, descripción, texto descriptivo, inferencia de significado, contexto, viaje, lugares, costumbres, turismo
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

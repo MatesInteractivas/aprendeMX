@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, sucesión, progresión, geométrico, término, factor">
+
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="apple-touch-fullscreen" content="yes">
+
+  <meta name="viewport" content="width=1280, user-scalable=no">
+
+	<title>Sucesiones geométricas</title>
+
+  <script type="text/javascript" charset="utf-8">
+
+    function adjust() {
+
+      document.querySelector("meta[name='viewport']").setAttribute('content', 'width=' + (((window.innerHeight > window.innerWidth) || (((1024 * window.innerHeight) / window.innerWidth) > 632)) ? 1024 : (632 * window.innerWidth) / window.innerHeight) + ', user-scalable=no');
+
+    }
+
+    adjust();
+
+    window.onresize = function(event) {
+
+      adjust();
+
+    }
+
+    function cambiaFondo(edo) {
+
+      var cond = (edo == "normal");
+
+      document.body.style.backgroundImage = 'url("images/fondo_body' + ((cond)?"":"_dibujar") + '.png")';
+
+      document.querySelector(".DescartesAppContainer").setAttribute("data-visible", !cond);
+
+    }
+
+    </script>
+
+  <style type="text/css">
+
+    body {
+
+      background:url("images/fondo_body.png") #34495e repeat-x fixed;
+
+      overflow:hidden;
+
+      margin:0;
+
+    }
+
+    body > div {
+
+      position:absolute;
+
+      left:0;
+
+      right:0;
+
+      top:0;
+
+      bottom:0;
+
+      overflow:hidden;
+
+    }
+
+    .DescartesAppContainer {
+
+      overflow:visible !important;
+
+    }
+
+    .DescartesAppContainer::before {
+
+      content:"";
+
+      position:absolute;
+
+      background:red;
+
+      left:0;
+
+      top:0;
+
+      width:1024px;
+
+      height:558px;
+
+      box-shadow:10px 0 25px 0 rgba(0,0,0,0.2), -10px 0 25px 0 rgba(0,0,0,0.2);
+
+      display: none;
+
+    }
+
+    .DescartesAppContainer[data-visible="true"]::before {
+
+      display: block;
+
+    }
+
+    #shade_cover {
+
+      position:fixed;
+
+      top:0;
+
+      bottom:0;
+
+      left:0;
+
+      right:0;
+
+      background:#34495e;
+
+      opacity:0.5;
+
+      display:block;
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="fonts/font.css" type="text/css">
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+
+<body>
+
+  <div id="shade_cover"></div>
+
+  <div align="center">
+
+    <ajs name="Descartes" width=1024 height=632 code="Descartes">
+   <param name="tamaño" value="1024x632">
+   <param name="image_loader" value="images/loader.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.340, 2015-05-21">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='BACK' x='0' y='0' ancho='1024' alto='632' fijo='sí' imagen='images/fondo_body.png' despl_imagen='expand.' fondo='ffff0000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='SHADE_COVER' x='0' y='568' ancho='1024' alto='64' dibujar-si='SHADE.ver' fijo='sí' despl_imagen='expand.' fondo='7f34495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_03" value="tipo='HTMLIFrame' id='EXP' x='0' y='0' ancho='1024' alto='568' despl_imagen='arr-izq' fondo='ff000000' archivo='[expl_html]'">
+   <param name="E_04" value="tipo='R2' id='BARRA_SUPERIOR' x='0' y='0' ancho='1024' alto='48' fijo='sí' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_05" value="tipo='HTMLIFrame' id='TOOL' x='0' y='0' ancho='1064' alto='568' dibujar-si='regla||transportador' despl_imagen='arr-izq' fondo='ff000000' archivo='tools/JueGeom.html'">
+   <param name="E_06" value="tipo='HTMLIFrame' id='CALC_4x6' x='637' y='317' ancho='360' alto='315' dibujar-si='CALC.ver' despl_imagen='arr-izq' fondo='ff000000' archivo='tools/Teclado_4x6.html'">
+   <param name="E_07" value="tipo='R2' id='CLOSE_CALC' x='CLOSE_CALC.x' y='CLOSE_CALC.y' ancho='36' alto='37' dibujar-si='CALC.ver' fijo='sí' despl_imagen='arr-izq' fondo='fff0f8fa' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_08" value="tipo='R2' id='SHADE' x='0' y='0' ancho='1024' alto='632' dibujar-si='HELP.ver||INFO.ver' fijo='sí' despl_imagen='expand.' fondo='7f34495e' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_09" value="tipo='HTMLIFrame' id='HELP' x='56' y='56' ancho='912' alto='512' dibujar-si='HELP.ver' despl_imagen='arr-izq' fondo='ff0000ff' archivo='[text_html]'">
+   <param name="E_10" value="tipo='HTMLIFrame' id='INFO' x='56' y='56' ancho='912' alto='512' dibujar-si='INFO.ver' despl_imagen='arr-izq' fondo='ff000000' archivo='docs/info.html'">
+   <param name="E_11" value="tipo='R2' id='CLOSE' x='912' y='56' ancho='56' alto='56' dibujar-si='HELP.ver||INFO.ver' fijo='sí' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_12" value="tipo='HTMLIFrame' id='TIZA' x='0' y='0' ancho='1024' alto='632' dibujar-si='TIZA.ver' despl_imagen='arr-izq' fondo='ff000000' archivo='tools/Dibujar.html'">
+   <param name="E_13" value="tipo='R2' id='CLOSE_TIZA' x='962' y='573' ancho='56' alto='56' dibujar-si='TIZA.ver' fijo='sí' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='b_ayuda' tipo='numérico' interfaz='botón' región='interior' espacio='BARRA_SUPERIOR' expresión='(0,0,56,56)' fijo='sí' visible='sí' color='blanco' color-int='ee1122' fuente puntos='28' imagen='images/btn_info.png' acción='calcular' parámetro='HELP.ver=1\nshowShadeCover()\ndoPlay(0)'">
+   <param name="C_02" value="id='b_info' tipo='numérico' interfaz='botón' región='interior' espacio='BARRA_SUPERIOR' expresión='(968,0,56,56)' fijo='sí' visible='sí' color='blanco' color-int='ee1122' fuente puntos='28' imagen='images/btn_credits.png' acción='calcular' parámetro='INFO.ver=1\nshowShadeCover()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_03" value="id='b_mute' tipo='numérico' interfaz='botón' región='interior' espacio='BARRA_SUPERIOR' expresión='(912,0,56,56)' fijo='sí' visible='sí' color='blanco' color-int='ee1122' fuente puntos='28' imagen='[(mute)?&squot;images/btn_mute_off.png&squot;:&squot;images/btn_mute_on.png&squot;]' acción='calcular' parámetro='mute=1-mute\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_04" value="id='b_observa' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xb+sep+0*(bw+sep),yb,bw,bh)' fijo='sí' visible='sí' color='blanco' color-int='d0d020' fuente puntos='20' imagen='[(n==0)?&squot;images/btn_nav_observe_selected.png&squot;:&squot;images/btn_nav_observe.png&squot;]' acción='calcular' parámetro='n=0\ndoPlay(0)\nHELP.ver=firstVisit(n)\naux=(HELP.ver)?showShadeCover():hideShadeCover()' pos_mensajes='centro'">
+   <param name="C_05" value="id='b_explora' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xb+sep+1*(bw+sep),yb,bw,bh)' fijo='sí' visible='sí' color='blanco' color-int='d0d020' fuente puntos='20' imagen='[(n==1)?&squot;images/btn_nav_explore_selected.png&squot;:&squot;images/btn_nav_explore.png&squot;]' acción='calcular' parámetro='n=1\ndoPlay(0)\nHELP.ver=firstVisit(n)\naux=(HELP.ver)?showShadeCover():hideShadeCover()' pos_mensajes='centro'">
+   <param name="C_06" value="id='b_aprende' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xb+sep+2*(bw+sep),yb,bw,bh)' fijo='sí' visible='sí' color='blanco' color-int='d0d020' fuente puntos='20' imagen='[(n==2)?&squot;images/btn_nav_learn_selected.png&squot;:&squot;images/btn_nav_learn.png&squot;]' acción='calcular' parámetro='n=2\ndoPlay(0)\nHELP.ver=firstVisit(n)\naux=(HELP.ver)?showShadeCover():hideShadeCover()' pos_mensajes='centro'">
+   <param name="C_07" value="id='b_prueba' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xb+sep+3*(bw+sep),yb,bw,bh)' fijo='sí' visible='sí' color='blanco' color-int='d0d020' fuente puntos='20' imagen='[(n==3)?&squot;images/btn_nav_test_selected.png&squot;:&squot;images/btn_nav_test.png&squot;]' acción='calcular' parámetro='n=3\ndoPlay(0)\nHELP.ver=firstVisit(n)\naux=(HELP.ver)?showShadeCover():hideShadeCover()' pos_mensajes='centro'">
+   <param name="C_08" value="id='t_calculadora' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xt+bh+sep+0*(tw+sep),yb,tw,bh)' fijo='sí' visible='sí' color='blanco' color-int='(SCOL(1,rojo),SCOL(1,verd),SCOL(1,azul),SCOL(1,tnsp))' fuente puntos='20' imagen='[(CALC.ver)?&squot;images/btn_tool_calculator_selected.png&squot;:&squot;images/btn_tool_calculator.png&squot;]' acción='calcular' parámetro='editCalc(&squot;&squot;,T.filas,T.columnas)\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_09" value="id='t_regla' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xt+bh+sep+1*(tw+sep),yb,tw,bh)' fijo='sí' visible='sí' color='blanco' color-int='(SCOL(2,rojo),SCOL(2,verd),SCOL(2,azul),SCOL(2,tnsp))' fuente puntos='20' imagen='[(regla)?&squot;images/btn_tool_ruler_selected.png&squot;:&squot;images/btn_tool_ruler.png&squot;]' acción='calcular' parámetro='regla=1-regla\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_10" value="id='t_transportador' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xt+bh+sep+2*(tw+sep),yb,tw,bh)' fijo='sí' visible='sí' color='blanco' color-int='(SCOL(3,rojo),SCOL(3,verd),SCOL(3,azul),SCOL(3,tnsp))' fuente puntos='20' imagen='[(transportador)?&squot;images/btn_tool_protractor_selected.png&squot;:&squot;images/btn_tool_protractor.png&squot;]' acción='calcular' parámetro='transportador=1-transportador\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_11" value="id='t_tiza' tipo='numérico' interfaz='botón' región='interior' espacio='BACK' expresión='(xt+bh+sep+3*(tw+sep),yb,tw,bh)' fijo='sí' visible='sí' color='blanco' color-int='(SCOL(4,rojo),SCOL(4,verd),SCOL(4,azul),SCOL(4,tnsp))' fuente puntos='20' imagen='[(TIZA.ver)?&squot;images/btn_tool_draw_selected.png&squot;:&squot;images/btn_tool_draw.png&squot;]' acción='calcular' parámetro='TIZA.ver=1\nTIZA.can_close=1\nTIZA.set(&squot;abierto&squot;,&squot;1&squot;)\nTIZA.update()\ndoPlay(0)\nshowDibujaCover()' pos_mensajes='centro'">
+   <param name="C_12" value="id='b_close' tipo='numérico' interfaz='botón' región='interior' espacio='CLOSE' expresión='(0,0,CLOSE._w,CLOSE._h)' fijo='sí' visible='sí' color='blanco' color-int='ff1122' fuente puntos='35' imagen='images/btn_close.png' acción='calcular' parámetro='HELP.ver=0\nINFO.ver=0\nhideShadeCover()\nHELP.exec(&squot;onClose&squot;,&squot;&squot;)\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_13" value="id='b_CALC_close' tipo='numérico' interfaz='botón' región='interior' espacio='CLOSE_CALC' expresión='(0,0,CLOSE_CALC._w,CLOSE_CALC._h)' fijo='sí' visible='sí' color='blanco' color-int='ff1122' fuente puntos='35' imagen='images/btn_close_small.png' acción='calcular' parámetro='CALC.ver=0\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_14" value="id='b_TIZA_close' tipo='numérico' interfaz='botón' región='interior' espacio='CLOSE_TIZA' expresión='(0,0,56,56)' fijo='sí' visible='sí' color='blanco' color-int='ff1122' fuente puntos='35' imagen='images/btn_close.png' acción='calcular' parámetro='TIZA.ver=0\ndoPlay(0)\nhideDibujaCover()' dibujar-si='TIZA.can_close' pos_mensajes='centro'">
+   <param name="A_01" value="id='VISITED' vector='sí' evaluar='una-sola-vez' tamaño='4' expresión='VISITED[0]=0;VISITED[1]=0;VISITED[2]=0;VISITED[3]=0'">
+   <param name="A_02" value="id='AUDIO' vector='sí' evaluar='una-sola-vez' expresión='AUDIO[0]=&squot;audio/clic.mp3&squot;'">
+   <param name="A_03" value="id='firstVisit(n)' algoritmo='sí' expresión='first' algoritmo='sí' Local='first' hacer='first=(!VISITED[n]);VISITED[n]=1'">
+   <param name="A_04" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' inicio='mustPlay=1' hacer='sound=AUDIO[k]'">
+   <param name="A_05" value="id='tryPlay(c)' algoritmo='sí' expresión='0' algoritmo='sí' inicio='cual=c' hacer='aux=(c==&squot;EXP&squot;)?EXP.set(&squot;playAudio&squot;,!mute):0;aux=(c==&squot;HELP&squot;)?HELP.set(&squot;playAudio&squot;,!mute):0'">
+   <param name="A_06" value="id='UD' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='4' expresión='ix=0;expl=1;text=2'">
+   <param name="A_07" value="id='initUD()' algoritmo='sí' algoritmo='sí' inicio='N=0' hacer='UD[N,ix]=N;UD[N,expl]=&squot;escenas/0&squot;+N+&squot;_expl.html&squot;;UD[N,text]=&squot;escenas/0&squot;+N+&squot;_text.html&squot;;N=N+1' mientras='N<4'">
+   <param name="A_08" value="id='initDisplay()' algoritmo='sí' algoritmo='sí' hacer='x0=0;y0=48;h0=48;nb=4;sep=6;bw=175;bh=64;xb=x0;bH=56;xt=700;tw=56;yb=567;rd=3;nTOOL=2;nCALC=5;nTIZA=6;editing=-1;'">
+   <param name="A_09" value="id='editCalc(S,f,c)' algoritmo='sí' algoritmo='sí' inicio='Teclado.S=S' hacer='CALC_4x6.set(&squot;filas&squot;,4);CALC_4x6.set(&squot;columnas&squot;,6);CALC_4x6.exec(&squot;initTcl&squot;,&squot;&squot;);CALC_4x6.set(&squot;S&squot;,S);CALC_4x6.update();CALC.ver=1;CLOSE_CALC.x=637+CALC_4x6._w-45;CLOSE_CALC.y=632-CALC_4x6._h+16'">
+   <param name="A_10" value="id='processSpaces()' algoritmo='sí' algoritmo='sí' hacer='expl_html=UD[n,expl];text_html=UD[n,text];TOOL.set(&squot;regla&squot;,regla);TOOL.set(&squot;transportador&squot;,transportador);TOOL.update()'">
+   <param name="A_11" value="id='showShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='shadeCover=1'">
+   <param name="A_12" value="id='hideShadeCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='shadeCover=0'">
+   <param name="A_13" value="id='showDibujaCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='dibujaCover=1'">
+   <param name="A_14" value="id='hideDibujaCover()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='dibujaCover=0'">
+   <param name="A_15" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='titulo=&squot;&squot;;ES=&squot;&squot;;initDisplay();initUD();Teclado.S=&squot;&squot;;transportador=0;regla=0;n=0;HELP.ver=firstVisit(n);showShadeCover()'">
+   <param name="A_16" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' hacer='processSpaces();EXP.update()'">
+   <param name="A_17" value="id='play' evento='sí' condición='mustPlay&!mute' acción='reproducir' parámetro='[sound]' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_18" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='mustPlay=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="A_19" value="id='showShadeCover' evento='sí' condición='shadeCover' acción='abrir URL' parámetro='javascript:document.getElementById(&squot;shade_cover&squot;).style.display=&squot;block&squot;;void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_20" value="id='hideShadeCover' evento='sí' condición='!shadeCover' acción='abrir URL' parámetro='javascript:document.getElementById(&squot;shade_cover&squot;).style.display=&squot;none&squot;;void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_21" value="id='showDibujaCover' evento='sí' condición='(dibujaCover)||(regla||transportador)' acción='abrir URL' parámetro='javascript:cambiaFondo(&squot;dibujar&squot;);void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="A_22" value="id='hideDibujaCover' evento='sí' condición='!((dibujaCover)||(regla||transportador))' acción='abrir URL' parámetro='javascript:cambiaFondo(&squot;normal&squot;);void(0);' ejecución='alternar' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='BACK' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(750,BACK._h-64)' archivo='images/separator.png'">
+   <param name="G_02" value="espacio='SHADE' tipo='imagen' fondo='sí' coord_abs='sí' expresión='(SHADE._w/2,SHADE._h/2-4,0.98,1)' archivo='images/win_info.png'">
+</ajs>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_ES_3UNAM_006_ideasRelevantes"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Cómo cuidar a tu mascota
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		La alumna o el alumno identificará en distintos textos ideas relevantes para realizar una labor específica (el cuidado de una mascota). Posteriormente organizará la información identificada en un cuadro sinóptico, discriminando y clasificando ideas generales y específicas.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Español, Texto expositivo, Cuadro sinóptico
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Español, ideas principales, ideas principales y secundarias, ideas relevantes, organización de ideas, extracción de ideas, identificación de ideas, cuadro sinóptico, mascota, hurón, historieta, teléfono descompuesto
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/AprendeMxUNAM/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		AprendeMx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,125 @@
+/* ----------
+ *  Base 
+ * ------- */
+html {
+    /* Base font-size, defined here to use with rem */
+    font-size: 100%; /* user defined, or default 16px */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+img{
+}
+
+p, .vntn, div, ol > li {
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 25px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+
+/* ---------
+ *  Modules 
+ * --------- */
+
+#contenedor {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 644px;
+    min-width: 644px;
+    min-height: 548px;
+    max-height: 548px;
+    background-image: url('img/fondo.jpg');
+}
+
+.parrafo{
+    position: absolute;
+    width: 580px;
+    left: 22px;
+    top: 387px;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    line-height: 28px;
+}
+
+
+/* ---------
+ *  States 
+ * --------- */
+
+.e-oculto {
+	display: none;
+}
+
+.e-marcado {
+}
+
+.e-nuevo{
+    /*background: rgba(172,40,180,0.5);*/
+    background: rgba(72,203,231,.6);
+}
+
+.e-azul{
+    color: blue;
+}
+.e-morado{
+    color: #9b40db;
+    font-weight: bold;
+    /*background: rgba(172,40,180,0.2);*/
+    background: rgba(72,203,231,.6);
+}
+
+.oacontext{
+    box-shadow: 0 0 3px #00f;
+}
+
+
+.solicitudes.enOrden{
+    display: none;
+}
+
+
+
+
+/* --------------------------
+ *   Responsive 
+ * ------------------------- */
+
+/* estilos aplican en width < 1280px  (Android 10" landscape) */
+@media screen and (max-width: 1280px) {
+	
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos aplican en width < 1024px  (iPad landscape) */
+@media screen and (max-width: 1024px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}
+
+/* estilos palican width < 768px (iPad, Android portrait)*/
+@media screen and (max-width: 768px) {
+
+	/* --------------------------------
+	 * Incluir aqui los estilos
+	 * a los elementos que cambiaran. 
+	 * -------------------------------- */
+
+}

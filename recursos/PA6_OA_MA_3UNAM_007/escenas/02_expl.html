@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="SEP, UNAM, APRENDEMX, IMATE, LITE, Laboratorio LITE, Plano cartesiano, coordenadas, abscisas, ordenadas, ejes de coordenadas, ejes coordenados, cuadrantes, sistema de coordenadas, pares ordenados, puntos en el plano">
+
+<head>
+	<title>SEB aprende.mx Descartes index</title>
+   <link rel="stylesheet" href="../fonts/style.css" type="text/css">
+	<script type='text/javascript' src='../lib/descartes-min.js'></script>
+</head>
+
+<body topmargin="0" leftmargin="0" style="overflow:hidden;">
+
+<div align="center">
+<ajs name="Descartes" width=1024 height=512 code="Descartes">
+   <param name="tamaño" value="1024x512">
+   <param name="image_loader" value="images/transp_1x1.png">
+   <param name="expand" value="">
+   <param name="editable" value="no">
+   <param name="decimal_symbol" value=".">
+   <param name="antialias" value="sí">
+   <param name="deshacer" value="no">
+   <param name="nombre" value="Descartes">
+   <param name="Versión" value="5.336, 2015-02-13">
+   <param name="Idioma" value="español">
+   <param name="Botones" value="créditos=no config=no inicio=no limpiar=no ancho_este=150 ancho_oeste=150 alto=40">
+   <param name="E_01" value="tipo='R2' id='E2' fijo='sí' escala='1' despl_imagen='arr-izq' fondo='ff000000' red='no' red10='no' ejes='no' texto='no'">
+   <param name="E_02" value="tipo='R2' id='PLANO' x='bPlano.x' y='bPlano.y' ancho='590' alto='462' fijo='sí' escala='34' despl_imagen='arr-izq' red='335196f3' red10='no' ejes='negro' texto='no'">
+   <param name="E_03" value="tipo='R2' id='RETRO' x='10' ancho='1004' dibujar-si='verificado==1' fijo='sí' imagen='images/backwindow.png' despl_imagen='mosaico' fondo='9900c35a' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='spIzq0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,0),CP(cty,0),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='decr(0)\ndoPlay(0)' dibujar-si='CP(drawIf,0)&&(CP(interfaz,0)==SPINNER)' activo-si='CP(active,0)'">
+   <param name="C_02" value="id='spDer0' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,0)+CP(ctw,0)-spnw,CP(cty,0),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='incr(0)\ndoPlay(0)' dibujar-si='CP(drawIf,0)&&(CP(interfaz,0)==SPINNER)' activo-si='CP(active,0)' pos_mensajes='centro'">
+   <param name="C_03" value="id='spIzq1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,1),CP(cty,1),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_left.png' acción='calcular' parámetro='decr(1)\ndoPlay(0)' dibujar-si='CP(drawIf,1)&&(CP(interfaz,1)==SPINNER)' activo-si='CP(active,1)' pos_mensajes='centro'">
+   <param name="C_04" value="id='spDer1' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(CP(ctx,1)+CP(ctw,1)-spnw,CP(cty,1),spnw,spnh)' fijo='sí' visible='sí' imagen='images/ui_btn_right.png' acción='calcular' parámetro='incr(1)\ndoPlay(0)' dibujar-si='CP(drawIf,1)&&(CP(interfaz,1)==SPINNER)' activo-si='CP(active,1)' pos_mensajes='centro'">
+   <param name="C_05" value="id='__SEPARADOR__' tipo='numérico' región='interior' espacio='E2' nombre='__SEPARADOR__' fijo='sí' visible='sí' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_06" value="id='Audio' tipo='numérico' interfaz='botón' región='interior' espacio='E2' expresión='(20,10,56,56)' fijo='sí' visible='sí' color='blanco' color-int='22bb66' negrita='sí' fuente puntos='16' imagen='images/btn_audio.png' acción='calcular' parámetro='tryPlay(0)' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_07" value="id='veri' tipo='numérico' interfaz='botón' región='interior' espacio='E2' nombre='Verificar' expresión='(bAbajo.x+(bAbajo.w-160)/2,E2._h-60,160,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='verificar()\ndoPlay(0)' pos_mensajes='centro'">
+   <param name="C_08" value="id='otro' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' nombre='Otro ejercicio' expresión='(bRetro.x+(bRetro.w-180)/2,bRetro.y+bRetro.h-56,180,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='otroEjercicio()\ndoPlay(0)' dibujar-si='bien' pos_mensajes='centro'">
+   <param name="C_09" value="id='cont' tipo='numérico' interfaz='botón' región='interior' espacio='RETRO' nombre='Continuar' expresión='(bRetro.x+(bRetro.w-160)/2,bRetro.y+bRetro.h-56,160,46)' fijo='sí' visible='sí' color='blanco' color-int='fec639' fuente puntos='19' imagen='_STYLE_|border=3|borderRadius=10|borderColor=ffffff|overColor=e0a12b|downColor=e0a12b|inactiveColor=b0b0b0|font=Monospace|shadowTextColor=a6620e|shadowBoxColor=808080|shadowInsetBoxColor=b46100' acción='calcular' parámetro='verificado=0\ndoPlay(0)' dibujar-si='!bien' pos_mensajes='centro'">
+   <param name="C_10" value="id='G' tipo='gráfico' espacio='PLANO' fijo='sí' imagen='images/buspk.png' dibujar-si='ej==0'">
+   <param name="C_11" value="id='G.x' tipo='numérico' región='exterior' espacio='E2' nombre='G.x' incr='1' min='-numX' max='numX' discreto='sí' decimales='0' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='0' pos_mensajes='centro'">
+   <param name="C_12" value="id='G.y' tipo='numérico' región='exterior' espacio='E2' nombre='G.y' incr='1' min='-numY' max='numY' discreto='sí' decimales='0' fijo='sí' visible='sí' parámetro.fuente='Monospaced,PLAIN,12' dibujar-si='0' pos_mensajes='centro'">
+   <param name="A_01" value="id='botX(d,x,w,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=x' hacer='val=((t==1)|(t==6))?x+d    :val;val=((t==2)|(t==5))?x+w-1-d:val;val=((t==3)|(t==4))?x+w-1  :val;'">
+   <param name="A_02" value="id='botY(d,y,h,t)' algoritmo='sí' expresión='val' algoritmo='sí' Local='val' inicio='val=y' hacer='val=((t%8==0)|(t==3))?y+d  :val;val=((t==4)|(t==7))?y+h-1-d:val;val=((t==5)|(t==6))?y+h-1  :val;'">
+   <param name="A_03" value="id='CT' vector='sí' matriz='sí' evaluar='una-sola-vez' columnas='40' filas='19' expresión='ix=0;name=1;middle=2;last=3;value=4;ctx=5;cty=6;ctw=7;cth=8;active=9;interfaz=10;drawIf=11;selected=12;ctType=13;tclType=14;incr=15;decimals=16;limInf=17;limSup=18;;SPINNER=0;BUTTON=1;MENU=2;;TXT=0;NUM=1'">
+   <param name="A_04" value="id='CP(a,k)' algoritmo='sí' expresión='res' algoritmo='sí' Local='res,pad' inicio='pad=0' hacer='res=(a==ctx)?CT[k,ctx]+pad:res;res=(a==cty)?CT[k,cty]+pad:res;res=(a==ctw)?CT[k,ctw]-pad*2:res;res=(a==cth)?CT[k,cth]-pad*2:res;res=(a==active)?CT[k,active]:res;res=(a==interfaz)?CT[k,interfaz]:res;res=(a==drawIf)?CT[k,drawIf]:res;res=(a==selected)?CT[k,selected]:res;;'">
+   <param name="A_05" value="id='Str(s)' algoritmo='sí' expresión='str' algoritmo='sí' inicio='str=&squot;&squot;' hacer='str=(CT[s,interfaz]==BUTTON)?CT[s,name]+CT[s,middle]+clipText(CT[s,value],CT[s,ctw]-8)+CT[s,last]:str;str=(CT[s,interfaz]==SPINNER)?_NumToStr_(CT[s,value],CT[s,decimals]):str;'">
+   <param name="A_06" value="id='editB(k)' algoritmo='sí' algoritmo='sí' hacer='editing=k;teclado.S=CT[k,value];TCL.set(&squot;S&squot;,teclado.S);TCL.exec(&squot;cfgDisplay&squot;,(CP(ctx,k)-10)+&squot;,&squot;+CP(cty,k)+&squot;,&squot;+CP(ctw,k)+&squot;,&squot;+CP(cth,k));TCL.exec(&squot;setParams&squot;,CT[k,tclType]);TCL.update()'">
+   <param name="A_07" value="id='incr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]+CT[k,incr];CT[k,value]=(CT[k,limSup]!=&squot;INF&squot;)?min(tmpValue,CT[k,limSup]):tmpValue'">
+   <param name="A_08" value="id='decr(k)' algoritmo='sí' expresión='0' algoritmo='sí' Local='tmpValue' hacer='tmpValue=CT[k,value]-CT[k,incr];CT[k,value]=(CT[k,limInf]!=&squot;INF&squot;)?max(tmpValue,CT[k,limInf]):tmpValue'">
+   <param name="A_09" value="id='closePopUp()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='aux=(editing>=0)?processKB():0;updateData();;editing=-1;Teclado.Sa=&squot;null&squot;;Teclado.S=&squot;null&squot;;;'">
+   <param name="A_10" value="id='processKB()' algoritmo='sí' algoritmo='sí' hacer='CT[editing,value]=(Teclado.Sa!=Teclado.S)?Teclado.S:CT[editing,value];CT[editing,value]=(CT[editing,ctType]==&squot;NUM&squot;)?_Eval_(CT[editing,value]):CT[editing,value];Teclado.Sa=Teclado.S;'">
+   <param name="A_11" value="id='set(btn,prop,val)' algoritmo='sí' algoritmo='sí' hacer='CT[btn,prop]=val'">
+   <param name="A_12" value="id='setTit(titulo)' algoritmo='sí' expresión='x' algoritmo='sí' hacer='parent.set(&squot;titulo&squot;,titulo);parent.update();'">
+   <param name="A_13" value="id='tryPlay(k)' algoritmo='sí' expresión='0' algoritmo='sí' hacer='parent.exec(&squot;tryPlay&squot;,&squot;EXP&squot;)'">
+   <param name="A_14" value="id='doPlay(k)' algoritmo='sí' algoritmo='sí' hacer='parent.exec(&squot;doPlay&squot;,k);parent.update()'">
+   <param name="A_15" value="id='Print(a)' algoritmo='sí' algoritmo='sí' Local='str' hacer='str=&squot;&squot;+a;_Print_(str)'">
+   <param name="A_16" value="id='Init()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='iStr.w=_AnchoDeCadena_(&squot;i&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);wStr.w=_AnchoDeCadena_(&squot;w&squot;,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21);;TCL.x=E2._w-TCL._w-5;TCL.y=E2._h-TCL._h-5;rd=0;brdw=4;editing=-1;Teclado.S=&squot;&squot;;Teclado.Sa=&squot;&squot;;texth=27;textp=10;;spnw=32;spnh=50;;AutorControls();;TIT.rojo= (11*16+ 8)/256;TIT.verde=( 0*16+ 8)/256;TIT.azul= ( 1*16+ 0)/256;;FONDO.rojo= ( 9*16+ 0)/256;FONDO.verde=( 9*16+ 8)/256;FONDO.azul= (10*16+ 8)/256;;E2.rojo= (14*16+ 8)/256;E2.verde=(15*16+ 0)/256;E2.azul= (15*16+ 0)/256;;E3.rojo= (0*16+ 0)/256;E3.verde=(0*16+ 0)/256;E3.azul= (0*16+ 0)/256;;TXT.rojo= ( 1*16+ 8)/256;TXT.verde=( 2*16+ 0)/256;TXT.azul= ( 2*16+ 8)/256;;CTR.rojo= ( 0*16+ 0)/256;CTR.verde=( 4*16+ 0)/256;CTR.azul= (15*16+15)/256;;CTI.rojo= ( 15*16+ 16)/256;CTI.verde=( 15*16+ 16)/256;CTI.azul= ( 15*16+ 16)/256;;CTI2.rojo= ( 12*16+ 0)/256;CTI2.verde=( 12*16+ 0)/256;CTI2.azul= ( 12*16+ 0)/256;;ARR.rojo= ( 4*16+ 0)/256;ARR.verde=( 8*16+ 0)/256;ARR.azul= ( 6*16+ 0)/256;;BORDER.rojo=CTR.rojo*0.90;BORDER.verde=CTR.verde*0.90;BORDER.azul=CTR.azul*0.90;'">
+   <param name="A_17" value="id='AutorControls()' algoritmo='sí' expresión='x' algoritmo='sí' inicio='NCT=0' hacer='CT[NCT,ix]=NCT;CT[NCT,name]=&squot;pulsador&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=0;CT[NCT,incr]=1;CT[NCT,decimals]=0;CT[NCT,limInf]=-numX;CT[NCT,limSup]=numX;CT[NCT,ctw]=120;CT[NCT,cth]=spnh;CT[NCT,ctx]=bAbajo.x+28;CT[NCT,cty]=bAbajo.y+62;CT[NCT,active]=1;CT[NCT,interfaz]=SPINNER;CT[NCT,drawIf]=1;NCT=NCT+1;;CT[NCT,ix]=NCT;CT[NCT,name]=&squot;pulsador&squot;;CT[NCT,middle]=&squot;&squot;;CT[NCT,last]=&squot;&squot;;CT[NCT,value]=0;CT[NCT,incr]=1;CT[NCT,decimals]=0;CT[NCT,limInf]=-numY;CT[NCT,limSup]=numY;CT[NCT,ctw]=CT[NCT-1,ctw];CT[NCT,cth]=spnh;CT[NCT,ctx]=CT[NCT-1,ctx]+CT[NCT,ctw]+50;CT[NCT,cty]=CT[NCT-1,cty];CT[NCT,active]=1;CT[NCT,interfaz]=SPINNER;CT[NCT,drawIf]=1;NCT=NCT+1;'">
+   <param name="A_18" value="id='Limpiar()' algoritmo='sí' expresión='0' algoritmo='sí' inicio='editing=-1'">
+   <param name="A_19" value="id='Inicio()' algoritmo='sí' expresión='0' algoritmo='sí' hacer='numX=8;numY=6;;bPlano.w=PLANO._w;bPlano.h=PLANO._h;bPlano.x=E2._w-bPlano.w-35;bPlano.y=25;;bAbajo.w=360;bAbajo.h=56;bAbajo.x=15;bAbajo.y=5;;bRetro.w=400;bRetro.h=270;bRetro.x=(RETRO._w-bRetro.w)/2;bRetro.y=(RETRO._h-bRetro.h)/2'">
+   <param name="A_20" value="id='Calculos()' algoritmo='sí' expresión='0' algoritmo='sí'">
+   <param name="A_21" value="id='clipText(str,w)' algoritmo='sí' expresión='newStr' algoritmo='sí' Local='i,newStr,tmpStr,condTam' inicio='newStr=str;str.length=_length_(str);minwidth=min(str.length,ent(w/wStr.w));maxwidth=min(str.length,ent(w/iStr.w));i=minwidth;' hacer='tmpStr=_substring_(str,0,i);condTam=(_AnchoDeCadena_(tmpStr,&squot;SansSerif&squot;,&squot;PLAIN&squot;,21)<w);newStr=(condTam)?tmpStr:newStr;i=(condTam)?(i+1):(maxwidth+1)' mientras='i<=maxwidth'">
+   <param name="A_22" value="id='__SEPARADOR__' expresión='0'">
+   <param name="A_23" value="id='absX(x)' expresión='PLANO._w/2+PLANO.Ox+x*PLANO.escala'">
+   <param name="A_24" value="id='absY(y)' expresión='PLANO._h/2+PLANO.Oy-y*PLANO.escala'">
+   <param name="A_25" value="id='otroEjercicio()' algoritmo='sí' expresión='0' algoritmo='sí' inicio='verificado=0' hacer='cx=-numX+ent(rnd*numX*2);cy=-numY+ent(rnd*numY*2);;ej=(rnd<0.5);;G.x=0;G.y=0;;set(0,drawIf,ej);set(0,value,0);set(1,drawIf,ej);set(1,value,0);'">
+   <param name="A_26" value="id='verificar()' algoritmo='sí' expresión='x' algoritmo='sí' hacer='verificado=1;bien=0;;bien=(ej==0)?((G.x==cx)&&(G.y==cy)):bien;bien=(ej==1)?((cx==CT[0,value])&&(cy==CT[1,value])):bien'">
+   <param name="A_27" value="id='INICIO' algoritmo='sí' evaluar='una-sola-vez' inicio='setTit(&squot;Aprende a ubicar puntos en el plano cartesiano.&squot;)' hacer='Inicio();Init();otroEjercicio();;;'">
+   <param name="A_28" value="id='CALCULOS' algoritmo='sí' evaluar='siempre' inicio='aux=(editing>=0)?processKB():0' hacer='Calculos();'">
+   
+   <param name="A_30" value="id='fin' evento='sí' condición='1' acción='calcular' parámetro='playAudio=0' ejecución='siempre' pos_mensajes='centro'">
+   <param name="G_01" value="espacio='E2' tipo='curva' fondo='sí' color='ff000000' coord_abs='sí' expresión='(botX(0,10,E2._w-20,t),botY(0,0,E2._h,t))' t.intervalo='[0,8]' relleno='aa000000' info='(PLANTILLA)'">
+   <param name="G_02" value="espacio='E2' tipo='curva' color='negro' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==MENU)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)-brdw,CP(ctw,s)+2*brdw,t),botY(rd,CP(cty,s)-brdw,CP(cth,s)+2*brdw,t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)+0.70*(!CP(active,s)),CP(active,s)+0.75*(!CP(active,s)) -(s==editing)*0.8 -(CP(selected,s)*0.8),0.2*CP(active,s)+0.80*(!CP(active,s)),0.0)' ancho='0' info='(PLANTILLA) borde exterior'">
+   <param name="G_03" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)!=SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s),CP(ctw,s),t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno boton'">
+   <param name="G_04" value="espacio='E2' tipo='curva' color='(CTR.rojo,CTR.verde,CTR.azul,00)' dibujar-si='CP(drawIf,s)&&(CP(interfaz,s)==SPINNER)' coord_abs='sí' expresión='(botX(rd,CP(ctx,s)+spnw-2,CP(ctw,s)-2*spnw+4,t),botY(rd,CP(cty,s),CP(cth,s),t))' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' t.intervalo='[0,8]' relleno='(CP(active,s)?CTI.rojo:CTI2.rojo,CP(active,s)?CTI.verde:CTI2.verde,CP(active,s)?CTI.azul:CTI2.azul,00)' info='(PLANTILLA) relleno pulsador'">
+   <param name="G_05" value="espacio='E2' tipo='texto' color='(CTRTXT.rojo,CTRTXT.verde,CTRTXT.azul,00)' dibujar-si='CP(drawIf,s)' expresión='[CT[s,ctx]+(CT[s,ctw]-_AnchoDeCadena_(Str(s),&squot;SansSerif&squot;,&squot;PLAIN&squot;,21))/2,CT[s,cty]+(CT[s,cth]-20)/2]' familia='s' s.intervalo='[0,NCT-1]' s.pasos='NCT-1' texto='[Str(s)]' fuente='SansSerif,PLAIN,21' fijo='sí' ancho='380' info='(PLANTILLA) Contenidos de los campos de texto'">
+   <param name="G_06" value="espacio='E2' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_07" value="espacio='E2' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='bPlano'">
+   <param name="G_08" value="espacio='E2' tipo='macro' fondo='sí' dibujar-si='0' expresión='macros/borde.txt' nombre='bAbajo'">
+   <param name="G_09" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='ej==0' expresión='[bAbajo.x+10,bAbajo.y+20]' texto='Coloca el autobús en la coordenada' fuente='Monospaced,PLAIN,19' decimales='0' fijo='no' color_borde_texto='173320'">
+   <param name="G_10" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='ej==0' expresión='[bAbajo.x+(bAbajo.w-_AnchoDeCadena_(&squot;(&squot;+cx+&squot;, &squot;+cy+&squot;)&squot;,&squot;Monospaced&squot;,&squot;PLAIN&squot;,40))/2,bAbajo.y+70]' texto='([cx], [cy])' fuente='Monospaced,PLAIN,40' decimales='0' fijo='no' color_borde_texto='173320'">
+   <param name="G_11" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='ej==1' expresión='[bAbajo.x+10,bAbajo.y+20]' texto='El autobús está en la coordenada' fuente='Monospaced,PLAIN,19' decimales='0' fijo='no' color_borde_texto='173320'">
+   <param name="G_12" value="espacio='E2' tipo='texto' color='blanco' dibujar-si='ej==1' expresión='[bAbajo.x,bAbajo.y+70]' texto='(           ,            )' fuente='Monospaced,PLAIN,40' decimales='0' fijo='no' color_borde_texto='173320'">
+   <param name="G_13" value="espacio='PLANO' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_14" value="espacio='PLANO' tipo='texto' fondo='sí' expresión='[absX(s)-_AnchoDeCadena_(s+&squot;&squot;,&squot;SansSerif&squot;,&squot;BOLD&squot;,&squot;15&squot;)/2,absY(-0.2)]' familia='s' s.intervalo='[-numX-1,numX+1]' s.pasos='(numX+1)*2' texto='[s]' fuente='SansSerif,BOLD,15' decimales='0' fijo='no'">
+   <param name="G_15" value="espacio='PLANO' tipo='texto' fondo='sí' dibujar-si='s!=0' expresión='[absX(0.15),absY(s)-5]' familia='s' s.intervalo='[-numY-1,numY+1]' s.pasos='(numY+1)*2' texto='[s]' fuente='SansSerif,BOLD,15' decimales='0' fijo='no'">
+   <param name="G_16" value="espacio='PLANO' tipo='segmento' color='335196f3' dibujar-si='ej==0' expresión='(G.x,0)(G.x,G.y)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_17" value="espacio='PLANO' tipo='segmento' color='335196f3' dibujar-si='ej==0' expresión='(0,G.y)(G.x,G.y)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_18" value="espacio='PLANO' tipo='segmento' color='335196f3' dibujar-si='ej==1' expresión='(cx,0)(cx,cy)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_19" value="espacio='PLANO' tipo='segmento' color='335196f3' dibujar-si='ej==1' expresión='(0,cy)(cx,cy)' fijo='sí' tamaño='0' ancho='3'">
+   <param name="G_20" value="espacio='PLANO' tipo='imagen' dibujar-si='ej==1' expresión='(cx,cy,1,1)' archivo='images/buspk.png'">
+   <param name="G_21" value="espacio='RETRO' tipo='punto' fondo='sí' dibujar-si='0' expresión='(__SEPARADOR__,__SEPARADOR__)' fijo='sí' info='(__SEPARADOR__)'">
+   <param name="G_22" value="espacio='RETRO' tipo='macro' fondo='sí' expresión='macros/borde.txt' nombre='bRetro'">
+   <param name="G_23" value="espacio='RETRO' tipo='texto' color='6c4517' dibujar-si='(ej==0)&&(bien)' expresión='[bRetro.x+50,bRetro.y+20]' texto='            ¡Felicidades!\n\nUbicaste bien el autobús en\nel plano de ejes coordenados.' fuente='Monospaced,PLAIN,19' decimales='0' fijo='no'">
+   <param name="G_24" value="espacio='RETRO' tipo='texto' color='6c4517' dibujar-si='(!bien)' expresión='[bRetro.x+20,bRetro.y+20]' texto='             ¡Inténtalo de nuevo!\n\nRecuerda que la primera coordenada\nindica la distancia del punto al eje \nhorizontal, mientras que la segunda \ncoordenada indica la distancia del \npunto al eje vertical.' fuente='Monospaced,PLAIN,19' decimales='0' fijo='no'">
+   <param name="G_25" value="espacio='RETRO' tipo='texto' color='6c4517' dibujar-si='(ej==1)&&(bien)' expresión='[bRetro.x+50,bRetro.y+20]' texto='            ¡Felicidades!\n\nReconociste correctamente las \ncoordenadas del autobús en el\nplano.' fuente='Monospaced,PLAIN,19' decimales='0' fijo='no'">
+</ajs>
+</div>
+
+<!-- macro para dibujar los bordes -->
+<script type="descartes/macro" id="macros/borde.txt">
+tipo_de_macro=R2
+Idioma=español
+id='INICIO' algoritmo='sí' evaluar='una-sola-vez' hacer='w=200;h=100;x=150;y=150;tnsp=0;rojo=1;verd=1;azul=1'
+tipo='imagen' coord_abs='sí' expresión='(x-22,y-22,1,1)' archivo='images/borde_ar_iz.png' info='arriba izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y-22,w,1)' archivo='images/borde_ar_ce.png' info='arriba centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y-22,1,1)' archivo='images/borde_ar_de.png' info='arriba derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h/2,1,h)' archivo='images/borde_ce_iz.png' info='centro izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h/2,1,h)' archivo='images/borde_ce_de.png' info='centro derecha' 
+tipo='imagen' coord_abs='sí' expresión='(x-22,y+h+22,1,1)' archivo='images/borde_ab_iz.png' info='abajo izquierda' 
+tipo='imagen' coord_abs='sí' expresión='(x+w/2,y+h+22,w,1)' archivo='images/borde_ab_ce.png' info='abajo centro' 
+tipo='imagen' coord_abs='sí' expresión='(x+w+22,y+h+22,1,1)' archivo='images/borde_ab_de.png' info='abajo derecha' 
+tipo='polígono' coord_abs='sí' expresión='(x-1,y-1)(x+w+1,y-1)(x+w+1,y+h+1)(x-1,y+h+1)(x-1,y-1)' relleno='(rojo,verd,azul,tnsp)' ancho='0' 
+</script>
+
+</body>
+
+</html>

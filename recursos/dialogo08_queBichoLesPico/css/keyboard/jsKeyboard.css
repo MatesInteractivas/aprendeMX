@@ -1,0 +1,99 @@
+#keyboard{
+    padding:0px;
+    width:520px;
+    margin: 0 auto;
+    /*height: 288;*/
+    display:block;
+    padding-left:0px;
+    display:block;
+ }
+ 
+#keyboard:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+#keyboardHeader {position:relative;}
+#keyboardHeader div {color:#fff; background-color:#7b8490;padding:3px; padding-left:15px; padding-right:15px; position:absolute; cursor:pointer; right:-10px; top:-40px;}
+.closex {font-weight:bolder; color:#000;}
+
+#keyboardCapitalLetter {display:none;}
+#keyboardSmallLetter {display:block;}
+#keyboardNumber {display:none;}
+#keyboardSymbols {display:none;}
+
+.button
+{
+    width:46px;
+    height:46px;
+    background-color:#464646;
+    position:relative;
+    float:left;
+    margin-right:4px;
+    margin-top:4px;
+    cursor:pointer;
+    font-size:1.6em;
+    border: 1px solid #d7d7d7;
+    color: #ffffff;
+    font-family: 'sf_cartoonist_handregular', Arial, Helvetica, sans-serif;
+
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.buttonDown {background:none;background-color: #c9cdd5; -webkit-box-shadow:none;-moz-box-shadow: none;box-shadow: none;}
+.button_a {margin-left:26px;}
+.button_dash {margin-left:26px;}
+.button_small_dash {margin-left:13px;}
+.button_underscore {margin-left:26px;}
+.button_enter {width:103px; font-size:1.5em; }
+.button_del{width:80px; font-size:1.4em;}
+.button_smallletter{font-size:1.6em;}
+.button_smallletter_left{width:72px; font-size:1.6em;}
+.button_capitalletterleft{font-size:1.4em;}
+.button_capitalletterright{ width:68px; font-size:1.5em;}
+.button_medium{width:58px; font-size:1.5em; }
+.button_larger{width:72px; font-size:1.5em; }
+.button_numbers{width:72px; font-size:1.5em;}
+.button_space {width:240px;}
+.button_symbolsleft{width:72px; font-size:1.4em; margin-left:26px;}
+.button_symbolsright{width:72px; font-size:1.4em;}
+.button_obscuro{background-color:#464646;}
+.button_morado{background-color:#8d25d6;}
+.button_white{background-color:#fff;color: #000; border: 1px solid #000; }
+.button_white:hover, .button_white:active{ border: 1px solid #000; }
+
+
+.key {width:100%; height:100%; text-align:center; padding-top:12px; }
+.key_del {padding-top:14px;}
+.key_enter {padding-top:14px;}
+.key_smallletter {padding-top:14px;}
+.key_capitalletterleft {padding-top:14px;}
+.key_capitalletterright {padding-top:14px;}
+.key_number {padding-top:14px;}
+.key_symbols {padding-top:14px;}
+
+
+
+
+html.no-touch .button:hover,
+html.touch .button:active { /* OEG : PARA QUE NO QUEDE PRENDIDO EN EL TOUCH. Estas clases (no-touch, touch), las agrega MOdernier*/
+border-color: rgba(82, 168, 236, 0.8);
+outline: 0;
+outline: thin dotted 9;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(82, 168, 236, 0.6);
+-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+
+
+
+div.button.button_enter.disabled{
+    opacity: 0.5;
+    cursor: default;
+}

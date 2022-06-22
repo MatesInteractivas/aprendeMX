@@ -1,0 +1,115 @@
+html,body,
+#adivina-quien-container {
+	width: 644px;
+	height: 548px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	box-sizing:border-box;
+	font-family: "sf_cartoonist_handregular",Arial,Helvetica,sans-serif;
+}
+
+#adivina-quien-container.disabled {
+    overflow: hidden;
+}
+
+/*
+#adivina-quien-container.disabled::after {
+	
+	content: "";
+	display: block;
+	position: absolute;
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	margin: 0px;
+	border: 0px none;
+	
+	padding: 20px;
+	padding-top: 75%;
+
+	text-align: right;
+	color: white;
+	font-size: 30px;
+	font-family: Arial;
+
+	box-sizing: border-box;
+
+	text-shadow: 0px 0px 3px #000 ;
+	filter: Shadow(Color=#000, 
+                 Direction=132, 
+                 Strength=5);
+
+
+	animation: fadeIn 3s ease-in-out 0.5s both;
+	animation-iteration-count: infinite;
+}
+*/
+
+#adivina-quien-container{
+	padding: 10px;
+}
+
+.aq-opt {
+	height: 125px;
+	width: 149px;
+	margin: 2px;
+}
+
+.aq-opt.disabled img {
+	opacity: 0.7;
+	filter: alpha(opacity=70); /* msie */
+}
+
+
+.aq-opt.flipped{
+	cursor: inherit;
+}
+
+.aq-opt:hover .flipper {
+	border: none;
+	border-radius : 0px;
+}
+
+
+button.btn-listo {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	background-color: #02c277;
+	border: none;
+	color: #FFF;
+	font-size: 25px;
+	font-family: 'londrina_solidregular', Arial, Helvetica, sans-serif;
+	-moz-user-select: none;
+	padding: 5px;
+	cursor: pointer;
+	max-width: 140px;
+	box-shadow: 6px 6px 0 #99c7cd;
+}
+
+
+button.btn-listo:hover,button.btn-listo:focus,button.btn-listo:active {
+	box-shadow: 6px 6px 0 #6da3ad;
+}
+
+/**
+**************************************************************
+**************************************************************
+*/
+@keyframes fadeIn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0);
+  }
+}
